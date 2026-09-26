@@ -1,0 +1,506 @@
+[
+ {
+  "brand": "Dunkin'",
+  "auv_usd": 1400000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Subway",
+  "auv_usd": 490000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; figure estimated by QSR (*)"
+ },
+ {
+  "brand": "Starbucks",
+  "auv_usd": 1800000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; figure estimated by QSR (*)"
+ },
+ {
+  "brand": "McDonald's",
+  "auv_usd": 4088000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Potbelly",
+  "auv_usd": 1300000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Jimmy John's",
+  "auv_usd": 1000000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Burger King",
+  "auv_usd": 1660000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Chipotle",
+  "auv_usd": 3104000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Taco Bell",
+  "auv_usd": 2216000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Popeyes",
+  "auv_usd": 1800000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Wingstop",
+  "auv_usd": 2000000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Domino's",
+  "auv_usd": 1385000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Wendy's",
+  "auv_usd": 2001000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Little Caesars",
+  "auv_usd": 950000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; figure estimated by QSR (*)"
+ },
+ {
+  "brand": "Panda Express",
+  "auv_usd": 2646000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "White Castle",
+  "auv_usd": 1791000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/white-castle",
+  "note": "DERIVED: 2025 U.S. sales $607M / 339 year-end U.S. units (Technomic AUV itself is paywalled)"
+ },
+ {
+  "brand": "KFC",
+  "auv_usd": 1329000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Chick-fil-A",
+  "auv_usd": 7700000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; figure estimated by QSR (*)"
+ },
+ {
+  "brand": "Rosati's",
+  "auv_usd": 1017000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/rosatis-pizza",
+  "note": "DERIVED: 2025 U.S. sales $246M / 242 year-end U.S. units (Technomic AUV itself is paywalled)"
+ },
+ {
+  "brand": "Jersey Mike's",
+  "auv_usd": 1360000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Panera Bread",
+  "auv_usd": 2611000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; figure estimated by QSR (*)"
+ },
+ {
+  "brand": "Sweetgreen",
+  "auv_usd": 2677000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; all company-operated"
+ },
+ {
+  "brand": "Jet's Pizza",
+  "auv_usd": 1293000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/jets-pizza",
+  "note": "DERIVED: 2025 U.S. sales $613M / 474 year-end U.S. units (Technomic AUV itself is paywalled)"
+ },
+ {
+  "brand": "Church's Texas Chicken",
+  "auv_usd": 1138000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; listed as Church's Chicken"
+ },
+ {
+  "brand": "Auntie Anne's",
+  "auv_usd": 792000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Papa John's",
+  "auv_usd": 1124000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; figure estimated by QSR (*)"
+ },
+ {
+  "brand": "Tropical Smoothie Cafe",
+  "auv_usd": 978000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Buffalo Wild Wings",
+  "auv_usd": 2937000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/buffalo-wild-wings",
+  "note": "DERIVED: 2025 U.S. sales $4,103M / 1,397 year-end U.S. units (Technomic AUV itself is paywalled)"
+ },
+ {
+  "brand": "Just Salad",
+  "auv_usd": 2000000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/just-salad",
+  "note": "DERIVED: 2025 U.S. sales $220M / 110 year-end U.S. units (Technomic AUV itself is paywalled)"
+ },
+ {
+  "brand": "Raising Cane's",
+  "auv_usd": 6580000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Shake Shack",
+  "auv_usd": 4048000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; figure estimated by QSR (*)"
+ },
+ {
+  "brand": "Pizza Hut",
+  "auv_usd": 808000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Corner Bakery",
+  "auv_usd": 2125000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/corner-bakery",
+  "note": "DERIVED: 2025 U.S. sales $187M / 88 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Five Guys",
+  "auv_usd": 1531000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Chili's",
+  "auv_usd": 5000000,
+  "year": 2026,
+  "source": "Brinker International 10-K FY2026",
+  "url": "https://www.sec.gov/Archives/edgar/data/703351/000070335126000029/eat-20260624.htm",
+  "note": "Average annual net sales per company-owned Chili's restaurant, fiscal year ended June 24, 2026"
+ },
+ {
+  "brand": "Culver's",
+  "auv_usd": 4040000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Portillo's",
+  "auv_usd": 8500000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; all company-operated"
+ },
+ {
+  "brand": "Qdoba",
+  "auv_usd": 1700000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Smoothie King",
+  "auv_usd": 664000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "IHOP",
+  "auv_usd": 2012400,
+  "year": 2025,
+  "source": "Dine Brands Global 10-K FY2025",
+  "url": "https://www.sec.gov/Archives/edgar/data/49754/000162828026011393/din-20251228.htm",
+  "note": "DERIVED: franchise domestic average weekly unit sales $38.7K x 52"
+ },
+ {
+  "brand": "Jamba",
+  "auv_usd": 675000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Checkers",
+  "auv_usd": 1193000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; listed as Checkers/Rally's"
+ },
+ {
+  "brand": "Insomnia Cookies",
+  "auv_usd": 812000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/insomnia-cookies",
+  "note": "DERIVED: 2025 U.S. sales $286M / 352 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Cava",
+  "auv_usd": 2934000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; all company-operated"
+ },
+ {
+  "brand": "Blaze Pizza",
+  "auv_usd": 1361000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/blaze-pizza",
+  "note": "DERIVED: 2025 U.S. sales $313M / 230 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Krispy Kreme",
+  "auv_usd": 2160000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/krispy-kreme",
+  "note": "DERIVED: 2025 U.S. sales $756M / 350 year-end U.S. units (Technomic AUV itself is paywalled); KK sales may include delivered-fresh-daily wholesale doors, so per-shop figure may be inflated"
+ },
+ {
+  "brand": "Dairy Queen",
+  "auv_usd": 1218000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Chuck E. Cheese",
+  "auv_usd": 911000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/chuck-e-cheese",
+  "note": "DERIVED: 2025 U.S. sales $420M / 461 year-end U.S. units (Technomic AUV itself is paywalled)"
+ },
+ {
+  "brand": "Maggiano's",
+  "auv_usd": 9500000,
+  "year": 2026,
+  "source": "Brinker International 10-K FY2026",
+  "url": "https://www.sec.gov/Archives/edgar/data/703351/000070335126000029/eat-20260624.htm",
+  "note": "Average annual sales per Maggiano's restaurant, fiscal year ended June 24, 2026"
+ },
+ {
+  "brand": "Hooters",
+  "auv_usd": 2742000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/hooters",
+  "note": "DERIVED: 2025 U.S. sales $532M / 194 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Crumbl",
+  "auv_usd": 1139000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; figure estimated by QSR (*)"
+ },
+ {
+  "brand": "Morton's",
+  "auv_usd": 4750000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/mortons-steakhouse",
+  "note": "DERIVED: 2025 U.S. sales $247M / 52 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Mastro's",
+  "auv_usd": 14542000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/mastros-restaurants",
+  "note": "DERIVED: 2025 U.S. sales $349M / 24 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate; Restaurant Business (Jul 2024) reported Technomic 2023 AUV of $13.8M: https://www.restaurantbusinessonline.com/financing/these-restaurant-chains-have-highest-average-unit-volumes"
+ },
+ {
+  "brand": "Fogo de Chão",
+  "auv_usd": 8364000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/fogo-de-chao",
+  "note": "DERIVED: 2025 U.S. sales $736M / 88 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Olive Garden",
+  "auv_usd": 5800000,
+  "year": 2026,
+  "source": "Darden Restaurants 10-K FY2026",
+  "url": "https://www.sec.gov/Archives/edgar/data/940944/000094094426000025/dri-20260531.htm",
+  "note": "Average annual sales per company-owned restaurant (sales / operating weeks x 52), fiscal year ended May 31, 2026"
+ },
+ {
+  "brand": "Cheesecake Factory",
+  "auv_usd": 12400000,
+  "year": 2025,
+  "source": "The Cheesecake Factory Inc. 10-K FY2025",
+  "url": "https://www.sec.gov/Archives/edgar/data/887596/000110465926018643/cake-20251230x10k.htm",
+  "note": "Average sales per restaurant open the full fiscal 2025 year"
+ },
+ {
+  "brand": "P.F. Chang's",
+  "auv_usd": 4051000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/pf-changs",
+  "note": "DERIVED: 2025 U.S. sales $867M / 214 year-end U.S. units (Technomic AUV itself is paywalled)"
+ },
+ {
+  "brand": "Applebee's",
+  "auv_usd": 2823600,
+  "year": 2025,
+  "source": "Dine Brands Global 10-K FY2025",
+  "url": "https://www.sec.gov/Archives/edgar/data/49754/000162828026011393/din-20251228.htm",
+  "note": "DERIVED: franchise domestic average weekly unit sales $54.3K x 52"
+ },
+ {
+  "brand": "Red Lobster",
+  "auv_usd": 3000000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/red-lobster",
+  "note": "DERIVED: 2025 U.S. sales $1,560M / 520 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Arby's",
+  "auv_usd": 1300000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Sonic",
+  "auv_usd": 1500000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; listed as Sonic Drive-In"
+ },
+ {
+  "brand": "Baskin-Robbins",
+  "auv_usd": 334000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Peet's Coffee",
+  "auv_usd": 1261000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/peets-coffee",
+  "note": "DERIVED: 2025 U.S. sales $304M / 241 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ }
+]

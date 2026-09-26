@@ -1,0 +1,1307 @@
+<title>Wisconsin Restaurant Leaderboard</title>
+<meta name="description" content="Every restaurant in Wisconsin, ranked on ratings, popularity, fish fry, supper clubs, custard, value and estimated sales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800;900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+:root{
+  /* Packers: green #203731, gold #FFB612, white. Light-only by design; gold is a fill with green text on it, never text on white. */
+  color-scheme:light;
+  --bg:#FFFFFF; --surface:#FFFFFF; --surface-2:#F1F5F2; --surface-3:#E1EAE4;
+  --ink:#14241D; --ink-2:#2E4238; --muted:#53665B; --rule:#DAE3DD; --rule-2:#B6C6BC;
+  --green:#203731; --green-2:#2D5242; --gold:#FFB612; --gold-soft:#FFE7A8; --on-gold:#203731;
+  --map-fill:#EEF3EF; --map-line:#C2D1C7; --dot-edge:rgba(20,36,29,.35);
+  --seq1:#CFE2D5; --seq2:#9CC4A9; --seq3:#5F9A74; --seq4:#326B4B; --seq5:#203731;
+  --scrim:rgba(20,36,29,.38);
+  --shadow:0 1px 2px rgba(20,36,29,.06),0 8px 28px rgba(20,36,29,.10);
+  --display:"Saira Extra Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --stickyH:64px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+button:disabled,input:disabled,select:disabled{opacity:.55;cursor:progress}
+html{scroll-padding-top:calc(var(--stickyH) + env(safe-area-inset-top,0px) + 12px);scroll-padding-bottom:8px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+body.locked{overflow:hidden}
+button,input,select{font:inherit;color:inherit}
+input::placeholder{color:var(--muted);opacity:1}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:4px}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:16px;top:-60px;z-index:60;background:var(--green);color:#fff;padding:10px 14px;border-radius:8px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{max-width:1320px;margin:0 auto}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+.head{margin:0 -16px;border-top:10px solid var(--green)}
+.hmid{padding:22px 16px 18px;border-bottom:4px solid var(--gold)}
+.hmid .inner{max-width:1320px;margin:0 auto;display:grid;gap:4px}
+.kicker{font:700 12.5px/1.35 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--green-2);margin:0 0 10px}
+h1{font:900 clamp(38px,6.4vw,68px)/.98 var(--display);letter-spacing:.005em;margin:0;text-transform:uppercase;text-wrap:balance;color:var(--green)}
+h1 .count{display:inline-block;background:var(--gold);color:var(--on-gold);padding:.06em .12em 0;line-height:.86;border-radius:4px;margin-right:.06em}
+@media (max-width:620px){.hmid{padding:16px 16px 14px}.lede{font-size:15px}.kicker{font-size:11.5px;letter-spacing:.1em}}
+.lede{margin:10px 0 0;color:var(--ink-2);max-width:72ch;font-size:15.5px}
+.fhint{font-size:12.5px;color:#8A4B00;margin:0}
+.qbar{position:relative;margin:0 0 16px}
+.qbar .qicon{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--green);pointer-events:none}
+.qbar input{width:100%;padding:13px 14px 13px 46px;font-size:16px;border:2px solid var(--green);border-radius:12px;background:var(--surface);box-shadow:0 1px 0 rgba(20,36,29,.04)}
+.qbar input:focus-visible{outline:3px solid var(--green-2);outline-offset:2px}
+.qbar kbd{position:absolute;right:14px;top:50%;transform:translateY(-50%);font:600 12px/1 var(--body);color:var(--muted);border:1px solid var(--rule-2);border-radius:5px;padding:3px 7px;pointer-events:none}
+.qbar input:focus ~ kbd,.qbar input:not(:placeholder-shown) ~ kbd{display:none}
+@media (pointer:coarse){.qbar kbd{display:none}}
+@media (forced-colors: active){
+  .tab[aria-pressed="true"],.dir button[aria-pressed="true"],.views button[aria-pressed="true"],.chip[aria-pressed="true"]{outline:3px solid Highlight;outline-offset:-3px;text-decoration:underline}
+}
+.qjump{flex:none;display:inline-grid;place-items:center;width:38px;height:36px;border:1px solid var(--rule-2);background:var(--surface);border-radius:999px;cursor:pointer;color:var(--green)}
+.qjump:hover{border-color:var(--green)}
+.qjump svg{width:18px;height:18px}
+
+/* ---------- boards bar ---------- */
+.boards{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);margin:0 -16px;padding:8px 16px;border-bottom:1px solid var(--rule)}
+.boards .inner{max-width:1320px;margin:0 auto;display:flex;gap:8px 10px;align-items:center}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;flex:1;padding:4px}
+.tab{flex:none;border:1px solid var(--rule-2);background:var(--surface);border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap;font-weight:600;font-size:13.5px;color:var(--ink-2)}
+.tab:hover{border-color:var(--green)}
+.tab.wi{border-color:#D9A21A;background:#FFF9EA}
+.tab[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.tab[aria-pressed="true"]:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.tab .t-est{font-weight:500;color:var(--muted)}
+.tab[aria-pressed="true"] .t-est{color:inherit;opacity:.8}
+.dir{flex:none;display:flex;border:1px solid var(--rule-2);border-radius:999px;background:var(--surface);padding:2px;gap:2px;min-width:340px}
+.dir button{flex:1;border:0;background:none;padding:6px 12px;cursor:pointer;font-weight:700;font-size:13.5px;color:var(--ink-2);white-space:nowrap;border-radius:999px}
+.dir button[aria-pressed="true"]{background:var(--gold);color:var(--on-gold)}
+.dir button:focus-visible,.views button:focus-visible{outline-offset:-3px}
+.views button[aria-pressed="true"]:focus-visible{outline-color:#fff}
+.ftoggle{display:none;flex:none;border:1px solid var(--rule-2);background:var(--surface);border-radius:999px;padding:7px 12px;font-weight:600;font-size:13.5px;cursor:pointer}
+.ftoggle .n{display:inline-grid;place-items:center;min-width:18px;height:18px;margin-left:6px;border-radius:9px;background:var(--green);color:#fff;font-size:11px;padding:0 5px}
+@media (max-width:1100px){.dir{min-width:300px}.tab{padding:6px 10px}}
+@media (max-width:360px){.ftoggle{min-width:0!important;padding:7px 10px} .dir button{padding:7px 4px!important;font-size:12.5px!important}}
+@media (min-width:901px) and (max-width:1240px){
+  .tabs{--fl:0px;--fr:0px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;min-width:0;scroll-padding-inline:36px 48px;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--fl),#000 calc(100% - var(--fr)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 var(--fl),#000 calc(100% - var(--fr)),transparent 100%)}
+  .tabs.fl{--fl:32px} .tabs.fr{--fr:44px}
+  .tabs::-webkit-scrollbar{display:none}
+}
+@media (max-width:900px), (max-height:500px) and (max-width:1100px){
+  .boards .inner{flex-wrap:wrap}
+  .tabs{--fl:0px;--fr:0px;flex-basis:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:4px 4px 5px;scroll-padding-inline:36px 48px;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--fl),#000 calc(100% - var(--fr)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 var(--fl),#000 calc(100% - var(--fr)),transparent 100%)}
+  .tabs.fl{--fl:32px} .tabs.fr{--fr:44px}
+  .tabs::-webkit-scrollbar{display:none}
+  .ftoggle{display:block;width:auto;min-width:8.8em;white-space:nowrap;text-align:center}
+  .dir{flex:1;min-width:0}
+  .search,select{font-size:16px}
+  .dir button{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;padding:7px 8px;font-size:13px}
+  .filters.mclosed{display:none}
+}
+
+/* ---------- layout ---------- */
+.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;margin-top:22px;align-items:start}
+@media (max-width:900px), (max-height:500px) and (max-width:1100px){.layout{grid-template-columns:minmax(0,1fr);gap:16px}}
+.filters{position:sticky;top:calc(var(--stickyH) + 14px);max-height:calc(100vh - var(--stickyH) - 28px);overflow:auto;padding:4px 8px 28px 6px;scroll-padding-block:8px 40px;display:grid;gap:18px;scrollbar-width:thin;
+  -webkit-mask-image:linear-gradient(#000 calc(100% - 28px),transparent);mask-image:linear-gradient(#000 calc(100% - 28px),transparent)}
+@media (max-width:900px), (max-height:500px) and (max-width:1100px){.filters{position:static;max-height:none;overflow:visible;-webkit-mask-image:none;mask-image:none;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:14px}}
+.fgroup{display:grid;gap:8px}
+.flabel{font:700 11.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.search{width:100%;padding:9px 11px;border:1px solid var(--rule-2);border-radius:9px;background:var(--surface)}
+select{width:100%;padding:8px 10px;border:1px solid var(--rule-2);border-radius:8px;background:var(--surface)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--rule-2);background:var(--surface);border-radius:7px;padding:6px 10px;font-size:13px;cursor:pointer;color:var(--ink-2);min-height:32px;min-width:36px}
+.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.chip[aria-pressed="true"]:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.chips.wi .chip[aria-pressed="false"]{background:#FFF9EA;border-color:#D9A21A}
+.toggle{display:flex;align-items:flex-start;gap:9px;cursor:pointer;font-size:14px;color:var(--ink-2);min-height:32px;padding-block:3px}
+.toggle input{width:17px;height:17px;accent-color:var(--green);flex:none;margin-top:2px}
+.range{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
+.range input{accent-color:var(--green);width:100%;min-height:32px}
+.range output{font-size:13px;color:var(--muted);min-width:44px;text-align:right}
+details.weights{border:1px solid var(--rule);border-radius:12px;background:var(--surface);padding:12px}
+details.weights summary{cursor:pointer;font-weight:700;list-style:none;display:flex;gap:6px;align-items:center;min-height:32px}
+details.weights summary #wname{font-weight:500;color:var(--ink-2)}
+details.weights summary #wsign{margin-left:auto}
+details.weights summary::-webkit-details-marker{display:none}
+.wrow{display:grid;grid-template-columns:92px 1fr 48px;gap:8px;align-items:center;font-size:13px;margin-top:8px}
+.wrow input{accent-color:var(--green);width:100%;min-height:32px}
+.wrow output{text-align:right;color:var(--muted)}
+.presets{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.linkbtn{background:none;border:0;padding:7px 0;min-height:32px;color:var(--green);cursor:pointer;font-weight:700;font-size:13px;text-decoration:underline;text-underline-offset:2px;justify-self:start}
+.wnote{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+
+/* ---------- results ---------- */
+.resultbar{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:end;justify-content:space-between;margin-bottom:12px}
+.boardtitle{font:800 clamp(30px,4.2vw,44px)/.95 var(--display);text-transform:uppercase;margin:0;letter-spacing:.01em;color:var(--green)}
+.boardsub{color:var(--muted);margin:6px 0 0;max-width:74ch}
+.rbtools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rand{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--rule-2);background:var(--surface);border-radius:9px;padding:7px 12px;font-weight:600;font-size:13.5px;cursor:pointer;color:var(--ink);min-height:36px}
+.rand:hover,.reroll:hover{border-color:var(--green)}
+.rand svg,.reroll svg{width:17px;height:17px;flex:none}
+.reroll{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--rule-2);background:var(--surface);border-radius:999px;padding:0 12px;height:36px;font-weight:600;font-size:13.5px;cursor:pointer;color:var(--ink);flex:none}
+.dtools{display:flex;gap:8px;align-items:center;flex:none}
+@media (prefers-reduced-motion:no-preference){.rand.rolling svg,.reroll.rolling svg{animation:roll .45s ease-out}}
+@keyframes roll{from{transform:rotate(-200deg) scale(.8)}to{transform:none}}
+.views{display:flex;border:1px solid var(--rule-2);border-radius:9px;background:var(--surface);padding:2px;gap:2px}
+.views button{border:0;background:none;padding:7px 12px;cursor:pointer;font-weight:600;font-size:13.5px;color:var(--ink-2);border-radius:7px}
+.views button[aria-pressed="true"]{background:var(--green);color:#fff}
+.active{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 12px;font-size:13px}
+.active .lbl{color:var(--muted);font-weight:600}
+.pill{display:inline-flex;align-items:center;gap:6px;min-height:32px;border:1px solid var(--rule-2);background:var(--surface);border-radius:999px;padding:4px 8px 4px 11px;cursor:pointer;color:var(--ink-2);font-size:13px;max-width:100%}
+.pill .pl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.pill span[aria-hidden]{font-size:15px;line-height:1;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden;margin-bottom:16px}
+@media (max-width:620px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);padding:12px 14px}
+.stat b{display:block;font:800 28px/1 var(--display);letter-spacing:.01em;color:var(--green)}
+.stat span{font-size:12.5px;color:var(--muted);display:block;margin-top:3px}
+
+.list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.row{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:4px 16px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:12px 16px 12px 8px;cursor:pointer;text-align:left;width:100%;scroll-margin-bottom:12px}
+.row:hover{border-color:var(--rule-2);box-shadow:var(--shadow)}
+.rank{font:800 32px/1 var(--display);text-align:center;color:var(--green);justify-self:center;min-width:44px;padding:4px 2px 2px;border-radius:8px}
+.rank.top{background:var(--gold);color:var(--on-gold)}
+.rname{font-weight:700;font-size:16.5px;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;overflow-wrap:anywhere}
+.rmeta{color:var(--muted);font-size:13.5px;margin-top:2px;display:block}
+.rstats{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px;font-size:13px;color:var(--ink-2)}
+.rstats i{font-style:normal;color:var(--muted)}
+.metric{text-align:right;min-width:112px}
+.metric b{display:block;font:800 31px/1 var(--display);letter-spacing:.01em;color:var(--green)}
+.metric > span{font-size:12.5px;color:var(--muted)}
+@media (max-width:620px){
+  .row{grid-template-columns:48px minmax(0,1fr);padding-right:12px}
+  .rank{font-size:26px;min-width:38px}
+  .metric{grid-column:2;text-align:left;display:flex;gap:8px;align-items:baseline;min-width:0;flex-wrap:wrap}
+  .metric b{font-size:25px}
+  .rstats .dup{display:none}
+}
+.badge{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;letter-spacing:.04em;padding:2px 7px;border-radius:5px;background:var(--surface-2);color:var(--ink-2);text-transform:uppercase}
+.badge.jbf{background:var(--green);color:#fff}
+.badge.icon{background:var(--surface-3);color:var(--green)}
+.badge.sc{background:var(--gold-soft);color:var(--on-gold)}
+.badge.lo{background:none;border:1px dashed var(--rule-2);color:var(--muted);padding:1px 6px}
+.grade{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;font:800 15px/1 var(--display);color:#fff;vertical-align:-4px}
+.grade.sm{width:18px;height:18px;font-size:13px;vertical-align:-3px}
+.g-A{background:#12733A} .g-B{background:#4B7A1B} .g-C{background:#F2B01E;color:#2B1D00} .g-D{background:#E8804F;color:#2B1000} .g-F{background:#C1302F}
+.est{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule-2);border-radius:4px;padding:0 4px;margin-left:4px;vertical-align:1px;white-space:nowrap}
+.more{margin:14px auto 0;display:block;border:1px solid var(--rule-2);background:var(--surface);border-radius:10px;padding:10px 18px;font-weight:600;cursor:pointer}
+.empty{padding:40px 16px;text-align:center;color:var(--muted);background:var(--surface);border:1px dashed var(--rule-2);border-radius:12px;overflow-wrap:anywhere}
+.mapempty p{overflow-wrap:anywhere}
+.empty .linkbtn{font-size:inherit}
+
+/* ---------- map ---------- */
+.mapwrap{position:relative;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:12px}
+#map{display:block;width:100%;max-width:min(760px,max(240px,calc((100dvh - var(--stickyH) - 120px) * 0.95)));margin:0 auto;aspect-ratio:0.95;touch-action:manipulation}
+@media (max-height:500px){#map{max-width:max(160px,calc((100dvh - var(--stickyH) - 70px) * 0.95))}}
+@media (max-height:500px) and (min-width:560px){.boards .inner{flex-wrap:nowrap}.tabs{flex:1 1 0;flex-basis:0;min-width:0}.dir{flex:none;min-width:0}.dir button{flex:none}}
+.mapempty{position:absolute;inset:12px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:48px;text-align:center;color:var(--muted);font-weight:600;background:color-mix(in srgb,var(--surface) 70%,transparent)}
+.legend{display:flex;gap:10px;align-items:center;justify-content:center;font-size:12.5px;color:var(--muted);margin-top:8px;flex-wrap:wrap}
+.legend .grp{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 8px;max-width:100%}
+.legend .nw{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.legend .ramp{display:flex;gap:2px}
+.legend .ramp i{width:26px;height:10px;border-radius:2px}
+.tip{position:absolute;pointer-events:none;background:var(--green);color:#fff;padding:7px 10px;border-radius:8px;font-size:13px;max-width:250px;box-shadow:var(--shadow);z-index:5}
+.tip b{display:block}
+.tip .est{color:inherit;opacity:.85;border-color:currentColor}
+
+/* ---------- cities ---------- */
+.tablewrap{overflow:auto;max-height:72vh;background:var(--surface);border:1px solid var(--rule);border-radius:12px;scroll-padding-top:62px;scroll-padding-bottom:8px;scroll-padding-left:var(--c1w,170px)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:640px;font-size:13.5px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--rule);white-space:nowrap;background:var(--surface)}
+th{padding:0;white-space:normal;vertical-align:bottom}
+thead th{position:sticky;top:0;z-index:2;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+th:first-child,td:first-child{position:sticky;left:0;z-index:1;box-shadow:1px 0 0 var(--rule)}
+thead th:first-child{z-index:3}
+th button{all:unset;cursor:pointer;display:flex;gap:4px;align-items:flex-end;width:100%;min-height:56px;padding:8px 10px;box-sizing:border-box}
+th.r button{justify-content:flex-end;text-align:right}
+th button:focus-visible{outline:2px solid var(--green);outline-offset:-3px;border-radius:3px}
+th[aria-sort]{color:var(--ink)}
+td.r,th.r{text-align:right}
+td.best{white-space:normal;min-width:150px;max-width:230px}
+@media (max-width:1200px){.bartrack{display:none} td.best{min-width:110px}}
+@media (max-width:1060px) and (min-width:901px){.c-conf{display:none}}
+@media (max-width:620px){td:first-child{white-space:normal;max-width:118px} table{min-width:0} .c-sales,.c-conf{display:none} td.best{white-space:normal;min-width:120px}}
+tbody tr{cursor:pointer}
+tbody tr:hover td{background:var(--surface-2)}
+.area{all:unset;cursor:pointer;font-weight:700}
+.area:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:3px}
+.barcell{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.bartrack{width:64px;height:8px;background:var(--surface-3);border-radius:4px;overflow:hidden;flex:none}
+.barfill{display:block;height:100%;background:var(--seq4);border-radius:0 4px 4px 0}
+
+/* ---------- drawer ---------- */
+.scrim{position:fixed;inset:0;background:var(--scrim);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:var(--bg);z-index:41;overflow:auto;overscroll-behavior:contain;box-shadow:var(--shadow);border-left:1px solid var(--rule-2);padding:0 20px calc(env(safe-area-inset-bottom,0px) + 30px)}
+.dhead{position:sticky;top:0;z-index:2;background:var(--bg);display:flex;justify-content:space-between;align-items:center;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 14px) 0 10px;border-bottom:1px solid var(--rule)}
+.dhead .kicker{margin:0}
+.dclose{flex:none;border:1px solid var(--rule-2);background:var(--surface);border-radius:999px;width:36px;height:36px;cursor:pointer;font-size:20px;line-height:1;color:var(--ink)}
+.drawer h2{font:900 38px/.92 var(--display);text-transform:uppercase;margin:14px 0 6px;text-wrap:balance;overflow-wrap:anywhere;color:var(--green)}
+@media (max-width:340px){.drawer h2{font-size:31px}}
+.drawer .addr{color:var(--ink-2)}
+.dlinks{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 4px}
+.dlinks a{color:var(--green);font-weight:700;font-size:13.5px;display:inline-block;padding:6px 0}
+.dsec{margin-top:20px}
+.dsec h3{font:700 11.5px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+.kv{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:6px 14px;font-size:14px;margin:0}
+.kv dt{color:var(--ink-2)} .kv dd{margin:0;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.lines{margin:0;padding-left:18px;font-size:14px;color:var(--ink-2);display:grid;gap:4px}
+.sbar{display:grid;grid-template-columns:96px 1fr 34px;gap:10px;align-items:center;font-size:13px;margin-bottom:6px}
+.sbar .track{display:block;height:8px;background:var(--surface-3);border-radius:4px;overflow:hidden}
+.sbar .fill{display:block;height:100%;background:var(--green);border-radius:0 4px 4px 0}
+.note{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+.hero{display:flex;gap:10px;align-items:center;margin-top:12px}
+.hero .big{font:900 58px/.9 var(--display);color:var(--green)}
+.hero .lbl{font-size:12.5px;color:var(--muted);line-height:1.3}
+.wisig{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.wisig div{border:1px solid var(--rule);border-radius:10px;padding:10px 12px;background:var(--surface-2)}
+.wisig b{display:block;font:800 26px/1 var(--display);color:var(--green)}
+.wisig span{font-size:12.5px;color:var(--muted)}
+
+/* ---------- method ---------- */
+.method{margin-top:44px;border-top:4px solid var(--gold);padding-top:26px;display:grid;gap:18px}
+.method h2{font:900 34px/1 var(--display);text-transform:uppercase;margin:0;color:var(--green)}
+.srccols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+@media (max-width:900px){.srccols{grid-template-columns:minmax(0,1fr)}}
+.srccol{display:grid;gap:12px}
+.src{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:14px 16px}
+.src h3{margin:0 0 4px;font-size:15px}
+.src p{margin:0;color:var(--ink-2);font-size:13.5px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:4px;justify-self:start}
+.tag.m{background:var(--green);color:#fff} .tag.s{background:var(--surface-3);color:var(--ink-2)} .tag.e{background:var(--gold);color:var(--on-gold)}
+.calib{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:12px}
+.calib table{min-width:520px;font-size:13.5px}
+.calib td,.calib th{padding:7px 10px;white-space:normal}
+.calib thead th{position:static;padding:8px 10px;vertical-align:bottom}
+.calib th:first-child,.calib td:first-child{position:static;box-shadow:none}
+.loading{padding:60px 0;text-align:center;color:var(--muted)}
+body.failed .boards,body.failed .views,body.failed #stats,body.failed .filters,body.failed .active{display:none}
+body.failed .layout{grid-template-columns:minmax(0,1fr)}
+@media (prefers-reduced-motion:no-preference){.row{transition:box-shadow .15s,border-color .15s}}
+</style>
+
+<a class="skip" href="#results">Skip to results</a>
+
+<header class="head">
+  <div class="hmid"><div class="inner">
+    <p class="kicker" id="kicker">Wisconsin · map listings as of Sep 2026</p>
+    <h1 id="h1">Every Wisconsin restaurant, <span class="count">ranked</span></h1>
+    <p class="lede" id="lede">Supper clubs, taverns, custard stands, Friday fish fries and the places in between, from Superior to Kenosha. Each one is ranked on ratings, popularity, value and estimated sales, with Wisconsin's own boards for fish fry, supper clubs, custard and cheese curds. Flip any leaderboard to see the bottom.</p>
+  </div></div>
+</header>
+
+<nav class="boards" id="boards" aria-label="Leaderboards"><div class="inner">
+  <div class="tabs" id="tabs"></div>
+  <button class="qjump" id="qjump" type="button" aria-label="Search" title="Search (press /)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+  <button class="ftoggle" id="ftoggle" type="button" aria-expanded="false" aria-controls="filters">Filters</button>
+  <div class="dir" role="group" aria-label="Direction">
+    <button id="dirTop" type="button" aria-pressed="true">Top</button><button id="dirBottom" type="button" aria-pressed="false">Bottom</button>
+  </div>
+</div></nav>
+
+<div class="wrap">
+<div class="layout">
+  <aside class="filters mclosed" id="filters" aria-label="Filters">
+    <div class="fgroup">
+      <label class="flabel" for="city">City or town</label>
+      <input class="search" id="cityq" type="search" placeholder="Find a town…" autocomplete="off" spellcheck="false" aria-label="Find a town in the list below" aria-controls="city">
+      <select id="city"><option value="">All of Wisconsin</option></select>
+      <p class="fhint" id="cityhint" hidden></p>
+    </div>
+    <div class="fgroup">
+      <span class="flabel" id="l-tags">Wisconsin classics</span>
+      <div class="chips wi" id="tagchips" role="group" aria-labelledby="l-tags"></div>
+    </div>
+    <div class="fgroup">
+      <label class="flabel" for="cuisine">Cuisine</label>
+      <select id="cuisine"><option value="">All cuisines</option></select>
+    </div>
+    <div class="fgroup">
+      <span class="flabel" id="l-prices">Price</span>
+      <div class="chips" id="prices" role="group" aria-labelledby="l-prices"></div>
+    </div>
+    <div class="fgroup">
+      <span class="flabel">Show</span>
+      <label class="toggle"><input type="checkbox" id="hideChains"> Hide chains (5+ locations)</label>
+      <label class="toggle"><input type="checkbox" id="ratedOnly"> Only places with ratings</label>
+      <label class="toggle"><input type="checkbox" id="confirmed"> Only confirmed places (on a Milwaukee or Dane County license list, or in two sources)</label>
+      <label class="toggle"><input type="checkbox" id="venues"> Include gas stations, grocery counters, stadiums, campus dining &amp; other non-restaurants</label>
+    </div>
+    <div class="fgroup">
+      <label class="flabel" for="minRev">Minimum reviews (2021)</label>
+      <div class="range"><input type="range" id="minRev" min="0" max="2000" step="25" value="0"><output id="minRevOut" for="minRev" aria-live="off">any</output></div>
+    </div>
+    <details class="weights" id="weights">
+      <summary>WI Score recipe: <span id="wname">Balanced</span> <span aria-hidden="true" id="wsign">+</span></summary>
+      <div id="wrows"></div>
+      <div class="presets" id="presets" role="group" aria-label="Recipe presets"></div>
+      <p class="wnote">Each ingredient is a 0–100 percentile across Wisconsin. A place missing an ingredient is pulled toward 40, a little below the middle.</p>
+      <button class="linkbtn" id="resetW" type="button">Reset recipe</button>
+    </details>
+    <button class="linkbtn" id="reset" type="button">Reset filters</button>
+  </aside>
+
+  <main id="results" tabindex="-1">
+    <div class="qbar" role="search" id="qbar">
+      <svg class="qicon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <label class="sr" for="q">Search restaurants</label>
+      <input id="q" type="search" placeholder="Search name, town, street, zip, “fish fry”…" autocomplete="off" spellcheck="false" enterkeyhint="search"><kbd aria-hidden="true">/</kbd>
+    </div>
+    <div class="resultbar" id="resultbar">
+      <div>
+        <h2 class="boardtitle" id="btitle">Loading…</h2>
+        <p class="boardsub" id="bsub"></p>
+      </div>
+      <div class="rbtools">
+        <button class="rand" id="rand" type="button" title="Open a random place from the ones matching your filters"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="2.5" width="15" height="15" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="7" r="1.6" fill="#D99A00"/><circle cx="10" cy="10" r="1.6" fill="#D99A00"/><circle cx="13" cy="13" r="1.6" fill="#D99A00"/></svg> <span id="randlbl">Random pick</span></button>
+        <div class="views" role="group" aria-label="View">
+          <button type="button" data-view="list" aria-pressed="true">List</button>
+          <button type="button" data-view="map" aria-pressed="false">Map</button>
+          <button type="button" data-view="cities" aria-pressed="false">Cities</button>
+        </div>
+      </div>
+    </div>
+    <div class="active" id="active" hidden></div>
+    <div class="stats" id="stats"></div>
+    <div class="sr" role="status" aria-live="polite" id="live"></div>
+    <div id="vlist"><ol class="list" id="list"><li class="loading">Loading restaurants…</li></ol><button class="more" id="more" type="button" hidden>Show 50 more</button></div>
+    <div id="vmap" hidden><div class="mapwrap"><canvas id="map" tabindex="-1" role="img" aria-label="Map of the ranked restaurants, colored by this leaderboard's metric. The List view has the same ranking as text."></canvas><div class="mapempty" id="mapempty" hidden>Loading the map…</div><div class="legend" id="legend"></div><div class="tip" id="tip" hidden></div></div></div>
+    <div id="vcities" hidden><div class="empty" id="hempty" hidden></div><div class="tablewrap" id="hwrap"><table><caption class="sr">Cities and towns</caption><thead><tr id="hhead"></tr></thead><tbody id="hbody"></tbody></table></div><button class="more" id="hall" type="button" hidden></button><p class="note" id="hnote">Pick a city to see its restaurants. Numbers use the filters you've set.</p></div>
+  </main>
+</div>
+
+<section class="method" id="method" aria-labelledby="mh">
+  <h2 id="mh">Where the numbers come from</h2>
+  <p class="lede" style="margin:0">Some columns are official records, some are a 2021 snapshot, and some are estimates. Every estimate is labeled <span class="est">est.</span> on the page.</p>
+  <div class="srccols" id="srcgrid"></div>
+  <div id="calib"></div>
+</section>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="dname"></div>
+
+<script>
+(() => {
+document.documentElement.lang = document.documentElement.lang || "en";
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmtN = n => n == null ? "—" : Math.round(n).toLocaleString("en-US");
+const plural = (n, one, many) => `${fmtN(n)} ${n === 1 ? one : many}`;
+const money = n => { if (n == null) return "—"; const a = Math.abs(n);
+  if (a >= 1e9) return "$" + (n/1e9).toFixed(2) + "B"; if (a >= 1e6) return "$" + (n/1e6).toFixed(a >= 1e8 ? 0 : 1) + "M";
+  if (a >= 999500) return "$" + (n/1e6).toFixed(1) + "M"; if (a >= 1e3) return "$" + Math.round(n/1e3) + "K"; return "$" + Math.round(n); };
+const dollars = p => "$".repeat(p || 0);
+const TYPE_SYN = {avenue:"ave", av:"ave", street:"st", boulevard:"blvd", road:"rd", drive:"dr", place:"pl", court:"ct", parkway:"pkwy",
+  highway:"hwy", route:"rt", rte:"rt", lane:"ln", trail:"trl", circle:"cir", terrace:"ter", county:"co"};
+// whole words only: "north" -> "n" so "north ave" finds "N Ave"; "saint"/"mount" match "St."/"Mt."
+const SYN = {...TYPE_SYN, north:"n", south:"s", east:"e", west:"w", saint:"st", mount:"mt", fort:"ft"};
+const ABBR = new Set(Object.values(SYN));
+const REV = {}; for (const [w, a] of Object.entries(SYN)) (REV[a] = REV[a] || []).push(w);
+const normRaw = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()
+  .replace(/\b([a-z0-9])\s*&\s*([a-z0-9])\b/g, "$1$2")
+  .replace(/&/g, " and ").replace(/['’`]/g, "").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+const norm = s => normRaw(s).split(" ").map(t => SYN[t] || t).join(" ");
+const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+const COMPS = [["rating","Rating","i_rating"],["pop","Popularity","i_pop"],["value","Value","i_value"],["profit","Profit est.","i_profit"]];
+const PRESETS = {
+  Balanced:{rating:40,pop:25,value:20,profit:15},
+  Foodie:{rating:60,pop:15,value:25,profit:0},
+  Money:{rating:15,pop:25,value:0,profit:60},
+  "Cheap eats":{rating:40,pop:10,value:50,profit:0},
+};
+const TAGS = [["supper","Supper clubs",1],["fishfry","Fish fry",2],["custard","Frozen custard",8],["curds","Cheese curds",4]];
+const DEFAULT = {board:"overall",dir:"top",view:"list",city:"",cuisine:"",prices:[],tags:[],hideChains:false,ratedOnly:false,confirmed:false,venues:false,minRev:0,w:{...PRESETS.Balanced}};
+const JUR = ["", "City of Milwaukee", "Public Health Madison & Dane County"];
+const SRCNAME = {meta:"Meta (Facebook)", AllThePlaces:"the chain's own store list (AllThePlaces)", DAC:"a chain store feed (DAC)", official:"the license list",
+  research:"our verified list, placed with its Google listing", BrightQuery:"BrightQuery", Foursquare:"Foursquare", Microsoft:"Microsoft"};
+
+let cityFromBox = false;
+let D = [], META = {}, SHAPES = null, WI_BOUNDS = null, CITIES = [], CITY_N = new Map(), shown = 50, current = [], pool = [], loaded = false, DETAIL = null, detailPending = null;
+const src = r => ({reported:"reported", chain:"chain est.", model:"est.", "model-low":"rough est.", venue:"venue est."}[r.rev_src] || "est.");
+const ESTTAG = '<span class="est">est.</span>';
+const revs = r => r.reviews >= 9998 ? "9,998+" : fmtN(r.reviews);   // the 2021 snapshot tops out at 9,998 reviews
+const stars = v => v == null ? "—" : v.toFixed(1) + "★";
+
+// ---------------- leaderboards ----------------
+const sigShow = (n, r, what) => [stars(r), `avg of ${plural(n, "review", "reviews")} mentioning ${what} ('21)`];
+const B = [
+  {id:"overall", tab:"WI Score", top:"Top WI Score", bottom:"Lowest WI Score", metric:"WI Score", val:r=>r.score,
+   sub:()=>"A blend of rating, popularity, value and estimated profit, weighted by the WI Score recipe in the filters. Places missing some data are pulled toward 40, a little below the middle.",
+   show:r=>[Math.round(r.score), "WI Score"]},
+  {id:"rating", tab:"Rating", top:"Highest rated", bottom:"Lowest rated", metric:"rating", val:r=>r.bayes, need:(r,d)=>r.reviews >= (d==="top"?15:40),
+   sub:"Google star rating as of the Sep 2021 snapshot, adjusted for review count so a 5.0 from three friends doesn't beat a 4.8 from 3,000 strangers.",
+   show:r=>[stars(r.rating), revs(r)+(r.reviews === 1 ? " review" : " reviews")+" ('21)"], dup:"rating"},
+  {id:"popular", tab:"Popularity", top:"Most popular", bottom:"Least popular", metric:"reviews", val:r=>r.reviews, need:r=>r.reviews!=null,
+   sub:"Total Google reviews as of Sep 2021: the best public stand-in for how many people walk through the door. Places opened since aren't in the snapshot, and the snapshot caps counts at 9,998 (shown as 9,998+).",
+   show:r=>[revs(r), (r.reviews === 1 ? "review" : "reviews")+" ('21) · "+stars(r.rating)], dup:"rating"},
+  {id:"gems", tab:"Hidden gems", top:"Hidden gems", bottom:"Popular but panned", metric:"rating", val:r=>r.gem, need:(r,d)=> d==="top" ? (r.reviews>=20 && r.reviews<=250 && r.chain_n<5) : r.reviews>=600,
+   sub:"Top: independents with 20–250 reviews and great ratings. Bottom: places with 600+ reviews and the lowest ratings. Both from the Sep 2021 snapshot.",
+   show:r=>[stars(r.rating), revs(r)+(r.reviews === 1 ? " review" : " reviews")+" ('21)"], dup:"rating"},
+  {id:"fishfry", wi:true, tab:"Fish fry", top:"Best fish fry", bottom:"Worst fish fry", metric:"fish fry rating", val:r=>r.ff, need:(r,d)=>r.ff_n >= (d==="top"?5:8) && r.ff_r != null,
+   sub:"Average star rating of the Google reviews (written through Sep 2021) that mention the fish fry, adjusted for how many there are, so 3 glowing mentions don't beat 80. A review can mention the fish fry and still be rating the whole visit.",
+   show:r=>sigShow(r.ff_n, r.ff_r, "the fish fry"), dup:"fishfry"},
+  {id:"supper", wi:true, tab:"Supper clubs", top:"Top supper clubs", bottom:"Lowest-rated supper clubs", metric:"rating", val:r=>r.bayes, need:(r,d)=>(r.tags & 1) && r.reviews >= (d==="top"?10:30),
+   sub:"Wisconsin supper clubs: named one, called one in their Google reviews, or on our verified list of institutions. Ranked by Google rating (Sep 2021), adjusted for review count.",
+   show:r=>[stars(r.rating), revs(r)+(r.reviews === 1 ? " review" : " reviews")+" ('21)"], dup:"rating"},
+  {id:"custard", wi:true, tab:"Custard", top:"Best frozen custard", bottom:"Worst frozen custard", metric:"custard rating", val:r=>r.cs, need:(r,d)=>r.cs_n >= (d==="top"?5:8) && r.cs_r != null,
+   sub:"Average star rating of the Google reviews (through Sep 2021) that mention custard, adjusted for how many there are. Includes chains like Culver's, whose custard gets reviewed too.",
+   show:r=>sigShow(r.cs_n, r.cs_r, "custard"), dup:"custard"},
+  {id:"curds", wi:true, tab:"Cheese curds", top:"Best cheese curds", bottom:"Worst cheese curds", metric:"curds rating", val:r=>r.cc, need:(r,d)=>r.cc_n >= (d==="top"?5:8) && r.cc_r != null,
+   sub:"Average star rating of the Google reviews (through Sep 2021) that mention cheese curds, adjusted for how many there are.",
+   show:r=>sigShow(r.cc_n, r.cc_r, "curds"), dup:"curds"},
+  {id:"iconic", tab:"Iconic", top:"Most iconic", bottom:"Least iconic", metric:"iconic points", val:r=>r.s_icon, need:r=>r.s_icon!=null,
+   sub:"Only places on our hand-verified list: James Beard awards and nominations, America's Classics, long-running supper clubs, custard stands, fish fries and other institutions. Points for honors, years open (verified founding year) and how many people know it. Wisconsin has no Michelin Guide.",
+   show:r=>[Math.round(r.s_icon), "iconic pts" + (r.founded ? " · since " + r.founded : "")]},
+  {id:"value", tab:"Value", top:"Best bang for buck", bottom:"Worst value", metric:"value score", val:r=>r.value_raw, need:r=>r.rating!=null,
+   sub:"Rating (2021) relative to price level: a 4.7 at $ beats a 4.7 at $$$.",
+   show:r=>[stars(r.rating)+" "+dollars(r.price)+(r.price_est?ESTTAG:""), "value "+Math.round(r.i_value)+" · rating '21"], dup:"rating"},
+  {id:"price", tab:"Price", top:"Priciest", bottom:"Cheapest", metric:"price", val:r=>r.spend,
+   sub:"Google price level (filled in from the chain or cuisine when missing, and marked est.) with typical spend per person. Within a price level, ties are ordered by WI Score.",
+   show:r=>[dollars(r.price)+(r.price_est?ESTTAG:""), "~$"+r.spend+"/person "+ESTTAG]},
+  {id:"sales", tab:"Sales", top:"Highest sales", bottom:"Lowest sales", metric:"sales", val:r=>r.rev, need:(r,d)=>r.rev!=null && (d==="top" || r.rev_src!=="model-low"), est:true,
+   sub:d=>`Estimated yearly sales. Locations of chains with a published average (${META.model?.n_chains ?? "80+"} brands) use that average scaled by how busy the location is; independents use a model.` + (d==="bottom" ? " This end leaves out places with no review data (their figures are rough placeholders). The model never goes below $100K a year, so the very bottom is a tie, ordered by WI Score." : ""),
+   show:r=>[money(r.rev), "sales/yr · " + src(r)], dup:"sales"},
+  {id:"profit", tab:"Profit", top:"Most profitable", bottom:"Least profitable", metric:"profit", val:r=>r.profit, need:(r,d)=>r.profit!=null && (d==="top" || r.rev_src!=="model-low"), est:true,
+   sub:d=>"Estimated yearly pre-tax profit: estimated sales × a typical margin for the segment, nudged by how well-loved the place is." + (d==="bottom" ? " This end leaves out places with no review data (their figures are rough placeholders). The sales model never goes below $100K a year, so the very bottom is mostly places at that floor, ordered by margin and then WI Score." : ""),
+   show:r=>[money(r.profit), "profit/yr "+ESTTAG]},
+  {id:"food", tab:"Food cost", top:"Biggest food bill", bottom:"Smallest food bill", metric:"food bill", val:r=>r.rev*r.food_cost/100, need:(r,d)=>r.rev!=null && (d==="top" || r.rev_src!=="model-low"), est:true,
+   sub:d=>"Estimated yearly food purchases: estimated sales × the typical food-cost share for the cuisine (steak ~38%, supper club ~35%, pizza ~26%)." + (d==="bottom" ? " This end leaves out places with no review data. The sales model never goes below $100K a year, so the very bottom is mostly places at that floor." : ""),
+   show:r=>[money(r.rev*r.food_cost/100), r.food_cost+"% food cost "+ESTTAG]},
+  {id:"clean", tab:"Inspections", top:"Cleanest (Dane County)", bottom:"Worst inspections (Dane County)", metric:"inspection score", val:r=>r.clean, need:r=>r.n_insp>=2,
+   tie:(a,b,d)=> d==="top" ? (b.n_insp-a.n_insp) : (b.n_reinsp-a.n_reinsp),
+   sub:"Dane County only: it's the one part of Wisconsin that publishes inspection results in bulk. Our 0–100 score from Public Health Madison & Dane County routine inspections since Jan 2023: visits that needed a re-inspection, violations per visit, foodborne-illness risk items, pests and suspensions. Letter grades are ours, not official, and graded on a curve.",
+   show:r=>[`<span class="grade g-${r.grade}">${r.grade}</span> ${r.clean}`, `${plural(r.n_reinsp,"re-inspection needed","re-inspections needed")} · ${plural(r.n_insp,"visit","visits")}`], dup:"grade"},
+];
+const board = () => B.find(b => b.id === S.board) || B[0];
+
+// ---------------- state ----------------
+function sanitize(s) {
+  const o = structuredClone(DEFAULT);
+  if (!s || typeof s !== "object") return o;
+  if (B.some(b => b.id === s.board)) o.board = s.board;
+  if (["top","bottom"].includes(s.dir)) o.dir = s.dir;
+  if (["list","map","cities"].includes(s.view)) o.view = s.view;
+  if (Array.isArray(s.prices)) o.prices = [...new Set(s.prices.map(Number).filter(x => [1,2,3,4].includes(x)))];
+  if (Array.isArray(s.tags)) o.tags = [...new Set(s.tags.filter(x => TAGS.some(([k]) => k === x)))];
+  if (typeof s.cuisine === "string") o.cuisine = s.cuisine.slice(0, 60);
+  if (typeof s.city === "string") o.city = s.city.slice(0, 60);
+  for (const k of ["hideChains","ratedOnly","confirmed","venues"]) o[k] = s[k] === true;
+  if (Number.isFinite(+s.minRev)) o.minRev = Math.max(0, Math.min(2000, Math.round(+s.minRev / 25) * 25));
+  if (s.w && typeof s.w === "object") for (const [k] of COMPS) { const v = +s.w[k]; if (Number.isFinite(v)) o.w[k] = Math.max(0, Math.min(60, Math.round(v / 5) * 5)); }
+  return o;
+}
+let S;
+try { S = sanitize(JSON.parse(localStorage.getItem("wi-eats") || "null")); } catch (e) { S = sanitize(null); }
+S.q = "";
+const save = () => { try { const {q, qTokens, qCity, qTag, qPhrase, qPhraseRaw, qCuisine, qWhole, ...rest} = S; localStorage.setItem("wi-eats", JSON.stringify(rest)); } catch (e) {} };
+function readHash() {
+  const m = location.hash.slice(1).match(/^([a-z]+)(?:-(top|bottom))?$/);
+  const bd = m && B.find(b => b.id === m[1]);
+  if (bd) { S.board = bd.id; S.dir = m[2] || "top"; return true; }
+  return false;
+}
+const writeHash = () => { const h = "#" + board().id + (S.dir === "bottom" ? "-bottom" : ""); if (location.hash !== h) history.replaceState(history.state, "", h); };
+
+// ---------------- scoring ----------------
+let weightTotal = 0;
+function scoreAll() {
+  const w = S.w; weightTotal = COMPS.reduce((s,[k]) => s + (+w[k]||0), 0);
+  for (const r of D) {
+    if (!weightTotal) { r.score = null; continue; }
+    let sum = 0, have = 0;
+    for (const [k,,f] of COMPS) { const wk = +w[k]||0; if (!wk) continue; const v = r[f]; if (v != null) { sum += v*wk; have += wk; } }
+    r.score = have ? (sum/have)*(have/weightTotal) + 40*(1 - have/weightTotal) : 40;
+  }
+}
+
+// ---------------- filtering ----------------
+function passes(r, skip = {}) {
+  if (!S.venues && r.venue) return false;
+  if (S.hideChains && r.chain_n >= 5) return false;
+  if (S.ratedOnly && r.rating == null) return false;
+  if (S.minRev && !(r.reviews >= S.minRev)) return false;
+  if (S.confirmed && !r.both) return false;
+  if (!skip.city && S.city && r.city !== S.city) return false;
+  for (const t of S.tags) { const bit = (TAGS.find(([k]) => k === t) || [])[2]; if (bit && !(r.tags & bit)) return false; }
+  // a town named in the search ("fond du lac fish fry") narrows to it; a place NAMED that way still counts
+  if (!skip.search && S.qTag && !(r.tags & (TAGS.find(([k]) => k === S.qTag) || [,,0])[2]) && !r._n.includes(" " + S.qTagRaw)) return false;
+  if (!skip.search && S.qCity && r.city !== S.qCity && !r._n.includes(" " + S.qPhraseRaw)) return false;
+  if (!skip.cuisine && S.cuisine && r.cuisine !== S.cuisine) return false;
+  if (S.prices.length && !S.prices.includes(r.price)) return false;
+  if (!skip.search && S.qTokens && S.qTokens.length) {
+    for (const v of S.qTokens) if (!v.some(nd => r._s.includes(nd))) return false;
+  }
+  return true;
+}
+const FCACHE = new Map();
+function filtered(skip = {}) {
+  const key = JSON.stringify([S.venues, S.hideChains, S.ratedOnly, S.minRev, S.confirmed, S.city, S.tags, S.cuisine, S.prices, S.q, Object.keys(skip).filter(k => skip[k]).sort()]);
+  let out = FCACHE.get(key);
+  if (!out) { out = D.filter(r => passes(r, skip)); if (FCACHE.size > 12) FCACHE.clear(); FCACHE.set(key, out); }
+  return out;
+}
+function comparator(b, d) {
+  const sign = d === "top" ? -1 : 1;
+  return (a, c) => (b.val(a) - b.val(c)) * sign || (b.tie ? b.tie(a, c, d) : 0) || ((c.score ?? -1) - (a.score ?? -1)) || a.name.localeCompare(c.name);
+}
+function ranked(opts = {}) {
+  const b = opts.board || board(), d = opts.dir || S.dir;
+  const base = opts.base || filtered(opts.skip || {});
+  const out = base.filter(r => (!b.need || b.need(r, d)) && b.val(r) != null).sort(comparator(b, d));
+  if (!(opts.skip && opts.skip.search) && S.qTokens && S.qTokens.length) {   // when searching, places whose NAME matches come first
+    if (S.qCuisine) return out;   // ...unless the search is a kind of food or a place: then the leaderboard order is what's asked for
+    const inName = r => S.qTokens.every(v => v.some(nd => r._n.includes(nd)));
+    return out.filter(inName).concat(out.filter(r => !inName(r)));
+  }
+  return out;
+}
+
+// ---------------- rendering ----------------
+function badges(r) {
+  let h = "";
+  if (r.hon & 1) h += `<span class="badge jbf">America's Classic</span>`;
+  else if (r.hon & 2) h += `<span class="badge jbf">James Beard winner</span>`;
+  else if (r.hon & 4) h += `<span class="badge jbf">James Beard finalist</span>`;
+  else if (r.hon & 8) h += `<span class="badge">James Beard semifinalist</span>`;
+  if ((r.hon & 16) && !(r.hon & 7)) h += `<span class="badge icon">Icon</span>`;
+  if ((r.tags & 1) && !/supper ?club/i.test(r.name)) h += `<span class="badge sc">Supper club</span>`;
+  if (r.chain_n >= 5) h += `<span class="badge">Chain · ${fmtN(r.chain_n)}</span>`;
+  if (r.tier === 0) h += `<span class="badge lo" title="Found in one map source only">Listing only</span>`;
+  return h;
+}
+function rowHTML(r, i) {
+  const b = board(), [big, lbl] = b.show(r), dup = k => b.dup === k ? " dup" : "";
+  const bits = [];
+  if (r.rating != null) bits.push(`<span class="${dup("rating")}">${stars(r.rating)} <i>(${revs(r)} in '21)</i></span>`);
+  if (r.ff_n >= 3 && b.id !== "fishfry") bits.push(`<span>${r.ff_n} <i>fish fry mentions</i></span>`);
+  if (r.grade) bits.push(`<span class="${dup("grade")}" title="Our grade from Dane County inspection results, not an official grade"><span class="grade sm g-${r.grade}">${r.grade}</span> <i>our inspection grade</i></span>`);
+  if (r.rev != null) bits.push(`<span class="${dup("sales")}">${money(r.rev)} <i>sales ${src(r)}</i></span>`);
+  if (S.board !== "overall" && r.score != null) bits.push(`<span>${Math.round(r.score)} <i>WI Score</i></span>`);
+  const meta = [r.city, r.cuisine, dollars(r.price) + (r.price_est ? " est." : "")].filter(Boolean).map(esc).join(" · ");
+  return `<li><button class="row" type="button" data-id="${r.id}">
+    <span class="rank num ${i < 3 && S.dir==="top" ? "top" : ""}" aria-label="Rank ${i+1}">${i+1}</span>
+    <span><span class="rname">${esc(r.name)} ${badges(r)}</span>
+      <span class="rmeta">${meta}</span>
+      <span class="rstats num">${bits.join("")}</span></span>
+    <span class="metric num"><b>${big}</b><span>${lbl}</span></span></button></li>`;
+}
+function median(a) { if (!a.length) return null; const s = [...a].sort((x,y)=>x-y), m = s.length>>1; return s.length%2 ? s[m] : (s[m-1]+s[m])/2; }
+function renderStats() {
+  const rated = pool.filter(r => r.rating != null);
+  let sales = pool.filter(r => r.rev != null && r.rev_src !== "model-low").map(r => r.rev), rough = false;
+  if (!sales.length) { sales = pool.filter(r => r.rev != null).map(r => r.rev); rough = sales.length > 0; }
+  const conf = pool.filter(r => r.both).length, nc = new Set(pool.map(r => r.city).filter(Boolean)).size;
+  $("#stats").innerHTML = [
+    [fmtN(current.length), current.length === pool.length ? `ranked on this board` : `ranked here · ${fmtN(pool.length)} ${pool.length === 1 ? "matches" : "match"} filters`],
+    [rated.length ? median(rated.map(r=>r.rating)).toFixed(1)+"★" : "—", rated.length ? `median Google rating, 2021 (${fmtN(rated.length)} rated)` : "no Google ratings here"],
+    [pool.length ? Math.round(conf / pool.length * 100) + "%" : "—", pool.length ? `confirmed by a license list or two sources · ${plural(nc, "town", "towns")}` : "nothing matches"],
+    [money(median(sales)), sales.length ? (rough ? "median sales/yr (rough est.)" : "median sales/yr (est.)") : "no sales estimates here"],
+  ].map(([b,s]) => `<div class="stat"><b class="num">${b}</b><span>${s}</span></div>`).join("");
+}
+const STOPW = new Set(["the", "and", "of", "a"]);
+const TAG_PH = [["friday fish fry","fishfry"],["fish fries","fishfry"],["fish fry","fishfry"],["fishfry","fishfry"],["supper clubs","supper"],["supper club","supper"],
+  ["supperclub","supper"],["frozen custard","custard"],["custard","custard"],["cheese curds","curds"],["cheese curd","curds"],["curds","curds"]].map(([p, t]) => [norm(p), t]);
+let CITY_PH = [], CUISINE_WORDS = new Set(), PLACE_WORDS = new Set();
+const TYPE_ABBR = new Set(Object.values(TYPE_SYN));
+function setQuery() {
+  // "fond du lac fish fry" means the town; "green bay rd" or "madison st" is a street, not the town
+  const raw = normRaw(S.q).split(" ").filter(Boolean), mapped = raw.map(t => SYN[t] || t);
+  const find = phrase => { const p = phrase.split(" ");
+    for (let i = 0; i + p.length <= mapped.length; i++) if (p.every((w, k) => mapped[i + k] === w)) return [i, p.length];
+    return null; };
+  const cut = ([i, n]) => { const words = raw.slice(i, i + n).join(" "); mapped.splice(i, n); raw.splice(i, n); return words; };
+  const free = ([i, n]) => !(i + n < mapped.length && TYPE_ABBR.has(mapped[i + n]));
+  S.qCity = S.qPhrase = S.qPhraseRaw = null; S.qTag = null;
+  // "fish fry", "supper club", "custard", "cheese curds" mean the Wisconsin tags, not words in a name
+  for (const [ph, tag] of TAG_PH) { const f = find(ph); if (f) { S.qTag = tag; S.qTagRaw = cut(f).replace(/s$/, ""); break; } }
+  for (const [k, c] of CITY_PH) { const f = find(k); if (f && free(f)) { S.qCity = c; S.qPhrase = k; S.qPhraseRaw = cut(f); break; } }
+  let idx = raw.map((_, i) => i);
+  if (idx.some(i => !STOPW.has(mapped[i]))) idx = idx.filter(i => !STOPW.has(mapped[i]));
+  S.qWhole = new Set([...String(S.q).matchAll(/\b([a-z0-9])\s*&\s*([a-z0-9])\b/gi)].map(m => (m[1] + m[2]).toLowerCase()));
+  const last = idx.length - 1;
+  // a token matches at the start of a word ("kopp" finds Kopp's, not Skopp); abbreviations and short tokens must be whole words,
+  // except the last token, which may still be mid-typing
+  S.qTokens = []; let joinedLast = false;
+  for (let n = 0; n <= last; n++) {
+    const i = idx[n], rt = raw[i], next = n < last ? raw[idx[n + 1]] : null;
+    if (SYN[rt]) { S.qTokens.push([" " + SYN[rt] + " ", " " + rt]); continue; }
+    if (rt.length === 1 && next && !ABBR.has(rt) && !SYN[next]) { S.qTokens.push([" " + rt + next, " " + rt + " " + next]); if (++n === last) joinedLast = true; continue; }
+    const whole = S.qWhole.has(rt) || (ABBR.has(rt) && (n < last || rt.length > 1)) || (rt.length <= 2 && n < last);
+    const v = [" " + rt + (whole ? " " : "")];
+    if (ABBR.has(rt) && (n < last || rt.length > 1)) for (const w of REV[rt] || []) v.push(" " + w + " ");
+    if (n === last && rt.length >= 3) for (const k in TYPE_SYN) if (k !== rt && k.startsWith(rt)) v.push(" " + TYPE_SYN[k] + " ");
+    S.qTokens.push(v);
+  }
+  // "brady st", "green bay rd": a finished street type sticks to the word before it, so it means that street
+  if (last >= 1 && !joinedLast && TYPE_ABBR.has(mapped[idx[last]]) && S.qTokens.length >= 2) {
+    const mp = mapped[idx[last - 1]], ma = mapped[idx[last]], rp = raw[idx[last - 1]], ra = raw[idx[last]];
+    S.qTokens.splice(-2, 2, [" " + mp + " " + ma + " ", " " + rp + " " + ra]);
+  }
+  S.qCuisine = (idx.length > 0 && idx.every(i => CUISINE_WORDS.has(mapped[i]))) || (!idx.length && !!(S.qTag || S.qCity));
+}
+function presetName() { return Object.keys(PRESETS).find(p => COMPS.every(([k]) => +S.w[k] === +PRESETS[p][k])) || null; }
+function activeFilters() {
+  const f = [];
+  if ((S.qTokens && S.qTokens.length) || S.qCity || S.qTag || (S.q && S.q.trim())) f.push(["q", `“${S.q.trim()}”`]);
+  if (S.city) f.push(["city", S.city]);
+  S.tags.forEach(t => f.push(["tag:"+t, (TAGS.find(([k]) => k === t) || [,t])[1]]));
+  if (S.cuisine) f.push(["cuisine", S.cuisine]);
+  S.prices.forEach(p => f.push(["price:"+p, dollars(p)]));
+  const T = {hideChains:"No chains", ratedOnly:"Rated only", confirmed:"Confirmed only", venues:"Incl. non-restaurants"};
+  for (const k in T) if (S[k]) f.push([k, T[k]]);
+  if (S.minRev) f.push(["minRev", S.minRev + "+ reviews"]);
+  const pn = presetName(); if (pn !== "Balanced") f.push(["recipe", "Recipe: " + (pn || "Custom")]);
+  return f;
+}
+function clearFilter(key) {
+  const [k, v] = key.split(":");
+  if (k === "q") { S.q = ""; S.qTokens = []; S.qCity = S.qPhrase = S.qTag = null; $("#q").value = ""; }
+  else if (k === "price") S.prices = S.prices.filter(x => x !== +v);
+  else if (k === "tag") S.tags = S.tags.filter(x => x !== v);
+  else if (k === "cuisine") S[k] = "";
+  else if (k === "city") { S.city = ""; $("#cityq").value = ""; cityFromBox = false; }
+  else if (k === "minRev") S.minRev = 0;
+  else if (k === "recipe") { S.w = {...PRESETS.Balanced}; scoreAll(); }
+  else S[k] = false;
+}
+function renderActive() {
+  const f = activeFilters();
+  $("#active").hidden = !f.length;
+  $("#active").innerHTML = f.length ? `<span class="lbl">Filtered by</span>` + f.map(([k, l]) => `<button class="pill" type="button" data-k="${esc(k)}" aria-label="Remove ${esc(l)}"><span class="pl">${esc(l)}</span> <span aria-hidden="true">×</span></button>`).join("") + (f.length > 1 ? `<button class="linkbtn" type="button" data-k="__all">Clear filters</button>` : "") : "";
+  const n = f.filter(([k]) => k !== "q").length; $("#ftoggle").innerHTML = (($("#ftoggle").getAttribute("aria-expanded") === "true") ? "Hide filters" : "Filters") + (n ? `<span class="n">${n}<span class="sr"> active</span></span>` : "");
+  const pn = presetName(); $("#wname").textContent = pn || "Custom";
+}
+function focusResults() { $("#results").focus({preventScroll: true}); }
+function hiddenMatches() {   // places the search finds among the hidden non-restaurants ("banda": a delivery-only brand)
+  if (S.venues || !(S.qTokens && S.qTokens.length)) return 0;
+  return D.filter(r => r.venue && passes(Object.assign({}, r, {venue: 0}))).length;
+}
+function emptyMessage() {
+  const f = activeFilters().filter(([k]) => k !== "recipe"), onlyQ = f.length === 1 && f[0][0] === "q";
+  const hid = !pool.length ? hiddenMatches() : 0;
+  if (hid) return `No restaurants match “${esc(S.q.trim())}”, but ${plural(hid, "place does", "places do")} among the hidden non-restaurants (gas stations, stores, stadiums, delivery-only brands). <button class="linkbtn" type="button" data-act="venues">Show non-restaurants</button>`;
+  if (!pool.length && f.length === 1 && f[0][0] === "q")
+    return `No places match “${esc(S.q.trim())}” in Wisconsin. <button class="linkbtn" type="button" data-act="clearq">Clear the search</button>`;
+  if (!pool.length && ((S.qTokens && S.qTokens.length) || S.qCity || S.qTag))
+    return `No places match “${esc(S.q.trim())}” with your other filters. <button class="linkbtn" type="button" data-act="clearq">Clear the search</button> or <button class="linkbtn" type="button" data-act="reset">reset all filters</button>`;
+  if (S.board === "overall" && !weightTotal) return `The WI Score recipe is empty. Turn up at least one ingredient, or <button class="linkbtn" type="button" data-act="resetW">reset the recipe</button>.`;
+  const what = onlyQ ? "your search" : "your filters", undo = onlyQ ? `<button class="linkbtn" type="button" data-act="clearq">Clear the search</button>` : `<button class="linkbtn" type="button" data-act="reset">Reset the filters</button>`;
+  if (pool.length && board().id === "clean") return `${plural(pool.length, "place matches", "places match")} ${what}, but inspection results are only published for Dane County (Madison and its suburbs). ${f.length ? undo + " to see them." : ""}`;
+  if (pool.length && !f.length) return `No place has the data this leaderboard needs yet. Try another leaderboard.`;
+  if (pool.length) return `${plural(pool.length, "place matches", "places match")} ${what}, but none has the data this leaderboard needs. Try another leaderboard, or ${undo.replace(">Clear", ">clear").replace(">Reset", ">reset")}.`;
+  return `Nothing matches these filters. <button class="linkbtn" type="button" data-act="reset">Reset filters</button>`;
+}
+function renderList(append = false) {
+  const list = $("#list");
+  if (!current.length) { list.innerHTML = `<li class="empty">${emptyMessage()}</li>`; $("#more").hidden = true; return; }
+  if (append) {
+    const start = list.children.length;
+    list.insertAdjacentHTML("beforeend", current.slice(start, shown).map((r, j) => rowHTML(r, start + j)).join(""));
+    const first = list.children[start]; if (first) first.querySelector(".row").focus({preventScroll: false});
+  } else list.innerHTML = current.slice(0, shown).map(rowHTML).join("");
+  const left = current.length - shown;
+  $("#more").hidden = left <= 0;
+  if (left > 0) $("#more").textContent = `Show ${Math.min(50, left)} more (${fmtN(left)} left)`;
+}
+let CUISINE_ALL = {};
+function updateCounts() {
+  const cc = {}; for (const r of filtered({cuisine: true})) cc[r.cuisine] = (cc[r.cuisine]||0) + 1;
+  const sel = $("#cuisine"), cur = S.cuisine;
+  const names = Object.keys(CUISINE_ALL).sort((a,b) => (cc[b]||0) - (cc[a]||0) || a.localeCompare(b));
+  sel.innerHTML = `<option value="">All cuisines</option>` + names.map(c => `<option value="${esc(c)}">${esc(c)} (${fmtN(cc[c]||0)})</option>`).join("");
+  sel.value = cur;
+  cityOptions();
+}
+function cityOptions() {
+  // towns sorted by how many places match the other filters; the find box narrows the list
+  const cc = new Map(); for (const r of filtered({city: true})) if (r.city) cc.set(r.city, (cc.get(r.city) || 0) + 1);
+  const q = norm($("#cityq").value.trim());
+  let list = CITIES.map(([c]) => [c, cc.get(c) || 0]).filter(([c, n]) => n > 0 || c === S.city);
+  if (q) list = list.filter(([c]) => (" " + norm(c)).includes(" " + q) || c === S.city);
+  list.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const shownN = list.length;
+  if (list.length > 400) list = list.slice(0, 400).concat(S.city && !list.slice(0, 400).some(([c]) => c === S.city) ? list.filter(([c]) => c === S.city) : []);
+  $("#city").innerHTML = `<option value="">${q ? (shownN ? `Towns matching “${esc($("#cityq").value.trim())}” (${fmtN(shownN)})` : "No town matches") : "All of Wisconsin"}</option>` +
+    list.map(([c, n]) => `<option value="${esc(c)}">${esc(c)} (${fmtN(n)})</option>`).join("") + (shownN > list.length ? `<option disabled>…type to find the other ${fmtN(shownN - list.length)}</option>` : "");
+  $("#city").value = S.city;
+}
+function updateFades() { const t = $("#tabs"); t.classList.toggle("fl", t.scrollLeft > 2); t.classList.toggle("fr", t.scrollLeft < t.scrollWidth - t.clientWidth - 2); }
+function showActiveTab(el) {
+  const tabs = $("#tabs"), t = el || tabs.querySelector('.tab[aria-pressed="true"]');
+  if (t && tabs.scrollWidth > tabs.clientWidth + 1) {
+    const tr = t.getBoundingClientRect(), sr = tabs.getBoundingClientRect();
+    if (tr.left < sr.left + 36 || tr.right > sr.right - 48) tabs.scrollLeft += (tr.left + tr.width / 2) - (sr.left + sr.width / 2);
+  }
+  updateFades();
+}
+function render(opts = {}) {
+  if (!loaded) return;
+  const b = board(), short = matchMedia("(max-width: 700px), (max-height: 500px)").matches;
+  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-pressed", t.dataset.id === b.id));
+  $("#dirTop").textContent = short ? "Top" : b.top; $("#dirBottom").textContent = short ? "Bottom" : b.bottom;
+  $("#dirTop").setAttribute("aria-label", short ? "Top: " + b.top : b.top); $("#dirBottom").setAttribute("aria-label", short ? "Bottom: " + b.bottom : b.bottom);
+  $("#dirTop").setAttribute("aria-pressed", S.dir === "top"); $("#dirBottom").setAttribute("aria-pressed", S.dir === "bottom");
+  document.querySelectorAll(".views button").forEach(v => v.setAttribute("aria-pressed", v.dataset.view === S.view));
+  $("#btitle").textContent = S.dir === "top" ? b.top : b.bottom;
+  $("#bsub").textContent = typeof b.sub === "function" ? b.sub(S.dir) : b.sub;
+  pool = filtered();
+  current = ranked({base: pool});
+  $("#stats").hidden = false;
+  renderStats(); renderActive(); if (!opts.light) updateCounts();
+  $("#vlist").hidden = S.view !== "list"; $("#vmap").hidden = S.view !== "map"; $("#vcities").hidden = S.view !== "cities";
+  if (S.view === "list") renderList(opts.append);
+  else if (S.view === "map") drawMap();
+  else renderCities();
+  if (!opts.append && !opts.light) { const msg = `${S.dir === "top" ? b.top : b.bottom}: ${plural(current.length, "place", "places")}.`; if ($("#live").textContent !== msg) $("#live").textContent = msg; }
+  syncControls(); if (!opts.light) save(); writeHash();
+  if (opts.scrollTabs) showActiveTab(); else updateFades();
+}
+const barBottom = () => { const b = document.getElementById("boards"); return b.offsetHeight + (parseFloat(getComputedStyle(b).top) || 0); };
+function toResultsTop() {
+  const bar = $("#resultbar"), top = bar.getBoundingClientRect().top + scrollY - (barBottom() + 8);
+  if (scrollY > top) scrollTo({top, behavior: reduceMotion() ? "auto" : "smooth"});
+}
+
+// ---------------- map ----------------
+let mapPts = [], shapesPending = null;
+function mapColors() { const cs = getComputedStyle(document.documentElement), t = n => cs.getPropertyValue(n).trim(); return {t, seq:[1,2,3,4,5].map(i => t("--seq"+i))}; }
+let shapesFailed = false;
+function loadShapes() {
+  if (SHAPES || shapesPending) return;
+  shapesFailed = false;
+  shapesPending = fetchJSON("wi_shapes.json").then(j => {
+    if (!j || !Array.isArray(j.state)) throw new Error("bad outline");
+    SHAPES = j; shapesPending = null;
+    let a = [180, -180, 90, -90];
+    for (const poly of SHAPES.state) for (const [x, y] of poly[0]) a = [Math.min(a[0], x), Math.max(a[1], x), Math.min(a[2], y), Math.max(a[3], y)];
+    WI_BOUNDS = a[0] < a[1] ? a : [-92.9, -86.8, 42.49, 47.08];
+    if (S.view === "map") drawMap();
+  }).catch(() => { shapesPending = null; shapesFailed = true; if (S.view === "map") drawMap(); });   // retried the next time the map draws
+}
+function drawMap() {
+  if (!loaded) return;
+  if (!WI_BOUNDS) {
+    $("#mapempty").hidden = false; $("#legend").innerHTML = "";
+    $("#mapempty").innerHTML = shapesFailed ? `<p style='margin:0;max-width:40ch'>The map outline didn't load. Check your connection. <button class="linkbtn" type="button" data-act="map">Try again</button></p>` : "<p style='margin:0'>Loading the map…</p>";
+    if (!shapesFailed) loadShapes(); return; }
+  const c = $("#map"), ctx = c.getContext("2d"), dpr = window.devicePixelRatio || 1;
+  const w = c.clientWidth || 600, h = Math.round(w / 0.95);
+  c.width = w*dpr; c.height = h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+  const {t, seq} = mapColors();
+  const pts0 = current.filter(r => r.lat != null);
+  const full = WI_BOUNDS;
+  let [minLon, maxLon, minLat, maxLat] = full;
+  const userFiltered = activeFilters().some(([k]) => k !== "recipe");
+  const narrowed = pts0.length && (S.city || S.qCity || S.qTag || (S.qTokens && S.qTokens.length && pts0.length < 1500) || pts0.length < D.length * 0.35);
+  if (narrowed) {
+    let a = 90, b2 = -90, x = 180, y = -180;
+    for (const r of pts0) { if (r.lat < a) a = r.lat; if (r.lat > b2) b2 = r.lat; if (r.lon < x) x = r.lon; if (r.lon > y) y = r.lon; }
+    if (pts0.length >= 25) {   // a stray mis-placed listing shouldn't zoom a town out to half the state
+      const la = pts0.map(r => r.lat).sort((p, q) => p - q), lo = pts0.map(r => r.lon).sort((p, q) => p - q), cut = Math.floor(pts0.length * 0.02);
+      const ta = la[cut], tb = la[la.length - 1 - cut], tx = lo[cut], ty = lo[lo.length - 1 - cut];
+      if (b2 - a > 3 * (tb - ta) + 0.05 || y - x > 3 * (ty - tx) + 0.05) {
+        a = ta; b2 = tb; x = tx; y = ty;
+        for (const r of current.slice(0, 25)) if (r.lat != null) { a = Math.min(a, r.lat); b2 = Math.max(b2, r.lat); x = Math.min(x, r.lon); y = Math.max(y, r.lon); }   // gold rings never fall off the edge
+      }
+    }
+    const few = pts0.length <= 5;   // a town with only a few places keeps its neighbors in view
+    const padLat = Math.max((b2 - a) * 0.12, few ? 0.09 : 0.02), padLon = Math.max((y - x) * 0.12, few ? 0.12 : 0.027);
+    minLat = Math.max(full[2] - 0.02, a - padLat); maxLat = Math.min(full[3] + 0.025, b2 + padLat); minLon = Math.max(full[0] - 0.015, x - padLon); maxLon = Math.min(full[1] + 0.02, y + padLon);
+  }
+  const kx = Math.cos((minLat + maxLat) / 2 * Math.PI/180);
+  const fit = (x0, x1, y0, y1) => Math.min((w-16)/((x1-x0)*kx), (h-16)/(y1-y0));
+  const sc = fit(minLon, maxLon, minLat, maxLat);
+  const ox = (w - (maxLon-minLon)*kx*sc)/2, oy = (h - (maxLat-minLat)*sc)/2;
+  const P = (lon, lat) => [ox + (lon-minLon)*kx*sc, oy + (maxLat-lat)*sc];
+  const zoom = Math.max(1, Math.min(60, sc / fit(...full)));
+  ctx.clearRect(0,0,w,h);
+  const trace = ring => { ring.forEach(([x,y],i) => { const [px,py] = P(x,y); i ? ctx.lineTo(px,py) : ctx.moveTo(px,py); }); ctx.closePath(); };
+  const path = ring => { ctx.beginPath(); trace(ring); };
+  const land = () => { ctx.beginPath(); for (const poly of SHAPES.state) for (const ring of poly) trace(ring); };   // outer rings and lake holes
+  ctx.fillStyle = t("--map-fill"); land(); ctx.fill("evenodd");
+  ctx.save(); land(); ctx.clip("evenodd");   // county lines stop at the shore
+  ctx.lineWidth = zoom > 3 ? 1 : 0.7; ctx.strokeStyle = t("--map-line"); for (const cty of SHAPES.counties) for (const ring of cty.c) { path(ring); ctx.stroke(); }
+  ctx.restore();
+  ctx.lineWidth = 1.3; ctx.strokeStyle = t("--rule-2"); land(); ctx.stroke();
+  const b = board(), vals = current.map(b.val).sort((x,y)=>x-y), n = vals.length;
+  // position of a value in the sorted list; ties take the middle of their run so a huge tie doesn't all land in the lightest step
+  const distinct = [...new Set(vals)];
+  const q = distinct.length <= 5 ? (v => distinct.length > 1 ? distinct.indexOf(v) / (distinct.length - 1) * 0.999 : 0.999)
+    : (v => { let lo=0, hi=n; while (lo<hi) { const m=(lo+hi)>>1; vals[m] < v ? lo=m+1 : hi=m; }
+    let up=lo, h2=n; while (up<h2) { const m=(up+h2)>>1; vals[m] <= v ? up=m+1 : h2=m; } return n>1 ? ((lo + up - 1) / 2)/(n-1) : 1; });
+  const rBase = Math.max(1.2, Math.min(2.2, w / 640 * 1.9)) * Math.sqrt(Math.min(zoom, 4));
+  mapPts = [];
+  const pts = current.map((r, i) => ({r, i, p: q(b.val(r))})).filter(o => o.r.lat != null);
+  const rest = pts.filter(o => o.i >= 25).sort((a, c) => a.p - c.p), top = pts.filter(o => o.i < 25).reverse();
+  ctx.lineWidth = 0.6; ctx.strokeStyle = t("--dot-edge");
+  for (const o of rest) {
+    const [x, y] = P(o.r.lon, o.r.lat);
+    ctx.beginPath(); ctx.arc(x, y, rBase, 0, Math.PI*2); ctx.fillStyle = seq[Math.min(4, Math.floor(o.p * 5))]; ctx.fill(); if (zoom > 2 || pts.length < 3000) ctx.stroke();
+    mapPts.push({x, y, r: o.r, i: o.i});
+  }
+  for (const o of top) {   // the top 25 are drawn last so they're never covered: gold ring, dark edge
+    const [x, y] = P(o.r.lon, o.r.lat);
+    ctx.beginPath(); ctx.arc(x, y, rBase + 2.4, 0, Math.PI*2); ctx.fillStyle = seq[Math.min(4, Math.floor(o.p * 5))]; ctx.fill();
+    ctx.lineWidth = 3; ctx.strokeStyle = t("--green"); ctx.stroke(); ctx.lineWidth = 1.8; ctx.strokeStyle = t("--gold"); ctx.stroke();
+    mapPts.push({x, y, r: o.r, i: o.i, ranked: true, rad: rBase + 2.4});
+  }
+  const empty = !pts.length || (S.board === "overall" && !weightTotal);
+  $("#mapempty").hidden = !empty;
+  if (empty) $("#mapempty").innerHTML = `<p style="margin:0;max-width:40ch">${current.length && !pts.length && (S.board !== "overall" || weightTotal) ? `${plural(current.length, "ranked place", "ranked places")} here, but none has a map location. The List view shows ${current.length === 1 ? "it" : "them"}.` : emptyMessage()}</p>`;
+  const est = b.est ? " (est.)" : "", title = S.dir === "top" ? b.top : b.bottom;
+  const unmapped = current.slice(0, 25).map((r, i) => r.lat == null ? "#" + (i + 1) : null).filter(Boolean), nRing = top.length;
+  const ringTxt = nRing ? (current.length <= 25 ? (current.length === 1 ? "Gold ring: the only ranked place" : `Gold rings: all ${fmtN(current.length)} ranked places`) : `Gold rings: the top 25 on “${esc(title)}”`) + (unmapped.length ? ` (${unmapped.join(", ")} not mapped: no location)` : "") : "";
+  const zoomTxt = narrowed && zoom > 1.25 ? (userFiltered ? "Zoomed to your filters" : "Zoomed to these places") : "";
+  $("#legend").innerHTML = pts.length ? `<span class="grp"><span class="nw">Lower <span class="ramp" aria-hidden="true">${seq.map(s=>`<i style="background:${s}"></i>`).join("")}</span></span> <span>Higher ${esc(b.metric)}${est}</span></span>
+    <span class="grp"><span style="text-align:center"><svg width="16" height="16" aria-hidden="true" style="vertical-align:-3px"><circle cx="8" cy="8" r="5.5" fill="none" stroke="${t("--green")}" stroke-width="3"/><circle cx="8" cy="8" r="5.5" fill="none" stroke="${t("--gold")}" stroke-width="1.8"/></svg> ${ringTxt}</span></span>${zoomTxt ? `<span class="grp">${zoomTxt}</span>` : ""}` : "";
+}
+function nearest(ev) {
+  const rect = $("#map").getBoundingClientRect(), mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
+  const slop = matchMedia("(pointer: coarse)").matches ? 5 : 1.5;
+  let best = null, bd = Infinity;
+  for (const p of mapPts) if (p.ranked) { const d = (p.x-mx)**2 + (p.y-my)**2; if (d <= (p.rad + slop) ** 2 && (!best || p.i < best.i)) { bd = d; best = p; } }
+  if (best) return best;
+  bd = 100;
+  for (const p of mapPts) { const d = (p.x-mx)**2 + (p.y-my)**2; if (d <= bd) { bd = d; best = p; } }
+  return best;
+}
+
+// ---------------- cities ----------------
+let hsort = {k:"n", dir:-1}, hAll = false;
+function renderCities() {
+  const g = new Map();
+  for (const r of pool) { const k = r.city; if (k == null) continue; if (!g.has(k)) g.set(k, []); g.get(k).push(r); }
+  const b = board(), top1 = new Map();
+  for (const r of current) { const k = r.city; if (k != null && !top1.has(k)) top1.set(k, r); }
+  const rows = [...g.entries()].map(([id, rs]) => {
+    const rated = rs.filter(r => r.rating != null), scored = rs.filter(r => r.score != null), best = top1.get(id);
+    return {id, name: id, n: rs.length,
+      score: scored.length ? scored.reduce((s,r)=>s+r.score,0)/scored.length : null,
+      rating: rated.length ? median(rated.map(r=>r.rating)) : null,
+      conf: rs.filter(r => r.both).length / rs.length * 100,
+      sales: median(rs.filter(r=>r.rev!=null && r.rev_src !== "model-low").map(r=>r.rev)),
+      best: best ? best.name : null};
+  });
+  const cols = [["name","City or town"],["n","Places","r"],["score","Avg WI Score","r"],["rating","Median rating ('21)","r"],["conf","Confirmed","r c-conf"],["sales","Median sales est.","r c-sales"],["best",`#1 on “${S.dir==="top"?b.top:b.bottom}”`]];
+  if (!cols.some(([k]) => k === hsort.k)) hsort = {k: "n", dir: -1};
+  const recipeEmpty = S.board === "overall" && !weightTotal;
+  $("#hempty").hidden = rows.length && !recipeEmpty; $("#hwrap").hidden = !rows.length; $("#hnote").hidden = !rows.length;
+  if (!rows.length || recipeEmpty) $("#hempty").innerHTML = emptyMessage();
+  if (!rows.length) { $("#hall").hidden = true; return; }
+  const k = hsort.k, isText = ["name","best"].includes(k);
+  rows.sort((x, y) => {
+    const a = x[k], c = y[k];
+    if (a == null && c == null) return String(x.name).localeCompare(String(y.name)); if (a == null) return 1; if (c == null) return -1;
+    return (isText ? String(a).localeCompare(String(c)) : a - c) * hsort.dir || String(x.name).localeCompare(String(y.name));
+  });
+  const maxN = rows.reduce((m, r) => Math.max(m, r.n), 1);
+  $("#hhead").innerHTML = cols.map(([key,l,cl]) => `<th scope="col" class="${cl||""}" ${key===k?`aria-sort="${hsort.dir<0?"descending":"ascending"}"`:""}><button type="button" data-k="${key}">${esc(l)}<span aria-hidden="true">${key===k?(hsort.dir<0?"↓":"↑"):""}</span></button></th>`).join("");
+  const total = rows.length;
+  if (!hAll && rows.length > 100) rows.length = 100;   // 800 towns would be 800 tab stops
+  $("#hall").hidden = rows.length === total; $("#hall").textContent = `Show all ${fmtN(total)} cities and towns`;
+  $("#hbody").innerHTML = rows.map(r => `<tr data-city="${esc(r.id)}"><td><button class="area" type="button" data-city="${esc(r.id)}">${esc(r.name)}</button></td>
+    <td class="r num"><span class="barcell">${fmtN(r.n)}<span class="bartrack" aria-hidden="true"><span class="barfill" style="width:${Math.max(2, Math.round(r.n/maxN*100))}%"></span></span></span></td>
+    <td class="r num">${r.score==null?"—":Math.round(r.score)}</td>
+    <td class="r num">${r.rating==null?"—":r.rating.toFixed(1)+"★"}</td><td class="r num c-conf">${Math.round(r.conf)}%</td>
+    <td class="r num c-sales">${money(r.sales)}</td><td class="best">${r.best?esc(r.best):"—"}</td></tr>`).join("");
+  const c1 = $("#hbody td"); if (c1) $("#hwrap").style.setProperty("--c1w", c1.offsetWidth + 8 + "px");
+}
+function pickCity(v) {
+  S.city = v; S.view = "list"; shown = 50; $("#cityq").value = ""; render();
+  requestAnimationFrame(() => { const bar = $("#resultbar"); scrollTo({top: bar.getBoundingClientRect().top + scrollY - barBottom() - 8, behavior: reduceMotion() ? "auto" : "smooth"}); $("#results").focus({preventScroll:true}); });
+}
+
+// ---------------- detail drawer ----------------
+let lastFocus = null, drawerHistory = false, openedAt = 0, lastRandom = null, randOpener = null, drawerId = null, drawerRandom = false, detailFailed = false;
+function randomPick(again) {
+  if (!pool.length) {
+    $("#randlbl").textContent = "Nothing matches";
+    $("#live").textContent = "Nothing matches your filters, so there's nothing to pick from.";
+    setTimeout(() => { $("#randlbl").textContent = "Random pick"; }, 1800);
+    return;
+  }
+  const from = pool.length > 1 ? pool.filter(x => x.id !== lastRandom) : pool;
+  const r = from[Math.floor(Math.random() * from.length)];
+  lastRandom = r.id;
+  const btn = again ? $("#reroll") : $("#rand");
+  if (btn) { btn.classList.remove("rolling"); void btn.offsetWidth; btn.classList.add("rolling"); }
+  if (!again) randOpener = $("#rand");
+  openDrawer(r.id, randOpener, again ? "again" : true);
+  $("#live").textContent = pool.length === 1 ? `Only one place matches your filters: ${r.name}.` : `Random pick: ${r.name}, ${r.city || "Wisconsin"}.`;
+  const nb = again ? $("#reroll") : null; if (nb) nb.classList.add("rolling");
+}
+function sbar(label, v) { return `<div class="sbar"><span>${label}</span><span class="track" aria-hidden="true"><span class="fill" style="width:${v==null?0:v}%"></span></span><span class="num" style="text-align:right;color:var(--ink-2)">${v==null?"—":Math.round(v)}</span></div>`; }
+function kv(pairs) { const p = pairs.filter(Boolean); return p.length ? `<dl class="kv">${p.map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>` : ""; }
+function dhead(kick, random) {
+  return `<div class="dhead"><p class="kicker">${random ? "Random pick · " : ""}${kick}</p><div class="dtools">${random ? `<button class="reroll" id="reroll" type="button" title="Pick another random place from the ones matching your filters"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="2.5" width="15" height="15" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="7" r="1.6" fill="#D99A00"/><circle cx="10" cy="10" r="1.6" fill="#D99A00"/><circle cx="13" cy="13" r="1.6" fill="#D99A00"/></svg> Roll again</button>` : ""}<button class="dclose" id="dclose" type="button" aria-label="Close details">×</button></div></div>`;
+}
+const pctTxt = x => (x * 100).toFixed(0) + "%";
+function calibNote(r) {
+  const c = META.calibration || {}, g = k => [c.mke?.groups?.[k], c.dane?.groups?.[k]].filter(Boolean);
+  const range = k => { const v = g(k).map(x => x.official); if (!v.length) return null; const lo = Math.min(...v), hi = Math.max(...v); return lo === hi ? pctTxt(lo) : `${pctTxt(lo)}–${pctTxt(hi)}`; };
+  const feed = r.src === "AllThePlaces" || r.src === "DAC", checked = r.hon ? " It's also on our hand-checked list of Wisconsin institutions, confirmed open in Sep 2026." : "";
+  if (r.src === "research") return "This place isn't in the map listings as a place to eat (it's listed as an inn, resort, shop or bowling alley). It's on our hand-checked list of Wisconsin institutions, confirmed open in Sep 2026, and placed with its Google listing.";
+  if (r.tier === 2) return (r.src === "official" ? `This place comes straight from the ${esc(JUR[r.jur])} license list. The map listings we use didn't have it, so its location comes from the license record or a matching address.` : `Matched to an active license on the ${esc(JUR[r.jur])} list, so it's confirmed as a licensed business.`) + checked;
+  const via = feed ? (r.tier === 1 ? "brand feed + Google 2021" : "brand feed only") : r.src === "meta" ? (r.tier === 1 ? "Meta + open in Google 2021" : "Meta only") : null;
+  const rate = via ? range(via) : null, kind = feed ? "chain store-list listings" : "listings";
+  if (!via) return "Kept because it's on our hand-checked list of Wisconsin institutions, confirmed open in Sep 2026, even though its only map listing comes from a source that's usually unreliable.";
+  if (r.tier === 1) return `Found in two independent sources: a map listing and Google's 2021 data. Checked against Milwaukee's and Dane County's license lists, ${kind} like this matched a licensed business ${rate || "most"} of the time.` + checked;
+  return `Found in one map source only. Checked against Milwaukee's and Dane County's license lists, single-source ${kind} like this matched a licensed business ${rate || "less than half"} of the time, so this one may be closed or misfiled.` + checked;
+}
+function sigCard(n, rt, what) { return n ? `<div><b>${rt == null ? "—" : rt.toFixed(1) + "★"}</b><span>${plural(n, "review mentions", "reviews mention")} ${what}</span></div>` : ""; }
+let rankMemo = {key: ""};
+function openDrawer(id, opener, random) {
+  const r = D[+id]; if (!r) return;
+  drawerId = r.id; drawerRandom = random;
+  lastFocus = opener || document.activeElement;
+  const rk = JSON.stringify([S.w, S.venues, S.hideChains, S.ratedOnly, S.minRev, S.city, S.confirmed, S.tags, S.cuisine, S.prices]);
+  if (rk !== rankMemo.key) { const all = ranked({board: B[0], dir: "top", skip: {search: true}}); rankMemo = {key: rk, L: all, at: new Map(all.map((x, i) => [x.id, i]))}; }
+  const L = rankMemo.L, ri = rankMemo.at.has(r.id) ? rankMemo.at.get(r.id) : -1;
+  const x = Object.assign({}, r, DETAIL ? DETAIL[r.id] || {} : {});
+  const wait = DETAIL ? null : (detailFailed ? "not loaded" : "…");   // values that only the details file has
+  const gq = encodeURIComponent(`${r.name} ${r.addr || ""} ${r.city || ""} WI`);
+  const heroLbl = r.score == null ? (weightTotal ? "No WI Score: not enough data" : "WI Score recipe is empty")
+    : ri >= 0 ? `WI Score · #${fmtN(ri+1)} of ${fmtN(L.length)} with your filters (ignoring search)` : "WI Score · outside your current filters";
+  const hero = `<div class="hero"><span class="big num">${r.score==null?"n/a":Math.round(r.score)}</span><span class="lbl">${heroLbl}</span></div>`;
+  const cats = `<div class="dsec"><h3>Category scores (percentile vs. all Wisconsin places)</h3>${COMPS.map(([, l, f]) => sbar(l, r[f])).join("")}</div>`;
+  const sig = [sigCard(r.ff_n, r.ff_r, "the fish fry"), sigCard(r.cs_n, r.cs_r, "custard"), sigCard(r.cc_n, r.cc_r, "cheese curds"),
+    r.sc_n ? `<div><b>${fmtN(r.sc_n)}</b><span>${r.sc_n === 1 ? "review calls" : "reviews call"} it a supper club</span></div>` : ""].join("");
+  const moneyNote = {
+    reported: `Published sales: ${esc(x.rev_label || "")}. Profit and food cost are still estimates.`,
+    chain: r.reviews == null ? "This location isn't in the 2021 review snapshot, so this uses 85% of the chain's published U.S. average sales per location." : "Based on the chain's published U.S. average sales per location, scaled up or down by how busy this location was (2021 reviews) compared with the chain's other Wisconsin locations.",
+    model: "Modeled: a typical sales figure for this price level, scaled by 2021 review volume relative to similar Wisconsin places (the same model as the Chicago leaderboard, calibrated on published Chicago sales). A ballpark, not a financial statement.",
+    "model-low": "Rough estimate: this place has no review data, so it assumes below-typical traffic for its price level. Treat it as a placeholder.",
+    venue: "Venue estimate: modeled like a restaurant, but food sales at stadiums, gas stations and campus dining are hard to separate from the venue. Treat it loosely.",
+  }[r.rev_src] || "";
+  const honorsList = [...(x.jbf ? x.jbf.split(/;\s(?![^()]*\))/).map(v => "James Beard: " + v) : []), ...(x.honors ? x.honors.split(/;\s(?![^()]*\))/) : [])];
+  const tagsTxt = TAGS.filter(([, , bit]) => r.tags & bit).map(([, l]) => l.replace(/s$/, "")).concat(r.tags & 16 ? ["Fish boil"] : []);
+  const insp = r.grade ? `<div class="dsec"><h3>Health inspections · Dane County, since Jan 2023</h3>
+      <div class="hero" style="margin:0 0 10px"><span class="grade g-${r.grade}" style="width:42px;height:42px;font-size:27px;border-radius:9px">${r.grade}</span><span class="lbl">Inspection score ${r.clean}/100<br>Our grade on a curve from Public Health Madison &amp; Dane County results, not an official grade</span></div>
+      ${kv([["Routine inspections", fmtN(x.n_insp)], ["Needed a re-inspection", fmtN(x.n_reinsp)], ["Violations per visit", wait ?? x.viol_per ?? "—"], ["Foodborne-illness risk items per visit", wait ?? x.rf_per ?? "—"],
+        ["Visits with a pest item", wait ?? fmtN(x.n_pest ?? 0)], ["Repeat violations", wait ?? fmtN(x.n_repeat ?? 0)], x.n_susp ? ["Immediate suspensions", fmtN(x.n_susp)] : null,
+        x.last_date ? ["Last routine visit", `${esc(x.last_date)} · ${x.last_reinsp ? "re-inspection needed" : "no re-inspection needed"}`] : null])}
+      ${DETAIL ? "" : `<p class="note">${detailFailed ? "Couldn't load the inspection breakdown. Check your connection and reopen this place." : "Loading the inspection breakdown…"}</p>`}</div>` : "";
+  $("#drawer").innerHTML = `${dhead(esc(r.city || "Wisconsin"), random)}
+    <h2 id="dname">${esc(r.name).replace(/([\/+.@])/g, "$1<wbr>")}</h2>
+    <div class="addr">${r.addr ? esc(r.addr) + ", " : ""}${esc(r.city || "Wisconsin")}${r.zip ? " " + esc(r.zip) : ""} · ${esc(r.cuisine)} · ${dollars(r.price)}${r.price_est?ESTTAG:""}</div>
+    <div class="rname" style="margin-top:8px;font-size:13px">${badges(r)}</div>
+    <div class="dlinks"><a href="https://www.google.com/maps/search/?api=1&query=${gq}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>
+    ${hero}${cats}
+    ${sig ? `<div class="dsec"><h3>Wisconsin classics · from Google reviews through Sep 2021</h3><div class="wisig">${sig}</div><p class="note">Average star rating of just the reviews that mention it. Reviews rate the whole visit, so read these as a lean, not a verdict.</p></div>` : ""}
+    ${(honorsList.length || x.icon || x.founded) ? `<div class="dsec"><h3>Honors &amp; history</h3>${x.icon?`<p style="margin:0 0 8px;color:var(--ink-2);font-size:14px">${esc(x.icon)}</p>`:""}${honorsList.length?`<ul class="lines">${honorsList.map(v=>`<li>${esc(v)}</li>`).join("")}</ul>`:""}${x.founded ? `<p class="note">Open since ${esc(x.founded)} (verified).</p>` : ""}</div>`
+      : (r.hon && !DETAIL ? `<div class="dsec"><h3>Honors &amp; history</h3><p class="note">${detailFailed ? "Couldn't load the honors. Check your connection and reopen this place." : "Loading…"}</p></div>` : "")}
+    ${insp}
+    <div class="dsec"><h3>Reputation</h3>${r.rating!=null?kv([["Google rating (Sep 2021)", stars(r.rating)],["Google reviews (Sep 2021)", revs(r)],["Price level", dollars(r.price)+(r.price_est?ESTTAG:"")],["Typical spend per person", "~$"+r.spend+ESTTAG]])+`<p class="note">Ratings are a September 2021 snapshot (UCSD Google Local dataset). Open Google Maps for today's numbers.</p>`
+      : kv([["Google rating","not in the 2021 snapshot"],["Price level", dollars(r.price)+(r.price_est?ESTTAG:"")],["Typical spend per person","~$"+r.spend+ESTTAG]])+`<p class="note">This place isn't in the September 2021 ratings snapshot. It may have opened later, or its Google listing didn't match.</p>`}</div>
+    <div class="dsec"><h3>Money · estimates</h3>${kv([
+      ["Yearly sales", money(r.rev)+` <span class="est">${src(r)}</span>`], ["Yearly profit", money(r.profit)+ESTTAG], ["Profit margin", (r.margin*100).toFixed(1)+"%"+ESTTAG],
+      ["Food cost", r.food_cost+`% of sales <span class="est">benchmark</span>`], ["Food purchases/yr", money(r.rev*r.food_cost/100)+ESTTAG]])}
+      <p class="note">${moneyNote}</p></div>
+    <div class="dsec"><h3>Listing</h3>${kv([
+      ["Confirmed by", r.tier === 2 ? esc(JUR[r.jur]) + " license list" : r.tier === 1 ? "Map listing (2026) and Google (2021)" : "One map listing (2026) only"],
+      r.src !== "official" ? ["Listing from", esc(SRCNAME[r.src] || r.src || "—")] : null,
+      x.lic ? ["License number", esc(x.lic.replace(/^(MKE|PHMDC)-/, ""))] : null,
+      tagsTxt.length ? ["Wisconsin tags", esc(tagsTxt.join(", "))] : null,
+      ["Listed as a bar or tavern", r.bar ? "Yes" : "No"], ["Locations in Wisconsin", r.chain_n >= 2 ? fmtN(r.chain_n) : "This one only"],
+      r.venue ? ["Kind of place", "Not a restaurant (gas station, grocery counter, stadium, campus dining or similar)"] : null])}
+      <p class="note">${calibNote(r)}</p></div>`;
+  const dr = $("#drawer"); openedAt = performance.now();
+  if (lastFocus === $("#map")) lastFocus._noScroll = true;
+  const wasOpen = !dr.hidden, keep = random === "keep";
+  if (keep) drawerRandom = true;
+  dr.hidden = false; $("#scrim").hidden = false; if (!wasOpen || (random && !keep)) dr.scrollTop = 0;
+  document.body.classList.add("locked");
+  if (!drawerHistory) { history.pushState({drawer: true}, "", location.href); drawerHistory = true; }
+  if (!keep && (!wasOpen || random)) (random === "again" && $("#reroll") ? $("#reroll") : $("#dclose")).focus();
+  if (!DETAIL && !detailPending) loadDetail();
+}
+function loadDetail() {
+  if (DETAIL || detailPending) return detailPending;
+  detailFailed = false;
+  detailPending = fetchJSON("wi_detail.json").then(j => {
+    const ex = (j && j.extra) || {}; DETAIL = {};
+    for (const k in ex) DETAIL[+k] = ex[k];
+    for (const k in DETAIL) { const r = D[+k]; if (r && DETAIL[k].founded) r.founded = DETAIL[k].founded; }
+    refreshDrawer();
+  }).catch(() => { detailPending = null; detailFailed = true; refreshDrawer(); });
+  return detailPending;
+}
+function refreshDrawer() {   // redraw an open drawer in place: same place, same random-pick state, same scroll and focus
+  if ($("#drawer").hidden || drawerId == null) return;
+  const st = $("#drawer").scrollTop, fe = document.activeElement && document.activeElement.id;
+  openDrawer(drawerId, lastFocus, drawerRandom === true ? "keep" : drawerRandom === "again" ? "keep" : drawerRandom);
+  $("#drawer").scrollTop = st;
+  const back = fe && document.getElementById(fe); if (back) back.focus({preventScroll: true});
+}
+function closeDrawer(fromPop) {
+  if ($("#drawer").hidden) return;
+  $("#drawer").hidden = true; $("#scrim").hidden = true; document.body.classList.remove("locked"); drawerId = null;
+  if (drawerHistory) { drawerHistory = false; if (!fromPop) history.back(); }
+  const back = lastFocus && document.contains(lastFocus) ? lastFocus : (lastFocus && lastFocus.dataset && lastFocus.dataset.id ? document.querySelector(`.row[data-id="${lastFocus.dataset.id}"]`) : null);
+  if (back) back.focus({preventScroll: !!back._noScroll});
+}
+function trapFocus(e) {
+  if (e.key !== "Tab" || $("#drawer").hidden) return;
+  const f = [...$("#drawer").querySelectorAll('a[href],button,input,select,[tabindex]:not([tabindex="-1"])')].filter(x => x.offsetParent !== null);
+  if (!f.length) return;
+  const first = f[0], last = f[f.length - 1];
+  if (e.shiftKey && (document.activeElement === first || !$("#drawer").contains(document.activeElement))) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && (document.activeElement === last || !$("#drawer").contains(document.activeElement))) { e.preventDefault(); first.focus(); }
+}
+
+// ---------------- controls ----------------
+function syncControls() {
+  if (document.activeElement !== $("#q")) $("#q").value = S.q;
+  document.querySelectorAll("#prices .chip").forEach(c => c.setAttribute("aria-pressed", S.prices.includes(+c.dataset.v)));
+  document.querySelectorAll("#tagchips .chip").forEach(c => c.setAttribute("aria-pressed", S.tags.includes(c.dataset.v)));
+  $("#cuisine").value = S.cuisine; if ($("#city").value !== S.city) $("#city").value = S.city;
+  for (const k of ["hideChains","ratedOnly","confirmed","venues"]) $("#"+k).checked = !!S[k];
+  $("#minRev").value = S.minRev; $("#minRevOut").textContent = S.minRev ? S.minRev+"+" : "any";
+  const W = S.w, wt = COMPS.reduce((a, [k]) => a + (+W[k] || 0), 0);
+  for (const [k] of COMPS) { const el = $("#w-"+k); if (el) { el.value = W[k]; const t = wt ? `${Math.round(W[k] / wt * 100)}%` : "0%"; if ($("#wo-"+k).textContent !== t) $("#wo-"+k).textContent = t; } }
+  const same = p => COMPS.every(([k]) => +W[k] === +PRESETS[p][k]);
+  document.querySelectorAll("#presets .chip").forEach(c => c.setAttribute("aria-pressed", same(c.dataset.p)));
+}
+function toggleIn(arr, v) { const i = arr.indexOf(v); i < 0 ? arr.push(v) : arr.splice(i, 1); }
+const rerender = () => { shown = 50; render(); };
+function setBoard(id, dir) {
+  if (id) S.board = id; if (dir) S.dir = dir;
+  shown = 50; render({scrollTabs: true}); if (S.view === "list") toResultsTop();
+}
+let rafW = 0;
+function buildControls() {
+  document.querySelectorAll("#filters input, #filters select, .dir button, .views button, #ftoggle, #rand").forEach(el => el.disabled = false);
+  $("#tabs").innerHTML = B.map(b => `<button class="tab${b.wi ? " wi" : ""}" type="button" data-id="${b.id}" aria-pressed="false">${b.tab}${b.est?` <span class="t-est">est.</span>`:""}</button>`).join("");
+  $("#wrows").innerHTML = COMPS.map(([k, l]) => `<div class="wrow"><label for="w-${k}">${l}</label><input type="range" id="w-${k}" min="0" max="60" step="5"><output id="wo-${k}" for="w-${k}" aria-live="off"></output></div>`).join("");
+  COMPS.forEach(([k]) => { const el = $("#w-"+k);
+    el.oninput = e => { S.w[k] = +e.target.value; cancelAnimationFrame(rafW); rafW = requestAnimationFrame(() => { scoreAll(); shown = 50; render({light: true}); }); };
+    el.onchange = () => { cancelAnimationFrame(rafW); scoreAll(); rerender(); }; });
+  $("#presets").innerHTML = Object.keys(PRESETS).map(p => `<button class="chip" type="button" data-p="${esc(p)}" aria-pressed="false">${esc(p)}</button>`).join("");
+  $("#tabs").onclick = e => { const t = e.target.closest(".tab"); if (t) setBoard(t.dataset.id); };
+  $("#dirTop").onclick = () => setBoard(null, "top");
+  $("#dirBottom").onclick = () => setBoard(null, "bottom");
+  document.querySelectorAll(".views button").forEach(b => b.onclick = () => { S.view = b.dataset.view; render(); });
+  $("#prices").innerHTML = [1,2,3,4].map(p => `<button class="chip" type="button" data-v="${p}" aria-pressed="false" aria-label="${["","Inexpensive","Moderate","Expensive","Very expensive"][p]} (${dollars(p)})">${dollars(p)}</button>`).join("");
+  $("#prices").onclick = e => { const c = e.target.closest(".chip"); if (c) { toggleIn(S.prices, +c.dataset.v); rerender(); } };
+  $("#tagchips").innerHTML = TAGS.map(([k, l]) => `<button class="chip" type="button" data-v="${k}" aria-pressed="false">${l}</button>`).join("");
+  $("#tagchips").onclick = e => { const c = e.target.closest(".chip"); if (c) { toggleIn(S.tags, c.dataset.v); rerender(); } };
+  D.forEach(r => CUISINE_ALL[r.cuisine] = 1);
+  $("#cuisine").onchange = e => { S.cuisine = e.target.value; rerender(); };
+  $("#city").onchange = e => { S.city = e.target.value; $("#cityq").value = ""; cityFromBox = false; rerender(); };
+  $("#cityq").oninput = () => { const v = $("#cityq").value.trim(), hit = CITY_N.get(norm(v));
+    $("#cityhint").hidden = true;
+    if (hit) { if (hit !== S.city) { S.city = hit; cityFromBox = true; rerender(); } else cityOptions(); }
+    else if (cityFromBox && S.city) { S.city = ""; cityFromBox = false; rerender(); }   // "Wausauk" is no longer Wausau
+    else cityOptions(); };
+  $("#cityq").addEventListener("keydown", e => { if (e.key !== "Enter") return; e.preventDefault();
+    const v = norm($("#cityq").value.trim()); if (!v) return;
+    const hit = CITY_N.get(v) || (CITIES.find(([c]) => (" " + norm(c)).includes(" " + v)) || [])[0];   // CITIES is biggest first: "bay" -> Green Bay
+    if (hit) { S.city = hit; $("#cityq").value = ""; cityFromBox = false; $("#cityhint").hidden = true; rerender(); }
+    else { $("#cityhint").textContent = `No Wisconsin town matches “${$("#cityq").value.trim()}”.`; $("#cityhint").hidden = false; $("#live").textContent = $("#cityhint").textContent; } });
+  let qt, qfull;
+  $("#q").oninput = e => { S.q = e.target.value; setQuery(); clearTimeout(qt); clearTimeout(qfull);
+    qt = setTimeout(() => { shown = 50; render({light: true}); qfull = setTimeout(() => render(), 600); }, 140); };
+  $("#q").addEventListener("keydown", e => { if (e.key !== "Enter") return; e.preventDefault(); clearTimeout(qt); clearTimeout(qfull); rerender();
+    if (matchMedia("(pointer: coarse)").matches) $("#q").blur(); });
+  for (const k of ["hideChains","ratedOnly","confirmed","venues"]) $("#"+k).onchange = e => { S[k] = e.target.checked; rerender(); };
+  $("#minRev").oninput = e => { S.minRev = +e.target.value; $("#minRevOut").textContent = S.minRev ? S.minRev+"+" : "any"; cancelAnimationFrame(rafW); rafW = requestAnimationFrame(() => { shown = 50; render({light: true}); }); };
+  $("#minRev").onchange = () => rerender();
+  $("#presets").onclick = e => { const c = e.target.closest(".chip"); if (c) { S.w = {...PRESETS[c.dataset.p]}; scoreAll(); rerender(); } };
+  const resetW = () => { S.w = {...PRESETS.Balanced}; scoreAll(); rerender(); };
+  const resetF = () => { const d = structuredClone(DEFAULT);
+    for (const k of ["city","cuisine","prices","tags","hideChains","ratedOnly","confirmed","venues","minRev"]) S[k] = d[k];
+    S.w = {...PRESETS.Balanced}; scoreAll();
+    Object.assign(S, {q: "", qTokens: [], qCity: null, qPhrase: null, qTag: null, qCuisine: false}); $("#q").value = ""; $("#cityq").value = ""; cityFromBox = false; $("#cityhint").hidden = true; rerender(); };
+  $("#resetW").onclick = resetW; $("#reset").onclick = resetF;
+  $("#weights").addEventListener("toggle", () => { $("#wsign").textContent = $("#weights").open ? "–" : "+"; });
+  $("#more").onclick = () => { shown += 50; renderList(true); };
+  $("#list").onclick = e => { const b = e.target.closest(".row"); if (b) openDrawer(b.dataset.id, b); };
+  $("#results").addEventListener("click", e => { const a = e.target.closest("[data-act]"); if (!a) return; const act = a.dataset.act;
+    if (act === "reset") resetF(); else if (act === "resetW") resetW(); else if (act === "clearq") { clearFilter("q"); rerender(); }
+    else if (act === "dane") { resetF(); }
+    else if (act === "venues") { S.venues = true; rerender(); }
+    else if (act === "map") { shapesFailed = false; loadShapes(); drawMap(); }
+    focusResults(); });
+  $("#active").onclick = e => { const p = e.target.closest("[data-k]"); if (!p) return;
+    const idx = [...$("#active").querySelectorAll("[data-k]")].indexOf(p);
+    if (p.dataset.k === "__all") { S.w = {...PRESETS.Balanced}; scoreAll(); resetF(); } else { clearFilter(p.dataset.k); rerender(); }
+    const pills = [...$("#active").querySelectorAll(".pill")]; const t = pills[Math.min(idx, pills.length - 1)];
+    if (t) t.focus(); else focusResults(); };
+  $("#ftoggle").onclick = () => { const f = $("#filters"), open = f.classList.toggle("mclosed") === false; $("#ftoggle").setAttribute("aria-expanded", open); renderActive();
+    requestAnimationFrame(() => (open ? f : $("#resultbar")).scrollIntoView({block: "start", behavior: reduceMotion() ? "auto" : "smooth"})); };
+  $("#scrim").onclick = () => { if (performance.now() - openedAt > 400) closeDrawer(); };
+  $("#drawer").addEventListener("click", e => { if (performance.now() - openedAt < 400 && e.target.closest("a,button")) { e.preventDefault(); e.stopPropagation(); } }, true);
+  $("#drawer").onclick = e => { if (e.target.closest("#dclose")) closeDrawer(); else if (e.target.closest("#reroll")) randomPick(true); };
+  $("#rand").onclick = () => randomPick(false);
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#drawer").hidden) { e.preventDefault(); closeDrawer(); } trapFocus(e); });
+  window.addEventListener("popstate", () => {
+    if (!$("#drawer").hidden) { drawerHistory = false; closeDrawer(true); }
+    else if (history.state && history.state.drawer) history.back();
+  });
+  window.addEventListener("hashchange", () => { if (history.state && history.state.drawer && $("#drawer").hidden) return;
+    if (!readHash()) { writeHash(); return; } shown = 50; render({scrollTabs: true}); });
+  document.querySelector(".skip").addEventListener("click", e => { e.preventDefault(); const r = $("#resultbar"); scrollTo({top: r.getBoundingClientRect().top + scrollY - barBottom() - 8, behavior: "auto"}); focusResults(); });
+  $("#tabs").addEventListener("scroll", updateFades, {passive: true});
+  let tabPress = 0;
+  $("#tabs").addEventListener("pointerdown", () => { tabPress = performance.now(); }, true);
+  $("#tabs").addEventListener("focusin", e => { const t = e.target.closest(".tab"); if (t && performance.now() - tabPress > 600) showActiveTab(t); });
+  matchMedia("(max-width: 700px), (max-height: 500px)").addEventListener?.("change", () => render());
+  $("#hhead").onclick = e => { const bt = e.target.closest("button[data-k]"); if (!bt) return; const k = bt.dataset.k; hsort = {k, dir: hsort.k === k ? -hsort.dir : (["name","best"].includes(k) ? 1 : -1)}; renderCities(); $("#hwrap").scrollTop = 0; const nb = document.querySelector(`#hhead button[data-k="${k}"]`); if (nb) nb.focus(); };
+  $("#hall").onclick = () => { hAll = true; renderCities(); const b = document.querySelector("#hbody tr:nth-child(101) .area"); if (b) b.focus(); };
+  $("#hbody").onclick = e => { const tr = e.target.closest("[data-city]"); if (tr) pickCity(tr.dataset.city); };
+  const map = $("#map"), tip = $("#tip");
+  map.onmousemove = e => { const p = nearest(e); if (!p) { tip.hidden = true; map.style.cursor = ""; return; }
+    const b = board(), [big, lbl] = b.show(p.r); map.style.cursor = "pointer";
+    tip.innerHTML = `<b>#${p.i+1} ${esc(p.r.name)}</b>${p.r.city ? esc(p.r.city) + " · " : ""}${big} <span style="opacity:.85">${lbl}</span>`;
+    tip.hidden = false;
+    const wrap = map.parentElement.getBoundingClientRect(), tw = tip.offsetWidth, th = tip.offsetHeight;
+    let x = e.clientX - wrap.left + 14, y = e.clientY - wrap.top + 14;
+    if (x + tw > wrap.width - 6) x = e.clientX - wrap.left - tw - 14;
+    if (y + th > wrap.height - 6 || e.clientY + th + 20 > innerHeight) y = e.clientY - wrap.top - th - 14;
+    y = Math.min(Math.max(6 - wrap.top, y), Math.min(wrap.height, innerHeight - wrap.top) - th - 6);
+    tip.style.left = Math.max(6, x) + "px"; tip.style.top = y + "px"; };
+  map.onmouseleave = () => tip.hidden = true;
+  map.onclick = e => { const p = nearest(e); if (p) { tip.hidden = true; openDrawer(p.r.id, map); } };
+  const setPh = () => { $("#q").placeholder = innerWidth < 400 ? "Search name, town, street…" : "Search name, town, street, zip, “fish fry”…"; };
+  setPh();
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { setPh(); showActiveTab(); if (loaded && S.view === "map") drawMap(); }, 150); });
+  const bars = document.getElementById("boards");
+  const setH = () => document.documentElement.style.setProperty("--stickyH", bars.offsetHeight + "px");
+  new ResizeObserver(setH).observe(bars); setH();
+}
+
+function methodCards() {
+  const m = META, c = m.calibration || {};
+  const dv = ["Foursquare only", "BrightQuery only", "Microsoft only", "Foursquare/BrightQuery/Microsoft + Google 2021"].flatMap(k => [c.mke?.groups?.[k], c.dane?.groups?.[k]]).filter(Boolean).map(g => g.official);
+  const dropRange = dv.length ? `${Math.round(Math.min(...dv) * 100)}–${Math.round(Math.max(...dv) * 100)}%` : "a small share";
+  const cols = [
+    ["m", "Official records", [
+      ["Milwaukee licenses", `City of Milwaukee active restaurant (“Food Dealer – Restaurant”), retail food and Class B tavern licenses, refreshed nightly. A listing that matches a license is marked confirmed, and licensed places the map data doesn't have are added from the list. Milwaukee doesn't publish inspection results in bulk.`],
+      ["Madison & Dane County", "Public Health Madison & Dane County's licensed establishments, routine inspections and violation sheets. The inspection score counts visits that needed a re-inspection, violations per visit, foodborne-illness risk items, pests and suspensions since Jan 2023. Places with few visits are pulled toward the county average. Letter grades are ours and graded on a curve (the same shares of A–F as the Chicago leaderboard), because Madison inspectors write up more items per visit than Chicago's."],
+      ["The rest of the state", "Wisconsin's Department of Agriculture (DATCP) and most county health departments don't publish a bulk list of licensed restaurants or their inspections, only a one-at-a-time search. So outside Milwaukee and Dane County, every place comes from map listings."]]],
+    ["s", "Map listings & 2021 snapshot", [
+      ["Places statewide", `Overture Maps' open map listings (${esc(m.overture_release || "Sep 2026")} release, which merges Meta, Foursquare, chain store lists and other sources). We keep listings from Meta and from chains' own store lists, and drop Foursquare, BrightQuery and Microsoft listings: in Milwaukee and Dane County only ${dropRange} of those matched a licensed business. Anything Google already showed as closed in 2021 is dropped, unless it's on our hand-checked list. Every place shows how many sources confirm it.`],
+      ["Ratings, reviews & price level", "Google Maps ratings from the UCSD Google Local research dataset, frozen in September 2021. Each Google listing is matched to one place at most, on a shared distinctive name word nearby. Places that opened later aren't in it, and the rating boards leave them out rather than guess."],
+      ["Fish fry, custard, cheese curds, supper clubs", "Counted in the text of 10.2 million Google reviews of Wisconsin places written through Sep 2021. A fish fry rating is the average star rating of just the reviews that mention the fish fry. Supper clubs are places named one, called one in 5+ reviews, or on our verified list."],
+      ["Honors & icons", `Hand-verified in Sep 2026 with closures checked: James Beard awards, finalists and recent semifinalists, America's Classics, and long-running Wisconsin institutions (supper clubs, custard stands, fish fries, taverns). Wisconsin has no Michelin Guide.`]]],
+    ["e", "Estimated", [
+      ["Sales & profit", `Chains use their published U.S. average sales per store (QSR 50, Technomic, company filings and franchise disclosures; ${m.model?.n_chains ?? "80+"} brands found here), scaled by how busy the location is. Independents start from a typical figure for their price level ($600K for $ up to $3.5M for $$$$) and scale with 2021 review volume relative to similar Wisconsin places, with an exponent of ${m.model?.b ?? 0.76} fit on published Chicago sales. Places without reviews get a rough placeholder. Profit = sales × a typical segment margin.`],
+      ["Price, cuisine & food cost", "Missing price levels are filled in from the chain's or cuisine's usual Wisconsin level and marked est. Cuisine comes from the listing's category, the business name and Google categories, so a few will be off. Food cost is the typical share for that cuisine × estimated sales, a benchmark rather than the restaurant's own invoices."]]],
+  ];
+  $("#srcgrid").innerHTML = cols.map(([t, h, cards]) => `<div class="srccol"><span class="tag ${t}">${h}</span>${cards.map(([h,p]) => `<div class="src"><h3>${h}</h3><p>${p}</p></div>`).join("")}</div>`).join("");
+  const G = [["Meta + open in Google 2021","Meta listing, open in Google's 2021 data","kept · two sources"],["Meta only","Meta listing only","kept · listing only"],
+    ["brand feed + Google 2021","Chain store list + Google 2021","kept · two sources"],["brand feed only","Chain store list only","kept · listing only"],
+    ["Foursquare/BrightQuery/Microsoft + Google 2021","Foursquare / BrightQuery / Microsoft + Google 2021","dropped"],["Foursquare only","Foursquare only","dropped"],
+    ["BrightQuery only","BrightQuery only","dropped"],["Microsoft only","Microsoft only","dropped"],["Google 2021 says closed","Google showed it closed in 2021","dropped"]];
+  const cell = (j, k) => { const g = c[j]?.groups?.[k]; return g ? `${Math.round(g.official * 100)}% <span style="color:var(--muted)">of ${fmtN(g.n)}</span>` : "—"; };
+  $("#calib").innerHTML = c.mke ? `<div class="src" style="display:grid;gap:10px"><h3>How the map listings were checked</h3>
+    <p>Inside Milwaukee's city limits and Dane County, every map listing was checked against the official license lists: same business name nearby, or the same street address with a distinctive name word in common. The share that matched a licensed business decides what's kept (the same checks on Chicago gave 74% for Meta + Google and 40% for Meta only). Coverage runs the other way too: the map listings held ${Math.round((c.mke.coverage||0)*100)}% of Milwaukee's licensed restaurants and taverns and ${Math.round((c.dane.coverage||0)*100)}% of Dane County's; the rest were added from the lists.</p>
+    <div class="calib"><table><thead><tr><th scope="col">Kind of listing</th><th scope="col" class="r">Milwaukee</th><th scope="col" class="r">Dane County</th><th scope="col">Here</th></tr></thead><tbody>
+    ${G.map(([k, l, what]) => `<tr><td>${esc(l)}</td><td class="r num">${cell("mke", k)}</td><td class="r num">${cell("dane", k)}</td><td>${what}</td></tr>`).join("")}</tbody></table></div>
+    <p class="note">Matched a licensed business = on an active restaurant, tavern or retail food license. These are lower bounds: a real place under a different name on its license counts as a miss. Hand-checked Wisconsin institutions are kept whatever their source.</p></div>` : "";
+}
+
+// ---------------- boot ----------------
+document.querySelectorAll("#filters input:not(#q), #filters select, .dir button, .views button, #ftoggle, #rand").forEach(el => el.disabled = true);
+function fetchJSON(url) {
+  const ctl = new AbortController(); let timer = setTimeout(() => ctl.abort(), 20000);   // abort only when nothing arrives for 20 s
+  const poke = () => { clearTimeout(timer); timer = setTimeout(() => ctl.abort(), 20000); };
+  return fetch(url, {cache: "no-cache", signal: ctl.signal}).then(async r => { poke();
+    if (!r.ok) { const e = new Error("the server answered " + r.status); e.http = true; throw e; }
+    if (!r.body || !r.body.getReader) { const j = await r.json(); clearTimeout(timer); return j; }
+    const reader = r.body.getReader(), parts = []; let n = 0;
+    for (;;) { const {done, value} = await reader.read(); if (done) break; parts.push(value); n += value.length; poke(); }
+    clearTimeout(timer);
+    const buf = new Uint8Array(n); let o = 0; for (const p of parts) { buf.set(p, o); o += p.length; }
+    try { return JSON.parse(new TextDecoder().decode(buf)); } catch (e) { const x = new Error("the data file is damaged"); x.http = true; throw x; }
+  }).finally(() => clearTimeout(timer));
+}
+function pctRank(rows, f, out) {   // 0-100 percentile, ties share their average rank
+  const xs = rows.filter(r => f(r) != null), n = xs.length; xs.sort((a, b) => f(a) - f(b));
+  for (let i = 0; i < n;) { let j = i; const v = f(xs[i]); while (j < n && f(xs[j]) === v) j++;
+    const p = Math.round((i + 1 + j) / 2 / n * 1000) / 10; for (let k = i; k < j; k++) xs[k][out] = p; i = j; }
+  for (const r of rows) if (f(r) == null) r[out] = null;
+}
+function build(j) {
+  if (!j || !j.cols || !Number.isFinite(j.n)) { const e = new Error("the data file is incomplete"); e.http = true; throw e; }
+  const m = META = j.meta || {}, C = j.cols, sc = j.scale || {}, N = j.n, mean = m.rating_mean || 4.3;
+  const col = (c, i) => { const v = C[c] ? C[c][i] : null; return v == null ? null : sc[c] ? v / sc[c] : v; };
+  const rows = new Array(N);
+  for (let i = 0; i < N; i++) {
+    const o = {id: i};
+    o.name = C.name[i]; o.addr = C.addr[i]; o.city = C.city[i] == null ? null : m.cities[C.city[i]]; o.zip = C.zip[i] == null ? null : String(C.zip[i]);
+    o.lat = col("lat", i); o.lon = col("lon", i); o.cuisine = m.cuisines[C.cuisine[i]] || "American & Other"; o.brand = C.brand[i] == null ? null : m.brands[C.brand[i]];
+    o.chain_n = C.chain_n[i] || 1; o.rating = col("rating", i); o.reviews = C.reviews[i]; o.price = C.price[i]; o.price_est = C.price_est[i];
+    o.rev = C.rev_k[i] * 1000; o.rev_src = m.src[C.rev_src[i]] || "model"; o.margin = col("margin", i); o.profit = o.rev * o.margin;
+    o.value_raw = col("value_raw", i); o.tier = C.tier[i]; o.both = o.tier >= 1 ? 1 : 0; o.jur = C.jur[i]; o.bar = C.bar[i]; o.venue = C.venue[i]; o.tags = C.tags[i] || 0;
+    o.src = (m.srcs || [])[C.src[i]] || null;
+    o.food_cost = (m.food_cost || {})[o.cuisine] ?? 30; o.spend = (m.spend || {})[o.price];
+    o.bayes = o.rating == null ? null : (o.reviews*o.rating + 40*mean)/(o.reviews + 40);
+    o.gem = o.rating == null ? null : (o.reviews*o.rating + 8*mean)/(o.reviews + 8);
+    o._s = " " + normRaw([o.name, o.city, o.zip, o.cuisine, o.brand].join(" ")) + " " + norm(o.addr) + " ";
+    o._n = " " + normRaw([o.name, o.brand].join(" ")) + " ";
+    rows[i] = o;
+  }
+  const sp = j.sparse || {};
+  // Wisconsin signals: Bayes-shrink each place's average toward the statewide average for that dish (5 reviews' worth)
+  for (const [key, n, r, out] of [["ff","ff_n","ff_r","ff"],["cc","cc_n","cc_r","cc"],["cs","cs_n","cs_r","cs"]]) {
+    let sw = 0, sn = 0; for (const [i, nn, rr] of sp[key] || []) if (rr != null) { sw += nn * rr / 100; sn += nn; }
+    const mu = sn ? sw / sn : 4.2;
+    for (const [i, nn, rr] of sp[key] || []) { const o = rows[i]; if (!o) continue; o[n] = nn; o[r] = rr == null ? null : rr / 100; o[out] = rr == null ? null : (nn * rr / 100 + 5 * mu) / (nn + 5); }
+  }
+  for (const [i, nn] of sp.sc || []) if (rows[i]) rows[i].sc_n = nn;
+  for (const [i, s, f] of sp.hon || []) if (rows[i]) { rows[i].s_icon = s / 10; rows[i].hon = f; }
+  for (const [i, cl, g, ni, nr] of sp.insp || []) if (rows[i]) Object.assign(rows[i], {clean: cl, grade: g, n_insp: ni, n_reinsp: nr});
+  pctRank(rows, r => r.bayes, "i_rating"); pctRank(rows, r => r.reviews, "i_pop"); pctRank(rows, r => r.value_raw, "i_value"); pctRank(rows, r => r.profit, "i_profit");
+  const cnt = new Map(); for (const r of rows) if (r.city && !r.venue) cnt.set(r.city, (cnt.get(r.city) || 0) + 1);
+  for (const r of rows) if (r.city && !cnt.has(r.city)) cnt.set(r.city, 0);
+  CITIES = [...cnt.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  CITY_N = new Map();   // "st germain", "saint germain" and "St. Germain" are one town
+  for (const [c] of CITIES) { const k = norm(c); if (!CITY_N.has(k)) CITY_N.set(k, c); const sq = k.replace(/ /g, ""); if (!CITY_N.has(sq)) CITY_N.set(sq, c); }
+  CITY_PH = [...CITY_N.entries()].filter(([k]) => !k.includes(" ") || true).sort((a, b) => b[0].length - a[0].length);
+  D = rows;
+  CUISINE_ALL = {}; D.forEach(r => CUISINE_ALL[r.cuisine] = 1);
+  CUISINE_WORDS = new Set(Object.keys(CUISINE_ALL).flatMap(c => norm(c).split(" ")).filter(w => !STOPW.has(w) && !["other", "s", "n", "e", "w"].includes(w))
+    .concat(["pizzas", "tacos", "burger", "donuts", "coffee", "cafe", "bakery", "wings", "dogs", "ramen", "noodles", "bagels", "ice", "cream", "brunch",
+             "fish", "fry", "custard", "curds", "cheese", "supper", "club", "brats", "tavern", "tap", "brewery", "kringle"]));
+  PLACE_WORDS = new Set(CITIES.flatMap(([c]) => norm(c).split(" ")).filter(w => w.length > 2));
+}
+function setHeader() {
+  const n = META.count_restaurants ?? D.filter(r => !r.venue).length;
+  $("#h1").innerHTML = `<span class="count num">${fmtN(n)}</span> Wisconsin restaurants, ranked`;
+  $("#kicker").textContent = `${fmtN(CITIES.filter(([, c]) => c > 0).length)} cities and towns · map listings as of Sep 2026 · ratings as of Sep 2021`;
+}
+function load(fromRetry) {
+  $("#list").innerHTML = `<li class="loading">Loading restaurants…</li>`; $("#btitle").textContent = "Loading…";
+  fetchJSON("wisconsin.json").then(j => {
+    build(j);
+    readHash();
+    if (S.cuisine && !D.some(r => r.cuisine === S.cuisine)) S.cuisine = "";
+    if (S.city && !CITY_N.has(norm(S.city))) S.city = ""; else if (S.city) S.city = CITY_N.get(norm(S.city));
+    const typed = $("#q").value; if (typed) { S.q = typed; setQuery(); }
+    document.body.classList.remove("failed");
+    buildControls(); methodCards(); setHeader();
+    scoreAll(); loaded = true; shown = 50; render({scrollTabs: true});
+    if (fromRetry) focusResults();
+    const idle = window.requestIdleCallback || (f => setTimeout(f, 2500));
+    idle(() => { loadDetail(); if (S.view === "map") loadShapes(); });
+  }).catch(err => {
+    console.error(err);
+    document.body.classList.add("failed");
+    $("#btitle").textContent = "Couldn't load the data";
+    $("#bsub").textContent = "";
+    const why = err.http ? `The restaurant data didn't load: ${esc(err.message)}.` : err.name === "AbortError" ? "The restaurant data is taking too long to load." : "The restaurant data didn't load. Check your connection.";
+    $("#list").innerHTML = `<li class="empty">${why} <button class="more" id="retry" type="button" style="display:inline-block;margin:10px 0 0">Try again</button></li>`;
+    $("#live").textContent = "Couldn't load the restaurant data. A Try again button is available.";
+    $("#retry").onclick = () => load(true);
+    if (fromRetry) $("#retry").focus();
+  });
+}
+function toSearch() {
+  const bar = $("#qbar"), top = bar.getBoundingClientRect().top + scrollY - (barBottom() + 10);
+  if (Math.abs(scrollY - top) > 4 && (bar.getBoundingClientRect().top < barBottom() || bar.getBoundingClientRect().bottom > innerHeight)) scrollTo({top, behavior: reduceMotion() ? "auto" : "smooth"});
+  $("#q").focus({preventScroll: true}); $("#q").select();
+}
+$("#qjump").onclick = toSearch;
+document.addEventListener("keydown", e => { if (e.key === "/" && !e.metaKey && !e.ctrlKey && !e.altKey && $("#drawer").hidden && !(e.target.closest && e.target.closest("input,select,textarea,[contenteditable]"))) { e.preventDefault(); toSearch(); } });
+load();
+})();
+</script>

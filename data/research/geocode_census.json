@@ -1,0 +1,53 @@
+{
+ "100 River Island Dr, Oconto Falls, WI 54154": {
+  "lat": 44.864008,
+  "lon": -88.134317,
+  "matched": "100 RIVER ISLAND DR, OCONTO FALLS, WI, 54154",
+  "zip": "54154"
+ },
+ "10995 N Louies Landing Rd, Hayward, WI 54843": {
+  "lat": 46.028517,
+  "lon": -91.077229,
+  "matched": "10995 N LOUIES LANDING RD, HAYWARD, WI, 54843",
+  "zip": "54843"
+ },
+ "3958 Eagle Waters Rd, Eagle River, WI 54521": {
+  "lat": 45.933038,
+  "lon": -89.193274,
+  "matched": "3958 EAGLE WATERS RD, EAGLE RIVER, WI, 54521",
+  "zip": "54521"
+ },
+ "5260 Hwy 70 W, Eagle River, WI 54521": {
+  "lat": 45.905226,
+  "lon": -89.290601,
+  "matched": "5260 STATE HWY 70, EAGLE RIVER, WI, 54521",
+  "zip": "54521"
+ },
+ "580 Flint Ridge Ln, Pickerel, WI 54465": {
+  "lat": 45.393815,
+  "lon": -88.911029,
+  "matched": "580 FLINT RIDGE LN, PICKEREL, WI, 54465",
+  "zip": "54465"
+ },
+ "5810 Hwy 45, Land O' Lakes, WI 54540": {
+  "lat": 46.127492,
+  "lon": -89.20603,
+  "matched": "5810 US HWY 45, LAND O LAKES, WI, 54540",
+  "zip": "54540"
+ },
+ "817 N Marshall St, Milwaukee, WI": {
+  "lat": 43.041826,
+  "lon": -87.900627,
+  "matched": "817 N MARSHALL ST, MILWAUKEE, WI, 53202",
+  "zip": "53202"
+ },
+ "9630 Treeland Rd, Hayward, WI 54843": {
+  "lat": 45.981011,
+  "lon": -91.19797,
+  "matched": "9630 TREELAND RD, HAYWARD, WI, 54843",
+  "zip": "54843"
+ },
+ "_misses": [
+  "4060 S Shore Dr, Rhinelander, WI 54501"
+ ]
+}

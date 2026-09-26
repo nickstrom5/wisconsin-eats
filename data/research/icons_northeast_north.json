@@ -1,0 +1,1362 @@
+[
+ {
+  "name": "White Gull Inn",
+  "address": "4225 Main St",
+  "city": "Fish Creek",
+  "chain": false,
+  "match_names": [
+   "WHITE GULL INN",
+   "THE WHITE GULL INN",
+   "WHITE GULL INN RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Cherry-stuffed French toast voted Best Breakfast in America by ABC's Good Morning America viewers (2010)"
+  ],
+  "tags": [
+   "fish boil",
+   "historic",
+   "lodge"
+  ],
+  "iconic_reason": "Inn built in 1896 whose restaurant has served a traditional Door County whitefish boil since the Redmann family began it after buying the property in 1959.",
+  "founded": 1896,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.whitegullinn.com/traditional-door-county-fish-boils",
+   "https://doorcountypulse.com/timeless-charm-at-the-white-gull-inn/",
+   "https://www.travelwisconsin.com/stories/4-delicious-door-county-fish-boils",
+   "http://thetasteoftravel.blogspot.com/2010/07/white-gull-inn-winner-of-gmas-breakfast.html"
+  ],
+  "open_evidence": "https://www.whitegullinn.com/traditional-door-county-fish-boils - official site lists fish boils Wed/Fri/Sat/Sun May-Oct and Fridays rest of year (fetched Sept 2026); Yelp listing 'Updated September 2026'",
+  "founded_source": "https://doorcountypulse.com/timeless-charm-at-the-white-gull-inn/",
+  "closed_reason": null,
+  "notes": "1896 is the building/inn date (built by Herman Welcker as 'The Henriette'); renamed White Gull Inn and fish boil started by Andy and Elsie Redmann after 1959 purchase (Door County Pulse); another guide says fish boils since the 1960s. Coulson family owned from 1972; Meredith Coulson-Kanter and Chris Kanter bought it in 2018. GMA contest year 2010 per Pulse and a 2010 blog."
+ },
+ {
+  "name": "Pelletier's Restaurant & Fish Boil",
+  "address": "4199 Main St",
+  "city": "Fish Creek",
+  "chain": false,
+  "match_names": [
+   "PELLETIER'S RESTAURANT & FISH BOIL",
+   "PELLETIERS RESTAURANT AND FISH BOIL",
+   "PELLETIER'S RESTAURANT",
+   "PELLETIERS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "fish boil"
+  ],
+  "iconic_reason": "Fish Creek restaurant in Founders Square that has staged a nightly outdoor Door County fish boil with boil-overs since 1970.",
+  "founded": 1970,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://www.pelletiersfishboil.com/",
+   "https://founderssquarefishcreek.com/portfolio_page/pelletiers-restaurant/",
+   "https://www.travelwisconsin.com/stories/4-delicious-door-county-fish-boils",
+   "https://www.yelp.com/biz/pelletiers-restaurant-and-fish-boil-fish-creek"
+  ],
+  "open_evidence": "https://www.pelletiersfishboil.com/ - official site lists daily breakfast/lunch and nightly fish boils (fetched Sept 2026); Yelp 'Updated August 2026'; a 2026 RV club thread plans a 2026 fish boil there",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year 1970 and 2002 purchase by Matthew Peterson from original owner Charlie Pelletier come from a search-result summary of third-party pages; not confirmed on the official site. A search snippet from the official site mentioned opening May 2026 'to welcome our new owner Mr. Bill Christy' - possible 2026 ownership change, unverified. Fish boil price ~$24.95 adult per search snippet."
+ },
+ {
+  "name": "Old Post Office Restaurant",
+  "address": "10040 Water St",
+  "city": "Ephraim",
+  "chain": false,
+  "match_names": [
+   "OLD POST OFFICE RESTAURANT",
+   "THE OLD POST OFFICE RESTAURANT",
+   "OLD POST OFFICE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "fish boil",
+   "historic"
+  ],
+  "iconic_reason": "Seasonal Ephraim restaurant in an 1874 former general store and post office on Eagle Harbor that has served nightly Door County whitefish boils for more than 40 years.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://oldpostoffice-doorcounty.com/fish-boil/",
+   "https://www.edge-waterresort.com/history",
+   "https://www.travelwisconsin.com/stories/4-delicious-door-county-fish-boils"
+  ],
+  "open_evidence": "https://oldpostoffice-doorcounty.com/fish-boil/ - official site: fish boil nightly except Sundays starting May 15, 2026, season to last Sunday in October (fetched Sept 2026)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Restaurant opening year not found; building dates to 1874 (Hansen's General Store / post office). 'Fish boil for over 40 years' is from a search summary. Operates alongside the Edgewater Resort. Address from Overture (10040 N Water St) - verify street number."
+ },
+ {
+  "name": "Viking Grill & Lounge",
+  "address": "12029 WI-42",
+  "city": "Ellison Bay",
+  "chain": false,
+  "match_names": [
+   "VIKING GRILL",
+   "THE VIKING GRILL",
+   "VIKING GRILL & LOUNGE",
+   "VIKING GRILL AND LOUNGE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "fish boil",
+   "diner"
+  ],
+  "iconic_reason": "Ellison Bay diner opened in 1939 that is credited with starting the restaurant Door County fish boil in 1961.",
+  "founded": 1939,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://doorcountypulse.com/the-last-diner-viking-grill-sold/",
+   "https://www.doorcountyguide.com/best/fish-boils/",
+   "https://bluebeareb.com/",
+   "https://www.yelp.com/biz/the-viking-grill-ellison-bay"
+  ],
+  "open_evidence": "https://doorcountypulse.com/the-last-diner-viking-grill-sold/ - sold Feb 2022; Blue Bear Ellison Bay now operates at the same address (Overture/bluebeareb.com)",
+  "founded_source": "https://doorcountypulse.com/the-last-diner-viking-grill-sold/",
+  "closed_reason": "Longtime owner Dan Peterson retired and sold the Viking Grill on Feb 17, 2022 to the owners of Racine's Blue Bear Cafe, who renamed and reopened it as Blue Bear Ellison Bay (brunch concept); the Viking fish boil ended (Door County Pulse, Feb 24, 2022; Yelp marks Viking Grill closed).",
+  "notes": "Wickman family ran it 1939-1974; Phil Voight ~a decade; Dan Peterson 1984-2022."
+ },
+ {
+  "name": "Al Johnson's Swedish Restaurant & Butik",
+  "address": "10698 N Bay Shore Dr",
+  "city": "Sister Bay",
+  "chain": false,
+  "match_names": [
+   "AL JOHNSON'S SWEDISH RESTAURANT & BUTIK",
+   "AL JOHNSONS SWEDISH RESTAURANT",
+   "AL JOHNSON'S SWEDISH RESTAURANT AND BUTIK",
+   "AL JOHNSON'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "scandinavian",
+   "historic"
+  ],
+  "iconic_reason": "Family-run Swedish restaurant opened in 1949 in Sister Bay, known for the goats that graze its Norwegian-built sod roof each summer.",
+  "founded": 1949,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://aljohnsons.com/",
+   "https://en.wikipedia.org/wiki/Al_Johnson%27s_Swedish_Restaurant",
+   "https://doorcounty.net/al-johnsons-swedish-restaurant-butik-celebrates-75th-anniversary-in-2024/"
+  ],
+  "open_evidence": "https://aljohnsons.com/ - official site lists current daily restaurant hours 7am-3pm with 2026-dated content (fetched Sept 2026); 75th anniversary celebrated 2024",
+  "founded_source": "https://en.wikipedia.org/wiki/Al_Johnson%27s_Swedish_Restaurant",
+  "closed_reason": null,
+  "notes": "Opened 1949 as 'Al's Home Cooking'. Sod-roof log building constructed in Norway and reassembled in 1973. 'Goats on the Roof' trademark registered 1996. Now also Butik, Stabbur bar/kitchen, Skal, Telemark on site."
+ },
+ {
+  "name": "Wilson's Restaurant & Ice Cream Parlor",
+  "address": "9990 Water St",
+  "city": "Ephraim",
+  "chain": false,
+  "match_names": [
+   "WILSON'S RESTAURANT & ICE CREAM PARLOR",
+   "WILSONS RESTAURANT AND ICE CREAM PARLOR",
+   "WILSON'S ICE CREAM PARLOR",
+   "WILSON'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "ice cream",
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Seasonal Ephraim soda fountain and burger restaurant open since 1906, known for ice cream sundaes and home-brewed draft root beer.",
+  "founded": 1906,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://wilsonsicecream.com/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/wilson-s-restaurant-ice-cream-parlor"
+  ],
+  "open_evidence": "https://wilsonsicecream.com/ - official site: 2026 season May 14-Oct 18, late-September hours posted, June 20, 2026 ice cream eating contest (fetched Sept 2026)",
+  "founded_source": "https://wilsonsicecream.com/",
+  "closed_reason": null,
+  "notes": "Seasonal (mid-May to mid-October)."
+ },
+ {
+  "name": "Nelsen's Hall Bitters Pub & Restaurant",
+  "address": "1201 Main Rd",
+  "city": "Washington Island",
+  "chain": false,
+  "match_names": [
+   "NELSEN'S HALL BITTERS PUB",
+   "NELSENS HALL",
+   "NELSEN'S HALL BITTER'S PUB & RESTAURANT",
+   "NELSEN'S HALL & BITTERS CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Washington Island dance hall built in 1899 whose tavern stayed open through Prohibition by selling Angostura bitters, which visitors still drink to join its Bitters Club.",
+  "founded": 1899,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://doorcountypulse.com/epicenter-of-island-life-nelsens-hall-and-bitters-pub/",
+   "https://washingtonisland.com/nelsens-hall-bitters-pub-restaurant-2/",
+   "https://www.travelwisconsin.com/food-drink/bars-taverns/nelsen-s-hall-bitter-s-pub-restaurant"
+  ],
+  "open_evidence": "https://www.travelwisconsin.com/food-drink/bars-taverns/nelsen-s-hall-bitter-s-pub-restaurant - current Travel Wisconsin listing (fetched Sept 2026); Tripadvisor page titled '2026 Reviews'; Overture status open. No dated 2025-2026 post read directly.",
+  "founded_source": "https://doorcountypulse.com/epicenter-of-island-life-nelsens-hall-and-bitters-pub/",
+  "closed_reason": null,
+  "notes": "Tom Nelsen built the hall in 1899 and added the bar about three years later (so the tavern itself dates to ~1902). Claims (oldest legally continuously operated tavern; Guinness record as largest bitters purveyor) are the business's own claims reported by Door County Pulse (2015), not independently verified. Owner Robin Ditello since 1999 (as of 2015). Open evidence is weaker than ideal."
+ },
+ {
+  "name": "Kroll's West",
+  "address": "1990 S Ridge Rd",
+  "city": "Green Bay",
+  "chain": false,
+  "match_names": [
+   "KROLL'S WEST",
+   "KROLLS WEST",
+   "KROLL'S WEST RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "butter burger",
+   "burgers",
+   "fish fry",
+   "historic"
+  ],
+  "iconic_reason": "Family-owned restaurant across from Lambeau Field, descended from the Kroll family's 1936 Main Street restaurant, known for charcoal-grilled butter burgers.",
+  "founded": 1936,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.krollswest.com/history",
+   "https://roadfood.com/restaurants/krolls-west",
+   "https://www.greenbay.com/blog/post/a-nostalgic-night-out-in-green-bay/"
+  ],
+  "open_evidence": "https://www.krollswest.com/history - official site 'Serving from 10:30 AM Daily' (fetched Sept 2026); Fox 11 (Apr 27, 2026) notes Kroll's West operates under separate ownership and is not for sale",
+  "founded_source": "https://www.krollswest.com/history",
+  "closed_reason": null,
+  "notes": "Krolls began serving meals at a family hotel in 1931; first Kroll's restaurant opened 1936 at 1658 Main St (today's Kroll's East site); at 1990 S Ridge Rd since 1974. Owned by third generation (Bobbie Van Der Perren Wier and Mike Wier). Separate ownership from Kroll's East."
+ },
+ {
+  "name": "Kroll's East",
+  "address": "1658 Main St",
+  "city": "Green Bay",
+  "chain": false,
+  "match_names": [
+   "KROLL'S EAST",
+   "KROLLS EAST",
+   "KROLL'S EAST RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "butter burger",
+   "burgers",
+   "chili",
+   "historic"
+  ],
+  "iconic_reason": "East-side Green Bay burger and chili restaurant at the original 1936 Kroll's site, run by the Schauer family since 1945.",
+  "founded": 1935,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.krollseast.com/about-us/our-history/",
+   "https://fox11online.com/news/local/green-bay/krolls-east-butter-burgers-hamburgers-cheeseburgers-chili-iconic-green-bay-restaurant-for-sale",
+   "https://fox11online.com/news/local/green-bay/krolls-east-owners-explain-decision-to-list-iconic-green-bay-restaurant-for-sale"
+  ],
+  "open_evidence": "https://fox11online.com/news/local/green-bay/krolls-east-owners-explain-decision-to-list-iconic-green-bay-restaurant-for-sale - Apr 27, 2026: still open Wed-Sun while listed for sale; Yelp 'Updated May 2026'",
+  "founded_source": "https://fox11online.com/news/local/green-bay/krolls-east-butter-burgers-hamburgers-cheeseburgers-chili-iconic-green-bay-restaurant-for-sale",
+  "closed_reason": null,
+  "notes": "Listed for sale Jan 2026 ($750k property / $850k with name and equipment); owners Nathan and Ben Schauer plan to retire. Status after April 2026 not confirmed - re-check. Founding: Kroll's East/Fox 11 say 1935; Kroll's West history says first Kroll's restaurant opened 1936 at this address."
+ },
+ {
+  "name": "Al's Hamburger",
+  "address": "131 S Washington St",
+  "city": "Green Bay",
+  "chain": false,
+  "match_names": [
+   "AL'S HAMBURGER",
+   "ALS HAMBURGER SHOP",
+   "AL'S HAMBURGER SHOP",
+   "AL'S HAMBURGERS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "burgers",
+   "diner",
+   "chili",
+   "historic"
+  ],
+  "iconic_reason": "Small downtown Green Bay counter diner serving hamburgers, chili and malts since 1934.",
+  "founded": 1934,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://alshamburgergb.com/",
+   "https://www.greenbay.com/blog/post/a-nostalgic-night-out-in-green-bay/",
+   "https://downtowngreenbay.com/go/als-hamburgers"
+  ],
+  "open_evidence": "https://alshamburgergb.com/ - official site with current hours and '© 2026', says '92 years' (fetched Sept 2026); Yelp 'Updated July 2026'",
+  "founded_source": "https://alshamburgergb.com/",
+  "closed_reason": null,
+  "notes": "Site mentions appearances on Man v. Food and an Alton Brown list; not independently verified so not listed as honors."
+ },
+ {
+  "name": "Chili John's",
+  "address": "519 S Military Ave",
+  "city": "Green Bay",
+  "chain": false,
+  "match_names": [
+   "CHILI JOHN'S",
+   "CHILI JOHNS",
+   "CHILI JOHN'S RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "chili",
+   "historic"
+  ],
+  "iconic_reason": "Green Bay chili parlor started by Lithuanian immigrant John Isaac, named Chili John's in 1913, which operated for more than a century until 2020-2022.",
+  "founded": 1913,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Chili_John%27s",
+   "https://www.aol.com/chili-johns-iconic-meat-sauce-100256261.html",
+   "https://www.yelp.com/biz/chili-johns-restaurant-green-bay"
+  ],
+  "open_evidence": "https://www.aol.com/chili-johns-iconic-meat-sauce-100256261.html - Green Bay Press-Gazette (Aug 22, 2024): restaurant temporarily closed Dec 2020 and permanently by Jan 2022",
+  "founded_source": "https://en.wikipedia.org/wiki/Chili_John%27s",
+  "closed_reason": "Military Ave restaurant closed temporarily in Dec 2020 amid a franchise dispute between the brand owner (Zee Best Foods) and operator JayPaul LLC; closure became permanent by Jan 2022 (Green Bay Press-Gazette via AOL, Aug 2024; Wikipedia says 2020).",
+  "notes": "John Isaac began serving chili at his bar c.1900; named Chili John's 1913 downtown; Military Ave location opened 1973, downtown closed 1978. Chili John's meat sauce still sold in grocery stores; sister Burbank, CA location (1946) independent. Overture still lists this address as open (stale)."
+ },
+ {
+  "name": "Ardy & Ed's Drive In",
+  "address": "2413 S Main St",
+  "city": "Oshkosh",
+  "chain": false,
+  "match_names": [
+   "ARDY & ED'S DRIVE IN",
+   "ARDY AND EDS DRIVE-IN",
+   "ARDY & ED'S",
+   "ARDY & EDS DRIVE IN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "drive-in",
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Seasonal drive-in on Lake Winnebago in Oshkosh since 1948, opened as the Southside A&W, with carhops on roller skates and draft root beer in frosted mugs.",
+  "founded": 1948,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.ardyandeds.com/",
+   "https://www.ardyandeds.com/about"
+  ],
+  "open_evidence": "https://www.ardyandeds.com/ - official site with online ordering (Toast/DoorDash) and '©2025' footer (fetched Sept 2026); no 2026-dated item read",
+  "founded_source": "https://www.ardyandeds.com/about",
+  "closed_reason": null,
+  "notes": "Owners TJ and Valeta Rodgers since Aug 2020. Earlier owners: Nate Rohr; Albrechts (1953-60); Ed and Ardythe Timm (from 1960); Ardythe Timm and Steve Davis after 1979. Site says featured in Frommer's '500 Places for Food & Wine Lovers', on Food Network, and Steve Davis was WRA Restaurateur of the Year 2008 - business claims, not independently verified. Address from Overture. Seasonal (roughly spring-fall)."
+ },
+ {
+  "name": "Beerntsen's Confectionary",
+  "address": "108 N 8th St",
+  "city": "Manitowoc",
+  "chain": false,
+  "match_names": [
+   "BEERNTSEN'S CONFECTIONARY",
+   "BEERNTSENS CONFECTIONARY",
+   "BEERNTSEN'S CANDIES",
+   "BEERNTSEN'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "ice cream",
+   "historic",
+   "candy"
+  ],
+  "iconic_reason": "Family-owned Manitowoc candy shop and ice cream parlor founded by Joseph A. Beerntsen in 1932 that still hand-dips chocolates and cooks hard candy in copper kettles.",
+  "founded": 1932,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://beerntsens.com/"
+  ],
+  "open_evidence": "https://beerntsens.com/ - official site selling chocolates/ice cream in-store and online, family-owned and active (fetched Sept 2026); no dated item read",
+  "founded_source": "https://beerntsens.com/",
+  "closed_reason": null,
+  "notes": "Related Beerntsen's Candies shops exist in Green Bay (200 N Broadway) and Cedarburg; relationship/ownership not verified. Only one independent source not found (search budget exhausted)."
+ },
+ {
+  "name": "Seroogy's Chocolates",
+  "address": "144 N Wisconsin St",
+  "city": "De Pere",
+  "chain": false,
+  "match_names": [
+   "SEROOGY'S CHOCOLATES",
+   "SEROOGYS CHOCOLATES",
+   "SEROOGY'S",
+   "SEROOGY'S CHOCOLATE COMPANY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "candy",
+   "historic"
+  ],
+  "iconic_reason": "Fourth-generation family chocolate maker founded in 1899, known for its meltaway bars, with its shop on N Wisconsin St in De Pere.",
+  "founded": 1899,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.seroogys.com/"
+  ],
+  "open_evidence": "http://www.seroogys.com/ - official site lists De Pere and Ashwaubenon shops with current seasonal products (football items, limited horchata meltaways) (fetched Sept 2026)",
+  "founded_source": "http://www.seroogys.com/",
+  "closed_reason": null,
+  "notes": "Second shop at 784 Willard Dr, Ashwaubenon (Green Bay postal). Only the official site was checked."
+ },
+ {
+  "name": "Bayside Tavern",
+  "address": "4160 Main St",
+  "city": "Fish Creek",
+  "chain": false,
+  "match_names": [
+   "BAYSIDE TAVERN",
+   "THE BAYSIDE TAVERN",
+   "BAYSIDE",
+   "BAYSIDE DOOR COUNTY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern"
+  ],
+  "iconic_reason": "Fish Creek tavern run by the MacDonald family since 1975 in a building used as a tavern for over a century, open year-round until 2 a.m.",
+  "founded": 1975,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.baysidedoorcounty.com/"
+  ],
+  "open_evidence": "https://www.baysidedoorcounty.com/ - official site: tavern open daily 11am-2am year-round; notes 2026 summer coffee hours have concluded (fetched Sept 2026)",
+  "founded_source": "https://www.baysidedoorcounty.com/",
+  "closed_reason": null,
+  "notes": "1975 = when Bob and Elaine MacDonald started the current family business; the site says the tavern has been a gathering place for 100+ years (earlier start year unknown). Known locally for its 'Coffee Supreme' (not confirmed on fetched page). Site calls it 'Wisconsin's Best Small Town Bar' - granting body not identified, so not listed as an honor."
+ },
+ {
+  "name": "Manderfield's Home Bakery",
+  "address": "W3176 Springfield Dr",
+  "city": "Appleton",
+  "chain": false,
+  "match_names": [
+   "MANDERFIELD'S HOME BAKERY",
+   "MANDERFIELDS HOME BAKERY",
+   "MANDERFIELD'S BAKERY",
+   "MANDERFIELD'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bakery"
+  ],
+  "iconic_reason": "Family bakery started by Frank and Marie Manderfield in their Appleton kitchen in 1934, now run by the third and fourth generations with shops in Appleton and Menasha.",
+  "founded": 1934,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.manderfieldsbakery.com",
+   "http://www.manderfieldsbakery.com/about"
+  ],
+  "open_evidence": "http://www.manderfieldsbakery.com - official site lists hours for two open Appleton shops and notes Menasha shop temporarily closed after July tornado damage (fetched Sept 2026)",
+  "founded_source": "http://www.manderfieldsbakery.com/about",
+  "closed_reason": null,
+  "notes": "Original site was a home kitchen on Melvin St, Appleton; no single flagship identified - listed Appleton East. Other shops: 5100 W Michaels Dr, Appleton; 811 Plank Rd, Menasha (temporarily closed; year of tornado not stated on page). Site's 'best bakery in the Fox Valley 18 years in a row' is a reader-poll claim, not listed as an honor."
+ },
+ {
+  "name": "Oaks Candy Corner",
+  "address": "1200 Oregon St",
+  "city": "Oshkosh",
+  "chain": false,
+  "match_names": [
+   "OAKS CANDY CORNER",
+   "OAKS CANDY",
+   "OAK'S CANDY CORNER"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "candy",
+   "historic"
+  ],
+  "iconic_reason": "Oshkosh hand-dipped chocolate shop that traces its start to the late 1800s and five generations of candy making.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://oakscandy.com/"
+  ],
+  "open_evidence": "http://oakscandy.com/ - official site with online store and '© ... 2026' footer (fetched Sept 2026)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Site says late 1800s / 'more than one hundred years and five generations' but gives no exact year (commonly cited as 1890 - unverified). Known for chocolate cordial cherries (not confirmed on fetched page)."
+ },
+ {
+  "name": "Bodin Fisheries",
+  "address": "208 Wilson Ave",
+  "city": "Bayfield",
+  "chain": false,
+  "match_names": [
+   "BODIN FISHERIES",
+   "BODIN'S FISHERIES",
+   "BODIN FISH MARKET",
+   "BODINS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "historic",
+   "smoked fish",
+   "fish market"
+  ],
+  "iconic_reason": "Bayfield fish house and retail market run by five generations of the Bodin family, descended from a Swedish immigrant who fished Lake Superior in the late 1800s, selling fresh and smoked Lake Superior fish.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://bodinfisheries.com/",
+   "http://bodinfisheries.com/our-history"
+  ],
+  "open_evidence": "http://bodinfisheries.com/ - official site says they work year-round supplying fresh locally caught fish (fetched Sept 2026); no dated item read",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Fish market, not a sit-down restaurant. No founding year for the business; family fishing history dates to Nils Adolf Bodin in the late 1800s. Address from Overture. Also a retail shop on Main St in Ashland per its history page."
+ },
+ {
+  "name": "Old Rittenhouse Inn",
+  "address": "301 Rittenhouse Ave",
+  "city": "Bayfield",
+  "chain": false,
+  "match_names": [
+   "OLD RITTENHOUSE INN",
+   "THE OLD RITTENHOUSE INN",
+   "LANDMARK RESTAURANT",
+   "RITTENHOUSE INN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "fine dining",
+   "historic",
+   "lodge"
+  ],
+  "iconic_reason": "Bayfield inn in an 1890 Queen Anne Victorian home opened by Mary and Jerry Phillips in 1973, whose Landmark Restaurant serves regional, seasonal dinners.",
+  "founded": 1973,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.rittenhouseinn.com/",
+   "https://www.rittenhouseinn.com/about-us/"
+  ],
+  "open_evidence": "https://www.rittenhouseinn.com/ - official site, restaurant serving breakfast/brunch/dinner, '© 2026' footer (fetched Sept 2026)",
+  "founded_source": "https://www.rittenhouseinn.com/about-us/",
+  "closed_reason": null,
+  "notes": "Site claims 'Wisconsin's first Bed and Breakfast' - not independently verified. Only the official site was checked."
+ },
+ {
+  "name": "Joe's Pasty Shop",
+  "address": "123 Randall Ave",
+  "city": "Rhinelander",
+  "chain": false,
+  "match_names": [
+   "JOE'S PASTY SHOP",
+   "JOES PASTY SHOP",
+   "JOE'S PASTIES"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "pasty",
+   "historic"
+  ],
+  "iconic_reason": "Rhinelander pasty maker dating to 1946 that now sells its handmade, par-baked pasties at periodic pop-up days.",
+  "founded": 1946,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.ilovepasties.com/"
+  ],
+  "open_evidence": "http://www.ilovepasties.com/ - official site: 'Our next Pop-Up will be mid October 2026'; lists Mon-Thu/Fri hours (fetched Sept 2026)",
+  "founded_source": "http://www.ilovepasties.com/",
+  "closed_reason": null,
+  "notes": "No longer a daily storefront: since 2023 the owners moved back to Michigan's Upper Peninsula and run 6-8 pop-up dates a year in Rhinelander; production disrupted after a Jan 2025 car crash. Consider whether a pop-up qualifies for the board."
+ },
+ {
+  "name": "Paul Bunyan's Cook Shanty",
+  "address": "8653 US-51",
+  "city": "Minocqua",
+  "chain": false,
+  "match_names": [
+   "PAUL BUNYAN'S COOK SHANTY",
+   "PAUL BUNYANS COOK SHANTY",
+   "PAUL BUNYAN'S FAMOUS COOK SHANTY",
+   "PAUL BUNYAN COOK SHANTY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "lodge",
+   "historic"
+  ],
+  "iconic_reason": "Lumber-camp-themed restaurant on Hwy 51 in Minocqua since 1961 serving all-you-can-eat family-style meals and homemade donuts under a 36-foot Paul and Babe sign.",
+  "founded": 1961,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.paulbunyans.com/minocqua",
+   "https://www.paulbunyans.com/contact-us/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/paul-bunyan-s-cook-shanty"
+  ],
+  "open_evidence": "https://www.paulbunyans.com/hours-open/ - official site shows a live 'Minocqua hours' calendar (breakfast/brunch) and is hiring (fetched Sept 2026); no explicit 2025/2026 date seen",
+  "founded_source": "https://www.paulbunyans.com/minocqua",
+  "closed_reason": null,
+  "notes": "Seasonal. Home page still says 'dining room is closed for the 2021 season' (stale); calendar shows breakfast and brunch service - dinner service may no longer be offered. Separate Wisconsin Dells location (411 WI-13) run by the same family. Open status is moderately uncertain."
+ },
+ {
+  "name": "Leon's Frozen Custard (Oshkosh)",
+  "address": "121 W Murdock Ave",
+  "city": "Oshkosh",
+  "chain": false,
+  "match_names": [
+   "LEON'S FROZEN CUSTARD",
+   "LEONS FROZEN CUSTARD",
+   "LEON'S CUSTARD",
+   "LEON'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "frozen custard",
+   "drive-in"
+  ],
+  "iconic_reason": "Frozen custard stand on W Murdock Ave in Oshkosh opened in 1947, keeping a 1950s drive-up look and rotating daily flavors.",
+  "founded": 1947,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.leonsfrozencustard.com/",
+   "https://www.wearegreenbay.com/news/local-news/is-it-too-cold-for-custard-not-according-to-this-oshkosh-staple/",
+   "https://www.wearegreenbay.com/news/local-news/grammy-winning-singer-songwriter-ed-sheeran-makes-surprise-stops-in-oshkosh/"
+  ],
+  "open_evidence": "https://www.wearegreenbay.com/news/local-news/grammy-winning-singer-songwriter-ed-sheeran-makes-surprise-stops-in-oshkosh/ - WFRV Aug 17, 2026: Ed Sheeran visited Leon's on W Murdock Ave; official site '© 2026'",
+  "founded_source": "https://www.wearegreenbay.com/news/local-news/is-it-too-cold-for-custard-not-according-to-this-oshkosh-staple/",
+  "closed_reason": null,
+  "notes": "WFRV (Feb 2021) says it opened in 1947 and was in its 74th year; official site gives no year. Separate business from Leon's Frozen Custard in Milwaukee (1942) - do not merge. Seasonal (opens ~February)."
+ },
+ {
+  "name": "Mihm's Charcoal Grill",
+  "address": "342 Chute St",
+  "city": "Menasha",
+  "chain": false,
+  "match_names": [
+   "MIHM'S CHARCOAL GRILL",
+   "MIHMS CHARCOAL GRILL",
+   "MIHM'S",
+   "MIHMS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Wisconsin Beef Council Wisconsin's Best Burger Contest Elite Eight finalist (2025, 2026)"
+  ],
+  "tags": [
+   "butter burger",
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Downtown Menasha charcoal-grill burger counter in business since 1958, known for buttery burgers, reopened by new owners in 2023 with the same menu.",
+  "founded": 1958,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.wearegreenbay.com/news/local-news/mihms-charcoal-grill-to-close-after-more-than-60-years-in-business/",
+   "https://www.wearegreenbay.com/news/local-news/beloved-menasha-restaurant-set-to-reopen-under-new-ownership/",
+   "https://www.wearegreenbay.com/news/local-news/multiple-northeast-wisconsin-restaurants-reach-elite-8-of-statewide-best-burger-contest/",
+   "https://www.wearegreenbay.com/news/local-news/wisconsins-best-burgers-contest-names-elite-eight-finalists/"
+  ],
+  "open_evidence": "https://www.wearegreenbay.com/news/local-news/multiple-northeast-wisconsin-restaurants-reach-elite-8-of-statewide-best-burger-contest/ - WFRV Apr 2, 2026: Mihm's in the 2026 Elite Eight of the Wisconsin Beef Council's Best Burger Contest",
+  "founded_source": "https://www.wearegreenbay.com/news/local-news/mihms-charcoal-grill-to-close-after-more-than-60-years-in-business/",
+  "closed_reason": null,
+  "notes": "Closed June 25, 2022 when the prior owner could not find a buyer; bought by Ryan Bergner and Amber Hamilton and reopened around Jan 2023 with the same menu (now accepts cards). Menasha was hit by a July 2026 tornado - Mihm's status after the storm not specifically checked."
+ },
+ {
+  "name": "Mickey-Lu Bar-B-Q",
+  "address": "1710 Marinette Ave",
+  "city": "Marinette",
+  "chain": false,
+  "match_names": [
+   "MICKEY-LU BAR-B-Q",
+   "MICKEY LU BAR B Q",
+   "MICKEY-LU BARBQ",
+   "MICKEY LU BBQ",
+   "MICKEY-LU"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "burgers",
+   "ice cream",
+   "historic"
+  ],
+  "iconic_reason": "Marinette burger stand that cooks its hamburgers over charcoal and serves malts and sundaes made with real ice cream, operating for decades.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.wearegreenbay.com/our-town/our-town-adventures-with-medicare-jeff-mickey-lu-bar-b-q/",
+   "https://www.wearegreenbay.com/local5live/from-white-water-rafting-to-award-winning-burgers-marinette-has-something-for-everyone/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/mickey-lu-bar-b-q",
+   "http://www.jldr.com/micklu.html"
+  ],
+  "open_evidence": "https://www.wearegreenbay.com/our-town/our-town-adventures-with-medicare-jeff-mickey-lu-bar-b-q/ - WFRV Jul 6, 2026 segment visiting Mickey-Lu and trying menu items",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year not verified (an old fan page says 'over 30 years' as of ~2000 and a commenter describes wartime-era visits; often cited as 1942 - unverified). Marinette tourism director says it was USA Today's #1 hamburger in Wisconsin - year/list not verified, so not listed as an honor."
+ },
+ {
+  "name": "Schreiner's Restaurant",
+  "address": "168 N Pioneer Rd",
+  "city": "Fond du Lac",
+  "chain": false,
+  "match_names": [
+   "SCHREINER'S RESTAURANT",
+   "SCHREINERS RESTAURANT",
+   "SCHREINER'S",
+   "SCHREINERS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "historic",
+   "bakery",
+   "diner"
+  ],
+  "iconic_reason": "Fond du Lac family restaurant and bakery opened in 1938 by Bernie and Maureen Schreiner, known for scratch cooking, that served more than 500,000 guests a year before closing in 2020.",
+  "founded": 1938,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.wearegreenbay.com/news/local-news/fond-du-lacs-schreiners-restaurant-to-permanently-close-its-doors/"
+  ],
+  "open_evidence": "https://www.wearegreenbay.com/news/local-news/fond-du-lacs-schreiners-restaurant-to-permanently-close-its-doors/ - WFRV May 27, 2020: permanently closed",
+  "founded_source": "https://www.wearegreenbay.com/news/local-news/fond-du-lacs-schreiners-restaurant-to-permanently-close-its-doors/",
+  "closed_reason": "Owners Paul and Joan Cunningham announced on May 27, 2020 that Schreiner's would not reopen after the COVID-19 shutdown, citing pandemic economics (WFRV, May 27, 2020).",
+  "notes": "Address from Overture (listed there under an unrelated category). Widely remembered for New England clam chowder (its old domain was fdlchowder.com) - not confirmed in the fetched article. Its fdlchowder.com domain now hosts unrelated content."
+ },
+ {
+  "name": "Rowleys Bay Resort (Grandma's Swedish Bakery & fish boil)",
+  "address": "1041 County Rd ZZ",
+  "city": "Ellison Bay",
+  "chain": false,
+  "match_names": [
+   "ROWLEYS BAY RESORT",
+   "ROWLEY'S BAY RESORT",
+   "GRANDMA'S SWEDISH BAKERY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "fish boil",
+   "bakery",
+   "scandinavian",
+   "lodge"
+  ],
+  "iconic_reason": "Resort on Rowleys Bay north of Ellison Bay whose restaurant served Door County fish boils and whose Grandma's Swedish Bakery sold Swedish-style pecan and cinnamon rolls.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://doorcountypulse.com/rowleys-bay-resorts-fish-boils-are-on-pause/",
+   "https://doorcountypulse.com/rowleys-bay-resort-moves-toward-demolition-and-redevelopment/"
+  ],
+  "open_evidence": "https://doorcountypulse.com/rowleys-bay-resort-moves-toward-demolition-and-redevelopment/ - Door County Pulse Oct 30, 2025: fire-damaged resort being demolished for home lots",
+  "founded_source": null,
+  "closed_reason": "Restaurant and fish boils paused in July 2020 for staffing (bakery and pub stayed open); the main lodge burned on Sept 5, 2023 and the site is being demolished for single-family lots, with work expected to finish April 2026 (Door County Pulse, Jul 8, 2020 and Oct 30, 2025).",
+  "notes": "Founding year not found. Address from Overture ('permanently_closed'); Pulse gives 'end of County Road ZZ, Ellison Bay'. Owner Jewel Peterson Ouradnik."
+ },
+ {
+  "name": "Little Bohemia Lodge",
+  "address": "142 US Hwy 51 S",
+  "city": "Manitowish Waters",
+  "chain": false,
+  "match_names": [
+   "LITTLE BOHEMIA LODGE",
+   "LITTLE BOHEMIA",
+   "LITTLE BOHEMIA RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "lodge",
+   "historic"
+  ],
+  "iconic_reason": "Northwoods lodge and restaurant built in 1929 by Emil Wanatka, site of the April 22, 1934 FBI shootout with the John Dillinger gang, which still displays the bullet holes and gang memorabilia.",
+  "founded": 1929,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Little_Bohemia_Lodge",
+   "http://www.littlebohemialodge.com",
+   "https://www.wpr.org/culture/gangsters-in-the-northwoods-how-wisconsin-became-a-hideout-for-notorious-criminals"
+  ],
+  "open_evidence": "https://www.wpr.org/culture/gangsters-in-the-northwoods-how-wisconsin-became-a-hideout-for-notorious-criminals - WPR Nov 26, 2024: visitors can still see the bullet holes and the lodge advertises its food; no 2025-2026 evidence found (official site is outdated, ~2014)",
+  "founded_source": "https://en.wikipedia.org/wiki/Little_Bohemia_Lodge",
+  "closed_reason": null,
+  "notes": "Open status unconfirmed for 2025-2026 - latest evidence Nov 2024. Wikipedia describes it as still operating as a restaurant. Filming location for 'Public Enemies' (2009). Likely seasonal."
+ },
+ {
+  "name": "Anchor Bar and Grill",
+  "address": "413 Tower Ave",
+  "city": "Superior",
+  "chain": false,
+  "match_names": [
+   "ANCHOR BAR AND GRILL",
+   "ANCHOR BAR & GRILL",
+   "ANCHOR BAR",
+   "THE ANCHOR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured on Food Network's Diners, Drive-Ins and Dives (2011)"
+  ],
+  "tags": [
+   "tavern",
+   "burgers"
+  ],
+  "iconic_reason": "Cash-only Tower Avenue tavern with a Lake Superior shipping theme, owned by the Anderson family since 1977 and known for two-thirds-pound burgers and fresh-cut fries.",
+  "founded": 1977,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Anchor_Bar_and_Grill",
+   "https://www.superiortelegram.com/lifestyle/food-review-anchor-bar-and-grills-anchor-burger",
+   "https://www.superiortelegram.com/news/food-network-films-at-anchor-bar-in-superior"
+  ],
+  "open_evidence": "https://www.superiortelegram.com/lifestyle/food-review-anchor-bar-and-grills-anchor-burger - Superior Telegram review May 10, 2023 (latest found); no 2025-2026 evidence found; Wikipedia describes it as operating",
+  "founded_source": "https://en.wikipedia.org/wiki/Anchor_Bar_and_Grill",
+  "closed_reason": null,
+  "notes": "1977 is when Tom Anderson's family bought the building/bar (an older shipyard workers' bar); food service began in the 1980s. Owners Adam and Aaron Anderson. Wikipedia also cites inclusion in 'Hamburger America' and Gourmet magazine (June 2009) - not independently checked. Open status unconfirmed for 2025-2026. Overture also lists an 'Anchor Bar & Grill' at 103 E 7th St, Superior (likely a different/erroneous record)."
+ },
+ {
+  "name": "Moccasin Bar",
+  "address": "15820 US Hwy 63",
+  "city": "Hayward",
+  "chain": false,
+  "match_names": [
+   "MOCCASIN BAR",
+   "THE MOCCASIN BAR",
+   "MOCCASIN BAR WILDLIFE MUSEUM"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Hayward tavern known for its taxidermy dioramas of animals drinking and gambling and a mounted replica of a record 1949 Lac Courte Oreilles muskie.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://www.roadsideamerica.com/story/2245",
+   "https://www.travelwisconsin.com/food-drink/bars-taverns/moccasin-bar"
+  ],
+  "open_evidence": "https://www.travelwisconsin.com/food-drink/bars-taverns/moccasin-bar - current Travel Wisconsin listing (fetched Sept 2026) and undated Roadside America page say it operates; no dated 2025-2026 evidence found",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year unknown. Drinks-focused bar (food not confirmed). Roadside America gives address '15820 W 1st St (corner of Dakota Ave, US 63/Hwy 27)'; Travel Wisconsin says 15820 US Highway 63. Open status unconfirmed."
+ },
+ {
+  "name": "Late's",
+  "address": "1924 S 9th St",
+  "city": "Manitowoc",
+  "chain": false,
+  "match_names": [
+   "LATE'S",
+   "LATES",
+   "LATE'S BBQ",
+   "LATE'S DRIVE IN",
+   "LATES BBQ"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bbq",
+   "historic"
+  ],
+  "iconic_reason": "Manitowoc restaurant, now Late's BBQ, opened on South 9th Street in 1949 by Leighton Mirkes and described as the city's longest continuously operating restaurant.",
+  "founded": 1949,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.seehafernews.com/2026/06/08/lates-bbq-announces-major-change-for-customers/"
+  ],
+  "open_evidence": "https://www.seehafernews.com/2026/06/08/lates-bbq-announces-major-change-for-customers/ - Seehafer News Jun 8, 2026: Late's began accepting credit cards after nearly 80 years cash-only",
+  "founded_source": "https://www.seehafernews.com/2026/06/08/lates-bbq-announces-major-change-for-customers/",
+  "closed_reason": null,
+  "notes": "Signature items not verified (name suggests barbecue sandwiches). Was cash-only until June 2026. Only one source found."
+ },
+ {
+  "name": "Berners' Ice Cream Parlor (Washington House)",
+  "address": "1622 Jefferson St",
+  "city": "Two Rivers",
+  "chain": false,
+  "match_names": [
+   "BERNERS' ICE CREAM PARLOR",
+   "BERNERS ICE CREAM PARLOR",
+   "BERNER'S ICE CREAM PARLOR",
+   "WASHINGTON HOUSE MUSEUM AND VISITOR CENTER",
+   "THE WASHINGTON HOUSE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "ice cream",
+   "historic"
+  ],
+  "iconic_reason": "Seasonal ice cream parlor inside Two Rivers' Washington House museum and visitor center, named for Ed Berners, whose soda fountain the city credits with the first ice cream sundae in 1881.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.seehafernews.com/2026/02/09/two-rivers-recognized-by-gma-as-home-of-the-ice-cream-sundae/",
+   "https://www.seehafernews.com/2024/05/13/two-rivers-washington-house-announces-grand-reopening/",
+   "http://www.tworivers-history.org/",
+   "https://en.wikipedia.org/wiki/Sundae"
+  ],
+  "open_evidence": "https://www.seehafernews.com/2026/02/09/two-rivers-recognized-by-gma-as-home-of-the-ice-cream-sundae/ - Seehafer News Feb 9, 2026: Washington House (home to Berners' Ice Cream Parlor) closed for the season, reopening May 23, 2026",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "A museum-run re-creation, not Berners' original business; opening year of the current parlor not found. Washington House reopened after renovation May 26, 2024 with 18 flavors. The 1881 sundae claim is disputed (Wikipedia notes Berners would have been 16-17; his obituary dated it to 1899). Two Rivers holds an annual 'Sundae Thursday' (145th anniversary in June 2026)."
+ },
+ {
+  "name": "AC Tap",
+  "address": "9322 WI-57",
+  "city": "Baileys Harbor",
+  "chain": false,
+  "match_names": [
+   "AC TAP",
+   "A C TAP",
+   "THE AC TAP",
+   "A.C. TAP"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Northern Door County roadside tavern on Hwy 57 opened by Al Ohnesorg in 1933 and named for postwar owners Art Smith and Carl Becker, known for pub fare and dice games under a Pabst sign.",
+  "founded": 1933,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://doorcountypulse.com/door-dives-the-ac-tap/",
+   "https://doorcountypulse.com/2024-year-in-review-palate/"
+  ],
+  "open_evidence": "https://doorcountypulse.com/door-dives-the-ac-tap/ - Door County Pulse May 28, 2026 feature describing current owners and patrons",
+  "founded_source": "https://doorcountypulse.com/door-dives-the-ac-tap/",
+  "closed_reason": null,
+  "notes": "Sold in April 2024 by Steve and Tera Mueller (owners ~22 years) to three couples incl. Elizabeth 'Bibs' Maloney/Merih Bayirli and Syndal Mueller/Chris Chayer. Address from Overture (official site actap.net not fetched). Located between Sister Bay and Baileys Harbor."
+ },
+ {
+  "name": "Renard's Cheese",
+  "address": "2189 County Rd DK",
+  "city": "Sturgeon Bay",
+  "chain": false,
+  "match_names": [
+   "RENARD'S CHEESE",
+   "RENARDS CHEESE",
+   "RENARD'S ARTISAN CHEESE",
+   "RENARD'S DOOR COUNTY CHEESE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "cheese curds",
+   "cheese"
+  ],
+  "iconic_reason": "Four-generation family cheesemaker founded in 1961 when Howard and Angela Renard bought Algoma's Rosewood Dairy, now selling fresh squeaky curds and 100-plus cheeses at its Sturgeon Bay store.",
+  "founded": 1961,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.renardscheese.com/",
+   "https://www.renardscheese.com/pages/our-story",
+   "https://www.wearegreenbay.com/local5live/make-the-famous-cherry-pie-from-a-cherry-pie-christmas-with-renards-cheese/"
+  ],
+  "open_evidence": "https://www.renardscheese.com/ - official site lists year-round daily store hours (fetched Sept 2026); WFRV Feb 20, 2026 segment with Renard's staff",
+  "founded_source": "https://www.renardscheese.com/pages/our-story",
+  "closed_reason": null,
+  "notes": "Cheese factory and retail store, not a restaurant. Original 1961 site was Rosewood Dairy in Algoma; Overture also lists a Renard's store at 248 County Rd S, Algoma (status not verified). Chris Renard earned Master Cheesemaker certifications (cheddar, mozzarella) in 2014 per company site."
+ },
+ {
+  "name": "West's Hayward Dairy",
+  "address": "15848 W 2nd St",
+  "city": "Hayward",
+  "chain": false,
+  "match_names": [
+   "WEST'S HAYWARD DAIRY",
+   "WESTS HAYWARD DAIRY",
+   "WEST'S DAIRY",
+   "WESTS DAIRY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "ice cream"
+  ],
+  "iconic_reason": "Downtown Hayward dairy bar making small-batch homemade ice cream on site since 1951, typically offering about 40 flavors.",
+  "founded": 1951,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://westsdairy.com/",
+   "https://westsdairy.com/about/",
+   "https://members.haywardareachamber.com/list/category/restaurant-sweets-treats-230"
+  ],
+  "open_evidence": "https://westsdairy.com/ - official site '© 2026' listing daily menu and flavors (fetched Sept 2026); listed in current Hayward Area Chamber directory",
+  "founded_source": "https://westsdairy.com/about/",
+  "closed_reason": null,
+  "notes": "Home page says 'since the 50's'; About page says 'Since 1951'. Site's SSL certificate had expired when checked. Only official/chamber sources."
+ },
+ {
+  "name": "Tremblay's Sweet Shop",
+  "address": "10569 Main St",
+  "city": "Hayward",
+  "chain": false,
+  "match_names": [
+   "TREMBLAY'S SWEET SHOP",
+   "TREMBLAYS SWEET SHOP",
+   "TREMBLAY'S SWEET SHOP CANDY",
+   "TREMBLAY'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "candy"
+  ],
+  "iconic_reason": "Northwoods candy shop in downtown Hayward selling fudge, brittle and hand-dipped chocolates.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.tremblayssweetshop.com/"
+  ],
+  "open_evidence": "https://www.tremblayssweetshop.com/ - official site: 'Now open all year!' with winter hours 9am-5pm daily and active online store (fetched Sept 2026); no dated item",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year not found (History page is photos only). Addresses from Overture: Hayward 10569 Main St; Eagle River 119 W Wall St - not confirmed on official site. A different site (tremblaysweetshop.com, no 's') shows a Tremblay's in Stillwater, MN - relationship unknown. Not in the Hayward chamber's Sweets & Treats list. Weakly verified."
+ },
+ {
+  "name": "Bosacki's Boat House",
+  "address": "305 E Park Ave",
+  "city": "Minocqua",
+  "chain": false,
+  "match_names": [
+   "BOSACKI'S BOAT HOUSE",
+   "BOSACKIS BOAT HOUSE",
+   "BOSACKI'S",
+   "BOSACKI'S BOATHOUSE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Waterfront restaurant and bar on Minocqua's island downtown that was rebuilt on its original over-water site after a 1972 fire following public pressure on the DNR.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Minocqua,_Wisconsin"
+  ],
+  "open_evidence": "No 2025-2026 evidence found: official site (bosackis.com) does not resolve; Minocqua chamber site search returned nothing; Overture lists 305 E Park Ave as open (not authoritative)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year not verified (often cited as 1917 - unverified). Wikipedia says it burned in 1972 and was rebuilt where it stood. Current status (possible sale/rebuild in the 2020s) could not be checked because web search was unavailable - needs verification before publishing."
+ },
+ {
+  "name": "Greunke's First Street Inn",
+  "address": "17 Rittenhouse Ave",
+  "city": "Bayfield",
+  "chain": false,
+  "match_names": [
+   "GREUNKE'S FIRST STREET INN",
+   "GREUNKES FIRST STREET INN",
+   "GREUNKE'S FIRST STREET INN & DINING",
+   "GREUNKE'S RESTAURANT",
+   "GREUNKE'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "historic",
+   "lodge"
+  ],
+  "iconic_reason": "Long-running inn and restaurant on Rittenhouse Avenue in Bayfield that was featured on the Travel Channel's 'Hotel Impossible' in 2016.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hotel_Impossible"
+  ],
+  "open_evidence": "No 2025-2026 evidence found: official site greunkesinn.com refused connections (Sept 2026); Bayfield chamber site search returned nothing; Overture lists it as open (not authoritative)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Featured on Travel Channel's 'Hotel Impossible' episode 104 'Lake Superior, Hotel Inferior' (aired Dec 5, 2016) per Wikipedia. Commonly associated with Lake Superior whitefish (fried whitefish livers) and fish boils - NOT verified from a fetched source. Founding year unknown. Open status unknown - needs verification before publishing."
+ }
+]

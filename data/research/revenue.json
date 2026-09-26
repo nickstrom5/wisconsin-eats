@@ -1,0 +1,41 @@
+{
+  "checked": "2026-09-25",
+  "source_list": "Restaurant Business Top 100 Independents (restaurantbusinessonline.com/top-100-independents?year=YYYY)",
+  "years_checked": [
+    2019,
+    2020,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "note_2021": "No 2021 edition appears in RB's year selector (the list skipped that year).",
+  "wisconsin_entries": [],
+  "finding": "No Wisconsin restaurant appears in any Restaurant Business Top 100 Independents ranking for 2019-2025 (checked the state and city columns of all 100 rows per year). All curated entries therefore keep reported_revenue_usd = null.",
+  "state_counts_2025": {
+    "Fla.": 22,
+    "Ill.": 14,
+    "Nev.": 12,
+    "Calif.": 12,
+    "N.Y.": 11,
+    "Texas": 9,
+    "D.C.": 4,
+    "Ind.": 3,
+    "Mass.": 3,
+    "Pa.": 2,
+    "Mich.": 2,
+    "Md.": 2,
+    "Tenn.": 1,
+    "Del.": 1,
+    "S.C.": 1,
+    "Va.": 1
+  },
+  "sources": [
+    "https://www.restaurantbusinessonline.com/top-100-independents?year=2019",
+    "https://www.restaurantbusinessonline.com/top-100-independents?year=2020",
+    "https://www.restaurantbusinessonline.com/top-100-independents?year=2022",
+    "https://www.restaurantbusinessonline.com/top-100-independents?year=2023",
+    "https://www.restaurantbusinessonline.com/top-100-independents?year=2024",
+    "https://www.restaurantbusinessonline.com/top-100-independents?year=2025"
+  ]
+}

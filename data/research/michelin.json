@@ -1,0 +1,12 @@
+{
+  "checked": "2026-09-25",
+  "finding": "No Michelin Guide selection (stars, Bib Gourmand, Green Star, or Recommended) covers any Wisconsin restaurant as of September 2026.",
+  "detail": "On April 7-8, 2026 Michelin announced a new 'American Great Lakes' guide covering Cleveland, Detroit, Indianapolis, Milwaukee, Minneapolis and Pittsburgh. Inspectors are already dining in Milwaukee, but the inaugural restaurant selection will only be revealed at a ceremony in 2027. Until then every Wisconsin restaurant has michelin_stars=0, bib_gourmand=false, green_star=false.",
+  "action_for_2027": "Re-check guide.michelin.com after the 2027 American Great Lakes ceremony and update Milwaukee entries.",
+  "sources": [
+    "https://guide.michelin.com/us/en/event/american-great-lakes-to-join-the-global-culinary-map-with-new-michelin-guide-edition",
+    "https://urbanmilwaukee.com/2026/04/08/michelin-restaurant-ratings-coming-to-milwaukee/",
+    "https://www.visitmilwaukee.org/press-releases/post/michelin-guide-great-lakes/",
+    "https://michelinmedia.com/pages/blog/detail/article/c/a1458/"
+  ]
+}

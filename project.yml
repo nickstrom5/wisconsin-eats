@@ -1,0 +1,62 @@
+name: WisconsinEats
+options:
+  bundleIdPrefix: com.wisconsineats
+  deploymentTarget:
+    iOS: "18.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""            # set your team in Xcode or here
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: "1,2"  # iPhone and iPad
+    SWIFT_STRICT_CONCURRENCY: minimal
+
+targets:
+  WisconsinEats:
+    type: application
+    platform: iOS
+    sources:
+      - path: WisconsinEats
+    info:
+      path: WisconsinEats/Info.plist
+      properties:
+        CFBundleDisplayName: WI Eats
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UIRequiresFullScreen: false
+        NSLocationWhenInUseUsageDescription: "Your location sorts fish fries, supper clubs and restaurants by distance. It stays on your device."
+        ITSAppUsesNonExemptEncryption: false
+        LSApplicationQueriesSchemes: [maps]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wisconsineats.ios
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    scheme:
+      testTargets: [WisconsinEatsTests]
+
+  WisconsinEatsTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: WisconsinEatsTests
+    dependencies:
+      - target: WisconsinEats
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wisconsineats.ios.tests
+        GENERATE_INFOPLIST_FILE: true

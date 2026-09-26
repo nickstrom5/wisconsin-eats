@@ -1,0 +1,1391 @@
+[
+ {
+  "name": "Babcock Dairy Store",
+  "address": "1605 Linden Dr",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "BABCOCK DAIRY STORE",
+   "BABCOCK HALL DAIRY STORE",
+   "BABCOCK DAIRY",
+   "BABCOCK HALL"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "ice cream",
+   "cheese",
+   "historic"
+  ],
+  "iconic_reason": "UW-Madison's campus dairy store, selling ice cream and cheese made in the Babcock Hall dairy plant since 1951.",
+  "founded": 1951,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://babcockdairystore.wisc.edu/about-us",
+   "https://babcockdairystore.wisc.edu/75-years-of-babcock-dairy-ice-cream/",
+   "https://www.wisfarmer.com/story/news/2023/12/19/uw-madisons-babcock-hall-dairy-plant-to-offer-175-smore-years-flavor/71798642007/"
+  ],
+  "open_evidence": "https://babcockdairystore.wisc.edu/75-years-of-babcock-dairy-ice-cream/ - store's own post dated Jan 30, 2026 marking 75th anniversary; about-us page lists current hours (Mon-Fri 7:30-7:30, Sat-Sun 11-4) (fetched Sept 2026)",
+  "founded_source": "https://babcockdairystore.wisc.edu/75-years-of-babcock-dairy-ice-cream/",
+  "closed_reason": null,
+  "notes": "Opened 1951, officially dedicated Feb 7, 1952. Dairy plant was fully reconstructed in 2022. Babcock ice cream is also scooped at Memorial Union (Daily Scoop) and other campus outlets. Owned/run by the University of Wisconsin-Madison."
+ },
+ {
+  "name": "Memorial Union Terrace",
+  "address": "800 Langdon St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "MEMORIAL UNION TERRACE",
+   "MEMORIAL UNION",
+   "THE TERRACE",
+   "DER RATHSKELLER",
+   "UW MADISON MEMORIAL UNION"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "historic",
+   "german",
+   "bratwurst",
+   "ice cream"
+  ],
+  "iconic_reason": "Lakeside terrace and Der Rathskeller beer hall of UW-Madison's Memorial Union, open since 1928 and known for its sunburst chairs on Lake Mendota.",
+  "founded": 1928,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://union.wisc.edu/visit/memorial-union",
+   "https://www.visitmadison.com/blog/stories/post/things-to-know-memorial-union-and-terrace/",
+   "https://union.wisc.edu/about/wisconsin-union-history/wisconsin-union-historical-timeline"
+  ],
+  "open_evidence": "https://union.wisc.edu/visit/memorial-union - official Wisconsin Union page lists current building hours and active outlets (Der Rathskeller, Brat Stand, Daily Scoop, Der Stiftskeller) (fetched Sept 2026); union.wisc.edu also hosts a Memorial Union reinvestment booklet dated Feb 2026",
+  "founded_source": "https://www.visitmadison.com/blog/stories/post/things-to-know-memorial-union-and-terrace/",
+  "closed_reason": null,
+  "notes": "Memorial Union and Der Rathskeller opened 1928; the Terrace was completed Oct 5, 1928. It is a university student union, not a single restaurant; food outlets include Der Rathskeller, Brat Stand, BBQ Stand, Daily Scoop (Babcock ice cream), Strada, Der Stiftskeller. I could not confirm the Terrace's Sept 2026 status beyond the building's posted hours; a Feb 2026 'reinvestment' document exists on union.wisc.edu and I did not check whether it involves new closures."
+ },
+ {
+  "name": "The Plaza Tavern",
+  "address": "319 N Henry St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "THE PLAZA TAVERN",
+   "PLAZA TAVERN",
+   "PLAZA TAVERN & GRILL",
+   "THE PLAZA TAVERN & GRILL",
+   "PLAZA TAVERN AND GRILL"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Downtown Madison tavern off State Street serving the Plazaburger with its secret Plaza Sauce since the 1960s.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://theplazatavern.com/",
+   "https://www.uwalumni.com/news/the-plaza/",
+   "https://madison.citycast.fm/food-drink/historic-madison-restaurants"
+  ],
+  "open_evidence": "https://theplazatavern.com/ - official site lists current bar and grill hours (Tue-Sat) and a 2025 rotating tap beer (fetched Sept 2026)",
+  "founded_source": "https://www.uwalumni.com/news/the-plaza/",
+  "closed_reason": null,
+  "notes": "Founding year ambiguous: the Plaza opened in 1927 as a billiard parlor/soda fountain/bowling alley at 315 N Henry St (Capital Times 1927 via UW Alumni Assn); City Cast Madison says 1930; the Huss family bought it in 1963; Plaza Sauce created by Mary Huss in 1963 (the tavern's own site says the Plazaburger dates to 1964). Left founded null because the business start as a tavern is unclear."
+ },
+ {
+  "name": "Dotty Dumpling's Dowry",
+  "address": "317 N Frances St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "DOTTY DUMPLING'S DOWRY",
+   "DOTTY DUMPLINGS DOWRY",
+   "DOTTY'S",
+   "DOTTY DUMPLING'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "burgers",
+   "cheese curds"
+  ],
+  "iconic_reason": "Family-owned burger restaurant in Madison since 1974, now in its fourth home on North Frances Street.",
+  "founded": 1974,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://dottydumplingsdowry.com/our-story",
+   "https://www.channel3000.com/madison-magazine/jeff-stanleys-legacy-lives-on-at-dotty-dumplings-dowry/article_d05629b8-3d55-11ef-b116-7bdf9a33188c.html",
+   "https://foundinwisconsin.com/2025/08/dotty-dumplings-dowry-madisons-burger-wonderland/",
+   "https://madison.citycast.fm/food-drink/historic-madison-restaurants"
+  ],
+  "open_evidence": "https://foundinwisconsin.com/2025/08/dotty-dumplings-dowry-madisons-burger-wonderland/ - Aug 2025 feature on the operating restaurant; City Cast Madison historic-restaurants roundup (Jan 2026) lists it as operating; Yelp listing updated Aug 2026 not marked closed",
+  "founded_source": "https://dottydumplingsdowry.com/our-story",
+  "closed_reason": null,
+  "notes": "Began as a gift shop in Des Moines in 1969; burger restaurant opened in Madison on Monroe St in 1974, moved to Regent St (1976), Fairchild St (1990), then displaced by the Overture Center and reopened at 317 N Frances St in 2003. Now run by founder Jeff Stanley's daughter Rachael Stanley. The restaurant's site says burger writer George Motz named it among the country's best burger spots in 2008 (not independently verified, so not listed as an honor)."
+ },
+ {
+  "name": "Mickies Dairy Bar",
+  "address": "1511 Monroe St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "MICKIES DAIRY BAR",
+   "MICKIE'S DAIRY BAR",
+   "MICKEYS DAIRY BAR",
+   "MICKIES"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "diner",
+   "historic"
+  ],
+  "iconic_reason": "Breakfast diner across from Camp Randall Stadium since 1946, known for its Scrambler plates and malts.",
+  "founded": 1946,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": null,
+  "sources": [
+   "https://captimes.com/food-drink/mickies-dairy-bar-owners-will-retire-pass-ownership/article_df0752c8-f4aa-4e3e-9b31-1e4aa6952fef.html",
+   "https://www.wmtv15news.com/2026/08/05/mickies-dairy-bar-re-open-under-new-ownership-soon/",
+   "https://spectrumnews1.com/wi/milwaukee/news/2026/08/07/mickies-dairy-bar-ownership-badgers-football-players",
+   "https://www.travelwisconsin.com/food-drink/restaurants/mickies-dairy-bar"
+  ],
+  "open_evidence": "https://www.wmtv15news.com/2026/08/05/mickies-dairy-bar-re-open-under-new-ownership-soon/ - Aug 5, 2026: closed during ownership transfer, will 'reopen soon' with a limited menu; no confirmed reopening date found",
+  "founded_source": "https://captimes.com/food-drink/mickies-dairy-bar-owners-will-retire-pass-ownership/article_df0752c8-f4aa-4e3e-9b31-1e4aa6952fef.html",
+  "closed_reason": null,
+  "notes": "Status UNCERTAIN as of Sept 2026: owners Payow and Janet Thongnuam (since 1991) retired; ownership passed July 20, 2026 to a group including former UW football players, with Gotham Bagels owner Joe Gaglio managing. Reported Aug 2026 as closed and reopening soon. Cap Times (June 18, 2026) gives 1946 founding, original owners Norm Bass and Van Reese. Cash only historically (not verified for new owners)."
+ },
+ {
+  "name": "The Old Fashioned",
+  "address": "23 N Pinckney St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "THE OLD FASHIONED",
+   "OLD FASHIONED",
+   "THE OLD FASHIONED TAVERN & RESTAURANT",
+   "OLD FASHIONED TAVERN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "fish fry",
+   "cheese curds",
+   "old fashioned"
+  ],
+  "iconic_reason": "Capitol Square tavern opened in 2005 that serves Wisconsin supper club and tavern standards such as cheese curds, Friday fish fry and brandy old fashioneds.",
+  "founded": 2005,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://theoldfashioned.com/",
+   "https://www.friede.com/the-old-fashioned-restaurant-madison-wisconsin",
+   "https://www.channel3000.com/madison-magazine/city-life/the-old-fashioned-creates-award-winning-wisconsin-fare/article_5bedebd3-4a16-590c-9d95-4c446fa588e5.html"
+  ],
+  "open_evidence": "https://theoldfashioned.com/ - official site shows current hours (Mon-Sat), online ordering and a posted short closure notice for Sept 7-9 (fetched Sept 2026)",
+  "founded_source": "https://www.friede.com/the-old-fashioned-restaurant-madison-wisconsin",
+  "closed_reason": null,
+  "notes": "Newer than the ~1980 cutoff (opened 2005 by Tami Lax and Marcia Castro) but included because it is widely known as Madison's Wisconsin-tavern showcase. Price tier 2 is an estimate (menu not fetched)."
+ },
+ {
+  "name": "L'Etoile",
+  "address": "1 S Pinckney St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "L'ETOILE",
+   "LETOILE",
+   "L'ETOILE RESTAURANT",
+   "LETOILE RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest winner 2001 (Odessa Piper)",
+   "Best Chef: Midwest winner 2012 (Tory Miller)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "fine dining",
+   "historic"
+  ],
+  "iconic_reason": "Farm-to-table fine dining restaurant founded by Odessa Piper in 1976 and owned by chef Tory Miller since 2005.",
+  "founded": 1976,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 4,
+  "open": true,
+  "sources": [
+   "https://www.letoile-restaurant.com/",
+   "https://www.channel3000.com/madison-magazine/an-iconic-fine-dining-restaurant-marks-50-years/article_3c1e5cb6-b138-4e09-a86d-ec05759f8562.html",
+   "https://madison.citycast.fm/food-drink/historic-madison-restaurants"
+  ],
+  "open_evidence": "https://www.channel3000.com/madison-magazine/an-iconic-fine-dining-restaurant-marks-50-years/article_3c1e5cb6-b138-4e09-a86d-ec05759f8562.html - Madison Magazine, Mar 4, 2026, on the restaurant's 50th anniversary dinners",
+  "founded_source": "https://www.channel3000.com/madison-magazine/an-iconic-fine-dining-restaurant-marks-50-years/article_3c1e5cb6-b138-4e09-a86d-ec05759f8562.html",
+  "closed_reason": null,
+  "notes": "Moved from 25 N Pinckney St to 1 S Pinckney St in 2010 (map data still shows both addresses). JBF honors per Madison Magazine (2026); separate JBF agent should confirm. Price tier 4 assumes the multi-course menu described on OpenTable/official site."
+ },
+ {
+  "name": "Michael's Frozen Custard",
+  "address": "3826 Atwood Ave",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "MICHAEL'S FROZEN CUSTARD",
+   "MICHAELS FROZEN CUSTARD",
+   "MICHAEL'S CUSTARD"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "frozen custard"
+  ],
+  "iconic_reason": "Madison frozen custard stand founded on Monroe Street in 1986, now operating from its Atwood Avenue shop.",
+  "founded": 1986,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.ilovemichaels.com/",
+   "https://christinalorey.substack.com/p/small-business-shoutout-madisons",
+   "https://captimes.com/news/local/govt-and-politics/michaels-frozen-custard-on-monroe-street-to-close-after-owners-husband-denied-u-s-visa/article_5f1a778a-1f6e-5c68-9b3a-25c2c864a4e8.html"
+  ],
+  "open_evidence": "https://www.ilovemichaels.com/ - official site shows Atwood Ave location open 11am-9pm with a current flavor calendar and online ordering (fetched Sept 2026); Yelp lists the Monroe St shop as closed",
+  "founded_source": "https://christinalorey.substack.com/p/small-business-shoutout-madisons",
+  "closed_reason": null,
+  "notes": "Original shop at 2531 Monroe St opened Aug 22, 1986 and later closed (Cap Times reported the closure after the owner's husband was denied a U.S. visa; closure year not confirmed, roughly 2019-2020). Map data still lists a Schroeder Rd location; the official site now names only Atwood Ave. Founding-date detail from a Substack profile; the 1986 year also appears on the official site."
+ },
+ {
+  "name": "Essen Haus",
+  "address": "514 E Wilson St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "ESSEN HAUS",
+   "ESSEN HAUS GERMAN RESTAURANT",
+   "ESSEN HAUS RESTAURANT AND BAR",
+   "ESSEN HAUS MADISON"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "german",
+   "bratwurst"
+  ],
+  "iconic_reason": "German restaurant and beer hall on East Wilson Street since 1983, known for polka bands and beer served in glass boots.",
+  "founded": 1983,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://essen-haus.com/",
+   "https://www.channel3000.com/madison-magazine/is-essen-haus-finally-getting-the-boot/article_9dfd8197-a955-4e23-9a51-7b85232a6b23.html",
+   "https://www.wkow.com/news/essen-haus-prepares-to-close-doors-after-42-years-in-business/article_a1f23120-35cb-11ef-9217-2f7a702fae16.html"
+  ],
+  "open_evidence": "https://www.channel3000.com/madison-magazine/is-essen-haus-finally-getting-the-boot/article_9dfd8197-a955-4e23-9a51-7b85232a6b23.html - Madison Magazine, Sept 21, 2026: restaurant open and 'going ahead as normal' despite a new housing proposal",
+  "founded_source": "https://www.channel3000.com/madison-magazine/is-essen-haus-finally-getting-the-boot/article_9dfd8197-a955-4e23-9a51-7b85232a6b23.html",
+  "closed_reason": null,
+  "notes": "Founding year: Madison Magazine and search summaries say Sept 1983; WKOW (June 2024) said 1982. A 2024 redevelopment deal that would have closed it fell through; as of Sept 2026 developer Lotus Co. proposes affordable housing on the site with possible groundbreaking summer 2027 - watch for closure. Price tier 2 estimated."
+ },
+ {
+  "name": "Greenbush Bar",
+  "address": "914 Regent St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "GREENBUSH BAR",
+   "THE GREENBUSH BAR",
+   "GREENBUSH BAR ON REGENT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "pizza",
+   "italian",
+   "tavern"
+  ],
+  "iconic_reason": "Basement bar under the Italian Workmen's Club serving tavern-style pizza since 1993.",
+  "founded": 1993,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.greenbushbaronregent.com/",
+   "https://captimes.com/food-drink/greenbush-bar-reopened-regent-street-icon-same-as-it-ever-was/article_e93ddc84-b8c3-11ef-8f26-b71f3183b856.html",
+   "https://iwcmadison.com/"
+  ],
+  "open_evidence": "https://www.greenbushbaronregent.com/ - official site lists daily hours 4:30pm-midnight, weekly piano bar and monthly events (fetched Sept 2026); Yelp listing updated Sept 2026 not marked closed",
+  "founded_source": "https://www.greenbushbaronregent.com/",
+  "closed_reason": null,
+  "notes": "Sold to a new ownership team and reopened in late 2024 (Cap Times). The Italian Workmen's Club building (1922) at 914 Regent St was reported in July 2025 as receiving a historic designation (search summary said National Historic Landmark - unverified; do not use as an honor)."
+ },
+ {
+  "name": "Laurel Tavern",
+  "address": "2505 Monroe St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "LAUREL TAVERN",
+   "THE LAUREL TAVERN",
+   "LAUREL TAP"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "fish fry",
+   "burgers"
+  ],
+  "iconic_reason": "Monroe Street neighborhood tavern documented at the same address since at least 1940, known for its Friday fish fry.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.wisconsinhistory.org/Records/Image/IM43866",
+   "https://isthmus.com/locations/laurel-tavern/",
+   "https://www.channel3000.com/madison-magazine/columns/saved-by-the-laurel-tavern-s-fish-fry/article_01dea57d-ac71-5eff-a13a-7f7cca580c42.html"
+  ],
+  "open_evidence": "https://isthmus.com/locations/laurel-tavern/ - Isthmus listing shows daily hours 11am-midnight; Yelp listing 'Updated April 2026' not marked closed (weak evidence, no dated 2025-2026 article found)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding uncertain: Wisconsin Historical Society photos show the Laurel Tavern at 2505 Monroe St in 1940 and 1945 (owned by the Forrest family); a search summary cited a 1933 Wisconsin State Journal ad, and another source says the current owners' era began in 1969 (Zilly family). Open status based on listings only. Official site thelaureltavern.com had a certificate error when fetched."
+ },
+ {
+  "name": "Mickey's Tavern",
+  "address": "1524 Williamson St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "MICKEY'S TAVERN",
+   "MICKEYS TAVERN",
+   "MICKEY'S",
+   "MICKEY'S MADISON"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Longtime Williamson Street corner tavern in a Queen Anne building next to the Yahara River, now serving food and live music.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.mickeysmadison.com/",
+   "https://isthmus.com/locations/mickeys-tavern/",
+   "https://wisconsinhistory.org/Records/Property/HI115944",
+   "https://madison.com/life-entertainment/local/food-drink/reviews/historic-mickeys-tavern-starts-serving-food/article_96948d58-03e5-11e1-b477-001cc4c002e0.html"
+  ],
+  "open_evidence": "https://www.mickeysmadison.com/ - official site lists current hours including weekend brunch (fetched Sept 2026); Yelp listing updated Sept 2026 not marked closed",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year of the tavern business not confirmed: a search summary said it 'opened in 1902', which likely refers to the building (Wisconsin Historical Society property record 'Mickey's Tavern and Apartments'). Began serving food around 2011 (State Journal). Left founded null."
+ },
+ {
+  "name": "Fromagination",
+  "address": "12 S Carroll St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "FROMAGINATION",
+   "FROMAGINATION CHEESE SHOP"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "cheese"
+  ],
+  "iconic_reason": "Capitol Square cheese shop opened in 2007 that specializes in Wisconsin artisan cheeses.",
+  "founded": 2007,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://fromagination.com/",
+   "https://www.travelwisconsin.com/food-drink/wisconsin-cheese/fromagination",
+   "https://captimes.com/entertainment/dining/q-a-fromaginations-ken-monteleone-has-a-21st-century-cheese-shop/article_3d1846d9-ee4b-531f-8f81-1c978058668e.html"
+  ],
+  "open_evidence": "Yelp listing 'Updated June 2026' at 12 S Carroll St not marked closed; official site fromagination.com active (search result, Sept 2026)",
+  "founded_source": "https://www.travelwisconsin.com/food-drink/wisconsin-cheese/fromagination",
+  "closed_reason": null,
+  "notes": "A retail cheese shop, not a restaurant, and newer than 1980; included because the task named it. A State Journal article mentions a cheese shop coming to Atwood Ave (unclear if a Fromagination second location)."
+ },
+ {
+  "name": "Nitty Gritty",
+  "address": "223 N Frances St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "NITTY GRITTY",
+   "THE NITTY GRITTY",
+   "NITTY GRITTY-MADISON",
+   "THE GRITTY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "burgers",
+   "tavern"
+  ],
+  "iconic_reason": "Downtown bar and grill opened in 1968 that has billed itself as Madison's official birthday bar since 1985.",
+  "founded": 1968,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.thegritty.com/about/",
+   "https://www.thegritty.com/birthday-celebrations/",
+   "https://202archive.journalism.wisc.edu/2017fall307/madisons-official-birthday-place/index.html"
+  ],
+  "open_evidence": "https://www.thegritty.com/ - official site active with birthday program and locations (fetched Sept 2026); map data (Overture Sept 2026) lists 223 N Frances St as open. No dated 2025-2026 article found.",
+  "founded_source": "https://www.thegritty.com/about/",
+  "closed_reason": null,
+  "notes": "Founded Oct 3, 1968 by TV personality Marsh Shapiro in an 1898 building. Sister locations in Middleton (1021 N Gammon Rd, 2002) and Sun Prairie (315 E Linnerud Dr, 2013). Owners since 2010: Lee Pier and Eric Suemnicht. Price tier estimated."
+ },
+ {
+  "name": "Chocolate Shoppe Ice Cream",
+  "address": "468 State St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "CHOCOLATE SHOPPE ICE CREAM",
+   "CHOCOLATE SHOPPE ICE CREAM CO",
+   "CHOCOLATE SHOPPE",
+   "CHOCOLATE SHOPPE ICE CREAM COMPANY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "ice cream"
+  ],
+  "iconic_reason": "Madison ice cream maker founded in 1962 by the Deadman family, with its own plant and several scoop shops.",
+  "founded": 1962,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://chocolateshoppeicecream.com/about-us/",
+   "https://en.wikipedia.org/wiki/Chocolate_Shoppe_Ice_Cream_Company",
+   "https://fitchburghistory.org/chocolate-shoppe-ice-cream-company/"
+  ],
+  "open_evidence": "Yelp listing for 468 State St 'Updated September 2026' not marked closed; Overture Sept 2026 map data lists the State St, Monroe St and Midvale shops as open (no dated 2025-2026 article captured)",
+  "founded_source": "https://en.wikipedia.org/wiki/Chocolate_Shoppe_Ice_Cream_Company",
+  "closed_reason": null,
+  "notes": "Opened June 12, 1962 as Chocolate House Candy and Ice Cream on Monona Drive; renamed in the 1970s. Original shop no longer exists; 468 State St chosen as the best-known shop. Other shops: 1925 Monroe St, 555 S Midvale Blvd, plus a Janesville franchise shop (2510 Mineral Point Ave); plant in Fitchburg (2685 Research Park Dr). Wholesales to 600+ parlors in several states but is a local company, so chain=false."
+ },
+ {
+  "name": "Lombardino's",
+  "address": "2500 University Ave",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "LOMBARDINO'S",
+   "LOMBARDINOS",
+   "LOMBARDINO'S RESTAURANT",
+   "LOMBARDINOS ITALIAN RESTAURANT AND BAR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "italian",
+   "historic"
+  ],
+  "iconic_reason": "Italian restaurant on University Avenue since 1952, founded by Matteo Lombardino after an earlier State Street spot.",
+  "founded": 1952,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.lombardinos.com/story",
+   "https://madison.citycast.fm/food-drink/historic-madison-restaurants"
+  ],
+  "open_evidence": "https://www.lombardinos.com/story - official site (c) 2026 lists current service Thu-Sun 4:30-8:30pm (fetched Sept 2026); Yelp listing updated Sept 2026; City Cast Madison roundup (Jan 2026)",
+  "founded_source": "https://www.lombardinos.com/story",
+  "closed_reason": null,
+  "notes": "The business started earlier on State Street (year not given); 1952 is the move to University Ave. Owned by Michael Banas since 2000. Currently open only Thursday-Sunday."
+ },
+ {
+  "name": "Ella's Deli",
+  "address": "2902 E Washington Ave",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "ELLA'S DELI",
+   "ELLAS DELI",
+   "ELLA'S DELI AND ICE CREAM PARLOR",
+   "ELLA'S DELI & ICE CREAM PARLOR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "deli",
+   "ice cream"
+  ],
+  "iconic_reason": "Kosher-style deli and ice cream parlor known for its outdoor carousel and animated toys, open on East Washington Avenue until 2018.",
+  "founded": 1976,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.wpr.org/culture/madisons-ellas-deli-closes-after-42-years",
+   "https://madison.com/news/local/iconic-ella-s-deli-is-closing-this-month-after-years/article_b5073261-52e2-5720-9765-83b0d1066a5d.html",
+   "https://www.yelp.com/biz/ellas-deli-madison"
+  ],
+  "open_evidence": "https://www.wpr.org/culture/madisons-ellas-deli-closes-after-42-years - closed Jan 21, 2018",
+  "founded_source": "https://www.wpr.org/culture/madisons-ellas-deli-closes-after-42-years",
+  "closed_reason": "Closed permanently Jan 21, 2018 after about 42 years; owners Ken and Judy Balkin cited difficult restaurant economics. Epic Systems bought the carousel; the building was demolished and replaced by the Ella Apartments (2021). Source: https://www.wpr.org/culture/madisons-ellas-deli-closes-after-42-years",
+  "notes": "WPR headline says 42 years; founding year 1976 per WPR."
+ },
+ {
+  "name": "Porta Bella",
+  "address": "425 N Frances St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "PORTA BELLA",
+   "PORTA BELLA RESTAURANT",
+   "PORTABELLA"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "italian",
+   "pizza",
+   "historic"
+  ],
+  "iconic_reason": "Candlelit Italian restaurant on North Frances Street that served pasta and pizza from 1968 until it closed in 2026 for a student housing project.",
+  "founded": 1968,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.channel3000.com/news/porta-bella-restaurant-permanently-closes-after-58-years-serving-madison-community/article_913d70cd-2387-476d-9545-7d27bd85d7e2.html",
+   "https://madison.com/news/local/business/development/article_7256756c-41c2-4337-bb0f-49e7946add63.html",
+   "https://www.dailycardinal.com/article/2025/10/madison-staple-porta-bella-could-be-replaced-by-high-rise-apartments"
+  ],
+  "open_evidence": "https://www.channel3000.com/news/porta-bella-restaurant-permanently-closes-after-58-years-serving-madison-community/article_913d70cd-2387-476d-9545-7d27bd85d7e2.html - Feb 26, 2026: permanently closing at end of February 2026",
+  "founded_source": "https://www.channel3000.com/news/porta-bella-restaurant-permanently-closes-after-58-years-serving-madison-community/article_913d70cd-2387-476d-9545-7d27bd85d7e2.html",
+  "closed_reason": "Closed permanently at the end of February 2026 after 58 years; the site was sold to Villas Student Housing for a 16-story student apartment building and has since been demolished (State Journal). Source: https://www.channel3000.com/news/porta-bella-restaurant-permanently-closes-after-58-years-serving-madison-community/article_913d70cd-2387-476d-9545-7d27bd85d7e2.html",
+  "notes": "Owners Ed Shinnick and Wally Borowski (also owners of Paisan's). Exact final day not confirmed (article dated Feb 26, 2026 says it closes that Saturday)."
+ },
+ {
+  "name": "Paisan's",
+  "address": "131 W Wilson St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "PAISAN'S",
+   "PAISANS",
+   "PAISAN'S RESTAURANT",
+   "PAISANS RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "italian",
+   "pizza",
+   "historic"
+  ],
+  "iconic_reason": "Italian restaurant opened near campus in 1950, known for thin-crust pizza and the Garibaldi sandwich, closed since 2023.",
+  "founded": 1950,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.uwalumni.com/news/paisans-garibaldi/",
+   "https://madison.com/life-entertainment/local/food-drink/paisans-reopening-porta-bella/article_ea224d14-225c-11ee-b2f3-430041c4810a.html",
+   "https://www.ibmadison.com/industries/hospitality-tourism/no-timetable-for-paisan-s-to-return-in-basement-of-its-sister-restaurant/article_29f0218d-379d-51b5-a367-ebdde9b49db3.html",
+   "https://www.yelp.com/biz/paisans-madison"
+  ],
+  "open_evidence": "Yelp listing 'PAISAN'S - CLOSED' (updated Aug 2026); State Journal (July 2023) and IB Madison reported no timetable for a return",
+  "founded_source": "https://www.uwalumni.com/news/paisans-garibaldi/",
+  "closed_reason": "Forced out of 131 W Wilson St in 2023 after repeated closures (from Sept 2021) over the deteriorating condition of its 12-story building. Owners planned to revive it in the basement of sister restaurant Porta Bella, but Porta Bella itself closed in Feb 2026 for redevelopment; no reopening found. Source: https://madison.com/life-entertainment/local/food-drink/paisans-reopening-porta-bella/article_ea224d14-225c-11ee-b2f3-430041c4810a.html",
+  "notes": "Exact 2023 closing date not confirmed. Opened 1950 at Park St & University Ave; five locations over the years, including the basement below Porta Bella in 1969-1975 and University Square until 2006. The Garibaldi sandwich dates to 1957. Possible future revival - treat as closed unless new evidence."
+ },
+ {
+  "name": "Culver's (original Sauk City restaurant)",
+  "address": "716 Phillips Blvd",
+  "city": "Sauk City",
+  "chain": true,
+  "match_names": [
+   "CULVER'S",
+   "CULVERS",
+   "CULVER'S OF SAUK CITY",
+   "CULVER'S SAUK CITY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "butter burger",
+   "frozen custard",
+   "historic"
+  ],
+  "iconic_reason": "Site of the first Culver's, opened July 18, 1984 by the Culver family in a former A&W drive-in, where the chain's ButterBurgers and frozen custard began.",
+  "founded": 1984,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.culvers.com/restaurants/sauk-city",
+   "https://wisconsinhistory.org/wishistory-stories-updates/celebrating-40-years-of-culvers-history",
+   "https://www.wpr.org/food/whats-scoop-origin-culvers-franchise",
+   "https://www.hmdb.org/m.asp?m=19479"
+  ],
+  "open_evidence": "https://www.culvers.com/restaurants/sauk-city - official location page with current dine-in/drive-thru hours, calls itself 'Home of the first Culver's restaurant' (fetched Sept 2026); Yelp listing updated July 2026",
+  "founded_source": "https://wisconsinhistory.org/wishistory-stories-updates/celebrating-40-years-of-culvers-history",
+  "closed_reason": null,
+  "notes": "National chain (chain=true). The original 1984 building (a converted A&W) is gone; per Wisconsin Historical Society (Dec 2025) the site is marked with a plaque/historical marker, and Culver's official page describes the current Phillips Blvd restaurant as the home of the first Culver's. I did not independently confirm that today's building sits on the exact original lot."
+ },
+ {
+  "name": "Paul Bunyan's Cook Shanty",
+  "address": "411 State Hwy 13 S",
+  "city": "Wisconsin Dells",
+  "chain": false,
+  "match_names": [
+   "PAUL BUNYAN'S COOK SHANTY",
+   "PAUL BUNYANS COOK SHANTY",
+   "PAUL BUNYAN'S",
+   "PAUL BUNYAN'S FAMOUS COOK SHANTY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "lodge",
+   "historic"
+  ],
+  "iconic_reason": "Family-run logging-camp-themed restaurant in Wisconsin Dells serving all-you-can-eat family-style meals and fresh donuts since 1958.",
+  "founded": 1958,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://dellspaulbunyans.com/about-us/",
+   "https://dellspaulbunyans.com/contact-us/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/paul-bunyan-s-cook-shanty"
+  ],
+  "open_evidence": "https://dellspaulbunyans.com/ - official site (c) 2026 with hours page; Facebook post (Trending WI) reported it opened for the 2026 season; season runs mid-March through October",
+  "founded_source": "https://dellspaulbunyans.com/about-us/",
+  "closed_reason": null,
+  "notes": "Seasonal (roughly mid-March to October). The restaurant's site says 'in business since 1958' and 'more than 65 years'; the task brief said 1961 - using the business's own 1958. Run by the Tonne and Hickey family. A separately listed Paul Bunyan's Cook Shanty operates in Minocqua (8653 US-51); relationship between the two not verified. Price tier 2 is an estimate for the all-you-can-eat dinner."
+ },
+ {
+  "name": "Monk's Bar & Grill",
+  "address": "220 Broadway",
+  "city": "Wisconsin Dells",
+  "chain": false,
+  "match_names": [
+   "MONK'S BAR & GRILL",
+   "MONKS BAR & GRILL",
+   "MONK'S BAR AND GRILL",
+   "MONK'S",
+   "MONKS BAR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "burgers",
+   "butter burger",
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Downtown Wisconsin Dells bar opened in 1947 known for buttered burgers with fried onions and Badger football memorabilia.",
+  "founded": 1947,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.monksbarandgrill.com/history/",
+   "https://www.monksbarandgrill.com/location/monks-bar-and-grill-wisconsin-dells/",
+   "https://roadfood.com/restaurants/monks"
+  ],
+  "open_evidence": "https://www.monksbarandgrill.com/location/monks-bar-and-grill-wisconsin-dells/ - official page for 'THE ORIGINAL' at 220 Broadway lists current daily hours, open for dine-in and carryout (fetched Sept 2026); Yelp listing updated Aug 2026",
+  "founded_source": "https://www.monksbarandgrill.com/history/",
+  "closed_reason": null,
+  "notes": "Started 1947 by Gustave 'Monk' and Helen Heineke on Oak Street, moved to the current Broadway spot about 1962; sold in 1982 to Tom and Jane Heller. Now a small Wisconsin-only group (Wisconsin Dells original, Middleton, Sun Prairie, and at the Wilderness resort; an Eau Claire location is listed as permanently closed) - chain=false."
+ },
+ {
+  "name": "Baumgartner's Cheese Store & Tavern",
+  "address": "1023 16th Ave",
+  "city": "Monroe",
+  "chain": false,
+  "match_names": [
+   "BAUMGARTNER'S CHEESE STORE & TAVERN",
+   "BAUMGARTNERS CHEESE STORE & TAVERN",
+   "BAUMGARTNER'S",
+   "BAUMGARTNER'S CHEESE STORE AND TAVERN",
+   "BAUMGARTNERS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "cheese",
+   "tavern",
+   "swiss",
+   "historic"
+  ],
+  "iconic_reason": "Cheese shop and tavern on the Monroe square since 1931, known for limburger sandwiches and dollar bills stuck to the ceiling.",
+  "founded": 1931,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.travelwisconsin.com/food-drink/restaurants/baumgartner-s-cheese-store-tavern",
+   "https://www.eatmonroe.com/dining-guide/baumgartners-cheese-store-tavern/",
+   "https://statetrunktour.com/poi/baumgartners-cheese-store-tavern/"
+  ],
+  "open_evidence": "Yelp listing 'Updated August 2026' at 1023 16th Ave not marked closed; Tripadvisor page titled 2026; Travel Wisconsin and eatMonroe listings active (Sept 2026). No dated 2025-2026 article captured.",
+  "founded_source": "https://www.travelwisconsin.com/food-drink/restaurants/baumgartner-s-cheese-store-tavern",
+  "closed_reason": null,
+  "notes": "Bills itself as Wisconsin's oldest cheese store. Limburger for its sandwiches comes from nearby Chalet Cheese Cooperative (per search summaries). Its former website domain baumgartnercheese.com now shows unrelated gambling content, so do not use it as a source; open status rests on listings."
+ },
+ {
+  "name": "New Glarus Bakery",
+  "address": "534 1st St",
+  "city": "New Glarus",
+  "chain": false,
+  "match_names": [
+   "NEW GLARUS BAKERY",
+   "NEW GLARUS BAKERY & TEA ROOM",
+   "NEW GLARUS BAKERY AND TEA ROOM"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bakery",
+   "swiss",
+   "historic"
+  ],
+  "iconic_reason": "Swiss-American bakery in New Glarus since 1910, known for nut horns and holiday stollen.",
+  "founded": 1910,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://newglarusbakery.com/about-new-glarus-bakery/",
+   "https://www.travelwisconsin.com/wisconsin-specialties/new-glarus-bakery-221817"
+  ],
+  "open_evidence": "https://newglarusbakery.com/about-new-glarus-bakery/ - official site (c) 2026 with online shop and current ownership text (fetched Sept 2026); Yelp listing updated Aug 2026",
+  "founded_source": "https://newglarusbakery.com/about-new-glarus-bakery/",
+  "closed_reason": null,
+  "notes": "Started 1910 by Albert Wolfe (per search summary); owned by Angela (surname not given) since 2004. Ships nationwide."
+ },
+ {
+  "name": "Puempel's Olde Tavern",
+  "address": "18 6th Ave",
+  "city": "New Glarus",
+  "chain": false,
+  "match_names": [
+   "PUEMPEL'S OLDE TAVERN",
+   "PUEMPELS OLDE TAVERN",
+   "PUEMPEL'S",
+   "PUEMPELS TAVERN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "swiss",
+   "historic"
+  ],
+  "iconic_reason": "New Glarus tavern founded in 1893 by Joseph Puempel, with Swiss folk murals painted in 1913 and a 1912 Brunswick back bar.",
+  "founded": 1893,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://puempels.com/",
+   "https://www.greencounty.org/listing/puempels-olde-tavern/"
+  ],
+  "open_evidence": "https://puempels.com/ - official site lists current weekly hours (fetched Sept 2026); Yelp listing updated Aug 2026 not marked closed",
+  "founded_source": "https://puempels.com/",
+  "closed_reason": null,
+  "notes": "Murals by Albert Struebin (1913) and 1912 Brunswick back bar per search summaries of Tripadvisor/Green County tourism pages. Serves bar food (e.g. cheese curds, limburger sandwiches); food menu depth not verified. Price tier estimated."
+ },
+ {
+  "name": "Red Rooster Cafe",
+  "address": "158 High St",
+  "city": "Mineral Point",
+  "chain": false,
+  "match_names": [
+   "RED ROOSTER CAFE",
+   "THE RED ROOSTER CAFE",
+   "RED ROOSTER CAFÉ",
+   "LAWINGER'S RED ROOSTER CAFE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "diner",
+   "pasty",
+   "historic"
+  ],
+  "iconic_reason": "Family-owned downtown Mineral Point cafe serving Cornish pasties, figgyhobbin and saffron buns.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.mineralpoint.com/list/member/red-rooster-caf%C3%A9-102",
+   "https://www.travelwisconsin.com/restaurants/the-red-rooster-cafe-196635",
+   "http://redroostercafe.com"
+  ],
+  "open_evidence": "https://www.mineralpoint.com/list/member/red-rooster-caf%C3%A9-102 - Mineral Point Chamber listing with current daily hours 7am-3pm (undated, fetched Sept 2026); Yelp listing updated June 2026 not marked closed. Weak evidence; no dated 2025-2026 article found.",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year uncertain: a search summary said 'established in 1972', third-generation family ownership; Travel Wisconsin says 'over 30 years'. Official site redroostercafe.com was down (HTTP 521) when checked. Tag 'pasty' added (not in standard tag list)."
+ },
+ {
+  "name": "Ellsworth Cooperative Creamery",
+  "address": "232 N Wallace St",
+  "city": "Ellsworth",
+  "chain": false,
+  "match_names": [
+   "ELLSWORTH COOPERATIVE CREAMERY",
+   "ELLSWORTH CREAMERY",
+   "ELLSWORTH COOP CREAMERY",
+   "ELLSWORTH CHEESE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Ellsworth declared Cheese Curd Capital of Wisconsin by Gov. Anthony Earl (1983)"
+  ],
+  "tags": [
+   "cheese curds",
+   "cheese",
+   "ice cream"
+  ],
+  "iconic_reason": "Farmer-owned dairy cooperative founded in 1910 whose Ellsworth store sells fresh cheddar curds daily in the village the state named Cheese Curd Capital of Wisconsin in 1983.",
+  "founded": 1910,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.ellsworthcheese.com/visit/ellsworth/",
+   "https://www.ellsworthcheese.com/about/our-history/",
+   "https://en.wikipedia.org/wiki/Ellsworth_Cooperative_Creamery"
+  ],
+  "open_evidence": "https://www.ellsworthcheese.com/visit/ellsworth/ - official page lists store open 8am-6pm daily with fresh curds at 11am and a current monthly soft-serve special; site news dated Nov 14, 2025 and (c) 2026",
+  "founded_source": "https://www.ellsworthcheese.com/about/our-history/",
+  "closed_reason": null,
+  "notes": "A cheese store/creamery retail shop, not a restaurant. Curd start date: the co-op's history page says 1968, Wikipedia says 1965. Second retail store and plant in Menomonie (opened 2022). Cheese Curd Capital declaration per Wikipedia."
+ },
+ {
+  "name": "Norske Nook",
+  "address": "13804 7th St",
+  "city": "Osseo",
+  "chain": false,
+  "match_names": [
+   "NORSKE NOOK",
+   "NORSKE NOOK RESTAURANT & BAKERY",
+   "NORSKE NOOK RESTAURANT AND BAKERY",
+   "THE NORSKE NOOK"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "pie",
+   "bakery",
+   "scandinavian",
+   "diner"
+  ],
+  "iconic_reason": "Osseo restaurant and bakery opened in 1973, known for scratch-made pies and Norwegian dishes such as lefse.",
+  "founded": 1973,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.norskenook.com/",
+   "https://www.norskenook.com/about"
+  ],
+  "open_evidence": "https://www.norskenook.com/ - official site lists daily hours for all three locations and a September 2026 pie of the month, plus a 'USA Today Readers Choice Award Winner 2026' badge (fetched Sept 2026)",
+  "founded_source": "https://www.norskenook.com/about",
+  "closed_reason": null,
+  "notes": "Original location in Osseo; other locations: 2900 Pioneer Ave, Rice Lake and 100 E Holum St, DeForest (a Hayward listing appears in map data but is not on the official site). The bakery says it has won 45 blue ribbons at the National Pie Championships (self-reported; not listed as an honor). USA Today 10Best reader's choice 2026 is self-reported on the site, category not stated."
+ },
+ {
+  "name": "Olson's Ice Cream",
+  "address": "611 N Bridge St",
+  "city": "Chippewa Falls",
+  "chain": false,
+  "match_names": [
+   "OLSON'S ICE CREAM",
+   "OLSONS ICE CREAM",
+   "OLSON'S ICE CREAM PARLOR",
+   "OLSON'S ICE CREAM PARLOR & DELI",
+   "OLSON'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "ice cream"
+  ],
+  "iconic_reason": "Family ice cream maker in Chippewa Falls since 1944 that makes its own ice cream and sorbet, with a second shop in downtown Eau Claire.",
+  "founded": 1944,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "http://www.olsonsicecream.com"
+  ],
+  "open_evidence": "http://www.olsonsicecream.com - official site lists current daily hours for Chippewa Falls and Eau Claire and rotating seasonal flavors (fetched Sept 2026)",
+  "founded_source": "http://www.olsonsicecream.com",
+  "closed_reason": null,
+  "notes": "The task brief listed Olson's as an Eau Claire classic; the original/flagship is in Chippewa Falls (611 N Bridge St) and a second shop is at 80 S Barstow St, Eau Claire. Official site says 'a family tradition since 1944'. No independent news source captured (web search budget exhausted)."
+ },
+ {
+  "name": "Rudy's Drive-In",
+  "address": "1004 La Crosse St",
+  "city": "La Crosse",
+  "chain": false,
+  "match_names": [
+   "RUDY'S DRIVE-IN",
+   "RUDYS DRIVE IN",
+   "RUDY'S DRIVE IN",
+   "RUDY'S DRIVE IN RESTAURANT",
+   "RUDY'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "drive-in",
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Seasonal drive-in on La Crosse Street with roller-skating carhops and house root beer, part of a family business dating to a 1933 A&W stand.",
+  "founded": 1933,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.rudysdrivein.com/",
+   "https://www.rudysdrivein.com/about"
+  ],
+  "open_evidence": "https://www.rudysdrivein.com/ - official site says La Crosse and Sparta locations 'Now Open for 2026', 11am-9pm daily (fetched Sept 2026)",
+  "founded_source": "https://www.rudysdrivein.com/about",
+  "closed_reason": null,
+  "notes": "Business began in 1933 when William Rudy opened an A&W root beer stand in Chippewa Falls; first drive-in built 1947; the La Crosse St location opened in 1966. Owned by grandson Gary Rudy 1979-2022, now Justin Smith. Second location in Sparta. Seasonal. If 'founded' should mean the La Crosse restaurant itself, use 1966."
+ },
+ {
+  "name": "The Freighthouse Restaurant",
+  "address": "107 Vine St",
+  "city": "La Crosse",
+  "chain": false,
+  "match_names": [
+   "THE FREIGHTHOUSE RESTAURANT",
+   "FREIGHTHOUSE RESTAURANT",
+   "THE FREIGHT HOUSE",
+   "FREIGHT HOUSE",
+   "THE FREIGHTHOUSE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "steakhouse",
+   "historic",
+   "fine dining"
+  ],
+  "iconic_reason": "Steak and seafood restaurant opened in October 1978 inside an 1880 Milwaukee Road railroad freight house in downtown La Crosse.",
+  "founded": 1978,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.freighthouserestaurant.com/our-story",
+   "https://www.freighthouserestaurant.com"
+  ],
+  "open_evidence": "https://www.freighthouserestaurant.com - official site lists current bar and dinner hours and 'Best of La Crosse County 2014-2026' (fetched Sept 2026)",
+  "founded_source": "https://www.freighthouserestaurant.com/our-story",
+  "closed_reason": null,
+  "notes": "Building erected 1880 by the Chicago, Milwaukee and St. Paul Railroad; freight use ended 1955; restoration began April 1978. The restaurant says it received a Heritage Award from the La Crosse Historical Preservation Society and calls the building a 'National Historic Site' - I did not verify an NRHP listing, so not added as an honor. Price tier 3 is an estimate for a steakhouse (menu PDF not read)."
+ },
+ {
+  "name": "Trempealeau Hotel",
+  "address": "11332 Main St",
+  "city": "Trempealeau",
+  "chain": false,
+  "match_names": [
+   "TREMPEALEAU HOTEL",
+   "THE TREMPEALEAU HOTEL",
+   "TREMPEALEAU HOTEL RESTAURANT",
+   "HISTORIC TREMPEALEAU HOTEL"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "historic",
+   "burgers",
+   "tavern"
+  ],
+  "iconic_reason": "Historic Mississippi River hotel, bar and restaurant in Trempealeau known as the home of the Walnut Burger and for outdoor summer concerts.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://trempealeauhotel.com/",
+   "https://trempealeauhotel.com/about/",
+   "https://trempealeauhotel.com/press-releases/"
+  ],
+  "open_evidence": "https://trempealeauhotel.com/ - official site lists upcoming live music (Sept 27 and Oct 17) and noted its winter break ended Friday, Feb 13 (a Friday in 2026) (fetched Sept 2026)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year not confirmed: the hotel's site says patrons have lined up at its bar 'just like they did in 1888'; the building is commonly said to date to 1871 but I did not find a source. 'Home of the famous Walnut Burger' per the hotel's press page. Seasonal hours; closes for a winter break."
+ },
+ {
+  "name": "Pete's Hamburger Stand",
+  "address": "118 W Blackhawk Ave",
+  "city": "Prairie du Chien",
+  "chain": false,
+  "match_names": [
+   "PETE'S HAMBURGER STAND",
+   "PETES HAMBURGER STAND",
+   "PETE'S HAMBURGERS",
+   "PETE'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured on Travel Channel's Burger Land with George Motz (2012)"
+  ],
+  "tags": [
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Seasonal walk-up stand in Prairie du Chien selling hamburgers cooked with onions since 1909.",
+  "founded": 1909,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://peteshamburgers.com/",
+   "https://peteshamburgers.com/petes-hamburger-stand-featured-on-premier-episode-of-george-motzs-new-tv-show-burger-land/"
+  ],
+  "open_evidence": "https://peteshamburgers.com/ - official site currently says 'OPEN for the season' with Fri-Sun 11am-7pm hours (fetched Sept 2026); latest dated post is the 2024 season update (115th season opened May 3, 2024). No 2025-2026 dated item found.",
+  "founded_source": "https://peteshamburgers.com/",
+  "closed_reason": null,
+  "notes": "Seasonal (spring to fall, weekends). Open status rests on the site's current banner plus Overture Sept 2026 map data; no 2025-2026 dated news found (web search budget exhausted). Burger Land episode aired Sept 2, 2012 per Pete's site. Credit card surcharge noted on site."
+ },
+ {
+  "name": "Mint Cafe",
+  "address": "422 N 3rd St",
+  "city": "Wausau",
+  "chain": false,
+  "match_names": [
+   "MINT CAFE",
+   "THE MINT CAFE",
+   "MINT CAFÉ",
+   "THE MINT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "diner",
+   "historic"
+  ],
+  "iconic_reason": "Downtown Wausau cafe that traces its roots to an 1888 Third Street saloon and has served diner meals at its current spot since 1940.",
+  "founded": 1888,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "http://www.mintcafewausau.com/"
+  ],
+  "open_evidence": "http://www.mintcafewausau.com/ - official site lists current hours (Mon-Fri 6:30am-8pm, Sat 7am-3pm) and catering (fetched Sept 2026); no dated 2025-2026 item found",
+  "founded_source": "http://www.mintcafewausau.com/",
+  "closed_reason": null,
+  "notes": "Founding per the cafe's own history: predecessor saloon opened 1888; became The Mint (soft drinks, cigars) during Prohibition under Fred Brand; moved to present downtown location in 1940. Owners Joe and Sherry Schulz. Only the business's own site checked; no independent source (search budget exhausted)."
+ },
+ {
+  "name": "Quivey's Grove",
+  "address": "6261 Nesbitt Rd",
+  "city": "Fitchburg",
+  "chain": false,
+  "match_names": [
+   "QUIVEY'S GROVE",
+   "QUIVEYS GROVE",
+   "QUIVEY'S GROVE STONE HOUSE",
+   "QUIVEY'S GROVE STABLE GRILL"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "historic"
+  ],
+  "iconic_reason": "Restaurant opened in 1980 in an 1855 stone mansion and stable south of Madison, serving Wisconsin dishes in two dining rooms.",
+  "founded": 1980,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "http://www.quiveysgrove.com/",
+   "https://madison.citycast.fm/food-drink/historic-madison-restaurants"
+  ],
+  "open_evidence": "http://www.quiveysgrove.com/ - official site lists current Stone House and Stable Grill hours and says 'Forty-five years later' since its May 23, 1980 opening (i.e. text current as of 2025) (fetched Sept 2026)",
+  "founded_source": "http://www.quiveysgrove.com/",
+  "closed_reason": null,
+  "notes": "Opened May 23, 1980 by Joe Garton in the John Mann house and stable (built 1855). City Cast Madison (Jan 2026) lists it with 1979 (when Garton found the property); using the restaurant's stated 1980 opening. Price tier estimated."
+ },
+ {
+  "name": "Ratskeller Restaurant at Turner Hall",
+  "address": "1217 17th Ave",
+  "city": "Monroe",
+  "chain": false,
+  "match_names": [
+   "RATSKELLER RESTAURANT",
+   "TURNER HALL OF MONROE",
+   "TURNER HALL RATSKELLER",
+   "RATSKELLER",
+   "TURNER HALL"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "swiss",
+   "historic"
+  ],
+  "iconic_reason": "Old World-style restaurant in the basement of Monroe's Turner Hall, a Swiss heritage society hall whose organization dates to 1868.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.turnerhallofmonroe.org/ratskeller.html",
+   "http://www.TurnerHallofMonroe.org/"
+  ],
+  "open_evidence": "https://www.turnerhallofmonroe.org/ratskeller.html - official page says the Ratskeller is 'currently open Friday and Saturday evenings only, 4:30 pm - 8:00/close' (undated, fetched Sept 2026)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Turner Hall of Monroe (non-profit Swiss heritage center) was established 1868 and says its building is on the National and State Registers of Historic Places (self-reported, not verified). The Ratskeller's own opening year is unknown, so founded is null. Limited hours (Fri-Sat evenings only)."
+ },
+ {
+  "name": "Fosdal Home Bakery",
+  "address": "243 E Main St",
+  "city": "Stoughton",
+  "chain": false,
+  "match_names": [
+   "FOSDAL HOME BAKERY",
+   "FOSDAL BAKERY",
+   "FOSDAL'S BAKERY",
+   "FOSDALS HOME BAKERY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bakery",
+   "scandinavian",
+   "kringle",
+   "historic"
+  ],
+  "iconic_reason": "Downtown Stoughton bakery run under the Fosdal name since 1939, known for donuts and Norwegian baked goods.",
+  "founded": 1939,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://fosdalhomebakery.net/about-us/",
+   "https://fosdalhomebakery.net/"
+  ],
+  "open_evidence": "https://fosdalhomebakery.net/ - official site lists current hours (Tue-Sat 5:30am-5pm, Sun 7am-noon) (undated, fetched Sept 2026); Overture Sept 2026 map data lists it open. No dated 2025-2026 article found.",
+  "founded_source": "https://fosdalhomebakery.net/about-us/",
+  "closed_reason": null,
+  "notes": "Olav and Mildred Fosdal bought Hans Romnes's Home Bakery in 1939 (the bakery itself predates that; founded year uses the Fosdal purchase). Gerry and Bev Fosdal ran it from 1976; Joseph Crubaugh bought it in 2005. Self-reported awards (not verified, so not in other_honors): Wisconsin Bakers Association Bakery Operation of the Year 2014, Madison Magazine Best of the Burbs Bakery 2015-2016, '2018 Sweetest Bakery in Wisconsin'. Kringle is on its product list per site."
+ }
+]

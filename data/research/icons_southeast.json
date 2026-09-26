@@ -1,0 +1,2950 @@
+[
+ {
+  "name": "Kopp's Frozen Custard",
+  "address": "7631 W Layton Ave",
+  "city": "Greenfield",
+  "chain": false,
+  "match_names": [
+   "KOPP'S FROZEN CUSTARD",
+   "KOPPS FROZEN CUSTARD",
+   "KOPP'S",
+   "KOPPS",
+   "KOPP'S FROZEN CUSTARD - GREENFIELD"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "frozen custard",
+   "burgers"
+  ],
+  "iconic_reason": "Frozen custard and jumbo burger stand founded by Elsa Kopp in 1950 that is credited with being the first custard stand to offer a daily 'flavor of the day'.",
+  "founded": 1950,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://kopps.com/",
+   "https://kopps.com/about",
+   "https://en.wikipedia.org/wiki/Kopp%27s_Frozen_Custard",
+   "https://www.fox6now.com/news/75th-anniversary-kopps-frozen-custard-delicious-reasons-celebrate"
+  ],
+  "open_evidence": "https://kopps.com/ - official site lists current hours for all three stands and shows \"Today's Flavors - September 25, 2026\" (checked 2026-09-25); https://www.fox6now.com/news/75th-anniversary-kopps-frozen-custard-delicious-reasons-celebrate - FOX6 75th-anniversary segment filmed at the Glendale stand (2025-01-09)",
+  "founded_source": "https://kopps.com/about",
+  "closed_reason": null,
+  "notes": "Founded 1950 by Elsa Kopp at 6005 W Appleton Ave, Milwaukee; that original stand is long gone (site now another business per Wikipedia), so no surviving 'original' location. Greenfield (7631 W Layton Ave) is the company headquarters per Wikipedia and is used as flagship per task; the year the Greenfield stand opened is unverified (an unsourced search summary said mid-1960s). Other current stands: 18880 W Bluemound Rd, Brookfield and 5373 N Port Washington Rd, Glendale. Per Wikipedia, Karl Kopp (Elsa's son) owns Greenfield and Glendale; Brookfield is owned by Mac McGuire. 'First flavor of the day' claim comes from Wikipedia/kopps.com. price_tier left null: no prices found on current online menu (almost certainly tier 1). Overture Sept-2026 extract lists all three stands as open."
+ },
+ {
+  "name": "Leon's Frozen Custard",
+  "address": "3131 S 27th St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "LEON'S FROZEN CUSTARD",
+   "LEONS FROZEN CUSTARD",
+   "LEON'S FROZEN CUSTARD DRIVE-IN",
+   "LEON'S CUSTARD",
+   "LEON'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "frozen custard",
+   "drive-in"
+  ],
+  "iconic_reason": "Family-owned frozen custard drive-in on S 27th St opened by Leon Schneider in 1942 and remodeled in the early 1950s into its current form.",
+  "founded": 1942,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Leon%27s_Frozen_Custard",
+   "https://urbanmilwaukee.com/business/leons-frozen-custard/",
+   "https://www.travelwisconsin.com/food-drink/sweets-treats/leon-s-frozen-custard-milwaukee",
+   "https://www.wisn.com/article/show-me-milwaukee-spotlight-leons-frozen-custard/43780320",
+   "https://www.milwaukeemag.com/LeonsFrozenCustard/",
+   "http://custardmke.com/",
+   "https://urbanmilwaukee.com/2025/10/31/new-boba-cafe-opens/"
+  ],
+  "open_evidence": "Indirect only: Yelp listing titled 'LEON'S FROZEN CUSTARD - Updated September 2026 - 684 Reviews' at 3131 S 27th St, not marked closed (seen in search results 2026-09; page itself blocked); Travel Wisconsin listing current (undated); Custard MKE flavor tracker lists Leon's in its current directory (checked 2026-09-25); Overture Sept-2026 extract lists it open. No 2025-2026 news article or official-site page was reachable. Also: https://urbanmilwaukee.com/2025/10/31/new-boba-cafe-opens/ (Oct 31, 2025) refers to the new cafe's location 'near Leon's Frozen Custard' in the present tense; Urban Milwaukee's business directory lists Leon's as open (checked 2026-09-25).",
+  "founded_source": "https://www.wisn.com/article/show-me-milwaukee-spotlight-leons-frozen-custard/43780320",
+  "closed_reason": null,
+  "notes": "WISN (2023-05-03) says Leon Schneider opened it May 1, 1942 and son Ron Schneider took over; Wikipedia and Travel Wisconsin also give 1942. The previously listed site leonsfrozencustard.us now redirects to an unrelated domain (possibly lapsed/hijacked) - do not use it as the official URL. Leon's is not the same business as Leon's Frozen Custard in Oshkosh (121 W Murdock Ave). Serves loose-meat sandwiches rather than hamburgers (Milwaukee Magazine 2011). Mazo's Hamburgers (closed 2024) was across the street at 3146 S 27th St. price_tier null (only 2011 prices found). Open status is very likely true but rests on indirect evidence."
+ },
+ {
+  "name": "Gilles Frozen Custard",
+  "address": "7515 W Bluemound Rd",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "GILLES FROZEN CUSTARD",
+   "GILLES CUSTARD",
+   "GILLES",
+   "GILLE'S FROZEN CUSTARD"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "frozen custard"
+  ],
+  "iconic_reason": "Frozen custard stand on W Bluemound Rd started by Paul Gilles in 1938 and still at its original site, the oldest custard stand in Milwaukee.",
+  "founded": 1938,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.gillesfrozencustard.com/",
+   "https://www.gillesfrozencustard.com/flavor-of-the-day",
+   "https://www.gillesfrozencustard.com/monthly-specials",
+   "https://en.wikipedia.org/wiki/Gilles_Frozen_Custard",
+   "https://en.wikipedia.org/wiki/List_of_frozen_custard_companies"
+  ],
+  "open_evidence": "https://www.gillesfrozencustard.com/flavor-of-the-day - flavor calendar image is the September 2026 calendar (file 26-09-FOD-Caledar.png); home page shows 'Willy Linscott Current Owner 2026' and (c) 2026; monthly-specials page shows September specials (checked 2026-09-25)",
+  "founded_source": "https://www.gillesfrozencustard.com/",
+  "closed_reason": null,
+  "notes": "Official site: 'Started by Paul Gilles in 1938... carried forward by three generations of the Linscott family'; current owner Willy Linscott. Site calls it 'Wisconsin's Oldest Frozen Custard Stand' (self-claim); Wikipedia says oldest in Milwaukee and still at its original location. Postal address is Milwaukee WI 53213 (near the Wauwatosa line). Wikipedia: in 1972 Paul Gilles sold the rights to manufacture/distribute the packaged custard; grocery version is made by Schoep's of Madison - separate from the stand. A different 'Gilles Frozen Custard' at 819 S Main St, Fond du Lac appears in Overture; relationship not checked. price_tier null (no prices found online)."
+ },
+ {
+  "name": "Oscar's Frozen Custard",
+  "address": "2362 S 108th St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "OSCAR'S FROZEN CUSTARD",
+   "OSCARS FROZEN CUSTARD",
+   "OSCAR'S FROZEN CUSTARD & SANDWICHES",
+   "OSCAR'S CUSTARD",
+   "OSCAR'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "frozen custard",
+   "burgers"
+  ],
+  "iconic_reason": "Frozen custard and burger stand on S 108th St in the West Allis area, with additional stands in Franklin and Waukesha.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.oscarscustard.com/",
+   "https://www.oscarscustard.com/flavors",
+   "https://www.oscarscustard.com/menu/",
+   "https://en.wikipedia.org/wiki/Frozen_custard"
+  ],
+  "open_evidence": "https://www.oscarscustard.com/flavors - 'SEPTEMBER FLAVORS' calendar running Tue Sept 1 - Wed Sept 30 (matches 2026), page modified 2026-09-01 per site JSON; home page (c) 2026 with ribbon-cutting announcement for the rebuilt Waukesha/Brookfield store (photo uploaded 2026-05) (checked 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "FOUNDING YEAR NOT VERIFIED: the official site gives no founding year and no reliable source was found before the search budget ran out; may be post-1980 - verify before ranking on longevity. If founded after 1980, the case for keeping it rests on Wikipedia's Frozen custard article naming it (uncited) in a 'long-standing four-way competition' with Kopp's, Gilles and Leon's; its presence in Journal Sentinel/OnMilwaukee/Milwaukee Magazine roundups was not checked. The site labels 2362 S 108th St as 'West Allis', but the postal address is Milwaukee WI 53227. Other locations: 7041 S 27th St, Franklin; 21165 E Moreland Blvd, Waukesha (rebuilt, reopened around May 2026). price_tier 1 from current online menu (Oscar Burger 1/4 lb $4.59, 1/2 lb $6.29)."
+ },
+ {
+  "name": "Solly's Grille",
+  "address": "4629 N Port Washington Rd",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "SOLLY'S GRILLE",
+   "SOLLYS GRILLE",
+   "SOLLY'S GRILL",
+   "SOLLY'S",
+   "SOLLY'S COFFEE SHOP",
+   "SOLLY'S BUTTER BURGERS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "America's Classics 2022"
+  ],
+  "other_honors": [],
+  "tags": [
+   "butter burger",
+   "burgers",
+   "diner"
+  ],
+  "iconic_reason": "Butter burger counter opened in 1936 as Solly's Coffee Shop by Kenneth 'Solly' Salmon, credited with helping introduce Wisconsin's butter burger.",
+  "founded": 1936,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.sollysbutterburgers.com/",
+   "https://www.sollysbutterburgers.com/about",
+   "https://www.sollysbutterburgers.com/menu",
+   "https://www.sollysbutterburgers.com/press",
+   "https://en.wikipedia.org/wiki/Solly%27s_Grille",
+   "https://urbanmilwaukee.com/2022/02/18/sollys-grille-wins-james-beard-award/",
+   "https://urbanmilwaukee.com/business/sollys-grille/",
+   "https://en.wikipedia.org/wiki/Butter_burger"
+  ],
+  "open_evidence": "https://www.sollysbutterburgers.com/ - official site lists current hours (Tue-Thu 10:30-7, Fri-Sat 7-7, closed Sun-Mon); its embedded location data was updated 2025-04-22 and a catering link added 2025-07-26 (checked 2026-09-25); Overture Sept-2026 extract lists it open at the same address. No 2025-2026 news article found.",
+  "founded_source": "https://www.sollysbutterburgers.com/about",
+  "closed_reason": null,
+  "notes": "Move check: no relocation found. Wikipedia: 'in its current location since 1971'; official site, Urban Milwaukee and Overture all give 4629 N Port Washington Rd. Physically in Glendale; the postal address used by the site is Milwaukee WI 53212, hence city 'Milwaukee'. Glenn Fieber bought it from his mother in 1993 and renamed it Solly's Grille (Urban Milwaukee 2022). JBF America's Classics 2022 verified via Urban Milwaukee (2022-02-18) and Wikipedia. Official press page lists features on Food Network and Travel Channel (Anthony Bourdain quote) with no years, so they were not put in other_honors. price_tier 1 inferred: largest burger (2/3 lb Big Boy) is $15.00; other prices not shown."
+ },
+ {
+  "name": "Mazos Hamburgers",
+  "address": "3146 S 27th St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "MAZOS HAMBURGERS",
+   "MAZO'S HAMBURGERS",
+   "MAZOS",
+   "MAZO'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "burgers",
+   "diner",
+   "butter burger"
+  ],
+  "iconic_reason": "Family-run hamburger diner on S 27th St that served burgers from 1934 until closing in 2024.",
+  "founded": 1934,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://urbanmilwaukee.com/2024/09/24/mazos-hamburgers-is-closed/",
+   "https://urbanmilwaukee.com/2017/09/20/dining-mazos-is-a-tasty-time-warp/",
+   "https://urbanmilwaukee.com/business/mazos-hamburgers/",
+   "https://urbanmilwaukee.com/building/3146-s-27th-st/"
+  ],
+  "open_evidence": "No evidence of operation after September 2024; Urban Milwaukee business and building pages (checked 2026-09-25) list it as closed in 2024 with no later reopening or new tenant.",
+  "founded_source": "https://urbanmilwaukee.com/2017/09/20/dining-mazos-is-a-tasty-time-warp/",
+  "closed_reason": "Closed in September 2024 after about 90 years; the family said 'Due to the health and well-being needs of our family, we are unable to continue' (Urban Milwaukee, 2024-09-24, https://urbanmilwaukee.com/2024/09/24/mazos-hamburgers-is-closed/).",
+  "notes": "Business spells its name 'Mazos' (no apostrophe). Third-generation family operation (Nick, June, Jackie Mazos and Jack Obarski at closing). The old site mazoshamburgers.com is still up with hours (expired SSL certificate) and the Overture Sept-2026 extract still shows it 'open' - both are stale. 'Butter burger' tag: Urban Milwaukee 2017 says burgers came 'with a dollop of butter'. Exact last day of service not found."
+ },
+ {
+  "name": "Nite Owl Drive-In",
+  "address": "830 E Layton Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "NITE OWL DRIVE-IN",
+   "NITE OWL DRIVE IN",
+   "NITE OWL",
+   "THE NITE OWL",
+   "NITE OWL ICE CREAM PARLOUR & SANDWICH SHOPPE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "drive-in",
+   "burgers",
+   "ice cream"
+  ],
+  "iconic_reason": "Seasonal, cash-only burger and ice cream drive-in on E Layton Ave open since 1948 and run by the third generation of its family.",
+  "founded": 1948,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://urbanmilwaukee.com/2026/03/24/gallery-scenes-from-nite-owls-opening-day/",
+   "https://urbanmilwaukee.com/business/nite-owl/",
+   "https://urbanmilwaukee.com/2021/02/02/milwaukee-featured-in-super-bowl-ad/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/03/24/gallery-scenes-from-nite-owls-opening-day/ - photo gallery of the drive-in's 2026 season opening day, hours Tue-Sat 11 a.m.-3 p.m. (2026-03-24)",
+  "founded_source": "https://urbanmilwaukee.com/2026/03/24/gallery-scenes-from-nite-owls-opening-day/",
+  "closed_reason": null,
+  "notes": "Seasonal (opens in spring; closing month not verified). Cash only. Owner Chris Roepke (third generation) per Urban Milwaukee 2026. The drive-in was a filming location for an NFL Super Bowl Vince Lombardi tribute ad (Urban Milwaukee 2021-02-02) - not listed as an honor. No official website found (the web URL in Overture redirects to a generic directory). Near Milwaukee Mitchell airport. price_tier null (no current prices found)."
+ },
+ {
+  "name": "Kitt's Frozen Custard",
+  "address": "7000 W Capitol Dr",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "KITT'S FROZEN CUSTARD",
+   "KITTS FROZEN CUSTARD",
+   "KITT'S CUSTARD",
+   "KITT'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "frozen custard",
+   "butter burger",
+   "burgers"
+  ],
+  "iconic_reason": "Frozen custard and burger stand on W Capitol Dr founded in the early 1950s by Harry Kittredge and his son John.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.kittsfrozencustard.com/",
+   "https://urbanmilwaukee.com/2023/02/06/the-return-of-kitts-custard/",
+   "https://urbanmilwaukee.com/business/kitts-frozen-custard/",
+   "https://urbanmilwaukee.com/2026/05/06/milwaukee-woman-charged-with-defrauding-state-of-2-2-million/"
+  ],
+  "open_evidence": "https://www.kittsfrozencustard.com/ - official site with online ordering (hours 11:00 AM-9:40 PM), (c) 2025, page built/published 2025-08-22 per page metadata (checked 2026-09-25); Overture Sept-2026 extract lists it open. No 2026 evidence of day-to-day operation found.",
+  "founded_source": "https://urbanmilwaukee.com/2023/02/06/the-return-of-kitts-custard/",
+  "closed_reason": null,
+  "notes": "Founding year only 'early 1950s' (Urban Milwaukee 2023); the official site says 'over 75 years', so founded left null. Closed for several months in 2022 and reopened January 2023 under Ahmad Atrash (bought June 2022) with renovations. Urban Milwaukee 2026-05-06: Debbie Long, charged with defrauding the state of $2.2 million, allegedly used PPP and Medicaid funds 'to buy Kitt's Frozen Custard'; the article does not say when she bought it or whether the stand is affected. Ownership after 2023 is unclear. Treat open status as moderately confident. price_tier null."
+ },
+ {
+  "name": "Real Chili",
+  "address": "1625 W Wells St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "REAL CHILI",
+   "REAL CHILI RESTAURANT",
+   "REAL CHILI MARQUETTE",
+   "REAL CHILI W WELLS ST AT MARQUETTE",
+   "REAL CHILI E WELLS ST AT CATHEDRAL SQUARE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "chili",
+   "historic"
+  ],
+  "iconic_reason": "Counter-service chili parlor near Marquette University serving the same Green Bay-derived chili recipe since Francis Honish opened it in 1931.",
+  "founded": 1931,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://realchilimilwaukee.com/milwaukee-real-chili-our-story",
+   "https://realchilimilwaukee.com/",
+   "https://realchilimilwaukee.com/milwaukee-real-chili-food-menu",
+   "https://urbanmilwaukee.com/2026/07/11/dining-real-chili-is-the-real-deal/",
+   "https://urbanmilwaukee.com/business/real-chili-marquette-campus/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/07/11/dining-real-chili-is-the-real-deal/ - Urban Milwaukee dining review (July 11, 2026) of the operating 419 E Wells St location, stating the original Marquette-campus location at 1625 W Wells St is still cooking; official site lists current hours for both locations (checked 2026-09-25).",
+  "founded_source": "https://realchilimilwaukee.com/milwaukee-real-chili-our-story",
+  "closed_reason": null,
+  "notes": "Two locations, both listed with hours on the official site: 1625 W Wells St (Marquette campus; described by Urban Milwaukee 2026 as the original home) and 419 E Wells St (downtown/Cathedral Square, opened 1975 per Urban Milwaukee). Whether 1625 W Wells is the exact 1931 building is not independently confirmed; the official 'our story' page describes the start as a nine-stool bar top near Marquette. Owner since 2007: Steve Kastelic (per official site). Listed on tvfoodies as featured on Food Network's 'The Best Thing I Ever Ate' but episode/year not verified, so not included in honors. Price tier 1 from official online menu (bowls $9-15 dine-in, hot dogs $5-5.50; checked 2026-09-25)."
+ },
+ {
+  "name": "George Webb",
+  "address": "6181 S Howell Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "GEORGE WEBB",
+   "GEORGE WEBB RESTAURANT",
+   "GEORGE WEBB RESTAURANTS",
+   "GEORGE WEBBS",
+   "GEORGE WEBB'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "diner",
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Wisconsin-only chain of counter-service diners dating to George Webb's 1948 Milwaukee hamburger parlor, known for its two clocks and its free-burger promise tied to a 12-game Brewers winning streak.",
+  "founded": 1948,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://georgewebb.com/about/history",
+   "https://en.wikipedia.org/wiki/George_Webb_Restaurants",
+   "https://urbanmilwaukee.com/2025/08/20/photo-gallery-thousands-line-up-for-free-burgers-at-george-webb-diners/",
+   "https://africa.espn.com/mlb/story/_/id/45977718/restaurant-make-good-brewers-burger-promotion-wed",
+   "https://urbanmilwaukee.com/2025/02/25/george-webb-on-east-side-closed/",
+   "https://shepherdexpress.com/culture/milwaukee-history/george-webb-milwaukees-hamburger-king/",
+   "https://urbanmilwaukee.com/business/george-webb-restaurants/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2025/08/20/photo-gallery-thousands-line-up-for-free-burgers-at-george-webb-diners/ - Aug 20, 2025 photo gallery of the free-burger giveaway at the 6181 S Howell Ave location, which it says was one of 24 Wisconsin George Webb restaurants; ESPN (Aug 2025) says 23 Wisconsin locations took part in the 2025 giveaway.",
+  "founded_source": "https://georgewebb.com/about/history",
+  "closed_reason": null,
+  "notes": "Small Wisconsin-only chain/franchise system (about 22-24 locations in 2025 per Urban Milwaukee/ESPN; Wikipedia says 31), so chain=false per task instructions. ORIGINAL location (opened May 1948 at E Ogden Ave & N Van Buren St, Milwaukee) is no longer a George Webb; when it closed was not found. The OLDEST SURVIVING location could not be identified from any source; 6181 S Howell Ave is used only because it is a verified-open location in a dated Aug 2025 source, not because it is the oldest. Other locations include downtown Milwaukee at 812 N Old World 3rd St (now listed in map data as 812 N Dr. M.L.K. Jr Dr), Brookfield, Franklin, Germantown, Greenfield, Hales Corners, New Berlin, Oconomowoc, Racine/Caledonia, Waukesha, Wauwatosa, West Allis, West Bend, Kenosha. The 2935 N Oakland Ave (East Side) location closed Feb 2025 (Urban Milwaukee, WISN). Founding-year disagreement: company says 1948; Shepherd Express (Feb 2023) says Webb bought his first small restaurant at 27th & Clybourn in 1927, and an Aug 14, 2025 Urban Milwaukee piece (paywalled) is subtitled 'Restaurant is much older ... than previously described'; kept the company's 1948. Brewers promotion paid out Aug 2025 (free burgers Aug 2025) and April 1987. Ownership: Philip Anderson (company)."
+ },
+ {
+  "name": "Ma Fischer's",
+  "address": "2214 N Farwell Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "MA FISCHER'S",
+   "MA FISCHERS",
+   "MA FISCHER'S RESTAURANT",
+   "MA FISCHER'S DINER",
+   "MA FISCHER'S FAMILY RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "diner",
+   "historic"
+  ],
+  "iconic_reason": "East Side diner on Farwell Avenue run by the Panos family since 1975, tracing its roots to Jackie 'Ma' Fischer's sandwich shop of 1932 and long known as a 24-hour spot.",
+  "founded": 1932,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.mafischers.com/about.html",
+   "http://www.mafischers.com/",
+   "https://urbanmilwaukee.com/2026/04/15/where-to-eat-and-drink-during-the-milwaukee-film-festival/",
+   "https://urbanmilwaukee.com/2025/09/21/now-serving-we-tried-two-surplus-food-apps/",
+   "https://urbanmilwaukee.com/business/ma-fischers/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/04/15/where-to-eat-and-drink-during-the-milwaukee-film-festival/ - Apr 15, 2026 Urban Milwaukee East Side dining guide lists Ma Fischer's as an old-school diner that now closes daily at 9 p.m.; also named in a Sep 21, 2025 Urban Milwaukee article on the Too Good To Go app.",
+  "founded_source": "http://www.mafischers.com/about.html",
+  "closed_reason": null,
+  "notes": "1932 is the start of Jackie 'Ma' Fischer's business ('Fischer's Sandwich') per the official site; whether that business was at 2214 N Farwell from 1932 is not stated, and no independent source for 1932 was found. George Panos bought it in spring 1975; now run by son Peter Panos. Historically 24/7, but Urban Milwaukee (Apr 2026) says it now closes at 9 p.m.; official site shows 'Open 7am-9pm'. Price tier null: prices not visible on official menu page."
+ },
+ {
+  "name": "Mr. Perkins' Family Restaurant",
+  "address": "2001 W Atkinson Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "MR. PERKINS' FAMILY RESTAURANT",
+   "MR PERKINS FAMILY RESTAURANT",
+   "MR. PERKINS",
+   "MR PERKINS",
+   "MR. PERKINS FAMILY RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "soul food",
+   "historic"
+  ],
+  "iconic_reason": "Family-owned soul food restaurant on W Atkinson Ave, listed as opening in 1969 and run by the Perkins family.",
+  "founded": 1969,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://urbanmilwaukee.com/business/perkins-family-restaurant/",
+   "https://urbanmilwaukee.com/2026/03/29/local-influencers-talk-up-milwaukees-food-scene/",
+   "https://urbanmilwaukee.com/2021/04/12/dining-its-black-restaurant-week/",
+   "https://urbanmilwaukee.com/2020/05/15/add-black-owned-restaurants-to-your-takeout-list/",
+   "https://www.milwaukeemag.com/rest_directory/listing/mr-perkins-family-restaurant/"
+  ],
+  "open_evidence": "No direct 2025-2026 proof of operation found. Indirect only: https://urbanmilwaukee.com/2026/03/29/local-influencers-talk-up-milwaukees-food-scene/ (Mar 29, 2026) says influencer Derek Mosley 'initially spotlighted staples like Mr. Perkins' Family Restaurant, 2001 W. Atkinson Ave.' but does not say whether it is open now; Urban Milwaukee's business directory does not mark it closed (it does mark other businesses 'permanently closed'); Milwaukee Magazine's undated directory lists it; Overture Sept-2026 extract shows status open.",
+  "founded_source": "https://urbanmilwaukee.com/business/perkins-family-restaurant/",
+  "closed_reason": null,
+  "notes": "open=null because no dated 2025-2026 source confirms it is operating; the session's web-search budget ran out before this could be settled, so it needs a follow-up check (e.g., official Facebook page or a 2025-26 news item). Founding year 1969 comes from a single source (Urban Milwaukee business directory 'Opening Year'); not confirmed elsewhere. Owners listed by Urban Milwaukee: Willie Perkins Sr. and family (Cherry Welch-Perkins, Hilda Perkins, Willie C. Perkins Jr.). It took part in Milwaukee Black Restaurant Week (2017, 2021). No official website found; Facebook page exists (facebook.com/Mr-Perkins-Family-Restaurant-150255655134828) but could not be read. Price tier null (Milwaukee Magazine directory shows $$, but no menu was seen)."
+ },
+ {
+  "name": "Speed Queen Bar-B-Q",
+  "address": "1130 W Walnut St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "SPEED QUEEN BAR-B-Q",
+   "SPEED QUEEN BBQ",
+   "SPEEDQUEEN BAR-B-Q",
+   "SPEED QUEEN BAR-B-QUE",
+   "SPEED QUEEN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bbq",
+   "historic"
+  ],
+  "iconic_reason": "Barbecue restaurant founded in 1956 by Betty Gillespie and Leonard Partee, at 12th and Walnut since 1975 and still run by the Gillespie family.",
+  "founded": 1956,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://speedqueenbbq.com/",
+   "https://speedqueenbbq.com/about-us/",
+   "https://urbanmilwaukee.com/2026/07/12/now-serving-milwaukees-oldest-bbq-joint-speed-queen-turns-70/",
+   "https://urbanmilwaukee.com/business/speed-queen-bbq/",
+   "https://speedqueenbarbq.orderexperience.net/65086eee060a03b1bd05f3b3/menu"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/07/12/now-serving-milwaukees-oldest-bbq-joint-speed-queen-turns-70/ - Urban Milwaukee (July 12, 2026) on the restaurant's 70th anniversary, with current hours and owner Giovanni Gillespie; official site shows (c) 2026 and live online ordering at 1130 W Walnut St (checked 2026-09-25).",
+  "founded_source": "https://speedqueenbbq.com/about-us/",
+  "closed_reason": null,
+  "notes": "Per the official site, it began in summer 1956 in a storefront in the old hay market at 5th & Vliet, moved to 12th & Vine, then settled at 12th & Walnut in 1975. Urban Milwaukee's older directory entry gives '1135 W. Walnut Ave.'; the official site, online-ordering page and the 2026 article give 1130 W Walnut St (used). Urban Milwaukee's headline calls it 'Milwaukee's oldest BBQ joint' (the paper's own description, not an award). Current owner Giovanni Gillespie, son of founder Betty Gillespie (Urban Milwaukee 2026). Price tier 2 from online ordering menu (dinners $16.24-$24.13, checked 2026-09-25). No TV/award honors verified."
+ },
+ {
+  "name": "Jake's Deli",
+  "address": "1634 W North Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "JAKE'S DELI",
+   "JAKES DELI",
+   "JAKE'S DELICATESSEN",
+   "JAKE'S DELI MILWAUKEE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "deli",
+   "historic"
+  ],
+  "iconic_reason": "Corned beef and pastrami deli on W North Ave dating to 1955.",
+  "founded": 1955,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://urbanmilwaukee.com/business/jakes-deli/",
+   "https://urbanmilwaukee.com/2018/08/10/dining-changes-coming-to-jakes-deli/",
+   "https://urbanmilwaukee.com/2023/08/22/asian-grocery-store-and-deli-proposed-for-north-side/",
+   "https://www.milwaukeemag.com/rest_directory/listing/jakes-deli/"
+  ],
+  "open_evidence": "No 2025-2026 evidence found. Latest dated evidence: https://urbanmilwaukee.com/2023/08/22/asian-grocery-store-and-deli-proposed-for-north-side/ (Aug 22, 2023) says Jake's Deli operates at 1632-1634 W. North Ave. Overture Sept-2026 extract shows status open, but both website domains it has used (jakes-deli.com and jakesdelimke.com) now host unrelated gambling/spam pages (jakesdelimke.com already by Mar 2025 per Wayback), which is a warning sign.",
+  "founded_source": "https://urbanmilwaukee.com/business/jakes-deli/",
+  "closed_reason": null,
+  "notes": "open=null: current status could not be confirmed (the session's web-search budget ran out). Founding year 1955 from the Urban Milwaukee directory, matching the Aug 2018 article's quote about lasting 'another 63 years'. In Aug 2018 Edward DeShazer became managing partner and it was run by the Stand Eat Drink hospitality group (Urban Milwaukee). Building owned by Hilmi Shoubash's LLCs (2023). Map data also lists Jake's Deli at 275 W Wisconsin Ave (downtown) and 5300 S 76th St, Greendale; neither was checked. Milwaukee Magazine directory (undated) lists it as $, but no current menu was seen, so price tier is null."
+ },
+ {
+  "name": "Benji's Deli & Restaurant",
+  "address": "4156 N Oakland Ave",
+  "city": "Shorewood",
+  "chain": false,
+  "match_names": [
+   "BENJI'S DELI",
+   "BENJIS DELI",
+   "BENJI'S DELI & RESTAURANT",
+   "BENJI'S DELI AND RESTAURANT",
+   "BENJI'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "deli",
+   "historic"
+  ],
+  "iconic_reason": "Jewish-style deli known for hand-carved corned beef, serving the Milwaukee area since 1963, with locations in Shorewood and on Port Washington Road.",
+  "founded": 1963,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "http://www.benjisdeliandrestaurant.com/",
+   "http://www.benjisdeliandrestaurant.com/directions.html",
+   "http://www.benjisdeliandrestaurant.com/about-us.html",
+   "https://benjisdelishorewood.hrpos.heartland.us/menu",
+   "https://urbanmilwaukee.com/2018/01/16/dining-benjis-the-last-word-on-corned-beef/",
+   "https://urbanmilwaukee.com/business/benjis-deli/",
+   "https://shepherdexpress.com/locations/benji-s-deli-restaurant/"
+  ],
+  "open_evidence": "https://benjisdelishorewood.hrpos.heartland.us/menu - the Shorewood location's live online-ordering page (linked from the official site) was taking pickup orders for 'Today at 10:00 AM', Fri 9/25, with a full priced menu (checked 2026-09-25). No 2025-2026 news article was found.",
+  "founded_source": "http://www.benjisdeliandrestaurant.com/",
+  "closed_reason": null,
+  "notes": "1963 is the business's own 'Feeding Greater Milwaukee since 1963' claim, matched by Urban Milwaukee (Jan 2018: 'famous for corned beef since 1963'). The original 1963 location/founder is not stated anywhere I found; the Shorewood store is used as flagship only because the official site lists it first. Postal city for 53211 may also appear as Milwaukee. Second location: 8683 N Port Washington Rd (official site calls it Glendale, in River Point Shopping Center at Brown Deer Rd; Shepherd Express and map data call it Fox Point, 53217); its online-ordering page also exists. Current owners are brothers Chris and Mike (official site; surname not given). Official site says it was featured on John McGivern's 'Around the Corner' Shorewood episode (air year not given, so not listed as an honor). Price tier 2 from online menu (Reuben $18.69, burgers $16.49, fish fry $16.49; checked 2026-09-25)."
+ },
+ {
+  "name": "Pitch's Lounge & Restaurant",
+  "address": "1801 N Humboldt Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "PITCH'S LOUNGE & RESTAURANT",
+   "PITCH'S LOUNGE AND RESTAURANT",
+   "PITCHS LOUNGE AND RESTAURANT",
+   "PITCH'S",
+   "PITCH'S RIBS",
+   "PITCHS RIBS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bbq",
+   "historic"
+  ],
+  "iconic_reason": "Lower East Side restaurant and lounge founded by John Picciurro at 1801 N Humboldt Ave in 1942, known for barbecued baby back ribs with skillet hash browns and still run by the Picciurro family.",
+  "founded": 1942,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.pitchsribs.com/",
+   "https://www.pitchsribs.com/menu",
+   "https://urbanmilwaukee.com/2026/07/19/dining-miss-katies-diner-is-a-milwaukee-classic/",
+   "https://urbanmilwaukee.com/business/pitchs-lounge-and-restaurant/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/07/19/dining-miss-katies-diner-is-a-milwaukee-classic/ - Urban Milwaukee (July 19, 2026) says John Picciurro founded Pitch's at 1801 N Humboldt Ave in 1942 and 'Both restaurants remain in the Picciurro family'; official site lists current hours (Wed-Sun dinner, closed Mon-Tue).",
+  "founded_source": "https://urbanmilwaukee.com/2026/07/19/dining-miss-katies-diner-is-a-milwaukee-classic/",
+  "closed_reason": null,
+  "notes": "The 2026 article is a Miss Katie's Diner review and speaks of Pitch's in the present tense, not a dedicated visit; the official site shows (c) 2022, so evidence that it is open is moderate. Sister restaurant Miss Katie's Diner is run by the same family. The separate 'Pitch's Express' concession (opened 2009) is marked permanently closed by Urban Milwaukee; that is not the Humboldt Ave restaurant. Price tier 3 from the official menu (full slab ribs $30.95, steaks $36.95-41.95, most dinners $25-37); the menu is undated. No honors verified."
+ },
+ {
+  "name": "Mader's",
+  "address": "1041 N Old World 3rd St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "MADER'S",
+   "MADERS",
+   "MADER'S RESTAURANT",
+   "MADERS RESTAURANT",
+   "MADER'S GERMAN RESTAURANT",
+   "MADERS GERMAN RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "german",
+   "historic"
+  ],
+  "iconic_reason": "German restaurant started by Charles Mader in 1902, serving pork shank, sauerbraten and schnitzel in dining rooms decorated with suits of armor and German art.",
+  "founded": 1902,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://madersrestaurant.com/",
+   "https://madersrestaurant.com/pages/history-1",
+   "https://madersrestaurant.com/pages/dinner-menu",
+   "https://urbanmilwaukee.com/business/maders-restaurant/",
+   "https://www.yelp.com/biz/maders-milwaukee-3"
+  ],
+  "open_evidence": "https://madersrestaurant.com/ - official site shows current hours (Mon-Thu 11:30-9, Fri-Sat 11:30-10, Sun 11:30-8) and its online menu data (madersrestaurant.com/products.json) has dinner items created 2026-04-03 (checked 2026-09-25); Yelp listing titled 'Updated June 2026' is not marked closed",
+  "founded_source": "https://madersrestaurant.com/pages/history-1",
+  "closed_reason": null,
+  "notes": "Restaurant's own history: Charles Mader opened 'The Comfort' in 1902; Urban Milwaukee also says opened 1902. Original location and the year it moved to the current Old World 3rd St building not verified. Menu on official site shows no prices ($0.00 placeholders), so price_tier left null. Overture Sept-2026 lists it open at the same address."
+ },
+ {
+  "name": "Kegel's Inn",
+  "address": "5901 W National Ave",
+  "city": "West Allis",
+  "chain": false,
+  "match_names": [
+   "KEGEL'S INN",
+   "KEGELS INN",
+   "KEGEL'S",
+   "KEGEL'S INN & BEER GARDEN",
+   "KEGELS INN BEER GARDEN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "german",
+   "fish fry",
+   "historic",
+   "tavern"
+  ],
+  "iconic_reason": "Kegel family German restaurant and beer garden in West Allis that began as the Prohibition-era 'Kegel's Place' in December 1924 and reopened as Kegel's Inn in 1933 with painted wall murals.",
+  "founded": 1924,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.kegelsinn100.com/history",
+   "https://www.kegelsinn100.com/",
+   "https://www.kegelsinn100.com/all100events",
+   "https://urbanmilwaukee.com/business/kegels-inn/",
+   "https://kegelsinn.com/"
+  ],
+  "open_evidence": "https://www.kegelsinn100.com/all100events - the restaurant's centennial events calendar lists events at the inn into 2025 (e.g. Bock Fest Block Party Apr 23-26, 2025; comedy night Apr 24, 2025); https://www.kegelsinn100.com/ shows current hours Tue-Sat (checked 2026-09-25)",
+  "founded_source": "https://www.kegelsinn100.com/history",
+  "closed_reason": null,
+  "notes": "History page: John & Anna Kegel opened 'Kegel's Place' in Dec 1924 (a soft-drink parlor that sold home-brewed beer during Prohibition); renamed Kegel's Inn when it reopened Aug 26, 1933; murals by Peter Gries. Third generation (Rob & Jim Kegel) is handing off to the fourth. Centennial party held Dec 7, 2024. Main site kegelsinn.com blocked automated fetch (403), so details come from the restaurant's kegelsinn100.com site. Restaurant lists its postal address as 'Milwaukee, WI 53214'; Urban Milwaukee and Overture place it in West Allis. Price tier not determined (no menu prices retrieved)."
+ },
+ {
+  "name": "Jack Pandl's Whitefish Bay Inn",
+  "address": "1319 E Henry Clay St",
+  "city": "Whitefish Bay",
+  "chain": false,
+  "match_names": [
+   "JACK PANDL'S WHITEFISH BAY INN",
+   "JACK PANDLS WHITEFISH BAY INN",
+   "JACK PANDL'S",
+   "JACK PANDLS",
+   "PANDL'S WHITEFISH BAY INN",
+   "WHITEFISH BAY INN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "german",
+   "fish fry",
+   "historic"
+  ],
+  "iconic_reason": "Pandl family restaurant at Lake Dr and Henry Clay St since 1915, known for its German pancake, broiled whitefish and Friday fish fry.",
+  "founded": 1915,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://www.jackpandls.com/",
+   "https://jackpandls.com/milwaukee-whitefish-bay-jack-pandl-s-whitefish-bay-inn-food-menu",
+   "https://www.milwaukeemag.com/jack-pandls-whitefish-bay-inn-ann-pandl-elaine-pandl-george-pandl-jack-pandl-john-pandl-ryan-pandl-milwaukee/",
+   "https://www.tmj4.com/news/milwaukee-tonight/were-open-jack-pandls-has-been-serving-the-whitefish-bay-community-for-over-100-years",
+   "https://www.yelp.com/biz/jack-pandls-whitefish-bay-milwaukee"
+  ],
+  "open_evidence": "https://www.jackpandls.com/ - official site shows current hours Tue-Sun and an online-ordering/reservations menu (checked 2026-09-25; site stylesheet version stamped Nov 12, 2025; Wayback captures of the live site through Jul 2026); Yelp listing titled 'Updated August 2026' is not marked closed",
+  "founded_source": "https://www.jackpandls.com/",
+  "closed_reason": null,
+  "notes": "John and Anna Pandl bought the existing Whitefish Bay Inn (building c.1903) in 1915; Jack Pandl added his name in the 1960s (Milwaukee Magazine, Mar 2017). TMJ4 (c.2023) says John Pandl owns it and son Ryan Pandl is general manager. Task flagged possible ownership/closing reports: I found no report of a sale or closure of Jack Pandl's; the only Pandl closure found was the separate Pandl's in Bayside (closed Nov 2009). My web-search budget ran out before a final 2025-2026 news sweep, so a very recent sale/closure announcement cannot be fully ruled out. Milwaukee County landmark status is from Milwaukee Magazine (year of designation not found). Listed on wisconsinsupperclubs.com, but its primary identity is a German-American inn, so kept here. Official postal address reads 'Milwaukee, WI 53217'; the building is in the Village of Whitefish Bay (Overture uses Whitefish Bay). Menu mains about $21-38. Milwaukee County landmark designation moved out of other_honors because no designation year was found."
+ },
+ {
+  "name": "Karl Ratzsch's",
+  "address": "320 E Mason St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "KARL RATZSCH'S",
+   "KARL RATZSCH",
+   "KARL RATZSCH RESTAURANT",
+   "KARL RATZSCHS",
+   "RATZSCH'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "german",
+   "historic"
+  ],
+  "iconic_reason": "German restaurant founded in 1904 that operated in the Colby Abbot Building on E Mason St from 1929 until it closed in 2017.",
+  "founded": 1904,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://urbanmilwaukee.com/2025/09/15/historic-artifacts-from-karl-ratzschs-restaurant-headed-to-auction-block/",
+   "https://www.milwaukeemag.com/karl-ratzsch-restaurant-closed/",
+   "https://urbanmilwaukee.com/business/karl-ratzschs/",
+   "https://www.yelp.com/biz/karl-ratzsch-restaurant-milwaukee"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2025/09/15/historic-artifacts-from-karl-ratzschs-restaurant-headed-to-auction-block/ - Sep 15, 2025: building owners auctioning remaining fixtures and still marketing the vacant space to tenants; Yelp listing titled 'CLOSED - Updated September 2026'",
+  "founded_source": "https://urbanmilwaukee.com/2025/09/15/historic-artifacts-from-karl-ratzschs-restaurant-headed-to-auction-block/",
+  "closed_reason": "Closed in spring 2017 (announced Apr 2, 2017), about a year after chef Thomas Hauck (owner of c. 1880) bought it in Jan 2016 and reopened it; Hauck said he could no longer sustain it. Fixtures were auctioned in Sept 2025 and the space was still seeking a tenant. Sources: https://www.milwaukeemag.com/karl-ratzsch-restaurant-closed/ ; https://urbanmilwaukee.com/2025/09/15/historic-artifacts-from-karl-ratzschs-restaurant-headed-to-auction-block/",
+  "notes": "Opened 1904 on N Water St (Urban Milwaukee says it began as Otto Hermann's 'Hermann's Cafe', renamed Old Heidelberg Cafe when it moved to 320 E Mason St in 1929, later Karl Ratzsch's). Ratzsch family sold to employees in 2003; employees sold to Hauck in 2016. Overture Sept-2026 still lists it 'open' at 320 E Mason St (stale record). No reopening found as of Sept 2025."
+ },
+ {
+  "name": "Watts Tea Shop",
+  "address": "761 N Jefferson St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "WATTS TEA SHOP",
+   "THE WATTS TEA SHOP",
+   "GEORGE WATTS & SON",
+   "GEORGE WATTS AND SON"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "America's Classics 2011"
+  ],
+  "other_honors": [],
+  "tags": [
+   "historic",
+   "tea room"
+  ],
+  "iconic_reason": "Tea room on the top floor of the George Watts & Son china store at Jefferson and Mason streets that served lunch and tea from 1925 until the end of 2016.",
+  "founded": 1925,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.cbs58.com/news/george-watts-son-inc-and-the-watts-tea-shop-will-close-on-december-31st",
+   "https://www.wisn.com/article/end-of-an-era-watts-tea-shop-to-close-at-end-of-year/8520354",
+   "https://www.fox6now.com/news/a-slice-of-milwaukee-history-george-watts-son-beloved-tea-shop-serves-its-last-cup",
+   "https://web.archive.org/web/20230703162602/https://www.jamesbeard.org/blog/americas-classic-watts-tea-shop-milwaukee",
+   "https://en.wikipedia.org/wiki/Watts_Tea_Shop"
+  ],
+  "open_evidence": "https://www.fox6now.com/news/a-slice-of-milwaukee-history-george-watts-son-beloved-tea-shop-serves-its-last-cup - tea shop served its last cup Saturday Dec 31, 2016; Overture Sept-2026 lists 761 N Jefferson St only as 'George Watts & Son Inc' (gift store/online business), no restaurant",
+  "founded_source": "https://www.wisn.com/article/end-of-an-era-watts-tea-shop-to-close-at-end-of-year/8520354",
+  "closed_reason": "George Watts & Son closed its downtown store and the Watts Tea Shop on Dec 31, 2016 and became an online-only business; CEO Sam Watts cited changes in how consumers shop. Source: https://www.cbs58.com/news/george-watts-son-inc-and-the-watts-tea-shop-will-close-on-december-31st (posted Nov 19, 2016)",
+  "notes": "WISN says the tea shop opened in 1925; the JBF America's Classic write-up (May 9, 2011) says recipes were used since the 1930s and Wikipedia's America's Classics list gives '1930s' - founded year 1925 follows WISN. Parent store George Watts & Son dates to 1870. JBF America's Classics 2011 verified via archived jamesbeard.org post 'America's Classic: Watts Tea Shop, Milwaukee' (May 9, 2011) and Wikipedia's America's Classics list (year 2011)."
+ },
+ {
+  "name": "Polonez",
+  "address": "4016 S Packard Ave",
+  "city": "Saint Francis",
+  "chain": false,
+  "match_names": [
+   "POLONEZ",
+   "POLONEZ RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "polish",
+   "fish fry"
+  ],
+  "iconic_reason": "Burzynski family Polish restaurant opened in 1983 that served a Friday fish fry, a Saturday buffet and a Sunday brunch with live polka music until 2022.",
+  "founded": 1983,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://web.archive.org/web/20220924221032/http://www.polonezrestaurant.com/",
+   "https://web.archive.org/web/20220828180812/http://www.polonezrestaurant.com/",
+   "http://www.polonezrestaurant.com/about-us/index.html",
+   "http://www.polonezrestaurant.com/specials/index.html",
+   "https://urbanmilwaukee.com/business/polonez-restaurant/"
+  ],
+  "open_evidence": "https://web.archive.org/web/20220924221032/http://www.polonezrestaurant.com/ - official site banner 'Polonez will close September 25th. Thank you for 40 years of patronage!' first appears in the Sept 24, 2022 capture (absent Aug 28, 2022); banner still on the site when checked 2026-09-25",
+  "founded_source": "https://urbanmilwaukee.com/business/polonez-restaurant/",
+  "closed_reason": "Closed Sept 25, 2022 per the restaurant's own website announcement ('Polonez will close September 25th. Thank you for 40 years of patronage!'), dated to 2022 by Wayback Machine captures; no news article found to confirm the date. Source: https://web.archive.org/web/20220924221032/http://www.polonezrestaurant.com/",
+  "notes": "Founded 1983 (site: 'Polonez: MKE since 1983'; Urban Milwaukee: 'Opened in 1983'). Family: George, Aleksandra, Maria and Peter Burzynski (site About page). Original location before St. Francis not verified. Overture Sept-2026 still lists it 'open' at 4016 S Packard Ave (stale), and a rebuilt polonezrestaurant.com (Wayback Jul 2026) still carries the 'final month' text; I found no evidence of a reopening. Closing year rests on web-archive timing, not a news report (search budget exhausted)."
+ },
+ {
+  "name": "Three Brothers",
+  "address": "2414 S St Clair St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "THREE BROTHERS",
+   "THREE BROTHERS RESTAURANT",
+   "THREE BROTHERS SERBIAN RESTAURANT",
+   "3 BROTHERS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "America's Classics 2002"
+  ],
+  "other_honors": [],
+  "tags": [
+   "serbian",
+   "historic"
+  ],
+  "iconic_reason": "Radicevic family Serbian restaurant in Bay View since 1956, where only family members have cooked since it opened.",
+  "founded": 1956,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.threebrothersmke.com",
+   "https://www.threebrothersmke.com/our-history",
+   "https://urbanmilwaukee.com/business/three-brothers/",
+   "https://web.archive.org/web/20190414062543/https://www.chicagotribune.com/news/ct-xpm-2002-05-15-0205150244-story.html",
+   "https://en.wikipedia.org/wiki/List_of_James_Beard_America%27s_Classics"
+  ],
+  "open_evidence": "https://www.threebrothersmke.com - official site lists 'New Hours' Wed-Fri 5-9pm, Sat-Sun 4-9pm, cash or check only (live 2026-09-25; same content in Wayback capture of 2026-09-05)",
+  "founded_source": "https://www.threebrothersmke.com/our-history",
+  "closed_reason": null,
+  "notes": "Our History page: opened in 1956 by Milun Radicevic; he had run a tavern at 814 S 2nd St from 1953 and moved the business to Bay View in 1956. Granddaughter Milunka Radicevic runs it now. JBF America's Classics 2002 confirmed by the Chicago Tribune's May 15, 2002 list of James Beard award winners. Cash/check only. No menu prices retrieved, so price_tier null."
+ },
+ {
+  "name": "Old Town Serbian Gourmet Restaurant",
+  "address": "522 W Lincoln Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "OLD TOWN SERBIAN GOURMET RESTAURANT",
+   "OLD TOWN SERBIAN GOURMET",
+   "OLD TOWN SERBIAN GOURMET HOUSE",
+   "OLD TOWN SERBIAN",
+   "OLD TOWN RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "serbian"
+  ],
+  "iconic_reason": "Serbian restaurant on W Lincoln Ave serving burek, sarma, goulash and other Balkan dishes, which dates its kitchen traditions to 1971.",
+  "founded": 1971,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://oldtownserbian.com/",
+   "https://oldtownserbian.com/milwaukee-lincoln-village-old-town-serbian-gourmet-restaurant-food-menu",
+   "https://urbanmilwaukee.com/business/old-town-serbian-gourmet-house/"
+  ],
+  "open_evidence": "https://oldtownserbian.com/ - official site shows current hours (Wed-Sat 5-9pm, Sun 5-8pm) and a notice that owner Natalia sells Serbian food at the South Shore Farmers Market 'starting in June 2025' (checked 2026-09-25)",
+  "founded_source": "https://oldtownserbian.com/",
+  "closed_reason": null,
+  "notes": "Founded year is from the official site's wording 'Old world kitchen practice since 1971'; no independent source for the opening year found, and the wording could refer to the family's cooking rather than this restaurant's opening. The site also calls itself the 'oldest Serbian restaurant in Milwaukee', which conflicts with Three Brothers (1956). Urban Milwaukee lists it as 'Old Town Serbian Gourmet House'. Entrees about $22-38 on the current online menu."
+ },
+ {
+  "name": "Elsa's on the Park",
+  "address": "833 N Jefferson St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "ELSA'S ON THE PARK",
+   "ELSAS ON THE PARK",
+   "ELSA'S",
+   "ELSAS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "burgers"
+  ],
+  "iconic_reason": "Karl Kopp's bar and restaurant facing Cathedral Square Park, known for its burgers and pork chop since 1979.",
+  "founded": 1979,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://elsas.com/",
+   "https://elsas.com/food-menu",
+   "https://www.milwaukeemag.com/most-of-elsas-original-menu-is-back/",
+   "https://urbanmilwaukee.com/business/elsas-on-the-park/"
+  ],
+  "open_evidence": "https://www.milwaukeemag.com/most-of-elsas-original-menu-is-back/ - Aug 6, 2025: after a fall 2024 kitchen remodel and menu rebrand, Elsa's brought back about 85% of its original menu; official site shows current hours Mon-Fri 11am-midnight, Sat-Sun 5pm-midnight (checked 2026-09-25)",
+  "founded_source": "https://elsas.com/",
+  "closed_reason": null,
+  "notes": "Official site says 'Since 1979'; Urban Milwaukee says it opened in 1980 - used the business's own year. Owner Karl Kopp; GM Chris Collins (his nephew) per Milwaukee Magazine 2025. Closed briefly in fall 2024 to remodel the kitchen (added a pizza oven). Burgers/mains mostly $13-24."
+ },
+ {
+  "name": "Maria's Pizza",
+  "address": "5025 W Forest Home Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "MARIA'S PIZZA",
+   "MARIAS PIZZA",
+   "MARIA'S PIZZARIA",
+   "MARIAS PIZZARIA",
+   "MARIA'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "pizza",
+   "italian",
+   "historic"
+  ],
+  "iconic_reason": "South side thin-crust pizzeria founded by Maria Traxel in 1957 that closed in 2022 and reopened under new owners in 2024 with its original decor and recipe.",
+  "founded": 1957,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://www.mariaspizzamke.com/",
+   "https://urbanmilwaukee.com/2023/12/12/marias-pizza-to-return-under-new-owners/",
+   "https://www.milwaukeemag.com/shuttered-marias-pizza-will-soon-be-back-in-business/",
+   "https://www.yelp.com/biz/marias-pizza-milwaukee",
+   "https://www.milwaukeemag.com/review-marias-and-lisas-are-bringing-back-their-beloved-pizza/",
+   "https://www.milwaukeemag.com/where-to-get-milwaukee-style-pizza/"
+  ],
+  "open_evidence": "https://www.mariaspizzamke.com/ - official site lists current hours (Wed-Sat 4-9pm, Sun 12-7pm) and 'nearly 70 years' of service (fetched 2026-09-25); Yelp listing titled 'Updated July 2026' with a review dated Feb 19, 2026 surfaced in search results.",
+  "founded_source": "https://urbanmilwaukee.com/2023/12/12/marias-pizza-to-return-under-new-owners/",
+  "closed_reason": null,
+  "notes": "Closed June 26, 2022 under founder's daughter Bonnie Crivello; bought by Brian and Jennifer Francis (Mulligan's Irish Pub, Franklin) Aug 30, 2023 for $300,000; reopened February 2024 (Milwaukee Magazine review, May 16, 2024). Founder's surname spelled 'Traxel' by Urban Milwaukee and 'Trexel' by TMJ4. Official site also says since 1957. No 2025-2026 news article found; open evidence rests on the official site's current hours and Yelp listing. price_tier 2 based on Milwaukee Magazine May 2024 review (large pies only, from $22); no current online menu prices seen. Unrelated Maria's Pizza exists in Oregon, WI."
+ },
+ {
+  "name": "Zaffiro's Pizza",
+  "address": "1724 N Farwell Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "ZAFFIRO'S PIZZA",
+   "ZAFFIROS PIZZA",
+   "ZAFFIRO'S",
+   "ZAFFIRO'S PIZZA THE ORIGINAL",
+   "ZAFFIROS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Winner of Milwaukee Magazine's pizza bracket (May 2021)"
+  ],
+  "tags": [
+   "pizza",
+   "italian",
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "East Side tavern-pizzeria started by Liborio 'Bobby' Zaffiro in 1954 and still run by his son Mike, known for cracker-thin crust cut in squares.",
+  "founded": 1954,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://www.zaffirospizza.com/",
+   "https://www.milwaukeemag.com/cheap-eats-milwaukee-budget-friendly-mondays/",
+   "https://urbanmilwaukee.com/business/zaffiros-pizza/",
+   "https://pizzahalloffame.com/zaffiros-pizza-bar/",
+   "https://www.milwaukeemag.com/we-now-know-where-to-get-the-best-pizza-in-milwaukee/",
+   "https://zaffiros.com/our-story/",
+   "https://www.milwaukeemag.com/what-is-milwaukee-style-pizza-and-who-made-it-first/"
+  ],
+  "open_evidence": "https://www.milwaukeemag.com/cheap-eats-milwaukee-budget-friendly-mondays/ - Milwaukee Magazine, Apr 10, 2025: Zaffiro's at 1724 N Farwell Ave open Mondays 11am-9pm with a $15 large two-topping deal; official site zaffirospizza.com lists current hours and prices (12in cheese $14, 14in pepperoni $19) (fetched 2026-09-25); Yelp listing titled 'Updated July 2026'. No 2026-dated article found.",
+  "founded_source": "https://www.zaffirospizza.com/",
+  "closed_reason": null,
+  "notes": "Pizza Hall of Fame page says Bobby Zaffiro opened a tavern in 1951, added pizza by 1954 and moved to the present Farwell Ave site in 1956; business itself states 1954. Separate Zaffiro Pizza Company (zaffiros.com, HQ 301 N Broadway) licenses the name for Zaffiro's Pizza & Bar/North Shore (11700 N Port Washington Rd, Mequon) and Marcus Theatres pizzerias; those are not the original. Listed on pizzahalloffame.com (post dated Sept 14, year not visible) so not listed as an honor. Milwaukee Magazine (2021) also dates the Farwell location to 1956. price_tier 2 based on whole pizzas $14-19."
+ },
+ {
+  "name": "Balistreri's Italian-American Ristorante",
+  "address": "812 N 68th St",
+  "city": "Wauwatosa",
+  "chain": false,
+  "match_names": [
+   "BALISTRERI'S ITALIAN-AMERICAN RISTORANTE",
+   "BALISTRERI'S ITALIAN AMERICAN RISTORANTE",
+   "BALISTRERI'S",
+   "BALISTRERIS",
+   "BALISTRERI'S ON 68TH"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "italian",
+   "pizza",
+   "fish fry"
+  ],
+  "iconic_reason": "Family-run Italian-American restaurant on N 68th St in Wauwatosa, the original of the Balistreri family's two restaurants, serving thin-crust pizza and red-sauce Italian dishes.",
+  "founded": 1968,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://www.balistreris.com/italian-american-ristorante-location",
+   "https://www.balistreris.com/italian-american-ristorante-dinner",
+   "https://www.balistreris.com/blog",
+   "https://urbanmilwaukee.com/business/balistreris-bluemound-inn/",
+   "https://onmilwaukee.com/articles/jim-balistreri",
+   "https://www.travelwisconsin.com/food-drink/restaurants/balistreri-s-bluemound-inn",
+   "https://www.milwaukeemag.com/where-to-get-milwaukee-style-pizza/"
+  ],
+  "open_evidence": "https://www.balistreris.com/italian-american-ristorante-location - official site lists current hours for the 68th St location (closed Tue; Fri-Sat 11am-10pm) with a 2026 footer and blog posts dated June-Sept 18, 2026 (fetched 2026-09-25); Overture Sept-2026 extract lists 812 N 68th St as open.",
+  "founded_source": "https://onmilwaukee.com/articles/jim-balistreri",
+  "closed_reason": null,
+  "notes": "1968 founding of the 68th St original comes from an OnMilwaukee search summary (article returned 403, not read directly); official site only says 'over 50 years of family tradition'. Second location: Balistreri's Bluemound Inn, 6501 W Bluemound Rd, Milwaukee (founded/acquired 1996 per Urban Milwaukee), hours Wed-Mon, fish fry, Sunday brunch. Jim Balistreri (founder) has died per OnMilwaukee headline 'Milwaukee loses pizza pioneer Jim Balistreri' (date not confirmed). Unrelated: Balistreri Brothers Pizza, 3815 S 108th St, Greenfield. Wauwatosa location noted as not wheelchair accessible. price_tier 2 (pastas $16-21, parmigianas $23-25). Milwaukee Magazine (2019) calls the Bluemound Inn 'the fancier brother restaurant to Balistreri's pizza on 68th Street'; founder Jim Balistreri trained at the Caradaro Club (Milwaukee Magazine 2018, 2021)."
+ },
+ {
+  "name": "Organ Piper Pizza",
+  "address": "4353 S 108th St",
+  "city": "Greenfield",
+  "chain": false,
+  "match_names": [
+   "ORGAN PIPER PIZZA",
+   "ORGAN PIPER MUSIC PALACE",
+   "ORGAN PIPER PIZZA MUSIC PALACE",
+   "ORGAN PIPER"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "pizza",
+   "fish fry",
+   "historic"
+  ],
+  "iconic_reason": "Pizza restaurant in Greenfield open since 1976 where a theatre pipe organ assembled from salvaged Wurlitzer and Kimball parts is played live nightly.",
+  "founded": 1976,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://www.organpiperpizza.com/",
+   "https://www.organpiperpizza.com/history",
+   "https://www.organpiperpizza.com/hours",
+   "https://www.organpiperpizza.com/menu",
+   "https://www.organpiperpizza.com/organists"
+  ],
+  "open_evidence": "https://www.organpiperpizza.com/hours - official site lists current hours (Tue-Sun evenings, organ nightly) and a current priced menu (fetched 2026-09-25); Overture Sept-2026 extract lists 'Organ Piper Music Palace' at 4353 S 108th St as open. No dated 2025-2026 news article found.",
+  "founded_source": "https://www.organpiperpizza.com/history",
+  "closed_reason": null,
+  "notes": "Founding year 1976 only from the official site ('Since 1976'); no independent source read (web search budget ran out). Current staff organist Zach Frame was named American Theatre Organ Society Theatre Organist of the Year 2022 (per official site) - an honor to the organist, not the restaurant. Founders/owners not identified. Postal city Greenfield (address sometimes given as Milwaukee). price_tier 2: cheese pizzas $15.75-23.75, fish fry $16, spaghetti $13.75. 2026 would be its 50th year; no anniversary coverage found."
+ },
+ {
+  "name": "Pizza Man",
+  "address": "2597 N Downer Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "PIZZA MAN",
+   "PIZZA MAN ON DOWNER",
+   "PIZZA MAN MILWAUKEE",
+   "PIZZA MAN DOWNER"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "pizza",
+   "italian"
+  ],
+  "iconic_reason": "East Side pizzeria founded by Mike Amidzich at North and Oakland avenues in 1970 that moved to Downer Avenue after a 2010 arson fire and reopened there under new owners in September 2024.",
+  "founded": 1970,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://www.milwaukeemag.com/inside-the-east-side-pizza-mans-comeback-bid/",
+   "https://www.milwaukeemag.com/pizza-man-in-wauwatosa-is-closing/",
+   "https://www.milwaukeemag.com/dining-tidbits-october-2025/",
+   "https://urbanmilwaukee.com/2024/09/27/pizza-man-reopens-on-downer-avenue/",
+   "https://urbanmilwaukee.com/2024/04/16/after-54-years-pizza-man-closes-in-milwaukee/",
+   "https://pizzamanwi.com/"
+  ],
+  "open_evidence": "https://www.milwaukeemag.com/dining-tidbits-october-2025/ - Milwaukee Magazine, Oct 6, 2025: after the Wauwatosa closure 'only the East Side flagship location remains open'; Milwaukee Magazine review Feb 4, 2025 gives Downer hours Tue-Sat 3-10pm, Sun 3-9pm. Overture Sept-2026 lists 2597 N Downer Ave as open. No 2026-dated evidence found (official site pizzamanwi.com returns 403 to automated fetch).",
+  "founded_source": "https://www.milwaukeemag.com/inside-the-east-side-pizza-mans-comeback-bid/",
+  "closed_reason": null,
+  "notes": "History: opened 1970 at North & Oakland (founder Mike Amidzich, died 2018); arson fire destroyed it 2010; reopened 2013 at N Downer Ave & E Belleview Pl; left Downer in March 2023 for 2060 N Humboldt Ave (Riverwest), which closed April 2024; new owners PM2 MGR LLC (Thomas Schafer, Krzysztof 'Krys' Zielinski; chef Miguel Mayoral) bought the Downer building May 2024 and reopened Sept 27, 2024. Other locations all closed: Oak Creek (Dec 2020), Mequon (closed, date unknown), Wauwatosa/Mayfair Collection 11500 W Burleigh St (opened 2015, closed Aug 25, 2025 after lease talks failed). Overture still lists the closed Humboldt, Oak Creek and Wauwatosa sites as open (stale). Reopened menu is a rebuilt one; original recipes were reportedly lost. price_tier 2: pizzas $19-23, pastas $21-25, entrees $25-50 (Feb 2025)."
+ },
+ {
+  "name": "Peter Sciortino Bakery",
+  "address": "1101 E Brady St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "PETER SCIORTINO BAKERY",
+   "PETER SCIORTINO'S BAKERY",
+   "SCIORTINO'S BAKERY",
+   "SCIORTINOS BAKERY",
+   "SCIORTINO BAKERY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Milwaukee Magazine Best of Milwaukee 2019, Readers' Choice: Bakery"
+  ],
+  "tags": [
+   "bakery",
+   "italian",
+   "historic"
+  ],
+  "iconic_reason": "Italian bakery on Brady Street founded in 1947 by Peter and Grace Sciortino and run since 1997 by former employees Maria, Joe and Luigi Vella.",
+  "founded": 1947,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "http://petersciortinosbakery.com/",
+   "https://petersciortinosbakery.com/pages/about",
+   "https://urbanmilwaukee.com/2025/09/17/sourdough-bakery-moving-to-peter-sciortino-space/",
+   "https://www.milwaukeemag.com/best-milwaukee-2019-dining/"
+  ],
+  "open_evidence": "http://petersciortinosbakery.com/ - official site lists 2026 holiday closures (Easter April 5, 2026) and a notice that it is closed Fri-Sun Sept 25-27, 2026, reopening Tue Sept 29 (fetched 2026-09-25); Urban Milwaukee Sept 17, 2025 reports Peace and Love Sourdough moving into its lower-level kitchen while the bakery continues.",
+  "founded_source": "https://petersciortinosbakery.com/pages/about",
+  "closed_reason": null,
+  "notes": "Official site says founded 1947 (task prompt suggested 1948; no source for 1948 seen). Temporarily closed Sept 25-27, 2026 (short weekend closure per site notice), not a permanent closure. Urban Milwaukee's business directory wrongly implies the bakery closed; the Sept 2025 article itself says it is sharing space with Peace and Love Sourdough. price_tier 1 (retail bakery)."
+ },
+ {
+  "name": "Glorioso's Italian Market",
+  "address": "1011 E Brady St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "GLORIOSO'S ITALIAN MARKET",
+   "GLORIOSOS ITALIAN MARKET",
+   "GLORIOSO'S",
+   "GLORIOSOS",
+   "GLORIOSO BROTHERS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Milwaukee Magazine Best of Milwaukee 2019, Readers' Choice: Sandwich Shop"
+  ],
+  "tags": [
+   "italian",
+   "deli",
+   "historic"
+  ],
+  "iconic_reason": "Italian grocery and deli on Brady Street founded in 1946 by Joe, Eddie and Teddy Glorioso that reopened in January 2026 after an October 2025 fire.",
+  "founded": 1946,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.gloriosos.com/",
+   "https://urbanmilwaukee.com/business/gloriosos-italian-market/",
+   "https://urbanmilwaukee.com/2026/01/07/community-cheers-gloriosos-reopening/",
+   "https://urbanmilwaukee.com/pressrelease/gloriosos-italian-market-grand-reopening-80th-anniversary-celebration/",
+   "https://www.milwaukeemag.com/best-milwaukee-2019-dining/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/01/07/community-cheers-gloriosos-reopening/ - Urban Milwaukee, Jan 7, 2026: market reopened at 1011 E Brady St after fire closure; press release lists grand reopening/80th anniversary events Jan 19-Feb 28, 2026.",
+  "founded_source": "https://urbanmilwaukee.com/pressrelease/gloriosos-italian-market-grand-reopening-80th-anniversary-celebration/",
+  "closed_reason": null,
+  "notes": "Fire Oct 3, 2025 (started in upper-level IT/laundry rooms; smoke damage throughout), closed ~3 months, reopened Jan 7, 2026. Ownership: Presta brothers (Carmine, Dominic, Paolo) took over around Aug 2024; Michael Glorioso still involved. Urban Milwaukee Nov 6, 2025 reported a restaurant owner bought the 'former Glorioso's building' (an earlier Brady St building, not the current store; details not read). Official site gloriosos.com returned empty content to fetch. price_tier null (market/deli, no menu prices read)."
+ },
+ {
+  "name": "National Bakery & Deli",
+  "address": "3200 S 16th St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "NATIONAL BAKERY & DELI",
+   "NATIONAL BAKERY AND DELI",
+   "NATIONAL BAKERY",
+   "NATIONAL BAKING"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bakery",
+   "deli",
+   "polish",
+   "historic"
+  ],
+  "iconic_reason": "South side Polish-rooted bakery founded in 1925 by Louis Wisniewski, known for the tens of thousands of paczki it sells on Paczki Day.",
+  "founded": 1925,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.nationalbakery.com/",
+   "https://www.nationalbakery.com/About-Us",
+   "https://www.nationalbakery.com/Contact-Us",
+   "https://urbanmilwaukee.com/pressrelease/100th-anniversary-of-national-bakery-deli-to-be-recognized-during-fat-tuesday-council-meeting/",
+   "https://urbanmilwaukee.com/2026/02/05/national-bakery-and-central-standard-partner-for-paczki-day/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/02/05/national-bakery-and-central-standard-partner-for-paczki-day/ - Urban Milwaukee, Feb 5, 2026: National Bakery selling a brandy old fashioned paczek on Fat Tuesday Feb 17, 2026 at its three stores; official site says '101 years old' with current hours (fetched 2026-09-25).",
+  "founded_source": "https://www.nationalbakery.com/About-Us",
+  "closed_reason": null,
+  "notes": "Founded 1925 per official site and Milwaukee Common Council centennial (2025); the task's 1923 is not supported. Flagship given as 3200 S 16th St (the Milwaukee store); whether this is the 1925 original address is not stated. Other locations: 13820 W Greenfield Ave, Brookfield (opened in New Berlin 1996, moved late 1990s) and 5637 Broad St, Greendale (2009); wholesale arm Melody Cookies at 7195 S 1st St, Oak Creek. Owners Bryant Krauss and Jeff Callen (~19 years). The official site words the 2025 honor both as 'Bakery of the Year' and 'Best Bakery'. price_tier 1 (bakery/deli; no prices read). The official site reports a 2025 Wisconsin Bakers Association 'Bakery of the Year'/'Best Bakery' honor (self-reported, inconsistent wording) and the Milwaukee Common Council recognized its centennial on March 4, 2025; neither is listed in other_honors."
+ },
+ {
+  "name": "Wisconsin Cheese Mart",
+  "address": "215 W Highland Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "WISCONSIN CHEESE MART",
+   "WI CHEESE MART",
+   "THE WISCONSIN CHEESE MART",
+   "BRUDD CAFE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "cheese",
+   "historic"
+  ],
+  "iconic_reason": "Cheese shop founded in 1938 on downtown Milwaukee's 3rd Street that has operated from the Steinmeyer building at Highland Ave since 1976.",
+  "founded": 1938,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.wisconsincheesemart.com/pages/about",
+   "https://www.wisconsincheesemart.com/",
+   "https://urbanmilwaukee.com/business/wisconsin-cheese-mart/",
+   "https://urbanmilwaukee.com/2025/02/08/wisconsin-cheese-mart-featured-in-super-bowl-ad/",
+   "https://urbanmilwaukee.com/2021/03/04/milwaukee-walks-eight-blocks-of-food-history-and-art/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2025/02/08/wisconsin-cheese-mart-featured-in-super-bowl-ad/ - Urban Milwaukee, Feb 8, 2025: owner Ken McNulty discusses the store's appearance in Google's Super Bowl ad and its Milwaukee and Madison stores; official site lists 215 W Highland Ave and 'more than 85 years' (fetched 2026-09-25); Overture Sept-2026 lists 215 W Highland Ave as open. No 2026-dated evidence found.",
+  "founded_source": "https://www.wisconsincheesemart.com/pages/about",
+  "closed_reason": null,
+  "notes": "History per official site: founded 1938 in the Metropolitan Block on 3rd St; 1975 fire destroyed that building; moved 1976 to the Steinmeyer building (current flagship at Highland Ave and the former Old World 3rd St, renamed Dr. Martin Luther King Jr. Dr. in 2021); owner Ken McNulty since 2003 (veteran-owned); Madison store at 119 State St opened 2019; Brudd Cafe added 2019. About 90% of sales now online. Ad controversy: gouda '50-60% of world cheese consumption' statistic was flagged as wrong. Overture also lists 1220 E Meinecke Ave (status blank; possibly a warehouse - unverified). No hours found on site; price_tier null (retail store). Appeared in Google's Gemini ad during Super Bowl LIX (Feb 2025); moved to notes since it is an ad appearance, not an honor."
+ },
+ {
+  "name": "Usinger's Famous Sausage",
+  "address": "1030 N Martin Luther King Jr Dr",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "USINGER'S FAMOUS SAUSAGE",
+   "USINGERS FAMOUS SAUSAGE",
+   "USINGER'S",
+   "USINGERS",
+   "FRED USINGER INC"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "german",
+   "bratwurst",
+   "deli",
+   "historic"
+  ],
+  "iconic_reason": "Sausage maker founded in 1880 by German immigrant Fred Usinger that still runs its retail shop on the street formerly called Old World Third Street and is family-run in its fourth generation.",
+  "founded": 1880,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Usinger%27s",
+   "https://urbanmilwaukee.com/business/usingers/",
+   "https://www.milwaukeemag.com/everything-you-wanted-to-know-about-sausage/",
+   "https://urbanmilwaukee.com/2026/02/13/cargill-closing-last-milwaukee-meatpacking-plant/",
+   "https://urbanmilwaukee.com/2021/03/04/milwaukee-walks-eight-blocks-of-food-history-and-art/",
+   "https://www.usinger.com/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/02/13/cargill-closing-last-milwaukee-meatpacking-plant/ - Urban Milwaukee, Feb 13, 2026 names Usinger's among Milwaukee's still-operating sausage makers (company-level, not the shop specifically); Milwaukee Magazine July 3, 2024 lists the shop at 1030 N Martin Luther King Jr Dr; Overture Sept-2026 lists 1030 N Old World 3rd St as open. Official site usinger.com returned 403 to automated fetch.",
+  "founded_source": "https://en.wikipedia.org/wiki/Usinger%27s",
+  "closed_reason": null,
+  "notes": "Address: the Old World Third Street segment was renamed Dr. Martin Luther King Jr. Dr. by the Common Council in 2021 (per Urban Milwaukee), so the shop's traditional '1030 N Old World 3rd St' is now given as 1030 N Martin Luther King Jr Dr by Urban Milwaukee and Milwaukee Magazine. Distribution center/plant in Walker's Point (opened 1994); Overture also lists 303 E Florida St. Fourth-generation siblings Fritz and Debra Usinger took control in the 1990s (Debra Usinger has since died per 2012 posthumous recognition). No 2025-2026 source specifically about the retail shop's hours found; open status of the shop rests on company-level 2026 evidence plus 2024 listing. Mimi Sheraton praise (1973) is a quote, not an honor. price_tier null (retail meat market)."
+ },
+ {
+  "name": "Lisa's Pizza",
+  "address": "2961 N Oakland Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "LISA'S PIZZA",
+   "LISAS PIZZA",
+   "LISA'S PIZZERIA",
+   "LISAS PIZZERIA",
+   "PIZZA BY LISA"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "pizza",
+   "italian"
+  ],
+  "iconic_reason": "East Side thin-crust pizzeria on Oakland Ave run by the Bongiorno family for more than six decades and by new owners since 2024.",
+  "founded": 1960,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://urbanmilwaukee.com/business/lisas-pizzeria/",
+   "https://urbanmilwaukee.com/2026/03/25/east-side-restaurant-adding-brunch/",
+   "https://urbanmilwaukee.com/2024/02/26/east-side-pizzeria-continues-under-new-owners/",
+   "https://www.milwaukeemag.com/review-marias-and-lisas-are-bringing-back-their-beloved-pizza/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/03/25/east-side-restaurant-adding-brunch/ - Urban Milwaukee, Mar 25, 2026: Lisa's Pizza adding daily brunch from Mar 30, 2026; lists hours Sun-Thu 11am-9pm, Fri-Sat 11am-10pm. Also Oct 22, 2025 lunch launch and June 2025 late-night menu.",
+  "founded_source": "https://www.milwaukeemag.com/review-marias-and-lisas-are-bringing-back-their-beloved-pizza/",
+  "closed_reason": null,
+  "notes": "Not on the original candidate list; added because it surfaced while checking Maria's and has strong 2026 evidence. Founding year conflict: Milwaukee Magazine (May 2024) and Urban Milwaukee's directory say 1960; an Urban Milwaukee Feb 2024 article says 'operating since 1964' (possibly the date at this address). Former owners Gary, Teresa and Scott Bongiorno sold (listed at $750,000 in 2023) to Hannah O'Hara and Dean Rein on Jan 31, 2024; first service under new owners Feb 7, 2024. New owners added Detroit-style pies alongside thin crust. Namesake 'Lisa' not identified. No prices read, so price_tier null. Official site pizzabylisa.com not fetched."
+ },
+ {
+  "name": "American Serb Hall",
+  "address": "5101 W Oklahoma Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "AMERICAN SERB HALL",
+   "SERB HALL",
+   "AMERICAN SERB MEMORIAL HALL",
+   "AMERICAN SERB HALL BANQUET",
+   "SERB HALL BOWLING CENTER"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "fish fry",
+   "serbian",
+   "historic"
+  ],
+  "iconic_reason": "Banquet hall built in 1950 and run by St. Sava Serbian Orthodox Cathedral that has served a Friday fish fry since 1967, now with dine-in, drive-thru and walk-up service.",
+  "founded": 1950,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://urbanmilwaukee.com/2023/02/22/serb-hall-fish-fry-is-back-for-dine-in/",
+   "https://serbhall.net/food-services/",
+   "https://cbs58.com/news/every-friday-i-come-here-fish-frys-fill-up-for-first-friday-of-lent",
+   "https://onmilwaukee.com/articles/serb-hall-for-sale",
+   "https://www.milwaukeemag.com/generations-of-politicians-have-passed-through-serb-hall/"
+  ],
+  "open_evidence": "https://cbs58.com/news/every-friday-i-come-here-fish-frys-fill-up-for-first-friday-of-lent - CBS58 (Mar 7, 2025) reports American Serb Hall serving its Lenten Friday fish fry, quoting board president Sonja Vujatovic; official food-services page (seen Sep 2026) lists Friday fish fry 3:30-8:30pm dine-in, drive-thru and walk-up.",
+  "founded_source": "https://urbanmilwaukee.com/2023/02/22/serb-hall-fish-fry-is-back-for-dine-in/",
+  "closed_reason": null,
+  "notes": "The brief said Serb Hall was sold around 2020 and renamed; that is NOT what sources show. It was listed for sale in January 2021 (OnMilwaukee, Milwaukee Magazine, TMJ4) but Urban Milwaukee (Feb 22, 2023) states it 'was never sold, and continues under the operation of St. Sava.' No rename found: the formal name is American Serb Memorial Hall, commonly American Serb Hall / Serb Hall. Fish fry went carry-out/drive-thru only 2020-2022 and dine-in resumed Feb 17, 2023. 'founded' 1950 = year the hall was built per Urban Milwaukee; the official site says 'over 75 years' (consistent); the fish fry itself began in 1967. The hall also has a bowling center at the same address. Official site claims 'Voted Milwaukee's favorite fish fry 5 years in a row' (no granting body named, so not listed as an honor). Price tier not determined (no current priced menu fetched). Long-time stop for presidential and political visits (Milwaukee Magazine)."
+ },
+ {
+  "name": "The Packing House",
+  "address": "900 E Layton Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "THE PACKING HOUSE",
+   "PACKING HOUSE",
+   "PACKING HOUSE RESTAURANT",
+   "THE PACKING HOUSE MILWAUKEE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "fish fry",
+   "steakhouse"
+  ],
+  "iconic_reason": "Family-owned steak and fish fry restaurant across Layton Ave from Milwaukee's airport, opened by Keith and Margaret Wiken in 1974 and known for its Friday fish fry drive-thru.",
+  "founded": 1974,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://packinghousemke.com/",
+   "https://packinghousemke.com/fish-fry/",
+   "https://packinghousemke.com/in-the-media/",
+   "https://milwaukeestories.weebly.com/the-packing-house.html",
+   "https://wtmj.com/news/2022/03/31/fish-fry-spotlight-the-packing-house/",
+   "https://www.npr.org/2024/10/08/nx-s1-5138314/wisconsin-supper-club-harris-trump"
+  ],
+  "open_evidence": "https://packinghousemke.com/ - official site (seen Sep 2026) lists current hours Tue-Sun and a notice that it will be closed Saturday July 4th and Sunday July 5th (2026 calendar) for America's 250th; fish fry page lists Friday 11am-9pm with cod $21.95-22.95.",
+  "founded_source": "https://packinghousemke.com/in-the-media/",
+  "closed_reason": null,
+  "notes": "Founded 1974 by Keith and Margaret Wiken; son Chris Wiken runs it (WTMJ 2022 quote: 'My mom and dad opened the restaurant in 1974'). Celebrated 50th anniversary in 2024. Drive-thru fish fry (cash only, Fridays 3-9pm) reportedly dates to the late 1980s (search snippet only, not verified). Building previously housed Dutch's Sukiyaki House. Price tier 2 based on fish fry $21.95-27.95; steak prices not checked. Official site shows a 2023 Mayor's Design Award image for its patio (not independently verified, so not listed as an honor). NPR (Oct 2024) described it as a classic Wisconsin supper club. Kept here (not on the supper-club list) because its own site describes it as a family-owned scratch-kitchen restaurant, not a supper club; the 'supper club' tag was removed."
+ },
+ {
+  "name": "Lakefront Brewery",
+  "address": "1872 N Commerce St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "LAKEFRONT BREWERY",
+   "LAKEFRONT BREWERY BEER HALL",
+   "LAKEFRONT BREWERY INC",
+   "LAKEFRONT BEER HALL"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "brewpub",
+   "fish fry",
+   "cheese curds",
+   "german"
+  ],
+  "iconic_reason": "Craft brewery founded by brothers Russ and Jim Klisch in 1987 whose riverside beer hall hosts a Friday fish fry with a live polka band.",
+  "founded": 1987,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lakefront_Brewery",
+   "https://lakefrontbrewery.com/beer-hall/food",
+   "https://wtmj.com/news/2026/01/14/lakefront-brewery-owner-plans-new-outdoor-amenities/",
+   "https://www.wisn.com/article/lakefront-brewery-says-it-missed-out-on-at-least-400000-in-revenue-due-to-trump-tariffs/70440894",
+   "https://urbanmilwaukee.com/pressrelease/lakefront-brewery-now-officially-owns-kenoshas-public-brewing/"
+  ],
+  "open_evidence": "https://wtmj.com/news/2026/01/14/lakefront-brewery-owner-plans-new-outdoor-amenities/ - WTMJ (Jan 14, 2026) on owner Russ Klisch's plans for new outdoor amenities; official beer hall page (seen Sep 2026) lists daily hours and Friday fish fry from 4pm with the Brewhaus Polka Kings 5-8pm.",
+  "founded_source": "https://en.wikipedia.org/wiki/Lakefront_Brewery",
+  "closed_reason": null,
+  "notes": "Founded 1987; the brewery moved to its current Commerce St building on the Milwaukee River later (move year not verified). Also has a warehouse at 3519 N Hubbard St (Overture) and acquired Kenosha's Public Craft Brewing (Urban Milwaukee press release, date not checked). Per Wikipedia (not independently re-verified): first U.S. brewery to bottle a fruit beer after Prohibition (Cherry Lager, 1992), nation's first certified organic brewery (1996), and petitioned the federal TTB to approve New Grist, described as the first gluten-free beer in America (year not given); these are 'firsts', not granted honors, so other_honors is left empty. Russ Klisch was reported as a 2025 Entrepreneur of the Year award winner (granting body not identified, not listed). Wikipedia also says TripAdvisor named it #4 brewery tour in America (2010) - not listed. WISN reported tariff losses of $400-500k equaling about 4% of revenue (implies roughly $10-12M, but no revenue figure is directly reported, so left null). Price tier not determined (menu PDFs not read)."
+ },
+ {
+  "name": "Wolski's Tavern",
+  "address": "1836 N Pulaski St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "WOLSKI'S TAVERN",
+   "WOLSKIS TAVERN",
+   "WOLSKI'S",
+   "WOLSKIS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Lower East Side corner tavern opened in 1908 by Bernard Wolski, still run by his great-grandsons, known for its 'I Closed Wolski's' bumper stickers handed out since 1973.",
+  "founded": 1908,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.wolskis.com/",
+   "https://en.wikipedia.org/wiki/Wolski's_Tavern",
+   "https://punchdrink.com/articles/i-closed-wolskis-tavern-milwaukee-bar/",
+   "https://www.tmj4.com/open/were-open-wolskis-tavern-still-humming-after-more-than-100-years-in-business",
+   "https://www.tmj4.com/news/milwaukee-county/the-man-who-put-i-closed-wolskis-on-the-map-farewell-to-mike-bondar"
+  ],
+  "open_evidence": "https://punchdrink.com/articles/i-closed-wolskis-tavern-milwaukee-bar/ - PUNCH feature (Feb 19, 2025) on the operating bar with owner Bernie Bondar and staff; official site (seen Sep 2026) lists current hours daily 2pm/noon to 2-2:30am.",
+  "founded_source": "https://www.wolskis.com/",
+  "closed_reason": null,
+  "notes": "Founding 1908 consistent across official site, Wikipedia, TMJ4. Per TMJ4, the founder moved a dry-goods building from Brady St to Pulaski St in 1907 and opened the tavern in 1908. Owners: brothers Bernie and Dennis Bondar (great-grandsons), who took over in 1973. TMJ4 published an undated farewell to longtime bartender Mike Bondar (credited with the stickers) saying the tavern will remain open - date of his death not determined. Food: essentially none (free popcorn; food trucks at events), so food relevance is low. Wikipedia notes Esquire's 2012 naming of Milwaukee 'Best Bar City' featured the bar - not listed as a specific honor for the bar."
+ },
+ {
+  "name": "Bryant's Cocktail Lounge",
+  "address": "1579 S 9th St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "BRYANT'S COCKTAIL LOUNGE",
+   "BRYANTS COCKTAIL LOUNGE",
+   "BRYANT'S",
+   "BRYANTS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Tales of the Cocktail Foundation Timeless U.S. Award (2026)"
+  ],
+  "tags": [
+   "historic",
+   "cocktail lounge"
+  ],
+  "iconic_reason": "South Side cocktail lounge at 9th St and Lapham Blvd that says it has been Milwaukee's cocktail lounge since 1938 and where founder Bryant Sharp is credited with creating the Pink Squirrel.",
+  "founded": 1938,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.bryantscocktaillounge.com/",
+   "https://www.bryantscocktaillounge.com/history",
+   "https://www.wisn.com/article/milwaukees-bryants-cocktail-lounge-earns-prestigious-global-recognition/71844674",
+   "https://urbanmilwaukee.com/2026/07/07/bryants-cocktail-lounge-wins-timeless-award/",
+   "https://www.travelwisconsin.com/things-to-do/attractions/nightlife/bryant-s-cocktail-lounge"
+  ],
+  "open_evidence": "https://www.wisn.com/article/milwaukees-bryants-cocktail-lounge-earns-prestigious-global-recognition/71844674 - WISN (Jul 7, 2026) reports Bryant's received the 2026 Timeless Award from the Tales of the Cocktail Foundation; official site (seen Sep 2026) lists hours Tue-Sun.",
+  "founded_source": "https://www.bryantscocktaillounge.com/",
+  "closed_reason": null,
+  "notes": "Founding year: official homepage says 'Open since 1938' and WISN says it first opened in 1938, but the official history page says it opened as a beer hall in August 1936 and became a cocktail lounge circa 1938; used 1938 (the business's headline claim). Pink Squirrel invention claim is the bar's own (also on Wikipedia's Pink Squirrel page) - not an independent verification. Urban Milwaukee's 2017 Bar Exam headline also says 'Serving Cocktails Since 1936'. Ownership: Bryant Sharp (d. early 1960s), then Pat Malmberg; John Dye has owned it since 2008 (Urban Milwaukee, Jul 7, 2026); site copyright is Buckaroo LTD, and Dye's group also runs At Random and (since 2025) Von Trier. Rebuilt after a St. Patrick's Day 1971 fire. No food; cocktails only, so food relevance is low."
+ },
+ {
+  "name": "Von Trier",
+  "address": "2235 N Farwell Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "VON TRIER",
+   "VON TRIERS",
+   "VON TRIER'S",
+   "VON TRIER BAR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "german",
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "German-style East Side bar at North and Farwell avenues since July 1978, on a corner that housed Rieder's Cocktail Lounge from 1949, which added a full German kitchen in 2018.",
+  "founded": 1978,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.vontriers.com/",
+   "https://www.vontriers.com/german-bar-history-milwaukee",
+   "https://www.vontriers.com/christmas-tour-2026",
+   "https://www.bryantscocktaillounge.com/",
+   "https://urbanmilwaukee.com/2025/03/13/historic-bar-getting-new-operator/"
+  ],
+  "open_evidence": "https://www.vontriers.com/christmas-tour-2026 - official site (seen Sep 2026) lists current hours with kitchen until 10pm and promotes a 'Von Trier European Christmas Tour' for Nov 30 - Dec 9, 2026.",
+  "founded_source": "https://www.vontriers.com/german-bar-history-milwaukee",
+  "closed_reason": null,
+  "notes": "Ownership changes per the bar's own history page: Karl Lotharius opened Von Trier in July 1978 (predecessor Rieder's Cocktail Lounge, Frank Rieder, 1949-1978); Lotharius was murdered in 1981 (unsolved) and Mark Eckert ran/owned it 1981-2009; John and Cindy Sidoff owned it 2009-2025; John Dye (Bryant's/At Random group) acquired it in 2025. Independent support is partial: Urban Milwaukee (Mar 13, 2025, paywalled) ran 'Historic Bar Getting New Operator' with the subhead 'Seasoned proprietor John Dye will expand his collection of historic taverns' - the bar's name was behind the paywall, so whether it was a purchase or an operating/lease deal is not confirmed. Kitchen added 2018. No independent 2025-2026 news article found; open status rests on the official site."
+ },
+ {
+  "name": "Koz's Mini Bowl",
+  "address": "2078 S 7th St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "KOZ'S MINI BOWL",
+   "KOZS MINI BOWL",
+   "HISTORIC KOZ'S MINI BOWL",
+   "KOZ'S",
+   "KOZ'S MINI BOWL TAVERN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "South Side corner tavern with four short duckpin-style bowling lanes installed in 1947 and hand-set pins, run by the Kosakoski family as Koz's since 1978.",
+  "founded": 1978,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://urbanmilwaukee.com/2016/05/13/bar-exam-the-small-pleasures-of-kozs-mini-bowl/",
+   "https://urbanmilwaukee.com/2022/12/23/with-offers-in-the-gutter-kozs-will-continue-under-current-owners/",
+   "https://urbanmilwaukee.com/2022/08/29/kozs-mini-bowl-closed/",
+   "https://www.milwaukeemag.com/the-best-things-to-do-this-week-according-to-our-editors-jan-5/",
+   "https://cbs58.com/news/As-retro-duckpin-bowling-makes-comeback-Kozs-rolls-with-the-original"
+  ],
+  "open_evidence": "https://www.milwaukeemag.com/the-best-things-to-do-this-week-according-to-our-editors-jan-5/ - Milwaukee Magazine things-to-do list (Jan 2026) recommends Koz's as a duckpin bowling dive bar 'since 1947'; CBS58 feature Jan 16, 2024; Overture Sep-2026 extract lists 'Historic Koz's Mini Bowl' as open.",
+  "founded_source": "https://urbanmilwaukee.com/2016/05/13/bar-exam-the-small-pleasures-of-kozs-mini-bowl/",
+  "closed_reason": null,
+  "notes": "Founding: DuWayne Roger Kosakoski opened it as Koz's Mini Bowl in May 1978 (Urban Milwaukee 2016); the building dates to 1890 (saloon, dining room, dance hall) and the mini lanes were installed in 1947 under original operator Bosko Kresovich; Mike Lakic ran it as Mike's Park View Bowl 1971-1978. Milwaukee Magazine dates it 'since 1947' (the lanes). Used 1978 for the Koz's business; 1947 would be defensible for the lane tavern. Listed for sale Aug 2022 at $499,000, delisted Dec 2022; owner son Justin Kosakowski (spelled Kosakowski in 2022 article vs Kosakoski in 2016) said he planned to keep running it. Lanes are 4 short lanes (Urban Milwaukee 2022 says 17-foot duckpin lanes). Address is 7th St near Lincoln Ave (Urban Milwaukee calls it Historic Mitchell Street neighborhood, not Bay View). No food menu found; food relevance low. Official site kozsminibowl.com could not be loaded (SSL error), so no official hours checked. Jan 2026 evidence is a listing/recommendation, not a visit report."
+ },
+ {
+  "name": "Holler House",
+  "address": "2042 W Lincoln Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "HOLLER HOUSE",
+   "THE HOLLER HOUSE",
+   "GENE AND MARCY'S HOLLER HOUSE",
+   "SKOWRONSKI'S HOLLER HOUSE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "South Side tavern opened by the Skowronski family in 1908 whose two lanes, with hand-set pins, are described as the oldest sanctioned bowling alley in the United States.",
+  "founded": 1908,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.geneandmarcyhollerhouse.com/",
+   "https://en.wikipedia.org/wiki/Holler_House",
+   "https://www.geneandmarcyhollerhouse.com/bowl/",
+   "https://www.geneandmarcyhollerhouse.com/PBA/"
+  ],
+  "open_evidence": "https://www.geneandmarcyhollerhouse.com/ - official site (seen Sep 2026) takes bowling reservations ($75 first hour) and cites a Discover Wisconsin segment aired Dec 8, 2025 naming it one of Milwaukee's top holiday bars, plus January 2025 visits by Charlie Berens and Lindsey Stirling's group.",
+  "founded_source": "https://en.wikipedia.org/wiki/Holler_House",
+  "closed_reason": null,
+  "notes": "Founded Sept 13, 1908 by 'Iron Mike' Skowronski as Skowronski's (Wikipedia); official site says the 3rd-5th generations of the Skowronski family run it 'since 1908'. Marcy Skowronski ran it until her death in December 2019. 'Oldest sanctioned bowling alley in the US' is from Wikipedia and the bar's own site ('oldest certified'); the year the lanes were installed/sanctioned was not verified (Urban Milwaukee's Falcon Bowl article says Falcon Bowl's lanes were sanctioned in 1913, which fits Holler House being older but is not a direct check). Hosted a PBA 'USA vs. The World' event on April 9, 2023 (official site). Hours vary; bowling by reservation only; summer hours limited. The Discover Wisconsin honor is sourced only from the bar's own site. Official site also claims Esquire named it a top 10 bar in America 4 years running (years not given; not listed). No food menu; food relevance low. Not on the National Register per sources checked (Wikipedia does not mention a listing). The business's own site says Discover Wisconsin featured it as a top holiday bar in Milwaukee (2025); only self-reported, so not listed as an honor."
+ },
+ {
+  "name": "Club Garibaldi",
+  "address": "2501 S Superior St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "CLUB GARIBALDI",
+   "CLUB GARIBALDI'S",
+   "GARIBALDI",
+   "CLUB GARIBALDIS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic",
+   "italian"
+  ],
+  "iconic_reason": "Bay View corner bar and music hall in a 1907 Schlitz tied house, owned since 1943 by the Italian American Mutual Aid Society Giuseppe Garibaldi and known for chicken wings.",
+  "founded": 1907,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.clubgaribaldi.com/",
+   "https://urbanmilwaukee.com/2015/03/25/bar-exam-club-garibaldis-very-italian-roots/",
+   "https://urbanmilwaukee.com/2026/09/10/weekend-preview-a-milwaukee-renaissance-fair/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/09/10/weekend-preview-a-milwaukee-renaissance-fair/ - Urban Milwaukee (Sep 10, 2026) previews Strummerfest MKE hosted at Club Garibaldi; official site (seen Sep 2026) lists bar hours daily until 2am and kitchen hours.",
+  "founded_source": "http://www.clubgaribaldi.com/",
+  "closed_reason": null,
+  "notes": "Official site: 'Founded in 1907 and later bought by The Italian-American Mutual Aid Society Giuseppe Garibaldi'. Urban Milwaukee (2015): built 1907 by Joseph Schlitz Brewing Co. as a tied-house tavern, dance hall added 1927, society acquired the building in 1943 and still holds title; Joe Dean was sole proprietor of the bar from about 2003 (current operator as of 2026 not verified). 1907 is the building/tavern start; the 'Club Garibaldi' name dates from the society era (exact year not verified). Food: wings and pub fare (about 25% of business in 2015); official site says Milwaukee Magazine voted it 'Best Wings' (year not given, not listed as an honor). No fish fry found. Also a live-music venue. Chosen for item 9 instead of Kochanski's (see drop list). Its presence in an 'oldest bars in Milwaukee' roundup was not directly verified."
+ },
+ {
+  "name": "Landmark 1850 Inn",
+  "address": "5905 S Howell Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "LANDMARK 1850 INN",
+   "LANDMARK 1850",
+   "LANDMARK 1850 HISTORIC TAVERN",
+   "LANDMARK INN",
+   "NEW COELN HOUSE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Building (New Coeln House) listed on the National Register of Historic Places (1987)"
+  ],
+  "tags": [
+   "tavern",
+   "historic",
+   "pizza"
+  ],
+  "iconic_reason": "Tavern in the former New Coeln House, a mid-1800s brick village inn near the airport that Urban Milwaukee calls Milwaukee's oldest bar, reopened in 2024 after the owner's death.",
+  "founded": 1850,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.landmark1850.com/",
+   "https://en.wikipedia.org/wiki/New_Coeln_House",
+   "https://urbanmilwaukee.com/2023/09/07/eyes-on-milwaukee-milwaukees-oldest-bar-is-for-sale/",
+   "https://urbanmilwaukee.com/2023/09/15/partner-sought-to-reopen-milwaukees-oldest-bar/",
+   "https://urbanmilwaukee.com/2023/12/18/milwaukees-oldest-bar-is-reopening/",
+   "https://urbanmilwaukee.com/2024/04/01/grand-openings-new-bars-and-restaurants-that-opened-in-march-2/",
+   "https://urbanmilwaukee.com/2026/06/30/strip-club-near-airport-closes/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/06/30/strip-club-near-airport-closes/ - Urban Milwaukee (Jun 30, 2026) describes Landmark 1850 Inn, 'recognized as Milwaukee's oldest tavern', as the neighbor of the closed Airport Lounge and says it reopened under new ownership in 2024; official site (seen Sep 2026, copyright 1850-2026) advertises a 175-year tradition and a pizza menu.",
+  "founded_source": "https://www.landmark1850.com/",
+  "closed_reason": null,
+  "notes": "Founding year is disputed: the business uses 1850 (name, '175-year tradition'); Urban Milwaukee (Sep 2023) reports the 1987 National Register nomination dated construction to 1862-1869, another source says late 1840s, and a researcher said it cannot be known whether pre-1858 buildings on the site include the present one; Wikipedia says built 1840-1850. Used 1850 per the business's own claim. Former names: New Coeln House, Deuster's Saloon. Joseph G. Halser III owned it 1983 until his death in 2022; it also closed about 4 years for repairs around 2011. Closed 2022-2024; reopened March 2024 (drinks first, food later) under a partnership of Joseph Halser IV and former employee Linda Garcia (Dec 2023 plan). The Dec 2023 article said burgers and fish fry would continue; the current official homepage shows pizza, and a current fish fry was not verified (not tagged). Urban Milwaukee also notes Puddler's Hall (1873) and The Uptowner (1884) have stronger 'continuously operating' claims. NRHP listing year 1987 from the nomination date cited by Urban Milwaukee/Wikipedia (listing date itself not checked on the NPS database)."
+ },
+ {
+  "name": "O&H Danish Bakery",
+  "address": "5910 Washington Ave",
+  "city": "Racine",
+  "chain": false,
+  "match_names": [
+   "O&H DANISH BAKERY",
+   "O & H DANISH BAKERY",
+   "O&H BAKERY",
+   "O AND H DANISH BAKERY",
+   "O&H DANISH BAKERY WEST RACINE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "kringle",
+   "bakery",
+   "scandinavian"
+  ],
+  "iconic_reason": "Olesen family-owned Danish bakery in Racine since 1949, known for multi-day handmade kringle sold at five area stores and nationally.",
+  "founded": 1949,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.ohdanishbakery.com/about-us",
+   "https://en.wikipedia.org/wiki/O%26H_Danish_Bakery",
+   "https://ohdanishbakery.com/hygge-blog/our-family-history-expanding-on-the-tradition",
+   "https://www.ohdanishbakery.com/locations/danish-bakery/durand-ave",
+   "https://www.ohdanishbakery.com/locations",
+   "https://biztimes.com/oh-danish-bakery-to-open-new-storefront-in-racine-next-week/",
+   "https://visitracinecounty.com/directory/oh-danish-bakery-washington-ave/",
+   "https://onmilwaukee.com/articles/OH-danish-bakery-fall-kringles-2026"
+  ],
+  "open_evidence": "https://onmilwaukee.com/articles/OH-danish-bakery-fall-kringles-2026 - OnMilwaukee article on O&H's fall 2026 limited kringle flavors for September-October (Sept 2026, seen in search results; page itself returned 403); official site ohdanishbakery.com footer (c) 2026 lists Durand Ave store hours; Yelp listing for 4917 Douglas Ave 'Updated September 2026'.",
+  "founded_source": "https://www.ohdanishbakery.com/about-us",
+  "closed_reason": null,
+  "notes": "Founded May 1949 by Danish immigrant Christian Olesen with a partner (Wikipedia; company blog). The original bakery was on Douglas Ave in Racine (the company's locations page says its 4917 Douglas Ave store is 'a few miles north of where it all started', and calls 5910 Washington Ave its newest store); per the company it moved 'down the street' to a larger Douglas Ave building in 1972, and BizTimes (July 16, 2021) reports the original Douglas Ave store closed July 17, 2021 and was replaced by a new storefront at 4917 Douglas Ave (Caledonia per Overture; Racine postal). Address used here is the company headquarters and West Racine store at 5910 Washington Ave (postal city Racine 53406; Overture places it in Mt Pleasant). Other retail stores: 4006 Durand Ave, Racine (opened 1982 per company, described as largest store); 4917 Douglas Ave, Racine/Caledonia; 717 S Sylvania Ave, Sturtevant; 9540 S 27th St, Oak Creek. Search snippet (Journal Times, paywalled via tollbit, not read) says all baking is being consolidated into a new ~$5 million store/HQ at 5910 Washington Ave. Not an honor but noted: President Obama visited in 2010 (Wikipedia). Wikipedia says O&H has won the Racine Journal Times reader survey 'Best Kringle' for over a decade (reader poll, not listed as an honor). Kringle's 2013 designation as Wisconsin state pastry is not an O&H honor. Price tier not set (bakery, no verified current price list)."
+ },
+ {
+  "name": "Bendtsen's Bakery",
+  "address": "3200 Washington Ave",
+  "city": "Racine",
+  "chain": false,
+  "match_names": [
+   "BENDTSEN'S BAKERY",
+   "BENDTSENS BAKERY",
+   "BENDTSEN'S",
+   "BENDTSEN BAKERY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "kringle",
+   "bakery",
+   "scandinavian"
+  ],
+  "iconic_reason": "Bendtsen family bakery in West Racine since 1934 that still hand-rolls its kringle dough, at its only location.",
+  "founded": 1934,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bendtsen%27s_Bakery",
+   "https://www.travelwisconsin.com/wisconsin-specialties/bendtsens-bakery-222692",
+   "http://web.archive.org/web/20250608063653/https://www.bendtsensbakery.com/about",
+   "http://web.archive.org/web/20260304102957/https://www.bendtsensbakery.com/",
+   "https://mylocalnooks.com/wisconsin/hand-rolled-danish-kringle-at-90-year-old-family-bakery-in-racine/",
+   "https://joe.coffee/locations/wi/racine/bendtsens-bakery-racine/"
+  ],
+  "open_evidence": "http://web.archive.org/web/20260304102957/https://www.bendtsensbakery.com/ - official site archived 2026-03-04 with online kringle ordering and a holiday order deadline; mylocalnooks.com feature dated July 28, 2025 describes it operating at 3200 Washington Ave; joe.coffee listing shows current hours Mon-Fri 6-5, Sat 6-4 (undated).",
+  "founded_source": "http://web.archive.org/web/20250608063653/https://www.bendtsensbakery.com/about",
+  "closed_reason": null,
+  "notes": "Founded 1934 by Laurits Bendt Bendtsen (born Odense, Denmark), who bought a business corner in West Racine; the official About page (archived June 2025, by Ben Bendtsen) says the current location has remained its only location and that four generations have worked there. A Journal Times headline (undated in results, not read) reported plans for a second retail bakery/coffee shop in Caledonia; the 2025 About page still says single location, so unclear if it opened. CAUTION: as of 2026-09-25 the domain bendtsensbakery.com did not resolve in DNS (possibly lapsed hosting); newest open evidence found is March 2026, so re-verify. Media features claimed on the official site and Wikipedia (no years verified): Food Network's 'Road Tasted' with Bobby and Jamie Deen, Discover Wisconsin, 'Eat Your Way Across the USA', Roadfood, 'Day Trips from Chicago'. The official site also claims it was named one of America's 100 Best Bakeries by Food & Wine (year not verified), so it is not listed in other_honors."
+ },
+ {
+  "name": "Larsen Bakery",
+  "address": "3311 Washington Ave",
+  "city": "Racine",
+  "chain": false,
+  "match_names": [
+   "LARSEN BAKERY",
+   "LARSEN'S BAKERY",
+   "LARSENS BAKERY",
+   "LARSEN BAKERY INCORPORATED",
+   "LARSEN'S KRINGLE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "kringle",
+   "bakery",
+   "scandinavian"
+  ],
+  "iconic_reason": "West Racine kringle bakery opened by Einer Larsen in 1960 that marketed itself as 'Racine's original kringle'.",
+  "founded": 1960,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.wisn.com/article/kringle-shop-closing-racine-larsens-bakery/44132719",
+   "https://journaltimes.com/news/local/larsen-bakery-closes-its-doors-in-west-racine/article_3c158cfa-055f-11ee-aed7-a38f7f9fa47f.html",
+   "https://journaltimes.com/news/local/larsen-bakery-here-to-stay-will-be-baking-with-old-friends/article_d4426f4c-0632-11ee-9faf-3fa424e1b5e4.html",
+   "https://larsenskringle.com/pages/about-us",
+   "https://visitracinecounty.com/directory/larsen-bakery/",
+   "https://www.travelwisconsin.com/food-drink/sweets-treats/larsen-bakery"
+  ],
+  "open_evidence": "No evidence the 3311 Washington Ave storefront operates: WISN (June 8, 2023) reported it had apparently closed after more than six decades; Yelp lists it as CLOSED (listing updated April 2026, seen in search results).",
+  "founded_source": "https://www.wisn.com/article/kringle-shop-closing-racine-larsens-bakery/44132719",
+  "closed_reason": "The West Racine retail bakery at 3311 Washington Ave closed in early June 2023 after 60+ years (WISN, June 8, 2023: https://www.wisn.com/article/kringle-shop-closing-racine-larsens-bakery/44132719; Journal Times 'Larsen Bakery closes its doors in West Racine', June 2023).",
+  "notes": "Founded 1960 by Einer Larsen; bought in 1969 by Ernie Hutchinson, whose children (Debbie and Don) ran it (Visit Racine County, larsenskringle.com). The brand may continue: a June 2023 Journal Times headline reads 'Larsen bakery here to stay | Will be baking with old friends' (paywalled, not read), and Visit Racine County and Travel Wisconsin now list Larsen Bakery at 9117 Durand Ave, Sturtevant, which is Lehmann's Bakery's address. The larsenskringle.com online shop is still up (footer (c) 2019, hours Wed-Sat), but I found no dated 2025-2026 evidence that Larsen kringle is still sold or has its own storefront. Treat as a closed storefront; re-check if the brand has a new retail home."
+ },
+ {
+  "name": "Kewpee Sandwich Shop",
+  "address": "520 Wisconsin Ave",
+  "city": "Racine",
+  "chain": false,
+  "match_names": [
+   "KEWPEE SANDWICH SHOP",
+   "KEWPEE",
+   "KEWPEE LUNCH",
+   "KEWPEE HAMBURGERS",
+   "KEWPEE RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "burgers",
+   "diner",
+   "historic"
+  ],
+  "iconic_reason": "Downtown Racine hamburger counter at 520 Wisconsin Ave since 1926, one of five remaining restaurants of the Kewpee hamburger brand.",
+  "founded": 1926,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "http://www.vindustries.com/racinehistory/features/kewpee-lunch/",
+   "https://en.wikipedia.org/wiki/Kewpee",
+   "https://www.travelwisconsin.com/food-drink/cafes-coffee-shops/kewpee-sandwich-shop",
+   "https://visitracinecounty.com/directory/kewpee-sandwich-shop/",
+   "https://www.restaurantji.com/wi/racine/kewpee-sandwich-shop-/",
+   "https://milwaukeerecord.com/food-drink/one-of-the-last-remaining-kewpee-hamburgers-locations-still-flourishes-in-downtown-racine/"
+  ],
+  "open_evidence": "https://www.restaurantji.com/wi/racine/kewpee-sandwich-shop-/ - listing shows it open (Mon-Sat 8:15am-2pm, cash only) with the newest review dated May 2025; no closure news found. Weak evidence: nothing from 2026 found.",
+  "founded_source": "http://www.vindustries.com/racinehistory/features/kewpee-lunch/",
+  "closed_reason": null,
+  "notes": "Founding year from the Racine History site (vindustries.com): Dick Sanford opened a Kewpee stand at 520 Wisconsin St in 1926. The task brief suggested 1927, and Visit Racine County only says '1920s'; I found no founding year stated by the business itself. Ownership: Walter Block from 1930, Durkee family from 1957, Kristopeit family from 1968, Richard Buehrens from 2003 (Racine History site). The current building opened in 1997 on the same site, after the 1962-1997 restaurant under a downtown parking structure was torn down. Kewpee is a historic multi-state hamburger brand (Wikipedia: five units left, three in Lima OH, one in Lansing MI, one in Racine). This shop is an independently owned franchise, so chain=false (judgment call). Milwaukee Record article (page returned 403; seen in search results) says it won Journal Times Best Burger reader surveys, including Best Burger and Best Lunch in 2021 (reader polls, not listed as honors). CAUTION: the kewpeelunch.com domain has expired (registrar parking page, Sept 2026) and Facebook/Yelp could not be read, so re-verify it is open. Price tier 1 comes from the restaurantji description (burgers under $5); the allmenus prices are out of date."
+ },
+ {
+  "name": "Wells Brothers Restaurant",
+  "address": "2148 Mead St",
+  "city": "Racine",
+  "chain": false,
+  "match_names": [
+   "WELLS BROTHERS",
+   "WELLS BROTHERS RESTAURANT",
+   "WELLS BROTHERS ITALIAN RESTAURANT",
+   "WELLS BROS",
+   "WELLS BROTHERS PIZZA"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "italian",
+   "pizza",
+   "historic"
+  ],
+  "iconic_reason": "Wells family Italian restaurant at 22nd and Mead since 1921, known for thin-crust pizza and run by the fourth generation.",
+  "founded": 1921,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.wellsbrosracine.com/",
+   "https://www.wellsbrosracine.com/racine-wells-brothers-about",
+   "https://www.wellsbrosracine.com/racine-wells-brothers-press",
+   "https://www.wellsbrosracine.com/racine-wells-brothers-food-menu"
+  ],
+  "open_evidence": "https://www.wellsbrosracine.com/ - official site lists current hours (Tue-Sat) and 2026 closure dates (e.g. July 18-Aug 3 and Sept 5 & 19, 2026; Dec 22, 2026-Jan 4, 2027), fetched 2026-09-25.",
+  "founded_source": "https://www.wellsbrosracine.com/racine-wells-brothers-about",
+  "closed_reason": null,
+  "notes": "The official site says James and Dominic Wells opened it in 1921 at the corner of 22nd and Mead. The task brief suggested 1924, but the business states 1921, and its press page cites TMJ4 and Fox6 stories marking its 100th anniversary. Two fires in 1967 gutted the interior, and it was rebuilt. Owners: James Wells until 1944; sons Tony and Guy until 1999; Bill Rivers and Paula Wells Huck from 1999; Bill Rivers with his daughters since 2016. Postal city is Racine; TMJ4 and Overture place it in the Village of Mount Pleasant. Self-reported and not independently verified: featured on Discover Wisconsin (March 2012) and Around the Corner with John McGivern (2016); Barstool/Portnoy pizza review; 'voted #6 pizza in the nation' (source unnamed); Journal Times 'Top Pizza in Racine' reader-poll wins. None of these are in other_honors. The press page quotes Shepherd Express as saying it has been on some 'best pizza' lists."
+ },
+ {
+  "name": "DeRango's Pizza Palace",
+  "address": "3840 Douglas Ave",
+  "city": "Racine",
+  "chain": false,
+  "match_names": [
+   "DERANGO'S PIZZA PALACE",
+   "DERANGOS PIZZA PALACE",
+   "DERANGO'S",
+   "DERANGOS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "pizza",
+   "italian"
+  ],
+  "iconic_reason": "DeRango family pizzeria on Douglas Ave opened in 1977 by Domenico and Mirella DeRango, part of a Racine pizza family whose first restaurant dates to 1953.",
+  "founded": 1977,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "http://www.vindustries.com/racinehistory/features/derangos/",
+   "https://www.restaurantji.com/wi/racine/derangos-pizza-palace-/"
+  ],
+  "open_evidence": "Unclear. https://www.restaurantji.com/wi/racine/derangos-pizza-palace-/ shows a 'CLOSED' badge but its newest review is dated November 2025 ('Been going here for years!'). The derangos.com site shows 'Site not found' (Sept 2026). The Overture Sept-2026 extract lists it as open, which is not authoritative. No 2026 evidence either way.",
+  "founded_source": "http://www.vindustries.com/racinehistory/features/derangos/",
+  "closed_reason": null,
+  "notes": "Racine History site (vindustries.com): Domenico and Mirella DeRango immigrated in Dec 1959 and worked at his brother's DeRango 'The Pizza King' (opened 1953 at 1439 N Main St). They opened their own restaurant at 3840 Douglas Ave on March 22, 1977. Several separately run DeRango's shops exist, and I did not verify how they are related: DeRango The Pizza King at 3114 Washington Ave, Racine (its site derangotheoriginalpizzaking.com returned an empty page); DeRango's Pizza Delivery at 6100 Washington Ave (site (c) 2025); DeRango's 'The Pizza King' at 2135 31st St, Kenosha (site (c) 2026); plus Overture entries at 4621 6 Mile Rd and 550 3 Mile Rd. Open status is unknown. Include only if a 2026 check confirms it is open. Price tier not set (no current menu found)."
+ },
+ {
+  "name": "Franks Diner",
+  "address": "508 58th St",
+  "city": "Kenosha",
+  "chain": false,
+  "match_names": [
+   "FRANKS DINER",
+   "FRANK'S DINER",
+   "FRANKS DINER KENOSHA",
+   "FRANK'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured on Food Network's Diners, Drive-Ins and Dives (2007)"
+  ],
+  "tags": [
+   "diner",
+   "historic"
+  ],
+  "iconic_reason": "1926 Jerry O'Mahony lunch-car diner in downtown Kenosha known for its Garbage Plate breakfast.",
+  "founded": 1926,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.franksdinerkenosha.com/",
+   "https://www.franksdinerkenosha.com/our-story/",
+   "https://www.franksdinerkenosha.com/media-awards/",
+   "https://www.franksdinerkenosha.com/2025/07/01/what-its-really-like-to-get-the-food-network-spotlight/",
+   "https://en.wikipedia.org/wiki/Frank%27s_Diner",
+   "https://en.wikipedia.org/wiki/List_of_Diners,_Drive-Ins_and_Dives_episodes",
+   "https://www.restaurantji.com/wi/kenosha/franks-diner-/"
+  ],
+  "open_evidence": "https://www.franksdinerkenosha.com/ - official site with current hours, weekly specials 'Posted August 01 2026' and a blog post dated May 19, 2026 (fetched 2026-09-25); restaurantji reviews dated through February 2026.",
+  "founded_source": "https://en.wikipedia.org/wiki/Frank%27s_Diner",
+  "closed_reason": null,
+  "notes": "The business spells its name 'Franks Diner' after the Franks family (founder Anthony Franks per Wikipedia), though it is often written 'Frank's'. The diner car was built in 1926 by the Jerry O'Mahony Co. of Bayonne NJ and has stood at 508 58th St since then. The Franks family ran it until 2001; Schwartz/Groleau/Derwae from 2001; Kevin Ervin and Julie Rittmiller since Dec 2010. DDD: Wikipedia's episode list gives Season 1 'Breakfast' episode (aired May 21, 2007). The restaurant's blog says there was a 2021 'Triple D Nation' revisit, citing Kenosha.com, which I did not check independently. The restaurant also lists Thrillist '21 Best Diners in America', Tasting Table '15 Best Diners', LoveFood 'Best Diner for Breakfast in Wisconsin' and a City of Kenosha 'Historic Landmark Recognition', all without years, so they are not in other_honors. Wikipedia does not mention a National Register listing, so none is claimed. Price tier 1: omelets and pancakes $4-14, full Garbage Plates $15.95-18.95."
+ },
+ {
+  "name": "Mars Cheese Castle",
+  "address": "2800 W Frontage Rd",
+  "city": "Kenosha",
+  "chain": false,
+  "match_names": [
+   "MARS CHEESE CASTLE",
+   "MARS CHEESE",
+   "THE MARS CHEESE CASTLE",
+   "MARS CHEESE CASTLE TAVERN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "cheese",
+   "deli",
+   "bakery",
+   "historic"
+  ],
+  "iconic_reason": "Ventura family cheese shop, deli, bakery and tavern beside I-94 in Kenosha since 1947, housed since 2011 in a castle-style building.",
+  "founded": 1947,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.marscheese.com/about.html",
+   "https://www.marscheese.com/",
+   "https://en.wikipedia.org/wiki/Mars_Cheese_Castle",
+   "https://www.restaurantji.com/wi/kenosha/mars-cheese-castle-/"
+  ],
+  "open_evidence": "https://www.restaurantji.com/wi/kenosha/mars-cheese-castle-/ - listing with a review dated July 2026; official site marscheese.com shows current store, kitchen and tavern hours (9am-7pm daily) and a working online store (fetched 2026-09-25).",
+  "founded_source": "https://www.marscheese.com/about.html",
+  "closed_reason": null,
+  "notes": "Founded 1947 by Mario and Martha Ventura Sr. The official site says it started in a small corner store in downtown Kenosha and later moved near Hwys 41 and 142. Wikipedia says the original highway building burned in 1957 and was replaced nearby, and that the store moved about 50 yards in 2011 for I-94 widening into the current castle-style building, whose 80-ft sign was kept under special Wisconsin Legislature authorization. The third generation of the family runs it now. It is primarily a specialty food store with a deli kitchen and tavern, not a sit-down restaurant. The official site mentions being 'Featured on Zagat's Top Spots in Wisconsin' without a year (not in other_honors). Notable visitors per Wikipedia include JFK and Johnny Cash (not honors). Price tier not set: the only menu found is a 2019 PDF."
+ },
+ {
+  "name": "Tenuta's Delicatessen",
+  "address": "3203 52nd St",
+  "city": "Kenosha",
+  "chain": false,
+  "match_names": [
+   "TENUTA'S DELI",
+   "TENUTAS DELI",
+   "TENUTA'S DELICATESSEN",
+   "TENUTA'S DELICATESSEN & LIQUORS",
+   "TENUTA'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "italian",
+   "deli"
+  ],
+  "iconic_reason": "Tenuta family Italian deli and grocery at 52nd St and 32nd Ave in Kenosha since April 1, 1950, now run by the fourth generation.",
+  "founded": 1950,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.tenutasdeli.com/",
+   "https://www.tenutasdeli.com/about/"
+  ],
+  "open_evidence": "https://www.tenutasdeli.com/ - official site with 2026 posts (Kenosha Italian Fest ticket giveaway dated August 25, 2026; summer pizza oven giveaway dated July 10, 2026), fetched 2026-09-25.",
+  "founded_source": "https://www.tenutasdeli.com/about/",
+  "closed_reason": null,
+  "notes": "John N. Tenuta and his wife Lydia opened Tenuta's Delicatessen on April 1, 1950 at the SW corner of 52nd St and 32nd Ave, where it still stands (official About page). Ralph Tenuta (died Jan 15, 2020), then Chris Tenuta, now Dan and Nick Tenuta. The About page has an internal inconsistency: it says John left Italy in 1920 and also in 1924. It is a deli, grocery and liquor store; I found no dine-in restaurant confirmed at this address. The task brief combined 'Tenuta's Italian Restaurant & Deli'. There is also a Tenuta's Italian Restaurant (Overture: 7321 60th Ave, Kenosha; tenutaspizza.com returned 403; newest restaurantji review Sept 2022). Its relationship to the deli, its founding year and its current status are unverified, so it is not included. Price tier not set (deli/grocery)."
+ },
+ {
+  "name": "The Brat Stop",
+  "address": "12304 75th St",
+  "city": "Kenosha",
+  "chain": false,
+  "match_names": [
+   "BRAT STOP",
+   "THE BRAT STOP",
+   "WORLD FAMOUS BRAT STOP",
+   "BRAT STOP KENOSHA"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bratwurst",
+   "cheese",
+   "cheese curds",
+   "tavern"
+  ],
+  "iconic_reason": "Rasmussen family bar, restaurant and cheese shop by I-94 near the Illinois line, serving bratwurst since 1961.",
+  "founded": 1961,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://bratstop.com/",
+   "https://bratstop.com/about/",
+   "https://bratstop.com/menu/",
+   "https://bratstop.com/wp-json/wp/v2/pages?per_page=20&_fields=slug,modified"
+  ],
+  "open_evidence": "https://bratstop.com/menu/ - official site with current menu and daily hours (8am-close); the site's WordPress API shows the menu page modified 2026-07-06 and the events/home pages modified 2026-04-27 (checked 2026-09-25).",
+  "founded_source": "https://bratstop.com/about/",
+  "closed_reason": null,
+  "notes": "The official site says it has been 'making Wisconsin Legendary since 1961' and that owner/founder Gerald Rasmussen bought the original 8-stool bar and cheese shop from his parents at age 18. It is unclear whether 1961 is when the parents started or when Gerald took over, so the parents' business may be older. I found no independent source (no Wikipedia article) for the founding year or for moves. Overture also lists 'Brat Stop Too' at 5511 6th Ave, Kenosha (not verified). Also runs The Parkway Chateau banquet hall. No TV honors verified. Price tier 1: brats $11.99-13.99, sandwiches $8.49-18.49."
+ },
+ {
+  "name": "The Spot Drive-In",
+  "address": "2117 75th St",
+  "city": "Kenosha",
+  "chain": false,
+  "match_names": [
+   "THE SPOT DRIVE-IN",
+   "SPOT DRIVE-IN",
+   "SPOT DRIVE IN",
+   "THE SPOT",
+   "SPOT DRIVE-IN KENOSHA"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "drive-in",
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Carhop drive-in on 75th St in Kenosha since July 4, 1945, known for hamburgers and house-made root beer under its red neon Spot sign.",
+  "founded": 1945,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.spotdrivein.com/",
+   "https://www.spotdrivein.com/history/",
+   "https://www.spotdrivein.com/menu/",
+   "https://direct.chownow.com/order/28595/locations/42330",
+   "https://www.restaurantji.com/wi/kenosha/the-spot-drive-in-/"
+  ],
+  "open_evidence": "https://direct.chownow.com/order/28595/locations/42330 - the official site's ChowNow online ordering for 'Spot Drive-in - Kenosha' (2117 75th St) was live on 2026-09-25, with no closures and next pickup time 11:15am that day; official site footer (c) 2026 lists hours of 11am-2am daily.",
+  "founded_source": "https://www.spotdrivein.com/history/",
+  "closed_reason": null,
+  "notes": "Harold and Janet DuBois opened it on July 4, 1945, at the same address it occupies today; the original small building was later replaced by a larger one (official History page). Son Chuck DuBois and wife Nancy ran it until they retired in summer 2019. Robert and Peter Lee now operate it, with Katherine Lee as general manager. Root beer and orange soda are made on site. No verified TV honors. Price tier 1 is based on the '$' rating on restaurantji; the official menu shows no prices."
+ },
+ {
+  "name": "Kiltie Drive-In",
+  "address": "N48W36154 E Wisconsin Ave",
+  "city": "Oconomowoc",
+  "chain": false,
+  "match_names": [
+   "KILTIE DRIVE-IN",
+   "KILTIE DRIVE IN",
+   "THE KILTIE",
+   "KILTIE",
+   "KILTIES"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "drive-in",
+   "frozen custard",
+   "burgers",
+   "bratwurst",
+   "historic"
+  ],
+  "iconic_reason": "Seasonal carhop drive-in near Lac La Belle that has served burgers, brats and custard since shortly after World War II.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.wisn.com/article/inside-the-kiltie-drive-in-a-nearly-80-year-old-oconomowoc-food-favorite/62136820",
+   "https://www.gmtoday.com/oconomowoc_enterprise/business/kiltie-drive-in-new-owners/article_c53e671b-3ef7-4dfc-850c-b2329260ef3e.html",
+   "https://lakecountryfamilyfun.com/the-kiltie-is-open/",
+   "https://lakecountrytribune.com/end-of-summer-tradition-the-kiltie-drive-in-closes-for-the-season-in-oconomowoc/",
+   "https://www.travelwisconsin.com/dining/kiltie-drive-in-221384"
+  ],
+  "open_evidence": "https://www.gmtoday.com/oconomowoc_enterprise/business/kiltie-drive-in-new-owners/article_c53e671b-3ef7-4dfc-850c-b2329260ef3e.html - Oconomowoc Enterprise reports new owners Nikki and Paul Nickolaus taking over for the 2026 season (April 9, 2026); https://lakecountryfamilyfun.com/the-kiltie-is-open/ - 'Kiltie flags are flying', open 10am-8pm for 2026 season (April 10, 2026)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year uncertain: WISN (Sept 12, 2024) says built shortly after WWII 'around 1946 or 1947'; a manager quoted by OnMilwaukee said 1947 or 1948; a local-history Facebook group post says opened 1947; a family-travel blog says 1948. Left null. Seasonal (roughly April to mid-September), cash only, so it may be closed for the season on 2026-09-25 without being permanently closed. Ownership changed for 2026 (Nikki and Paul Nickolaus, longtime former staff). Price tier not set: no current priced menu found. Postal city Oconomowoc; the site is in the Town of Oconomowoc/Lac La Belle area."
+ },
+ {
+  "name": "Weissgerber's Gasthaus",
+  "address": "2720 N Grandview Blvd",
+  "city": "Waukesha",
+  "chain": false,
+  "match_names": [
+   "WEISSGERBER'S GASTHAUS",
+   "WEISSGERBERS GASTHAUS",
+   "WEISSGERBER GASTHAUS",
+   "THE GASTHAUS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "german"
+  ],
+  "iconic_reason": "Family-run German restaurant at Grandview Blvd and Silvernail Rd in Waukesha for 33 years, known for its Stein Club, until it closed in 2016.",
+  "founded": 1983,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.cbs58.com/news/weissgerber-gasthaus-to-close-after-33-years-in-waukesha",
+   "https://www.cbs58.com/news/its-really-difficult-to-say-goodbye-waukesha-gasthaus-closes-after-33-years",
+   "https://biztimes.com/weissgerbers-gasthaus-building-sold-for-1-6-million/",
+   "https://www.thegoldenmast.com/about/"
+  ],
+  "open_evidence": "https://www.cbs58.com/news/its-really-difficult-to-say-goodbye-waukesha-gasthaus-closes-after-33-years - reports final night of service (June 26, 2016); Yelp listing marked CLOSED (2026)",
+  "founded_source": "https://www.thegoldenmast.com/about/",
+  "closed_reason": "Closed permanently June 25, 2016 after 33 years; owner Hans Weissgerber Jr. was in his 70s with no family successor after his partner/brother Jack died in 2013. The building sold for $1.58 million to CFT Developments (Panda Restaurant Group) for a retail/restaurant redevelopment. Sources: https://www.cbs58.com/news/its-really-difficult-to-say-goodbye-waukesha-gasthaus-closes-after-33-years , https://biztimes.com/weissgerbers-gasthaus-building-sold-for-1-6-million/",
+  "notes": "Founded 1983 per the Weissgerber family's Golden Mast Inn history page ('the Gasthaus (1983)'), consistent with CBS58's '33 years' at the June 2016 closing. Opened after 1980, so it may fall below a pre-1980 'long-running' cutoff. The family's Golden Mast Inn (Okauchee, 1967) is a separate, still-open business listed in this file."
+ },
+ {
+  "name": "The Fox & Hounds Restaurant & Tavern",
+  "address": "1298 Friess Lake Rd",
+  "city": "Hubertus",
+  "chain": false,
+  "match_names": [
+   "THE FOX & HOUNDS RESTAURANT & TAVERN",
+   "FOX & HOUNDS",
+   "FOX AND HOUNDS",
+   "FOX & HOUNDS RESTAURANT",
+   "FOX AND HOUNDS RESTAURANT",
+   "THE FOX AND HOUNDS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "fish fry",
+   "prime rib",
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Restaurant and tavern near Holy Hill that the Wolf family opened in 1933 around an 1845 cabin that had become a fox-hunt headquarters.",
+  "founded": 1933,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 4,
+  "open": true,
+  "sources": [
+   "https://foxandhoundsrestaurant.com/about",
+   "https://foxandhoundsrestaurant.com/menu",
+   "https://foxandhoundsrestaurant.com/events",
+   "https://www.travelwisconsin.com/food-drink/restaurants/the-fox-hounds-restaurant-tavern"
+  ],
+  "open_evidence": "https://foxandhoundsrestaurant.com/events - official site lists live music from 9/26 through 12/31, page updated 2026-09-24; homepage carries a fall 2026 slider and September 2026 video plus current hours (checked 2026-09-25)",
+  "founded_source": "https://foxandhoundsrestaurant.com/about",
+  "closed_reason": null,
+  "notes": "Closure/reopening history NOT verified: the official site calls it 'The New Fox & Hounds Restaurant & Tavern' and its media dates back to April 2021, which fits a past closure and relaunch, but I found no dated source for when it closed, who reopened it, or when (web-search budget ran out). Building: one-room cabin built 1845 by Washington County's first clerk (per the restaurant's own history). Dinner entrees currently $42.99-$79.99 (most over $50), which gives price tier 4, but the restaurant runs buy-one-get-one entree promotions. Friday all-you-can-eat haddock fish fry. The menu is steak, prime rib and fish fry (supper-club-like), but it calls itself a 'Restaurant & Tavern'. Postal address Hubertus (Town of Richfield, Washington County)."
+ },
+ {
+  "name": "Weissgerber's Golden Mast Inn",
+  "address": "W349N5293 Lacys Ln",
+  "city": "Okauchee",
+  "chain": false,
+  "match_names": [
+   "WEISSGERBER'S GOLDEN MAST INN",
+   "WEISSGERBERS GOLDEN MAST INN",
+   "GOLDEN MAST INN",
+   "THE GOLDEN MAST",
+   "GOLDEN MAST"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "german",
+   "fish fry"
+  ],
+  "iconic_reason": "German restaurant on Okauchee Lake opened in 1967 by the Weissgerber family, who still run it.",
+  "founded": 1967,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.thegoldenmast.com/about/",
+   "https://www.thegoldenmast.com/dinner-menu/",
+   "https://www.thegoldenmast.com/oktoberfest/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/golden-mast-inn",
+   "https://www.visitwaukeshacounty.com/directory/listing/weissgerbers-golden-mast-inn"
+  ],
+  "open_evidence": "https://www.thegoldenmast.com/oktoberfest/ - official site advertises Oktoberfest on Sunday, September 27, 2026; homepage shows current hours and a notice about closing Wed Aug 5 [2026] for a private event (checked 2026-09-25)",
+  "founded_source": "https://www.thegoldenmast.com/about/",
+  "closed_reason": null,
+  "notes": "Opened June 15, 1967 by Hans Weissgerber Sr., Maria and Hans Jr. in the former Surf Resort (earlier Lacy's Resort and Dance Hall), per the restaurant's history page; Hans Jr. and his daughter Lisa Marks run it now. Dinner entrees $32-$83 (Wiener schnitzel $42, sauerbraten $39) and include soup or salad, bread and cheese pate, a supper-club-style format; Travel Wisconsin and Visit Waukesha County list it as German/European, so it was kept here rather than as a supper club. Check it isn't duplicated by the supper-club agent. Overture lists the postal city as Oconomowoc; the official site and Travel Wisconsin say Okauchee, WI 53069."
+ },
+ {
+  "name": "The Elegant Farmer",
+  "address": "1545 Main St",
+  "city": "Mukwonago",
+  "chain": false,
+  "match_names": [
+   "THE ELEGANT FARMER",
+   "ELEGANT FARMER",
+   "ELEGANT FARMER MARKET",
+   "DAVELMER MARKET"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Won the brown bag apple pie challenge on Food Network's Throwdown! with Bobby Flay (season 5, episode BT0507)"
+  ],
+  "tags": [
+   "bakery",
+   "pie",
+   "farm market"
+  ],
+  "iconic_reason": "Farm market and bakery that grew from the Scheel family's 1946 dairy farm and is known for its apple pie baked in a paper bag.",
+  "founded": 1946,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.elegantfarmer.com/our-history/",
+   "https://www.elegantfarmer.com/",
+   "https://en.wikipedia.org/wiki/Throwdown!_with_Bobby_Flay"
+  ],
+  "open_evidence": "https://www.elegantfarmer.com/ - official site lists daily market hours, Harvest Fest picking for September 26-27 [2026], and announces groundbreaking on a new event venue in early November 2026 (checked 2026-09-25)",
+  "founded_source": "https://www.elegantfarmer.com/our-history/",
+  "closed_reason": null,
+  "notes": "The founding date depends on what counts: the business says it 'began back in 1946' as brothers Dave and Elmer Scheel's dairy farm; they focused on the Davelmer Market by 1958; Dan and Karen Scheel renamed it The Elegant Farmer in 1970. Owners since 2006 have been former employees (Bauer/Schmidt); Keith and Tina Schmidt's family took over day-to-day operations in January 2023. It is a farm market and bakery, not a sit-down restaurant, so price_tier is null. The Throwdown air year is not on Wikipedia (season 5 is roughly 2008-09, not verified). The site also cites Wall Street Journal, Gourmet and Milwaukee Magazine praise and a 'Best of the Batch 2026' award without dates or granting bodies, so these are not listed as honors. Address listed as '1545 Main Street Hwys ES & J'."
+ },
+ {
+  "name": "Popeye's on Lake Geneva",
+  "address": "811 Wrigley Dr",
+  "city": "Lake Geneva",
+  "chain": false,
+  "match_names": [
+   "POPEYE'S ON LAKE GENEVA",
+   "POPEYES ON LAKE GENEVA",
+   "POPEYE'S GALLEY AND GROG",
+   "NICK'S ON THE LAKE @ POPEYE'S",
+   "NICK'S ON THE LAKE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "rotisserie",
+   "fish fry",
+   "burgers"
+  ],
+  "iconic_reason": "Family-run lakefront restaurant on Wrigley Drive opened in 1971 by Nick and Veronica Anagnos, known for its outdoor charcoal rotisserie of chicken, pork and lamb.",
+  "founded": 1971,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.popeyeslkg.com/about",
+   "https://www.popeyeslkg.com",
+   "https://www.popeyeslkg.com/menu"
+  ],
+  "open_evidence": "https://www.popeyeslkg.com - official site shows current hours (Mon-Thu 11:30-8:30, Sat to 9:30), online reservations and loyalty signup; page assets updated 2026-06-03 (checked 2026-09-25). No independent 2025-2026 article found.",
+  "founded_source": "https://www.popeyeslkg.com/about",
+  "closed_reason": null,
+  "notes": "The founding year differs on the official site: the About page says 'opened in July of 1971', while the homepage says 1972. 1971 used. The site now brands it 'Nick's on the Lake @ Popeye's' (Nick Anagnos died in 2011; his son Dimitri runs it), and the menu page calls it 'Popeye's Galley and Grog'. When the Nick's on the Lake branding was added was not verified. The outdoor rotisserie dates from 1985. It also offers an all-you-can-eat Friday fish fry. Sources are only the official site: independent news sites (Lake Geneva Regional News) returned 429 errors and the web-search budget was used up. Not related to the Popeyes Louisiana Kitchen chain; avoid bare 'POPEYES' matching."
+ },
+ {
+  "name": "Chuck's Lakeshore Inn",
+  "address": "352 Lake St",
+  "city": "Fontana",
+  "chain": false,
+  "match_names": [
+   "CHUCK'S LAKESHORE INN",
+   "CHUCKS LAKESHORE INN",
+   "CHUCK'S",
+   "THE BAR AT CHUCK'S",
+   "LAKESHORE INN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "burgers",
+   "historic"
+  ],
+  "iconic_reason": "Lakefront tavern on Fontana's Geneva Lake shore that has run as 'Chuck's' since 1959 in the former 1891 Tyrell home that later became an inn.",
+  "founded": 1959,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://chuckslakeshoreinn.com/about/",
+   "https://chuckslakeshoreinn.com/menu/"
+  ],
+  "open_evidence": "https://chuckslakeshoreinn.com/menu/ - official site's current menu page updated 2026-08-12 with August 2026 menu images; footer (c) 2026 (checked 2026-09-25)",
+  "founded_source": "https://chuckslakeshoreinn.com/about/",
+  "closed_reason": null,
+  "notes": "Founded year is when Chuck and Betty (Freese) Gasser took over the Lakeshore Inn and made it 'Chuck's' (1959). The building dates from 1891; it became an inn after 1908, was the Green Tree Inn in the 1930s, then the Freese family's Lakeshore Inn. Gordy Whowell bought it in 1969 and it is now run by the James Whowell family. A fire destroyed the building Dec 15, 1987, and it reopened July 27, 1988. Primarily a bar with food (burgers, sandwiches); price tier unknown because the menu is image-only. Sourced only from the official site (web-search budget used up). Overture lists the city as Fontana-on-Geneva Lake (53125)."
+ },
+ {
+  "name": "Charcoal Inn",
+  "address": "1313 S 8th St",
+  "city": "Sheboygan",
+  "chain": false,
+  "match_names": [
+   "CHARCOAL INN",
+   "CHARCOAL INN SOUTH",
+   "CHARCOAL INN NORTH",
+   "THE CHARCOAL INN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bratwurst",
+   "burgers"
+  ],
+  "iconic_reason": "Sheboygan charcoal-grill sandwich shop known for its double brat on a hard roll, with a south-side (S 8th St) and a north-side (Geele Ave) location.",
+  "founded": 1984,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.sheboygansun.com/business/charcoal-inn-south-now-for-sale-as-owner-looks-to-retire/article_b285b674-31b4-11ec-ab50-2b79de8b0065.html",
+   "http://web.archive.org/web/20241114120723/https://www.chumpbait.com/p/charcoal-inn-south-closes",
+   "http://web.archive.org/web/20240709153344/https://roadfood.com/restaurants/charcoal-inn-sheboygan-brats/",
+   "https://rcsempowers.com/rcs-hires-charcoal-inn-familiar-faces/",
+   "https://www.foodnetwork.com/restaurants/wi/charcoal-inn-restaurant",
+   "https://roadfood.com/restaurants/charcoal-inn-sheboygan-brats",
+   "https://www.yelp.com/biz/charcoal-inn-south-sheboygan-2",
+   "https://www.yelp.com/biz/charcoal-inn-north-sheboygan"
+  ],
+  "open_evidence": "No evidence of operation found for either location; Yelp lists Charcoal Inn South (1313 S 8th St) as CLOSED (listing updated Aug 2026) and Charcoal Inn North (1637 Geele Ave) as CLOSED (updated May 2026).",
+  "founded_source": "http://web.archive.org/web/20241114120723/https://www.chumpbait.com/p/charcoal-inn-south-closes",
+  "closed_reason": "Charcoal Inn South closed on Aug 14, 2021 (Roadfood reader update) when owner Scott Prescher cited 'unsustainable staff shortages' (Chumpbait, Sept 12, 2021: http://web.archive.org/web/20241114120723/https://www.chumpbait.com/p/charcoal-inn-south-closes); on Oct 19, 2021 he put it up for sale ($249,900) as he retired (Sheboygan Sun, Oct 20, 2021: https://www.sheboygansun.com/business/charcoal-inn-south-now-for-sale-as-owner-looks-to-retire/article_b285b674-31b4-11ec-ab50-2b79de8b0065.html). Charcoal Inn North stayed open at that point but later closed; nonprofit RCS Empowers said it had bought 'the property and building' from the Charcoal Inn owner and hired two cooks who had worked at Charcoal Inn North for 30+ years (RCS post dated Sept 1, 2022, seen only as a search snippet: https://rcsempowers.com/rcs-hires-charcoal-inn-familiar-faces/). Both locations are listed as closed on Yelp in 2026.",
+  "notes": "Two locations: Charcoal Inn South, 1313 S 8th St (the one on Food Network's and Roadfood's pages) and Charcoal Inn North, 1637 Geele Ave (Calumet Dr/Geele Ave). Per Chumpbait (Sept 12, 2021; live page now 404s, so cited via archive), Roger Prescher and his son Scott bought the South building, remodeled it and opened in summer 1984; they opened Charcoal Inn North in 1987 in a small restaurant they bought. The article does not say what operated at 1313 S 8th St before 1984. One listing says South 'since 1986', which disagrees. The exact North closing date is not confirmed; it was probably by Sept 2022. The RCS page now returns 403/404 and has no Wayback copy, so the RCS details come from a search-result summary, and it is not stated outright that the building RCS bought is the North one. The Overture extract still lists both as open, which is stale. The Food Network page lists the South location but does not confirm a TV appearance. Price tier left null because it is closed."
+ },
+ {
+  "name": "City Bakery",
+  "address": "1102 Michigan Ave",
+  "city": "Sheboygan",
+  "chain": false,
+  "match_names": [
+   "CITY BAKERY",
+   "CITY BAKERY LLC",
+   "SHEBOYGAN CITY BAKERY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Winner of the Sheboygan Sun 'Sheboygan Says' reader vote for Sheboygan's best hard roll (2021)"
+  ],
+  "tags": [
+   "bakery",
+   "german"
+  ],
+  "iconic_reason": "Sheboygan bakery open since 1939 that bakes Sheboygan hard rolls in a brick hearth oven using a sponge-and-dough method.",
+  "founded": 1939,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.sheboygancitybakery.com/",
+   "https://www.sheboygansun.com/news/johnston-city-rosa-bakeries/article_b96d4a63-4d25-4838-b59b-195daf9b0d73.html",
+   "https://www.sheboygansun.com/business/sheboygan-says-city-bakery-runs-away-with-voting-for-sheboygans-best-hard-roll/article_f068bcfa-c541-11eb-a249-2362a54c812b.html",
+   "https://www.tastingtable.com/1429205/wisconsin-sheboygan-bread-rolls-little-known-regional-icon/",
+   "https://visitsheboygan.com/listing/city-bakery/444/"
+  ],
+  "open_evidence": "https://www.sheboygansun.com/news/johnston-city-rosa-bakeries/article_b96d4a63-4d25-4838-b59b-195daf9b0d73.html - Sheboygan Sun profile of the bakery at 1102 Michigan Ave, owner Rick Navis, making 500-600 hard rolls a day (Sept 23, 2025); the official site lists current hours Mon 6-5, Tue-Fri 5-5, Sat 5-3 (viewed Sept 2026).",
+  "founded_source": "https://www.sheboygancitybakery.com/",
+  "closed_reason": null,
+  "notes": "Founded in 1939, per the bakery ('locally owned and operated since 1939'); the Sheboygan Sun (2025) says German immigrant Frederick Shrewi founded it. Owner Rick Navis: the Sun says he has owned it since 1988, while Tasting Table (Oct 2023) says 31 years (about 1992), so the year he took over is uncertain. I read the Sheboygan Sun 'Sheboygan Says' article myself: City Bakery won with 56.8% of the vote, against Johnston's 21.3% and West Side Bakery 17.5% (2021). The article ID suggests June 2021, but I did not see an exact date. Price tier 1 is inferred from its being a bakery; I found no menu with prices."
+ },
+ {
+  "name": "Johnston's Bakery",
+  "address": "1227 Superior Ave",
+  "city": "Sheboygan",
+  "chain": false,
+  "match_names": [
+   "JOHNSTON'S BAKERY",
+   "JOHNSTONS BAKERY",
+   "JOHNSTON BAKERY INC",
+   "JOE JOHNSTON'S BAKERY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bakery"
+  ],
+  "iconic_reason": "Family-owned Sheboygan bakery, founded in 1950 and on Superior Ave since 1957, that calls itself the 'Home of the Sheboygan Hard Roll' and also runs a frozen-dough plant.",
+  "founded": 1950,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://johnstonsbakery.com/",
+   "https://johnstonsbakery.com/about/",
+   "https://johnstonsbakery.com/sheboygan-hard-rolls/",
+   "https://www.sheboygansun.com/news/johnston-city-rosa-bakeries/article_b96d4a63-4d25-4838-b59b-195daf9b0d73.html",
+   "https://www.tastingtable.com/1429205/wisconsin-sheboygan-bread-rolls-little-known-regional-icon/"
+  ],
+  "open_evidence": "https://www.sheboygansun.com/news/johnston-city-rosa-bakeries/article_b96d4a63-4d25-4838-b59b-195daf9b0d73.html - Sheboygan Sun profile of the bakery at 1227 Superior Ave, owner John Johnston, about 60 employees (Sept 23, 2025); the official site shows hours Mon-Fri 5-4, Sat 5-1, with a (c) 2026 footer (viewed Sept 2026).",
+  "founded_source": "https://johnstonsbakery.com/",
+  "closed_reason": null,
+  "notes": "'Established in 1950' per the bakery. It started as L.S.P. Bakery, a wholesale bakery in Sheboygan Falls, in 1950; moved into the Sheboygan building as a retail store in 1957; and became Joe Johnston's Bakery in 1960 (Sheboygan Sun, 2025). The frozen-dough plant is a second facility (the Overture extract lists 3228 Weeden Creek Rd). The bakery's own site lists Sheboygan Press Readers' Choice awards for Best Bakery and Best Donuts (2013-2023). These are self-reported, so I left them out of other_honors. Added under 'other Sheboygan hard-roll icon' (task item 6)."
+ },
+ {
+  "name": "Miesfeld's Triangle Market",
+  "address": "4811 Venture Dr",
+  "city": "Sheboygan",
+  "chain": false,
+  "match_names": [
+   "MIESFELD'S TRIANGLE MARKET",
+   "MIESFELDS TRIANGLE MARKET",
+   "MIESFELD'S MARKET",
+   "MIESFELD'S MEAT MARKET",
+   "MIESFELD'S",
+   "MIESFELDS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bratwurst",
+   "meat market"
+  ],
+  "iconic_reason": "Family meat market founded in Sheboygan in 1941, known for its Grand Champion bratwurst and more than 25 bratwurst flavors, which it also supplies to local restaurants and grocers.",
+  "founded": 1941,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://miesfelds.com/",
+   "https://miesfelds.com/about",
+   "https://miesfelds.com/news",
+   "https://www.travelwisconsin.com/things-to-do/shopping/miesfeld-s-market",
+   "https://www.wisn.com/article/sheboygan-meat-market-25-types-of-bratwurst-miesfeld/44410628",
+   "https://www.yahoo.com/news/articles/johnsonville-brat-sartori-cheese-among-093200959.html"
+  ],
+  "open_evidence": "https://www.yahoo.com/news/articles/johnsonville-brat-sartori-cheese-among-093200959.html - Sheboygan Press article (Sept 18, 2026) says Miesfeld's Triangle Market's no-salt bratwurst was a 2025 nominee in the 'Coolest Thing Made in Wisconsin' contest; Yelp listing at 4811 Venture Dr updated July 2026; the Sheboygan Sun site navigation carries a 'Miesfeld's Weekly Specials' section (seen Sept 2026).",
+  "founded_source": "https://miesfelds.com/about",
+  "closed_reason": null,
+  "notes": "Retail meat market and wholesale sausage maker, not a sit-down restaurant, so it may not fit a restaurant board. History per the company: 'Grandpa' Chuck Miesfeld opened the original shop in 1941; the Triangle Market was built in 1961; the family partnered with the Sachse family in late 2018; and a 15,000 sq ft expansion opened in May 2022. The site mentions a new store by 2000 but does not say when it moved to Venture Dr. The company claims 70+ state and national sausage awards and Wisconsin Association of Meat Processors awards (2021), but I found no itemized list, so other_honors is empty."
+ },
+ {
+  "name": "The Immigrant Restaurant",
+  "address": "419 Highland Dr",
+  "city": "Kohler",
+  "chain": false,
+  "match_names": [
+   "THE IMMIGRANT RESTAURANT",
+   "IMMIGRANT RESTAURANT",
+   "THE IMMIGRANT RESTAURANT & WINERY",
+   "THE IMMIGRANT DINING ROOM & WINERY BAR",
+   "THE IMMIGRANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Forbes Travel Guide Four-Star restaurant (current 2026 listing)",
+   "Housed in The American Club, listed on the National Register of Historic Places (1978)"
+  ],
+  "tags": [
+   "fine dining",
+   "historic"
+  ],
+  "iconic_reason": "Tasting-menu restaurant in The American Club hotel in Kohler, with six dining rooms themed on the nationalities of early Wisconsin settlers.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 4,
+  "open": true,
+  "sources": [
+   "https://www.kohlerwisconsin.com/dining/dining-locations-list-page/immigrant-restaurant",
+   "https://www.kohlerwisconsin.com/content/dam/kohler-destinations/pdf_resource/dk/dining/immigrant-restaurant/immigrant_dinner_menu.pdf",
+   "https://www.forbestravelguide.com/restaurants/kohler-wisconsin/the-immigrant-restaurant-at-the-american-club",
+   "https://www.kohlerwisconsin.com/explore-more/activities-and-events/the-american-club",
+   "https://www.historichotels.org/us/hotels-resorts/the-american-club/history.php",
+   "https://en.wikipedia.org/wiki/American_Club_(Kohler,_Wisconsin)"
+  ],
+  "open_evidence": "https://www.kohlerwisconsin.com/content/dam/kohler-destinations/pdf_resource/dk/dining/immigrant-restaurant/immigrant_dinner_menu.pdf - current dinner menu (five-course tasting menu $165, seven-course $195; file last modified Sept 16, 2026); the official page lists hours Tue-Sat 5:30-10pm; Forbes Travel Guide's 2026 site shows it as Four-Star (viewed Sept 2026).",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year not found. The American Club (built 1918 as housing for immigrant workers) was renovated from 1978 over three years and reopened as a resort hotel around 1981 (Kohler and Historic Hotels timeline). The restaurant probably opened with the hotel around 1981, but I could not source that, so founded is null. Name check: still 'The Immigrant Restaurant' on the official site; the menu logo reads 'The Immigrant Restaurant & Winery', and the bar is 'The Immigrant Winery' (Tue-Sat from 4pm; the Overture extract lists 'The Immigrant Dining Room & Winery Bar' at 444 Highland Dr, the resort's main address). Menu is tasting-only in the dining room, with a la carte only in the Winery Bar. Forbes names Thomas Hauck as chef (may be dated). Search snippets mention a AAA Four Diamond rating and a Wine Spectator Best of Award of Excellence, but I did not verify either, so they are not listed. Kohler Co. resort restaurant, not a chain. I found no 2025-26 renovation or renaming of the restaurant. A search snippet (unverified) said the adjacent Carriage House hotel closed in 2025 for renovation."
+ },
+ {
+  "name": "Siebkens Stop-Inn Tavern",
+  "address": "284 S Lake St",
+  "city": "Elkhart Lake",
+  "chain": false,
+  "match_names": [
+   "SIEBKENS RESORT",
+   "SIEBKENS STOP-INN TAVERN",
+   "STOP-INN TAVERN",
+   "SIEBKENS",
+   "SIEBKEN'S RESORT",
+   "SIEBKENS TAVERN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic",
+   "fish fry",
+   "cheese curds"
+  ],
+  "iconic_reason": "Tavern at Siebkens Resort, run by the Siebken family since 1916, that became the gathering spot for drivers and crews at the Elkhart Lake road races and Road America.",
+  "founded": 1916,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://www.siebkens.com/",
+   "https://www.siebkens.com/heritage/",
+   "https://www.siebkens.com/dine/stop-inn-tavern/",
+   "https://www.siebkens.com/dine/"
+  ],
+  "open_evidence": "https://www.siebkens.com/dine/stop-inn-tavern/ - fall seasonal hours (Thu-Fri 4-10pm food, Sat-Sun 11-10) plus extra SCCA Runoffs hours for Monday, Sept 28 and Wednesday, Sept 30 (2026 dates); current menu with a $28 all-day fish fry; (c) 2026 footer (viewed Sept 25, 2026).",
+  "founded_source": "https://www.siebkens.com/heritage/",
+  "closed_reason": null,
+  "notes": "1916 is when Herman and Laura Siebken moved to Elkhart Lake, opened the Elm Grove Coffee Garden and bought the Elm Park Hotel (now Siebkens Resort), per the resort's heritage page. I found no separate founding year for the Stop-Inn Tavern itself. The family has run it for four generations (Ollie Siebken from 1946; Pam and Douglas Lueck from 1977; now granddaughters Laurie and Lisa). Also on site: PAM'S dining room (seasonal, May-Sept 20) and the Hard Left Lounge (winter pop-up). Per the resort, Paul Newman stayed in Room 11 while filming 'Winning' (1969). Mains are about $16-33, so tier 2. Its Facebook page is named 'Siebkens Resort Tavern - The Last Open Bar'."
+ },
+ {
+  "name": "Schulz's Restaurant",
+  "address": "1644 Calumet Dr",
+  "city": "Sheboygan",
+  "chain": false,
+  "match_names": [
+   "SCHULZ'S RESTAURANT",
+   "SCHULZS RESTAURANT",
+   "SCHULZ'S",
+   "SCHULZ RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "bratwurst",
+   "burgers",
+   "diner"
+  ],
+  "iconic_reason": "Family-run Sheboygan restaurant since 1953 that serves charcoal-grilled brats and steak sandwiches on hard rolls, using meat from Miesfeld's.",
+  "founded": 1953,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": true,
+  "sources": [
+   "https://www.schulzsrestaurant.com/",
+   "https://www.schulzsrestaurant.com/_files/ugd/9bef75_6e9daa56dcea4796823bb6b485e4385f.pdf"
+  ],
+  "open_evidence": "https://www.schulzsrestaurant.com/_files/ugd/9bef75_6e9daa56dcea4796823bb6b485e4385f.pdf - current menu PDF (single brat patty or link $4.85, double $6.65; file last modified Dec 8, 2025); the official site lists hours Mon-Fri 7am-7pm, Sat 7-3 (viewed Sept 2026).",
+  "founded_source": "https://www.schulzsrestaurant.com/",
+  "closed_reason": null,
+  "notes": "Per the restaurant: Edward and Margaret Schulz opened the first Schulz's in 1953. Their son Ron bought it in 1967 and built the current building a few blocks from the original. His daughter Tammy and her husband Pete Mittnacht bought it in 1994. Hard rolls come from Hi-Lo Bakery and meat from Miesfeld's. The restaurant says it was commended in the book 'Road Food' (1992) and that its brat was mentioned in Gourmet magazine (1996). These are self-reported and unverified, so they are not in other_honors. Address is from the Overture extract (the official site shows only the phone number, (920) 452-1880). Its Dec 2025 menu PDF is the only dated evidence; I found no 2025-26 news coverage. Added under task item 6."
+ },
+ {
+  "name": "Mullen's Dairy Bar",
+  "address": "212 W Main St",
+  "city": "Watertown",
+  "chain": false,
+  "match_names": [
+   "MULLEN'S DAIRY BAR",
+   "MULLENS DAIRY BAR",
+   "MULLEN'S",
+   "MULLENS DAIRY BAR & EATERY",
+   "MULLEN'S DAIRY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "ice cream",
+   "diner"
+  ],
+  "iconic_reason": "Downtown Watertown dairy bar, dating to 1932 and the Mullen family dairy, that makes its own small-batch ice cream and has served hot food since 1986.",
+  "founded": 1932,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.mullensdairybar.com/",
+   "https://www.mullensdairybar.com/history",
+   "http://web.archive.org/web/20250323081510/https://www.mullensdairybar.com/"
+  ],
+  "open_evidence": "https://www.mullensdairybar.com/ - official site lists the Watertown shop at 212 W Main St 'Open Daily 11AM - 8PM' and late-summer hours for the Oconomowoc and Delafield scoop shops ('Open Labor Day') (viewed Sept 25, 2026). A Wayback capture of the same page from Mar 23, 2025 (http://web.archive.org/web/20250323081510/https://www.mullensdairybar.com/) showed different hours and spring 2025 reopening dates, so the hours are kept up to date. The Overture Sept 2026 extract also shows it open. I found no dated 2025-26 news article because the web-search budget ran out.",
+  "founded_source": "https://www.mullensdairybar.com/",
+  "closed_reason": null,
+  "notes": "The homepage says 'Creating smiles since 1932' and that dairy farmer Frank Mullen Sr. and his sons founded it. The history page gives an older lineage: Frank R. Mullen Sr. started a dairy and milk route in 1911; the business moved to 216 W Main St in the 1930s; ice cream began in the early 1940s. Owners: Bill and Karla Mullen from 1976; hot food added in 1986; a Beaver Dam location opened in 1988 (its current status is unknown); Ron and Gloria Luepke from 1996; Keepman brothers (Josh, Matt, Adam) since 2016. Scoop shops opened in 2018 at 120 E Wisconsin Ave, Oconomowoc and at The Smiley Barn, 2420 Milwaukee St, Delafield. Price tier unknown because the menu page did not render. The only 'diner' evidence is the 'Eats & Treats' menu and hot food since 1986."
+ },
+ {
+  "name": "Widmer's Cheese Cellars",
+  "address": "214 W Henni St",
+  "city": "Theresa",
+  "chain": false,
+  "match_names": [
+   "WIDMER'S CHEESE CELLARS",
+   "WIDMERS CHEESE CELLARS",
+   "WIDMER'S CHEESE",
+   "WIDMER CHEESE CELLARS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "cheese",
+   "cheese curds"
+  ],
+  "iconic_reason": "Family cheese factory and retail store in Theresa (Dodge County) that has made brick, cheddar and colby cheese in open vats since 1922, now run by third-generation Master Cheesemaker Joe Widmer.",
+  "founded": 1922,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.widmerscheese.com/",
+   "https://www.widmerscheese.com/meet-the-master-cheese-maker/",
+   "https://www.widmerscheese.com/awards-2/"
+  ],
+  "open_evidence": "https://www.widmerscheese.com/awards-2/ - official site lists retail store hours (Mon-Sat 7-5; Sundays June-Oct 10-3) at 214 W Henni St; pages were last updated May 15, 2026 (viewed Sept 2026).",
+  "founded_source": "https://www.widmerscheese.com/meet-the-master-cheese-maker/",
+  "closed_reason": null,
+  "notes": "A cheese factory with a retail store, not a restaurant. Theresa is in Dodge County, about 7 miles from Mayville, but is not one of the towns the task listed; drop it if the board is limited to restaurants or those towns. Joe Widmer holds Wisconsin Master Cheesemaker certification in brick, cheddar and colby (a personal credential, per the company). The company claims ACS and World Championship awards without an itemized list, so other_honors is empty."
+ }
+]

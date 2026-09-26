@@ -1,0 +1,165 @@
+[
+ {
+  "name": "Mr. Perkins' Family Restaurant",
+  "change": {
+   "open": true
+  },
+  "why": "City of Milwaukee active restaurant license at 2001 W Atkinson Ave (expires 2027-06-30)"
+ },
+ {
+  "name": "Jake's Deli",
+  "change": {
+   "open": true
+  },
+  "why": "City of Milwaukee active restaurant license 'Jake's Delicatessen' at 1634 W North Ave (expires 2026-12-09)"
+ },
+ {
+  "name": "DeRango's Pizza Palace",
+  "change": {
+   "open": true
+  },
+  "why": "City of Racine 2025-26 liquor license list: DERANGO, LTD at 3840 Douglas Ave"
+ },
+ {
+  "name": "Fitzgerald's Genoa Junction",
+  "change": {
+   "open": null
+  },
+  "why": "conflicting signals: live site errors, April 2026 capture showed 'Coming Soon'; last capture with hours Jan 2026"
+ },
+ {
+  "name": "Little Bohemia Lodge",
+  "change": {
+   "open": true
+  },
+  "why": "May 2026 dated diner review (supper-club agent); lodge site itself is stale (2013)"
+ },
+ {
+  "name": "HobNob",
+  "change": {
+   "james_beard": []
+  },
+  "why": "JBF 2020 Outstanding Hospitality semifinalist is outside the 2024-2026 semifinalist window"
+ },
+ {
+  "name": "Miijim",
+  "change": {
+   "james_beard": [
+    "Emerging Chef semifinalist 2024 (Bryce Stevenson)"
+   ]
+  },
+  "why": "use JBF database name"
+ },
+ {
+  "name": "Pinewood Supper Club",
+  "change": {
+   "address": "147801 Half Moon Lake Dr"
+  },
+  "why": "official site and Overture give 147801 Half Moon Lake Dr"
+ },
+ {
+  "name": "Solly's Grille",
+  "change": {
+   "city": "Glendale"
+  },
+  "why": "physically in the City of Glendale (postal address reads Milwaukee 53212)"
+ },
+ {
+  "name": "Oscar's Frozen Custard",
+  "change": {
+   "city": "West Allis"
+  },
+  "why": "official site labels this stand 'West Allis' (postal Milwaukee 53227); no City of Milwaukee license"
+ },
+ {
+  "name": "The Del-Bar",
+  "change": {
+   "city": "Lake Delton"
+  },
+  "why": "Sauk County 2026 license: Village of Lake Delton (postal Wisconsin Dells)"
+ },
+ {
+  "name": "House of Embers",
+  "change": {
+   "city": "Lake Delton"
+  },
+  "why": "Sauk County 2026 license: Village of Lake Delton (postal Wisconsin Dells)"
+ },
+ {
+  "name": "Chef Shack Bay City",
+  "change": {
+   "founded": null
+  },
+  "why": "2007 is the Minneapolis food truck, not the Bay City restaurant"
+ },
+ {
+  "name": "Kopp's Frozen Custard",
+  "change": {
+   "iconic_reason": "Frozen custard and jumbo burger stand founded by Elsa Kopp in 1950, known for its published daily flavor forecast; three stands operate today."
+  },
+  "why": "attribute claim"
+ },
+ {
+  "name": "Gilles Frozen Custard",
+  "change": {
+   "iconic_reason": "Frozen custard stand on W Bluemound Rd started by Paul Gilles in 1938 at the site it still occupies, which bills itself as Milwaukee's oldest custard stand."
+  },
+  "why": "attribute claim"
+ },
+ {
+  "name": "Solly's Grille",
+  "change": {
+   "iconic_reason": "Butter burger counter opened in 1936 as Solly's Coffee Shop by Kenneth 'Solly' Salmon, at its Port Washington Rd site since 1971 and a 2022 James Beard America's Classics honoree."
+  },
+  "why": "attribute claim"
+ },
+ {
+  "name": "Wissota High Shores Supper Club",
+  "change": {
+   "address": "17985 Co Hwy X"
+  },
+  "why": "same address written with the common 'Co Hwy' abbreviation used in map data"
+ },
+ {
+  "name": "Weissgerber's Golden Mast Inn",
+  "change": {
+   "city": "Oconomowoc"
+  },
+  "why": "Okauchee is an unincorporated community; postal city and municipality (Town of) Oconomowoc"
+ },
+ {
+  "name": "Silvercryst Supper Club",
+  "change": {
+   "match_names": [
+    "SILVERCRYST SUPPER CLUB",
+    "SILVERCRYST RESORT",
+    "THE SILVERCRYST",
+    "SILVERCRYST RESORT & MOTEL",
+    "SILVERCRYST",
+    "SILVERCRYST SUPPER CLUB RESORT & MOTEL"
+   ]
+  },
+  "why": "name as listed in map data"
+ },
+ {
+  "name": "Culver's (original Sauk City restaurant)",
+  "change": {
+   "name": "Culver's"
+  },
+  "why": "business name; chain flag + address identify the first store"
+ },
+ {
+  "name": "Leon's Frozen Custard (Oshkosh)",
+  "change": {
+   "name": "Leon's Frozen Custard"
+  },
+  "why": "business name; separate business from Milwaukee's Leon's"
+ },
+ {
+  "name": "Berners' Ice Cream Parlor (Washington House)",
+  "change": {
+   "name": "Berners' Ice Cream Parlor"
+  },
+  "why": "business name"
+ }
+]

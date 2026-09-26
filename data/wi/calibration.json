@@ -1,0 +1,118 @@
+{
+ "mke": {
+  "listings": 2841,
+  "official_active": 3783,
+  "official_rest": 1766,
+  "coverage": 0.591,
+  "groups": {
+   "Meta only": {
+    "n": 902,
+    "official": 0.422,
+    "rest": 0.349
+   },
+   "Meta + open in Google 2021": {
+    "n": 849,
+    "official": 0.809,
+    "rest": 0.744
+   },
+   "Foursquare/BrightQuery/Microsoft + Google 2021": {
+    "n": 319,
+    "official": 0.223,
+    "rest": 0.201
+   },
+   "Foursquare only": {
+    "n": 250,
+    "official": 0.112,
+    "rest": 0.084
+   },
+   "BrightQuery only": {
+    "n": 226,
+    "official": 0.155,
+    "rest": 0.155
+   },
+   "Google 2021 says closed": {
+    "n": 128,
+    "official": 0.07,
+    "rest": 0.055
+   },
+   "Microsoft only": {
+    "n": 85,
+    "official": 0.235,
+    "rest": 0.2
+   },
+   "Overture says closed": {
+    "n": 48,
+    "official": 0.083,
+    "rest": 0.042
+   },
+   "brand feed only": {
+    "n": 29,
+    "official": 0.241,
+    "rest": 0.138
+   },
+   "brand feed + Google 2021": {
+    "n": 5,
+    "official": 0.6,
+    "rest": 0.6
+   }
+  }
+ },
+ "dane": {
+  "listings": 2641,
+  "official_active": 2134,
+  "official_rest": 1449,
+  "coverage": 0.646,
+  "groups": {
+   "Meta + open in Google 2021": {
+    "n": 885,
+    "official": 0.762,
+    "rest": 0.688
+   },
+   "Meta only": {
+    "n": 661,
+    "official": 0.466,
+    "rest": 0.375
+   },
+   "Foursquare/BrightQuery/Microsoft + Google 2021": {
+    "n": 328,
+    "official": 0.192,
+    "rest": 0.14
+   },
+   "Foursquare only": {
+    "n": 250,
+    "official": 0.068,
+    "rest": 0.056
+   },
+   "BrightQuery only": {
+    "n": 200,
+    "official": 0.15,
+    "rest": 0.125
+   },
+   "Google 2021 says closed": {
+    "n": 126,
+    "official": 0.016,
+    "rest": 0.016
+   },
+   "Microsoft only": {
+    "n": 99,
+    "official": 0.232,
+    "rest": 0.212
+   },
+   "Overture says closed": {
+    "n": 47,
+    "official": 0.064,
+    "rest": 0.043
+   },
+   "brand feed only": {
+    "n": 32,
+    "official": 0.281,
+    "rest": 0.281
+   },
+   "brand feed + Google 2021": {
+    "n": 13,
+    "official": 0.846,
+    "rest": 0.538
+   }
+  }
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "mke": {
+  "bq_high": {
+   "n": 211,
+   "official": 0.313
+  },
+  "brand_feed": {
+   "n": 35,
+   "official": 0.286
+  },
+  "meta_high": {
+   "n": 1126,
+   "official": 0.79
+  },
+  "meta_low": {
+   "n": 341,
+   "official": 0.243
+  },
+  "meta_mid": {
+   "n": 269,
+   "official": 0.375
+  },
+  "other_sources": {
+   "n": 778,
+   "official": 0.118
+  }
+ },
+ "dane": {
+  "bq_high": {
+   "n": 219,
+   "official": 0.269
+  },
+  "brand_feed": {
+   "n": 36,
+   "official": 0.556
+  },
+  "meta_high": {
+   "n": 1119,
+   "official": 0.75
+  },
+  "meta_low": {
+   "n": 231,
+   "official": 0.225
+  },
+  "meta_mid": {
+   "n": 192,
+   "official": 0.479
+  },
+  "other_sources": {
+   "n": 775,
+   "official": 0.097
+  }
+ }
+}

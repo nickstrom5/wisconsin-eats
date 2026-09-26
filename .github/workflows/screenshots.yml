@@ -1,0 +1,85 @@
+name: Screenshots
+
+# Boots a simulator, launches the app on every screen with seeded data, and commits the PNGs
+# to docs/screenshots/. Run it from the Actions tab (workflow_dispatch) whenever the UI changes.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    runs-on: macos-26
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate project
+        run: xcodegen generate
+
+      - name: Pick a simulator (largest iPhone, for 6.9-inch App Store shots)
+        run: |
+          DEVICE=$(xcrun simctl list devices available | grep -E "^\s+iPhone .*Pro Max" | head -1 | sed -E 's/^ *(.+) \([0-9A-F-]+\) \(.*/\1/')
+          [ -n "$DEVICE" ] || DEVICE=$(xcrun simctl list devices available | grep -E "^\s+iPhone" | head -1 | sed -E 's/^ *(.+) \([0-9A-F-]+\) \(.*/\1/')
+          echo "Using simulator: $DEVICE"
+          echo "DEVICE=$DEVICE" >> "$GITHUB_ENV"
+
+      - name: Build
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project WisconsinEats.xcodeproj -scheme WisconsinEats \
+            -destination "platform=iOS Simulator,name=$DEVICE" \
+            -derivedDataPath DerivedData \
+            -skipPackagePluginValidation \
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee build.log | grep -E "error:|BUILD (SUCCEEDED|FAILED)" || true
+          grep -q "BUILD SUCCEEDED" build.log
+
+      - name: Boot simulator and install
+        run: |
+          xcrun simctl boot "$DEVICE" || true
+          xcrun simctl bootstatus "$DEVICE" -b
+          xcrun simctl status_bar "$DEVICE" override --time 9:41 --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4
+          APP=$(find DerivedData/Build/Products -name "WisconsinEats.app" -maxdepth 2 | head -1)
+          echo "App: $APP"
+          xcrun simctl install "$DEVICE" "$APP"
+
+      - name: Capture every screen
+        run: bash scripts/capture-screenshots.sh "$DEVICE"
+
+      - name: iPad 13-inch too
+        run: |
+          IPAD=$(xcrun simctl list devices available | grep -E "^\s+iPad Pro 13-inch" | head -1 | sed -E 's/^ *(.+) \(([0-9A-F-]+)\) \(.*/\2/')
+          if [ -n "$IPAD" ]; then
+            xcrun simctl boot "$IPAD" || true
+            xcrun simctl bootstatus "$IPAD" -b
+            xcrun simctl install "$IPAD" "$(find DerivedData/Build/Products -name "WisconsinEats.app" -maxdepth 2 | head -1)"
+            PREFIX=ipad- bash scripts/capture-screenshots.sh "$IPAD"
+          fi
+
+      - name: Commit screenshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/screenshots
+          git commit -m "Screenshots from simulator ($DEVICE) [skip ci]" || { echo "no changes"; exit 0; }
+          git push origin HEAD:${{ github.ref_name }}
+
+      - name: Upload artifact too
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: docs/screenshots
+          if-no-files-found: ignore

@@ -1,0 +1,218 @@
+[
+ {
+  "brand": "Hardee's",
+  "auv_usd": 1344000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Firehouse Subs",
+  "auv_usd": 960000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Marco's Pizza",
+  "auv_usd": 832000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Freddy's Frozen Custard & Steakburgers",
+  "auv_usd": 1901000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; listed as Freddy's"
+ },
+ {
+  "brand": "Scooter's Coffee",
+  "auv_usd": 999000,
+  "year": 2025,
+  "source": "QSR 50 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/story/qsr-50-2026-top-50-fast-food-chains-ranked-by-sales/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; mostly small drive-thru kiosks"
+ },
+ {
+  "brand": "Tim Hortons",
+  "auv_usd": 1210000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company"
+ },
+ {
+  "brand": "Taco John's",
+  "auv_usd": 1173000,
+  "year": 2025,
+  "source": "QSR 50 Contenders 2026 (2025 data)",
+  "url": "https://www.qsrmagazine.com/reports/the-50-qsr-contenders-for-2026/",
+  "note": "U.S. 2025 average sales per unit, franchised + company; consistent with $391M sales / 327 units (the 2025 Contenders list showed $1,882K for 2024, which does not match that year's own sales/units)"
+ },
+ {
+  "brand": "Noodles & Company",
+  "auv_usd": 1360000,
+  "year": 2025,
+  "source": "Noodles & Company 10-K FY2025",
+  "url": "https://www.sec.gov/Archives/edgar/data/1275158/000127515826000021/ndls-20251230.htm",
+  "note": "Average unit volume of company-owned restaurants (annualized restaurant revenue per operating day), fiscal year ended Dec 30, 2025; QSR Contenders 2026 lists the same $1,360K"
+ },
+ {
+  "brand": "Texas Roadhouse",
+  "auv_usd": 8687000,
+  "year": 2025,
+  "source": "Texas Roadhouse 10-K FY2025",
+  "url": "https://www.sec.gov/Archives/edgar/data/1289460/000110465926021292/txrh-20251230x10k.htm",
+  "note": "Average unit volume of company Texas Roadhouse restaurants open a full six months before the period (excludes Bubba's 33, $6,283K), fiscal year ended Dec 30, 2025"
+ },
+ {
+  "brand": "Outback Steakhouse",
+  "auv_usd": 4008000,
+  "year": 2025,
+  "source": "Bloomin' Brands 10-K FY2025",
+  "url": "https://www.sec.gov/Archives/edgar/data/1546417/000154641726000009/blmn-20251228.htm",
+  "note": "Average restaurant unit volume, U.S. company-owned Outback Steakhouse restaurants (excludes gift card breakage), fiscal year ended Dec 28, 2025"
+ },
+ {
+  "brand": "LongHorn Steakhouse",
+  "auv_usd": 5600000,
+  "year": 2026,
+  "source": "Darden Restaurants 10-K FY2026",
+  "url": "https://www.sec.gov/Archives/edgar/data/940944/000094094426000025/dri-20260531.htm",
+  "note": "Average annual sales per company-owned restaurant (sales / operating weeks x 52; excludes franchise), fiscal year ended May 31, 2026"
+ },
+ {
+  "brand": "Red Robin",
+  "auv_usd": 2995460,
+  "year": 2025,
+  "source": "Red Robin Gourmet Burgers 10-K FY2025",
+  "url": "https://www.sec.gov/Archives/edgar/data/1171759/000162828026011733/rrgb-20251228.htm",
+  "note": "DERIVED: average weekly net sales volume in company-owned restaurants $57,605 x 52, fiscal year ended Dec 28, 2025"
+ },
+ {
+  "brand": "Cracker Barrel",
+  "auv_usd": 4199100,
+  "year": 2025,
+  "source": "Cracker Barrel 10-K FY2025",
+  "url": "https://www.sec.gov/Archives/edgar/data/1067294/000110465925093663/cbrl-20250801x10k.htm",
+  "note": "Average store volume, restaurant sales only (excludes Maple Street Biscuit), fiscal year ended Aug 1, 2025; with the attached retail store included it is $5,190.2K; FY2026 10-K not yet filed as of 2026-09-25"
+ },
+ {
+  "brand": "Denny's",
+  "auv_usd": 1875000,
+  "year": 2024,
+  "source": "Denny's Corp 10-K FY2024",
+  "url": "https://www.sec.gov/Archives/edgar/data/852772/000085277225000070/denn-20241225.htm",
+  "note": "Franchise average unit sales, fiscal year ended Dec 25, 2024 (company restaurants: $3,086K); Denny's went private, so no FY2025 10-K. Technomic 2026 shows 2025 U.S. sales $2,603M / 1,274 units (about $2.04M derived)"
+ },
+ {
+  "brand": "Toppers Pizza",
+  "auv_usd": 948848,
+  "year": 2025,
+  "source": "Toppers Pizza franchise site (2025 FDD Item 19)",
+  "url": "https://www.toppers.com/franchise/why-you/",
+  "note": "Average unit sales volume, fiscal year ended Dec 28, 2025, all affiliate-owned and franchised restaurants open the full year (excludes 2025 openings)"
+ },
+ {
+  "brand": "Cousins Subs",
+  "auv_usd": 865432,
+  "year": 2025,
+  "source": "Cousins Subs franchise site (2026 FDD Item 19)",
+  "url": "https://cousinssubsfranchise.com/why-cousins/",
+  "note": "2025 average gross receipts of traditional franchised shops (FDD Item 19, Part 1-B); excludes affiliate-owned and non-traditional shops"
+ },
+ {
+  "brand": "Golden Corral",
+  "auv_usd": 4629000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/golden-corral",
+  "note": "DERIVED: 2025 U.S. sales $1,611M / 348 year-end U.S. units (Technomic AUV itself is paywalled); FSR 30 2025 (Datassential) reported a 2024 AUV of $4.28M: https://www.fsrmagazine.com/feature/fsr-30-2025-the-top-full-service-restaurant-chains-in-america/"
+ },
+ {
+  "brand": "Perkins",
+  "auv_usd": 2058000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/perkins-american-food-co",
+  "note": "DERIVED: 2025 U.S. sales $496M / 241 year-end U.S. units (Technomic AUV itself is paywalled); listed as Perkins American Food Co.; FSR 30 2025 (Datassential) reported a 2024 AUV of $2.0M: https://www.fsrmagazine.com/feature/fsr-30-2025-the-top-full-service-restaurant-chains-in-america/"
+ },
+ {
+  "brand": "Papa Murphy's",
+  "auv_usd": 697000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/papa-murphys-pizza",
+  "note": "DERIVED: 2025 U.S. sales $707M / 1,014 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Cold Stone Creamery",
+  "auv_usd": 588000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/cold-stone-creamery",
+  "note": "DERIVED: 2025 U.S. sales $620M / 1,054 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "MOD Pizza",
+  "auv_usd": 1151000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/mod-pizza",
+  "note": "DERIVED: 2025 U.S. sales $517M / 449 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Caribou Coffee",
+  "auv_usd": 785000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/caribou-coffee",
+  "note": "DERIVED: 2025 U.S. sales $388M / 494 year-end U.S. units (Technomic AUV itself is paywalled); unit count may include small-format/non-traditional locations"
+ },
+ {
+  "brand": "Pizza Ranch",
+  "auv_usd": 1658000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/pizza-ranch",
+  "note": "DERIVED: 2025 U.S. sales $363M / 219 year-end U.S. units (Technomic AUV itself is paywalled)"
+ },
+ {
+  "brand": "Biggby Coffee",
+  "auv_usd": 783000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/biggby-coffee",
+  "note": "DERIVED: 2025 U.S. sales $361M / 461 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "Famous Dave's",
+  "auv_usd": 2720000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/famous-daves",
+  "note": "DERIVED: 2025 U.S. sales $272M / 100 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ },
+ {
+  "brand": "A&W Restaurants",
+  "auv_usd": 611000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/aw-all-american-food",
+  "note": "DERIVED: 2025 U.S. sales $251M / 411 year-end U.S. units (Technomic AUV itself is paywalled); listed as A&W All American Food"
+ },
+ {
+  "brand": "Smashburger",
+  "auv_usd": 1209000,
+  "year": 2025,
+  "source": "Technomic Top 500 2026 via Restaurant Business",
+  "url": "https://www.restaurantbusinessonline.com/top-500-chains-2026/smashburger",
+  "note": "DERIVED: 2025 U.S. sales $208M / 172 year-end U.S. units (Technomic AUV itself is paywalled); sales are a Technomic estimate"
+ }
+]

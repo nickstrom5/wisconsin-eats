@@ -1,0 +1,2649 @@
+[
+ {
+  "name": "Five O'Clock Steakhouse",
+  "address": "2416 W State St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "FIVE O'CLOCK STEAKHOUSE",
+   "FIVE OCLOCK STEAKHOUSE",
+   "5 O'CLOCK STEAKHOUSE",
+   "COERPER'S FIVE O'CLOCK CLUB",
+   "FIVE O'CLOCK CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Wine Spectator Restaurant Award of Excellence (2026)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "steakhouse",
+   "prime rib",
+   "relish tray",
+   "historic"
+  ],
+  "iconic_reason": "Family-owned State Street supper club and steakhouse, formerly Coerper's Five O'Clock Club, operating since 1946 with dinners that still come with salad, bread and a relish tray.",
+  "founded": 1946,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 4,
+  "open": true,
+  "sources": [
+   "https://www.fiveoclocksteakhouse.com/",
+   "https://www.fiveoclocksteakhouse.com/all-about-five/",
+   "https://www.fiveoclocksteakhouse.com/menus/dinner-menu/",
+   "https://www.fiveoclocksteakhouse.com/2026-wine-spectator-restaurant-award/",
+   "https://onmilwaukee.com/articles/five-oclock-steakhouse-75th-anniversary",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "https://www.fiveoclocksteakhouse.com/ - live-music calendar for Sept 25-26 and Oct 1 2026, September 2026 first-responder promo (post dated 2026-09-02), '80th anniversary specials' (fetched 2026-09-25)",
+  "founded_source": "https://www.fiveoclocksteakhouse.com/all-about-five/",
+  "closed_reason": null,
+  "notes": "Club site: 'formerly Coerper's Five O'Clock Club ... family-owned and independently operated ... since 1946'; OnMilwaukee 75th-anniversary piece (per search snippet) says the building was a long-time State Street tavern before 1946, Wilmer 'Bill' Coerper built the steakhouse, and Stelio Kalkounos's family bought it from the Coerpers in 2004 (full ownership to Kalkounos in 2017). The hint claim 'Milwaukee's oldest continuously operating supper club' was NOT found on the club's site or elsewhere; not used. Site footer lists sister venues in Schaumburg/Fox River Grove IL (Chicago Prime Steakhouse, Chicago Prime Italian, Avante' Banquets), so it's part of a small shared-ownership group, not a chain. Price tier 4 is borderline 3/4: steaks $44-65, prime rib $43, seafood $42-170 (median main ~$55). Club site also cites vague 'best steakhouse' mentions (Food Network, Rachael Ray, Milwaukee Magazine readers' polls) without specifics; not listed as honors. Steak Paradise 3 year not verified. Club site says it was featured on Travel Channel's 'Steak Paradise 3' (year not stated, so not listed as an honor)."
+ },
+ {
+  "name": "The Packing House",
+  "address": "900 E Layton Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "THE PACKING HOUSE",
+   "PACKING HOUSE",
+   "PACKING HOUSE RESTAURANT",
+   "THE PACKING HOUSE RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "prime rib",
+   "steakhouse"
+  ],
+  "iconic_reason": "Wiken-family supper club on Layton Avenue near Mitchell airport since 1974, with a scratch kitchen, Friday fish fry drive-up window and lounge music.",
+  "founded": 1974,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://packinghousemke.com/",
+   "https://packinghousemke.com/about/",
+   "https://packinghousemke.com/menus/dinner-menu/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/the-packing-house"
+  ],
+  "open_evidence": "https://packinghousemke.com/ - homepage updated 2026-06-15 with July 4-5 2026 holiday closure notice ('Happy 250th, America!'), current Tue-Sun hours, 50th-anniversary merchandise (fetched 2026-09-25)",
+  "founded_source": "https://packinghousemke.com/about/",
+  "closed_reason": null,
+  "notes": "About page: 'founded by the Wiken family in 1974', still family owned. Dinner entrees mostly $34-48 (menu page updated 2025-12-05). Not on Ron Faiola's 2026 supper club list; the 'supper club' label comes from Travel Wisconsin/Shepherd Express style listings, the club's own site mostly says 'family owned restaurant'."
+ },
+ {
+  "name": "Clifford's Supper Club",
+  "address": "10418 W Forest Home Ave",
+  "city": "Hales Corners",
+  "chain": false,
+  "match_names": [
+   "CLIFFORD'S SUPPER CLUB",
+   "CLIFFORDS SUPPER CLUB",
+   "CLIFFORD'S",
+   "CLIFFORD'S FINE FOOD"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in Travel Wisconsin story 'Iconic Wisconsin Supper Clubs' (2016)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "relish tray"
+  ],
+  "iconic_reason": "Supper club with banquet halls on Forest Home Avenue opened in 1959 by Clifford Schill, known for its all-you-can-eat family-style Icelandic cod fish fry.",
+  "founded": 1959,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://cliffordssupperclub.com/",
+   "https://cliffordssupperclub.com/hales-corners-milwaukee-county-clifford-s-supper-club-food-menu",
+   "https://wisconsinsupperclubs.com/southeast-region/",
+   "https://www.travelwisconsin.com/stories/the-story-behind-wisconsins-iconic-supper-clubs"
+  ],
+  "open_evidence": "https://cliffordssupperclub.com/ - official site with current Tue-Sat hours, jobs page and current menu (site assets versioned 2026-09-18; fetched 2026-09-25); Overture Sept-2026 lists it open at same address",
+  "founded_source": "https://cliffordssupperclub.com/",
+  "closed_reason": null,
+  "notes": "Site: 'established in 1959 by Clifford Schill, who opened four different locations in southeast Wisconsin'. Old domain cliffordsfinefood.com now redirects to cliffordssupperclub.com. Dinner mains $22-33 (porterhouse $58), all-you-can-eat fish fry $21. Current ownership not verified (no dated 2025-2026 news article found; web search budget was exhausted)."
+ },
+ {
+  "name": "Red Circle Inn",
+  "address": "N44W33013 Watertown Plank Rd",
+  "city": "Nashotah",
+  "chain": false,
+  "match_names": [
+   "RED CIRCLE INN",
+   "THE RED CIRCLE INN",
+   "RED CIRCLE INN & BISTRO",
+   "RED CIRCLE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Wine Spectator Restaurant Award of Excellence (2026)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "historic",
+   "prime rib",
+   "old fashioned",
+   "steakhouse"
+  ],
+  "iconic_reason": "Lake Country inn that opened as the Nashotah Inn stagecoach stop in 1848, was renamed Red Circle Inn by Capt. Fred Pabst in 1889, and now serves a supper club menu.",
+  "founded": 1848,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.redcircleinn.com/",
+   "https://www.redcircleinn.com/our-history",
+   "https://www.redcircleinn.com/menu",
+   "https://www.redcircleinn.com/post/geronimo-hospitality-group-restaurants-earn-wine-spectator-award-of-excellence-recognition",
+   "https://wisconsinsupperclubs.com/southeast-region/",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs"
+  ],
+  "open_evidence": "https://www.redcircleinn.com/ - current daily hours; blog posts dated 2026-09-22, 2026-08-21, 2026-07-23 and a 2026-06-23 press release on its Wine Spectator award (fetched 2026-09-25)",
+  "founded_source": "https://www.redcircleinn.com/our-history",
+  "closed_reason": null,
+  "notes": "Club bills itself 'Wisconsin's oldest restaurant - since 1848' (not 'oldest supper club'). History page: Francis Schraudenbach opened the Nashotah Inn in 1848 (traders/stagecoach inn); Pabst bought and renamed it 1889; 1917 fire; Polaski family 1921-1976; Groenevelt (Provimi Veal) 1976; Eckstaedts 1993-2022; bought by Geronimo Hospitality Group in 2022. 1848 is the inn's start, not the start of supper-club service; the 'oldest' claim is self-described and not independently verified. Mains $38-49, steaks $54-68."
+ },
+ {
+  "name": "Jack Pandl's Whitefish Bay Inn",
+  "address": "1319 E Henry Clay St",
+  "city": "Whitefish Bay",
+  "chain": false,
+  "match_names": [
+   "JACK PANDL'S WHITEFISH BAY INN",
+   "JACK PANDLS WHITEFISH BAY INN",
+   "PANDL'S WHITEFISH BAY INN",
+   "WHITEFISH BAY INN",
+   "JACK PANDL'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "german",
+   "fish fry",
+   "historic"
+  ],
+  "iconic_reason": "Pandl-family restaurant in a 1915 inn building in Whitefish Bay, known for fresh whitefish, a German pancake and a large beer-stein collection.",
+  "founded": 1915,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.jackpandls.com/",
+   "https://www.jackpandls.com/milwaukee-whitefish-bay-jack-pandl-s-whitefish-bay-inn-about",
+   "https://www.jackpandls.com/milwaukee-whitefish-bay-jack-pandl-s-whitefish-bay-inn-food-menu",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "https://www.jackpandls.com/ - official site with current Tue-Sun hours, online ordering, OpenTable reservations and current menu (fetched 2026-09-25; no dated 2025-2026 article found); Overture Sept-2026 lists it open",
+  "founded_source": "https://www.jackpandls.com/milwaukee-whitefish-bay-jack-pandl-s-whitefish-bay-inn-about",
+  "closed_reason": null,
+  "notes": "About page: John and Anna Pandl bought the (existing) Whitefish Bay Inn in 1915; son Jack later bought it; Jack Pandl's family still involved. 1915 is when the Pandls took over, the inn itself may be older. Site says the building is a designated Milwaukee County Landmark (designation year not stated, so not listed as an honor). Postal address on the site reads 'Milwaukee, WI 53217' but the restaurant is in the Village of Whitefish Bay. A separate 'Pandl's in Bayside' (8825 N Lake Dr) is permanently closed per Overture. Mains roughly $26-45 (filet $35, NY strip $45, sausage platter $34-36). Menu is German-leaning; the 'supper club' label comes from Ron Faiola's list."
+ },
+ {
+  "name": "Kegel's Inn",
+  "address": "5901 W National Ave",
+  "city": "West Allis",
+  "chain": false,
+  "match_names": [
+   "KEGEL'S INN",
+   "KEGELS INN",
+   "KEGEL'S",
+   "KEGEL'S PLACE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Building listed on the National Register of Historic Places (2010)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "german",
+   "fish fry",
+   "historic"
+  ],
+  "iconic_reason": "Kegel-family German restaurant in a 1933 Tudor Revival building on National Avenue with hand-painted murals, a Friday fish fry and a year-round beer garden.",
+  "founded": 1924,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://web.archive.org/web/20260304232221/https://kegelsinn.com/",
+   "https://www.wisconsinhistory.org/Records/NationalRegister/NR2210",
+   "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_Milwaukee_County,_Wisconsin",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "https://web.archive.org/web/20260304232221/https://kegelsinn.com/ - March 2026 capture of the official site advertising 'Lent in the Tent' starting Feb 18, Friday drive-thru, reservations and live music (captured 2026-03-04); Overture Sept-2026 lists it open. Live site is behind a Cloudflare browser check and could not be read directly.",
+  "founded_source": "https://web.archive.org/web/20260304232221/https://kegelsinn.com/",
+  "closed_reason": null,
+  "notes": "Founding year disagreement: the club says 'family-owned since 1924'; Wisconsin Historical Society NRHP record says John and Anna Kegel opened Kegel's Place (a soft-drink parlor) in 1925 and Kegel's Inn restaurant opened Aug 26, 1933 in the new Tudor Revival building (NRHP listed 2010-10-12). Used the business's own 1924. Faiola's list gives the city as Delafield in error; 5901 W National Ave is West Allis 53214. Also runs the War Memorial Beer Garden (per its site). No evidence newer than March 2026 could be read (site blocked, web search budget exhausted). Price tier unknown (menu not readable)."
+ },
+ {
+  "name": "Pitch's Lounge & Restaurant",
+  "address": "1801 N Humboldt Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "PITCH'S LOUNGE & RESTAURANT",
+   "PITCH'S LOUNGE AND RESTAURANT",
+   "PITCH'S",
+   "PITCHS",
+   "PITCH'S RIBS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "italian",
+   "bbq",
+   "fish fry",
+   "steakhouse"
+  ],
+  "iconic_reason": "Picciurro-family lounge and restaurant on North Humboldt Avenue since 1942, known for barbecue baby back ribs, skillet hash browns and Sicilian-breaded steak.",
+  "founded": 1942,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.pitchsribs.com/",
+   "https://www.pitchsribs.com/menu",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "https://www.pitchsribs.com/ - official site lists current Wed-Sun hours, weekly specials and menu; site sitemap lastmod 2026-08-13 (fetched 2026-09-25); Overture Sept-2026 lists it open. No dated 2025-2026 news found.",
+  "founded_source": "https://www.pitchsribs.com/",
+  "closed_reason": null,
+  "notes": "Site: 'family owned and operated by the Picciurro family since 1942'; menu says ribs are a 'house specialty since 1942'. The hint's 1941 was not found. Site footer still says (c) 2022 and 'now open for dine in', so current-status evidence is an undated live site. Family also operates Miss Katie's Diner. Dinner mains mostly $28-42 (borderline tier 2/3)."
+ },
+ {
+  "name": "5 O'Clock Club",
+  "address": "N28W26658 Peterson Dr",
+  "city": "Pewaukee",
+  "chain": false,
+  "match_names": [
+   "5 O'CLOCK CLUB",
+   "5 OCLOCK CLUB",
+   "FIVE O'CLOCK CLUB",
+   "THE 5 O'CLOCK CLUB",
+   "5 O'CLOCK CLUB OF PEWAUKEE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Pewaukee Chamber of Commerce Business of the Year (2011)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry"
+  ],
+  "iconic_reason": "Family-run restaurant near Pewaukee Lake in an expanded 1860s farmhouse on land the Kizivat family bought in 1929, now run by the third and fourth generations, known for its Friday fish fry.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://the5oclockclubpewaukee.com/",
+   "https://the5oclockclubpewaukee.com/pewaukee-5-oclockclub-about",
+   "https://the5oclockclubpewaukee.com/pewaukee-5-oclockclub-events",
+   "https://the5oclockclubpewaukee.com/pewaukee-5-oclockclub-food-menu",
+   "https://web.archive.org/web/2010/http://the5oclockclubpewaukee.com/about.asp",
+   "https://wisconsinsupperclubs.com/southeast-region/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs"
+  ],
+  "open_evidence": "https://the5oclockclubpewaukee.com/pewaukee-5-oclockclub-events - events calendar with dated entries for 2026-09-28, 2026-10-14, 2026-10-17, 2026-10-31 and 2026-11-03; homepage lists current Tue-Sat hours (fetched 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year of the restaurant not stated anywhere I could read: current About page says the Kizivat family (Yugoslavian immigrants) moved to the property in the 1920s and it's now 'four generations of family ownership'; archived 2010 About page says the building was an 1860s summer farmette, the family acquired it in 1929, and it was signed 'The Knutson Family' (3rd/4th generation). 1929 is the land purchase, not necessarily the restaurant opening, so founded is null. Business of the Year 2011 honor is as listed on the club's own homepage. Dinner mains mostly $18-34 (fish fry $18-28). Different business from the 5 O'Clock Club in Cumberland and Five O'Clock Steakhouse in Milwaukee."
+ },
+ {
+  "name": "Timmer's Resort",
+  "address": "5151 Timmer Bay Rd",
+  "city": "West Bend",
+  "chain": false,
+  "match_names": [
+   "TIMMER'S RESORT",
+   "TIMMERS RESORT",
+   "TIMMER'S",
+   "TIMMER'S SUPPER CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "relish tray",
+   "historic"
+  ],
+  "iconic_reason": "Big Cedar Lake resort founded by the Timmer family, who bought the land in 1864 and opened a hotel in 1882, now serving supper club dinners, a relish tray and a Friday fish fry.",
+  "founded": 1864,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://timmersresort.com/",
+   "https://timmersresort.com/about",
+   "https://timmersresort.com/menu-dinner",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "https://timmersresort.com/ - official site lists a 'Family Brunch Adventures' event on August 30, 2026, online ordering via Toast and current dinner menu (fetched 2026-09-25); Overture Sept-2026 lists Timmer's Resort open",
+  "founded_source": "https://timmersresort.com/about",
+  "closed_reason": null,
+  "notes": "Site says 'Established 1864'/'Timmer's began in 1864' (Mathias and Margaretha Timmer bought the lakeshore land on Jan 4, 1864); the first hotel building opened in 1882, dining room built 1904. 1864 is the family/property start, not a supper-club start. Site lists sister restaurants The Norbert and The Orville (Whitefish Bay); current owner not named on the pages I read. Overture also shows a closed 'F Street Timmers LLC' at the same address, which suggests an earlier operator; not verified. Mains $24-53 (median ~$33)."
+ },
+ {
+  "name": "Mr. G's Supper Club",
+  "address": "5890 Hwy 57",
+  "city": "Sturgeon Bay",
+  "chain": false,
+  "match_names": [
+   "MR. G'S SUPPER CLUB",
+   "MR G'S SUPPER CLUB",
+   "MR. G'S LOGAN CREEK GRILLE",
+   "MR G'S LOGAN CREEK GRILLE",
+   "MR. G'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "Door County supper club on Highway 57 south of Jacksonport, run by the Geitner family since 1973 in the former Paldora Supper Club and Fernwood Gardens Ballroom.",
+  "founded": 1973,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://web.archive.org/web/2019/http://www.mrgslogancreekgrille.com/"
+  ],
+  "open_evidence": "Could not determine. The club's domain mrgslogancreekgrille.com no longer resolves (fetched 2026-09-25) and archived captures from Aug and Dec 2024 show the domain taken over by unrelated sites. Overture Sept-2026 still lists 'Mr. G's Supper Club' at 5890 State Highway 57 as open, but that field is often stale. Not on Ron Faiola's 2026 list.",
+  "founded_source": "https://web.archive.org/web/2019/http://www.mrgslogancreekgrille.com/",
+  "closed_reason": null,
+  "notes": "Came from the 'quick existence check' list; it's in Door County, not the Milwaukee area. Archived (2019) club site: 'Serving Door County Since 1973'; Bob and Lorraine Geitner bought it in 1973 when it was the Paldora Supper Club/Fernwood Gardens Ballroom; Bob Jr. and Mary bought it in 1981; open Fri-Sat evenings; also ran the Logan Creek Tiki Bar. 1973 is the Geitner/Mr. G's start; the Paldora Supper Club predates it (year unknown). The lapsed domain suggests it may have closed or changed hands; treat open status as unknown. Price tier unknown."
+ },
+ {
+  "name": "HobNob",
+  "address": "277 Sheridan Rd",
+  "city": "Racine",
+  "chain": false,
+  "match_names": [
+   "HOBNOB",
+   "THE HOBNOB",
+   "HOB NOB",
+   "HOBNOB RESTAURANT",
+   "HOBNOB RESTAURANT & COCKTAIL LOUNGE",
+   "HIGGINS HOBNOB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Hospitality semifinalist 2020"
+  ],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in Travel Wisconsin story 'Iconic Wisconsin Supper Clubs' (2016)",
+   "Featured in Ron Faiola's documentary 'Wisconsin Supper Clubs: An Old Fashioned Experience' (2011)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "prime rib",
+   "relish tray",
+   "steakhouse",
+   "historic"
+  ],
+  "iconic_reason": "Lakeside supper club on Sheridan Road between Racine and Kenosha, opened as Higgins' HobNob in 1954, serving steaks, prime rib, a relish tray and a Friday fish fry.",
+  "founded": 1954,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.thehobnob.com/",
+   "https://www.thehobnob.com/about-us/",
+   "https://www.thehobnob.com/menu/food-menu/weeknight-dinner-menu/",
+   "https://roadstraveled.com/hobnob-gains-attention-for-its-hospitality/",
+   "https://www.wgtd.org/news/70-year-old-kenosha-restaurant-has-new-owner-whos-familiar-many-kenosha-diners",
+   "https://urbanmilwaukee.com/2012/12/14/inside-wisconsin-supper-clubs-part-two-at-the-hobnob/",
+   "https://www.jamesbeard.org/blog/the-2020-james-beard-award-semifinalists",
+   "https://wisconsinsupperclubs.com/southeast-region/",
+   "https://www.travelwisconsin.com/stories/the-story-behind-wisconsins-iconic-supper-clubs",
+   "https://wisconsinsupperclubs.com/movies/"
+  ],
+  "open_evidence": "https://www.thehobnob.com/ - official site lists current hours (Tue-Sun) and a weeknight dinner menu page updated 2025-02-18; Yelp listing titled 'Updated July 2026' in search results; a search snippet (not opened) mentioned a 72nd-anniversary celebration in 2026",
+  "founded_source": "https://roadstraveled.com/hobnob-gains-attention-for-its-hospitality/",
+  "closed_reason": null,
+  "notes": "Official site says 'Established in 1954'; Mary Bergin (2020) says Bill and Belle Higgins opened Higgins' HobNob at this site in 1954 after an earlier downtown Racine operation (1937-1941) - 1954 used as the founding of the current supper club. Mike Aletto and Anne Glowacki owned it from 1990 (bought from Bill Higgins Jr.); WGTD (Feb 27, 2024) reported the sale to Kyihham Fazal and family (La Fogata, Waterfront Warehouse), who planned no major changes; Kenosha News (Mar 2024) covered the former owners' goodbye. The building sits on Sheridan Rd near the Racine/Kenosha county line (Somers area) but its postal city is Racine. Mains mostly $30-50 (steaks $44-64), so tier 3."
+ },
+ {
+  "name": "House of Gerhard",
+  "address": "3927 75th St",
+  "city": "Kenosha",
+  "chain": false,
+  "match_names": [
+   "HOUSE OF GERHARD",
+   "THE HOUSE OF GERHARD",
+   "HOUSE OF GERHARD RESTAURANT",
+   "HOUSE OF GERHARD LTD"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "german",
+   "prime rib",
+   "historic"
+  ],
+  "iconic_reason": "Family-run German-American restaurant in Kenosha opened in the mid-1960s by German-born chef Gerhard Dillner and his wife Ruth, serving schnitzel, sauerbraten and daily prime rib.",
+  "founded": 1964,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.houseofgerhard.com/",
+   "https://www.houseofgerhard.com/about",
+   "https://www.houseofgerhard.com/menu",
+   "https://www.houseofgerhard.com/contact-us",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "https://www.houseofgerhard.com/about - official site (c) 2026 says 'Celebrating 62 Years' and lists current summer hours (dinner Mon-Sat from 4pm, lunch Wed-Fri) and a current dinner menu; listed on Ron Faiola's supper club list updated 2026-09-01 (2026)",
+  "founded_source": "https://www.houseofgerhard.com/about",
+  "closed_reason": null,
+  "notes": "Founding year conflict on the business's own site: the About page says Gerhard and Ruth Dillner opened the House of Gerhard in 1964 and is 'Celebrating 62 Years' (consistent with 1964 in 2026), while the site header says 'SINCE 1965'. 1964 used; could be 1965. No independent source checked (Kenosha News history column is paywalled for bots). Now run by daughter and son-in-law Angie and Dick Rudin with their children Sabine and Kyle. Calls itself a German-American restaurant rather than a supper club, but it is on Ron Faiola's Wisconsin supper club list. Mains mostly $30-40, steaks/prime rib at market price, so tier 3."
+ },
+ {
+  "name": "The Duck Inn",
+  "address": "N6214 Hwy 89",
+  "city": "Delavan",
+  "chain": false,
+  "match_names": [
+   "THE DUCK INN",
+   "DUCK INN",
+   "DUCK INN SUPPER CLUB",
+   "THE DUCK INN SUPPER CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "prime rib",
+   "relish tray",
+   "old fashioned",
+   "historic"
+  ],
+  "iconic_reason": "Supper club at County A and Hwy 89 near Delavan with Prohibition-era speakeasy roots, known for its duck entrees, Friday fish fry and Saturday prime rib, run by the Karbash family since 1994.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.duckinndelavan.com/",
+   "https://www.duckinndelavan.com/about",
+   "https://www.duckinndelavan.com/menu",
+   "https://wisconsinsupperclubs.com/southeast-region/",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs"
+  ],
+  "open_evidence": "https://www.duckinndelavan.com/ - official site lists current seasonal hours (Jan-Mar and Apr-Dec) and a full current menu with prices; listed on Ron Faiola's supper club list updated 2026-09-01 (2026). No dated 2025-2026 news article checked (web search budget exhausted).",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year not found: the official About page says the name dates from Prohibition, when patrons would 'duck in' to a speakeasy, and that Jeff and Nora Karbash bought it in 1994 to restore it as a traditional supper club; no year for the supper club's start is given. Physically in the Town of Richmond (Walworth County) at CR-A and Hwy 89 with a Delavan postal address. Mains mostly $33-57, so tier 3. Relish tray is on the menu."
+ },
+ {
+  "name": "Village Supper Club",
+  "address": "1725 S Shore Dr",
+  "city": "Delavan",
+  "chain": false,
+  "match_names": [
+   "VILLAGE SUPPER CLUB",
+   "THE VILLAGE SUPPER CLUB",
+   "VILLAGE SUPPER CLUB DELAVAN",
+   "THE VILLAGE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "prime rib",
+   "relish tray",
+   "historic"
+  ],
+  "iconic_reason": "Delavan Lake supper club on the site of the Hall's Park Resort dining lodge (1882), run for about 50 years by the Marsicano family and rebuilt by new owners in 2023.",
+  "founded": 1882,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.villagesupperclubdelavan.com/",
+   "https://www.villagesupperclubdelavan.com/about",
+   "https://www.villagesupperclubdelavan.com/menus",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "https://www.villagesupperclubdelavan.com/ - official site (c) 2026 lists current hours (Wed-Sun dinner, weekend patio lunch) and a current menu; listed on Ron Faiola's supper club list updated 2026-09-01 (2026)",
+  "founded_source": "https://www.villagesupperclubdelavan.com/about",
+  "closed_reason": null,
+  "notes": "The business says 'A Wisconsin Supper Club Tradition Since 1882'; its About page explains 1882 is when the site began as the dining lodge of Hall's Park Resort, and that it later became various restaurants and supper clubs (date it became a supper club not given) - treat 1882 as the site's start, not necessarily this supper club's. The Marsicano family owned it for about 50 years before selling in 2021 to Loretta and Allan Kaplan, who opened a newly built restaurant on the site in 2023. Faiola's list gives '1725 South Shore Road'; official site says 1725 S Shore Dr. Different business from The Village Supper Club at 10909 Sheridan Rd, Pleasant Prairie (Kenosha County) - do not merge. Steaks $54-60, most other mains $39-50, fish fry $23-27: tier 3."
+ },
+ {
+  "name": "Fitzgerald's Genoa Junction",
+  "address": "727 Main St",
+  "city": "Genoa City",
+  "chain": false,
+  "match_names": [
+   "FITZGERALD'S GENOA JUNCTION",
+   "FITZGERALDS GENOA JUNCTION",
+   "FITZGERALD'S",
+   "FITZGERALD'S OCTAGON HOUSE",
+   "FITZGERALD'S GENOA JUNCTION OCTAGON HOUSE RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish boil",
+   "historic"
+  ],
+  "iconic_reason": "Family-run restaurant in a Victorian octagon house on Genoa City's Main Street serving an all-you-can-eat Door County-style outdoor cod fish boil with BBQ chicken and ribs.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://web.archive.org/web/20260124115932/https://fitzgeraldsfishboil.com/",
+   "http://web.archive.org/web/20260124114344/https://fitzgeraldsfishboil.com/about/",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "http://web.archive.org/web/20260124115932/https://fitzgeraldsfishboil.com/ - archived official site (Jan 24, 2026, (c) 2026) listed summer and winter hours; still on Ron Faiola's supper club list updated 2026-09-01; Overture Sept-2026 extract lists it as open. CAUTION: the live site returns a 'database connection' error (Sept 25, 2026) and an April 14, 2026 capture showed a 'Coming Soon / under construction' page, so current status is not directly confirmed.",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Open status is the least certain in this batch: no 2025-2026 news or dated post was reachable (web search budget exhausted; Yelp blocked). Founding year of the restaurant and the build year of the octagon house were not found; the site says it is one of the few remaining eight-sided Victorian houses. Business name on the site: Fitzgerald's Octagon House Inc.; TripAdvisor lists it as 'Fitzgerald's Genoa Junction Octagon House Restaurant'. Address given as 727 Main Street (Hwy B), 2 miles NW of Richmond, IL. A 2019 review mentioned a $15 flat all-you-can-eat price and cash only; no current price list found, so price_tier null. It is more a fish-boil restaurant than a classic supper club, but Faiola includes it."
+ },
+ {
+  "name": "Mars Resort",
+  "address": "W4098 S Shore Dr",
+  "city": "Lake Geneva",
+  "chain": false,
+  "match_names": [
+   "MARS RESORT",
+   "MARS RESORT SUPPER CLUB",
+   "THE MARS RESORT",
+   "MARS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "old fashioned",
+   "historic"
+  ],
+  "iconic_reason": "Lakeside supper club and piano bar on Lake Como near Lake Geneva that began in 1923 as a seasonal restaurant at the Old Glory Camp and has been called Mars Resort since 1949, known for its ribs and fish fry.",
+  "founded": 1923,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://mars-resort.com/",
+   "https://mars-resort.com/about/",
+   "https://mars-resort.com/menu/",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "https://mars-resort.com/ - official site shows an upcoming live music schedule for Sept 25-27, 2026 and recent Instagram posts; on Ron Faiola's supper club list updated 2026-09-01 (2026)",
+  "founded_source": "https://mars-resort.com/about/",
+  "closed_reason": null,
+  "notes": "Official About page timeline: 1923 seasonal restaurant at 'The Old Glory Camp' beach property, renamed Langwith Resort in 1944 and Mars Resort in 1949, major renovation in 2016. Owners not named on the site. The online menu lists dishes (Famous Mars Ribs, fish fry, steaks, burgers) with the prices left blank, so price_tier null. Address from Faiola's list and the restaurant's Toast gift-card URL (W4098 S Shore Dr); on Lake Como, about 4 miles from downtown Lake Geneva."
+ },
+ {
+  "name": "Buckhorn Supper Club",
+  "address": "11802 N Charley Bluff Rd",
+  "city": "Milton",
+  "chain": false,
+  "match_names": [
+   "BUCKHORN SUPPER CLUB",
+   "THE BUCKHORN SUPPER CLUB",
+   "BUCKHORN",
+   "THE BUCKHORN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "prime rib"
+  ],
+  "iconic_reason": "Lakefront supper club on Charley's Bluff overlooking Lake Koshkonong, serving slow-roasted prime rib and a Friday fish fry and hosting seasonal lobster boils.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://buckhornsupperclub.com/",
+   "https://buckhornsupperclub.com/about",
+   "https://buckhornsupperclub.com/menu",
+   "https://buckhornsupperclub.com/events",
+   "https://wisconsinsupperclubs.com/southwest-region/"
+  ],
+  "open_evidence": "https://buckhornsupperclub.com/events - official site (c) 2026 lists 2026 lobster boil dates (May 27 through Oct 28, 2026) and a closure notice for Sunday Aug 16 (2026), plus current Fri-Sun hours and menu",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year not found: the site says it has served guests 'for over 95 years' (homepage) / 'for 95 years' (About page), with no year given, so roughly the late 1920s but unconfirmed. The Pope family bought it in 1997 and later sold it to their daughter and son-in-law, Shelley and Matt Huhnke (current owners per the About page). Patio added 2006, doubled 2010. The menu says its peanut butter pie was voted 'Destination Dessert' by Madison Magazine (no year given, so not listed as an honor). Mains mostly $35-57, so tier 3. Postal city Milton; on the Lake Koshkonong shore in Rock County."
+ },
+ {
+  "name": "The Butterfly Club",
+  "address": "5246 E County Rd X",
+  "city": "Beloit",
+  "chain": false,
+  "match_names": [
+   "THE BUTTERFLY CLUB",
+   "BUTTERFLY CLUB",
+   "BUTTERFLY SUPPER CLUB",
+   "THE BUTTERFLY SUPPER CLUB",
+   "BUTTERFLY TEA ROOM"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "historic"
+  ],
+  "iconic_reason": "Supper club in the Town of Turtle east of Beloit that began as the Butterfly Tea Room in 1924, took the Butterfly Club name in 1938, and has been run by the Sala family since 1999.",
+  "founded": 1924,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://butterflyclub.us/",
+   "https://butterflyclub.us/our-history/",
+   "https://butterflyclub.us/menu/",
+   "https://wisconsinsupperclubs.com/southwest-region/",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs"
+  ],
+  "open_evidence": "https://butterflyclub.us/ - official site (c) 2026 lists current hours (Tue-Sun, live music Fri-Sat) and menu; on Ron Faiola's supper club list updated 2026-09-01 (2026)",
+  "founded_source": "https://butterflyclub.us/our-history/",
+  "closed_reason": null,
+  "notes": "The business says 'Since 1924': Hal and Mae Sherburne bought the land in summer 1924 and built the Butterfly Tea Room, which 'opened in the spring' (probably 1925); renamed The Butterfly Club around 1938 (Hoffman ownership). Other owners: Mike Molay from 1946 (started the fish fry, expanded 1951-63), Sue Molay after 1964, the Cambonis from 1977, the Sala family from Sept 1999. The building burned on Dec 18, 1972 and was rebuilt in about 11 months. The ~75-year age in the 2026 National Geographic piece (per the task hint, not checked here) does not match the club's own 1924 date; it may count from the 1946 Molay era. The online menu's entree prices load dynamically and were not readable (appetizers $11-20), so price_tier null."
+ },
+ {
+  "name": "Lake House Inn",
+  "address": "1612 E Hotel Dr",
+  "city": "Edgerton",
+  "chain": false,
+  "match_names": [
+   "LAKE HOUSE INN",
+   "THE LAKE HOUSE INN",
+   "LAKE HOUSE INN EDGERTON",
+   "LAKEHOUSE INN",
+   "MAPLE BEACH INN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club",
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Tavern and restaurant on Lake Koshkonong in a stone-and-brick former hotel (1857/1871), opened as the Maple Beach Inn tavern in 1934 and renamed Lake House Inn in the 1960s, destroyed by fire in January 2026.",
+  "founded": 1934,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.lakehouseinnedgerton.com/",
+   "https://www.lakehouseinnedgerton.com/history",
+   "http://web.archive.org/web/20250329004408/https://www.lakehouseinnedgerton.com/"
+  ],
+  "open_evidence": "https://www.lakehouseinnedgerton.com/history - former business domain is now a tribute site saying the building was engulfed in flames on Jan 4, 2026 and 'is mostly destroyed' (2026)",
+  "founded_source": "https://www.lakehouseinnedgerton.com/history",
+  "closed_reason": "Destroyed by fire on January 4, 2026: a 911 call around 8:30 pm reported smoke, crews from at least four counties (MABAS) fought the blaze for hours, and the structure is 'mostly destroyed' (building was closed and empty). No rebuilding plan found. Source: https://www.lakehouseinnedgerton.com/history",
+  "notes": "Fire confirmed only by the tribute site now hosted on the business's old domain (run 'as a courtesy' by Westby Communications Consulting, not an official or news source); no news article or rebuild announcement could be checked (web search budget exhausted). It is not on Ron Faiola's supper club list as updated 2026-09-01. History per that site: farmhouse 1847; hotel (Taylor House / Koshkonong Hotel) from 1871; Carl Schmeling opened the Maple Beach Inn tavern in 1934; after Wayne Hemmingway bought it in 1960 the Axcell family ran it and renamed it Lake House Inn; the Axcells closed it in 2016; LVW Properties reopened it; Lori McGowan bought it Aug 22, 2022. founded=1934 (tavern start) is a judgment call; the Lake House Inn name dates from the 1960s, and operation stopped 2016-c.2022. Its 2025 site called it a restaurant/event venue with a 'full menu' but not a supper club, so the supper club label is unconfirmed. Address from the March 2025 archived official site (1612 E Hotel Drive, Edgerton 53534)."
+ },
+ {
+  "name": "Wilmot Stage Stop",
+  "address": "30646 113th St",
+  "city": "Wilmot",
+  "chain": false,
+  "match_names": [
+   "WILMOT STAGE STOP",
+   "THE WILMOT STAGE STOP",
+   "WILMOT HOTEL",
+   "STAGE STOP"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "steakhouse",
+   "historic"
+  ],
+  "iconic_reason": "Steakhouse in the 1848 Wilmot Hotel, a stagecoach inn run by one family for generations, serving charcoal-broiled steaks with baked potatoes and three homemade dressings; it calls itself Wisconsin's oldest tap and dining room.",
+  "founded": 1848,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.wilmotstagestop.com/",
+   "https://www.wilmotstagestop.com/history",
+   "https://www.wilmotstagestop.com/images/galleries/Wilmot_Stage_Stop_Menu_11.24_01.jpg",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "https://www.wilmotstagestop.com/ - official site lists current Thu-Sun dining hours and online reservations, menu file dated Nov 15, 2024; on Ron Faiola's supper club list updated 2026-09-01 and marked open in the Sept-2026 Overture extract. No dated 2025-2026 news found (web search budget exhausted).",
+  "founded_source": "https://www.wilmotstagestop.com/history",
+  "closed_reason": null,
+  "notes": "Menu says 'Est. 1848'; the Wilmot Hotel was built by Ephriam Wilcox in 1848 and served meals from the start, run by the Hegeman/Winn/Hackett family for generations. Rolland Winn renamed it Wilmot Stage Stop and turned it into a steak restaurant after 1961; the Cantwell family took ownership on Jan 2, 2018 and kept the name and menu. 1848 is also the building date, but the business itself dates its founding to 1848 and claims continuous operation. Steaks $33-60, lobster $34-48 (Nov 2024 menu), so tier 3. Cash only. More steakhouse than classic supper club, but on Faiola's list."
+ },
+ {
+  "name": "Tornado Steak House",
+  "address": "116 S Hamilton St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "TORNADO STEAK HOUSE",
+   "TORNADO CLUB STEAK HOUSE",
+   "TORNADO STEAKHOUSE",
+   "TORNADO CLUB",
+   "THE TORNADO STEAK HOUSE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)",
+   "Featured in Ron Faiola's documentary 'Wisconsin Supper Clubs: An Old Fashioned Experience' (2011)"
+  ],
+  "tags": [
+   "supper club",
+   "steakhouse"
+  ],
+  "iconic_reason": "Downtown Madison steakhouse run in supper club style since 1996 in the former Crandall's restaurant space off Capitol Square.",
+  "founded": 1996,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.tornadosteakhouse.com/",
+   "https://www.tornadosteakhouse.com/s/166983-Tornado_Dinner-Menu_UPDATED-10-1-25_P2.pdf",
+   "https://madisonlocallysourced.com/tornado-club-steak-house/",
+   "https://wisconsinsupperclubs.com/southwest-region/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs",
+   "https://wisconsinsupperclubs.com/movies/"
+  ],
+  "open_evidence": "https://www.tornadosteakhouse.com/ - official site live with dinner and lounge menus dated 'UPDATED-10-1-25' (Oct 1, 2025); Overture Sept-2026 extract lists it open at 116 S Hamilton St and links a Madison Magazine 'Best of Madison 2026' gallery entry",
+  "founded_source": "https://madisonlocallysourced.com/tornado-club-steak-house/",
+  "closed_reason": null,
+  "notes": "Owner Henry Doane bought the space in 1996 (Madison Locally Sourced); the previous occupant Crandall's left in 1990 and the interior dates to 1957; building is late-1800s. Sign/site also uses 'Tornado Club Steak House'; the Corral Room bar is in the same building. Price tier: Oct-2025 dinner menu steaks $43-$76, specialties $29-$61 (about half of mains over $50) - borderline 3/4. Faiola book features taken from markers on wisconsinsupperclubs.com (author's site). Madison Magazine Best of Madison 2026 category/result not verified."
+ },
+ {
+  "name": "Toby's Supper Club",
+  "address": "3717 S Dutch Mill Rd",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "TOBY'S SUPPER CLUB",
+   "TOBYS SUPPER CLUB",
+   "TOBY'S",
+   "TOBYS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)",
+   "Featured in Ron Faiola's documentary 'We're Here for a Fish Fry!' (2017)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "relish tray"
+  ],
+  "iconic_reason": "Family-run roadhouse supper club on Madison's southeast edge known for its Friday fish fry with bluegill and cod, relish tray and cinnamon rolls.",
+  "founded": 1944,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.tobyssupperclub.com/Home.html",
+   "https://www.travelwisconsin.com/food-drink/restaurants/toby-s-supper-club",
+   "https://isthmus.com/locations/tobys-supper-club/",
+   "http://www.madisonfishfry.com/rankings.php?type=top10",
+   "https://wisconsinsupperclubs.com/southwest-region/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs",
+   "https://wisconsinsupperclubs.com/movies/"
+  ],
+  "open_evidence": "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs - April 13, 2026 article describes Roxanne Peterson, who 'has been at Toby's Supper Club in Madison for 69 years', and the current menu (top sirloin, fried cod, lake perch, frog legs); the official site (undated) lists hours, and it is on Ron Faiola's 2026 list",
+  "founded_source": "https://www.tobyssupperclub.com/Home.html",
+  "closed_reason": null,
+  "notes": "Official site says 'Est. 1944' and 'Family owned and operated for over 56 years' (stale text). The National Geographic 2026 figure of 69 years would point to ~1957, which may be when the current family took over - unverified, so founded uses the club's own 'Est. 1944'. Open status rests on weak/undated evidence because web search budget was exhausted; parent should confirm with the Nat Geo 2026 article. Price tier unknown (no current menu found). madisonfishfry.com top-25 ranking lists bluegill (#5), cod (#11) and lake perch (#19) at Toby's (undated ranking, not used as an honor). National Geographic (April 2026) says Roxanne Peterson has been at Toby's for 69 years (i.e. since about 1957)."
+ },
+ {
+  "name": "Smoky's Club",
+  "address": "3005 University Ave",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "SMOKY'S CLUB",
+   "SMOKYS CLUB",
+   "SMOKY'S",
+   "SMOKY'S SUPPER CLUB",
+   "LEN JAN LTD"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club",
+   "steakhouse",
+   "fish fry",
+   "prime rib"
+  ],
+  "iconic_reason": "Steak-focused supper club founded in 1953 by Leonard 'Smoky' and Janet Schmock, at 3005 University Ave from 1969 until the family closed it in 2022.",
+  "founded": 1953,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://spectrumnews1.com/wi/milwaukee/news/2022/02/21/landmark-supper-club-closes-after-69-years",
+   "https://web.archive.org/web/20220331051516/https://www.smokysclub.com/"
+  ],
+  "open_evidence": "https://web.archive.org/web/20220331051516/https://www.smokysclub.com/ - archived official site (Mar 31, 2022) shows hours 'CLOSED' and a farewell notice after 69 years; https://spectrumnews1.com/wi/milwaukee/news/2022/02/21/landmark-supper-club-closes-after-69-years - Feb 21, 2022 article: closing with 'less than two weeks to go'; smokysclub.com no longer resolves (Sept 2026)",
+  "founded_source": "https://web.archive.org/web/20220331051516/https://www.smokysclub.com/",
+  "closed_reason": "Permanently closed in early March 2022 after 69 years; the Schmock family decided to close after the pandemic (Spectrum News 1, Feb 21, 2022: https://spectrumnews1.com/wi/milwaukee/news/2022/02/21/landmark-supper-club-closes-after-69-years; farewell notice on the archived official site, Mar 31, 2022: https://web.archive.org/web/20220331051516/https://www.smokysclub.com/).",
+  "notes": "Official About text (archived 2022): founded 1953 by Leonard 'Smoky' Schmock and wife Janet, who bought a supper club named Hogan's on University Ave; moved in 1969 a few doors down to 3005 University Ave, the former Justo's Supper Club; later owned by sons Larry and Tom. Farewell notice says grandsons Matt and Tim were taking much of Smoky's to Mount Horeb to open Driftless Social (128 E Main St, Mount Horeb - site live Sept 2026, not a Smoky's reopening). Exact last night not confirmed (article said less than two weeks away as of Feb 21, 2022). What now occupies 3005 University Ave was not found; Overture still carries stale Smoky's/'Len Jan Ltd' records there."
+ },
+ {
+  "name": "Kavanaugh's Esquire Club",
+  "address": "1025 N Sherman Ave",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "KAVANAUGH'S ESQUIRE CLUB",
+   "KAVANAUGHS ESQUIRE CLUB",
+   "ESQUIRE CLUB",
+   "THE ESQUIRE SUPPER CLUB",
+   "ESQUIRE SUPPER CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "North Side Madison supper club on Sherman Ave in business from 1947 until it closed for good in January 2026 after owner John Kavanaugh died.",
+  "founded": 1947,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.wmtv15news.com/2026/01/27/end-an-era-madison-supper-club-close-its-doors-second-time-after-longtime-owner-passes-away/"
+  ],
+  "open_evidence": "https://www.wmtv15news.com/2026/01/27/end-an-era-madison-supper-club-close-its-doors-second-time-after-longtime-owner-passes-away/ - WMTV15 (Jan 26-27, 2026): closing its doors a second time after longtime owner John Kavanaugh died",
+  "founded_source": "https://www.wmtv15news.com/2026/01/27/end-an-era-madison-supper-club-close-its-doors-second-time-after-longtime-owner-passes-away/",
+  "closed_reason": "Closed in late January 2026 following the death of longtime owner John Kavanaugh, about a year after an abrupt February 2025 closure that was reversed the next day when Kavanaugh announced he would reopen it (WMTV15, Jan 2026: https://www.wmtv15news.com/2026/01/27/end-an-era-madison-supper-club-close-its-doors-second-time-after-longtime-owner-passes-away/).",
+  "notes": "Timeline per WMTV15: John Kavanaugh retired April 2024; Spaulding Restaurant Enterprises took over operations May 2024; abrupt closure announced Feb 2025, reopened by Kavanaugh; final closure announced Jan 2026. Article gave no plans for the building. Could not check for news after January 2026 (web search budget exhausted). Year the Kavanaugh family acquired it not found. kavanaughsesquire.club is a stale COVID-era clone page and was not used."
+ },
+ {
+  "name": "Delaney's Steak Seafood Wine",
+  "address": "449 Grand Canyon Dr",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "DELANEY'S STEAK SEAFOOD WINE",
+   "DELANEYS STEAK SEAFOOD WINE",
+   "DELANEY'S STEAK HOUSE",
+   "DELANEY'S",
+   "DELANEYS",
+   "DELANEY'S RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "steakhouse",
+   "prime rib"
+  ],
+  "iconic_reason": "Second-generation family steakhouse on Madison's west side founded by Jim Delaney in 1973 and now run by his sons Jim Jr., Dan and Matt.",
+  "founded": 1973,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.experiencedelaneys.com/",
+   "https://experiencedelaneys.com/history/",
+   "https://experiencedelaneys.com/menu/",
+   "https://wisconsinsupperclubs.com/southwest-region/"
+  ],
+  "open_evidence": "https://www.experiencedelaneys.com/ - official site shows current hours (Tue-Sat from 4 pm) and a full priced dinner menu, copyright 2026 (checked Sept 2026); Overture Sept-2026 extract lists it open at 449 Grand Canyon Dr",
+  "founded_source": "https://experiencedelaneys.com/history/",
+  "closed_reason": null,
+  "notes": "History page: 'Delaney's Restaurant was founded back in 1973' by James McKenna 'Jim' Delaney (died 2011); the prompt hint of 1974 is not supported; home page says 'celebrating 50 years'. Current name 'Delaney's Steak Seafood Wine'. Whether 449 Grand Canyon Dr is the original 1973 location was not confirmed. History page says Jim Delaney was a two-time Wisconsin Restaurant Association Restaurateur of the Year (years not given, so not listed as an honor). Menu: mains mostly $40-$55, ribeye $68, prime rib $51/$69 (Wed/Fri/Sat) - tier 3. Faiola book feature taken from the marker on wisconsinsupperclubs.com (author's site)."
+ },
+ {
+  "name": "Casino Supper Club",
+  "address": "N3233 Seier Rd",
+  "city": "Fall River",
+  "chain": false,
+  "match_names": [
+   "CASINO SUPPER CLUB",
+   "THE CASINO SUPPER CLUB",
+   "CASINO",
+   "THE CASINO"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club",
+   "prime rib"
+  ],
+  "iconic_reason": "Rural supper club off Highway 16 near Fall River that began as the Fountain Prairie Inn roadhouse and dance hall in the mid-1930s and closed in 2019.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.channel3000.com/casino-supper-club-to-close-ending-decades-long-traditions/",
+   "https://web.archive.org/web/20191130044349/http://casinosupperclub.com/",
+   "https://web.archive.org/web/2019/http://www.casinosupperclub.com/aboutUs.html"
+  ],
+  "open_evidence": "https://web.archive.org/web/20191130044349/http://casinosupperclub.com/ - archived official site (Nov 2019): 'last day of operation on Saturday September 28th', business for sale; https://www.channel3000.com/casino-supper-club-to-close-ending-decades-long-traditions/ - Channel 3000 (Sept 23, 2019) on the closing; casinosupperclub.com parked by 2021-2022",
+  "founded_source": "https://web.archive.org/web/2019/http://www.casinosupperclub.com/aboutUs.html",
+  "closed_reason": "Closed Saturday, Sept 28, 2019 when owner Scott Schultz sold/listed the business to move on; the site said it would stay for sale but not open (Channel 3000, Sept 23, 2019: https://www.channel3000.com/casino-supper-club-to-close-ending-decades-long-traditions/; archived site: https://web.archive.org/web/20191130044349/http://casinosupperclub.com/).",
+  "notes": "Archived About page: John and Martha Wenzel opened a roadhouse, the Fountain Prairie Inn, 'in the mid-thirties'; after WWII it was renamed the Casino and became a supper club; sold to Ray and Ruth Jones in Oct 1976; bought by Jo Schultz in May 1984; son Scott Schultz bought it July 1, 2004. Channel 3000 quotes Schultz saying 'since the early '40s' and the name dating to the mid-'50s - so no single founding year; founded left null (mid-1930s per the club). Location is Fall River in Columbia County, not Madison proper. Address N3233 Seier Rd from the archived official site. Not on Ron Faiola's 2026 list; Overture Sept-2026 still shows a stale 'open' record. Could not check whether a new owner reopened the building after 2019 (web search budget exhausted)."
+ },
+ {
+  "name": "Mer & Jackie's Five Corners Supper Club",
+  "address": "N4899 County Road EE",
+  "city": "Appleton",
+  "chain": false,
+  "match_names": [
+   "MER & JACKIE'S FIVE CORNERS SUPPER CLUB",
+   "MER & JACKIE'S SUPPER CLUB",
+   "MER AND JACKIES SUPPER CLUB",
+   "MER & JACKIES",
+   "FIVE CORNERS SUPPER CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club",
+   "old fashioned"
+  ],
+  "iconic_reason": "Outagamie County supper club started as a tavern in 1955 by Joe Bessette's parents and known for frog legs and old fashioneds until it closed in June 2024.",
+  "founded": 1955,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.wearegreenbay.com/news/local-news/outagamie-county-supper-club-closing-after-nearly-70-year-run/",
+   "https://web.archive.org/web/20240731045158/https://www.wearegreenbay.com/news/local-news/outagamie-county-supper-club-closing-after-nearly-70-year-run/"
+  ],
+  "open_evidence": "https://web.archive.org/web/20240731045158/https://www.wearegreenbay.com/news/local-news/outagamie-county-supper-club-closing-after-nearly-70-year-run/ - WFRV Local 5 (June 21, 2024, archived copy; live page returned 403): Thursday night was its last night in business; merandjackiessupperclub.com no longer resolves (Sept 2026)",
+  "founded_source": "https://web.archive.org/web/20240731045158/https://www.wearegreenbay.com/news/local-news/outagamie-county-supper-club-closing-after-nearly-70-year-run/",
+  "closed_reason": "Closed Thursday, June 20, 2024 (last night of the bar; food service had ended a few days earlier) when owners Connie and Joe Bessette retired; building put up for sale (WFRV, June 21, 2024: https://www.wearegreenbay.com/news/local-news/outagamie-county-supper-club-closing-after-nearly-70-year-run/).",
+  "notes": "Article: Joe Bessette's parents started the business in 1955; it began as a tavern and grew into a supper club. Address N4899 County Road EE, Appleton comes only from the Overture extract (stale record still marked open) - the article gives no street address; the club is outside Appleton city limits (Outagamie County), so the postal city is Appleton per Overture. Not on Ron Faiola's 2026 list. Not near Madison (Fox Valley). Could not check whether a buyer reopened the building after June 2024 (web search budget exhausted)."
+ },
+ {
+  "name": "The Del-Bar",
+  "address": "800 Wisconsin Dells Pkwy",
+  "city": "Wisconsin Dells",
+  "chain": false,
+  "match_names": [
+   "THE DEL-BAR",
+   "DEL-BAR",
+   "DEL BAR",
+   "DEL-BAR SUPPER CLUB",
+   "THE DEL-BAR SUPPER CLUB",
+   "DELBAR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "steakhouse",
+   "old fashioned",
+   "historic"
+  ],
+  "iconic_reason": "Supper club on the Wisconsin Dells Parkway run by the Wimmer family since 1943, in a Prairie-style building designed by Frank Lloyd Wright protege James Dresser.",
+  "founded": 1943,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.del-bar.com/",
+   "https://www.del-bar.com/history/",
+   "https://sites.yext.com/294819-menu.js",
+   "https://wisconsinsupperclubs.com/southwest-region/"
+  ],
+  "open_evidence": "https://www.del-bar.com/ - homepage (fetched 2026-09-25) shows 'Open daily at 4pm', closed Labor Day Monday September 7th (2026), (c) 2026; Yext menu with current prices",
+  "founded_source": "https://www.del-bar.com/history/",
+  "closed_reason": null,
+  "notes": "Physically in Lake Delton; postal address Wisconsin Dells (site shows ZIP 53913, Faiola list 53965). Third-generation owner Amy Wimmer took over in 2018; sister Anne Stoken joined 2019. Menu: steaks $44-$82 (6-oz filet $52), short rib $42 - price tier between 3 and 4. Only the official site was available for the 1943 date (no independent source checked)."
+ },
+ {
+  "name": "Ishnala Supper Club",
+  "address": "S2011 Ishnala Rd",
+  "city": "Lake Delton",
+  "chain": false,
+  "match_names": [
+   "ISHNALA SUPPER CLUB",
+   "ISHNALA",
+   "ISHNALA SUPPER CLUB & LOUNGE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)",
+   "Featured in Ron Faiola's documentary 'Wisconsin Supper Clubs: An Old Fashioned Experience' (2011)"
+  ],
+  "tags": [
+   "supper club",
+   "old fashioned",
+   "steakhouse",
+   "historic"
+  ],
+  "iconic_reason": "Seasonal supper club on Mirror Lake inside Mirror Lake State Park, opened by the Hoffman brothers in 1953, with Norway pines growing through the dining-room roof.",
+  "founded": 1953,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.ishnala.com/",
+   "https://www.ishnala.com/about-us",
+   "https://wisconsinsupperclubs.com/movies/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs",
+   "https://wisconsinsupperclubs.com/southwest-region/"
+  ],
+  "open_evidence": "https://www.ishnala.com/ - homepage (fetched 2026-09-25): 'Join us for our 73rd season', last day of the season Sunday, October 25, 2026; current hours listed",
+  "founded_source": "https://www.ishnala.com/about-us",
+  "closed_reason": null,
+  "notes": "Seasonal (closes late October each year). Property history goes back to an 1826 trading post and 1909 Coleman family home; supper club since the Hoffman brothers' 1953 purchase. Current owner Robert Prosser. No reservations. Site lists Madison Magazine reader-poll awards (Best Supper Club 2019-2025) - not included as honors. Menu is image-only, so price tier left null."
+ },
+ {
+  "name": "House of Embers",
+  "address": "935 Wisconsin Dells Pkwy",
+  "city": "Wisconsin Dells",
+  "chain": false,
+  "match_names": [
+   "HOUSE OF EMBERS",
+   "WALLY'S HOUSE OF EMBERS",
+   "WALLYS HOUSE OF EMBERS",
+   "HOUSE OF EMBERS SUPPER CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "bbq",
+   "fish fry",
+   "prime rib",
+   "old fashioned"
+  ],
+  "iconic_reason": "Obois family supper club on the Wisconsin Dells Parkway since 1959, known for hickory-smoked baby back ribs.",
+  "founded": 1959,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.houseofembers.com/",
+   "https://www.houseofembers.com/about-us",
+   "https://www.houseofembers.com/menu",
+   "https://wisconsinsupperclubs.com/southwest-region/"
+  ],
+  "open_evidence": "https://www.houseofembers.com/ - homepage (fetched 2026-09-25) lists live music dates Friday Sept 4 through Saturday Sept 26 (2026), hours Tue-Sun from 4:30",
+  "founded_source": "https://www.houseofembers.com/about-us",
+  "closed_reason": null,
+  "notes": "Wally and Barbara Obois bought Ray's Barbecue in 1959 and renamed it House of Embers; children Mike Obois and Deb Christensen took over in 1998. Sometimes called Wally's House of Embers. Entrees mostly $31-$63; Friday fish fry and Saturday prime rib. Physically in Lake Delton; postal city Wisconsin Dells."
+ },
+ {
+  "name": "Dorf Haus Supper Club",
+  "address": "8931 County Hwy Y",
+  "city": "Sauk City",
+  "chain": false,
+  "match_names": [
+   "DORF HAUS SUPPER CLUB",
+   "DORF HAUS",
+   "THE DORF HAUS",
+   "DORFHAUS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "german",
+   "prime rib"
+  ],
+  "iconic_reason": "Maier family's German-themed supper club in the village of Roxbury serving schnitzel, sauerbraten and family-style chicken.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.foodspot.com/Clients/WI/SaukCity/DorfHausSupperClub/default.aspx?accid=19510",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs",
+   "https://wisconsinsupperclubs.com/southwest-region/"
+  ],
+  "open_evidence": "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs - April 13, 2026 article describes the second-generation family-run club run by Rebecca Maier-Frey and Monte Maier as operating",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Located in Roxbury (unincorporated); postal city Sauk City. Founding year not found in accessible sources (official page is an old foodspot.com site) - left null. Overture also lists 8931 County Hwy Y as open."
+ },
+ {
+  "name": "Green Acres Supper Club",
+  "address": "7487 State Highway 78",
+  "city": "Sauk City",
+  "chain": false,
+  "match_names": [
+   "GREEN ACRES SUPPER CLUB",
+   "GREEN ACRES",
+   "GREEN ACRES RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "historic",
+   "fish fry"
+  ],
+  "iconic_reason": "Supper club on the Wisconsin River in a late-1800s building that operated as Jack's Riverside Inn from the 1930s to 1972 and as Green Acres since 1986.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://greenacresrestaurant.com/",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs",
+   "https://wisconsinsupperclubs.com/southwest-region/"
+  ],
+  "open_evidence": "http://greenacresrestaurant.com/ - homepage (fetched 2026-09-25) shows current hours and a chef's features menu dated 9/10/26",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Official history: building late 1800s (stagecoach stop, store, tavern, dance hall); Jack Hammerli's River Tavern/Jack's Riverside Inn from the late 1930s to 1972 (Breunigs managed 1936-1946); Wood's Riverside Inn 1972-1985; named Green Acres from 1986 (Ted & Amy Klein); owned by Dan and Kris Cunningham since May 2017. No single founding year for the business, so founded is null. Faiola list gives 7438 State Road 78, but the official site says 7487 State Highway 78. Site says Wine Spectator Award of Excellence 'fifth year in a row' (years not stated, not listed as an honor)."
+ },
+ {
+  "name": "Arthur's Supper Club",
+  "address": "E4885 US Highway 14",
+  "city": "Spring Green",
+  "chain": false,
+  "match_names": [
+   "ARTHUR'S SUPPER CLUB",
+   "ARTHURS SUPPER CLUB",
+   "ARTHUR'S",
+   "ARTHURS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "prime rib",
+   "fish fry",
+   "old fashioned"
+  ],
+  "iconic_reason": "Supper club on Highway 14 near Spring Green, known for its daily prime rib, in a former 1940s-50s truck stop.",
+  "founded": 1966,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://arthurssupperclub.com/",
+   "https://arthurssupperclub.com/about/",
+   "https://arthurssupperclub.com/menu/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs",
+   "https://wisconsinsupperclubs.com/southwest-region/"
+  ],
+  "open_evidence": "https://arthurssupperclub.com/ - site relaunched March 2026 (images dated 2026/03) with current menu, weekly specials and reservation info; (c) 2026",
+  "founded_source": "https://arthurssupperclub.com/",
+  "closed_reason": null,
+  "notes": "Homepage says 'since 1966'. The About page history differs: the property was a truck stop from 1946; restaurant opened 1956; became 'a true supper club' in January 1968 (Mr. D's Steakhouse); named Arthur's in July 1976 when Art and Shirley Baryenbruch bought it. Address from Faiola list (E4885 US Hwy 14) - not shown on the official site pages checked. Prime rib $31-$37, steaks $34-$42."
+ },
+ {
+  "name": "The Freighthouse Restaurant",
+  "address": "107 Vine St",
+  "city": "La Crosse",
+  "chain": false,
+  "match_names": [
+   "THE FREIGHTHOUSE RESTAURANT",
+   "FREIGHTHOUSE RESTAURANT",
+   "FREIGHTHOUSE",
+   "THE FREIGHTHOUSE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "steakhouse",
+   "historic"
+  ],
+  "iconic_reason": "Steak and seafood restaurant opened in 1978 inside the Milwaukee Road's 1880 freight house in downtown La Crosse.",
+  "founded": 1978,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.freighthouserestaurant.com/",
+   "https://www.freighthouserestaurant.com/our-story",
+   "https://wisconsinsupperclubs.com/southwest-region/"
+  ],
+  "open_evidence": "https://www.freighthouserestaurant.com/ - homepage (fetched 2026-09-25) shows current hours and 'Best of La Crosse County 2014 - 2026'; (c) 2026",
+  "founded_source": "https://www.freighthouserestaurant.com/our-story",
+  "closed_reason": null,
+  "notes": "Opened October 1978 after renovation of the 1880 Chicago, Milwaukee & St. Paul Railroad freight house. Describes itself as fine dining (steak/seafood) rather than a supper club; included because it is on Ron Faiola's supper club list. Site says it received a Heritage Award from the La Crosse Historic Preservation Society (year not given)."
+ },
+ {
+  "name": "Van Abel's of Hollandtown",
+  "address": "8108 County Rd D",
+  "city": "Kaukauna",
+  "chain": false,
+  "match_names": [
+   "VAN ABEL'S OF HOLLANDTOWN",
+   "VAN ABELS OF HOLLANDTOWN",
+   "VAN ABEL'S",
+   "VAN ABELS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "historic"
+  ],
+  "iconic_reason": "Family-run restaurant, banquet hall and caterer in the Dutch settlement of Hollandtown that dates its founding to 1848 and is known for family-style chicken dinners.",
+  "founded": 1848,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://vanabels.com/",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "https://vanabels.com/ - site (c) 2026 lists current restaurant hours Wed-Sun and holiday family-style chicken dinners (fetched 2026-09-25)",
+  "founded_source": "https://vanabels.com/",
+  "closed_reason": null,
+  "notes": "Founding year 1848 is the business's own claim ('Founded in 1848', 'family tradition for over 175 years'); not independently checked. Located in Hollandtown (unincorporated); postal city Kaukauna. Street from Faiola list (8108 County Trunk Hwy D). Also a large banquet/catering operation (groups up to 1,500)."
+ },
+ {
+  "name": "Club Chalet",
+  "address": "4642 Nicolet Dr",
+  "city": "Green Bay",
+  "chain": false,
+  "match_names": [
+   "CLUB CHALET",
+   "CHRISTMAN'S CLUB CHALET",
+   "CLUB CHALET SUPPER CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "prime rib",
+   "old fashioned"
+  ],
+  "iconic_reason": "Supper club on the bay shore north of Green Bay, established in 1944, serving slow-roasted prime rib and coursed dinners.",
+  "founded": 1944,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.clubchaletgb.com/",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "https://www.clubchaletgb.com/ - site (c) 2026 with current hours (Tue-Sat) and reservation policy; lists a Best of the Bay 2025 reader award (fetched 2026-09-25)",
+  "founded_source": "https://www.clubchaletgb.com/",
+  "closed_reason": null,
+  "notes": "'EST. 1944' per official site; not independently checked. Operated by Christman's Club Chalet, LLC. Address from Faiola list; site shows it is on the bay in Green Bay. Reader-poll awards (Best of the Bay) not listed as honors."
+ },
+ {
+  "name": "Kropp's Supper Club",
+  "address": "4570 Shawano Ave",
+  "city": "Green Bay",
+  "chain": false,
+  "match_names": [
+   "KROPP'S SUPPER CLUB",
+   "KROPPS SUPPER CLUB",
+   "KROPP'S",
+   "KROPPS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "steakhouse"
+  ],
+  "iconic_reason": "Supper club in the Mill Center crossroads west of Green Bay, operating as a supper club since 1946 in a location that traces its tavern history to 1904.",
+  "founded": 1946,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://kroppssupperclub.com/",
+   "https://kroppssupperclub.com/history/",
+   "https://kroppssupperclub.com/menus/",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "https://kroppssupperclub.com/menus/ - Wednesday, Friday and Saturday menus dated May 1, 2026 posted; new 2026 logo (fetched 2026-09-25)",
+  "founded_source": "https://kroppssupperclub.com/history/",
+  "closed_reason": null,
+  "notes": "Site footer says 'A Mill Center Tradition Since 1904'; history page title says 'Green Bay Restaurant since 1946' - 1946 used as the supper club start, 1904 appears to be the site/tavern history (history text is image-only, not read). Saturday entrees $24-$48 (pork chops, steaks) with salad bar - tier 3 borderline 2."
+ },
+ {
+  "name": "Union Hotel & Restaurant",
+  "address": "200 N Broadway",
+  "city": "De Pere",
+  "chain": false,
+  "match_names": [
+   "UNION HOTEL & RESTAURANT",
+   "UNION HOTEL",
+   "UNION HOTEL AND RESTAURANT",
+   "THE UNION HOTEL"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "historic",
+   "fine dining"
+  ],
+  "iconic_reason": "Hotel dining room on Broadway in De Pere that has served diners since 1883 in the supper club tradition, known for its large wine list.",
+  "founded": 1883,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.unionhoteldepere.com",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "https://www.unionhoteldepere.com - official site lists current menus and Wednesday-Sunday hours; sitemap last modified 2025-08-12 (fetched 2026-09-25). No 2026-dated item found.",
+  "founded_source": "https://www.unionhoteldepere.com",
+  "closed_reason": null,
+  "notes": "'Since 1883' per official site (hotel/restaurant); length of current family ownership not checked. Open status based on the live official site (last updated Aug 2025) - no 2026-dated evidence found because web search was unavailable."
+ },
+ {
+  "name": "Wendt's on the Lake",
+  "address": "N9699 Lake Shore Dr",
+  "city": "Van Dyne",
+  "chain": false,
+  "match_names": [
+   "WENDT'S ON THE LAKE",
+   "WENDTS ON THE LAKE",
+   "WENDT'S",
+   "WENDTS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in Ron Faiola's documentary 'We're Here for a Fish Fry!' (2017)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "prime rib"
+  ],
+  "iconic_reason": "Wendt family restaurant on the west shore of Lake Winnebago, owned by the family for more than six decades and known for its lake perch fish fry.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.wendtsonthelake.com/",
+   "https://wisconsinsupperclubs.com/movies/",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "http://www.wendtsonthelake.com/ - site lists September 2026 daily specials (closed Sept 5 and 19), EAA 2026 hours post (Jul 11, 2026) and 2026 summer music (fetched 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Site says the Wendt family has owned it 'for over six decades' (i.e. 1960s or earlier); exact founding year not found - founded null. Site was intermittently returning a Cloudflare error. Address from Faiola list."
+ },
+ {
+  "name": "Jimmie's White House Inn",
+  "address": "5776 Main St",
+  "city": "Butte des Morts",
+  "chain": false,
+  "match_names": [
+   "JIMMIE'S WHITE HOUSE INN",
+   "JIMMIES WHITE HOUSE INN",
+   "WHITE HOUSE INN",
+   "JIMMIE'S",
+   "JIMMIES"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "historic"
+  ],
+  "iconic_reason": "Supper club opened in 1929 by James Kontos in a turn-of-the-century brewery-built saloon in Butte des Morts, known for Greek lemon soup and pan-fried walleye.",
+  "founded": 1929,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.jimmieswhitehouseinn.com/",
+   "https://www.jimmieswhitehouseinn.com/about",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "https://www.jimmieswhitehouseinn.com/ - site (c) 2026 lists current hours (Wed-Sat) and 'closed on 9/12' notice (fetched 2026-09-25)",
+  "founded_source": "https://www.jimmieswhitehouseinn.com/about",
+  "closed_reason": null,
+  "notes": "Owned by the LaFever family since 1997 (Miles LaFever died 2018; family continues). Building built around the turn of the century by the George Walter Brewing Co. Address from Faiola list."
+ },
+ {
+  "name": "Fin 'n' Feather Showboats",
+  "address": "22 W Main St",
+  "city": "Winneconne",
+  "chain": false,
+  "match_names": [
+   "FIN 'N' FEATHER SHOWBOATS",
+   "FIN N FEATHER SHOWBOATS",
+   "FIN 'N' FEATHER",
+   "FIN N FEATHER",
+   "FIN-N-FEATHER"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club",
+   "historic"
+  ],
+  "iconic_reason": "Wolf River restaurant and showboat-cruise business in Winneconne whose site has served food since George Korn's 1922 bait-and-food stand and which took the Fin 'n' Feather name in the late 1950s.",
+  "founded": 1922,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://fin-n-feathershowboats.com/",
+   "https://fin-n-feathershowboats.com/about/"
+  ],
+  "open_evidence": "https://fin-n-feathershowboats.com/about/ - 'Live Entertainment 2026' section and current hours (Wed-Sun) on the official site (fetched 2026-09-25)",
+  "founded_source": "https://fin-n-feathershowboats.com/about/",
+  "closed_reason": null,
+  "notes": "Founding year is a judgment call: George Korn built the riverfront building in 1922 and offered fishermen food and bait; tavern after Prohibition; renamed Fin 'n' Feather in the late 1950s (Art and Edith Drews); Biggar family bought it 1969; renamed Fin 'n' Feather Showboats in 1990 after buying a riverboat; fire May 6, 1987 closed it nine months. Current co-owners Debbie Ryf and Rod & Jenny Busching. It does not call itself a supper club (salad bar/buffet plus menu); included because it was on the requested list."
+ },
+ {
+  "name": "1951 West at the Rock Garden",
+  "address": "1951 Bond St",
+  "city": "Green Bay",
+  "chain": false,
+  "match_names": [
+   "1951 WEST",
+   "1951 WEST RESTAURANT",
+   "ROCK GARDEN",
+   "ROCK GARDEN SUPPER CLUB",
+   "THE ROCK GARDEN"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "Family-owned restaurant and banquet center on Bond Street in Green Bay, serving the area since 1979, whose dining room now operates as 1951 West.",
+  "founded": 1979,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.rockgardengb.com/",
+   "https://www.rockgardengb.com/1951-west-restaurant"
+  ],
+  "open_evidence": "https://www.rockgardengb.com/ - site (c) 2026 with dinner/lunch/brunch menus and blog posts dated through September 23, 2026 (fetched 2026-09-25)",
+  "founded_source": "https://www.rockgardengb.com/1951-west-restaurant",
+  "closed_reason": null,
+  "notes": "Uncertain match to the 'Rock Garden' supper club requested: the business now brands itself 'The Rock Garden Banquet & Event Center' with the '1951 West' restaurant; it says it is family-owned and has served the area since 1979. I could not confirm (no web search) when the supper-club name was dropped or whether 1979 is the original opening. Overture places 1951 Bond St in the Village of Howard; site says Green Bay."
+ },
+ {
+  "name": "Schwarz's Supper Club",
+  "address": "W1688 Sheboygan Rd",
+  "city": "New Holstein",
+  "chain": false,
+  "match_names": [
+   "SCHWARZ'S SUPPER CLUB",
+   "SCHWARZS SUPPER CLUB",
+   "SCHWARZ SUPPER CLUB",
+   "SCHWARZ'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in Travel Wisconsin story 'Iconic Wisconsin Supper Clubs' (2016)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "relish tray",
+   "steakhouse"
+  ],
+  "iconic_reason": "Family-run supper club in the hamlet of St. Anna, founded by Ziggy and Evelyn Schwarz in 1957 as a country tavern, where orders are taken in the bar and a relish tray waits at the table.",
+  "founded": 1957,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.schwarzsupperclub.com/",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs",
+   "https://www.travelwisconsin.com/stories/the-story-behind-wisconsins-iconic-supper-clubs",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs - April 13, 2026 article features Schwarz's in New Holstein as operating; official site lists current Wed-Sun hours (site footer (c) 2024)",
+  "founded_source": "http://www.schwarzsupperclub.com/",
+  "closed_reason": null,
+  "notes": "Located in St. Anna (unincorporated); postal city New Holstein. Third generation of family ownership (Lisa and Stephanie Schwarz and family). Does not take reservations."
+ },
+ {
+  "name": "Roepke's Village Inn",
+  "address": "W2686 St Charles Rd",
+  "city": "Chilton",
+  "chain": false,
+  "match_names": [
+   "ROEPKE'S VILLAGE INN",
+   "ROEPKES VILLAGE INN",
+   "ROEPKE'S",
+   "ROEPKES",
+   "VILLAGE INN CHARLESBURG"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in Travel Wisconsin story 'Iconic Wisconsin Supper Clubs' (2016)"
+  ],
+  "tags": [
+   "supper club",
+   "german",
+   "fish fry",
+   "historic"
+  ],
+  "iconic_reason": "Supper club in the Calumet County hamlet of Charlesburg, owned by the Roepke family since 1968, serving German dishes such as Wiener schnitzel a la Holstein and a salad bar kept since 1968.",
+  "founded": 1968,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.roepkesvillageinn.com/",
+   "https://www.roepkesvillageinn.com/about/",
+   "https://www.travelwisconsin.com/stories/the-story-behind-wisconsins-iconic-supper-clubs",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "http://www.roepkesvillageinn.com/ - official site (c) 2017-2026 lists current hours Tue-Sun 4-9 pm (fetched 2026-09-25)",
+  "founded_source": "https://www.roepkesvillageinn.com/about/",
+  "closed_reason": null,
+  "notes": "Founded year = when the Roepke family bought the Village Inn (July 1968); the building/business traces to a late-1800s hotel, saloon and stagecoach stop, later a dance hall. Book feature is from the restaurant's own site, which quotes the book. Postal city Chilton (Charlesburg is unincorporated)."
+ },
+ {
+  "name": "Altona Supper Club",
+  "address": "2306 Calumet Dr",
+  "city": "New Holstein",
+  "chain": false,
+  "match_names": [
+   "ALTONA SUPPER CLUB",
+   "THE ALTONA",
+   "ALTONA"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "german"
+  ],
+  "iconic_reason": "New Holstein supper club opened in November 1937 by Herman Muenster and named for the former German settlement of Altona.",
+  "founded": 1937,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.altonasupperclub.com/",
+   "http://www.altonasupperclub.com/Our%20History.html",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "http://www.altonasupperclub.com/ - site (c) 2026 with weekly hours and Friday seafood buffet (fetched 2026-09-25)",
+  "founded_source": "http://www.altonasupperclub.com/Our%20History.html",
+  "closed_reason": null,
+  "notes": "Many ownership changes (Muenster 1937, Wright 1954, Lodes 1968, Suttner 1971-1993, Hertel 1993-2004, Steiner after 2004); current owner not confirmed. 'german' tag based on the name's heritage - menu not checked for German dishes, may be dropped. Address from Faiola list."
+ },
+ {
+  "name": "Sister Bay Bowl",
+  "address": "10640 N Bay Shore Dr",
+  "city": "Sister Bay",
+  "chain": false,
+  "match_names": [
+   "SISTER BAY BOWL",
+   "THE BOWL",
+   "SISTER BAY BOWL SUPPER CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry"
+  ],
+  "iconic_reason": "Willems family bowling alley and supper club in Sister Bay; the six-lane alley was built in 1958 and the supper club opened in 1964.",
+  "founded": 1958,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.sisterbaybowl.com/",
+   "https://www.sisterbaybowl.com/history",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "https://www.sisterbaybowl.com/ - site (c) 2026 posts holiday hours 12/26/25-1/4/26, closure January 5-29 (2026) and winter hours (fetched 2026-09-25)",
+  "founded_source": "https://www.sisterbaybowl.com/history",
+  "closed_reason": null,
+  "notes": "Willems family bought the Sister Bay Hotel in 1950, built the bowling alley in 1958 and opened the supper club in 1964; founded set to 1958 (start of 'the Bowl'); 1964 if counting only the supper club. Third generation operates it. 'fish fry' tag not verified on the menu."
+ },
+ {
+  "name": "The Mill Supper Club",
+  "address": "4128 State Hwy 42/57",
+  "city": "Sturgeon Bay",
+  "chain": false,
+  "match_names": [
+   "THE MILL SUPPER CLUB",
+   "MILL SUPPER CLUB",
+   "THE MILL"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "Door County supper club north of Sturgeon Bay opened by Mr. Dagneau in 1930 and run by the Petersilka family for 56 years, known for family-style chicken on Thursdays and Sundays.",
+  "founded": 1930,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.themillsupperclub.com/",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "http://www.themillsupperclub.com/ - official site advertises 'Mug Club 2026', current hours and weekly specials (fetched 2026-09-25)",
+  "founded_source": "http://www.themillsupperclub.com/",
+  "closed_reason": null,
+  "notes": "Current owners after the Petersilka family not identified. Address from Faiola list ('4128 Hwy 42') and Overture ('4128 State Highway 42 57')."
+ },
+ {
+  "name": "Nightingale Supper Club",
+  "address": "1541 Egg Harbor Rd",
+  "city": "Sturgeon Bay",
+  "chain": false,
+  "match_names": [
+   "NIGHTINGALE SUPPER CLUB",
+   "THE NIGHTINGALE",
+   "NIGHTINGALE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "historic"
+  ],
+  "iconic_reason": "Sturgeon Bay supper club that opened as the Nightingale Cafe in 1913 and became a supper club with a dance hall in 1933.",
+  "founded": 1913,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://nightingalesupperclub.com/",
+   "http://nightingalesupperclub.com/about",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "http://nightingalesupperclub.com/ - official site (c) 2026: 'Open Monday - Saturday, dinner from 5 pm', reservations and online ordering (fetched 2026-09-25)",
+  "founded_source": "http://nightingalesupperclub.com/about",
+  "closed_reason": null,
+  "notes": "Timeline per official site: cafe 1913, supper club 1933, fire and rebuild 1972, remodel 1990, John and Farrah Heikkila became the 7th owners in August 2021 and remodeled. Address from Faiola list."
+ },
+ {
+  "name": "Norton's of Green Lake",
+  "address": "380 S Lawson Dr",
+  "city": "Green Lake",
+  "chain": false,
+  "match_names": [
+   "NORTON'S OF GREEN LAKE",
+   "NORTONS OF GREEN LAKE",
+   "NORTON'S",
+   "NORTONS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "prime rib"
+  ],
+  "iconic_reason": "Lakefront supper club on Green Lake established in 1948, with a dock bar, Friday fish fry and Saturday prime rib.",
+  "founded": 1948,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://nortonsgreenlake.com/",
+   "https://nortonsgreenlake.com/about/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ],
+  "open_evidence": "http://nortonsgreenlake.com/ - site (c) 2026 lists Tue-Sun hours, weekly specials and live music (fetched 2026-09-25)",
+  "founded_source": "https://nortonsgreenlake.com/about/",
+  "closed_reason": null,
+  "notes": "Official site gives 380 South Lawson Dr (Faiola list says 'Larson Drive'). Current ownership not checked."
+ },
+ {
+  "name": "Blanck's Supper Club",
+  "address": "W2655 County Rd Q",
+  "city": "Malone",
+  "chain": false,
+  "match_names": [
+   "BLANCK'S SUPPER CLUB",
+   "BLANCKS SUPPER CLUB",
+   "BLANCK'S",
+   "BLANCKS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "Supper club near Malone run by three generations of the Blanck family since Bob and Hazel Blanck bought a tavern there in 1952.",
+  "founded": 1952,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.blanckssupperclub.com/",
+   "http://www.blanckssupperclub.com/about-us.php",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "http://www.blanckssupperclub.com/ - official site lists current hours and 'Closed Sunday, September 13 for an employee event' (Sept 13 is a Sunday in 2026) (fetched 2026-09-25)",
+  "founded_source": "http://www.blanckssupperclub.com/about-us.php",
+  "closed_reason": null,
+  "notes": "Fire May 10, 1962, reopened July 6; son Kevin bought it 1981; third generation from July 1, 2005. Address from Faiola list; ZIP 54049 per Faiola (Malone, Fond du Lac County)."
+ },
+ {
+  "name": "Rupp's on Washington",
+  "address": "1102 W Washington Ave",
+  "city": "Cleveland",
+  "chain": false,
+  "match_names": [
+   "RUPP'S ON WASHINGTON",
+   "RUPPS ON WASHINGTON",
+   "RUPP'S SUPPER CLUB",
+   "RUPP'S SUPPERCLUB",
+   "RUPPS SUPPER CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)"
+  ],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "Supper club on West Washington Avenue in the village of Cleveland in Manitowoc County, carrying the Rupp's name.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ],
+  "open_evidence": "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs - April 13, 2026 article names 'Rupp's on Washington' among supper clubs visited; Overture Sept 2026 extract lists it open at 1102 W Washington Ave, Cleveland",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "LOW CONFIDENCE ENTRY. Its former domain ruppsonwashington.com now redirects to an unrelated Washington State tourism page, and only a Facebook page is linked from Faiola's list. Founding year and relationship to the older Rupp's Lodge / Rupp's Downtown (925 N 8th St, Sheboygan, which now appears to operate as 'Downtown 925') could not be verified without web search. Consider dropping this entry."
+ },
+ {
+  "name": "Norwood Pines Supper Club",
+  "address": "10171 Hwy 70",
+  "city": "Minocqua",
+  "chain": false,
+  "match_names": [
+   "NORWOOD PINES SUPPER CLUB",
+   "NORWOOD PINES",
+   "THE NORWOOD PINES"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry"
+  ],
+  "iconic_reason": "Supper club among red pines on Patricia Lake west of Minocqua, known for its Friday fish fry served with corn fritters.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.norwoodpines.com/",
+   "https://www.norwoodpines.com/about-us/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ],
+  "open_evidence": "http://www.norwoodpines.com/ - official site (c) 2026 with current Tue-Sat hours and '2027 Wedding Closures'; sitemap last modified 2026-09-22 (fetched 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Site calls it 'one of Northern Wisconsin's oldest' supper clubs but gives no founding year; not found elsewhere without web search - founded null."
+ },
+ {
+  "name": "Little Bohemia Lodge",
+  "address": "142 US Highway 51 S",
+  "city": "Manitowish Waters",
+  "chain": false,
+  "match_names": [
+   "LITTLE BOHEMIA LODGE",
+   "LITTLE BOHEMIA",
+   "LITTLE BOHEMIA RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Travel Wisconsin story 'Iconic Wisconsin Supper Clubs' (2016)"
+  ],
+  "tags": [
+   "supper club",
+   "lodge",
+   "historic"
+  ],
+  "iconic_reason": "Lodge built in 1929 by Emil Wanatka where the FBI's April 1934 raid on the John Dillinger gang took place; it still operates as a restaurant with the bullet holes preserved.",
+  "founded": 1929,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.littlebohemialodge.com/",
+   "https://www.littlebohemialodge.com/index.php/history",
+   "https://en.wikipedia.org/wiki/Little_Bohemia_Lodge",
+   "https://www.restaurantji.com/wi/manitowish-waters/little-bohemia-lodge-/",
+   "https://www.travelwisconsin.com/stories/the-story-behind-wisconsins-iconic-supper-clubs"
+  ],
+  "open_evidence": "https://www.restaurantji.com/wi/manitowish-waters/little-bohemia-lodge-/ - diner review dated May 2026; official site lists dinner Wed-Sun and museum hours (site footer (c) 2013); Wikipedia: 'remains operational today as a restaurant'",
+  "founded_source": "https://www.littlebohemialodge.com/index.php/history",
+  "closed_reason": null,
+  "notes": "Official site gives both '142 US Highway 51 South' and '5625 Little Bohemia Lane (Located on US Hwy 51 S)'. Public Enemies (2009) filmed scenes here in 2008. Official website looks unmaintained (2013); current owner not checked. Not on Ron Faiola's current list; called a supper club in Travel Wisconsin's 2016 supper club story."
+ },
+ {
+  "name": "White Stag Inn",
+  "address": "7141 State Hwy 17",
+  "city": "Rhinelander",
+  "chain": false,
+  "match_names": [
+   "WHITE STAG INN",
+   "THE WHITE STAG INN",
+   "WHITE STAG",
+   "WHITE STAG SUPPER CLUB"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "steakhouse"
+  ],
+  "iconic_reason": "Northwoods steak supper club on Highway 17 north of Rhinelander, featured in both editions of Ron Faiola's Wisconsin supper club book.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.restaurantji.com/wi/rhinelander/white-stag-inn-/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ],
+  "open_evidence": "https://www.restaurantji.com/wi/rhinelander/white-stag-inn-/ - diner review dated May 2026 and current hours; listing updated Sep 11, 2026",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "No official website found (Faiola links a directory page). Founding year not found - null. Address from Faiola list (7141 State Hwy 17 North) and directory (7141 WI-17)."
+ },
+ {
+  "name": "McGregor's Blink Bonnie Supper Club",
+  "address": "8997 Hwy 70",
+  "city": "St. Germain",
+  "chain": false,
+  "match_names": [
+   "MCGREGOR'S BLINK BONNIE SUPPER CLUB",
+   "MCGREGORS BLINK BONNIE",
+   "BLINK BONNIE SUPPER CLUB",
+   "BLINK BONNIE",
+   "MCGREGOR'S BLINK BONNIE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)",
+   "Featured in National Geographic's 'To truly experience Wisconsin, head to the supper club' (April 2026)"
+  ],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "Northwoods supper club on Highway 70 in St. Germain, featured in National Geographic's 2026 story on Wisconsin supper clubs.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ],
+  "open_evidence": "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs - April 13, 2026 article mentions visiting Blink Bonnie as an operating club; also on Travel Wisconsin's supper club page",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Only a Facebook page is linked; founding year not found - null. Address from Faiola list only."
+ },
+ {
+  "name": "Pinewood Supper Club",
+  "address": "1208 Half Moon Lake Dr",
+  "city": "Mosinee",
+  "chain": false,
+  "match_names": [
+   "PINEWOOD SUPPER CLUB",
+   "THE PINEWOOD SUPPER CLUB",
+   "THE PINEWOOD",
+   "PINEWOOD"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)"
+  ],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "Supper club on Half Moon Lake near Mosinee operating since 1974, with house-made soups, sauces and dressings.",
+  "founded": 1974,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.thepinewood.com/",
+   "https://www.restaurantji.com/wi/mosinee/pinewood-supper-club-/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ],
+  "open_evidence": "https://www.restaurantji.com/wi/mosinee/pinewood-supper-club-/ - diner reviews dated July and September 2025; official site lists Tue-Sat hours (site last updated 2022)",
+  "founded_source": "http://www.thepinewood.com/",
+  "closed_reason": null,
+  "notes": "No 2026-dated evidence found; newest is a September 2025 review. Address from Faiola list."
+ },
+ {
+  "name": "Sky Club",
+  "address": "2202 Post Rd",
+  "city": "Plover",
+  "chain": false,
+  "match_names": [
+   "SKY CLUB",
+   "THE SKY CLUB",
+   "SKY CLUB SUPPER CLUB",
+   "SKY CLUB DINING"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry"
+  ],
+  "iconic_reason": "Plover supper club that bills itself as the home of the first salad bar, in 1950.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.skyclubdining.com/",
+   "http://www.skyclubdining.com/directions.php",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ],
+  "open_evidence": "http://www.skyclubdining.com/ - official site posts an October 2025 dinner menu PDF and a February 2025 funeral menu; salad bar 'now open' (fetched 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "'Home of the first EVER salad bar 1950' is the club's own claim (unverified); it implies operation by 1950 but no founding year is stated - founded null. Newest dated evidence is October 2025."
+ },
+ {
+  "name": "Silvercryst Supper Club",
+  "address": "W7015 Hwy 21",
+  "city": "Wautoma",
+  "chain": false,
+  "match_names": [
+   "SILVERCRYST SUPPER CLUB",
+   "SILVERCRYST RESORT",
+   "THE SILVERCRYST",
+   "SILVERCRYST RESORT & MOTEL",
+   "SILVERCRYST"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "lodge",
+   "historic"
+  ],
+  "iconic_reason": "Resort, motel and supper club on Silver Lake near Wautoma established in 1894, with the 'Boris the Bull' fiberglass statue out front.",
+  "founded": 1894,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://www.silvercryst.com/",
+   "http://www.silvercryst.com/history",
+   "https://en.wikipedia.org/wiki/Silvercryst_Resort",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ],
+  "open_evidence": "http://www.silvercryst.com/ - official site (c) 2026 with hours and dining specials; sitemap last modified 2026-09-09 (fetched 2026-09-25)",
+  "founded_source": "http://www.silvercryst.com/history",
+  "closed_reason": null,
+  "notes": "1894 is when William Walker founded the Silvercryst Summer Resort; the supper club developed in the mid-to-late 20th century (Honl family from the 1950s). Owned by former employees Mike Pfaller and James Heck since April 2000. In the Town of Marion; postal city Wautoma. Address from Faiola list ('W7015 Hwy 21 East')."
+ },
+ {
+  "name": "Lehman's Supper Club",
+  "address": "2911 S Main St",
+  "city": "Rice Lake",
+  "chain": false,
+  "match_names": [
+   "LEHMAN'S SUPPER CLUB",
+   "LEHMANS SUPPER CLUB",
+   "LEHMAN'S SUPPER CLUB & LOUNGE",
+   "LEHMAN'S",
+   "LEHMANS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)",
+   "Listed in Travel Wisconsin's supper club guide (travelwisconsin.com/food-drink/supper-clubs, accessed 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "steakhouse"
+  ],
+  "iconic_reason": "Rice Lake supper club started by Paul Lehman and sons Art and Harold in 1934 and run by four generations of the family until its sale in 2025.",
+  "founded": 1934,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://lehmanssupperclub.net/",
+   "https://lehmanssupperclub.net/about-us/",
+   "https://www.newsbreak.com/bring-me-the-news-560130/4331532611905-wisconsin-supper-club-sold-to-new-owners-after-91-years-of-family-ownership",
+   "https://www.restaurantji.com/wi/rice-lake/lehmans-supper-club-/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ],
+  "open_evidence": "https://www.restaurantji.com/wi/rice-lake/lehmans-supper-club-/ - diner reviews dated January and February 2026 describe dinners there; official site lists Wed-Sun hours",
+  "founded_source": "https://lehmanssupperclub.net/about-us/",
+  "closed_reason": null,
+  "notes": "Sold by the Lehman family to new owners 'Jason and Paige' (last names not given) per Bring Me The News, Nov 4, 2025; the article did not say whether the name or format would change, but the family said the buyers 'share the same values... and love for tradition'. Reviews from Jan-Feb 2026 indicate it kept operating. Official site text is stale ('entering our 84th year')."
+ },
+ {
+  "name": "The Ranch Supper Club",
+  "address": "10590 N Ranch Rd",
+  "city": "Hayward",
+  "chain": false,
+  "match_names": [
+   "THE RANCH SUPPER CLUB",
+   "RANCH SUPPER CLUB",
+   "THE RANCH",
+   "RANCH SUPPER CLUB & LOUNGE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "relish tray",
+   "fish fry",
+   "historic"
+  ],
+  "iconic_reason": "Supper club east of Hayward that opened as The Aladdin in 1931 and has operated as The Ranch Supper Club since 1960.",
+  "founded": 1931,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://ranchsupperclub.com/",
+   "https://ranchsupperclub.com/history/",
+   "https://www.restaurantji.com/wi/hayward/the-ranch-/",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ],
+  "open_evidence": "No 2025-2026 dated evidence found: official site (c) 2018, last upload Nov 2022, says 'Open year-round Thursday - Sunday at 5pm'; newest dated diner review on Restaurantji is October 2024 (listing updated Sep 10, 2026 with hours, no closure noted). Still on Ron Faiola's 2026 list.",
+  "founded_source": "https://ranchsupperclub.com/history/",
+  "closed_reason": null,
+  "notes": "1931 is the business's own origin story (The Aladdin); renamed The Ranch Supper Club in 1960 under Vivian Levinson; Beth and Barney Morgan with Cheryl Haupt from 1987; now run by their daughter Haley and Nathan Bochler. Probably open but not confirmed with dated evidence, hence open=null. Located 1/4 mile east of Hayward on Hwy 77."
+ },
+ {
+  "name": "Wissota High Shores Supper Club",
+  "address": "17985 County Hwy X",
+  "city": "Chippewa Falls",
+  "chain": false,
+  "match_names": [
+   "WISSOTA HIGH SHORES SUPPER CLUB",
+   "HIGH SHORES SUPPER CLUB",
+   "WISSOTA HIGH SHORES",
+   "HIGH SHORES"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish fry",
+   "old fashioned"
+  ],
+  "iconic_reason": "Supper club on Lake Wissota serving the Chippewa Falls area since 1936, reopened in 2021 by the Wogernese family as Wissota High Shores.",
+  "founded": 1936,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://wissotahighshores.com/",
+   "https://wissotahighshores.com/our-story/",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ],
+  "open_evidence": "https://wissotahighshores.com/ - official site footer 'Wissota High Shores Supper Club 2026 All rights reserved' with contact & hours page (fetched 2026-09-25); no other dated item found",
+  "founded_source": "https://wissotahighshores.com/our-story/",
+  "closed_reason": null,
+  "notes": "Formerly High Shores Supper Club (previous owner Diane Schroeder); bought and renamed in 2021 by Brian and Kim Wogernese. Address from Faiola list ('17985 Hwy X'). Open evidence is only the 2026 site footer."
+ },
+ {
+  "name": "Sullivan's Supper Club",
+  "address": "W25709 Sullivan Rd",
+  "city": "Trempealeau",
+  "chain": false,
+  "match_names": [
+   "SULLIVAN'S SUPPER CLUB",
+   "SULLIVANS SUPPER CLUB",
+   "SULLIVAN'S",
+   "SULLIVANS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "Supper club next to Perrot State Park overlooking the Mississippi River at Trempealeau, operating since 1968.",
+  "founded": 1968,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://sullivanssupperclub.com/",
+   "https://www.restaurantji.com/wi/trempealeau/sullivans-supper-club-/",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ],
+  "open_evidence": "https://www.restaurantji.com/wi/trempealeau/sullivans-supper-club-/ - diner review dated July 2026; official site (c) 2026",
+  "founded_source": "https://sullivanssupperclub.com/",
+  "closed_reason": null,
+  "notes": "Current ownership not checked."
+ },
+ {
+  "name": "Jake's Supper Club",
+  "address": "E5690 County Rd D",
+  "city": "Menomonie",
+  "chain": false,
+  "match_names": [
+   "JAKE'S SUPPER CLUB",
+   "JAKES SUPPER CLUB",
+   "JAKE'S SUPPER CLUB ON TAINTER LAKE",
+   "JAKE'S",
+   "JAKES"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "prime rib",
+   "fish fry"
+  ],
+  "iconic_reason": "Supper club on Tainter Lake north of Menomonie with lakeside decks, known for its prime rib.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "http://jakessupperclub.com/",
+   "https://www.restaurantji.com/wi/menomonie/jakes-supper-club-/",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ],
+  "open_evidence": "https://www.restaurantji.com/wi/menomonie/jakes-supper-club-/ - several diner reviews dated September 2026; official site lists hours",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Site says it has been a supper club 'for decades' but gives no founding year - founded null."
+ }
+]

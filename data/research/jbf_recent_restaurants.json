@@ -1,0 +1,872 @@
+[
+ {
+  "name": "Amilinda",
+  "address": "315 E Wisconsin Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "AMILINDA",
+   "AMILINDA RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Chef semifinalist 2024 (Gregory León)",
+   "Outstanding Chef semifinalist 2025 (Gregory León)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "spanish",
+   "portuguese",
+   "small plates"
+  ],
+  "iconic_reason": "Downtown Milwaukee restaurant run by chef Gregory León since 2015 serving seasonal Spanish- and Portuguese-inspired small plates.",
+  "founded": 2015,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://amilinda.com/",
+   "https://urbanmilwaukee.com/2026/07/15/new-documentary-highlights-milwaukee-chef/",
+   "https://www.jamesbeard.org/stories/the-2024-james-beard-awards-semifinalists",
+   "https://www.jamesbeard.org/stories/the-2025-james-beard-award-semifinalists"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/07/15/new-documentary-highlights-milwaukee-chef/ - says Amilinda at 315 E. Wisconsin Ave. will celebrate its 11th anniversary later in July 2026 (Jul 15, 2026); amilinda.com lists Wed-Sat 5-9pm hours (checked Sep 2026)",
+  "founded_source": "https://urbanmilwaukee.com/2026/07/15/new-documentary-highlights-milwaukee-chef/",
+  "closed_reason": null,
+  "notes": "Opening year inferred from Urban Milwaukee's '11th anniversary' in July 2026 (so July 2015). Began as a pop-up at The National Cafe (839 W National Ave) before the downtown space; Overture still lists that old address. Official site also claims JBF 'nominee' 2022 and 2023 for León (not verified here, outside 2024-2026 scope). Menu prices not visible on site, so price_tier null."
+ },
+ {
+  "name": "Odd Duck",
+  "address": "939 S 2nd St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "ODD DUCK",
+   "ODD DUCK RESTAURANT",
+   "THE ODD DUCK"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest semifinalist 2024 (Ross Bachhuber and Samuel Ek)",
+   "Best Chef: Midwest semifinalist 2025 (Ross Bachhuber and Samuel Ek)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "small plates"
+  ],
+  "iconic_reason": "Small-plates restaurant opened in Bay View in 2012 that moved to a building it owns in Walker's Point in 2022.",
+  "founded": 2012,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://oddduckrestaurant.com/",
+   "https://onmilwaukee.com/articles/52-restaurants-2026-odd-duck",
+   "https://onmilwaukee.com/articles/first-look-odd-duck-in-walkers-point",
+   "https://www.jamesbeard.org/stories/the-2024-james-beard-awards-semifinalists",
+   "https://www.jamesbeard.org/stories/the-2025-james-beard-award-semifinalists"
+  ],
+  "open_evidence": "https://onmilwaukee.com/articles/52-restaurants-2026-odd-duck - OnMilwaukee 2026 '52 restaurants' feature (week 32, ~Aug 2026) says Odd Duck at 939 S 2nd St turned 14 in April 2026, open Tue-Sat; official site lists Tue-Sat hours (checked Sep 2026)",
+  "founded_source": "https://oddduckrestaurant.com/",
+  "closed_reason": null,
+  "notes": "Original location was 2352 S Kinnickinnic Ave (Bay View), which Overture still lists; reopened at 939 S 2nd St on Mar 31, 2022. Owners Melissa Buchholz and chef Ross Bachhuber. OnMilwaukee blocks automated fetches; its 2026 article was seen only as a search-result summary. Prices not shown on site."
+ },
+ {
+  "name": "EsterEv",
+  "address": "2165 S Kinnickinnic Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "ESTEREV",
+   "ESTER EV"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 2024 (Dan Jacobs and Dan Van Rite)",
+   "Best Chef: Midwest semifinalist 2025 (Dan Jacobs and Dan Van Rite)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "fine dining"
+  ],
+  "iconic_reason": "Restaurant by chefs Dan Jacobs and Dan Van Rite that began in 2016 as a tasting counter inside their DanDan and moved to its own Bay View space in 2024.",
+  "founded": 2016,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.esterev.com/",
+   "https://urbanmilwaukee.com/2025/05/16/flood-prompts-extended-closure-of-esterev/",
+   "https://urbanmilwaukee.com/2025/10/10/esterev-sets-reopening-date-changes-format/",
+   "https://urbanmilwaukee.com/2026/06/05/the-return-of-milwaukee-dumpling-fest/",
+   "https://www.jamesbeard.org/stories/the-2024-restaurant-and-chef-award-nominees",
+   "https://www.jamesbeard.org/stories/the-2025-james-beard-award-semifinalists"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2025/10/10/esterev-sets-reopening-date-changes-format/ - reopened Nov 5, 2025 at 2165 S. Kinnickinnic Ave. after a May 2025 flood, now a la carte (Oct 10, 2025); listed as a participant in Milwaukee Dumpling Fest on Jun 28, 2026 (Urban Milwaukee, Jun 5, 2026); esterev.com lists Tue-Sat 5-9pm hours",
+  "founded_source": "https://urbanmilwaukee.com/2025/05/16/flood-prompts-extended-closure-of-esterev/",
+  "closed_reason": null,
+  "notes": "Founded 2016 as a private dining concept inside DanDan (360 E Erie St, Third Ward, still listed as operating); standalone Bay View location opened April 2024 (Urban Milwaukee). Closed May 3 to Nov 5, 2025 after a flood; switched from fixed tasting menu to a la carte on reopening. Overture still lists the old 360 E Erie St address too. price_tier left null (new a la carte prices not found)."
+ },
+ {
+  "name": "Birch",
+  "address": "459 E Pleasant St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "BIRCH",
+   "BIRCH RESTAURANT",
+   "BIRCH ON PLEASANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest semifinalist 2024 (Kyle Knall)",
+   "Best Chef: Midwest semifinalist 2025 (Kyle Knall)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "fine dining",
+   "wood-fired"
+  ],
+  "iconic_reason": "East Side restaurant opened by Kyle and Meghan Knall in 2021 cooking seasonal Midwestern dishes over a wood-fired hearth.",
+  "founded": 2021,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.birchonpleasant.com/",
+   "https://www.birchonpleasant.com/menus",
+   "https://urbanmilwaukee.com/business/birch/",
+   "https://urbanmilwaukee.com/2026/03/15/now-serving-see-inside-new-french-bistro/",
+   "https://www.jamesbeard.org/stories/the-2024-james-beard-awards-semifinalists",
+   "https://www.jamesbeard.org/stories/the-2025-james-beard-award-semifinalists"
+  ],
+  "open_evidence": "https://www.birchonpleasant.com/menus - dinner menu PDF dated September 16, 2026 (mains $34-42, tasting menu $86); site lists Tue-Sat hours",
+  "founded_source": "https://www.birchonpleasant.com/",
+  "closed_reason": null,
+  "notes": "Successor to Birch + Butcher at the same address (per Urban Milwaukee business listing). The Knalls also opened Cassis, a French bistro at 333 N Water St, in January 2026. Birch site also mentions a 2022 JBF 'Outstanding Chef' nomination (outside 2024-2026 scope, not verified here)."
+ },
+ {
+  "name": "Bryant's Cocktail Lounge",
+  "address": "1579 S 9th St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "BRYANT'S COCKTAIL LOUNGE",
+   "BRYANTS COCKTAIL LOUNGE",
+   "BRYANT'S",
+   "BRYANTS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Bar semifinalist 2025"
+  ],
+  "other_honors": [
+   "Tales of the Cocktail Foundation Timeless U.S. Award (2026)"
+  ],
+  "tags": [
+   "historic",
+   "cocktail bar"
+  ],
+  "iconic_reason": "Cocktail lounge on Milwaukee's South Side open since 1938, owned by John Dye since 2008.",
+  "founded": 1938,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.bryantscocktaillounge.com/",
+   "https://urbanmilwaukee.com/2026/07/07/bryants-cocktail-lounge-wins-timeless-award/",
+   "https://www.jamesbeard.org/stories/the-2025-james-beard-award-semifinalists"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/07/07/bryants-cocktail-lounge-wins-timeless-award/ - won the 2026 Timeless U.S. Award from Tales of the Cocktail Foundation, described as operating at 1579 S. 9th St. (Jul 7, 2026); official site lists Tue-Sun hours",
+  "founded_source": "https://urbanmilwaukee.com/2026/07/07/bryants-cocktail-lounge-wins-timeless-award/",
+  "closed_reason": null,
+  "notes": "Founded 1938 by Bryant Sharp (Urban Milwaukee); official site says 'Open since 1938'. Bar only, so price_tier null."
+ },
+ {
+  "name": "Agency",
+  "address": "817 N Marshall St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "AGENCY",
+   "AGENCY COCKTAIL LOUNGE",
+   "AGENCY X SINTA"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best New Bar finalist 2025"
+  ],
+  "other_honors": [],
+  "tags": [
+   "cocktail bar"
+  ],
+  "iconic_reason": "Cocktail lounge in the Dubbel Dutch hotel whose rotating menus offer every drink in alcoholic and non-alcoholic versions.",
+  "founded": 2023,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.thedubbeldutch.com/agency",
+   "https://urbanmilwaukee.com/2025/04/02/agency-advances-as-james-beard-awards-finalist/",
+   "https://urbanmilwaukee.com/2026/02/19/agency-cocktail-lounge-announces-food-partner/",
+   "https://www.jamesbeard.org/stories/the-2025-james-beard-award-semifinalists",
+   "https://www.jamesbeard.org/stories/2025-james-beard-awards-restaurant-and-chef-nominees"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/02/19/agency-cocktail-lounge-announces-food-partner/ - Agency at 817 N. Marshall St. launched a full food menu with Filipino pop-up Sinta on Feb 18, 2026; Dubbel Dutch's Agency page lists Wed-Sat 5-11pm hours and OpenTable booking (checked Sep 2026)",
+  "founded_source": "https://urbanmilwaukee.com/2025/04/02/agency-advances-as-james-beard-awards-finalist/",
+  "closed_reason": null,
+  "notes": "Started January 2023 as a pop-up and moved into its permanent space in the Dubbel Dutch hotel (817-819 N Marshall St) in August 2024. Owners include Ryan Castelaz (Discourse Coffee), Kat Doughty, Sean Liu and Robert Colletta. Operates independently of the hotel. Food now by Sinta (Zach and Katrina Panoske)."
+ },
+ {
+  "name": "Goodkind",
+  "address": "2457 S Wentworth Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "GOODKIND",
+   "GOODKIND BAY VIEW",
+   "GOOD KIND"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest semifinalist 2026 (Lisa Kirkpatrick and Paul Zerkel)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "cocktail bar",
+   "burgers"
+  ],
+  "iconic_reason": "Bay View restaurant and bar opened in 2014 by Lisa Kirkpatrick and Paul Zerkel with a daily-changing seasonal menu.",
+  "founded": 2014,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://goodkindbayview.com/",
+   "http://goodkindbayview.com/wp-content/uploads/2026/09/92226-1.pdf",
+   "https://urbanmilwaukee.com/2026/01/21/milwaukee-nabs-4-james-beard-nominations/",
+   "https://radiomilwaukee.org/food-drink/2026-01-22/james-beard-award-nominees-milwaukee-2026",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026"
+  ],
+  "open_evidence": "http://goodkindbayview.com/wp-content/uploads/2026/09/92226-1.pdf - dinner/drinks menu dated September 22, 2026 (large plates $28-46); homepage notes annual summer break Sep 7-17 and reopening Sep 18",
+  "founded_source": "https://urbanmilwaukee.com/2026/01/21/milwaukee-nabs-4-james-beard-nominations/",
+  "closed_reason": null,
+  "notes": "Postal address may read 'Bay View, WI 53207' on its site; city of Milwaukee. Radio Milwaukee mentions a 2022 JBF Outstanding Bar Program recognition (pre-2024, not verified here)."
+ },
+ {
+  "name": "Mother's",
+  "address": "2900 S Kinnickinnic Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "MOTHER'S",
+   "MOTHERS",
+   "MOTHER'S BAY VIEW"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Emerging Chef semifinalist 2026 (Vanessa Rose)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "small plates"
+  ],
+  "iconic_reason": "Bay View small-plates restaurant opened in June 2025 by chef Vanessa Rose in the White House building.",
+  "founded": 2025,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://urbanmilwaukee.com/2026/06/23/mothers-closes-in-bay-view/",
+   "https://urbanmilwaukee.com/business/mothers/",
+   "https://urbanmilwaukee.com/2026/04/19/now-serving-mothers-introduces-sad-hour-in-bay-view/",
+   "https://urbanmilwaukee.com/2026/01/21/milwaukee-nabs-4-james-beard-nominations/",
+   "https://radiomilwaukee.org/food-drink/2026-01-22/james-beard-award-nominees-milwaukee-2026",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/04/19/now-serving-mothers-introduces-sad-hour-in-bay-view/ - still operating in April 2026 (Apr 19, 2026); closed in June 2026",
+  "founded_source": "https://urbanmilwaukee.com/2026/01/21/milwaukee-nabs-4-james-beard-nominations/",
+  "closed_reason": "Closed in June 2026 after about one year; Urban Milwaukee headline 'Mother's Closes in Bay View' (Jun 23, 2026) says the small-plates restaurant led by a James Beard-nominated chef 'calls it quits after just one year' (https://urbanmilwaukee.com/2026/06/23/mothers-closes-in-bay-view/). Urban Milwaukee's business listing now says it 'was a restaurant'.",
+  "notes": "Full closure article is paywalled; only headline/teaser read, so the exact last day and reason are unknown. Rose ran it as a pop-up at Ardent before the June 2025 opening."
+ },
+ {
+  "name": "1033 Omakase",
+  "address": "1033 S 1st St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "1033 OMAKASE",
+   "TEN THIRTY THREE OMAKASE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best New Restaurant finalist 2026"
+  ],
+  "other_honors": [],
+  "tags": [
+   "sushi",
+   "tasting menu",
+   "japanese"
+  ],
+  "iconic_reason": "Ten-seat Walker's Point sushi counter opened in December 2024 by chef Worawit 'Ray' Boonyapituksakul serving a 14-course omakase.",
+  "founded": 2024,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 4,
+  "open": true,
+  "sources": [
+   "https://urbanmilwaukee.com/2026/03/31/milwaukee-sushi-restaurant-is-a-james-beard-finalist/",
+   "https://urbanmilwaukee.com/business/1033-omakase/",
+   "https://www.wisn.com/article/2026-james-beard-wisconsin-finalists-shine/71601586",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026",
+   "https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/03/31/milwaukee-sushi-restaurant-is-a-james-beard-finalist/ - 10-seat counter at 1033 S. 1st St. 'booked solid since its December 2024 opening' (Mar 31, 2026); WISN Jun 16, 2026 covers it as a 2026 finalist",
+  "founded_source": "https://urbanmilwaukee.com/business/1033-omakase/",
+  "closed_reason": null,
+  "notes": "No official website found; newest operating evidence found is from March-June 2026. Partners Worawit 'Ray' Boonyapituksakul and Cherry Phetleung. price_tier 4 because it serves only a tasting menu; the exact price was not found."
+ },
+ {
+  "name": "The Mothership",
+  "address": "2301 S Logan Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "THE MOTHERSHIP",
+   "MOTHERSHIP",
+   "MOTHERSHIP BAR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Bar semifinalist 2026"
+  ],
+  "other_honors": [],
+  "tags": [
+   "cocktail bar",
+   "tavern"
+  ],
+  "iconic_reason": "Bay View corner cocktail bar owned by bartender Ricky Ramirez, known for original cocktails and a large spirits list.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.themothershipmke.com/about",
+   "https://urbanmilwaukee.com/2025/11/14/bay-view-cocktail-bar-reopens-after-flood-closure/",
+   "https://urbanmilwaukee.com/2026/07/16/clogged-sewer-pipe-may-have-worsened-bay-view-flooding/",
+   "https://radiomilwaukee.org/food-drink/2026-01-22/james-beard-award-nominees-milwaukee-2026",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2025/11/14/bay-view-cocktail-bar-reopens-after-flood-closure/ - reopened Nov 11, 2025 after August 2025 flood damage; JBF semifinalist Jan 2026; its site's spirits page was updated Jul 4, 2026 (sitemap) and lists 'open daily at 4PM'",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Opened 'less than a year before the pandemic' (Radio Milwaukee/Urban Milwaukee), roughly 2019-early 2020, so founded left null. Closed about three months after the August 2025 flash flood. Urban Milwaukee (Jul 16, 2026) names it among businesses damaged by another flash flood in April 2026; no closure report found, but its current status after that flood is not independently confirmed. Bar only, price_tier null."
+ },
+ {
+  "name": "Ca'Lucchenzo",
+  "address": "6030 W North Ave",
+  "city": "Wauwatosa",
+  "chain": false,
+  "match_names": [
+   "CA'LUCCHENZO",
+   "CA LUCCHENZO",
+   "CALUCCHENZO"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 2026 (Zak Baker)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "italian",
+   "pasta"
+  ],
+  "iconic_reason": "Wauwatosa Italian restaurant run by chef Zak Baker and wine director Sarah Baker with a pasta-focused regional Italian menu.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.calucchenzo.com/",
+   "https://www.calucchenzo.com/about",
+   "https://urbanmilwaukee.com/business/calucchenzo/",
+   "https://urbanmilwaukee.com/2026/03/09/all-star-chefs-unite-for-kennedys-disease-fundraiser/",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026",
+   "https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026"
+  ],
+  "open_evidence": "https://www.calucchenzo.com/ - site lists Tue-Sat hours and links dinner/dessert/wine menu PDFs created Sep 18-24, 2026 (PDF metadata)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Opening year not found (Radio Milwaukee only says it is newer than Goodkind). Menu PDFs use embedded fonts that could not be read, so price_tier null."
+ },
+ {
+  "name": "Ellinor",
+  "address": "1016 E Pacific St",
+  "city": "Appleton",
+  "chain": false,
+  "match_names": [
+   "ELLINOR",
+   "ELLINOR RESTAURANT",
+   "RESTAURANT ELLINOR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest semifinalist 2026 (Adam Marty)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "pizza",
+   "wood-fired"
+  ],
+  "iconic_reason": "Neighborhood restaurant in Appleton owned by Adam and Lindsay Marty, built around a wood-fired oven and local ingredients.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.ellinor-appleton.com/",
+   "https://www.ellinor-appleton.com/menu",
+   "https://www.ellinor-appleton.com/faqs",
+   "https://www.yahoo.com/lifestyle/articles/more-2026-james-beard-hopefuls-100246068.html",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026"
+  ],
+  "open_evidence": "https://www.ellinor-appleton.com/menu - summer menu (mains $21-59, most $35-37) with page last modified Jul 10, 2026 per sitemap; Journal Sentinel Mar 9, 2026 lists it at 1016 E. Pacific St.",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Named for owners' children Ellis and Norah. Opening year not found (site pages date from January 2024, which suggests about 2024, unverified). Journal Sentinel called Marty Appleton's first-ever JBF semifinalist."
+ },
+ {
+  "name": "Cultured",
+  "address": "2570 County Q",
+  "city": "Sister Bay",
+  "chain": false,
+  "match_names": [
+   "CULTURED",
+   "CULTURED SOURDOUGH",
+   "CULTURED BAKERY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Bakery finalist 2026"
+  ],
+  "other_honors": [],
+  "tags": [
+   "bakery",
+   "sourdough"
+  ],
+  "iconic_reason": "Door County sourdough bakery and cafe that grew from farmers' market sales into a Sister Bay bakehouse in May 2023.",
+  "founded": 2023,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.culturedsourdough.com/about-us",
+   "https://sisterbay.com/dine/cultured/",
+   "https://www.yahoo.com/lifestyle/articles/more-2026-james-beard-hopefuls-100246068.html",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026",
+   "https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026"
+  ],
+  "open_evidence": "https://www.culturedsourdough.com/ - site shows Mon-Sat 9am-5pm hours, (c) 2026, pages modified Sep 23, 2026 and online-order products updated Sep 2026 (sitemap); Sister Bay listing says open year-round",
+  "founded_source": "https://www.culturedsourdough.com/about-us",
+  "closed_reason": null,
+  "notes": "Official story: owner Mattea began baking sourdough in 2018 and sold at farmers' markets/wholesale before opening the bakehouse and cafe in Sister Bay in May 2023 (founded set to 2023 storefront; 2018 is the earlier origin). Address from Sister Bay tourism listing and Overture (site does not print it). Prices not captured."
+ },
+ {
+  "name": "Sway Brewing & Blending",
+  "address": "2434 County Road F",
+  "city": "Baileys Harbor",
+  "chain": false,
+  "match_names": [
+   "SWAY BREWING & BLENDING",
+   "SWAY BREWING + BLENDING",
+   "SWAY BREWING",
+   "SWAY BEER"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Wine and Other Beverages Program finalist 2026"
+  ],
+  "other_honors": [],
+  "tags": [
+   "brewpub",
+   "bakery"
+  ],
+  "iconic_reason": "Baileys Harbor brewery, bakery and kitchen opened in 2024 by Matt Sampson, brewing with all-Midwestern ingredients.",
+  "founded": 2024,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.swaybeer.com/taproom",
+   "https://www.swaybeer.com/matt",
+   "https://www.swaybeer.com/faqs",
+   "https://www.yahoo.com/lifestyle/articles/more-2026-james-beard-hopefuls-100246068.html",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026",
+   "https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026"
+  ],
+  "open_evidence": "https://www.swaybeer.com/taproom - lists Wed-Sun taproom hours at 2434 County Road F; taproom page updated Jul 23, 2026 and jobs page Jul 25, 2026 (sitemap)",
+  "founded_source": "https://www.yahoo.com/lifestyle/articles/more-2026-james-beard-hopefuls-100246068.html",
+  "closed_reason": null,
+  "notes": "Seasonal: Journal Sentinel (Mar 9, 2026) said it was closed for winter and reopening April 8, 2026. Owner Matt Sampson previously ran brewing at Hacienda Beer Co./Door County Brewing. Serves morning bakery and afternoon kitchen plus its own beers and outside natural wine."
+ },
+ {
+  "name": "CocoVaa Chocolatier",
+  "address": "10 Odana Ct",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "COCOVAA CHOCOLATIER",
+   "COCOVAA",
+   "COCO VAA"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Pastry Chef or Baker semifinalist 2024 (Syovata Edari)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "chocolate",
+   "candy"
+  ],
+  "iconic_reason": "Madison chocolatier founded by former trial lawyer Syovata Edari, making micro-batch bonbons from single-origin couverture.",
+  "founded": 2016,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.cocovaa.com/hours-location",
+   "https://www.cocovaa.com/about",
+   "https://www.jamesbeard.org/stories/the-2024-james-beard-awards-semifinalists"
+  ],
+  "open_evidence": "https://www.cocovaa.com/hours-location - factory store at 10 Odana Court open Fri-Sun, site sells a '2026 Advent Calendar'; pages modified Sep 16, 2026 (sitemap)",
+  "founded_source": "https://www.cocovaa.com/about",
+  "closed_reason": null,
+  "notes": "Started as a side business by 2014, formally branded/launched as a business in 2016, first brick-and-mortar shop 2018 (official About page). Now at a facility it owns at 10 Odana Ct; Overture also lists an older address at 1815 E Washington Ave Ste 100. Factory store has limited weekend hours. Not a restaurant (chocolate shop), price_tier null."
+ },
+ {
+  "name": "Pasture and Plenty",
+  "address": "2433 University Ave",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "PASTURE AND PLENTY",
+   "PASTURE & PLENTY",
+   "PASTURE N PLENTY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Hospitality semifinalist 2024"
+  ],
+  "other_honors": [],
+  "tags": [
+   "deli",
+   "farm-to-table"
+  ],
+  "iconic_reason": "Madison local-food cafe, market, meal-kit service and caterer owned by Christy McKenzie.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://pastureandplenty.com/",
+   "https://pastureandplenty.com/pages/about-us/team-and-community/",
+   "https://www.wpr.org/food/9-wisconsin-restaurants-chefs-named-as-james-beard-award-semifinalists",
+   "https://www.jamesbeard.org/stories/the-2024-james-beard-awards-semifinalists"
+  ],
+  "open_evidence": "https://pastureandplenty.com/ - lists Mon-Sat hours and links a cafe menu PDF uploaded September 2026 (wp-content/uploads/2026/09/cafemenu_260804.pdf)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Opening year not found. Dining room closed Mar 2020 during COVID and was planned to reopen spring 2022 (own site). Business mixes cafe, grab-and-go, meal kits, catering and classes, so price_tier null."
+ },
+ {
+  "name": "Mint Mark",
+  "address": "1874 E Washington Ave",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "MINT MARK",
+   "MINTMARK",
+   "MINT MARK MADISON"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest semifinalist 2024 (Sean Pharr)",
+   "Best Chef: Midwest semifinalist 2026 (Kasey Lee Cooke)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "small plates"
+  ],
+  "iconic_reason": "Madison restaurant co-owned by chef Sean Pharr that moved from Winnebago Street to a larger East Washington Avenue space in 2024.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.mintmarkmadison.com/",
+   "https://www.mintmarkmadison.com/new-events",
+   "https://www.channel3000.com/madison-magazine/three-madison-names-included-among-2026-james-beard-award-semifinalists/article_01ee566a-d45c-4a6b-bd17-a81c3d0449c2.html",
+   "https://www.yahoo.com/lifestyle/articles/more-2026-james-beard-hopefuls-100246068.html",
+   "https://www.jamesbeard.org/stories/the-2024-james-beard-awards-semifinalists",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026"
+  ],
+  "open_evidence": "https://www.mintmarkmadison.com/new-events - events calendar lists a Sept 17, 2026 Hungarian wine dinner, Nov 2026 Beaujolais dinner and 2026 holiday closures (updated Sep 23, 2026); site gives 1874 East Washington Avenue",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Former address 1929 Winnebago St (Overture still lists it). Madison Magazine (Jan 2026) printed the new address as 1875 E. Washington Ave., while the official site says 1874 East Washington Avenue; official used. Opening year not verified. Visit Madison lists Pharr as a 2024 Best Chef: Midwest 'finalist', but the JBF 2024 nominee list does not include him, so recorded as semifinalist. Pharr was also a 2020 semifinalist per Visit Madison (outside scope)."
+ },
+ {
+  "name": "Ahan",
+  "address": "744 Williamson St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "AHAN",
+   "AHAN MADISON",
+   "AHAN ASIAN CUISINE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest semifinalist 2025 (Jamie Brown-Soukaseume and Chuckie Brown-Soukaseume)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "lao",
+   "asian"
+  ],
+  "iconic_reason": "Madison restaurant serving Lao- and Asian-inspired food by Jamie and Chuckie Brown-Soukaseume, which began as pop-ups in 2020.",
+  "founded": 2020,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.ahanmadison608.com/",
+   "https://www.ahanmadison608.com/about-us",
+   "https://www.jamesbeard.org/stories/the-2025-james-beard-award-semifinalists"
+  ],
+  "open_evidence": "https://www.ahanmadison608.com/ - lists current hours at 744 Williamson St., Ste. 100; site pages modified Sep 23, 2026 (sitemap)",
+  "founded_source": "https://www.ahanmadison608.com/about-us",
+  "closed_reason": null,
+  "notes": "Pop-ups began January 2020; opened at The Bur Oak (2262 Winnebago St) in August 2020 (own site). Has since moved to 744 Williamson St Ste 100; move date not found. Jamie was also a 2023 Emerging Chef semifinalist (own site, outside scope). Prices not shown on site."
+ },
+ {
+  "name": "Public Parking",
+  "address": "711 E Johnson St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "PUBLIC PARKING",
+   "PUBLIC PARKING BAR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best New Bar semifinalist 2026"
+  ],
+  "other_honors": [
+   "Punch best new bars list (2024)",
+   "Bon Appétit best new bars list (2025)",
+   "Tales of the Cocktail Foundation Spirited Awards Top 10, Best U.S. Cocktail Bar (2025)"
+  ],
+  "tags": [
+   "cocktail bar",
+   "tiki"
+  ],
+  "iconic_reason": "Cocktail bar on East Johnson Street in Madison opened in October 2024, serving original cocktails, tiki drinks and slushies.",
+  "founded": 2024,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.publicparkingbar.com/about",
+   "https://www.channel3000.com/madison-magazine/three-madison-names-included-among-2026-james-beard-award-semifinalists/article_01ee566a-d45c-4a6b-bd17-a81c3d0449c2.html",
+   "https://www.yahoo.com/lifestyle/articles/more-2026-james-beard-hopefuls-100246068.html",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026"
+  ],
+  "open_evidence": "https://www.publicparkingbar.com/about - 'Open daily 4pm-2am' at 711 E. Johnson St.; site press/menu pages updated Mar 30-Apr 1, 2026 (sitemap), including a James Beard 2026 press post",
+  "founded_source": "https://www.channel3000.com/madison-magazine/three-madison-names-included-among-2026-james-beard-award-semifinalists/article_01ee566a-d45c-4a6b-bd17-a81c3d0449c2.html",
+  "closed_reason": null,
+  "notes": "Other honors taken from Madison Magazine (Jan 21, 2026) and Journal Sentinel (Mar 9, 2026) reports, not checked against Punch/Bon Appetit/Tales directly. Newest dated evidence is April 2026."
+ },
+ {
+  "name": "Imaginary Factory",
+  "address": "1401 Northern Ct",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "IMAGINARY FACTORY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Professional in Cocktail Service finalist 2026 (Hastings Cameron)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "cocktail bar"
+  ],
+  "iconic_reason": "Madison cocktail bar and small distillery opened in 2021 by Hastings Cameron, known for house-made aromatized wines and liqueurs.",
+  "founded": 2021,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://imaginaryfactory.square.site/",
+   "https://www.channel3000.com/madison-magazine/three-madison-names-included-among-2026-james-beard-award-semifinalists/article_01ee566a-d45c-4a6b-bd17-a81c3d0449c2.html",
+   "https://www.yahoo.com/lifestyle/articles/more-2026-james-beard-hopefuls-100246068.html",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026",
+   "https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026"
+  ],
+  "open_evidence": "https://imaginaryfactory.square.site/ - lists weekly hours (Mon, Wed-Sun) at 1401 Northern Ct; cocktail pickup products updated Sep 16, 2026 (sitemap)",
+  "founded_source": "https://www.channel3000.com/madison-magazine/three-madison-names-included-among-2026-james-beard-award-semifinalists/article_01ee566a-d45c-4a6b-bd17-a81c3d0449c2.html",
+  "closed_reason": null,
+  "notes": "Bar only, price_tier null. Visit Madison lists Cameron only as a semifinalist; JBF 2026 nominee page confirms finalist."
+ },
+ {
+  "name": "Miijim",
+  "address": null,
+  "city": "La Pointe",
+  "chain": false,
+  "match_names": [
+   "MIIJIM"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Emerging Chef semifinalist 2024 (Bryce Michael Edward Stevenson)"
+  ],
+  "other_honors": [],
+  "tags": [],
+  "iconic_reason": "Restaurant on Madeline Island (La Pointe) whose chef Bryce Stevenson was a 2024 James Beard Emerging Chef semifinalist.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://www.jamesbeard.org/stories/the-2024-james-beard-awards-semifinalists",
+   "https://www.wpr.org/food/9-wisconsin-restaurants-chefs-named-as-james-beard-award-semifinalists",
+   "https://spectrumnews1.com/wi/milwaukee/news/2024/01/24/james-beard-2024-semifinalists-wisconsin"
+  ],
+  "open_evidence": null,
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Could not determine current status or street address: no official website found, not in the Madeline Island Chamber directory or the Overture extract, and the session's web-search budget was exhausted before local coverage could be found. Only the JBF 2024 listing and 2024 news lists (WPR, Spectrum News) confirm it existed. Likely seasonal (island restaurant). Needs manual check."
+ },
+ {
+  "name": "Chef Shack Bay City",
+  "address": "W6379 Main St",
+  "city": "Bay City",
+  "chain": false,
+  "match_names": [
+   "CHEF SHACK BAY CITY",
+   "CHEF SHACK",
+   "THE CHEF SHACK"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest semifinalist 2024 (Lisa Carlson and Carrie Summer)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "french"
+  ],
+  "iconic_reason": "Restaurant in Bay City in western Wisconsin run by chefs Lisa Carlson and Carrie Summer, who started the Chef Shack food truck in Minneapolis in 2007.",
+  "founded": 2007,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.chefshackbaycity.com/",
+   "https://www.chefshackbaycity.com/about",
+   "https://www.jamesbeard.org/stories/the-2024-james-beard-awards-semifinalists"
+  ],
+  "open_evidence": "https://www.chefshackbaycity.com/ - homepage (updated Apr 9, 2026 per sitemap) lists Fri-Sat 5-10pm and Sun 10am-2pm hours with reservations; online store items updated Aug 30, 2026",
+  "founded_source": "https://www.chefshackbaycity.com/about",
+  "closed_reason": null,
+  "notes": "2007 is when the Chef Shack food-truck business started (official About page); the year the Bay City restaurant opened was not found. The homepage now leads with private events and rehearsal dinners (groups of 50 or fewer); its events calendar shows nothing after 2024, so regular public dining in 2026 is likely but not firmly confirmed. May be seasonal."
+ }
+]

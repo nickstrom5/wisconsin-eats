@@ -1,0 +1,432 @@
+[
+ {
+  "name": "Mer & Jackie's Five Corners Supper Club",
+  "address": "N4899 County Road EE",
+  "city": "Appleton",
+  "founded": 1955,
+  "tags": [
+   "supper club",
+   "old fashioned"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Closed Thursday, June 20, 2024 (last night of the bar; food service had ended a few days earlier) when owners Connie and Joe Bessette retired; building put up for sale (WFRV, June 21, 2024: https://www.wearegreenbay.com/news/local-news/outagamie-county-supper-club-closing-after-nearly-70-year-run/).",
+  "sources": [
+   "https://www.wearegreenbay.com/news/local-news/outagamie-county-supper-club-closing-after-nearly-70-year-run/",
+   "https://web.archive.org/web/20240731045158/https://www.wearegreenbay.com/news/local-news/outagamie-county-supper-club-closing-after-nearly-70-year-run/"
+  ]
+ },
+ {
+  "name": "Lake House Inn",
+  "address": "1612 E Hotel Dr",
+  "city": "Edgerton",
+  "founded": 1934,
+  "tags": [
+   "supper club",
+   "tavern",
+   "historic"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Destroyed by fire on January 4, 2026: a 911 call around 8:30 pm reported smoke, crews from at least four counties (MABAS) fought the blaze for hours, and the structure is 'mostly destroyed' (building was closed and empty). No rebuilding plan found. Source: https://www.lakehouseinnedgerton.com/history",
+  "sources": [
+   "https://www.lakehouseinnedgerton.com/",
+   "https://www.lakehouseinnedgerton.com/history",
+   "http://web.archive.org/web/20250329004408/https://www.lakehouseinnedgerton.com/"
+  ]
+ },
+ {
+  "name": "Rowleys Bay Resort (Grandma's Swedish Bakery & fish boil)",
+  "address": "1041 County Rd ZZ",
+  "city": "Ellison Bay",
+  "founded": null,
+  "tags": [
+   "fish boil",
+   "bakery",
+   "scandinavian",
+   "lodge"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Restaurant and fish boils paused in July 2020 for staffing (bakery and pub stayed open); the main lodge burned on Sept 5, 2023 and the site is being demolished for single-family lots, with work expected to finish April 2026 (Door County Pulse, Jul 8, 2020 and Oct 30, 2025).",
+  "sources": [
+   "https://doorcountypulse.com/rowleys-bay-resorts-fish-boils-are-on-pause/",
+   "https://doorcountypulse.com/rowleys-bay-resort-moves-toward-demolition-and-redevelopment/"
+  ]
+ },
+ {
+  "name": "Viking Grill & Lounge",
+  "address": "12029 WI-42",
+  "city": "Ellison Bay",
+  "founded": 1939,
+  "tags": [
+   "fish boil",
+   "diner"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Longtime owner Dan Peterson retired and sold the Viking Grill on Feb 17, 2022 to the owners of Racine's Blue Bear Cafe, who renamed and reopened it as Blue Bear Ellison Bay (brunch concept); the Viking fish boil ended (Door County Pulse, Feb 24, 2022; Yelp marks Viking Grill closed).",
+  "sources": [
+   "https://doorcountypulse.com/the-last-diner-viking-grill-sold/",
+   "https://www.doorcountyguide.com/best/fish-boils/",
+   "https://bluebeareb.com/",
+   "https://www.yelp.com/biz/the-viking-grill-ellison-bay"
+  ]
+ },
+ {
+  "name": "Casino Supper Club",
+  "address": "N3233 Seier Rd",
+  "city": "Fall River",
+  "founded": null,
+  "tags": [
+   "supper club",
+   "prime rib"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Closed Saturday, Sept 28, 2019 when owner Scott Schultz sold/listed the business to move on; the site said it would stay for sale but not open (Channel 3000, Sept 23, 2019: https://www.channel3000.com/casino-supper-club-to-close-ending-decades-long-traditions/; archived site: https://web.archive.org/web/20191130044349/http://casinosupperclub.com/).",
+  "sources": [
+   "https://www.channel3000.com/casino-supper-club-to-close-ending-decades-long-traditions/",
+   "https://web.archive.org/web/20191130044349/http://casinosupperclub.com/",
+   "https://web.archive.org/web/2019/http://www.casinosupperclub.com/aboutUs.html"
+  ]
+ },
+ {
+  "name": "Schreiner's Restaurant",
+  "address": "168 N Pioneer Rd",
+  "city": "Fond du Lac",
+  "founded": 1938,
+  "tags": [
+   "historic",
+   "bakery",
+   "diner"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Owners Paul and Joan Cunningham announced on May 27, 2020 that Schreiner's would not reopen after the COVID-19 shutdown, citing pandemic economics (WFRV, May 27, 2020).",
+  "sources": [
+   "https://www.wearegreenbay.com/news/local-news/fond-du-lacs-schreiners-restaurant-to-permanently-close-its-doors/"
+  ]
+ },
+ {
+  "name": "Chili John's",
+  "address": "519 S Military Ave",
+  "city": "Green Bay",
+  "founded": 1913,
+  "tags": [
+   "chili",
+   "historic"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Military Ave restaurant closed temporarily in Dec 2020 amid a franchise dispute between the brand owner (Zee Best Foods) and operator JayPaul LLC; closure became permanent by Jan 2022 (Green Bay Press-Gazette via AOL, Aug 2024; Wikipedia says 2020).",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Chili_John%27s",
+   "https://www.aol.com/chili-johns-iconic-meat-sauce-100256261.html",
+   "https://www.yelp.com/biz/chili-johns-restaurant-green-bay"
+  ]
+ },
+ {
+  "name": "Ella's Deli",
+  "address": "2902 E Washington Ave",
+  "city": "Madison",
+  "founded": 1976,
+  "tags": [
+   "deli",
+   "ice cream"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Closed permanently Jan 21, 2018 after about 42 years; owners Ken and Judy Balkin cited difficult restaurant economics. Epic Systems bought the carousel; the building was demolished and replaced by the Ella Apartments (2021). Source: https://www.wpr.org/culture/madisons-ellas-deli-closes-after-42-years",
+  "sources": [
+   "https://www.wpr.org/culture/madisons-ellas-deli-closes-after-42-years",
+   "https://madison.com/news/local/iconic-ella-s-deli-is-closing-this-month-after-years/article_b5073261-52e2-5720-9765-83b0d1066a5d.html",
+   "https://www.yelp.com/biz/ellas-deli-madison"
+  ]
+ },
+ {
+  "name": "Kavanaugh's Esquire Club",
+  "address": "1025 N Sherman Ave",
+  "city": "Madison",
+  "founded": 1947,
+  "tags": [
+   "supper club"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Closed in late January 2026 following the death of longtime owner John Kavanaugh, about a year after an abrupt February 2025 closure that was reversed the next day when Kavanaugh announced he would reopen it (WMTV15, Jan 2026: https://www.wmtv15news.com/2026/01/27/end-an-era-madison-supper-club-close-its-doors-second-time-after-longtime-owner-passes-away/).",
+  "sources": [
+   "https://www.wmtv15news.com/2026/01/27/end-an-era-madison-supper-club-close-its-doors-second-time-after-longtime-owner-passes-away/"
+  ]
+ },
+ {
+  "name": "Paisan's",
+  "address": "131 W Wilson St",
+  "city": "Madison",
+  "founded": 1950,
+  "tags": [
+   "italian",
+   "pizza",
+   "historic"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Forced out of 131 W Wilson St in 2023 after repeated closures (from Sept 2021) over the deteriorating condition of its 12-story building. Owners planned to revive it in the basement of sister restaurant Porta Bella, but Porta Bella itself closed in Feb 2026 for redevelopment; no reopening found. Source: https://madison.com/life-entertainment/local/food-drink/paisans-reopening-porta-bella/article_ea224d14-225c-11ee-b2f3-430041c4810a.html",
+  "sources": [
+   "https://www.uwalumni.com/news/paisans-garibaldi/",
+   "https://madison.com/life-entertainment/local/food-drink/paisans-reopening-porta-bella/article_ea224d14-225c-11ee-b2f3-430041c4810a.html",
+   "https://www.ibmadison.com/industries/hospitality-tourism/no-timetable-for-paisan-s-to-return-in-basement-of-its-sister-restaurant/article_29f0218d-379d-51b5-a367-ebdde9b49db3.html",
+   "https://www.yelp.com/biz/paisans-madison"
+  ]
+ },
+ {
+  "name": "Porta Bella",
+  "address": "425 N Frances St",
+  "city": "Madison",
+  "founded": 1968,
+  "tags": [
+   "italian",
+   "pizza",
+   "historic"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Closed permanently at the end of February 2026 after 58 years; the site was sold to Villas Student Housing for a 16-story student apartment building and has since been demolished (State Journal). Source: https://www.channel3000.com/news/porta-bella-restaurant-permanently-closes-after-58-years-serving-madison-community/article_913d70cd-2387-476d-9545-7d27bd85d7e2.html",
+  "sources": [
+   "https://www.channel3000.com/news/porta-bella-restaurant-permanently-closes-after-58-years-serving-madison-community/article_913d70cd-2387-476d-9545-7d27bd85d7e2.html",
+   "https://madison.com/news/local/business/development/article_7256756c-41c2-4337-bb0f-49e7946add63.html",
+   "https://www.dailycardinal.com/article/2025/10/madison-staple-porta-bella-could-be-replaced-by-high-rise-apartments"
+  ]
+ },
+ {
+  "name": "Smoky's Club",
+  "address": "3005 University Ave",
+  "city": "Madison",
+  "founded": 1953,
+  "tags": [
+   "supper club",
+   "steakhouse",
+   "fish fry",
+   "prime rib"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Permanently closed in early March 2022 after 69 years; the Schmock family decided to close after the pandemic (Spectrum News 1, Feb 21, 2022: https://spectrumnews1.com/wi/milwaukee/news/2022/02/21/landmark-supper-club-closes-after-69-years; farewell notice on the archived official site, Mar 31, 2022: https://web.archive.org/web/20220331051516/https://www.smokysclub.com/).",
+  "sources": [
+   "https://spectrumnews1.com/wi/milwaukee/news/2022/02/21/landmark-supper-club-closes-after-69-years",
+   "https://web.archive.org/web/20220331051516/https://www.smokysclub.com/"
+  ]
+ },
+ {
+  "name": "Ardent",
+  "address": "1751 N Farwell Ave",
+  "city": "Milwaukee",
+  "founded": 2013,
+  "tags": [
+   "fine dining"
+  ],
+  "james_beard": [
+   "Best Chef: Midwest finalist 2015 (Justin Carlisle)",
+   "Best Chef: Midwest finalist 2016 (Justin Carlisle)",
+   "Best Chef: Midwest finalist 2017 (Justin Carlisle)",
+   "Best Chef: Midwest finalist 2018 (Justin Carlisle)"
+  ],
+  "open": false,
+  "closed_reason": "Closed after New Year's Eve service Dec 31, 2024, per Milwaukee Magazine (Dec 2, 2024) https://www.milwaukeemag.com/ardent-restaurant-closing/ ; Purslane opened in the space June 4, 2025 https://www.milwaukeemag.com/purslane-restaurant-opens-june-4-in-the-former-location-of-ardent/",
+  "sources": [
+   "https://www.milwaukeemag.com/ardent-restaurant-closing/",
+   "https://www.milwaukeemag.com/purslane-restaurant-opens-june-4-in-the-former-location-of-ardent/",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ]
+ },
+ {
+  "name": "Bavette La Boucherie",
+  "address": "217 N Broadway",
+  "city": "Milwaukee",
+  "founded": null,
+  "tags": [
+   "butcher shop"
+  ],
+  "james_beard": [
+   "Best Chef: Midwest finalist 2018 (Karen Bell)",
+   "Best Chef: Midwest finalist 2022 (Karen Bell)"
+  ],
+  "open": false,
+  "closed_reason": "Closed with last service Jan 17, 2026, announced by owner Karen Bell, per Milwaukee Magazine (Dec 31, 2025) https://www.milwaukeemag.com/bavette-la-boucherie-set-to-close-in-january/ ; bavettelaboucherie.com now returns 404.",
+  "sources": [
+   "https://www.milwaukeemag.com/bavette-la-boucherie-set-to-close-in-january/",
+   "https://urbanmilwaukee.com/2026/01/13/new-restaurant-proposed-for-bavette-space-2/",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ]
+ },
+ {
+  "name": "Karl Ratzsch's",
+  "address": "320 E Mason St",
+  "city": "Milwaukee",
+  "founded": 1904,
+  "tags": [
+   "german",
+   "historic"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Closed in spring 2017 (announced Apr 2, 2017), about a year after chef Thomas Hauck (owner of c. 1880) bought it in Jan 2016 and reopened it; Hauck said he could no longer sustain it. Fixtures were auctioned in Sept 2025 and the space was still seeking a tenant. Sources: https://www.milwaukeemag.com/karl-ratzsch-restaurant-closed/ ; https://urbanmilwaukee.com/2025/09/15/historic-artifacts-from-karl-ratzschs-restaurant-headed-to-auction-block/",
+  "sources": [
+   "https://urbanmilwaukee.com/2025/09/15/historic-artifacts-from-karl-ratzschs-restaurant-headed-to-auction-block/",
+   "https://www.milwaukeemag.com/karl-ratzsch-restaurant-closed/",
+   "https://urbanmilwaukee.com/business/karl-ratzschs/",
+   "https://www.yelp.com/biz/karl-ratzsch-restaurant-milwaukee"
+  ]
+ },
+ {
+  "name": "Mazos Hamburgers",
+  "address": "3146 S 27th St",
+  "city": "Milwaukee",
+  "founded": 1934,
+  "tags": [
+   "burgers",
+   "diner",
+   "butter burger"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Closed in September 2024 after about 90 years; the family said 'Due to the health and well-being needs of our family, we are unable to continue' (Urban Milwaukee, 2024-09-24, https://urbanmilwaukee.com/2024/09/24/mazos-hamburgers-is-closed/).",
+  "sources": [
+   "https://urbanmilwaukee.com/2024/09/24/mazos-hamburgers-is-closed/",
+   "https://urbanmilwaukee.com/2017/09/20/dining-mazos-is-a-tasty-time-warp/",
+   "https://urbanmilwaukee.com/business/mazos-hamburgers/",
+   "https://urbanmilwaukee.com/building/3146-s-27th-st/"
+  ]
+ },
+ {
+  "name": "Mother's",
+  "address": "2900 S Kinnickinnic Ave",
+  "city": "Milwaukee",
+  "founded": 2025,
+  "tags": [
+   "small plates"
+  ],
+  "james_beard": [
+   "Emerging Chef semifinalist 2026 (Vanessa Rose)"
+  ],
+  "open": false,
+  "closed_reason": "Closed in June 2026 after about one year; Urban Milwaukee headline 'Mother's Closes in Bay View' (Jun 23, 2026) says the small-plates restaurant led by a James Beard-nominated chef 'calls it quits after just one year' (https://urbanmilwaukee.com/2026/06/23/mothers-closes-in-bay-view/). Urban Milwaukee's business listing now says it 'was a restaurant'.",
+  "sources": [
+   "https://urbanmilwaukee.com/2026/06/23/mothers-closes-in-bay-view/",
+   "https://urbanmilwaukee.com/business/mothers/",
+   "https://urbanmilwaukee.com/2026/04/19/now-serving-mothers-introduces-sad-hour-in-bay-view/",
+   "https://urbanmilwaukee.com/2026/01/21/milwaukee-nabs-4-james-beard-nominations/",
+   "https://radiomilwaukee.org/food-drink/2026-01-22/james-beard-award-nominees-milwaukee-2026",
+   "https://www.jamesbeard.org/stories/james-beard-award-semifinalists-2026"
+  ]
+ },
+ {
+  "name": "Watts Tea Shop",
+  "address": "761 N Jefferson St",
+  "city": "Milwaukee",
+  "founded": 1925,
+  "tags": [
+   "historic",
+   "tea room"
+  ],
+  "james_beard": [
+   "America's Classics 2011"
+  ],
+  "open": false,
+  "closed_reason": "George Watts & Son closed its downtown store and the Watts Tea Shop on Dec 31, 2016 and became an online-only business; CEO Sam Watts cited changes in how consumers shop. Source: https://www.cbs58.com/news/george-watts-son-inc-and-the-watts-tea-shop-will-close-on-december-31st (posted Nov 19, 2016)",
+  "sources": [
+   "https://www.cbs58.com/news/george-watts-son-inc-and-the-watts-tea-shop-will-close-on-december-31st",
+   "https://www.wisn.com/article/end-of-an-era-watts-tea-shop-to-close-at-end-of-year/8520354",
+   "https://www.fox6now.com/news/a-slice-of-milwaukee-history-george-watts-son-beloved-tea-shop-serves-its-last-cup",
+   "https://web.archive.org/web/20230703162602/https://www.jamesbeard.org/blog/americas-classic-watts-tea-shop-milwaukee",
+   "https://en.wikipedia.org/wiki/Watts_Tea_Shop",
+   "https://urbanmilwaukee.com/2025/10/16/no-more-tea-parties-comedy-club-moving-downtown/",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ]
+ },
+ {
+  "name": "Larsen Bakery",
+  "address": "3311 Washington Ave",
+  "city": "Racine",
+  "founded": 1960,
+  "tags": [
+   "kringle",
+   "bakery",
+   "scandinavian"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "The West Racine retail bakery at 3311 Washington Ave closed in early June 2023 after 60+ years (WISN, June 8, 2023: https://www.wisn.com/article/kringle-shop-closing-racine-larsens-bakery/44132719; Journal Times 'Larsen Bakery closes its doors in West Racine', June 2023).",
+  "sources": [
+   "https://www.wisn.com/article/kringle-shop-closing-racine-larsens-bakery/44132719",
+   "https://journaltimes.com/news/local/larsen-bakery-closes-its-doors-in-west-racine/article_3c158cfa-055f-11ee-aed7-a38f7f9fa47f.html",
+   "https://journaltimes.com/news/local/larsen-bakery-here-to-stay-will-be-baking-with-old-friends/article_d4426f4c-0632-11ee-9faf-3fa424e1b5e4.html",
+   "https://larsenskringle.com/pages/about-us",
+   "https://visitracinecounty.com/directory/larsen-bakery/",
+   "https://www.travelwisconsin.com/food-drink/sweets-treats/larsen-bakery"
+  ]
+ },
+ {
+  "name": "Polonez",
+  "address": "4016 S Packard Ave",
+  "city": "Saint Francis",
+  "founded": 1983,
+  "tags": [
+   "polish",
+   "fish fry"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Closed Sept 25, 2022 per the restaurant's own website announcement ('Polonez will close September 25th. Thank you for 40 years of patronage!'), dated to 2022 by Wayback Machine captures; no news article found to confirm the date. Source: https://web.archive.org/web/20220924221032/http://www.polonezrestaurant.com/",
+  "sources": [
+   "https://web.archive.org/web/20220924221032/http://www.polonezrestaurant.com/",
+   "https://web.archive.org/web/20220828180812/http://www.polonezrestaurant.com/",
+   "http://www.polonezrestaurant.com/about-us/index.html",
+   "http://www.polonezrestaurant.com/specials/index.html",
+   "https://urbanmilwaukee.com/business/polonez-restaurant/"
+  ]
+ },
+ {
+  "name": "Charcoal Inn",
+  "address": "1313 S 8th St",
+  "city": "Sheboygan",
+  "founded": 1984,
+  "tags": [
+   "bratwurst",
+   "burgers"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Charcoal Inn South closed on Aug 14, 2021 (Roadfood reader update) when owner Scott Prescher cited 'unsustainable staff shortages' (Chumpbait, Sept 12, 2021: http://web.archive.org/web/20241114120723/https://www.chumpbait.com/p/charcoal-inn-south-closes); on Oct 19, 2021 he put it up for sale ($249,900) as he retired (Sheboygan Sun, Oct 20, 2021: https://www.sheboygansun.com/business/charcoal-inn-south-now-for-sale-as-owner-looks-to-retire/article_b285b674-31b4-11ec-ab50-2b79de8b0065.html). Charcoal Inn North stayed open at that point but later closed; nonprofit RCS Empowers said it had bought 'the property and building' from the Charcoal Inn owner and hired two cooks who had worked at Charcoal Inn North for 30+ years (RCS post dated Sept 1, 2022, seen only as a search snippet: https://rcsempowers.com/rcs-hires-charcoal-inn-familiar-faces/). Both locations are listed as closed on Yelp in 2026.",
+  "sources": [
+   "https://www.sheboygansun.com/business/charcoal-inn-south-now-for-sale-as-owner-looks-to-retire/article_b285b674-31b4-11ec-ab50-2b79de8b0065.html",
+   "http://web.archive.org/web/20241114120723/https://www.chumpbait.com/p/charcoal-inn-south-closes",
+   "http://web.archive.org/web/20240709153344/https://roadfood.com/restaurants/charcoal-inn-sheboygan-brats/",
+   "https://rcsempowers.com/rcs-hires-charcoal-inn-familiar-faces/",
+   "https://www.foodnetwork.com/restaurants/wi/charcoal-inn-restaurant",
+   "https://roadfood.com/restaurants/charcoal-inn-sheboygan-brats",
+   "https://www.yelp.com/biz/charcoal-inn-south-sheboygan-2",
+   "https://www.yelp.com/biz/charcoal-inn-north-sheboygan"
+  ]
+ },
+ {
+  "name": "Weissgerber's Gasthaus",
+  "address": "2720 N Grandview Blvd",
+  "city": "Waukesha",
+  "founded": 1983,
+  "tags": [
+   "german"
+  ],
+  "james_beard": [],
+  "open": false,
+  "closed_reason": "Closed permanently June 25, 2016 after 33 years; owner Hans Weissgerber Jr. was in his 70s with no family successor after his partner/brother Jack died in 2013. The building sold for $1.58 million to CFT Developments (Panda Restaurant Group) for a retail/restaurant redevelopment. Sources: https://www.cbs58.com/news/its-really-difficult-to-say-goodbye-waukesha-gasthaus-closes-after-33-years , https://biztimes.com/weissgerbers-gasthaus-building-sold-for-1-6-million/",
+  "sources": [
+   "https://www.cbs58.com/news/weissgerber-gasthaus-to-close-after-33-years-in-waukesha",
+   "https://www.cbs58.com/news/its-really-difficult-to-say-goodbye-waukesha-gasthaus-closes-after-33-years",
+   "https://biztimes.com/weissgerbers-gasthaus-building-sold-for-1-6-million/",
+   "https://www.thegoldenmast.com/about/"
+  ]
+ }
+]

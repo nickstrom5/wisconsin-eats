@@ -1,0 +1,107 @@
+{
+ "generated": "2026-09-26",
+ "restaurants": 16379,
+ "towns": 828,
+ "fish_fry": 395,
+ "supper_clubs": 209,
+ "custard": 28,
+ "fish_listed": 309,
+ "fish_counts": {
+  "cod": 213,
+  "perch": 146,
+  "walleye": 121,
+  "haddock": 78,
+  "bluegill": 49,
+  "catfish": 18,
+  "whitefish": 14,
+  "salmon": 13,
+  "pollock": 5,
+  "tilapia": 4,
+  "pike": 4,
+  "smelt": 4
+ },
+ "not_only_friday": 37,
+ "supper_with_fish_fry": 144,
+ "supper_founded_known": 94,
+ "supper_pre1950": 44,
+ "cities": {
+  "Milwaukee": {
+   "restaurants": 2030,
+   "fish_fry_near": 46,
+   "supper_near": 21,
+   "custard_near": 11
+  },
+  "Madison": {
+   "restaurants": 952,
+   "fish_fry_near": 39,
+   "supper_near": 16,
+   "custard_near": 1
+  },
+  "Green Bay": {
+   "restaurants": 399,
+   "fish_fry_near": 8,
+   "supper_near": 14,
+   "custard_near": 2
+  },
+  "Appleton": {
+   "restaurants": 332,
+   "fish_fry_near": 14,
+   "supper_near": 24,
+   "custard_near": 0
+  },
+  "Kenosha": {
+   "restaurants": 270,
+   "fish_fry_near": 4,
+   "supper_near": 4,
+   "custard_near": 1
+  },
+  "Eau Claire": {
+   "restaurants": 225,
+   "fish_fry_near": 10,
+   "supper_near": 5,
+   "custard_near": 0
+  },
+  "Racine": {
+   "restaurants": 221,
+   "fish_fry_near": 4,
+   "supper_near": 15,
+   "custard_near": 2
+  },
+  "Oshkosh": {
+   "restaurants": 211,
+   "fish_fry_near": 7,
+   "supper_near": 24,
+   "custard_near": 2
+  },
+  "La Crosse": {
+   "restaurants": 197,
+   "fish_fry_near": 8,
+   "supper_near": 11,
+   "custard_near": 0
+  },
+  "Sheboygan": {
+   "restaurants": 195,
+   "fish_fry_near": 3,
+   "supper_near": 9,
+   "custard_near": 0
+  },
+  "Waukesha": {
+   "restaurants": 167,
+   "fish_fry_near": 30,
+   "supper_near": 20,
+   "custard_near": 7
+  },
+  "Janesville": {
+   "restaurants": 166,
+   "fish_fry_near": 10,
+   "supper_near": 10,
+   "custard_near": 0
+  },
+  "Wisconsin Dells": {
+   "restaurants": 94,
+   "fish_fry_near": 13,
+   "supper_near": 8,
+   "custard_near": 0
+  }
+ }
+}

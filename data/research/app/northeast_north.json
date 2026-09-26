@@ -1,0 +1,4541 @@
+[
+ {
+  "name": "Kropp's Supper Club",
+  "address": "4570 Shawano Ave",
+  "city": "Green Bay",
+  "zip": "54313",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye",
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad bar",
+   "rye bread",
+   "baked potato",
+   "french fries",
+   "hash browns"
+  ],
+  "founded": 1946,
+  "note": "Mill Center supper club on Green Bay's west side whose Friday menu offers battered or breaded lake perch and Canadian walleye plus fried or steamed Icelandic cod.",
+  "website": "https://kroppssupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://kroppssupperclub.com/",
+   "https://kroppssupperclub.com/menus/",
+   "https://kroppssupperclub.com/wp-content/uploads/2026/05/friday-menu-may2026-2-scaled.jpg",
+   "https://kroppssupperclub.com/history/",
+   "https://www.greenbay.com/blog/post/green-bay-supper-clubs-beyond-the-fish-fry/"
+  ]
+ },
+ {
+  "name": "Club Chalet",
+  "address": "4642 Nicolet Dr",
+  "city": "Green Bay",
+  "zip": "54311",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad bar"
+  ],
+  "founded": 1944,
+  "note": "Supper club on Green Bay's northeast side whose Friday specials include deep-fried or pan-fried walleye, with lake perch and haddock on the regular menu.",
+  "website": "https://www.clubchaletgb.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.clubchaletgb.com/",
+   "https://www.clubchaletgb.com/menus",
+   "https://www.clubchaletgb.com/menu",
+   "https://www.greenbay.com/blog/post/the-green-bay-supper-club-round-up/",
+   "https://www.greenbay.com/blog/post/green-bay-supper-clubs-beyond-the-fish-fry/"
+  ]
+ },
+ {
+  "name": "The Mill Supper Club",
+  "address": "4128 State Hwy 42/57",
+  "city": "Sturgeon Bay",
+  "zip": "54235",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "perch",
+   "whitefish",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "potato salad",
+   "french fries",
+   "rye bread",
+   "salad bar"
+  ],
+  "founded": 1930,
+  "note": "Supper club north of Sturgeon Bay with a German-accented menu whose Friday fish fry includes beer-battered cod, perch, locally sourced whitefish and walleye.",
+  "website": "https://www.themillsupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-01",
+  "sources": [
+   "https://www.themillsupperclub.com/",
+   "https://themillsupperclub.com/menu/",
+   "https://www.themillsupperclub.com/wp-content/uploads/2026/01/Dinner-Menu-2026-Web-Pg2-scaled.jpeg",
+   "https://themillsupperclub.com/hours/"
+  ]
+ },
+ {
+  "name": "Union Hotel & Restaurant",
+  "address": "200 N Broadway",
+  "city": "De Pere",
+  "zip": "54115",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1883,
+  "note": "Historic hotel dining room in downtown De Pere serving supper club fare such as a relish tray, hand-cut steaks and pan-fried Canadian walleye, open Wednesday through Sunday evenings.",
+  "website": "https://www.unionhoteldepere.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://www.unionhoteldepere.com/",
+   "https://unionhoteldepere.com/home",
+   "https://www.greenbay.com/blog/post/green-bay-supper-clubs-beyond-the-fish-fry/",
+   "https://www.greenbay.com/blog/post/the-green-bay-supper-club-round-up/"
+  ]
+ },
+ {
+  "name": "The Marq Supper Club",
+  "address": "3177 French Rd",
+  "city": "De Pere",
+  "zip": "54115",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad bar"
+  ],
+  "founded": null,
+  "note": "Banquet hall and supper club in De Pere whose dining room opens Friday and Saturday evenings with a Friday fish fry and a soup and salad bar.",
+  "website": "https://www.themarqwi.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://www.themarqwi.com/super-club",
+   "https://www.greenbay.com/blog/post/green-bay-supper-clubs-beyond-the-fish-fry/"
+  ]
+ },
+ {
+  "name": "River's Bend",
+  "address": "792 Riverview Dr",
+  "city": "Green Bay",
+  "zip": "54303",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "rye bread",
+   "salad bar"
+  ],
+  "founded": 1974,
+  "note": "Family-run riverside supper club whose Friday fish fry features breaded yellow lake perch and baked or beer-battered Atlantic cod.",
+  "website": "https://riversbendgb.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://riversbendgb.com/",
+   "https://riversbendgb.com/green-bays-best-fine-dining-specials/",
+   "https://riversbendgb.com/contact/",
+   "https://riversbendgb.com/about-2/",
+   "https://www.greenbay.com/blog/post/green-bay-supper-clubs-beyond-the-fish-fry/"
+  ]
+ },
+ {
+  "name": "Long Drive Supper Club",
+  "address": "897 Riverdale Dr",
+  "city": "Hobart",
+  "zip": "54155",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "catfish",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "tartar sauce",
+   "salad bar"
+  ],
+  "founded": null,
+  "note": "Supper club in the Brown County Golf Course clubhouse with a Louisiana-influenced menu whose Friday fish specials are lake perch, Cajun catfish and skillet-fried walleye.",
+  "website": "https://longdrivesc.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://longdrivesc.com/",
+   "https://longdrivesc.com/weekly-specials",
+   "https://longdrivesc.com/hours-%26-location",
+   "https://www.greenbay.com/blog/post/green-bay-supper-clubs-beyond-the-fish-fry/"
+  ]
+ },
+ {
+  "name": "Heritage Modern Supper Club",
+  "address": "1004 Brett Favre Pass",
+  "city": "Green Bay",
+  "zip": "54304",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Contemporary take on a Wisconsin supper club inside the Legacy Hotel near Lambeau Field.",
+  "website": "https://legacygb.com/libations-dining/heritage/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://legacygb.com/libations-dining/heritage/",
+   "https://www.greenbay.com/blog/post/green-bay-supper-clubs-beyond-the-fish-fry/"
+  ]
+ },
+ {
+  "name": "Kroll's West",
+  "address": "1990 S Ridge Rd",
+  "city": "Green Bay",
+  "zip": "54304",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 1936,
+  "note": "Longtime Green Bay burger and broasted chicken restaurant on South Ridge Road that serves a weekly Friday fish fry.",
+  "website": "https://www.krollswest.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.krollswest.com/",
+   "https://www.krollswest.com/menu",
+   "https://www.krollswest.com/events"
+  ]
+ },
+ {
+  "name": "Sister Bay Bowl",
+  "address": "10640 N Bay Shore Dr",
+  "city": "Sister Bay",
+  "zip": "54234",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye",
+   "whitefish"
+  ],
+  "fish_fry_days": [
+   "Tuesday",
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "potato salad",
+   "french fries",
+   "baked potato"
+  ],
+  "founded": 1950,
+  "note": "Family-run supper club and vintage bowling alley in downtown Sister Bay with Tuesday and Friday fish fries of perch, walleye or whitefish.",
+  "website": "https://www.sisterbaybowl.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.sisterbaybowl.com/",
+   "https://www.sisterbaybowl.com/restaurant-supper-club",
+   "https://www.sisterbaybowl.com/history",
+   "https://cdn.hibuwebsites.com/3c568f59ebc446e9a20f11eae07aa89c/files/uploaded/sister-bay-bowl-2025-menus.pdf"
+  ]
+ },
+ {
+  "name": "Nightingale Supper Club",
+  "address": "1541 Egg Harbor Rd",
+  "city": "Sturgeon Bay",
+  "zip": "54235",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "perch",
+   "walleye",
+   "whitefish"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Sturgeon Bay supper club whose Friday Door County fish fry offers cod, perch, walleye or broiled local whitefish.",
+  "website": "https://nightingalesupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "http://nightingalesupperclub.com/",
+   "http://nightingalesupperclub.com/menu"
+  ]
+ },
+ {
+  "name": "Harbor Fish Market & Grille",
+  "address": "8080 Hwy 57",
+  "city": "Baileys Harbor",
+  "zip": "54202",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 2000,
+  "note": "Baileys Harbor restaurant in a circa-1908 building, known for its lobster boil, that serves a Friday perch fry.",
+  "website": "https://harborfishmarket-grille.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://harborfishmarket-grille.com/",
+   "https://harborfishmarket-grille.com/menus/menus/dinner",
+   "https://harborfishmarket-grille.com/about/our-story",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Harbor Custard & Provisions",
+  "address": "8078 Hwy 57",
+  "city": "Baileys Harbor",
+  "zip": "54202",
+  "kinds": [
+   "frozen custard"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Seasonal shop beside Harbor Fish Market & Grille making vanilla and chocolate frozen custard in-house daily, open weekends through mid-October.",
+  "website": "https://harborfishmarket-grille.com/menus/menus/harbor-custard",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://harborfishmarket-grille.com/menus/menus/harbor-custard",
+   "https://harborfishmarket-grille.com/hours-and-location/hours-and-location/harbor-custard"
+  ]
+ },
+ {
+  "name": "White Gull Inn",
+  "address": "4225 Main St",
+  "city": "Fish Creek",
+  "zip": "54212",
+  "kinds": [
+   "fish boil"
+  ],
+  "fish": [
+   "whitefish"
+  ],
+  "fish_fry_days": null,
+  "sides": [
+   "potatoes",
+   "coleslaw",
+   "bread",
+   "cherry pie"
+  ],
+  "founded": 1896,
+  "note": "Historic Fish Creek inn serving Lake Michigan whitefish boils Wednesday, Friday, Saturday and Sunday evenings May through October and Friday evenings the rest of the year.",
+  "website": "https://www.whitegullinn.com/",
+  "open": true,
+  "evidence_date": "2026-04",
+  "sources": [
+   "https://www.whitegullinn.com/",
+   "https://www.whitegullinn.com/traditional-door-county-fish-boils",
+   "http://www.whitegullinn.com/winter-concerts-20252026"
+  ]
+ },
+ {
+  "name": "Pelletier's Restaurant & Fish Boil",
+  "address": "4199 Main St",
+  "city": "Fish Creek",
+  "zip": "54212",
+  "kinds": [
+   "fish boil"
+  ],
+  "fish": [
+   "whitefish"
+  ],
+  "fish_fry_days": null,
+  "sides": [
+   "potatoes",
+   "coleslaw",
+   "rye bread",
+   "cherry pie"
+  ],
+  "founded": null,
+  "note": "Founders Square restaurant in Fish Creek with nightly Lake Michigan whitefish boil-overs at 5, 6 and 7 pm, plus 8 pm in peak season.",
+  "website": "https://www.pelletiersfishboil.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.pelletiersfishboil.com/",
+   "https://www.pelletiersfishboil.com/fish-boils",
+   "https://www.pelletiersfishboil.com/dinner-fish-boil-menu",
+   "https://www.travelwisconsin.com/food-drink/restaurants/pelletier-s-restaurant-fish-boil"
+  ]
+ },
+ {
+  "name": "Old Post Office Restaurant",
+  "address": "10040 Water St",
+  "city": "Ephraim",
+  "zip": "54211",
+  "kinds": [
+   "fish boil"
+  ],
+  "fish": [
+   "whitefish"
+  ],
+  "fish_fry_days": null,
+  "sides": [
+   "potatoes",
+   "onions"
+  ],
+  "founded": null,
+  "note": "Restaurant in Ephraim's restored early-1900s post office on Eagle Harbor with open-fire whitefish boils nightly except Sunday from mid-May through late October.",
+  "website": "https://oldpostoffice-doorcounty.com/",
+  "open": true,
+  "evidence_date": "2026-05",
+  "sources": [
+   "https://oldpostoffice-doorcounty.com/fish-boil/",
+   "https://oldpostoffice-doorcounty.com/",
+   "https://www.travelwisconsin.com/restaurants/old-post-office-restaurant-198751"
+  ]
+ },
+ {
+  "name": "Gib's on the Lake",
+  "address": "N110 Hwy 42",
+  "city": "Kewaunee",
+  "zip": "54216",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "bread"
+  ],
+  "founded": null,
+  "note": "Lake Michigan-view supper club north of Kewaunee that cooks without seed oils and serves a Friday fish fry of fried or grilled Great Lakes perch.",
+  "website": "https://gibsonthelake.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://gibsonthelake.com/",
+   "https://gibsonthelake.com/menu",
+   "https://971fbe35a01c4f2990085e8696752380.web.ordersave.com/menu",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "White Pine Supper Club",
+  "address": "11934 Hwy 42",
+  "city": "Ellison Bay",
+  "zip": "54210",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Nordic-inspired supper club at The Ellison Inn in Ellison Bay featuring local fish from Henriksen Fisheries and house-cured meats.",
+  "website": "https://www.theellisoninn.com/whitepinesupperclub",
+  "open": true,
+  "evidence_date": "2025-01",
+  "sources": [
+   "https://www.theellisoninn.com/whitepinesupperclub",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Graystone Ale House",
+  "address": "3711 Monroe Rd",
+  "city": "De Pere",
+  "zip": "54115",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "De Pere ale house with a separate Friday fish fry menu alongside its regular pub fare.",
+  "website": "https://www.graystonealehouse.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.graystonealehouse.com/",
+   "https://www.graystonealehouse.com/menu.html"
+  ]
+ },
+ {
+  "name": "Parker John's BBQ & Pizza",
+  "address": "2851 S Oneida St",
+  "city": "Green Bay",
+  "zip": "54304",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Green Bay barbecue and pizza restaurant whose Friday fish fry features haddock and Southern-style shrimp.",
+  "website": "https://parkerjohns.com/greenbay",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://parkerjohns.com/greenbay"
+  ]
+ },
+ {
+  "name": "Zesty's Frozen Custard - Allouez",
+  "address": "508 Greene Ave",
+  "city": "Green Bay",
+  "zip": "54301",
+  "kinds": [
+   "frozen custard"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Local frozen custard and burger stand at Greene Avenue and Libal Street that whips its custard fresh in house every few hours and posts a monthly flavor forecast.",
+  "website": "http://www.zestyscustard.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "http://www.zestyscustard.com/",
+   "http://www.zestyscustard.com/locations-allouez.php",
+   "http://www.zestyscustard.com/flavor-forecast.php",
+   "https://www.greenbay.com/blog/post/the-ultimate-ice-cream-tour-of-green-bay/",
+   "https://www.greenbay.com/blog/post/the-most-unique-ice-cream-treats-in-and-around-green-bay/"
+  ]
+ },
+ {
+  "name": "Zesty's Frozen Custard - Howard/Suamico",
+  "address": "2639 Lineville Rd",
+  "city": "Green Bay",
+  "zip": "54313",
+  "kinds": [
+   "frozen custard"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Second location of the local Zesty's frozen custard and burger stand, on Lineville Road on the Howard-Suamico side of Green Bay.",
+  "website": "http://www.zestyscustard.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "http://www.zestyscustard.com/",
+   "http://www.zestyscustard.com/locations-howard-suamico.php",
+   "http://www.zestyscustard.com/flavor-forecast.php",
+   "https://www.greenbay.com/blog/post/the-ultimate-ice-cream-tour-of-green-bay/"
+  ]
+ },
+ {
+  "name": "The Log Den",
+  "address": "6626 Hwy 42",
+  "city": "Egg Harbor",
+  "zip": "54209",
+  "kinds": [
+   "fish boil"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 2007,
+  "note": "Egg Harbor restaurant that hosts a Friday night fish boil during the warm-weather season, which opened May 15 in 2026.",
+  "website": "https://www.thelogden.com/",
+  "open": true,
+  "evidence_date": "2026-05",
+  "sources": [
+   "https://www.thelogden.com/",
+   "https://www.thelogden.com/friday-night-fish-boil/",
+   "https://www.thelogden.com/contact-us/"
+  ]
+ },
+ {
+  "name": "Hotel Stebbins",
+  "address": "201 Steele St",
+  "city": "Algoma",
+  "zip": "54201",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 1857,
+  "note": "Historic downtown Algoma hotel, begun as the Ahnapee House, whose supper club and bar runs nightly specials including a Friday fish fry, with a perch platter on the regular menu.",
+  "website": "https://www.thehotelstebbins.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.thehotelstebbins.com/",
+   "https://www.thehotelstebbins.com/food-and-drink.php",
+   "https://www.thehotelstebbins.com/pdf/129349_web.pdf"
+  ]
+ },
+ {
+  "name": "Casey's BBQ & Smokehouse",
+  "address": "7855 State Hwy 42",
+  "city": "Egg Harbor",
+  "zip": "54209",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye",
+   "whitefish"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "potato salad",
+   "coleslaw",
+   "rye bread"
+  ],
+  "founded": 1936,
+  "note": "Barbecue restaurant in the historic Casey's Inn building in Egg Harbor whose Friday fish fry after 4 pm offers deep-fried perch or walleye and broiled Door County whitefish.",
+  "website": "https://caseysbbqandsmokehouse.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://caseysbbqandsmokehouse.com/",
+   "https://caseysbbqandsmokehouse.com/menu/",
+   "https://caseysbbqandsmokehouse.com/about/",
+   "https://caseysbbqandsmokehouse.com/contact/"
+  ]
+ },
+ {
+  "name": "Bayside Tavern",
+  "address": "4160 Main St",
+  "city": "Fish Creek",
+  "zip": "54212",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "pollock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "potato salad",
+   "coleslaw",
+   "rye bread"
+  ],
+  "founded": 1922,
+  "note": "Historic Fish Creek tavern whose Friday night specials from 5 pm include a beer-battered perch fry and a pollack fish fry.",
+  "website": "https://www.baysidedoorcounty.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.baysidedoorcounty.com/",
+   "https://www.baysidedoorcounty.com/tavern-menu",
+   "https://images.squarespace-cdn.com/content/v1/67ae3aa88811d14cdac78e2f/c56ac473-3032-4892-bed8-596c36bd9e13/BTMenu3.jpg",
+   "https://visitfishcreek.com/directory/bayside-tavern/"
+  ]
+ },
+ {
+  "name": "Kettle Black Fish Boil",
+  "address": "4158 Main St",
+  "city": "Fish Creek",
+  "zip": "54212",
+  "kinds": [
+   "fish boil"
+  ],
+  "fish": [
+   "whitefish"
+  ],
+  "fish_fry_days": null,
+  "sides": [
+   "potatoes",
+   "onions",
+   "corn on the cob",
+   "cornbread"
+  ],
+  "founded": 2022,
+  "note": "Waterfront Fish Creek fish boil with Tuesday through Saturday seatings at 5:30 and 7:30 that cooks boneless whitefish in a seasoned broth with potatoes, corn, andouille and vegetables.",
+  "website": "https://kettleblackfishboil.com/",
+  "open": true,
+  "evidence_date": "2026-06",
+  "sources": [
+   "https://www.kettleblackfishboil.com/",
+   "https://kettleblackfishboil.com/wp-content/uploads/2026-06-09-Kettle-Black-Menu.pdf"
+  ]
+ },
+ {
+  "name": "Van Abel's of Hollandtown",
+  "address": "8108 County Rd D",
+  "city": "Kaukauna",
+  "zip": "54130",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "walleye",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 1848,
+  "note": "Family-owned Hollandtown restaurant and banquet hall dating to 1848, known for family-style broasted chicken and a Friday seafood menu of cod, walleye and lake perch.",
+  "website": "https://vanabels.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://vanabels.com/",
+   "https://vanabels.com/friday-lunch-menu",
+   "https://vanabels.com/weekday-specials",
+   "https://www.travelwisconsin.com/food-drink/restaurants/van-abel-s-of-hollandtown",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Jimmie's White House Inn",
+  "address": "5776 Main St",
+  "city": "Butte des Morts",
+  "zip": "54927",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "baked potato",
+   "french fries",
+   "potato pancakes"
+  ],
+  "founded": 1929,
+  "note": "Historic Butte des Morts building opened as a supper club by James Kontos in 1929, with Friday specials of fresh lake perch, broiled haddock and tavern-style fish.",
+  "website": "https://www.jimmieswhitehouseinn.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.jimmieswhitehouseinn.com/",
+   "https://www.jimmieswhitehouseinn.com/menu",
+   "https://www.jimmieswhitehouseinn.com/about",
+   "https://www.jimmieswhitehouseinn.com/contact"
+  ]
+ },
+ {
+  "name": "Roepke's Village Inn",
+  "address": "W2686 St Charles Rd",
+  "city": "Chilton",
+  "zip": "53014",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "salad bar"
+  ],
+  "founded": null,
+  "note": "Rural Chilton supper club with a homemade salad bar, in-house aged steaks and a Friday lake perch plate served with choice of potato and coleslaw.",
+  "website": "https://www.roepkesvillageinn.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.roepkesvillageinn.com/",
+   "https://www.roepkesvillageinn.com/our-menus/supper-club-menu/"
+  ]
+ },
+ {
+  "name": "Altona Supper Club",
+  "address": "2306 Calumet Dr",
+  "city": "New Holstein",
+  "zip": "53061",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "ocean perch",
+   "catfish",
+   "redfish",
+   "haddock",
+   "tilapia"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "mashed potatoes",
+   "clam chowder",
+   "salad bar"
+  ],
+  "founded": 1937,
+  "note": "New Holstein supper club opened in 1937 that runs a Friday seafood buffet with battered and baked fish alongside soup and salad bar.",
+  "website": "https://altonasupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://altonasupperclub.com/",
+   "https://altonasupperclub.com/buffets.html",
+   "https://altonasupperclub.com/Our%20History.html"
+  ]
+ },
+ {
+  "name": "Leon's Frozen Custard",
+  "address": "121 W Murdock Ave",
+  "city": "Oshkosh",
+  "zip": "54901",
+  "kinds": [
+   "frozen custard"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1947,
+  "note": "Seasonal Oshkosh carhop drive-in serving homemade frozen custard since 1947, which opened its 79th season in February 2026.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-02",
+  "sources": [
+   "https://fox11online.com/news/local/oshkosh-staple-leons-frozen-custard-opens-for-79th-season-with-new-improvements-spring-warm-weather-customers-february-winter-jeff-redemann-business-food-point-of-sale-system-carhops-credit-card-rewards-program",
+   "https://www.travelwisconsin.com/dining/leons-frozen-custard-198382"
+  ]
+ },
+ {
+  "name": "Black Otter Supper Club",
+  "address": "503 S Nash St",
+  "city": "Hortonville",
+  "zip": "54944",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "whitefish",
+   "perch",
+   "haddock",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad bar",
+   "baked potato",
+   "french fries",
+   "American fries"
+  ],
+  "founded": null,
+  "note": "Hortonville supper club, family operated since 1972 and known for prime rib, that offers an all-you-can-eat whitefish special on Fridays.",
+  "website": "https://www.theblackottersupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.theblackottersupperclub.com/",
+   "https://www.theblackottersupperclub.com/dine-in-menu",
+   "https://www.theblackottersupperclub.com/weekly-specials"
+  ]
+ },
+ {
+  "name": "Mark's East Side",
+  "address": "1405 E Wisconsin Ave",
+  "city": "Appleton",
+  "zip": "54911",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "tartar sauce",
+   "coleslaw",
+   "clam chowder",
+   "baked potato",
+   "German potato salad"
+  ],
+  "founded": 1948,
+  "note": "East Appleton restaurant in a building opened in 1948, family run since 1967, whose all-day Friday menu includes all-you-can-eat batter-fried Icelandic haddock and fresh lake perch.",
+  "website": "https://www.markseastside.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.markseastside.com/",
+   "https://www.markseastside.com/menus",
+   "https://www.markseastside.com/s/Friday-Menu-website-2026.pdf",
+   "https://www.markseastside.com/aboutus",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Michiels of Menasha",
+  "address": "1100 Appleton Rd",
+  "city": "Menasha",
+  "zip": "54952",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad bar",
+   "clam chowder"
+  ],
+  "founded": null,
+  "note": "Menasha bar, grill and supper club whose Friday fish dinners include all-you-can-eat hand-breaded haddock and lake perch with the soup and salad bar.",
+  "website": "https://michielsbarandgrill.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://michielsbarandgrill.com/",
+   "https://michielsbarandgrill.com/our-menu/",
+   "https://michielsbarandgrill.com/contact/",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Hotel Seymour Supperclub",
+  "address": "210 S Main St",
+  "city": "Seymour",
+  "zip": "54165",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye",
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "rye bread"
+  ],
+  "founded": 2004,
+  "note": "Supper club in downtown Seymour, in business since 2004, that serves a traditional Friday fish fry of perch, walleye or cod.",
+  "website": "https://hotelseymour.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://hotelseymour.com/",
+   "https://hotelseymour.com/dinner-menu/dinner-specials/",
+   "https://hotelseymour.com/dinner-menu/sensational-seafood/"
+  ]
+ },
+ {
+  "name": "Off the Wolf Supper Club",
+  "address": "204 W Main St",
+  "city": "Winneconne",
+  "zip": "54986",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Supper club near the Wolf River in downtown Winneconne serving steaks, Saturday prime rib and haddock dinners, with Friday lunch hours.",
+  "website": "https://offthewolfsupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://offthewolfsupperclub.com/",
+   "https://offthewolfsupperclub.com/wp-content/uploads/2026/06/Dinner-Menu_6-26.pdf"
+  ]
+ },
+ {
+  "name": "Marty's Place Supper Club",
+  "address": "210 N Main St",
+  "city": "Kimberly",
+  "zip": "54136",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1972,
+  "note": "Kimberly supper club serving the Fox Valley since 1972 with a soup and salad bar, Saturday smoked prime rib and a seafood list of perch, bluegill, walleye and haddock.",
+  "website": "https://www.martysplacewi.com/",
+  "open": true,
+  "evidence_date": "2026-02",
+  "sources": [
+   "https://www.martysplacewi.com/",
+   "https://www.martysplacewi.com/wp-content/uploads/2026/02/Martys-Menu-02-18.pdf"
+  ]
+ },
+ {
+  "name": "Red Ox Seafood & Steakhouse",
+  "address": "2318 S Oneida St",
+  "city": "Appleton",
+  "zip": "54915",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Appleton seafood and steakhouse listed among Fox Valley supper clubs, known for haddock prepared many different ways.",
+  "website": "https://redoxseafoodandsteakhouse.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://redoxseafoodandsteakhouse.com/",
+   "https://redoxseafoodandsteakhouse.com/menu/",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Lox Club",
+  "address": "591 State St",
+  "city": "Combined Locks",
+  "zip": "54113",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "haddock",
+   "pike"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "baked potato",
+   "french fries"
+  ],
+  "founded": 1965,
+  "note": "Combined Locks supper club opened on November 1, 1965, with a Friday night fish menu of perch and haddock dinners and seafood platters served with coleslaw.",
+  "website": "https://www.theloxclub.com/",
+  "open": true,
+  "evidence_date": "2025-01",
+  "sources": [
+   "https://www.theloxclub.com/",
+   "https://www.theloxclub.com/menu",
+   "https://www.theloxclub.com/our-history"
+  ]
+ },
+ {
+  "name": "George's Steak House",
+  "address": "2208 S Memorial Dr",
+  "city": "Appleton",
+  "zip": "54915",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "clam chowder"
+  ],
+  "founded": null,
+  "note": "Long-running Appleton steakhouse and piano bar owned by the Quimby family since 1976, offering about ten different Friday fish fry specials with Boston clam chowder.",
+  "website": "https://www.georgessteakhouseappleton.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.georgessteakhouseappleton.com/",
+   "https://www.georgessteakhouseappleton.com/history",
+   "https://www.georgessteakhouseappleton.com/coupons",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Cimarron Bar & Grill",
+  "address": "W7170 Hwy 10/114",
+  "city": "Menasha",
+  "zip": "54952",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "bluegill",
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "rye bread",
+   "french fries",
+   "potato salad",
+   "baked potato",
+   "clam chowder"
+  ],
+  "founded": null,
+  "note": "Family-owned bar and grill west of Menasha, in business for over 32 years, with a Friday fish menu of perch, bluegill and fried or broiled haddock.",
+  "website": "https://www.cimarronbarandgrill.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.cimarronbarandgrill.com/",
+   "https://www.cimarronbarandgrill.com/friday-menu",
+   "https://www.foxcities.org/blog/friday-night-fish-fry-fox-cities/"
+  ]
+ },
+ {
+  "name": "Scuba's Pourhouse",
+  "address": "1309 E Wisconsin Ave",
+  "city": "Appleton",
+  "zip": "54911",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "East-side Appleton sports bar that serves its fish fry all day on Fridays.",
+  "website": "https://www.scubaspourhouse.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.scubaspourhouse.com/"
+  ]
+ },
+ {
+  "name": "Lake Park Pub and Grill",
+  "address": "N8904 Lake Park Rd",
+  "city": "Menasha",
+  "zip": "54952",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "haddock",
+   "bluegill",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "rye bread",
+   "tartar sauce",
+   "french fries",
+   "potato salad",
+   "baked potato",
+   "clam chowder"
+  ],
+  "founded": 1998,
+  "note": "Town of Menasha pub established in 1998 whose Friday fish fry menu offers lake perch, Icelandic haddock, bluegill and walleye pike dinners.",
+  "website": "https://lakeparkpub.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://lakeparkpub.com/",
+   "https://lakeparkpub.com/menu/",
+   "https://lakeparkpub.com/wp-content/uploads/2026/08/lake-park-pub-fish-fry-menu-aug26-768x994.jpg",
+   "https://www.foxcities.org/blog/friday-night-fish-fry-fox-cities/"
+  ]
+ },
+ {
+  "name": "Jeff's on Rugby",
+  "address": "1005 Rugby St",
+  "city": "Oshkosh",
+  "zip": "54902",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1984,
+  "note": "Oshkosh neighborhood supper club established in 1984, serving broasted chicken, steaks and seafood entrees such as yellow lake perch and Alaskan whitefish.",
+  "website": "https://jeffsonrugbywi.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://jeffsonrugbywi.com/",
+   "https://jeffsonrugbywi.com/optimamedia/products/P_16058/33fc3dca-fddc-4ab3-a231-08c571e7182a.pdf",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "The Granary Supper Club",
+  "address": "N586 Military Rd",
+  "city": "Sherwood",
+  "zip": "54169",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "tilapia"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "baked potato",
+   "hash browns",
+   "American fries",
+   "potato salad",
+   "salad bar"
+  ],
+  "founded": null,
+  "note": "Family-owned Sherwood supper club with more than 60 years of history, known for its soup and salad bar, Saturday prime rib and a Friday fish fry of deep-fried or steamed haddock plus rotating fish specials.",
+  "website": "https://thegranarysupperclub.com/",
+  "open": true,
+  "evidence_date": "2025-07",
+  "sources": [
+   "https://thegranarysupperclub.com/",
+   "https://thegranarysupperclub.com/menu/daily-specials/",
+   "https://thegranarysupperclub.com/about/",
+   "https://www.travelcalumet.com/256/The-Granary-Supper-Club"
+  ]
+ },
+ {
+  "name": "Waverly Beach",
+  "address": "N8770 Fire Lane 1",
+  "city": "Menasha",
+  "zip": "54952",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "sides": [
+   "french fries",
+   "coleslaw",
+   "potato salad",
+   "rye bread"
+  ],
+  "founded": 1996,
+  "note": "Lake Winnebago shoreline bar and grille, open since 1996, that serves beer-battered cod and perch fish fry plates every day, Fridays included.",
+  "website": "https://waverlybeach.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://waverlybeach.com/",
+   "https://waverlybeach.com/food-drink/food-menu/",
+   "https://www.travelcalumet.com/131/Bar-Grill"
+  ]
+ },
+ {
+  "name": "Harbor Bar & Grill",
+  "address": "1919 W Lake St",
+  "city": "Chilton",
+  "zip": "53014",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Historic bar and grill at Stockbridge Harbor on the east shore of Lake Winnebago with a Friday fish fry and lake views.",
+  "website": "https://www.stockbridgeharborbar.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.stockbridgeharborbar.com/",
+   "https://www.travelcalumet.com/131/Bar-Grill"
+  ]
+ },
+ {
+  "name": "TJ's Harbor Restaurant",
+  "address": "7098 S US Hwy 45",
+  "city": "Oshkosh",
+  "zip": "54902",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "haddock",
+   "catfish"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Lake Winnebago harbor restaurant south of Oshkosh whose Friday fish fry features fresh lake perch, beer-battered or baked haddock and blackened catfish.",
+  "website": "https://www.tjsharbor.com/",
+  "open": true,
+  "evidence_date": "2026-05",
+  "sources": [
+   "https://www.tjsharbor.com/",
+   "https://www.tjsharbor.com/menu/",
+   "https://www.tjsharbor.com/wp-content/uploads/2026/05/Summer-2026_page-1-1-980x1268.jpg",
+   "https://www.tjsharbor.com/about-us/"
+  ]
+ },
+ {
+  "name": "Rhapsodies Gourmet Frozen Custard",
+  "address": "1226 Oregon St",
+  "city": "Oshkosh",
+  "zip": "54902",
+  "kinds": [
+   "frozen custard"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 2012,
+  "note": "Independent Oshkosh frozen custard shop established in 2012 that posts a daily flavor of the day.",
+  "website": "https://www.rhapsodiesfrozencustard.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.rhapsodiesfrozencustard.com/"
+  ]
+ },
+ {
+  "name": "Club Tavern",
+  "address": "56 Racine St",
+  "city": "Menasha",
+  "zip": "54952",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "pike",
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Wednesday",
+   "Thursday",
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "french fries",
+   "American fries",
+   "German potato salad",
+   "potato salad",
+   "onion rings"
+  ],
+  "founded": null,
+  "note": "Menasha neighborhood tavern dating to the early 1940s, sold to new owners in 2026, that serves a Wednesday through Friday fish fry of perch, pike and haddock with its house sweet coleslaw.",
+  "website": "https://www.clubtavern.net/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.clubtavern.net/",
+   "https://www.clubtavern.net/menu",
+   "https://irp.cdn-website.com/cfad56f8/dms3rep/multi/opt/menu26c-1257h.png"
+  ]
+ },
+ {
+  "name": "Emmett's Bar & Grill",
+  "address": "139 N Richmond St",
+  "city": "Appleton",
+  "zip": "54911",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "tartar sauce",
+   "coleslaw",
+   "rye bread",
+   "french fries",
+   "potato salad"
+  ],
+  "founded": null,
+  "note": "Downtown Appleton neighborhood bar with a Friday fish fry of Icelandic haddock, hand-battered perch and breaded walleye served with marble rye and coleslaw.",
+  "website": "https://www.emmettsbarandgrill.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.emmettsbarandgrill.com/",
+   "https://www.emmettsbarandgrill.com/menu",
+   "https://www.emmettsbarandgrill.com/find-us"
+  ]
+ },
+ {
+  "name": "Romy's Nitingale",
+  "address": "W5670 County Rd A",
+  "city": "Black Creek",
+  "zip": "54106",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "pollock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "coleslaw",
+   "potato salad",
+   "salad bar"
+  ],
+  "founded": 1963,
+  "note": "Family-owned banquet hall and supper club near Black Creek since 1963 that runs an all-you-can-eat Friday buffet with broiled and deep-fried haddock and deep-fried pollock.",
+  "website": "https://www.romysnitingale.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.romysnitingale.com/",
+   "https://www.romysnitingale.com/menu",
+   "https://www.romysnitingale.com/contact",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Parnell's Place",
+  "address": "2932 Fond du Lac Rd",
+  "city": "Oshkosh",
+  "zip": "54902",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye",
+   "whitefish",
+   "haddock",
+   "bluegill"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw"
+  ],
+  "founded": null,
+  "note": "South-side Oshkosh bar and grill whose Friday specials include hand-breaded perch, baby walleye, bluegill and all-you-can-eat battered haddock, each served with coleslaw.",
+  "website": "https://parnellsplace.com/",
+  "open": true,
+  "evidence_date": "2026-04",
+  "sources": [
+   "https://parnellsplace.com/",
+   "https://parnellsplace.com/daily-food-specials"
+  ]
+ },
+ {
+  "name": "Dockside Tavern",
+  "address": "425 Nebraska St",
+  "city": "Oshkosh",
+  "zip": "54902",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "walleye",
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Fox River tavern next to the Sweetwater Performance Center in Oshkosh with boat slips, serving its fish fry favorites such as walleye fingers and ale-battered haddock every day it is open.",
+  "website": "https://www.docksidetavern.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.docksidetavern.com/",
+   "https://www.docksidetavern.com/locations"
+  ]
+ },
+ {
+  "name": "Cinder's Charcoal Grill",
+  "address": "221 S Kensington Dr",
+  "city": "Appleton",
+  "zip": "54915",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "whitefish",
+   "haddock",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "potato salad",
+   "coleslaw",
+   "rye bread",
+   "tartar sauce"
+  ],
+  "founded": 2006,
+  "note": "Charcoal grill restaurant on Appleton's west side, open since 2006, with all-you-can-eat Alaskan whitefish and broiled haddock on Fridays and hand-breaded perch and haddock daily.",
+  "website": "https://cinderscharcoalgrill.com/",
+  "open": true,
+  "evidence_date": "2026-03",
+  "sources": [
+   "https://cinderscharcoalgrill.com/",
+   "https://cinderscharcoalgrill.com/menu/",
+   "https://cinderscharcoalgrill.com/wp-content/uploads/2026/03/cinders-march-2026.pdf"
+  ]
+ },
+ {
+  "name": "Batley's Grill & Bar",
+  "address": "1010 Cameron Way",
+  "city": "Neenah",
+  "zip": "54956",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Neenah restaurant and sports bar off Interstate 41 whose weekly specials include a Friday fish fry of lake perch, fried haddock or a seafood combo.",
+  "website": "https://batleysgrillandbar.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://batleysgrillandbar.com/",
+   "https://www.foxcities.org/blog/friday-night-fish-fry-fox-cities/"
+  ]
+ },
+ {
+  "name": "Wendt's on the Lake",
+  "address": "N9699 Lake Shore Dr",
+  "city": "Van Dyne",
+  "zip": "54979",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye",
+   "cod",
+   "bluegill",
+   "haddock",
+   "smelt"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "baked potato",
+   "potato salad",
+   "sweet potato fries",
+   "coleslaw",
+   "bread"
+  ],
+  "founded": 1962,
+  "note": "Family-owned restaurant on the west shore of Lake Winnebago, serving fish since 1962, with lake perch daily and Friday as its main fish fry night.",
+  "website": "https://www.wendtsonthelake.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.wendtsonthelake.com/",
+   "https://www.wendtsonthelake.com/menu/",
+   "https://www.travelwisconsin.com/stories/tasty-fish-frys-in-each-region-of-wisconsin"
+  ]
+ },
+ {
+  "name": "Blanck's Supper Club",
+  "address": "W2655 County Rd Q",
+  "city": "Malone",
+  "zip": "53049",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch",
+   "pike",
+   "bluegill",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Sunday",
+   "Monday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday"
+  ],
+  "sides": [],
+  "founded": 1952,
+  "note": "Third-generation family supper club in Fond du Lac County's Holyland that keeps its fish fry (haddock, perch, pike, bluegill) on the menu every day it is open.",
+  "website": "http://www.blanckssupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "http://www.blanckssupperclub.com/",
+   "http://www.blanckssupperclub.com/about-us.php",
+   "https://blanckssupper.kwickmenu.com/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/blancks-supper-club"
+  ]
+ },
+ {
+  "name": "Norton's of Green Lake",
+  "address": "380 S Lawson Dr",
+  "city": "Green Lake",
+  "zip": "54941",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "potato pancakes",
+   "tartar sauce"
+  ],
+  "founded": 1948,
+  "note": "Waterfront supper club on Green Lake, established in 1948, with a Friday fish fry of breaded cod or perch served with potato pancakes and coleslaw.",
+  "website": "https://nortonsgreenlake.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://nortonsgreenlake.com/",
+   "https://nortonsgreenlake.com/menu/",
+   "https://nortonsgreenlake.com/wp-content/uploads/2025/07/Dinner-Menu-NEW-Web-4-scaled.png"
+  ]
+ },
+ {
+  "name": "Silvercryst Supper Club & Resort",
+  "address": "W7015 State Hwy 21",
+  "city": "Wautoma",
+  "zip": "54982",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 1894,
+  "note": "Lakeside supper club and motel on Big Silver Lake with an all-you-can-eat baked or fried Friday fish fry that includes broasted chicken.",
+  "website": "https://www.silvercryst.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.silvercryst.com/",
+   "https://www.silvercryst.com/main-menu",
+   "https://www.travelwisconsin.com/restaurants/silvercryst-supper-club-motel-202073",
+   "https://www.travelwisconsin.com/stories/8-wisconsin-supper-clubs-with-gorgeous-lake-views"
+  ]
+ },
+ {
+  "name": "Rupp's Supperclub",
+  "address": "1102 W Washington Ave",
+  "city": "Cleveland",
+  "zip": "53015",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Manitowoc County supper club, taken over by longtime Rupp family employee Tera Castillo in 2023, known for aging and cutting its own steaks.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-04",
+  "sources": [
+   "https://www.yahoo.com/lifestyle/dish-wisconsin-supper-clubs-rupp-161618681.html",
+   "https://thebusinessnews.com/northeast/carrying-on-a-family-legacy-the-old-fashioned-way/",
+   "https://business.chambermanitowoccounty.org/list/member/rupps-supperclub-5665",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs"
+  ]
+ },
+ {
+  "name": "Gilles Frozen Custard",
+  "address": "819 S Main St",
+  "city": "Fond du Lac",
+  "zip": "54935",
+  "kinds": [
+   "frozen custard"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1949,
+  "note": "Family-run carhop drive-in that has made frozen custard on site in Fond du Lac since 1949.",
+  "website": "https://www.gillesfrozencustardfdl.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.gillesfrozencustardfdl.com/",
+   "https://www.gillesfrozencustardfdl.com/our-history"
+  ]
+ },
+ {
+  "name": "Jim & Linda's Lakeview Supper Club",
+  "address": "W3496 County Rd W",
+  "city": "Malone",
+  "zip": "53049",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1978,
+  "note": "Supper club on the east shore of Lake Winnebago, run by Jim Koenigs and Linda Meyer since 1978, with lake perch, walleye and haddock on its dinner menu and summer music on the patio.",
+  "website": "https://www.jimandlindas.net/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.jimandlindas.net/",
+   "https://www.jimandlindas.net/menus",
+   "https://www.jimandlindas.net/about-us",
+   "https://www.travelwisconsin.com/food-drink/restaurants/jim-linda-s-lakeview-supper-club"
+  ]
+ },
+ {
+  "name": "The Moose Inn",
+  "address": "W6846 State Rd 21",
+  "city": "Wautoma",
+  "zip": "54982",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Waushara County supper club and bar that runs an all-you-can-eat Friday fish fry with a fresh lake perch dinner option.",
+  "website": "https://themooseinn.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://themooseinn.com/",
+   "https://themooseinn.com/menu/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/moose-inn-supper-club"
+  ]
+ },
+ {
+  "name": "Pine Tree Supper Club",
+  "address": "E8095 Hwy 54",
+  "city": "New London",
+  "zip": "54961",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Roughly 60-year-old Waupaca County supper club west of New London with prime rib nightly and a Friday fish fry.",
+  "website": "https://www.pinetreesupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.pinetreesupperclub.com/",
+   "https://www.pinetreesupperclub.com/menu",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/pine-tree-supper-club-new-london"
+  ]
+ },
+ {
+  "name": "Simpson's Restaurant",
+  "address": "222 S Main St",
+  "city": "Waupaca",
+  "zip": "54981",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1932,
+  "note": "Family-owned downtown Waupaca steak and seafood restaurant, open since 1932, listed as a supper club by Travel Wisconsin.",
+  "website": "http://simpsonswaupaca.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "http://simpsonswaupaca.com/",
+   "http://simpsonswaupaca.com/dinner-menu",
+   "https://www.travelwisconsin.com/food-drink/restaurants/simpson-s-restaurant"
+  ]
+ },
+ {
+  "name": "Crystal's Wood Lake Supper Club",
+  "address": "W7115 Dakota Ave",
+  "city": "Westfield",
+  "zip": "53964",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "perch",
+   "catfish"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 1937,
+  "note": "Supper club above Wood Lake in northwest Marquette County, in business since 1937, with a Friday fish fry of fried or baked cod, lake perch and catfish.",
+  "website": "https://crystalswoodlakesupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://crystalswoodlakesupperclub.com/",
+   "https://crystalswoodlakesupperclub.com/menu/daily-specials/",
+   "https://crystalswoodlakesupperclub.com/about/"
+  ]
+ },
+ {
+  "name": "Green Street Food & Spirits",
+  "address": "1801 S 10th St",
+  "city": "Manitowoc",
+  "zip": "54220",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Manitowoc restaurant with small-town supper club style, on Ron Faiola's supper club list, serving lake perch and rainbow trout dinners.",
+  "website": "https://greenstreetfood.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://greenstreetfood.com/",
+   "https://greenstreetfood.com/menu",
+   "https://wisconsinsupperclubs.com/northeast-region/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/green-street-food-spirits"
+  ]
+ },
+ {
+  "name": "Sebastian's Steak House",
+  "address": "770 S Main St",
+  "city": "Fond du Lac",
+  "zip": "54935",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Fond du Lac steakhouse on Ron Faiola's supper club list that makes its breads, soups, sauces and dressings in house.",
+  "website": "https://www.sebastianssteakhouse.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.sebastianssteakhouse.com/",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Theo's 24",
+  "address": "24 N Main St",
+  "city": "Fond du Lac",
+  "zip": "54935",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Family-owned downtown Fond du Lac steak, seafood and wine bar on Ron Faiola's supper club list.",
+  "website": "https://www.theos24.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.theos24.com/",
+   "https://www.theos24.com/contact/4371913",
+   "https://wisconsinsupperclubs.com/northeast-region/"
+  ]
+ },
+ {
+  "name": "Clear Water Harbor",
+  "address": "N2757 County Hwy QQ",
+  "city": "Waupaca",
+  "zip": "54981",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "rye bread",
+   "tartar sauce"
+  ],
+  "founded": null,
+  "note": "Bar and restaurant on the Chain O' Lakes with a Friday night fish fry of breaded fillets served with coleslaw, marble rye and a choice of potato.",
+  "website": "https://clearwaterharbor.com/",
+  "open": true,
+  "evidence_date": "2026-04",
+  "sources": [
+   "https://clearwaterharbor.com/",
+   "https://clearwaterharbor.com/restaurant-bar/nightly-features/"
+  ]
+ },
+ {
+  "name": "The Waters Supper Club & Lounge",
+  "address": "815 W Wolf River Ave",
+  "city": "New London",
+  "zip": "54961",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "bluegill",
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Supper club overlooking the Wolf River in the Waupaca County part of New London, with a boat dock and a Friday fish night featuring perch, bluegill and haddock.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-07",
+  "sources": [
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/the-waters-supper-club-and-lounge",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Millhome Supper Club",
+  "address": "16524 Lax Chapel Rd",
+  "city": "Kiel",
+  "zip": "53042",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye",
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "mashed potatoes",
+   "potato wedges",
+   "french fries",
+   "hash browns",
+   "baked potato"
+  ],
+  "founded": null,
+  "note": "Countryside supper club near Kiel with a Friday fish fry of breaded lake perch, beer-battered walleye or beer-battered haddock, Saturday prime rib and Sunday brunch.",
+  "website": "https://www.millhomesupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.millhomesupperclub.com/",
+   "https://www.millhomesupperclub.com/menus",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/millhome-supper-club",
+   "https://www.travelwisconsin.com/stories/4-wisconsin-supper-clubs-with-unique-appetizers"
+  ]
+ },
+ {
+  "name": "Langford's Pub at Lawsonia",
+  "address": "W2615 S Valley View Dr",
+  "city": "Green Lake",
+  "zip": "54941",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "haddock",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "potato pancakes",
+   "potato salad",
+   "clam chowder"
+  ],
+  "founded": null,
+  "note": "Pub at the Lawsonia golf resort near Green Lake with a Friday fish fry during the season of lake perch, haddock and walleye with homemade potato pancakes.",
+  "website": "https://www.lawsonia.com/langfords",
+  "open": true,
+  "evidence_date": "2025-11",
+  "sources": [
+   "https://www.lawsonia.com/langfords",
+   "https://www.lawsonia.com/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/langford-s-pub"
+  ]
+ },
+ {
+  "name": "Dale & Candi's Cedar Lodge",
+  "address": "N10872 State Hwy 151",
+  "city": "Malone",
+  "zip": "53049",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 1988,
+  "note": "Family-owned supper club on the east side of Lake Winnebago since 1988, known for its apple fritters and a Friday fish fry of beer-battered haddock, hand-breaded lake perch or sauteed walleye.",
+  "website": "https://www.thecedarlodge.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://www.thecedarlodge.com/",
+   "https://www.travelwisconsin.com/stories/7-hidden-gem-supper-clubs-in-wisconsin",
+   "https://www.travelwisconsin.com/food-drink/restaurants/dale-candis-cedar-lodge"
+  ]
+ },
+ {
+  "name": "Joe's Fox Hut",
+  "address": "41 N Main St",
+  "city": "Fond du Lac",
+  "zip": "54935",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Sunday",
+   "Monday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday"
+  ],
+  "sides": [
+   "french fries",
+   "coleslaw",
+   "dinner roll",
+   "rye bread"
+  ],
+  "founded": 1962,
+  "note": "Downtown Fond du Lac tavern, established in 1962, where diners order at a kitchen phone station and breaded perch or battered Icelandic cod dinners are on the menu every day it is open.",
+  "website": "https://joesfoxhut.com/",
+  "open": true,
+  "evidence_date": "2025-05",
+  "sources": [
+   "https://joesfoxhut.com/",
+   "https://joesfoxhut.com/wp-content/uploads/2025/05/JoesFoxHutMenu_May2025.pdf",
+   "https://www.travelwisconsin.com/food-drink/bars-taverns/joe-s-fox-hut"
+  ]
+ },
+ {
+  "name": "The Hotel Fremont",
+  "address": "218 Wolf River Dr",
+  "city": "Fremont",
+  "zip": "54940",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "haddock",
+   "pollock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "coleslaw",
+   "rye bread",
+   "potato pancakes",
+   "applesauce",
+   "clam chowder",
+   "salad bar"
+  ],
+  "founded": 1895,
+  "note": "Historic hotel restaurant on the Wolf River, established in 1895, whose Friday Fish Fix menu offers perch, haddock and all-you-can-eat Alaskan pollock with house-made potato pancakes as a Friday feature.",
+  "website": "https://www.hotelfremontwi.com/",
+  "open": true,
+  "evidence_date": "2026-03",
+  "sources": [
+   "https://www.hotelfremontwi.com/",
+   "https://www.hotelfremontwi.com/s/Friday-Fish-Fix",
+   "https://www.travelwisconsin.com/food-drink/restaurants/historic-hotel-fremont-steakhouse"
+  ]
+ },
+ {
+  "name": "Kassidy's Studio Lounge & Dining",
+  "address": "W7703 County Road MMM",
+  "city": "Shawano",
+  "zip": "54166",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "perch",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "baked potato",
+   "hash browns",
+   "french fries",
+   "rye bread",
+   "salad bar"
+  ],
+  "founded": null,
+  "note": "Supper club just west of Shawano whose Friday fish fry offers cod, perch and walleye with a soup and salad bar.",
+  "website": "https://kassidysstudio.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://kassidysstudio.com/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/kassidy-s-studio-lounge-dining"
+  ]
+ },
+ {
+  "name": "Maiden Lake Supper Club",
+  "address": "15649 Maiden Lake Rd",
+  "city": "Mountain",
+  "zip": "54149",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "walleye",
+   "perch",
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "relish tray",
+   "rye bread",
+   "coleslaw",
+   "baked potato",
+   "french fries",
+   "potato pancakes"
+  ],
+  "founded": null,
+  "note": "Lakeside Northwoods supper club on Maiden Lake near Lakewood, open Friday through Sunday, with a Friday fish menu of walleye, perch and Atlantic cod.",
+  "website": "https://www.maidenlakesupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.maidenlakesupperclub.com/",
+   "https://www.maidenlakesupperclub.com/menu/"
+  ]
+ },
+ {
+  "name": "The Palms Supper Club",
+  "address": "5912 Business Hwy 51",
+  "city": "Schofield",
+  "zip": "54476",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "walleye",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "french fries",
+   "potato salad",
+   "baked potato"
+  ],
+  "founded": 1936,
+  "note": "Schofield supper club that began as a 1936 tavern and became The Palms in 1945, serving a Friday fish fry of beer-battered cod, walleye and perch.",
+  "website": "https://thepalmswausau.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://thepalmswausau.com/",
+   "https://wausaupilotandreview.com/2026/09/04/friday-fish-fry-feature-the-palms-is-steeped-in-history-and-serious-about-seafood/",
+   "https://wausaupilotandreview.com/2025/10/26/business-spotlight-the-palms-supper-club-leans-into-timeless-charm-with-a-refreshed-menu/"
+  ]
+ },
+ {
+  "name": "Buck-A-Neer Supper Club",
+  "address": "122923 County Road C",
+  "city": "Stratford",
+  "zip": "54484",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad bar"
+  ],
+  "founded": null,
+  "note": "Supper club in the hamlet of Rozellville, in a building that began as a blacksmith shop, serving a Friday fish fry with a large salad bar.",
+  "website": "https://www.thebuckaneer.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.thebuckaneer.com/",
+   "https://www.travelwisconsin.com/restaurants/buck-a-neer-supper-club-195494",
+   "https://outandaboutwisconsin.com/buck-a-neer-supper-club-a-real-classic-in-the-community-of-rozellville/"
+  ]
+ },
+ {
+  "name": "Pinewood Supper Club",
+  "address": "147801 Half Moon Lake Dr",
+  "city": "Mosinee",
+  "zip": "54455",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1974,
+  "note": "Family-run supper club on the shore of Half Moon Lake, open Tuesday through Saturday evenings, with soups, sauces and dressings made in house.",
+  "website": "https://thepinewood.com/",
+  "open": true,
+  "evidence_date": "2026-01",
+  "sources": [
+   "https://thepinewood.com/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/pinewood-supper-club",
+   "https://www.visitwausau.com/blog/post/best-fish-fry-spots-in-the-wausau-area/"
+  ]
+ },
+ {
+  "name": "Swartzendruber's Supper Club",
+  "address": "1315 Forrest Ave",
+  "city": "Antigo",
+  "zip": "54409",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 2008,
+  "note": "Antigo supper club open Wednesday through Sunday evenings whose Friday fish fry features beer-battered haddock, with prime rib on Saturdays.",
+  "website": "https://swartzendrubers.com/",
+  "open": true,
+  "evidence_date": "2025-11",
+  "sources": [
+   "https://swartzendrubers.com/",
+   "https://swartzendrubers.com/menu/",
+   "https://swartzendrubers.com/wp-content/uploads/2025/11/Swartzenbruber-Supper-Club-Food-Menu-2025.pdf"
+  ]
+ },
+ {
+  "name": "Crab 'n Jack's",
+  "address": "N2580 Highway 55",
+  "city": "White Lake",
+  "zip": "54491",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch",
+   "walleye",
+   "salmon"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "rye bread"
+  ],
+  "founded": null,
+  "note": "Restaurant and bar overlooking the Wolf River that serves a Friday fish fry of fried or boiled haddock, perch and walleye.",
+  "website": "https://www.crabnjacks.com/",
+  "open": true,
+  "evidence_date": "2025-09",
+  "sources": [
+   "https://www.crabnjacks.com/",
+   "https://www.crabnjacks.com/menus-1"
+  ]
+ },
+ {
+  "name": "The Lumberyard Bar & Grill",
+  "address": "815 North St",
+  "city": "Bonduel",
+  "zip": "54107",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "pike",
+   "cod",
+   "walleye",
+   "bluegill"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "potato salad",
+   "rye bread",
+   "coleslaw"
+  ],
+  "founded": null,
+  "note": "Family bar and grill in Bonduel with a traditional Friday night fish fry of perch, pike, cod, walleye and bluegill.",
+  "website": "https://www.lumberyardbarandgrillbonduel.com/",
+  "open": true,
+  "evidence_date": "2025-11",
+  "sources": [
+   "https://www.lumberyardbarandgrillbonduel.com/"
+  ]
+ },
+ {
+  "name": "Richard's Restaurant & Bar",
+  "address": "5305 N 32nd Ave",
+  "city": "Wausau",
+  "zip": "54401",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad bar",
+   "rye bread"
+  ],
+  "founded": 1987,
+  "note": "Family-owned Wausau supper club open since 1987 whose Friday menu offers fried or baked haddock and walleye with a soup and salad bar.",
+  "website": "https://www.richards-restaurant.com/",
+  "open": true,
+  "evidence_date": "2026-01",
+  "sources": [
+   "https://www.richards-restaurant.com/",
+   "https://www.visitwausau.com/blog/post/best-fish-fry-spots-in-the-wausau-area/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Brown's Corner",
+  "address": "800 French St",
+  "city": "Peshtigo",
+  "zip": "54157",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "baked beans",
+   "rye bread",
+   "tartar sauce"
+  ],
+  "founded": 2011,
+  "note": "Peshtigo supper club, established in 2011 and owned by the Jahnke family since 2018, with a Friday fish fry of hand-breaded perch or walleye.",
+  "website": "https://www.brownscorner.net/",
+  "open": true,
+  "evidence_date": "2025-07",
+  "sources": [
+   "https://www.brownscorner.net/",
+   "https://www.brownscorner.net/menu",
+   "https://www.brownscorner.net/about-us",
+   "https://www.brownscorner.net/events"
+  ]
+ },
+ {
+  "name": "Red Granite Bar and Grill",
+  "address": "11420 S County Road K",
+  "city": "Merrill",
+  "zip": "54452",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "walleye",
+   "bluegill",
+   "halibut"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "baked potato",
+   "American fries",
+   "french fries",
+   "potato salad",
+   "rye bread",
+   "coleslaw",
+   "salad bar"
+  ],
+  "founded": 1933,
+  "note": "Backroad tavern near Merrill dating to 1933 that runs its Friday fish fry from 11 a.m. with haddock, walleye and bluegill plus a soup and salad bar.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-07",
+  "sources": [
+   "https://wausaupilotandreview.com/2026/07/31/red-granite-bar-and-grill-opens-wausau-pilots-new-weekly-fish-fry-feature/"
+  ]
+ },
+ {
+  "name": "E.J.'s Diner",
+  "address": "151508 County Road NN",
+  "city": "Wausau",
+  "zip": "54401",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "mashed potatoes"
+  ],
+  "founded": 2026,
+  "note": "Rib Mountain diner opened in March 2026 in a former IHOP building, serving a Friday fish fry of beer-battered or broiled cod and beer-battered walleye.",
+  "website": "https://ejsdiner.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://ejsdiner.com/",
+   "https://wausaupilotandreview.com/2026/08/07/e-j-s-diner-serves-up-week-two-of-wausau-pilots-fish-fry-feature/"
+  ]
+ },
+ {
+  "name": "LT Club",
+  "address": "318 S Third Ave",
+  "city": "Wausau",
+  "zip": null,
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "perch",
+   "bluegill"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "baked potato",
+   "onion rings",
+   "french fries",
+   "potato salad",
+   "German potato salad"
+  ],
+  "founded": null,
+  "note": "Bar in Wausau's Labor Temple building whose Friday fish fry, served 3 to 8 p.m., includes cod, perch and bluegill.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://wausaupilotandreview.com/2026/08/16/lt-club-takes-week-three-of-wausau-pilots-fish-fry-feature/"
+  ]
+ },
+ {
+  "name": "Hoehn's Huddle Sports Bar & Grill",
+  "address": "840 Grand Ave",
+  "city": "Schofield",
+  "zip": "54476",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "cod",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Wednesday",
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "rye bread"
+  ],
+  "founded": 2020,
+  "note": "Family-run Schofield sports bar, opened in 2020, that serves haddock, cod and lake perch on Wednesdays and Fridays.",
+  "website": "https://hoehnshuddlebarandgrill.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://hoehnshuddlebarandgrill.com/",
+   "https://wausaupilotandreview.com/2026/08/21/hoehns-huddle-takes-week-four-of-wausau-pilots-fish-fry-feature/"
+  ]
+ },
+ {
+  "name": "Cassel Bar & Grill",
+  "address": "130665 County Road N",
+  "city": "Marathon",
+  "zip": null,
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "french fries",
+   "German potato salad",
+   "baked potato"
+  ],
+  "founded": null,
+  "note": "Rural Marathon County bar and grill whose Friday fish fry offers haddock, perch and baked fish with coleslaw and bread.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://wausaupilotandreview.com/2026/08/28/cassel-bar-grills-friday-fry-is-worth-the-drive/"
+  ]
+ },
+ {
+  "name": "Oliva's at Gulliver's Landing",
+  "address": "15170 Gadwall Ln",
+  "city": "Rib Mountain",
+  "zip": null,
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "walleye",
+   "salmon"
+  ],
+  "fish_fry_days": [
+   "Wednesday",
+   "Friday"
+  ],
+  "sides": [
+   "mashed potatoes"
+  ],
+  "founded": 2025,
+  "note": "Seafood and Italian restaurant on Lake Wausau, opened in January 2025 in the former Gulliver's, with haddock specials on Wednesdays and Fridays.",
+  "website": "https://olivasgullivers.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://wausaupilotandreview.com/2026/09/11/at-olivas-the-friday-fry-comes-with-a-lake-view/"
+  ]
+ },
+ {
+  "name": "Sconni's Alehouse & Eatery",
+  "address": "1239 Schofield Ave",
+  "city": "Schofield",
+  "zip": "54476",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "mashed potatoes",
+   "potato salad",
+   "coleslaw",
+   "rye bread"
+  ],
+  "founded": null,
+  "note": "Schofield alehouse with 48 draft beers that serves a Friday fish fry of baked or beer-battered Pacific cod from 11 a.m. to 9 p.m.",
+  "website": "http://www.sconnis.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://wausaupilotandreview.com/2026/09/18/sconnis-alehouse-in-schofield-pairs-a-friday-fish-fry-with-a-northwoods-setting/"
+  ]
+ },
+ {
+  "name": "Knowlton House Distillery",
+  "address": "204575 County Road DB",
+  "city": "Mosinee",
+  "zip": "54455",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "tartar sauce",
+   "coleslaw",
+   "rye bread"
+  ],
+  "founded": null,
+  "note": "Distillery near Knowlton that makes vodka and gin from cheese whey and serves a Friday fish fry of fried or baked cod.",
+  "website": "https://knowltonhouse.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://knowltonhouse.com/",
+   "https://wausaupilotandreview.com/2026/09/25/knowlton-house-distillery-serves-a-friday-fish-fry-alongside-spirits-made-from-cheese-whey/"
+  ]
+ },
+ {
+  "name": "Carmelo's Italian Restaurant",
+  "address": "149841 County Road NN",
+  "city": "Wausau",
+  "zip": "54401",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Wednesday",
+   "Friday"
+  ],
+  "sides": [
+   "baked potato",
+   "hash browns",
+   "coleslaw"
+  ],
+  "founded": 1986,
+  "note": "Oliva family Italian restaurant in the Rib Mountain area, open since 1986, that serves pan-fried haddock as its Wednesday and Friday special.",
+  "website": "https://www.carmeloswausau.com/",
+  "open": true,
+  "evidence_date": "2026-07",
+  "sources": [
+   "https://www.carmeloswausau.com/",
+   "https://www.carmeloswausau.com/menu"
+  ]
+ },
+ {
+  "name": "Hog Creek Bar & Grill",
+  "address": "1303 State Highway 153",
+  "city": "Mosinee",
+  "zip": "54455",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Family bar and grill in Mosinee serving breakfast daily, with a classic Wisconsin fish fry on Fridays and prime rib on Saturdays.",
+  "website": "https://hogcreekbarandgrill.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://hogcreekbarandgrill.com/",
+   "https://hogcreekbarandgrill.com/restaurant/"
+  ]
+ },
+ {
+  "name": "Rene's Dining Room & Cocktail Bar",
+  "address": "W11581 County Road X",
+  "city": "Crivitz",
+  "zip": "54114",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Supper club beside Popp's Resort on the High Falls Flowage west of Crivitz, known for steaks with homemade soups and salads; closed Wednesdays.",
+  "website": "https://www.poppsresort.com/dining-bar/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.poppsresort.com/dining-bar/",
+   "https://www.poppsresort.com/wp-content/uploads/sites/31/Renes-menu-26-c.pdf",
+   "https://www.poppsresort.com/wp-content/uploads/sites/31/2026PoppsResortRates.pdf"
+  ]
+ },
+ {
+  "name": "Bass Lake Supper Club & 19th Hole Bar",
+  "address": "W10650 Bass Lake Rd",
+  "city": "Deerbrook",
+  "zip": "54424",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Supper club in the Bass Lake Golf Course clubhouse near Deerbrook, with a Friday fish fry menu and dining room seating on Fridays and Saturdays.",
+  "website": "https://www.golfbasslake.com/restaurant-bar",
+  "open": true,
+  "evidence_date": "2026-06",
+  "sources": [
+   "https://www.golfbasslake.com/restaurant-bar",
+   "https://golfbasslake.com/menu/",
+   "https://www.langladecounty.org/dine/?category0=Supper+Club"
+  ]
+ },
+ {
+  "name": "Pickerel Point Resort Bar & Grill",
+  "address": "580 Flint Ridge Ln",
+  "city": "Pickerel",
+  "zip": "54465",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Resort bar and grill in Pickerel, closed Mondays, that lists a Friday fish fry alongside burgers, wings and pizza.",
+  "website": "https://pickerel-point.com/bar-grill/",
+  "open": true,
+  "evidence_date": "2025-01",
+  "sources": [
+   "https://pickerel-point.com/bar-grill/"
+  ]
+ },
+ {
+  "name": "Farm Inn' On Main",
+  "address": "123 N Main St",
+  "city": "Shawano",
+  "zip": "54166",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "potato salad",
+   "french fries",
+   "coleslaw"
+  ],
+  "founded": null,
+  "note": "Farm-themed restaurant and bakery in downtown Shawano whose Friday fish fry, served from 11 a.m., features pan-fried pike-perch.",
+  "website": "http://www.farminnonmain.com/",
+  "open": true,
+  "evidence_date": "2026-04",
+  "sources": [
+   "http://www.farminnonmain.com/",
+   "http://www.farminnonmain.com/menu",
+   "http://www.farminnonmain.com/location-shawano"
+  ]
+ },
+ {
+  "name": "River Island Golf Club",
+  "address": "100 River Island Dr",
+  "city": "Oconto Falls",
+  "zip": "54154",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad bar"
+  ],
+  "founded": null,
+  "note": "Public golf course clubhouse in Oconto Falls with a full bar and a Friday fish menu served with a salad bar and homemade soup.",
+  "website": "https://www.riverislandgolf.com/",
+  "open": true,
+  "evidence_date": "2025-09",
+  "sources": [
+   "https://www.riverislandgolf.com/clubhouse/",
+   "https://www.riverislandgolf.com/events/"
+  ]
+ },
+ {
+  "name": "Norwood Pines Supper Club",
+  "address": "10171 Hwy 70",
+  "city": "Minocqua",
+  "zip": "54548",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "corn fritters",
+   "coleslaw",
+   "french fries",
+   "bread"
+  ],
+  "founded": null,
+  "note": "Pine-surrounded supper club overlooking Patricia Lake west of Minocqua with a Friday North Atlantic cod fry served with corn fritters.",
+  "website": "https://www.norwoodpines.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.norwoodpines.com/",
+   "https://www.norwoodpines.com/about-us/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Whitetail Inn",
+  "address": "9038 Hwy 70 W",
+  "city": "St. Germain",
+  "zip": "54558",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "catfish",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "hush puppies",
+   "salad bar"
+  ],
+  "founded": 1993,
+  "note": "Log-built restaurant on Highway 70 west of St. Germain that opened in May 1993 and serves an all-day Friday fish fry of beer-battered or broiled haddock, catfish or perch.",
+  "website": "https://www.whitetailinnwi.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.whitetailinnwi.com/menu",
+   "https://whitetailinnwi.com/about",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/whitetail-inn",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Knotty Barrel Supper Club & Lodge",
+  "address": "238 Lakeshore Dr",
+  "city": "Minocqua",
+  "zip": "54548",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "tartar sauce"
+  ],
+  "founded": null,
+  "note": "Supper club on Lake Minocqua in a 1920s former Masonic Temple offering a Friday beer-battered or broiled fish fry and Saturday prime rib.",
+  "website": "https://knottybarrelwis.com/",
+  "open": true,
+  "evidence_date": "2026-06",
+  "sources": [
+   "https://knottybarrelwis.com/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Clearview Supper Club",
+  "address": "8599 Big St. Germain Dr",
+  "city": "St. Germain",
+  "zip": "54558",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch",
+   "walleye",
+   "bluegill",
+   "catfish"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "potato pancakes",
+   "rye bread",
+   "coleslaw"
+  ],
+  "founded": 1918,
+  "note": "Family-run supper club overlooking Big St. Germain Lake, established in 1918, with a Friday haddock fry (all-you-can-eat option) plus perch, baby walleye and bluegill.",
+  "website": "http://clearviewsupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "http://clearviewsupperclub.com/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/clearview-supper-club",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Aberdeen Restaurant & Bar",
+  "address": "5325 Aberdeen Lodge Circle",
+  "city": "Manitowish Waters",
+  "zip": "54545",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "waffle fries",
+   "coleslaw",
+   "tartar sauce"
+  ],
+  "founded": null,
+  "note": "Log-lodge restaurant on the Manitowish Waters chain of lakes with a Friday-only beer-battered cod fish fry and a walleye finger fish fry on the regular menu.",
+  "website": "https://aberdeendining.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://aberdeendining.com/",
+   "https://aberdeendining.com/menu/",
+   "https://aberdeendining.com/specials/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Ash's Restaurant",
+  "address": "1853 Old Hwy 69",
+  "city": "Florence",
+  "zip": "54121",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Scratch-kitchen dinner restaurant in Spread Eagle run by Scott and Sarah Ash, known for monthly wine dinners and listed among Wisconsin supper clubs.",
+  "website": "https://ashs-restaurant.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://ashs-restaurant.com/",
+   "https://ashs-restaurant.com/PDF/menu.pdf",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "The Bear Trap Inn",
+  "address": "4703 County Rd B",
+  "city": "Land O' Lakes",
+  "zip": "54540",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "potato pancakes",
+   "coleslaw",
+   "beans",
+   "tartar sauce",
+   "french fries",
+   "potato chips",
+   "rye bread"
+  ],
+  "founded": 1937,
+  "note": "Supper club on County Road B whose history dates to 1937, serving a Friday walleye fish fry and Saturday prime rib.",
+  "website": "https://www.beartrapinn.net/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.beartrapinn.net/",
+   "https://www.beartrapinn.net/about-us",
+   "https://www.beartrapinn.net/pages-sitemap.xml",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Chanticleer Inn",
+  "address": "1458 E Dollar Lake Rd",
+  "city": "Eagle River",
+  "zip": "54521",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Lakeside resort and dinner restaurant on the Eagle River Chain of Lakes listed among Wisconsin supper clubs.",
+  "website": "https://www.chanticleerinn.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.chanticleerinn.com/en/menu",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Eagle Waters Resort (The Supper Club at Eagle Waters)",
+  "address": "3958 Eagle Waters Rd",
+  "city": "Eagle River",
+  "zip": "54521",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Resort supper club on the Eagle River Chain of Lakes, open Thursday through Saturday evenings in fall.",
+  "website": "https://www.eaglewaters.com/restaurant/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.eaglewaters.com/restaurant/",
+   "https://www.eaglewaters.com/about/our-story/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "El Capitan Supper Club",
+  "address": "695 US Hwy 2",
+  "city": "Florence",
+  "zip": "54121",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "baked potato",
+   "bread",
+   "salad"
+  ],
+  "founded": null,
+  "note": "Italian-leaning supper club in Spread Eagle near the Michigan border, in the same family since 1959, with Friday fried or baked cod and lake perch.",
+  "website": "https://elcapitansupperclub.com/",
+  "open": true,
+  "evidence_date": "2025-08",
+  "sources": [
+   "https://elcapitansupperclub.com/",
+   "http://elcapitansupperclub.com/specials.htm",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Eddie B's White Spruce Restaurant & Tavern",
+  "address": "419 N Railroad St",
+  "city": "Eagle River",
+  "zip": "54521",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "tartar sauce",
+   "steak fries",
+   "potato pancakes"
+  ],
+  "founded": 1943,
+  "note": "Riverside restaurant and tavern in an 1880s log building on the Eagle River, established in 1943, with a Friday baked or beer-battered cod fry and Saturday smoked prime rib.",
+  "website": "https://www.eddiebwhitespruce.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.eddiebwhitespruce.com/",
+   "https://www.eddiebwhitespruce.com/dinner-entrees/2058338",
+   "https://www.eddiebwhitespruce.com/history/1400846",
+   "https://wisconsinsupperclubs.com/north-central-region/",
+   "https://www.eddiebwhitespruce.com/contact/1400817"
+  ]
+ },
+ {
+  "name": "The Guide's Inn",
+  "address": "5427 Park St",
+  "city": "Boulder Junction",
+  "zip": "54512",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1984,
+  "note": "Boulder Junction dinner house open since 1984, known for pan-fried walleye, veal and hand-cut steaks.",
+  "website": "https://theguidesinn.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://theguidesinn.com/",
+   "https://theguidesinn.com/menu/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Marty's Place North",
+  "address": "2721 US Hwy 51 N",
+  "city": "Arbor Vitae",
+  "zip": "54568",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "baked beans",
+   "tartar sauce",
+   "french fries",
+   "sweet potato fries",
+   "rice"
+  ],
+  "founded": null,
+  "note": "Supper club on Highway 51 between Woodruff and Arbor Vitae, under new owners, with a Friday-night haddock and lake perch fry and Saturday prime rib.",
+  "website": "https://martysplacenorth.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://martysplacenorth.com/",
+   "https://martysplacenorth.com/mp-food-menu/",
+   "https://wisconsinsupperclubs.com/north-central-region/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/marty-s-place-north"
+  ]
+ },
+ {
+  "name": "Northfork Fin & Filet",
+  "address": "11084 State Hwy 70 E",
+  "city": "Arbor Vitae",
+  "zip": "54568",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "baked beans",
+   "coleslaw"
+  ],
+  "founded": null,
+  "note": "American grill and supper club on Highway 70 east of Woodruff with a Friday special of hand-breaded, broiled or Cajun-baked haddock and Lake Superior perch, plus Saturday prime rib.",
+  "website": "https://www.northforkff.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.northforkff.com/",
+   "https://www.northforkff.com/menu",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Three Coins at Holiday Acres",
+  "address": "4060 S Shore Dr",
+  "city": "Rhinelander",
+  "zip": "54501",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "potato pancakes",
+   "applesauce",
+   "french fries",
+   "coleslaw",
+   "tartar sauce"
+  ],
+  "founded": null,
+  "note": "Restaurant at the family-owned Holiday Acres Resort on Lake Thompson with a Friday broiled or deep-fried cod fry and Saturday prime rib.",
+  "website": "https://www.holidayacres.com/three-coins-restaurant",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.holidayacres.com/three-coins-restaurant",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Twilight Supper Club",
+  "address": "5810 Hwy 45",
+  "city": "Land O' Lakes",
+  "zip": "54540",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "coleslaw",
+   "rye bread",
+   "salad bar"
+  ],
+  "founded": null,
+  "note": "Year-round Highway 45 supper club run by owners Jeff and Cori Zavada with a Friday beer-battered Atlantic cod fry, nightly fried perch and Saturday prime rib.",
+  "website": "https://twilightsupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-05",
+  "sources": [
+   "https://twilightsupperclub.com/",
+   "https://twilightsupperclub.com/weekly-features/",
+   "https://twilightsupperclub.com/about-us/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Williams's Pine Gables Supper Club",
+  "address": "1002 W Pine St",
+  "city": "Eagle River",
+  "zip": "54521",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Seasonal Eagle River supper club serving a Friday deep-fried haddock fry and Saturday prime rib; its site says it closes for the season after Saturday, Oct. 3.",
+  "website": "https://pinegablessupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-05",
+  "sources": [
+   "https://pinegablessupperclub.com/",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Fireside Supper Club",
+  "address": "6012 County Rd K",
+  "city": "Rhinelander",
+  "zip": "54501",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Supper club overlooking Townline Lake west of Rhinelander, run by Eric and Jennifer Blomdahl, with a Friday night fish fry and Saturday prime rib.",
+  "website": "https://firesidesupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://firesidesupperclub.com/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/fireside-supper-club",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Smokey's Supper Club",
+  "address": "6410 County Hwy W",
+  "city": "Manitowish Waters",
+  "zip": "54545",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Fine-dining supper club among the pines of Manitowish Waters known for prime steaks and chops and wild-caught Canadian walleye.",
+  "website": "https://www.smokeysdining.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.smokeysdining.com/",
+   "https://www.smokeysdining.com/about.html",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/smokeys-supper-club"
+  ]
+ },
+ {
+  "name": "The Black Forest Pub & Grille",
+  "address": "1765 Superior St",
+  "city": "Three Lakes",
+  "zip": "54562",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "tartar sauce",
+   "coleslaw",
+   "rye bread",
+   "potato pancakes",
+   "mashed potatoes",
+   "french fries"
+  ],
+  "founded": 1934,
+  "note": "German-American pub in downtown Three Lakes serving the community since 1934, with Friday-only baked or North Sea-style cod dinners.",
+  "website": "https://blackforest3lakes.com/",
+  "open": true,
+  "evidence_date": "2025-08",
+  "sources": [
+   "https://blackforest3lakes.com/",
+   "https://blackforest3lakes.com/menu/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/the-black-forest-pub-grille"
+  ]
+ },
+ {
+  "name": "Bent's Camp Resort",
+  "address": "6882 S Helen Creek Rd",
+  "city": "Land O' Lakes",
+  "zip": "54540",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "haddock",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "potato salad",
+   "coleslaw",
+   "baked beans",
+   "tartar sauce",
+   "salad bar"
+  ],
+  "founded": 1896,
+  "note": "Historic Cisco Chain resort established in 1896 whose 1906 lodge restaurant serves an all-day Friday fish fry of beer-battered Atlantic haddock, with walleye also on the fish fry menu.",
+  "website": "https://www.bents-camp.com/",
+  "open": true,
+  "evidence_date": "2026-06",
+  "sources": [
+   "https://www.bents-camp.com/",
+   "https://www.bents-camp.com/bar-restaurant/",
+   "https://www.bents-camp.com/wp-content/uploads/sites/2/2026/06/Bents-Camp-Fish-Fry-Menu-Summer-2026.pdf",
+   "https://www.travelwisconsin.com/stay/cabins/bent-s-camp-resort"
+  ]
+ },
+ {
+  "name": "Gateway Lodge Restaurant",
+  "address": "4103 County Rd B",
+  "city": "Land O' Lakes",
+  "zip": "54540",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Restaurant in the historic Gateway Lodge serving supper club-style favorites Tuesday through Saturday, including a Friday fish fry and Saturday prime rib.",
+  "website": "https://www.gateway-lodge.com/gateway-lodge-restaurant",
+  "open": true,
+  "evidence_date": "2026-02",
+  "sources": [
+   "https://www.gateway-lodge.com/",
+   "https://www.gateway-lodge.com/gateway-lodge-restaurant",
+   "https://www.gateway-lodge.com/s/New-Menu-0126pdf-4l72.pdf",
+   "https://www.travelwisconsin.com/stay/vacation-rentals/gateway-lodge"
+  ]
+ },
+ {
+  "name": "Woods Edge Restaurant & Bar at Moose Jaw Resort",
+  "address": "W770 Wind Song Ln",
+  "city": "Park Falls",
+  "zip": "54552",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "baked beans",
+   "potato salad",
+   "french fries",
+   "tater tots",
+   "dinner roll"
+  ],
+  "founded": null,
+  "note": "Lakeside restaurant and bar at Moose Jaw Resort on the Pike Lake chain east of Park Falls with a Friday broiled or beer-battered cod fry, including an all-you-can-eat option.",
+  "website": "https://moosejawresort.com/dining/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://moosejawresort.com/dining/",
+   "https://moosejawresort.com/about/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/woods-edge-restaurant-bar"
+  ]
+ },
+ {
+  "name": "T. Murtaugh's Pub & Eatery",
+  "address": "500 Oneida St",
+  "city": "Minocqua",
+  "zip": "54548",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Irish pub on the corner in downtown Minocqua with an all-you-can-eat Friday fish fry, beer-battered or Cajun.",
+  "website": "http://murtaughspub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "http://murtaughspub.com/",
+   "http://murtaughspub.com/menu/4052387",
+   "https://www.travelwisconsin.com/food-drink/restaurants/t-murtaugh-s-pub"
+  ]
+ },
+ {
+  "name": "Chef Rene's at the Inn",
+  "address": "5260 Hwy 70 W",
+  "city": "Eagle River",
+  "zip": "54521",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "Chef-driven supper club on Highway 70 west of Eagle River offering seafood, hand-cut steaks and daily features.",
+  "website": "https://www.chefreneseagleriver.com/",
+  "open": true,
+  "evidence_date": "2026-04",
+  "sources": [
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/chef-rene-s-at-the-inn",
+   "https://wisconsinsupperclubs.com/north-central-region/"
+  ]
+ },
+ {
+  "name": "Lehman's Supper Club & Lounge",
+  "address": "2911 S Main St",
+  "city": "Rice Lake",
+  "zip": "54868",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": 1934,
+  "note": "Family-run supper club south of Rice Lake on Hwy SS, open since 1934 and sold in November 2025 to new owners who pledged to keep it running as a supper club.",
+  "website": "https://lehmanssupperclub.net/",
+  "open": true,
+  "evidence_date": "2025-11",
+  "sources": [
+   "https://lehmanssupperclub.net/",
+   "https://www.apg-wi.com/rice_lake_chronotype/news/lehmans-sold-new-owners-vow-to-honor-supper-clubs-heritage/article_b85e6ee5-01bb-45a6-8c45-7019aea4f880.html",
+   "https://www.news-shield.com/news/free_news/article_0480f811-b740-46b4-afcf-5290a8f6cc33.html",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ]
+ },
+ {
+  "name": "The Ranch Supper Club",
+  "address": "10590 N Ranch Rd",
+  "city": "Hayward",
+  "zip": "54843",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "clam chowder",
+   "coleslaw",
+   "french fries",
+   "bread"
+  ],
+  "founded": 1931,
+  "note": "Hayward supper club that opened in 1931 as The Aladdin and took the Ranch name in 1960, serving a Friday cod or walleye fry with clam chowder.",
+  "website": "https://ranchsupperclub.com/",
+  "open": true,
+  "evidence_date": "2025-12",
+  "sources": [
+   "https://ranchsupperclub.com/",
+   "https://ranchsupperclub.com/menu/",
+   "https://ranchsupperclub.com/history/",
+   "https://www.travelwisconsin.com/supper-clubs/the-ranch-supper-club-194885",
+   "https://www.travelwisconsin.com/stories/discovering-haywards-winter-supper-club-scene"
+  ]
+ },
+ {
+  "name": "Tally Ho Supper Club",
+  "address": "10432 Hwy 77",
+  "city": "Hayward",
+  "zip": "54843",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "coleslaw",
+   "tartar sauce"
+  ],
+  "founded": null,
+  "note": "Chalet-style supper club east of Hayward on Hwy 77 whose Friday fish dinner comes broiled, deep fried, or as an Atlantic cod boil with potatoes.",
+  "website": "https://www.tallyhosupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.tallyhosupperclub.com/",
+   "https://www.tallyhosupperclub.com/contact/",
+   "https://www.tallyhosupperclub.com/menu/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/tally-ho-supper-club",
+   "https://www.travelwisconsin.com/stories/discovering-haywards-winter-supper-club-scene"
+  ]
+ },
+ {
+  "name": "Buskey Bay Resort",
+  "address": "65445 County Hwy H",
+  "city": "Iron River",
+  "zip": "54847",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "pollock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "soup",
+   "salad bar"
+  ],
+  "founded": null,
+  "note": "Lakeside resort dining room on Buskey Bay near Iron River with an all-you-can-eat Friday pollock fry and Saturday prime rib.",
+  "website": "https://buskeybayresort.com/dining/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://buskeybayresort.com/dining/",
+   "https://buskeybayresort.com/contact/",
+   "https://buskeybayresort.com/",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ]
+ },
+ {
+  "name": "Indianhead Supper Club",
+  "address": "107 Indianhead Shores Dr",
+  "city": "Balsam Lake",
+  "zip": "54810",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "sides": [
+   "coleslaw",
+   "rice pilaf"
+  ],
+  "founded": 1939,
+  "note": "Knotty-pine supper club on Balsam Lake dating to 1939 whose regular dinner menu includes a tempura-battered or broiled cod fish fry.",
+  "website": "https://www.indianheadsupperclub.net/",
+  "open": true,
+  "evidence_date": "2025-08",
+  "sources": [
+   "https://www.indianheadsupperclub.net/",
+   "https://www.indianheadsupperclub.net/menu.html",
+   "https://www.travelwisconsin.com/food-drink/restaurants/indianhead-supper-club"
+  ]
+ },
+ {
+  "name": "The Dalles House",
+  "address": "720 S Vincent St",
+  "city": "St. Croix Falls",
+  "zip": "54024",
+  "kinds": [
+   "supper club"
+  ],
+  "fish": [],
+  "fish_fry_days": null,
+  "sides": [],
+  "founded": null,
+  "note": "St. Croix Falls supper club and lounge whose restaurant history on the site goes back to 1939, with walleye, steaks and duck a la orange on its 2026 dinner menu.",
+  "website": "https://www.dalleshouse.com/",
+  "open": true,
+  "evidence_date": "2026-07",
+  "sources": [
+   "https://www.dalleshouse.com/",
+   "https://www.dalleshouse.com/supper-club-dinner-menu/",
+   "https://www.dalleshouse.com/wp-content/uploads/2024/11/dhDinnerjuly22026.pdf",
+   "https://www.dalleshouse.com/the-dalles-house-supper-club-historic-fine-dining-in-st-croix-valley/"
+  ]
+ },
+ {
+  "name": "The Steakhouse & Lodge",
+  "address": "15860 T Bone Ln",
+  "city": "Hayward",
+  "zip": "54843",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "soup"
+  ],
+  "founded": null,
+  "note": "Hayward steakhouse and motel with a Friday baked or fried haddock fry and Saturday prime rib.",
+  "website": "https://www.steakhouseandlodge.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.steakhouseandlodge.com/",
+   "https://www.steakhouseandlodge.com/dining-menu",
+   "https://www.travelwisconsin.com/stories/discovering-haywards-winter-supper-club-scene",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ]
+ },
+ {
+  "name": "Pine Ridge",
+  "address": "16618 Sissabagama Rd",
+  "city": "Stone Lake",
+  "zip": "54876",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday",
+   "Sunday"
+  ],
+  "sides": [
+   "coleslaw",
+   "fry bread"
+  ],
+  "founded": null,
+  "note": "Log restaurant on Sissabagama Lake serving a family-style fish fry with broasted chicken and fry bread on Fridays and Sundays.",
+  "website": "https://www.pineridgewi.com/",
+  "open": true,
+  "evidence_date": "2025-10",
+  "sources": [
+   "https://www.pineridgewi.com/",
+   "https://pineridgewi.com/famous-fish-fry/",
+   "https://pineridgewi.com/our-menu/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/pine-ridge",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ]
+ },
+ {
+  "name": "Kincaid's Country Inn",
+  "address": "2499 County Rd SS",
+  "city": "Rice Lake",
+  "zip": "54868",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday"
+  ],
+  "sides": [
+   "salad bar",
+   "soup",
+   "french fries",
+   "baked potato",
+   "hash browns",
+   "au gratin potatoes"
+  ],
+  "founded": null,
+  "note": "Rice Lake supper club with a soup and salad bar whose dinner menu carries Icelandic cod and Canadian walleye fish fry plates.",
+  "website": "https://kincaidscountryinn.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://kincaidscountryinn.com/",
+   "https://kincaidscountryinn.com/supper-club-restaurants-in-rice-lake-wisconsin-prime-rib-fish-fry-steak-seafood/places-to-eat-in-rice-lake-wi-country-inn-menu/",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ]
+ },
+ {
+  "name": "Rolling Oaks Roadhouse",
+  "address": "450 W Division Ave",
+  "city": "Barron",
+  "zip": "54812",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad bar",
+   "soup",
+   "baked potato",
+   "french fries",
+   "hash browns",
+   "au gratin potatoes"
+  ],
+  "founded": null,
+  "note": "Barron restaurant beside Rolling Oaks Golf Course, listed by Ron Faiola as Rolling Oaks Supper Club, with an all-you-can-eat Friday cod and broasted chicken buffet.",
+  "website": "https://www.rollingoaksroadhouse.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.rollingoaksroadhouse.com/",
+   "https://www.rollingoaksroadhouse.com/menu",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ]
+ },
+ {
+  "name": "Eddie's",
+  "address": "5221 E 4th St",
+  "city": "Superior",
+  "zip": "54880",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "pollock"
+  ],
+  "fish_fry_days": [
+   "Thursday",
+   "Friday"
+  ],
+  "sides": [
+   "tartar sauce",
+   "french fries",
+   "baked potato"
+  ],
+  "founded": 1931,
+  "note": "East-end Superior supper club in an 1898 former saloon building, a restaurant since 1931 and known for ribs, that runs an all-you-can-eat panko-breaded pollock fry on Thursdays and Fridays.",
+  "website": "https://eddiesribs.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://eddiesribs.com/",
+   "https://eddiesribs.com/menu/",
+   "https://www.superiortelegram.com/business/eddies-drafted-for-nfl-supper-club-team",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ]
+ },
+ {
+  "name": "Powell's on Round Lake",
+  "address": "9971 N Grand Pines Ln",
+  "city": "Hayward",
+  "zip": "54843",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "baked potato",
+   "coleslaw",
+   "tartar sauce"
+  ],
+  "founded": null,
+  "note": "Round Lake bar and grill with boat docking that serves an all-day Friday fry of beer-battered or baked Canadian walleye.",
+  "website": "https://powellsonroundlake.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://powellsonroundlake.com/",
+   "https://powellsonroundlake.com/menu/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/powell-s-on-round-lake"
+  ]
+ },
+ {
+  "name": "Sawmill Saloon",
+  "address": "13505 N US Hwy 63",
+  "city": "Hayward",
+  "zip": "54843",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod",
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw"
+  ],
+  "founded": null,
+  "note": "Seeley bar and grill in a former lumber company store between Hayward and Cable with a Friday fish fry of broasted or baked cod and Canadian walleye.",
+  "website": "https://www.seeleywis.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.seeleywis.com/",
+   "https://www.seeleywis.com/sawmill-menu",
+   "https://www.travelwisconsin.com/food-drink/restaurants/sawmill-saloon",
+   "https://www.travelwisconsin.com/stories/under-the-radar-eats-in-cable-and-hayward"
+  ]
+ },
+ {
+  "name": "Angler's Bar & Grill",
+  "address": "10547 Main St",
+  "city": "Hayward",
+  "zip": "54843",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "baked potato",
+   "french fries",
+   "coleslaw",
+   "dinner roll"
+  ],
+  "founded": null,
+  "note": "Longtime Main Street bar and grill in downtown Hayward with a beer garden, pizzas and Mexican dishes and a fried or baked Friday fish fry platter served dine-in only.",
+  "website": "https://anglersbar.com/",
+  "open": true,
+  "evidence_date": "2026-07",
+  "sources": [
+   "https://anglersbar.com/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/angler-s-bar-grill"
+  ]
+ },
+ {
+  "name": "Patsy's Bar & Grill",
+  "address": "328 W Bayfield St",
+  "city": "Washburn",
+  "zip": "54891",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "whitefish"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "dinner roll",
+   "coleslaw",
+   "tartar sauce"
+  ],
+  "founded": null,
+  "note": "Washburn bar and grill whose all-day Friday fish fry features deep-fried Lake Superior whitefish from Bodin Fisheries.",
+  "website": "https://www.patsysbarandgrill.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.patsysbarandgrill.com/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/patsy-s-bar-and-grill"
+  ]
+ },
+ {
+  "name": "Loggers Bar & Grill",
+  "address": "2071 Glacier Dr",
+  "city": "St. Croix Falls",
+  "zip": "54024",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 2002,
+  "note": "St. Croix Falls sports bar and grill, open since 2002, that serves a baked or deep-fried fish fry alongside BBQ ribs on Friday evenings.",
+  "website": "https://loggersgrill.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://loggersgrill.com/",
+   "https://www.loggersgrill.com/daily-specials",
+   "https://www.travelwisconsin.com/food-drink/restaurants/loggers-sports-bar-and-grill"
+  ]
+ },
+ {
+  "name": "Treeland's Northwoods Dining",
+  "address": "9630 Treeland Rd",
+  "city": "Hayward",
+  "zip": "54843",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Family-run resort restaurant overlooking Musky Bay on the Chippewa Flowage that serves a Friday night fish fry during its summer season and keeps Thursday-Sunday winter hours from late December.",
+  "website": "https://www.treelandresorts.com/northwoods-dining/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.treelandresorts.com/northwoods-dining/",
+   "https://www.treelandresorts.com/hayward-resort-information/contact-treelands/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/treelands-northwoods-dining-restaurant"
+  ]
+ },
+ {
+  "name": "Lakewoods Resort",
+  "address": "21540 County Hwy M",
+  "city": "Cable",
+  "zip": "54821",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "walleye"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Resort near Cable whose Lakeside Restaurant serves a long-running Friday wild-caught walleye fish fry and Saturday prime rib.",
+  "website": "https://www.lakewoodsresort.com/",
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.lakewoodsresort.com/",
+   "https://www.lakewoodsresort.com/dining/",
+   "https://members.haywardareachamber.com/list/category/supper-club-188"
+  ]
+ },
+ {
+  "name": "Louie's Landing Bar & Grill",
+  "address": "10995 N Louies Landing Rd",
+  "city": "Hayward",
+  "zip": "54843",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "french fries",
+   "coleslaw",
+   "corn muffins"
+  ],
+  "founded": null,
+  "note": "Year-round bar and grill on Moose Lake in the Chequamegon National Forest whose Friday fish fry features lake perch with homemade corn muffins.",
+  "website": "https://louieslandingbargrill.com/",
+  "open": true,
+  "evidence_date": "2026-07",
+  "sources": [
+   "https://louieslandingbargrill.com/",
+   "https://louieslandingbargrill.com/menu",
+   "https://www.travelwisconsin.com/food-drink/bars-taverns/louies-landing-bar-and-grill"
+  ]
+ },
+ {
+  "name": "Pier Plaza Restaurant",
+  "address": "15 Front St",
+  "city": "Bayfield",
+  "zip": "54814",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "whitefish"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "salad",
+   "coleslaw",
+   "baked potato",
+   "mashed potatoes",
+   "french fries"
+  ],
+  "founded": null,
+  "note": "Family-owned harbor restaurant in downtown Bayfield whose Friday fish fry is deep-fried fresh Bayfield whitefish.",
+  "website": "https://www.bayfieldpierplaza.com/pier-restaurant",
+  "open": true,
+  "evidence_date": "2026-06",
+  "sources": [
+   "https://www.bayfieldpierplaza.com/pier-restaurant",
+   "https://www.bayfieldpierplaza.com/hours-directions",
+   "https://08100b6d-650e-4fc4-9a6c-eccc3dec913e.usrfiles.com/ugd/30cdbc_487f784f396745e8ad2fda9440c95ec2.pdf",
+   "https://www.travelwisconsin.com/food-drink/restaurants/pier-plaza-restaurant-lounge"
+  ]
+ },
+ {
+  "name": "Lost Land Lake Lodge",
+  "address": "9436 W Brandt Rd",
+  "city": "Hayward",
+  "zip": "54843",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "tartar sauce",
+   "fried potatoes",
+   "coleslaw"
+  ],
+  "founded": 1923,
+  "note": "Lodge on Lost Land Lake, open since 1923, serving an all-you-can-eat family-style Friday fish fry of beer-battered fillets and Saturday prime rib.",
+  "website": "https://lostlandlakelodge.com/",
+  "open": true,
+  "evidence_date": "2026-07",
+  "sources": [
+   "https://lostlandlakelodge.com/",
+   "https://lostlandlakelodge.com/food-menu/",
+   "https://lostlandlakelodge.com/wp-content/uploads/2024/06/friday-scaled.jpg",
+   "https://www.travelwisconsin.com/stay/resorts/lost-land-lake-lodge"
+  ]
+ },
+ {
+  "name": "Social House of Rice Lake",
+  "address": "326 S Main St",
+  "city": "Rice Lake",
+  "zip": "54868",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "whitefish",
+   "perch",
+   "bluegill"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Downtown Rice Lake sports bar and burger spot that serves Friday seafood platters including Lake Superior whitefish, jumbo perch and bluegill.",
+  "website": "https://sohoricelake.com/",
+  "open": true,
+  "evidence_date": "2026-08",
+  "sources": [
+   "https://sohoricelake.com/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/social-house-of-rice-lake"
+  ]
+ },
+ {
+  "name": "Lakeview Bar & Grill",
+  "address": "5 W 5th Ave",
+  "city": "Shell Lake",
+  "zip": "54871",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [
+   "cod"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [
+   "coleslaw",
+   "dinner roll",
+   "french fries",
+   "baked potato"
+  ],
+  "founded": null,
+  "note": "Shell Lake bar and grill with a salad bar and a Friday fry of two hand-battered cod loins, fried or oven baked.",
+  "website": "https://lakeviewbarandgrill.com/",
+  "open": true,
+  "evidence_date": "2026-05",
+  "sources": [
+   "https://lakeviewbarandgrill.com/",
+   "https://lakeviewbarandgrill.com/our-menu/",
+   "https://www.travelwisconsin.com/food-drink/restaurants/lakeview-bar-grill"
+  ]
+ },
+ {
+  "name": "Good Thyme Restaurant & Catering",
+  "address": "77180 State Hwy 13",
+  "city": "Washburn",
+  "zip": "54891",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 1999,
+  "note": "Dinner restaurant in a big yellow house on Hwy 13 south of Bayfield, established in 1999, known for its Friday night fish fry and Lake Superior whitefish.",
+  "website": "https://www.goodthymewi.com/",
+  "open": true,
+  "evidence_date": "2025-03",
+  "sources": [
+   "https://www.travelwisconsin.com/food-drink/restaurants/good-thyme-restaurant-catering",
+   "https://www.travelwisconsin.com/stories/a-flavor-filled-day-out-in-bayfield",
+   "https://www.goodthymewi.com/"
+  ]
+ },
+ {
+  "name": "Caddy Shack Bar & Grill",
+  "address": "1011 25 1/4 St",
+  "city": "Chetek",
+  "zip": "54728",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Chetek bar and grill with homemade pizza, a patio with summer live music, Wednesday wings and a Friday fish fry.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-04",
+  "sources": [
+   "https://www.travelwisconsin.com/food-drink/restaurants/caddy-shack-bar-grill-chetek"
+  ]
+ },
+ {
+  "name": "Schwarz's Supper Club",
+  "address": "W1688 Sheboygan Rd",
+  "city": "New Holstein",
+  "zip": "53061",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": 1957,
+  "note": "Family-run supper club in the hamlet of St. Anna that Ziggy and Evelyn Schwarz started as a country tavern in 1957, serving steaks, seafood and a Friday night perch fry.",
+  "website": "https://schwarzsupperclub.com/",
+  "open": true,
+  "evidence_date": "2026-04",
+  "sources": [
+   "https://schwarzsupperclub.com/about",
+   "https://schwarzsupperclub.com/menu/",
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/schwarz-s-supper-club",
+   "https://www.nationalgeographic.com/travel/article/wisconsin-supper-clubs"
+  ]
+ },
+ {
+  "name": "Harlow's Supper Club",
+  "address": "120 E Green Bay St",
+  "city": "Bonduel",
+  "zip": "54107",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Bonduel supper club serving steaks, prime rib, seafood and chicken with soup, salad, relishes and fresh bread, plus Thursday German specials and a Friday fish fry.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-09",
+  "sources": [
+   "https://www.travelwisconsin.com/food-drink/supper-clubs/harlow-s-supper-club"
+  ]
+ },
+ {
+  "name": "Haase's Supper Club",
+  "address": "9497 County Hwy D",
+  "city": "Winneconne",
+  "zip": "54986",
+  "kinds": [
+   "supper club",
+   "fish fry"
+  ],
+  "fish": [
+   "perch",
+   "walleye",
+   "haddock"
+  ],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Winneconne-area supper club whose Friday menu offers perch, walleye and haddock, with prime rib on Saturdays and all-you-can-eat broasted chicken on Sundays.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-01",
+  "sources": [
+   "https://www.travelwisconsin.com/food-drink/restaurants/haase-s-supper-club"
+  ]
+ },
+ {
+  "name": "Hooked at Outboards Bar & Grill",
+  "address": "W13219 County Rd M",
+  "city": "Gilman",
+  "zip": "54433",
+  "kinds": [
+   "fish fry"
+  ],
+  "fish": [],
+  "fish_fry_days": [
+   "Friday"
+  ],
+  "sides": [],
+  "founded": null,
+  "note": "Bar and grill with an on-site bait shop near the Miller Dam Flowage that serves a Friday fish fry and Sunday prime rib.",
+  "website": null,
+  "open": true,
+  "evidence_date": "2026-06",
+  "sources": [
+   "https://www.travelwisconsin.com/food-drink/bars-taverns/hooked-at-outboards-bar-grill"
+  ]
+ }
+]

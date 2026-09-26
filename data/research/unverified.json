@@ -1,0 +1,341 @@
+[
+ {
+  "name": "Greunke's First Street Inn",
+  "address": "17 Rittenhouse Ave",
+  "city": "Bayfield",
+  "chain": false,
+  "match_names": [
+   "GREUNKE'S FIRST STREET INN",
+   "GREUNKE'S FIRST STREET INN & DINING",
+   "GREUNKE'S RESTAURANT",
+   "GREUNKE'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "historic",
+   "lodge"
+  ],
+  "iconic_reason": "Long-running inn and restaurant on Rittenhouse Avenue in Bayfield that was featured on the Travel Channel's 'Hotel Impossible' in 2016.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hotel_Impossible"
+  ],
+  "open_evidence": "No 2025-2026 evidence found: official site greunkesinn.com refused connections (Sept 2026); Bayfield chamber site search returned nothing; Overture lists it as open (not authoritative)",
+  "notes": "Featured on Travel Channel's 'Hotel Impossible' episode 104 'Lake Superior, Hotel Inferior' (aired Dec 5, 2016) per Wikipedia. Commonly associated with Lake Superior whitefish (fried whitefish livers) and fish boils - NOT verified from a fetched source. Founding year unknown. Open status unknown - needs verification before publishing.",
+  "research_files": [
+   "icons_northeast_north.json"
+  ]
+ },
+ {
+  "name": "Fitzgerald's Genoa Junction",
+  "address": "727 Main St",
+  "city": "Genoa City",
+  "chain": false,
+  "match_names": [
+   "FITZGERALD'S GENOA JUNCTION",
+   "FITZGERALD'S",
+   "FITZGERALD'S OCTAGON HOUSE",
+   "FITZGERALD'S GENOA JUNCTION OCTAGON HOUSE RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Another Round' (2016)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "fish boil",
+   "historic"
+  ],
+  "iconic_reason": "Family-run restaurant in a Victorian octagon house on Genoa City's Main Street serving an all-you-can-eat Door County-style outdoor cod fish boil with BBQ chicken and ribs.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "http://web.archive.org/web/20260124115932/https://fitzgeraldsfishboil.com/",
+   "http://web.archive.org/web/20260124114344/https://fitzgeraldsfishboil.com/about/",
+   "https://wisconsinsupperclubs.com/southeast-region/"
+  ],
+  "open_evidence": "http://web.archive.org/web/20260124115932/https://fitzgeraldsfishboil.com/ - archived official site (Jan 24, 2026, (c) 2026) listed summer and winter hours; still on Ron Faiola's supper club list updated 2026-09-01; Overture Sept-2026 extract lists it as open. CAUTION: the live site returns a 'database connection' error (Sept 25, 2026) and an April 14, 2026 capture showed a 'Coming Soon / under construction' page, so current status is not directly confirmed.",
+  "notes": "Open status is the least certain in this batch: no 2025-2026 news or dated post was reachable (web search budget exhausted; Yelp blocked). Founding year of the restaurant and the build year of the octagon house were not found; the site says it is one of the few remaining eight-sided Victorian houses. Business name on the site: Fitzgerald's Octagon House Inc.; TripAdvisor lists it as 'Fitzgerald's Genoa Junction Octagon House Restaurant'. Address given as 727 Main Street (Hwy B), 2 miles NW of Richmond, IL. A 2019 review mentioned a $15 flat all-you-can-eat price and cash only; no current price list found, so price_tier null. It is more a fish-boil restaurant than a classic supper club, but Faiola includes it.",
+  "research_files": [
+   "supper_clubs.json"
+  ]
+ },
+ {
+  "name": "Moccasin Bar",
+  "address": "15820 US Hwy 63",
+  "city": "Hayward",
+  "chain": false,
+  "match_names": [
+   "MOCCASIN BAR",
+   "THE MOCCASIN BAR",
+   "MOCCASIN BAR WILDLIFE MUSEUM"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Hayward tavern known for its taxidermy dioramas of animals drinking and gambling and a mounted replica of a record 1949 Lac Courte Oreilles muskie.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://www.roadsideamerica.com/story/2245",
+   "https://www.travelwisconsin.com/food-drink/bars-taverns/moccasin-bar"
+  ],
+  "open_evidence": "https://www.travelwisconsin.com/food-drink/bars-taverns/moccasin-bar - current Travel Wisconsin listing (fetched Sept 2026) and undated Roadside America page say it operates; no dated 2025-2026 evidence found",
+  "notes": "Founding year unknown. Drinks-focused bar (food not confirmed). Roadside America gives address '15820 W 1st St (corner of Dakota Ave, US 63/Hwy 27)'; Travel Wisconsin says 15820 US Highway 63. Open status unconfirmed.",
+  "research_files": [
+   "icons_northeast_north.json"
+  ]
+ },
+ {
+  "name": "The Ranch Supper Club",
+  "address": "10590 N Ranch Rd",
+  "city": "Hayward",
+  "chain": false,
+  "match_names": [
+   "THE RANCH SUPPER CLUB",
+   "RANCH SUPPER CLUB",
+   "THE RANCH",
+   "RANCH SUPPER CLUB & LOUNGE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: An Old-Fashioned Experience' (2013)",
+   "Featured in Ron Faiola's book 'Wisconsin Supper Clubs: Second Edition' (2023)",
+   "Listed on Ron Faiola's Wisconsin Supper Clubs List (wisconsinsupperclubs.com, 2026)"
+  ],
+  "tags": [
+   "supper club",
+   "relish tray",
+   "fish fry",
+   "historic"
+  ],
+  "iconic_reason": "Supper club east of Hayward that opened as The Aladdin in 1931 and has operated as The Ranch Supper Club since 1960.",
+  "founded": 1931,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://ranchsupperclub.com/",
+   "https://ranchsupperclub.com/history/",
+   "https://www.restaurantji.com/wi/hayward/the-ranch-/",
+   "https://wisconsinsupperclubs.com/northwest-region/"
+  ],
+  "open_evidence": "No 2025-2026 dated evidence found: official site (c) 2018, last upload Nov 2022, says 'Open year-round Thursday - Sunday at 5pm'; newest dated diner review on Restaurantji is October 2024 (listing updated Sep 10, 2026 with hours, no closure noted). Still on Ron Faiola's 2026 list.",
+  "notes": "1931 is the business's own origin story (The Aladdin); renamed The Ranch Supper Club in 1960 under Vivian Levinson; Beth and Barney Morgan with Cheryl Haupt from 1987; now run by their daughter Haley and Nathan Bochler. Probably open but not confirmed with dated evidence, hence open=null. Located 1/4 mile east of Hayward on Hwy 77.",
+  "research_files": [
+   "supper_clubs.json"
+  ]
+ },
+ {
+  "name": "Miijim",
+  "address": null,
+  "city": "La Pointe",
+  "chain": false,
+  "match_names": [
+   "MIIJIM"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Emerging Chef semifinalist 2024 (Bryce Stevenson)"
+  ],
+  "other_honors": [],
+  "tags": [],
+  "iconic_reason": "Restaurant on Madeline Island (La Pointe) whose chef Bryce Stevenson was a 2024 James Beard Emerging Chef semifinalist.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://www.jamesbeard.org/stories/the-2024-james-beard-awards-semifinalists",
+   "https://www.wpr.org/food/9-wisconsin-restaurants-chefs-named-as-james-beard-award-semifinalists",
+   "https://spectrumnews1.com/wi/milwaukee/news/2024/01/24/james-beard-2024-semifinalists-wisconsin"
+  ],
+  "open_evidence": null,
+  "notes": "Could not determine current status or street address: no official website found, not in the Madeline Island Chamber directory or the Overture extract, and the session's web-search budget was exhausted before local coverage could be found. Only the JBF 2024 listing and 2024 news lists (WPR, Spectrum News) confirm it existed. Likely seasonal (island restaurant). Needs manual check.",
+  "research_files": [
+   "jbf_recent_restaurants.json"
+  ]
+ },
+ {
+  "name": "Mickies Dairy Bar",
+  "address": "1511 Monroe St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "MICKIES DAIRY BAR",
+   "MICKEYS DAIRY BAR",
+   "MICKIES"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "diner",
+   "historic"
+  ],
+  "iconic_reason": "Breakfast diner across from Camp Randall Stadium since 1946, known for its Scrambler plates and malts.",
+  "founded": 1946,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 1,
+  "open": null,
+  "sources": [
+   "https://captimes.com/food-drink/mickies-dairy-bar-owners-will-retire-pass-ownership/article_df0752c8-f4aa-4e3e-9b31-1e4aa6952fef.html",
+   "https://www.wmtv15news.com/2026/08/05/mickies-dairy-bar-re-open-under-new-ownership-soon/",
+   "https://spectrumnews1.com/wi/milwaukee/news/2026/08/07/mickies-dairy-bar-ownership-badgers-football-players",
+   "https://www.travelwisconsin.com/food-drink/restaurants/mickies-dairy-bar"
+  ],
+  "open_evidence": "https://www.wmtv15news.com/2026/08/05/mickies-dairy-bar-re-open-under-new-ownership-soon/ - Aug 5, 2026: closed during ownership transfer, will 'reopen soon' with a limited menu; no confirmed reopening date found",
+  "notes": "Status UNCERTAIN as of Sept 2026: owners Payow and Janet Thongnuam (since 1991) retired; ownership passed July 20, 2026 to a group including former UW football players, with Gotham Bagels owner Joe Gaglio managing. Reported Aug 2026 as closed and reopening soon. Cap Times (June 18, 2026) gives 1946 founding, original owners Norm Bass and Van Reese. Cash only historically (not verified for new owners).",
+  "research_files": [
+   "icons_southcentral_west.json"
+  ]
+ },
+ {
+  "name": "Bosacki's Boat House",
+  "address": "305 E Park Ave",
+  "city": "Minocqua",
+  "chain": false,
+  "match_names": [
+   "BOSACKI'S BOAT HOUSE",
+   "BOSACKI'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "tavern",
+   "historic"
+  ],
+  "iconic_reason": "Waterfront restaurant and bar on Minocqua's island downtown that was rebuilt on its original over-water site after a 1972 fire following public pressure on the DNR.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Minocqua,_Wisconsin"
+  ],
+  "open_evidence": "No 2025-2026 evidence found: official site (bosackis.com) does not resolve; Minocqua chamber site search returned nothing; Overture lists 305 E Park Ave as open (not authoritative)",
+  "notes": "Founding year not verified (often cited as 1917 - unverified). Wikipedia says it burned in 1972 and was rebuilt where it stood. Current status (possible sale/rebuild in the 2020s) could not be checked because web search was unavailable - needs verification before publishing.",
+  "research_files": [
+   "icons_northeast_north.json"
+  ]
+ },
+ {
+  "name": "Mr. G's Supper Club",
+  "address": "5890 Hwy 57",
+  "city": "Sturgeon Bay",
+  "chain": false,
+  "match_names": [
+   "MR. G'S SUPPER CLUB",
+   "MR. G'S LOGAN CREEK GRILLE",
+   "MR. G'S"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [],
+  "tags": [
+   "supper club"
+  ],
+  "iconic_reason": "Door County supper club on Highway 57 south of Jacksonport, run by the Geitner family since 1973 in the former Paldora Supper Club and Fernwood Gardens Ballroom.",
+  "founded": 1973,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://web.archive.org/web/2019/http://www.mrgslogancreekgrille.com/"
+  ],
+  "open_evidence": "Could not determine. The club's domain mrgslogancreekgrille.com no longer resolves (fetched 2026-09-25) and archived captures from Aug and Dec 2024 show the domain taken over by unrelated sites. Overture Sept-2026 still lists 'Mr. G's Supper Club' at 5890 State Highway 57 as open, but that field is often stale. Not on Ron Faiola's 2026 list.",
+  "notes": "Came from the 'quick existence check' list; it's in Door County, not the Milwaukee area. Archived (2019) club site: 'Serving Door County Since 1973'; Bob and Lorraine Geitner bought it in 1973 when it was the Paldora Supper Club/Fernwood Gardens Ballroom; Bob Jr. and Mary bought it in 1981; open Fri-Sat evenings; also ran the Logan Creek Tiki Bar. 1973 is the Geitner/Mr. G's start; the Paldora Supper Club predates it (year unknown). The lapsed domain suggests it may have closed or changed hands; treat open status as unknown. Price tier unknown.",
+  "research_files": [
+   "supper_clubs.json"
+  ]
+ },
+ {
+  "name": "Anchor Bar and Grill",
+  "address": "413 Tower Ave",
+  "city": "Superior",
+  "chain": false,
+  "match_names": [
+   "ANCHOR BAR AND GRILL",
+   "ANCHOR BAR & GRILL",
+   "ANCHOR BAR",
+   "THE ANCHOR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [],
+  "other_honors": [
+   "Featured on Food Network's Diners, Drive-Ins and Dives (2011)"
+  ],
+  "tags": [
+   "tavern",
+   "burgers"
+  ],
+  "iconic_reason": "Cash-only Tower Avenue tavern with a Lake Superior shipping theme, owned by the Anderson family since 1977 and known for two-thirds-pound burgers and fresh-cut fries.",
+  "founded": 1977,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": null,
+  "sources": [
+   "https://en.wikipedia.org/wiki/Anchor_Bar_and_Grill",
+   "https://www.superiortelegram.com/lifestyle/food-review-anchor-bar-and-grills-anchor-burger",
+   "https://www.superiortelegram.com/news/food-network-films-at-anchor-bar-in-superior"
+  ],
+  "open_evidence": "https://www.superiortelegram.com/lifestyle/food-review-anchor-bar-and-grills-anchor-burger - Superior Telegram review May 10, 2023 (latest found); no 2025-2026 evidence found; Wikipedia describes it as operating",
+  "notes": "1977 is when Tom Anderson's family bought the building/bar (an older shipyard workers' bar); food service began in the 1980s. Owners Adam and Aaron Anderson. Wikipedia also cites inclusion in 'Hamburger America' and Gourmet magazine (June 2009) - not independently checked. Open status unconfirmed for 2025-2026. Overture also lists an 'Anchor Bar & Grill' at 103 E 7th St, Superior (likely a different/erroneous record).",
+  "research_files": [
+   "icons_northeast_north.json"
+  ]
+ }
+]

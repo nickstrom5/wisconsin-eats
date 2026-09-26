@@ -1,0 +1,840 @@
+[
+ {
+  "name": "Sanford",
+  "address": "1547 N Jackson St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "SANFORD",
+   "SANFORD RESTAURANT",
+   "SANFORD MKE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 1991 (Sanford D'Amato)",
+   "Best Chef: Midwest finalist 1992 (Sanford D'Amato)",
+   "Best Chef: Midwest finalist 1993 (Sanford D'Amato)",
+   "Best Chef: Midwest finalist 1994 (Sanford D'Amato)",
+   "Best Chef: Midwest finalist 1995 (Sanford D'Amato)",
+   "Best Chef: Midwest winner 1996 (Sanford D'Amato)",
+   "Best Chef: Midwest finalist 2011 (Justin Aprahamian)",
+   "Best Chef: Midwest finalist 2012 (Justin Aprahamian)",
+   "Best Chef: Midwest finalist 2013 (Justin Aprahamian)",
+   "Best Chef: Midwest winner 2014 (Justin Aprahamian)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "fine dining"
+  ],
+  "iconic_reason": "Fine-dining restaurant on N Jackson St opened in 1989 by chef Sanford D'Amato and now owned by chef Justin Aprahamian; both chefs won Best Chef: Midwest there.",
+  "founded": 1989,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 4,
+  "open": true,
+  "sources": [
+   "https://sanfordrestaurant.com/",
+   "https://sanfordrestaurant.com/sample-menu/",
+   "https://linktr.ee/sanfordmke",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": "https://linktr.ee/sanfordmke - links a Belgian Beer Dinner event dated 6/11/26; https://sanfordrestaurant.com/events/ calendar shows events for September 2026; menus page lists $95 prix fixe / $125 tasting (checked 2026-09-25)",
+  "founded_source": "https://sanfordrestaurant.com/",
+  "closed_reason": null,
+  "notes": "Honors span two chef-owners: Sanford D'Amato (finalist 1991-1995, winner 1996) and Justin Aprahamian (finalist 2011-2013, winner 2014). JBF database labels the 1991-1995 and 2011-2013 entries 'Nominee' (= finalist)."
+ },
+ {
+  "name": "L'Etoile",
+  "address": "1 S Pinckney St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "L'ETOILE",
+   "LETOILE",
+   "L'ETOILE RESTAURANT",
+   "LETOILE RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 1999 (Odessa Piper)",
+   "Best Chef: Midwest finalist 2000 (Odessa Piper)",
+   "Best Chef: Midwest winner 2001 (Odessa Piper)",
+   "Best Chef: Midwest finalist 2011 (Tory Miller)",
+   "Best Chef: Midwest winner 2012 (Tory Miller)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "fine dining",
+   "farm to table"
+  ],
+  "iconic_reason": "Farm-to-table restaurant on Capitol Square founded by Odessa Piper in 1976 and run by Tory Miller since 2005; both won Best Chef: Midwest there.",
+  "founded": 1976,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 4,
+  "open": true,
+  "sources": [
+   "https://www.letoile-restaurant.com/",
+   "https://www.letoile-restaurant.com/information",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmadison.com/blog/stories/post/james-beard-honors/"
+  ],
+  "open_evidence": "https://www.letoile-restaurant.com/information - current hours Wed-Sat, 1 South Pinckney Street Suite 107; menu PDF on /menus created 2026-07-15 (checked 2026-09-25)",
+  "founded_source": "https://www.letoile-restaurant.com/",
+  "closed_reason": null,
+  "notes": "Address is 1 S Pinckney St, Suite 107. Overture also still lists an older 25 N Pinckney St location (stale). Sold by Odessa Piper to Tory Miller in 2005 (official site). Private dining six-course tasting menu $175/guest."
+ },
+ {
+  "name": "Three Brothers",
+  "address": "2414 S St Clair St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "THREE BROTHERS",
+   "THREE BROTHERS RESTAURANT",
+   "3 BROTHERS",
+   "THREE BROTHERS SERBIAN RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "America's Classics 2002"
+  ],
+  "other_honors": [],
+  "tags": [
+   "serbian",
+   "historic"
+  ],
+  "iconic_reason": "Serbian restaurant run by the Radicevic family at the same Bay View corner building since 1956.",
+  "founded": 1956,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 2,
+  "open": true,
+  "sources": [
+   "https://www.threebrothersmke.com",
+   "https://www.threebrothersmke.com/our-history",
+   "https://www.threebrothersmke.com/menu",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": "https://www.threebrothersmke.com - shows 'New Hours' Wed-Fri 5-9pm, Sat-Sun 4-9pm, reservations and curbside pickup; site's order page last updated 2026-02-06 (Squarespace metadata). No dated 2025-2026 news article found (checked 2026-09-25)",
+  "founded_source": "https://www.threebrothersmke.com/our-history",
+  "closed_reason": null,
+  "notes": "Founder Milun Radicevic first ran a tavern on 2nd Street; the Bay View restaurant dates from 1956 per the restaurant's history page. Cash or check only. JBF lists Milunka Radicevic as the 2002 America's Classics honoree. Open evidence relies on the official site (no 2025-2026 dated article located)."
+ },
+ {
+  "name": "Bartolotta's Lake Park Bistro",
+  "address": "3133 E Newberry Blvd",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "BARTOLOTTA'S LAKE PARK BISTRO",
+   "LAKE PARK BISTRO",
+   "BARTOLOTTAS LAKE PARK BISTRO"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 2007 (Adam Siegel)",
+   "Best Chef: Midwest winner 2008 (Adam Siegel)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "fine dining",
+   "french"
+  ],
+  "iconic_reason": "French bistro in a historic Lake Park pavilion opened by Paul and Joe Bartolotta in 1995.",
+  "founded": 1995,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.bartolottas.com/lake-park-bistro",
+   "https://www.bartolottas.com/lake-park-bistro/menu",
+   "https://urbanmilwaukee.com/2025/10/07/bartolottas-celebrates-30-years-of-lark-park-bistro/",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2025/10/07/bartolottas-celebrates-30-years-of-lark-park-bistro/ - restaurant celebrated its 30th anniversary Sept 28, 2025; official site (c) 2026 lists daily 5-9 pm hours and Sunday brunch",
+  "founded_source": "https://urbanmilwaukee.com/2025/10/07/bartolottas-celebrates-30-years-of-lark-park-bistro/",
+  "closed_reason": null,
+  "notes": "Adam Siegel was finalist 2007 and winner 2008 here; he later co-founded Lupi & Iris (open, 777 N Van Buren St). Lake Park Bistro is also one of the restaurants named in Paul Bartolotta's 2020 Outstanding Restaurateur finalist nod (attached to Ristorante Bartolotta in this file)."
+ },
+ {
+  "name": "Watts Tea Shop",
+  "address": "761 N Jefferson St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "WATTS TEA SHOP",
+   "GEORGE WATTS & SON TEA SHOP",
+   "WATTS TEA ROOM"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "America's Classics 2011"
+  ],
+  "other_honors": [],
+  "tags": [
+   "historic",
+   "tea room"
+  ],
+  "iconic_reason": "Tea room on the upper floor of the George Watts & Son china store downtown, honored as a JBF America's Classic in 2011.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://urbanmilwaukee.com/2025/10/16/no-more-tea-parties-comedy-club-moving-downtown/",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": null,
+  "founded_source": null,
+  "closed_reason": "Closed around 2016: Urban Milwaukee (Oct 16, 2025) says Continuum Architects + Planners bought the Watts building in 2019, 'three years after the namesake Watts Tea Shop closed'; The Laughing Tap comedy club is moving into the first floor. https://urbanmilwaukee.com/2025/10/16/no-more-tea-parties-comedy-club-moving-downtown/",
+  "notes": "Exact closing date not verified (derived from Urban Milwaukee's wording). JBF lists Sam Watts as the 2011 America's Classics honoree. Overture still lists 'George Watts & Son Inc' at 761 N Jefferson St, but georgewatts.com did not load (connection refused/timeout) and the building has new occupants, so that listing is likely stale. Founding year of the tea shop not verified."
+ },
+ {
+  "name": "Ardent",
+  "address": "1751 N Farwell Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "ARDENT",
+   "ARDENT MKE",
+   "ARDENT RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 2015 (Justin Carlisle)",
+   "Best Chef: Midwest finalist 2016 (Justin Carlisle)",
+   "Best Chef: Midwest finalist 2017 (Justin Carlisle)",
+   "Best Chef: Midwest finalist 2018 (Justin Carlisle)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "fine dining"
+  ],
+  "iconic_reason": "Basement tasting-menu restaurant on N Farwell Ave run by chef Justin Carlisle from 2013 to 2024.",
+  "founded": 2013,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.milwaukeemag.com/ardent-restaurant-closing/",
+   "https://www.milwaukeemag.com/purslane-restaurant-opens-june-4-in-the-former-location-of-ardent/",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ],
+  "open_evidence": null,
+  "founded_source": "https://www.milwaukeemag.com/ardent-restaurant-closing/",
+  "closed_reason": "Closed after New Year's Eve service Dec 31, 2024, per Milwaukee Magazine (Dec 2, 2024) https://www.milwaukeemag.com/ardent-restaurant-closing/ ; Purslane opened in the space June 4, 2025 https://www.milwaukeemag.com/purslane-restaurant-opens-june-4-in-the-former-location-of-ardent/",
+  "notes": "Founded year derived from Milwaukee Magazine calling it an '11-year-old restaurant' in Dec 2024. Justin Carlisle was Best Chef: Midwest finalist 2015-2018 here. Per the Dec 2024 article he still ran Laughing Taco (stand inside Fiserv Forum); its current status not verified. Red Light Ramen (his other spot) had already closed - Ardent's tasting room moved into its former space. ardentmke.com now redirects to an unrelated site."
+ },
+ {
+  "name": "Bavette La Boucherie",
+  "address": "217 N Broadway",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "BAVETTE LA BOUCHERIE",
+   "BAVETTE",
+   "BAVETTE LA BOUCHERIE RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 2018 (Karen Bell)",
+   "Best Chef: Midwest finalist 2022 (Karen Bell)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "butcher shop"
+  ],
+  "iconic_reason": "Butcher shop and restaurant run by chef Karen Bell, first on Menomonee St and from 2022 on N Broadway in the Third Ward.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": false,
+  "sources": [
+   "https://www.milwaukeemag.com/bavette-la-boucherie-set-to-close-in-january/",
+   "https://urbanmilwaukee.com/2026/01/13/new-restaurant-proposed-for-bavette-space-2/",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": null,
+  "founded_source": null,
+  "closed_reason": "Closed with last service Jan 17, 2026, announced by owner Karen Bell, per Milwaukee Magazine (Dec 31, 2025) https://www.milwaukeemag.com/bavette-la-boucherie-set-to-close-in-january/ ; bavettelaboucherie.com now returns 404.",
+  "notes": "Karen Bell was Best Chef: Midwest finalist 2018 (at the original Menomonee St location) and 2022. Overture lists a 'Bavette At The Market' stall in Mequon Public Market (6300 W Mequon Rd); its status after the Jan 2026 closure is unverified. Bell consulted on the deli menu at Ray's Wine & Spirits Mequon (Milwaukee Magazine, Oct 2025) but no current restaurant of hers was verified. Founding year not verified."
+ },
+ {
+  "name": "Ristorante Bartolotta",
+  "address": "7616 W State St",
+  "city": "Wauwatosa",
+  "chain": false,
+  "match_names": [
+   "RISTORANTE BARTOLOTTA",
+   "RISTORANTE BARTOLOTTA DAL 1993",
+   "BARTOLOTTA'S RISTORANTE",
+   "BARTOLOTTA"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Restaurateur finalist 2020 (Paul Bartolotta, The Bartolotta Restaurants)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "italian"
+  ],
+  "iconic_reason": "Italian trattoria in the Wauwatosa Village opened in 1993 as the first restaurant of the Bartolotta Restaurants group.",
+  "founded": 1993,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.bartolottas.com/ristorante-bartolotta",
+   "https://urbanmilwaukee.com/2025/10/07/bartolottas-celebrates-30-years-of-lark-park-bistro/",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": "https://www.bartolottas.com/ristorante-bartolotta - official site (c) 2026 lists 'Open daily 5-9 PM' at 7616 W. State Street (checked 2026-09-25)",
+  "founded_source": "https://urbanmilwaukee.com/2025/10/07/bartolottas-celebrates-30-years-of-lark-park-bistro/",
+  "closed_reason": null,
+  "notes": "The only honor here is Paul Bartolotta's 2020 Outstanding Restaurateur finalist nod, which JBF credits to 'The Bartolotta Restaurants (Ristorante Bartolotta, Harbor House, Lake Park Bistro, and others)'; it is attached to the group's flagship. (Paul Bartolotta's 1994 Best Chef: Midwest win was for Spiaggia in Chicago, not a Wisconsin restaurant, so it is excluded.)"
+ },
+ {
+  "name": "The Diplomat",
+  "address": "815 E Brady St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "THE DIPLOMAT",
+   "DIPLOMAT",
+   "THE DIPLOMAT MKE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest winner 2022 (Dane Baldwin)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "american"
+  ],
+  "iconic_reason": "Brady Street restaurant serving shareable American plates from chef Dane Baldwin, the 2022 Best Chef: Midwest winner.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.thediplomatmke.com/",
+   "https://www.thediplomatmke.com/menu",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": "https://www.thediplomatmke.com/menu - seasonal menu page last updated 2026-09-17 (Squarespace metadata); site lists Mon-Sat 4-9pm at 815 E Brady St (checked 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Founding year not verified (no official source checked)."
+ },
+ {
+  "name": "Amilinda",
+  "address": "315 E Wisconsin Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "AMILINDA",
+   "AMILINDA RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 2022 (Gregory León)",
+   "Best Chef: Midwest finalist 2023 (Gregory León)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "spanish",
+   "portuguese"
+  ],
+  "iconic_reason": "Downtown Spanish and Portuguese restaurant run by chef Gregory León since 2015.",
+  "founded": 2015,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://amilinda.com/",
+   "https://www.milwaukeemag.com/amilinda-celebrates-tenth-anniversary/",
+   "https://urbanmilwaukee.com/2026/02/15/now-serving-amilinda-unveils-a-sandwich-hour/",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": "https://urbanmilwaukee.com/2026/02/15/now-serving-amilinda-unveils-a-sandwich-hour/ - Feb 15, 2026 article on a new Portuguese Sandwich Hour; official site lists Wed-Sat 5-9pm at 315 E Wisconsin Ave",
+  "founded_source": "https://www.milwaukeemag.com/amilinda-celebrates-tenth-anniversary/",
+  "closed_reason": null,
+  "notes": "Permanent home opened August 2015 (10th anniversary per Milwaukee Magazine, July 2025). Gregory León was Best Chef: Midwest finalist 2022 and 2023 (not a winner; visitmilwaukee.org wrongly lists a 2022 win). Overture also lists Amilinda at 839 W National Ave (former National Cafe space) - not supported by the official site, likely an error."
+ },
+ {
+  "name": "Solly's Grille",
+  "address": "4629 N Port Washington Rd",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "SOLLY'S GRILLE",
+   "SOLLYS GRILLE",
+   "SOLLY'S",
+   "SOLLY'S COFFEE SHOP"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "America's Classics 2022"
+  ],
+  "other_honors": [],
+  "tags": [
+   "butter burger",
+   "burgers",
+   "diner",
+   "historic"
+  ],
+  "iconic_reason": "Family-run butter burger counter restaurant on N Port Washington Rd, founded in 1936 as Solly's Coffee Shop.",
+  "founded": 1936,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.sollysbutterburgers.com/",
+   "https://www.sollysbutterburgers.com/about",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": "https://www.sollysbutterburgers.com/ - official site shows current hours (Tue-Thu 10:30-7, Fri-Sat 7-7) and online ordering; menu data last updated 2025-04-22 (page metadata). No dated 2025-2026 news article found (checked 2026-09-25)",
+  "founded_source": "https://www.sollysbutterburgers.com/about",
+  "closed_reason": null,
+  "notes": "Physically in the City of Glendale but the postal address is Milwaukee, WI 53212. 2022 America's Classics (JBF lists the restaurant, no individual). Open evidence relies on the official site."
+ },
+ {
+  "name": "Fairchild",
+  "address": "2611 Monroe St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "FAIRCHILD",
+   "FAIRCHILD RESTAURANT"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest winner 2023 (Itaru Nagano and Andrew Kroeger)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "bistro"
+  ],
+  "iconic_reason": "Monroe Street restaurant from chefs Itaru Nagano and Andrew Kroeger, who shared the 2023 Best Chef: Midwest award.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.fairchildrestaurant.com/",
+   "https://www.fairchildrestaurant.com/about",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmadison.com/blog/stories/post/james-beard-honors/"
+  ],
+  "open_evidence": "https://www.fairchildrestaurant.com/ - links 'DinnerMenu_Sep_24_2026' PDF (mains $44-56) and a Sept 23, 2026 wine list (checked 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Chef-owners Itaru Nagano and Andrew Kroeger (both former L'Etoile cooks) with partner Patrick Sierra. Opening year not verified."
+ },
+ {
+  "name": "Osteria Papavero",
+  "address": "128 E Wilson St",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "OSTERIA PAPAVERO",
+   "PAPAVERO"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 2023 (Francesco Mangano)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "italian"
+  ],
+  "iconic_reason": "Italian osteria near Capitol Square run by chef Francesco Mangano, a 2023 Best Chef: Midwest finalist.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://osteriapapavero.com/",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ],
+  "open_evidence": "https://osteriapapavero.com/ - current hours, Resy booking and a 'Closed for service: 5/25/2026' notice (checked 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Opening year not verified. visitmadison.com's list omits Mangano's 2023 finalist nod; the JBF database lists it."
+ },
+ {
+  "name": "Lupi & Iris",
+  "address": "777 N Van Buren St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "LUPI & IRIS",
+   "LUPI AND IRIS",
+   "LUPI IRIS"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best New Restaurant finalist 2023"
+  ],
+  "other_honors": [],
+  "tags": [
+   "fine dining",
+   "french",
+   "italian"
+  ],
+  "iconic_reason": "Downtown restaurant with French and Italian influences opened in May 2022 by chef Adam Siegel and developer Michael DeMichele.",
+  "founded": 2022,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.lupiandiris.com/",
+   "https://spectrumnews1.com/wi/milwaukee/news/2023/06/02/milwaukee--james-beard-award--lupi---iris--adam-siegel",
+   "https://urbanmilwaukee.com/2023/03/29/lupi-iris-chef-gregory-leon-are-james-beard-finalists/",
+   "https://urbanmilwaukee.com/2026/02/14/dining-lupi-iris-was-a-special-experience/",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ],
+  "open_evidence": "https://www.lupiandiris.com/ - current lunch/dinner hours and a wine list PDF dated 09/04/26; site updated 2026-07-20 (checked 2026-09-25)",
+  "founded_source": "https://spectrumnews1.com/wi/milwaukee/news/2023/06/02/milwaukee--james-beard-award--lupi---iris--adam-siegel",
+  "closed_reason": null,
+  "notes": "2023 Best New Restaurant finalist (one of 10 national finalists; visitmilwaukee.org mislabels it a semifinalist). Chef Adam Siegel's 2008 Best Chef win belongs to Lake Park Bistro."
+ },
+ {
+  "name": "EsterEv",
+  "address": "2165 S Kinnickinnic Ave",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "ESTEREV",
+   "ESTER EV"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 2024 (Dan Jacobs and Dan Van Rite)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "american"
+  ],
+  "iconic_reason": "Bay View restaurant from chefs Dan Jacobs and Dan Van Rite, 2024 Best Chef: Midwest finalists, that began as a tasting menu inside their DanDan.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.esterev.com/",
+   "https://www.milwaukeemag.com/esterevs-new-home-in-bay-view-opens-april-17/",
+   "https://www.milwaukeemag.com/bay-views-esterev-returns-nov-5/",
+   "https://www.wisn.com/article/milwaukee-james-beard-award-esterev-chefs-jacobs-van-rite/60399828",
+   "https://www.jamesbeard.org/awards/search-past-awards",
+   "https://www.visitmilwaukee.org/food-drink/award-winning-eats/"
+  ],
+  "open_evidence": "https://www.milwaukeemag.com/bay-views-esterev-returns-nov-5/ - Oct 10, 2025: reopening Nov 5, 2025 after flood; official site lists Tue/Wed-Sat 5-9pm and an a la carte menu at 2165 S Kinnickinnic Ave (checked 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "When named finalist (April 3, 2024) EsterEv operated inside DanDan (360 E Erie St); it moved to 2165 S Kinnickinnic Ave on April 17, 2024 - same business. Closed May-Nov 2025 after water damage, reopened Nov 5, 2025 with an a la carte format. Founding year not verified."
+ },
+ {
+  "name": "Agency",
+  "address": "817 N Marshall St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "AGENCY",
+   "AGENCY X SINTA",
+   "AGENCY COCKTAIL LOUNGE"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best New Bar finalist 2025"
+  ],
+  "other_honors": [],
+  "tags": [
+   "cocktail bar"
+  ],
+  "iconic_reason": "Hybrid cocktail lounge in the Dubbel Dutch Hotel where every drink can be made with or without alcohol; a 2025 Best New Bar finalist.",
+  "founded": 2024,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.thedubbeldutch.com/agency",
+   "https://urbanmilwaukee.com/2025/04/02/agency-advances-as-james-beard-awards-finalist/",
+   "https://www.milwaukeemag.com/the-milwaukee-bar-thats-made-it-to-the-finals-of-the-2025-james-beard-awards/",
+   "https://www.fox6now.com/news/james-beard-award-finalist-milwaukee-agency-best-new-bar",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ],
+  "open_evidence": "https://www.thedubbeldutch.com/agency - page updated 2026-08-26 lists Wed-Sat 5-11pm hours and the SINTA food partnership (announced Feb 2026 per Urban Milwaukee)",
+  "founded_source": "https://www.fox6now.com/news/james-beard-award-finalist-milwaukee-agency-best-new-bar",
+  "closed_reason": null,
+  "notes": "Opened August 2024 inside the Dubbel Dutch Hotel (per 2025 finalist coverage). Bar program led by Ryan Castelaz. visitmilwaukee.org lists it only as a 2025 semifinalist, but the JBF database and local press confirm finalist."
+ },
+ {
+  "name": "1033 Omakase",
+  "address": "1033 S 1st St",
+  "city": "Milwaukee",
+  "chain": false,
+  "match_names": [
+   "1033 OMAKASE",
+   "1033 OMAKASE & SAKE BAR",
+   "1033 OMAKASE AND SAKE BAR"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best New Restaurant finalist 2026"
+  ],
+  "other_honors": [],
+  "tags": [
+   "japanese",
+   "sushi",
+   "omakase"
+  ],
+  "iconic_reason": "Walker's Point omakase counter opened in December 2024; a 2026 Best New Restaurant finalist.",
+  "founded": 2024,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 4,
+  "open": true,
+  "sources": [
+   "https://www.milwaukeemag.com/inside-milwaukees-hottest-reservation-at-1033-omakase/",
+   "https://www.milwaukeemag.com/james-beard-finalists-milwaukee-2026/",
+   "https://urbanmilwaukee.com/2026/03/31/milwaukee-sushi-restaurant-is-a-james-beard-finalist/",
+   "https://www.wisn.com/article/2026-james-beard-wisconsin-finalists-shine/71601586",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ],
+  "open_evidence": "https://www.milwaukeemag.com/james-beard-finalists-milwaukee-2026/ - Mar 31, 2026: named 2026 Best New Restaurant finalist; WISN June 16, 2026 recap lists it as a finalist; Milwaukee Magazine Nov 2025 review lists hours and $129/$79 menus",
+  "founded_source": "https://www.milwaukeemag.com/inside-milwaukees-hottest-reservation-at-1033-omakase/",
+  "closed_reason": null,
+  "notes": "Owners Worawit 'Chef Ray' Boonyapituksakul and Cherry Phetleung (unrelated to the earlier '1033' wine bar at the same address, which closed July 2024). No official website found (1033mke.com now hosts spam); reservations via Resy. Newest evidence is June 2026."
+ },
+ {
+  "name": "Ca'Lucchenzo",
+  "address": "6030 W North Ave",
+  "city": "Wauwatosa",
+  "chain": false,
+  "match_names": [
+   "CA'LUCCHENZO",
+   "CA LUCCHENZO",
+   "CALUCCHENZO"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Best Chef: Midwest finalist 2026 (Zak Baker)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "italian",
+   "pasta"
+  ],
+  "iconic_reason": "Wauwatosa Italian restaurant known for handmade pasta, opened in 2019 by chef Zak Baker and Sarah Baker.",
+  "founded": 2019,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": 3,
+  "open": true,
+  "sources": [
+   "https://www.calucchenzo.com/",
+   "https://www.milwaukeemag.com/james-beard-finalists-milwaukee-2026/",
+   "https://www.wisn.com/article/2026-james-beard-wisconsin-finalists-shine/71601586",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ],
+  "open_evidence": "https://www.calucchenzo.com/ - dinner menu PDF dated '23 Settembre, 2026'; hours Tue-Sat 5pm-close (checked 2026-09-25)",
+  "founded_source": "https://www.milwaukeemag.com/james-beard-finalists-milwaukee-2026/",
+  "closed_reason": null,
+  "notes": "Zak Baker was a 2026 Best Chef: Midwest finalist (did not win; 2026 winner was Loryn Nalic of Balkan Treat Box)."
+ },
+ {
+  "name": "Cultured",
+  "address": "2570 County Rd Q",
+  "city": "Sister Bay",
+  "chain": false,
+  "match_names": [
+   "CULTURED",
+   "CULTURED SOURDOUGH",
+   "CULTURED BAKERY"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Bakery finalist 2026"
+  ],
+  "other_honors": [],
+  "tags": [
+   "bakery"
+  ],
+  "iconic_reason": "Door County sourdough bakery in Sister Bay known for breads, bagels and focaccia; a 2026 Outstanding Bakery finalist.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.culturedsourdough.com/",
+   "https://www.milwaukeemag.com/james-beard-finalists-milwaukee-2026/",
+   "https://www.wisn.com/article/2026-james-beard-wisconsin-finalists-shine/71601586",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ],
+  "open_evidence": "https://www.milwaukeemag.com/james-beard-finalists-milwaukee-2026/ - Mar 31, 2026 finalist announcement; official Square site (c) 2026, republished Sept 2026 with online ordering (checked 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Street address comes only from the Overture Sept-2026 extract (2570 County Q, Sister Bay 54234); the official site shows only 'Sister Bay, Door County' and its hours block is a template placeholder, so the address and hours are unverified. May be seasonal. Founding year not verified."
+ },
+ {
+  "name": "Sway Brewing & Blending",
+  "address": "2434 County Road F",
+  "city": "Baileys Harbor",
+  "chain": false,
+  "match_names": [
+   "SWAY BREWING & BLENDING",
+   "SWAY BREWING + BLENDING",
+   "SWAY BREWING",
+   "SWAY BEER"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Wine and Other Beverages Program finalist 2026"
+  ],
+  "other_honors": [],
+  "tags": [
+   "brewery",
+   "bakery"
+  ],
+  "iconic_reason": "Baileys Harbor brewery, bakery and kitchen making beers from Midwestern ingredients; a 2026 JBF beverage-program finalist.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://www.swaybeer.com/",
+   "https://www.swaybeer.com/about",
+   "https://www.milwaukeemag.com/james-beard-finalists-milwaukee-2026/",
+   "https://www.wisn.com/article/2026-james-beard-wisconsin-finalists-shine/71601586",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ],
+  "open_evidence": "https://www.swaybeer.com/ - hours Wed-Sun 7:30am-8pm at 2434 County Road F; About page lists 2026 press incl. the JBF finalist nod and a Spring 2026 Craft Beer & Brewing cover story (checked 2026-09-25)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Honor: 2026 Outstanding Wine and Other Beverages Program finalist. Founding year not verified."
+ },
+ {
+  "name": "Imaginary Factory",
+  "address": "1401 Northern Ct",
+  "city": "Madison",
+  "chain": false,
+  "match_names": [
+   "IMAGINARY FACTORY",
+   "IMAGINARY FACTORY LLC"
+  ],
+  "michelin_stars": 0,
+  "bib_gourmand": false,
+  "green_star": false,
+  "james_beard": [
+   "Outstanding Professional in Cocktail Service finalist 2026 (Hastings Cameron)"
+  ],
+  "other_honors": [],
+  "tags": [
+   "cocktail bar",
+   "distillery"
+  ],
+  "iconic_reason": "Madison cocktail bar and micro-distillery founded by Hastings Cameron, known for house-made liqueurs and ping pong.",
+  "founded": null,
+  "reported_revenue_usd": null,
+  "revenue_year": null,
+  "revenue_source": null,
+  "price_tier": null,
+  "open": true,
+  "sources": [
+   "https://imaginaryfactory.square.site/",
+   "https://www.milwaukeemag.com/james-beard-finalists-milwaukee-2026/",
+   "https://www.wisn.com/article/2026-james-beard-wisconsin-finalists-shine/71601586",
+   "https://www.jamesbeard.org/awards/search-past-awards"
+  ],
+  "open_evidence": "https://imaginaryfactory.square.site/ - lists hours (Mon, Wed-Sun) at 1401 Northern Ct, site republished July 2026; Hastings Cameron named 2026 finalist (Milwaukee Magazine Mar 31, 2026; WISN June 16, 2026)",
+  "founded_source": null,
+  "closed_reason": null,
+  "notes": "Honor is Hastings Cameron's 2026 Outstanding Professional in Cocktail Service finalist nod. Milwaukee Magazine (Mar 2026) says he founded the bar/micro-distillery 'five years ago' (about 2021); exact year not verified."
+ }
+]

@@ -36,7 +36,7 @@ struct AboutView: View {
             Section {
                 Text("Not affiliated with any team, restaurant, chain or government agency. Data as of \(model.generated). Places open and close; check before you go.")
                     .font(.footnote).foregroundStyle(Theme.muted)
-                Link("Report a missing or closed place", destination: URL(string: "mailto:hello@wisconsineats.com?subject=Wisconsin%20Eats%20correction")!)
+                Link("Report a missing or closed place", destination: URL(string: "mailto:work-with-nick@gmail.com?subject=Wisconsin%20Eats%20correction")!)
                 Text("Version \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0")").font(.footnote).foregroundStyle(Theme.muted)
             }
         }

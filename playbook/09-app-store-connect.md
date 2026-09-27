@@ -71,7 +71,7 @@ Wisconsin Eats is a free guide to Wisconsin restaurants. No login, no account, n
 To try it: Guides → Friday Fish Fry → any place → "Ratings, hours & photos".
 ```
 
-- Contact: Nick Soderstrom, the support email, and a phone number.
+- Contact: Nick Soderstrom, work-with-nick@gmail.com, and a phone number.
 - Release: manual release, so the site's App Store button can be switched the same day.
 
 ## 9. After approval

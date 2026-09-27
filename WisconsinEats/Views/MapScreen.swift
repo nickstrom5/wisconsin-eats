@@ -8,6 +8,14 @@ struct MapScreen: View {
 
     @State private var layer: Layer = .fishFry
     @State private var pushed: Place?
+    @State private var region: MKCoordinateRegion?
+    /// "My location": where to move the map (a new object each tap, so a second tap re-centers after panning away)
+    @State private var centerOn: CLLocation?
+    @State private var centerWhenFound = false
+
+    /// All 16,000+ restaurants at once kept the map busy for a minute and more in QA, so the Everything layer fills in
+    /// only once you zoom to about town size (this many degrees of latitude on screen), and only for what's in view.
+    private static let everythingSpan = 0.3
 
     enum Layer: String, CaseIterable, Identifiable {
         case fishFry = "Fish fry", supper = "Supper clubs", custard = "Custard", icons = "Icons", all = "Everything"
@@ -24,9 +32,11 @@ struct MapScreen: View {
     }
 
     var body: some View {
-        let places = model.places.filter { layer.guide.includes($0) && model.filters.allows($0) && $0.coordinate != nil }
+        let layerPlaces = model.places.filter { layer.guide.includes($0) && model.filters.allows($0) && $0.coordinate != nil }
+        let zoomedOut = layer == .all && (region?.span.latitudeDelta ?? .infinity) > Self.everythingSpan
+        let places = layer != .all ? layerPlaces : zoomedOut ? [] : layerPlaces.filter(inView)
         ZStack(alignment: .top) {
-            ClusteredMap(places: places, showsUser: location.location != nil) { p in
+            ClusteredMap(places: places, showsUser: location.location != nil, center: centerOn, onRegion: { region = $0 }) { p in
                 if let selection { selection.wrappedValue = p } else { pushed = p }
             }
             .ignoresSafeArea(edges: .bottom)
@@ -46,7 +56,9 @@ struct MapScreen: View {
                     }
                     .padding(.horizontal, 12)
                 }
-                Text("\(places.count.formatted()) places · tap a pin, then its name").font(.caption).foregroundStyle(Theme.ink2)
+                Text(zoomedOut ? "Zoom in to a town to see all \(layerPlaces.count.formatted()) places"
+                               : "\(places.count.formatted()) \(layer == .all ? "places here" : "places") · tap a pin, then its name")
+                    .font(.caption).foregroundStyle(Theme.ink2)
                     .padding(.horizontal, 10).padding(.vertical, 4).background(Capsule().fill(.thinMaterial))
             }
             .padding(.top, 8)
@@ -56,9 +68,31 @@ struct MapScreen: View {
         .navigationDestination(item: $pushed) { PlaceDetailView(place: $0) }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button { location.request() } label: { Label("My location", systemImage: "location") }
+                Button {
+                    if location.isDenied {
+                        LocationService.openSettings()
+                    } else if let here = location.location {
+                        centerOn = CLLocation(latitude: here.coordinate.latitude, longitude: here.coordinate.longitude)
+                    } else {
+                        centerWhenFound = true
+                        location.request()
+                    }
+                } label: { Label("My location", systemImage: "location") }
             }
         }
+        .onChange(of: location.location) { _, here in
+            guard centerWhenFound, let here else { return }
+            centerWhenFound = false
+            centerOn = CLLocation(latitude: here.coordinate.latitude, longitude: here.coordinate.longitude)
+        }
+    }
+}
+
+extension MapScreen {
+    /// On screen, with half a screen of margin so panning doesn't show empty edges.
+    private func inView(_ p: Place) -> Bool {
+        guard let r = region, let c = p.coordinate else { return false }
+        return abs(c.latitude - r.center.latitude) <= r.span.latitudeDelta && abs(c.longitude - r.center.longitude) <= r.span.longitudeDelta
     }
 }
 
@@ -66,6 +100,9 @@ struct MapScreen: View {
 struct ClusteredMap: UIViewRepresentable {
     let places: [Place]
     let showsUser: Bool
+    /// move the map here (town-level zoom) whenever a new location object arrives
+    var center: CLLocation? = nil
+    var onRegion: (MKCoordinateRegion) -> Void = { _ in }
     let onSelect: (Place) -> Void
 
     func makeUIView(context: Context) -> MKMapView {
@@ -76,12 +113,19 @@ struct ClusteredMap: UIViewRepresentable {
         map.register(ClusterMarker.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
         map.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 44.65, longitude: -89.75),
                                          span: MKCoordinateSpan(latitudeDelta: 5.3, longitudeDelta: 6.6)), animated: false)
+        let start = map.region
+        DispatchQueue.main.async { onRegion(start) }
         return map
     }
 
     func updateUIView(_ map: MKMapView, context: Context) {
         context.coordinator.onSelect = onSelect
+        context.coordinator.onRegion = onRegion
         map.showsUserLocation = showsUser
+        if let c = center, c !== context.coordinator.centered {
+            context.coordinator.centered = c
+            map.setRegion(MKCoordinateRegion(center: c.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)), animated: true)
+        }
         let want = Set(places.map(\.id))
         let have = map.annotations.compactMap { $0 as? PlaceAnnotation }
         let haveIds = Set(have.map(\.place.id))
@@ -94,6 +138,13 @@ struct ClusteredMap: UIViewRepresentable {
 
     final class Coordinator: NSObject, MKMapViewDelegate {
         var onSelect: ((Place) -> Void)?
+        var onRegion: ((MKCoordinateRegion) -> Void)?
+        var centered: CLLocation?
+
+        func mapView(_ map: MKMapView, regionDidChangeAnimated animated: Bool) {
+            let r = map.region
+            DispatchQueue.main.async { self.onRegion?(r) }   // not during a SwiftUI view update
+        }
 
         func mapView(_ map: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
             if annotation is MKUserLocation { return nil }

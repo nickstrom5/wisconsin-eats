@@ -24,7 +24,7 @@ DOCS = f"{ROOT}/docs"
 DOMAIN = "https://wisconsineats.com"
 BRAND = "Wisconsin Eats"
 TAGLINE = "Fish fry & supper club guide"
-EMAIL = "hello@wisconsineats.com"
+EMAIL = "work-with-nick@gmail.com"
 TODAY = "2026-09-26"
 CHECKED = "September 2026"
 

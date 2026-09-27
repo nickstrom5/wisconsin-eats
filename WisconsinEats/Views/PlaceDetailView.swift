@@ -190,7 +190,7 @@ struct PlaceDetailView: View {
     private var listingNote: String {
         let checked = place.handChecked
         if place.source == "research" {
-            return "This place is on our hand-checked list of Wisconsin institutions, confirmed open in Sep 2026, and placed from its own map listing or street address."
+            return "On our hand-checked list, confirmed open in Sep 2026. The open map data didn't list it as a place to eat, so it's placed from its own map listing or street address."
         }
         switch place.tier {
         case .licensed:
@@ -210,7 +210,7 @@ struct PlaceDetailView: View {
     // MARK: helpers
 
     private var shareText: String {
-        [place.name, place.fullAddress, "via Fish Fry & Supper Clubs WI"].filter { !$0.isEmpty }.joined(separator: "\n")
+        [place.name, place.fullAddress, "via Wisconsin Eats · wisconsineats.com"].filter { !$0.isEmpty }.joined(separator: "\n")
     }
 
     private func lines(_ s: String?, prefix: String) -> [String] {

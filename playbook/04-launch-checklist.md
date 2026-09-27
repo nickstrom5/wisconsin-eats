@@ -7,7 +7,7 @@ In order. Items marked **Nick** need your accounts; everything else is in the re
 - [ ] **Nick:** Search USPTO for "Wisconsin Eats" (classes 9 and 43).
 - [ ] **Nick:** Create a GitHub repo, push, and turn on Pages from `/docs` (runbook sections 3–4). Pages needs a public repo
       on the free plan, and everything outside `docs/` is then public too. That's fine: the playbook has no secrets.
-- [ ] **Nick:** Set up Cloudflare DNS and email routing for `hello@wisconsineats.com` (runbook sections 4–6).
+- [ ] **Nick:** Set up Cloudflare DNS (runbook section 4). Support email is work-with-nick@gmail.com, so email routing (sections 5–6) is optional.
 - [ ] Check `https://wisconsineats.com/` and `/privacy.html` load over HTTPS.
 
 ## Build

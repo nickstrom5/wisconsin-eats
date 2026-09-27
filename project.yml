@@ -38,6 +38,7 @@ targets:
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
         UIRequiresFullScreen: false
+        UIUserInterfaceStyle: Light      # the palette is light-only (Design/Theme.swift); dark mode made lists unreadable
         NSLocationWhenInUseUsageDescription: "Your location sorts fish fries, supper clubs and restaurants by distance. It stays on your device."
         ITSAppUsesNonExemptEncryption: false
         LSApplicationQueriesSchemes: [maps]
@@ -47,7 +48,7 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
     scheme:
-      testTargets: [WisconsinEatsTests]
+      testTargets: [WisconsinEatsTests, WisconsinEatsUITests]
 
   WisconsinEatsTests:
     type: bundle.unit-test
@@ -60,3 +61,16 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.wisconsineats.ios.tests
         GENERATE_INFOPLIST_FILE: true
+
+  WisconsinEatsUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: WisconsinEatsUITests
+    dependencies:
+      - target: WisconsinEats
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wisconsineats.ios.uitests
+        GENERATE_INFOPLIST_FILE: true
+        TEST_TARGET_NAME: WisconsinEats

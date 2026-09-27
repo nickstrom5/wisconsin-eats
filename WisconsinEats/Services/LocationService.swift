@@ -1,5 +1,6 @@
 import CoreLocation
 import Observation
+import UIKit
 
 /// "Near me" sorting. Asks for when-in-use permission only when a list is sorted by distance; the location never leaves the device.
 @MainActor
@@ -17,6 +18,11 @@ final class LocationService: NSObject, CLLocationManagerDelegate {
     }
 
     var isDenied: Bool { status == .denied || status == .restricted }
+
+    /// Once location is off for the app, iOS won't ask again; the app's page in Settings is the only way back.
+    static func openSettings() {
+        if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
+    }
 
     func request() {
         switch manager.authorizationStatus {

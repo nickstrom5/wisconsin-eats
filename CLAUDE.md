@@ -22,6 +22,12 @@ Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `
 - The Xcode project is **generated**: `xcodegen generate`. Never commit `WisconsinEats.xcodeproj`.
 - Build: `xcodebuild build -project WisconsinEats.xcodeproj -scheme WisconsinEats -destination 'platform=iOS Simulator,name=<an iPhone>' -derivedDataPath ./DerivedData CODE_SIGNING_ALLOWED=NO`
 - Tests: same with `test -only-testing:WisconsinEatsTests`. CI (`.github/workflows/build.yml`) runs exactly this on `macos-26`.
+- UI smoke test (`WisconsinEatsUITests`, taps through every screen on iPhone and iPad): `-only-testing:WisconsinEatsUITests`,
+  **without** `CODE_SIGNING_ALLOWED=NO`, because the UI-test runner must be signed to launch, even on a simulator. Run it on both dedicated
+  simulators before every submission. It needs network access for Apple Maps place cards.
+- Light mode only: `UIUserInterfaceStyle: Light` in `project.yml`. The palette has no dark variants, and dark mode made lists unreadable.
+- `WisconsinEats/Resources/PrivacyInfo.xcprivacy` declares UserDefaults (CA92.1), no tracking and no collected data. Update it
+  if you add any required-reason API or SDK.
 - Screens: launch with `-screenshot <home|fishfry|supper|detail|map|inspections|icons|saved|about>`. That fixes the location to downtown
   Milwaukee and seeds saved places (`WisconsinEats/App/ScreenshotMode.swift`). On iPad each shot also selects a place for the detail column.
   `scripts/capture-screenshots.sh "<sim>"` writes `docs/screenshots/<name>.png`; `PREFIX=ipad-` for the iPad set.

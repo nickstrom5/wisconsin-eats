@@ -99,7 +99,9 @@ struct GuideListView: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(location.isDenied ? "Location is off for this app. Turn it on in Settings to sort by distance." : "Sort by distance from where you are. Your location stays on this device.")
                 .font(.subheadline).foregroundStyle(Theme.ink2)
-            if !location.isDenied {
+            if location.isDenied {
+                Button("Open Settings") { LocationService.openSettings() }.buttonStyle(.bordered).tint(Theme.green)
+            } else {
                 Button("Use my location") { location.request() }.buttonStyle(.borderedProminent).tint(Theme.green)
             }
         }

@@ -59,7 +59,7 @@ Every fish fry, supper club and custard stand was confirmed open in September 20
 PRIVATE BY DESIGN
 No account, no tracking, no ads. Your location, if you share it, only sorts lists on your device. Saved places stay on your device.
 
-Places open and close, so check before you go. Spot a mistake? Email hello@wisconsineats.com.
+Places open and close, so check before you go. Spot a mistake? Email work-with-nick@gmail.com.
 
 Not affiliated with any restaurant, team, chain or government agency. Map data © OpenStreetMap contributors, Overture Maps Foundation.
 ```

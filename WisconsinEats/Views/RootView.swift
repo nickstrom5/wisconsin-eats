@@ -52,8 +52,9 @@ struct TabRoot: View {
 struct SplitRoot: View {
     @Environment(AppModel.self) private var model
     @State private var sidebar: SidebarItem? = .guide(.fishFry)
-    // App Store shots show all three columns; people get the system default and the sidebar button
-    @State private var columns: NavigationSplitViewVisibility = ScreenshotMode.isActive ? .all : .automatic
+    // .automatic opened a portrait iPad on a blank "Pick a place" page with the list hidden behind the sidebar button;
+    // .all shows the list next to the place (and the sidebar too, in landscape)
+    @State private var columns: NavigationSplitViewVisibility = .all
 
     enum SidebarItem: Hashable { case guide(Guide), map, saved, about }
 

@@ -13,7 +13,7 @@ for q in todo:
         continue
     url = "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?" + urllib.parse.urlencode(
         {"address": q, "benchmark": "Public_AR_Current", "format": "json"})
-    req = urllib.request.Request(url, headers={"User-Agent": "wisconsin-eats-pipeline (hello@wisconsineats.com)"})
+    req = urllib.request.Request(url, headers={"User-Agent": "wisconsin-eats-pipeline (https://wisconsineats.com)"})
     try:
         res = json.load(urllib.request.urlopen(req, timeout=30))["result"]["addressMatches"]
     except Exception as e:

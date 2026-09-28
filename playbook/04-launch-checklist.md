@@ -20,6 +20,7 @@ In order. Items marked **Nick** need your accounts; everything else is in the re
 - [ ] Look at the iPad layout in landscape and portrait.
 
 ## Store
+- [x] Submitted for review 2026-09-28: 1.0.0 (2), automatic release. Next: watch for Apple's email; after approval, see "After approval" below.
 - [ ] **Nick:** Create the App Store Connect record. Fill it in from `06-app-store-listing.md` and `09-app-store-connect.md`.
 - [ ] Upload the screenshots from `docs/screenshots/`: iPhone `home, fishfry, detail, map, supper, icons, inspections, saved`, and the `ipad-` set.
 - [ ] Set the privacy label to "Data Not Collected". Answer the age questions honestly: alcohol references are infrequent.

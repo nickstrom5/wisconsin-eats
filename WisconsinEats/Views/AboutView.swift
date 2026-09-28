@@ -30,13 +30,13 @@ struct AboutView: View {
             Section("Privacy") {
                 Text("The app collects nothing. Your location, if you allow it, only sorts lists by distance on this device. Saved places stay on this device.")
                     .font(.subheadline).foregroundStyle(Theme.ink2)
-                Link("Privacy policy", destination: URL(string: "https://wisconsineats.com/privacy.html")!)
-                Link("Terms", destination: URL(string: "https://wisconsineats.com/terms.html")!)
+                Link("Privacy policy", destination: Links.privacy)
+                Link("Terms", destination: Links.terms)
             }
             Section {
                 Text("Not affiliated with any team, restaurant, chain or government agency. Data as of \(model.generated). Places open and close; check before you go.")
                     .font(.footnote).foregroundStyle(Theme.muted)
-                Link("Report a missing or closed place", destination: URL(string: "mailto:work-with-nick@gmail.com?subject=Wisconsin%20Eats%20correction")!)
+                Link("Report a missing or closed place", destination: Links.correctionEmail)
                 Text("Version \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0")").font(.footnote).foregroundStyle(Theme.muted)
             }
         }

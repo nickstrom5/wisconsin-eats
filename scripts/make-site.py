@@ -21,7 +21,12 @@ from shapely.prepared import prep
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DOCS = f"{ROOT}/docs"
-DOMAIN = "https://wisconsineats.com"
+# Where the site lives. Today: GitHub Pages at the project address. When the hub domain is bought, set CUSTOM_DOMAIN to
+# this state's subdomain (e.g. "wisconsin.<hub domain>"), re-run, push, and add a CNAME DNS record pointing it at
+# nickstrom5.github.io. GitHub then forwards the old github.io links (the ones inside shipped app builds) to it.
+CUSTOM_DOMAIN = None
+DOMAIN = f"https://{CUSTOM_DOMAIN}" if CUSTOM_DOMAIN else "https://nickstrom5.github.io/wisconsin-eats"
+BASE = "" if CUSTOM_DOMAIN else "/wisconsin-eats"     # path prefix for root-relative links
 BRAND = "Wisconsin Eats"
 TAGLINE = "Fish fry & supper club guide"
 EMAIL = "work-with-nick@gmail.com"
@@ -326,6 +331,8 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
 </body>
 </html>
 """
+    if BASE:   # served under /wisconsin-eats/: every root-relative link and asset gets the prefix
+        doc = re.sub(r'(href|src|srcset)="/', rf'\1="{BASE}/', doc)
     os.makedirs(os.path.dirname(f"{DOCS}/{path}"), exist_ok=True)
     open(f"{DOCS}/{path}", "w").write(doc)
     return path
@@ -809,11 +816,14 @@ urls.sort(key=lambda u: (u != "", u.startswith("cities/"), u))
 open(f"{DOCS}/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                        + "".join(f"  <url><loc>{DOMAIN}/{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n")
 open(f"{DOCS}/robots.txt", "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n")
-json.dump({"name": BRAND, "short_name": "WI Eats", "description": f"{TAGLINE} for every Wisconsin restaurant.", "start_url": "/", "display": "browser",
+json.dump({"name": BRAND, "short_name": "WI Eats", "description": f"{TAGLINE} for every Wisconsin restaurant.", "start_url": f"{BASE}/", "display": "browser",
            "background_color": "#fbfaf6", "theme_color": "#203731",
-           "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"}]},
+           "icons": [{"src": f"{BASE}/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": f"{BASE}/icon-512.png", "sizes": "512x512", "type": "image/png"}]},
           open(f"{DOCS}/site.webmanifest", "w"), indent=2)
-open(f"{DOCS}/CNAME", "w").write("wisconsineats.com\n")
+if CUSTOM_DOMAIN:
+    open(f"{DOCS}/CNAME", "w").write(CUSTOM_DOMAIN + "\n")
+elif os.path.exists(f"{DOCS}/CNAME"):
+    os.remove(f"{DOCS}/CNAME")   # no custom domain yet: GitHub serves the project address
 open(f"{DOCS}/.nojekyll", "w").write("")
 json.dump({"generated": TODAY, "restaurants": N_REST, "towns": N_TOWNS, "fish_fry": len(FISH), "supper_clubs": len(SUP), "custard": len(CUST),
            "fish_listed": N_FISH_KNOWN, "fish_counts": dict(FISH_WORDS.most_common(12)), "not_only_friday": NOT_ONLY_FRIDAY,

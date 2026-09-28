@@ -3,7 +3,7 @@
 **App Store name:** `Wisconsin Eats: Restaurants` (27 of 30)
 **Subtitle:** `Fish Fry & Supper Club Guide` (28 of 30)
 **Home Screen name** (`CFBundleDisplayName`): `WI Eats`
-**Domain:** wisconsineats.com · **Bundle ID:** `com.wisconsineats.ios` · **Repo folder:** `wi-eats/`
+**Website:** https://nickstrom5.github.io/wisconsin-eats/ for now; later a state subdomain of a hub domain (see below) · **Bundle ID:** `com.wisconsineats.ios` · **Repo folder:** `wi-eats/`
 
 ## Why this name
 - Nick's call (2026-09-26): the name has to cover every restaurant, not just fish fries and supper clubs;
@@ -21,8 +21,15 @@
   - Nearest names: Isthmus Eats and Miltown Eats, both from Isthmus Eats LLC, for Madison and Milwaukee (10 and 6 ratings).
   - Different words, but the same "<place> Eats" pattern. If Apple or that developer objects, fall back to "Wisconsin Eats Guide".
   - Fish fry guides exist for other cities: Cincinnati Fish Fry and Cleveland Fish Fry Guide, both from Patchboard, LLC. That shows demand. There is no Wisconsin one.
-- **Domain:** Verisign's RDAP answered 404 for wisconsineats.com, meaning unregistered (the control, wieats.com, answered 200). **Register it now** at Cloudflare Registrar, before anything links to it.
+- **Domain (not bought, Nick's call 2026-09-28):** Verisign's RDAP answered 404 for wisconsineats.com, meaning unregistered (the control, wieats.com, answered 200). Nick is buying a hub domain instead; see the domain plan below.
 - **Trademark:** not checked. Search USPTO (tmsearch.uspto.gov) for "Wisconsin Eats" in class 9 and class 43 before submitting.
+
+## Domain plan (Nick, 2026-09-28)
+One hub domain for all the state food apps: a landing page that links to every state, with a subdomain per state
+(`wisconsin.<hub>`, `illinois.<hub>` …). Each state's site stays its own GitHub Pages repo, and the subdomain is a CNAME
+record to `nickstrom5.github.io`. Until the hub domain is bought, the Wisconsin site is at the github.io project address.
+The app and App Store Connect point there, and GitHub forwards those links once the subdomain is set.
+If the state apps become a series, pick one naming pattern before the next one ships ("Illinois Eats"; the Chicago app is "Chi Ranked").
 
 ## Rejected
 | Name | Why not |

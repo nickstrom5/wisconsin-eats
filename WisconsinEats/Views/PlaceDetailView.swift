@@ -210,7 +210,7 @@ struct PlaceDetailView: View {
     // MARK: helpers
 
     private var shareText: String {
-        [place.name, place.fullAddress, "via Wisconsin Eats · wisconsineats.com"].filter { !$0.isEmpty }.joined(separator: "\n")
+        [place.name, place.fullAddress, "via Wisconsin Eats", Links.site.absoluteString].filter { !$0.isEmpty }.joined(separator: "\n")
     }
 
     private func lines(_ s: String?, prefix: String) -> [String] {

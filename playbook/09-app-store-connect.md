@@ -4,7 +4,7 @@ The app is free, has no in-app purchases, no account, no backend and no restrict
 There is nothing to wait on from Apple except review.
 
 ## 1. Identifiers (developer.apple.com → Certificates, IDs & Profiles)
-- App ID: `com.wisconsineats.ios`, explicit. No capabilities to tick. Maps and Spotlight need no entitlement.
+- App ID: `com.wisconsineats.ios`, explicit. **Registered 2026-09-28** by an App Store export with `-allowProvisioningUpdates`: it has a cloud-managed Apple Distribution certificate and the profile "iOS Team Store Provisioning Profile: com.wisconsineats.ios". No capabilities to tick.
 - Team: Nick's team, `4C8TU6U7MQ` (same as Cartworth). Set `DEVELOPMENT_TEAM` in `project.yml`, then run `xcodegen generate`.
 
 ## 2. New app (appstoreconnect.apple.com → Apps → +)
@@ -21,8 +21,8 @@ There is nothing to wait on from Apple except review.
   - Answer "None" to everything else.
   - No user-generated content, no web browsing, no messaging, no gambling.
   - Expect 13+. Don't under-declare; references to alcohol count.
-- Privacy policy URL: `https://wisconsineats.com/privacy.html`
-- Support URL: `https://wisconsineats.com/`. Marketing URL: `https://wisconsineats.com/`.
+- Privacy policy URL: `https://nickstrom5.github.io/wisconsin-eats/privacy.html`
+- Support URL: `https://nickstrom5.github.io/wisconsin-eats/`. Marketing URL: `https://nickstrom5.github.io/wisconsin-eats/`. (Switch both to the state subdomain once the hub domain exists; no new build needed.)
 
 ## 4. Pricing and availability
 - Price: **Free**. Availability: United States only at launch (every listing is in Wisconsin). Add Canada later if people ask.
@@ -40,6 +40,11 @@ There is nothing to wait on from Apple except review.
 - `ITSAppUsesNonExemptEncryption = NO` is already in Info.plist (only Apple's HTTPS via MapKit). No questions at upload.
 
 ## 7. Build and upload
+Already done on 2026-09-28: the signed archive "WisconsinEats 1.0.0 (1)" is in Xcode's Organizer, and it exports cleanly for the App Store.
+Once the App Store Connect record exists, upload either from Organizer (Distribute App → App Store Connect) or with:
+`xcodebuild -exportArchive -archivePath "<archive>" -exportPath build/export -exportOptionsPlist scripts/ExportOptions-AppStore.plist -allowProvisioningUpdates`
+after changing `destination` in that plist from `export` to `upload`. For each later build, bump `CURRENT_PROJECT_VERSION`.
+
 1. `xcodegen generate`, open `WisconsinEats.xcodeproj`, then set the team if it isn't set.
 2. Set the version to 1.0 and the build to 1 (`MARKETING_VERSION` / `CURRENT_PROJECT_VERSION` in `project.yml`).
 3. Product → Archive → Distribute App → App Store Connect → Upload.

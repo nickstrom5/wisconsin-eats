@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wisconsineats.com/sitemap.xml
+Sitemap: https://nickstrom5.github.io/wisconsin-eats/sitemap.xml

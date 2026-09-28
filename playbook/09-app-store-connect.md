@@ -80,6 +80,6 @@ To try it: Guides → Friday Fish Fry → any place → "Ratings, hours & photos
 - Release: manual release, so the site's App Store button can be switched the same day.
 
 ## 9. After approval
-App Store Connect record created 2026-09-28: Apple ID **6816947017** (App Store URL once live: https://apps.apple.com/app/id6816947017). Build 1.0.0 (1) uploaded the same day.
+App Store Connect record created 2026-09-28: Apple ID **6816947017** (App Store URL once live: https://apps.apple.com/app/id6816947017). Build 1.0.0 (1) was refused at "Add for Review" because it was built with Xcode 27.1 beta. Build 1.0.0 (2), archived with the public Xcode 27.0 (27A266a), was uploaded the same day.
 - Put the numeric Apple ID into `docs/*.html` (see "SEO after launch" in `10-site-and-email-runbook.md`).
 - Set `APP_STORE_URL` in `scripts/make-site.py`'s page template, re-run it, and commit.

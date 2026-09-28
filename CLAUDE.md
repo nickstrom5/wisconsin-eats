@@ -34,6 +34,10 @@ Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `
   App Store sizes come from the "WI Eats 6.9" (iPhone 17 Pro Max, 1320×2868) and "WI Eats iPad 13" (2064×2752) simulators.
   Use those two for builds and tests too. Other sessions (e.g. the Chicago app) run tests on the shared booted iPhone 17 Pro,
   and two test runs on one simulator stall.
+- **App Store builds must come from the public (non-beta) Xcode.** App Review refused build 1 because /Applications/Xcode.app is 27.1
+  beta (27A9269). Archive and upload with `DEVELOPER_DIR="/Applications/Xcode 1.app/Contents/Developer"` (Xcode 27.0, 27A266a), or
+  whatever Xcode is current and public when you read this; check `DTXcodeBuild` in the archived app's Info.plist. Bump
+  `CURRENT_PROJECT_VERSION` for every upload.
 - Brand images: `swift scripts/make-brand.swift` (cheese-wedge icon, `og.png`, favicons). Colors are sRGB brand tokens:
   green #203731, gold #FFB612.
 - The Home Screen label is `WI Eats` (`CFBundleDisplayName`); the App Store name is set in App Store Connect, not in the project.

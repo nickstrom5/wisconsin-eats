@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FormatVersion</key>
+	<integer>1</integer>
+	<key>Store</key>
+	<dict>
+		<key>WisconsinEatsTests</key>
+		<dict>
+			<key>WisconsinEatsTests</key>
+			<dict>
+				<key>testBundledData</key>
+				<dict>
+					<key>mrnet</key>
+					<real>1.9043420553207397</real>
+				</dict>
+				<key>testDecodesAndHidesNonRestaurantsByDefault</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.0074080228805541992</real>
+				</dict>
+				<key>testFiltersAndSavedPlaces</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.0059369802474975586</real>
+				</dict>
+				<key>testGuides</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.0026769638061523438</real>
+				</dict>
+				<key>testInspectionsAndMatchRates</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.0042240619659423828</real>
+				</dict>
+				<key>testNearestSort</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.0041110515594482422</real>
+				</dict>
+				<key>testSearchTownsAndDishes</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.003459930419921875</real>
+				</dict>
+				<key>testSearchWordStartsApostrophesAndStreets</key>
+				<dict>
+					<key>mrnet</key>
+					<real>0.0033650398254394531</real>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

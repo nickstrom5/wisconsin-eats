@@ -167,6 +167,7 @@ CSS = """
   .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
   .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: #16211d; font-weight: 700; padding: 14px 20px; border-radius: 14px; text-decoration: none; font-size: 17px; }
   .btn svg { width: 22px; height: 22px; }
+  .btn-ghost { background: transparent; color: var(--green); border: 2px solid var(--green); }
   .pill { font-size: 14px; color: var(--muted); }
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 28px 0 0; padding: 0; list-style: none; }
   .stats li { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; }
@@ -249,15 +250,15 @@ def store_button(label="Get early access"):
             f'{APPLE}<span class="store-label">{label}</span></a>')
 
 
-def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview:large", og_alt=None):
+def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview:large", og_alt=None, extra_css=""):
     assert 50 <= len(title) <= 60 or path == "404.html", (path, len(title), title)
     assert 140 <= len(desc) <= 160 or path == "404.html", (path, len(desc), desc)
     assert body.count("<h1") == 1, path
-    url = DOMAIN + "/" + ("" if path == "index.html" else path)
+    url = DOMAIN + "/" + ("" if path == "index.html" else path.removesuffix("index.html"))
     og_alt = og_alt or f"{BRAND}: {TAGLINE}. Every Wisconsin restaurant, with hand-checked fish fries, supper clubs and custard stands."
     ld = "\n".join(jsonld(x) for x in lds)
     doc = f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-base="{BASE}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -287,7 +288,7 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<style>{CSS}</style>
+<style>{CSS}{extra_css}</style>
 {ld}
 </head>
 <body>
@@ -300,12 +301,14 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
       <a href="/wisconsin-supper-clubs.html">Supper clubs</a>
       <a href="/wisconsin-frozen-custard.html">Custard</a>
       <a href="/#cities">Cities</a>
+      <a href="/explore/">Search</a>
     </nav>
   </header>
 {body}
   <footer>
     <nav aria-label="Footer">
       <a href="/">{BRAND} app</a>
+      <a href="/explore/">Search every Wisconsin restaurant</a>
       <a href="/wisconsin-fish-fry.html">Wisconsin fish fry guide</a>
       <a href="/wisconsin-supper-clubs.html">Wisconsin supper clubs</a>
       <a href="/wisconsin-frozen-custard.html">Wisconsin frozen custard</a>
@@ -617,6 +620,142 @@ for c in CITY_PAGES:
     written.append(page(path, title, desc, "\n".join(parts),
                         [article_ld(url, f"{c} fish fries, supper clubs and restaurants", desc), bc, item_list(f"Fish fries, supper clubs and custard near {c}", uniq, url)]))
 
+# ---------------------------------------------------------------- web app (docs/explore/): data split + page
+os.makedirs(f"{DOCS}/data", exist_ok=True)
+CORE_KEYS = ["id", "n", "c", "cu", "t", "s", "a", "z", "la", "lo", "b", "ch", "v", "g", "hc", "ip", "f", "fish", "h", "j"]
+cols = {k: [] for k in CORE_KEYS + ["gr", "sc", "in"]}
+detail = []
+for r in D["places"]:
+    for k in CORE_KEYS:
+        v = r.get(k)
+        cols[k].append(round(v, 4) if k in ("la", "lo") and v is not None else v)
+    i = r.get("in") or {}
+    cols["gr"].append(i.get("g")); cols["sc"].append(i.get("sc")); cols["in"].append(i.get("n"))
+    d = {k: r[k] for k in ("ph", "w", "note", "days", "sides", "icon", "hon", "jbf", "lic") if r.get(k)}
+    if i: d["in"] = i
+    detail.append(d or None)
+core = {"generated": D["generated"], "cities": CITIES, "cuisines": CUISINES, "brands": D["brands"], "sources": D["sources"],
+        "calibration": D.get("calibration", {}), "cols": cols}
+json.dump(core, open(f"{DOCS}/data/core.json", "w"), separators=(",", ":"), ensure_ascii=False)
+json.dump(detail, open(f"{DOCS}/data/detail.json", "w"), separators=(",", ":"), ensure_ascii=False)
+json.dump(json.load(open(f"{ROOT}/data/wi/wi_shapes.json")), open(f"{DOCS}/data/wi_shapes.json", "w"), separators=(",", ":"))
+
+EXPLORE_CSS = """
+  [hidden] { display: none !important; }
+  .ex-hero { padding: 28px 0 8px; }
+  .ex-hero h1 { font-size: clamp(30px, 6vw, 44px); }
+  .ex-controls { background: var(--bg); padding: 10px 0 8px; border-bottom: 1px solid var(--rule); }
+  .ex-guides { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+  .ex-guides button, .ex-view button, .ex-small { flex: 0 0 auto; border: 1px solid var(--rule); background: var(--surface); color: var(--green); border-radius: 999px; padding: 7px 12px; font: 600 14px/1.2 inherit; font-family: inherit; cursor: pointer; }
+  .ex-guides button[aria-pressed="true"], .ex-view button[aria-pressed="true"] { background: var(--green); color: #fff; border-color: var(--green); }
+  .ex-row1 { display: flex; gap: 8px; align-items: center; }
+  .ex-row1 input[type=search] { flex: 1; min-width: 0; font: 16px/1.3 inherit; font-family: inherit; padding: 10px 12px; border: 2px solid var(--green); border-radius: 12px; background: var(--surface); color: var(--ink); }
+  .ex-row2 { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; font-size: 14px; }
+  .ex-row2 select { font: 14px inherit; font-family: inherit; padding: 6px 8px; border: 1px solid var(--rule); border-radius: 8px; background: var(--surface); color: var(--ink); max-width: 46vw; }
+  .ex-view { margin-left: auto; display: flex; gap: 4px; }
+  #ex-count { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+  #ex-sub { margin: 4px 0 0; font-size: 14px; color: var(--ink2); }
+  #ex-locmsg { font-size: 13px; color: var(--muted); margin: 4px 0 0; }
+  .ex-list { list-style: none; padding: 0; margin: 10px 0; }
+  .ex-list li + li { border-top: 1px solid var(--rule); }
+  .ex-row { width: 100%; display: flex; gap: 12px; align-items: center; text-align: left; background: none; border: 0; padding: 12px 4px; cursor: pointer; color: var(--ink); font: inherit; }
+  .ex-row:hover { background: var(--surface2); }
+  .ex-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+  .ex-main b { font-weight: 650; }
+  .ex-town { font-size: 14px; color: var(--muted); }
+  .ex-chips .tag { margin: 0 4px 2px 0; }
+  .tag-jb { background: var(--green); color: #fff; }
+  .tag-plain { background: var(--surface2); color: var(--green); }
+  .tag-dash { background: transparent; color: var(--muted); border: 1px dashed var(--rule); }
+  .ex-metric { text-align: right; display: flex; flex-direction: column; }
+  .ex-metric b { font: 800 22px/1 var(--display); color: var(--green); }
+  .ex-metric small { font-size: 11px; color: var(--muted); }
+  .ex-rank { flex: 0 0 34px; height: 34px; display: grid; place-items: center; font: 800 20px var(--display); color: var(--green); border-radius: 8px; }
+  .ex-rank.top { background: var(--gold); color: #16211d; }
+  .ex-empty { padding: 24px 4px; color: var(--muted); }
+  #ex-more { display: block; margin: 8px auto 24px; }
+  #ex-mapwrap { position: relative; height: min(72vh, 720px); margin: 10px 0 20px; border: 1px solid var(--rule); border-radius: 16px; overflow: hidden; background: #cfe3ea; }
+  #ex-map { width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
+  .ex-zoom { position: absolute; right: 10px; top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .ex-zoom button { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--rule); background: var(--surface); color: var(--green); font: 700 20px/1 inherit; cursor: pointer; }
+  #ex-maphint { position: absolute; left: 10px; bottom: 8px; margin: 0; font-size: 13px; background: var(--surface); padding: 3px 8px; border-radius: 999px; color: var(--ink2); }
+  .ex-panel { position: fixed; z-index: 20; right: 0; top: 0; bottom: 0; width: min(440px, 100%); overflow-y: auto; background: var(--surface); border-left: 1px solid var(--rule); box-shadow: -8px 0 24px rgba(0,0,0,.12); padding: 18px 20px 40px; }
+  @media (max-width: 600px) { .ex-panel { top: auto; height: 86vh; border-left: 0; border-top: 4px solid var(--gold); border-radius: 18px 18px 0 0; } }
+  .ex-close { position: sticky; top: 0; float: right; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--rule); background: var(--surface); font-size: 24px; line-height: 1; cursor: pointer; color: var(--ink); }
+  .ex-kicker { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .1em; color: var(--green2); }
+  .ex-panel h2 { font-size: 34px; margin: 4px 0 6px; text-transform: uppercase; }
+  .ex-addr, .ex-dist { margin: 0 0 4px; color: var(--ink2); font-size: 15px; }
+  .ex-actions { margin: 14px 0 8px; display: grid; gap: 8px; }
+  .ex-apple { justify-content: center; }
+  .ex-act-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .ex-act-row a, .ex-act-row button { flex: 1; min-width: 88px; text-align: center; padding: 10px; border: 1px solid var(--rule); border-radius: 12px; text-decoration: none; color: var(--green); font: 600 14px inherit; font-family: inherit; background: var(--surface); cursor: pointer; }
+  .ex-act-row button[aria-pressed="true"] { background: var(--goldsoft); }
+  .ex-sec { margin-top: 18px; }
+  .ex-sec h3 { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); padding-bottom: 6px; margin-bottom: 8px; }
+  .ex-sec p, .ex-sec li { font-size: 15px; color: var(--ink2); margin: 6px 0; }
+  .ex-kv { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; padding: 3px 0; }
+  .ex-kv span { color: var(--ink2); }
+  .ex-fine { font-size: 13px !important; color: var(--muted) !important; }
+  .ex-grade { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+  .ex-g { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; color: #fff; font: 800 24px var(--display); }
+  .ex-g-A { background: #12733a; } .ex-g-B { background: #4b7a1b; } .ex-g-C { background: #f2b01e; color: #16211d; } .ex-g-D { background: #e8804f; } .ex-g-F { background: #c1302f; }
+  .ex-app { margin-top: 22px; font-size: 14px; color: var(--muted); }
+  body.ex-open { overflow: hidden; }
+  @media (min-width: 601px) { body.ex-open { overflow: auto; } }
+"""
+url = f"{DOMAIN}/explore/"
+title = fit(["Search Wisconsin Restaurants, Fish Fries & Supper Clubs", "Wisconsin Restaurant Search & Map | Wisconsin Eats"], 50, 60)
+desc = fit([f"Search all {N_REST:,} Wisconsin restaurants by name, town, street or fish, and browse {len(FISH)} hand-checked fish fries and {len(SUP)} supper clubs on a map.",
+            f"Search {N_REST:,} Wisconsin restaurants by name, town, street or fish, and map {len(FISH)} hand-checked fish fries and {len(SUP)} supper clubs. Free."], 140, 160)
+nav, bc = crumbs([("Home", "/"), ("Search", "/explore/")])
+guide_buttons = "".join(f'<button type="button" data-g="{k}" aria-pressed="false">{e(t)}</button>' for k, t in
+                        (("fishfry", "Fish fry"), ("supper", "Supper clubs"), ("custard", "Custard"), ("icons", "Icons"), ("oldest", "Oldest"),
+                         ("inspections", "Inspections"), ("all", "All restaurants"), ("saved", "Saved")))
+body = f"""{nav}
+  <main id="main">
+  <section class="ex-hero">
+    <h1><span class="kicker">{BRAND} · on the web</span>Search Wisconsin restaurants</h1>
+    <p class="sub">All {N_REST:,} restaurants, cafés, taverns and bakeries, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands. The same data as the free iPhone and iPad app. Nothing about you is stored anywhere but this browser.</p>
+  </section>
+  <p id="ex-loading">Loading the restaurant list…</p>
+  <noscript><p>The search needs JavaScript. The guides work without it: <a href="/wisconsin-fish-fry.html">fish fry</a>, <a href="/wisconsin-supper-clubs.html">supper clubs</a>, <a href="/wisconsin-frozen-custard.html">frozen custard</a>.</p></noscript>
+  <div id="ex-app" hidden>
+    <div class="ex-controls">
+      <div class="ex-guides" role="group" aria-label="Guides">{guide_buttons}</div>
+      <div class="ex-row1">
+        <label class="skip" for="ex-q">Search</label>
+        <input id="ex-q" type="search" placeholder="Name, town, street, zip or fish" autocomplete="off" enterkeyhint="search">
+        <button type="button" id="ex-locate" class="ex-small">Near me</button>
+      </div>
+      <div class="ex-row2">
+        <label>Sort <select id="ex-sort" aria-label="Sort"></select></label>
+        <select id="ex-town" aria-label="Town"></select>
+        <select id="ex-cuisine" aria-label="Kind of place"></select>
+        <label><input type="checkbox" id="ex-chains"> Hide chains</label>
+        <button type="button" id="ex-clear" class="ex-small" hidden>Clear filters</button>
+        <div class="ex-view" role="group" aria-label="View"><button type="button" data-v="list" aria-pressed="true">List</button><button type="button" data-v="map" aria-pressed="false">Map</button></div>
+      </div>
+      <p id="ex-sub"></p>
+      <p id="ex-count" aria-live="polite"></p>
+      <p id="ex-locmsg"></p>
+    </div>
+    <div id="ex-listwrap"><ol id="ex-list" class="ex-list"></ol><button type="button" id="ex-more" class="ex-small" hidden></button></div>
+    <div id="ex-mapwrap" hidden>
+      <canvas id="ex-map" aria-label="Map of Wisconsin with a dot for each place in the list. The list view has the same places."></canvas>
+      <div class="ex-zoom"><button type="button" id="ex-zin" aria-label="Zoom in">+</button><button type="button" id="ex-zout" aria-label="Zoom out">−</button></div>
+      <p id="ex-maphint"></p>
+    </div>
+  </div>
+  <aside id="ex-panel" class="ex-panel" hidden aria-labelledby="ex-pname"></aside>
+  </main>
+<script>
+{open(f"{ROOT}/scripts/explore.js").read()}
+</script>"""
+webapp_ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": f"{BRAND} web app", "url": url,
+             "applicationCategory": "TravelApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript",
+             "description": desc, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@id": f"{DOMAIN}/#org"}}
+written.append(page("explore/index.html", title, desc, body, [webapp_ld, bc], extra_css=EXPLORE_CSS))
+
 # ---------------------------------------------------------------- landing page
 shots = [("home", "Wisconsin Eats home screen: Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places and Inspections guides, with a search box for every restaurant in the state.", "Guides for Fridays, supper clubs and custard."),
          ("fishfry", "Friday Fish Fry list in Wisconsin Eats, sorted by distance from downtown Milwaukee, with the fish each place serves.", "Fish fries nearest you first."),
@@ -663,7 +802,7 @@ body = f"""  <main id="main">
   <section class="hero">
     <h1><span class="kicker">{BRAND}: the {TAGLINE.lower()} for iPhone and iPad</span>Every Wisconsin restaurant, and the fish fries worth the drive</h1>
     <p class="lede">{BRAND} is a free Wisconsin restaurant guide. Find a Friday fish fry near you, a supper club for Saturday and a custard stand for after, from lists we checked by hand, plus all {N_REST:,} restaurants, cafés, taverns and bakeries in {N_TOWNS:,} towns.</p>
-    <div class="cta-row">{store_button()}<span class="pill store-note">Free. No ads, no account. Coming to the App Store.</span></div>
+    <div class="cta-row">{store_button()}<a class="btn btn-ghost" href="/explore/">Search on the web</a><span class="pill store-note">Free. No ads, no account. Coming to the App Store.</span></div>
     <ul class="stats" aria-label="What's in the app">
       <li><b>{len(FISH)}</b><span>Friday fish fries</span></li>
       <li><b>{len(SUP)}</b><span>supper clubs</span></li>
@@ -811,7 +950,7 @@ body = f"""  <main id="main">
 page("404.html", f"Page not found | {BRAND}", "This page doesn't exist.", body, robots="noindex,follow")
 
 # ---------------------------------------------------------------- plumbing
-urls = ["" if w == "index.html" else w for w in written]
+urls = ["" if w == "index.html" else w.replace("index.html", "") for w in written]
 urls.sort(key=lambda u: (u != "", u.startswith("cities/"), u))
 open(f"{DOCS}/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                        + "".join(f"  <url><loc>{DOMAIN}/{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n")

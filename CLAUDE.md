@@ -62,4 +62,6 @@ Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `
 ## Public vs private
 - `docs/` is the published website; only site files go there. Strategy, listing copy and launch notes live in `playbook/`.
 - Commits are local only (no remote, no push):
-  `git -c user.name="Nick Soderstrom" -c user.email="nicholas.soderstrom@insidesuccess.com" commit`.
+  `git -c user.name="Nick Soderstrom" -c user.email="329204362+nickstrom5@users.noreply.github.com" commit` (also set as this repo's
+  `git config user.email`). The repo is public: never a personal or work email. History was rewritten to the no-reply address on
+  2026-09-28, and the pre-rewrite history is kept locally only, in the branch `backup-before-email-rewrite`.

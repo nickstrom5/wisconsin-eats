@@ -21,8 +21,8 @@ There is nothing to wait on from Apple except review.
   - Answer "None" to everything else.
   - No user-generated content, no web browsing, no messaging, no gambling.
   - Expect 13+. Don't under-declare; references to alcohol count.
-- Privacy policy URL: `https://nickstrom5.github.io/wisconsin-eats/privacy.html`
-- Support URL: `https://nickstrom5.github.io/wisconsin-eats/`. Marketing URL: `https://nickstrom5.github.io/wisconsin-eats/`. (Switch both to the state subdomain once the hub domain exists; no new build needed.)
+- Privacy policy URL: `https://wisconsin.eatsranked.com/privacy.html` (the github.io address entered first forwards here; update the field anyway)
+- Support URL: `https://wisconsin.eatsranked.com/`. Marketing URL: `https://wisconsin.eatsranked.com/`. No new build needed to change these.
 
 ## 4. Pricing and availability
 - Price: **Free**. Availability: United States only at launch (every listing is in Wisconsin). Add Canada later if people ask.

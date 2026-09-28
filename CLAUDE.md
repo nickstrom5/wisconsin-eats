@@ -1,7 +1,7 @@
 # Wisconsin Eats (wi-eats) — notes for Claude Code sessions
 
 Two products share this repo and one data pipeline:
-- **The iOS/iPadOS app** "Wisconsin Eats: Restaurants" (SwiftUI, iOS 18+), plus its website in `docs/` (https://nickstrom5.github.io/wisconsin-eats/, GitHub Pages from `main` /docs).
+- **The iOS/iPadOS app** "Wisconsin Eats: Restaurants" (SwiftUI, iOS 18+), plus its website in `docs/` (https://wisconsin.eatsranked.com/, GitHub Pages from `main` /docs; the old https://nickstrom5.github.io/wisconsin-eats/ links forward there).
 - **The web leaderboard** (`site/`), published as a private claude.ai Artifact. It uses Google 2021 ratings; the app never does.
 
 Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `../chi-eats/`.
@@ -39,9 +39,9 @@ Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `
 - The Home Screen label is `WI Eats` (`CFBundleDisplayName`); the App Store name is set in App Store Connect, not in the project.
 
 ## Website (`docs/`)
-- Lives at https://nickstrom5.github.io/wisconsin-eats/ until the hub domain exists. Then it becomes a state subdomain (e.g. `wisconsin.<hub>`): set `CUSTOM_DOMAIN`
-  in `scripts/make-site.py`, re-run, push, add the DNS CNAME. GitHub forwards the github.io links, so the app's links
-  (`WisconsinEats/App/Links.swift`) keep working in shipped builds. Update the URLs in App Store Connect when that happens.
+- Lives at https://wisconsin.eatsranked.com/ (the hub is eatsranked.com; Cloudflare DNS `wisconsin` CNAME → nickstrom5.github.io, DNS only), set by
+  `CUSTOM_DOMAIN` in `scripts/make-site.py`, which also writes `docs/CNAME`. The app's links (`WisconsinEats/App/Links.swift`) still say
+  github.io, and GitHub forwards them, so shipped builds keep working. Switch Links.swift to the new domain in the next app update.
 - Generated: `.venv/bin/python scripts/make-site.py` writes every page, `sitemap.xml`, `robots.txt`, `site.webmanifest`, `CNAME`,
   and `playbook/site-numbers.json`. **Never hand-edit `docs/*.html`**; change the generator and re-run it.
 - It asserts title 50–60 and description 140–160 characters and a single `<h1>`, and fails loudly if a variant doesn't fit.

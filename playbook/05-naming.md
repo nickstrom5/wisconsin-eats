@@ -3,7 +3,7 @@
 **App Store name:** `Wisconsin Eats: Restaurants` (27 of 30)
 **Subtitle:** `Fish Fry & Supper Club Guide` (28 of 30)
 **Home Screen name** (`CFBundleDisplayName`): `WI Eats`
-**Website:** https://nickstrom5.github.io/wisconsin-eats/ for now; later a state subdomain of a hub domain (see below) · **Bundle ID:** `com.wisconsineats.ios` · **Repo folder:** `wi-eats/`
+**Website:** https://wisconsin.eatsranked.com/ (hub eatsranked.com, bought 2026-09-28; see below) · **Bundle ID:** `com.wisconsineats.ios` · **Repo folder:** `wi-eats/`
 
 ## Why this name
 - Nick's call (2026-09-26): the name has to cover every restaurant, not just fish fries and supper clubs;

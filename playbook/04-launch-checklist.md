@@ -3,12 +3,12 @@
 In order. Items marked **Nick** need your accounts; everything else is in the repo already.
 
 ## This week
-- [x] Website on GitHub Pages at https://nickstrom5.github.io/wisconsin-eats/ (repo nickstrom5/wisconsin-eats). The hub domain comes later; see `05-naming.md`.
+- [x] Website on GitHub Pages at https://wisconsin.eatsranked.com/ (repo nickstrom5/wisconsin-eats; hub eatsranked.com). See `05-naming.md`.
 - [ ] **Nick:** Search USPTO for "Wisconsin Eats" (classes 9 and 43).
 - [ ] **Nick:** Create a GitHub repo, push, and turn on Pages from `/docs` (runbook sections 3–4). Pages needs a public repo
       on the free plan, and everything outside `docs/` is then public too. That's fine: the playbook has no secrets.
 - [ ] **Nick:** Set up Cloudflare DNS (runbook section 4). Support email is work-with-nick@gmail.com, so email routing (sections 5–6) is optional.
-- [ ] Check https://nickstrom5.github.io/wisconsin-eats/privacy.html loads (GitHub builds a minute or two after each push).
+- [ ] Check https://wisconsin.eatsranked.com/privacy.html loads over HTTPS (GitHub builds a minute or two after each push).
 
 ## Build
 - [ ] **Nick:** Set `DEVELOPMENT_TEAM: 4C8TU6U7MQ` in `project.yml`, run `xcodegen generate`, and archive (see `09-app-store-connect.md`).

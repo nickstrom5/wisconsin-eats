@@ -24,7 +24,7 @@ DOCS = f"{ROOT}/docs"
 # Where the site lives. Today: GitHub Pages at the project address. When the hub domain is bought, set CUSTOM_DOMAIN to
 # this state's subdomain (e.g. "wisconsin.<hub domain>"), re-run, push, and add a CNAME DNS record pointing it at
 # nickstrom5.github.io. GitHub then forwards the old github.io links (the ones inside shipped app builds) to it.
-CUSTOM_DOMAIN = None
+CUSTOM_DOMAIN = "wisconsin.eatsranked.com"
 DOMAIN = f"https://{CUSTOM_DOMAIN}" if CUSTOM_DOMAIN else "https://nickstrom5.github.io/wisconsin-eats"
 BASE = "" if CUSTOM_DOMAIN else "/wisconsin-eats"     # path prefix for root-relative links
 BRAND = "Wisconsin Eats"

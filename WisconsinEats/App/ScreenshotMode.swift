@@ -5,10 +5,15 @@ import UIKit
 /// `-screenshot <name>` opens one screen with fixed state for App Store screenshots (scripts/capture-screenshots.sh).
 /// Names: home, fishfry, supper, detail, map, inspections, icons, saved, about.
 enum ScreenshotMode {
+    /// Debug builds only: an App Store build ignores the launch argument, so no one can reach seeded screens or fake locations.
     static var name: String? {
+        #if DEBUG
         let args = ProcessInfo.processInfo.arguments
         guard let i = args.firstIndex(of: "-screenshot"), i + 1 < args.count else { return nil }
         return args[i + 1]
+        #else
+        return nil
+        #endif
     }
     static var isActive: Bool { name != nil }
 

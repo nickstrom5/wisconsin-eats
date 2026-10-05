@@ -12,6 +12,8 @@ struct MapScreen: View {
     /// "My location": where to move the map (a new object each tap, so a second tap re-centers after panning away)
     @State private var centerOn: CLLocation?
     @State private var centerWhenFound = false
+    @State private var notice: String?
+    @State private var askSettings = false
 
     /// All 16,000+ restaurants at once kept the map busy for a minute and more in QA, so the Everything layer fills in
     /// only once you zoom to about town size (this many degrees of latitude on screen), and only for what's in view.
@@ -56,8 +58,8 @@ struct MapScreen: View {
                     }
                     .padding(.horizontal, 12)
                 }
-                Text(zoomedOut ? "Zoom in to a town to see all \(layerPlaces.count.formatted()) places"
-                               : "\(places.count.formatted()) \(layer == .all ? "places here" : "places") · tap a pin, then its name")
+                Text(notice ?? (zoomedOut ? "Zoom in to a town to see all \(layerPlaces.count.formatted()) places"
+                               : "\(places.count.formatted()) \(layer == .all ? "places here" : "places") · tap a pin, then its name"))
                     .font(.caption).foregroundStyle(Theme.ink2)
                     .padding(.horizontal, 10).padding(.vertical, 4).background(Capsule().fill(.thinMaterial))
             }
@@ -70,10 +72,10 @@ struct MapScreen: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     if location.isDenied {
-                        LocationService.openSettings()
-                    } else if let here = location.location {
-                        centerOn = CLLocation(latitude: here.coordinate.latitude, longitude: here.coordinate.longitude)
+                        askSettings = true
                     } else {
+                        // a fix from launch may be miles out of date, so always ask for a fresh one; a very recent fix moves the map now
+                        if let here = location.location, here.timestamp.timeIntervalSinceNow > -60 { center(on: here) }
                         centerWhenFound = true
                         location.request()
                     }
@@ -83,12 +85,40 @@ struct MapScreen: View {
         .onChange(of: location.location) { _, here in
             guard centerWhenFound, let here else { return }
             centerWhenFound = false
-            centerOn = CLLocation(latitude: here.coordinate.latitude, longitude: here.coordinate.longitude)
+            center(on: here)
+        }
+        .onChange(of: location.failed) { _, failed in
+            guard failed && centerWhenFound else { return }
+            centerWhenFound = false
+            // the map already moved to a fix from the last minute or so; only say so when there was nothing to go on
+            if (location.location?.timestamp.timeIntervalSinceNow ?? -.infinity) < -90 {
+                flash("Couldn't find your location. Check that Location Services is on.")
+            }
+        }
+        .alert("Location is off", isPresented: $askSettings) {
+            Button("Open Settings") { LocationService.openSettings() }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("Turn on location for Wisconsin Eats in Settings to center the map on you. It stays on your device.")
         }
     }
 }
 
 extension MapScreen {
+    /// Town-level zoom on the reader, unless they're outside Wisconsin: then the map stays on the state and says why.
+    private func center(on here: CLLocation) {
+        if location.isOutsideWisconsin {
+            flash("You're outside Wisconsin, so the map stays on the state.")
+        } else {
+            centerOn = CLLocation(latitude: here.coordinate.latitude, longitude: here.coordinate.longitude)
+        }
+    }
+
+    private func flash(_ text: String) {
+        notice = text
+        Task { try? await Task.sleep(for: .seconds(5)); if notice == text { notice = nil } }
+    }
+
     /// On screen, with half a screen of margin so panning doesn't show empty edges.
     private func inView(_ p: Place) -> Bool {
         guard let r = region, let c = p.coordinate else { return false }

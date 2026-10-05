@@ -1,7 +1,7 @@
 {
   "name": "Wisconsin Eats",
   "short_name": "WI Eats",
-  "description": "Fish fry & supper club guide for every Wisconsin restaurant.",
+  "description": "Fish fry & supper club guide, plus 16,360 Wisconsin restaurants.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#fbfaf6",

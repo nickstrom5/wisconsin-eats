@@ -50,7 +50,7 @@ struct PlaceDetailView: View {
             Text((place.city ?? "Wisconsin").uppercased())
                 .font(.caption.weight(.bold)).tracking(1.2).foregroundStyle(Theme.green2)
             Text(place.name.uppercased())
-                .font(Theme.display(38)).foregroundStyle(Theme.green)
+                .displayFont(38).foregroundStyle(Theme.green)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
             Text([place.fullAddress, place.cuisine].filter { !$0.isEmpty }.joined(separator: " · "))
@@ -133,9 +133,9 @@ struct PlaceDetailView: View {
                 if place.tags.contains(.fishBoil) { fact("Fish boil", "Door County-style fish boil.") }
                 if let note = place.note { Text(note).font(.subheadline).foregroundStyle(Theme.ink2) }
                 Text(place.handChecked
-                     ? "Hand-checked in Sep 2026 against the place's own site, menu or recent news. Days and menus change, so check before you go."
+                     ? "Hand-checked in Sep 2026 against a 2025 or 2026 source: the place's own site or menu, local news, or its Travel Wisconsin listing. Days and menus change, so check before you go."
                      : "Not hand-checked yet, so it isn't in our supper club or custard guides. Check before you go.")
-                    .font(.caption).foregroundStyle(Theme.muted)
+                    .font(.caption).foregroundStyle(Theme.ink2)
             }
         }
     }
@@ -190,7 +190,7 @@ struct PlaceDetailView: View {
     private var listingNote: String {
         let checked = place.handChecked
         if place.source == "research" {
-            return "On our hand-checked list, confirmed open in Sep 2026. The open map data didn't list it as a place to eat, so it's placed from its own map listing or street address."
+            return "On our hand-checked list (checked in Sep 2026 against a 2025 or 2026 source). The open map data didn't list it as a place to eat, so it's placed from its own map listing or street address."
         }
         switch place.tier {
         case .licensed:
@@ -203,7 +203,7 @@ struct PlaceDetailView: View {
                 ? "A high-confidence listing in Overture's open map data."
                 : "A single listing in Overture's open map data, so it may be closed or misfiled."
             let measured = rate.map { " Checked against Milwaukee's and Dane County's license lists, listings like this matched a licensed business \($0) of the time." } ?? ""
-            return base + measured + (checked ? " It's also on our hand-checked list, confirmed open in Sep 2026." : "")
+            return base + measured + (checked ? " It's also on our hand-checked list, checked in Sep 2026 against a 2025 or 2026 source." : "")
         }
     }
 
@@ -219,7 +219,7 @@ struct PlaceDetailView: View {
 
     private func section<Content: View>(_ title: String, @ViewBuilder _ content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(title.uppercased()).font(.caption.weight(.bold)).tracking(1).foregroundStyle(Theme.muted)
+            Text(title.uppercased()).font(.caption.weight(.bold)).tracking(1).foregroundStyle(Theme.ink2)
             Divider()
             content()
         }

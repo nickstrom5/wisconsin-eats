@@ -255,7 +255,7 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
     assert 140 <= len(desc) <= 160 or path == "404.html", (path, len(desc), desc)
     assert body.count("<h1") == 1, path
     url = DOMAIN + "/" + ("" if path == "index.html" else path.removesuffix("index.html"))
-    og_alt = og_alt or f"{BRAND}: {TAGLINE}. Every Wisconsin restaurant, with hand-checked fish fries, supper clubs and custard stands."
+    og_alt = og_alt or f"{BRAND}: {TAGLINE}. Wisconsin restaurants, with hand-checked fish fries, supper clubs and custard stands."
     ld = "\n".join(jsonld(x) for x in lds)
     doc = f"""<!DOCTYPE html>
 <html lang="en" data-base="{BASE}">
@@ -308,7 +308,7 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
   <footer>
     <nav aria-label="Footer">
       <a href="/">{BRAND} app</a>
-      <a href="/explore/">Search every Wisconsin restaurant</a>
+      <a href="/explore/">Search Wisconsin restaurants</a>
       <a href="/wisconsin-fish-fry.html">Wisconsin fish fry guide</a>
       <a href="/wisconsin-supper-clubs.html">Wisconsin supper clubs</a>
       <a href="/wisconsin-frozen-custard.html">Wisconsin frozen custard</a>
@@ -316,7 +316,7 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
       <a href="/terms.html">Terms of use</a>
       <a href="mailto:{EMAIL}">Email us</a>
     </nav>
-    <p>Place data: hand-checked research by {BRAND} ({CHECKED}); Overture Maps Foundation (CDLA Permissive 2.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Not affiliated with any restaurant, team, chain or government agency. Places open and close, so check before you go.</p>
+    <p>Place data: hand-checked research by {BRAND} ({CHECKED}); Overture Maps Foundation (CDLA Permissive 2.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Not affiliated with or endorsed by any restaurant, team, chain or government agency. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
     <p>© 2026 {BRAND}.</p>
   </footer>
 </div>
@@ -715,7 +715,7 @@ body = f"""{nav}
   <main id="main">
   <section class="ex-hero">
     <h1><span class="kicker">{BRAND} · on the web</span>Search Wisconsin restaurants</h1>
-    <p class="sub">All {N_REST:,} restaurants, cafés, taverns and bakeries, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands. The same data as the free iPhone and iPad app. Nothing about you is stored anywhere but this browser.</p>
+    <p class="sub">{N_REST:,} restaurants, cafés, taverns and bakeries, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands. The same data as the free iPhone and iPad app. Nothing about you is stored anywhere but this browser.</p>
   </section>
   <p id="ex-loading">Loading the restaurant list…</p>
   <noscript><p>The search needs JavaScript. The guides work without it: <a href="/wisconsin-fish-fry.html">fish fry</a>, <a href="/wisconsin-supper-clubs.html">supper clubs</a>, <a href="/wisconsin-frozen-custard.html">frozen custard</a>.</p></noscript>
@@ -757,7 +757,7 @@ webapp_ld = {"@context": "https://schema.org", "@type": "WebApplication", "name"
 written.append(page("explore/index.html", title, desc, body, [webapp_ld, bc], extra_css=EXPLORE_CSS))
 
 # ---------------------------------------------------------------- landing page
-shots = [("home", "Wisconsin Eats home screen: Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places and Inspections guides, with a search box for every restaurant in the state.", "Guides for Fridays, supper clubs and custard."),
+shots = [("home", "Wisconsin Eats home screen: Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places and Inspections guides, with a search box for all the restaurants in the state.", "Guides for Fridays, supper clubs and custard."),
          ("fishfry", "Friday Fish Fry list in Wisconsin Eats, sorted by distance from downtown Milwaukee, with the fish each place serves.", "Fish fries nearest you first."),
          ("detail", "The Del-Bar supper club in Wisconsin Dells in Wisconsin Eats: address, a button for ratings, hours and photos in Apple Maps, and its history since 1943.", "Each place, with live Apple Maps hours and photos."),
          ("map", "Wisconsin Eats map of Wisconsin with clustered pins for fish fries.", "The map, by fish fry, supper club or custard."),
@@ -784,7 +784,7 @@ faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "@id": f"{DOMAIN
 app_ld = {"@context": "https://schema.org", "@graph": [
     {"@type": "MobileApplication", "@id": f"{DOMAIN}/#app", "name": "Wisconsin Eats: Restaurants",
      "alternateName": ["Wisconsin Eats", "WI Eats", "Wisconsin Eats: Fish Fry & Supper Club Guide"],
-     "description": f"A free guide to every restaurant in Wisconsin, with hand-checked lists of {len(FISH)} Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} frozen custard stands. Sort by distance, open Apple Maps' live place card for hours and photos, and save places for Friday.",
+     "description": f"A free guide to {N_REST:,} Wisconsin restaurants, with hand-checked lists of {len(FISH)} Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} frozen custard stands. Sort by distance, open Apple Maps' live place card for hours and photos, and save places for Friday.",
      "url": f"{DOMAIN}/", "image": f"{DOMAIN}/og.png", "screenshot": f"{DOMAIN}/img/screen-home.png",
      "operatingSystem": "iOS, iPadOS", "applicationCategory": "TravelApplication", "applicationSubCategory": "Food & Drink",
      "inLanguage": "en", "publisher": {"@id": f"{DOMAIN}/#org"},
@@ -795,13 +795,14 @@ app_ld = {"@context": "https://schema.org", "@graph": [
     {"@type": "WebSite", "@id": f"{DOMAIN}/#website", "name": BRAND, "alternateName": ["WI Eats", "Wisconsin Eats app"], "url": f"{DOMAIN}/",
      "inLanguage": "en", "publisher": {"@id": f"{DOMAIN}/#org"}}]}
 title = "Wisconsin Eats: Fish Fry, Supper Club & Restaurant App"
-desc = fit([f"Free iPhone and iPad guide to every Wisconsin restaurant, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} frozen custard stands.",
-            f"Free iPhone and iPad guide to every restaurant in Wisconsin, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and custard stands."], 140, 160)
+desc = fit([f"Free iPhone and iPad guide to {N_REST:,} Wisconsin restaurants, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands.",
+            f"Free iPhone and iPad guide to {N_REST:,} Wisconsin restaurants, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and custard stands.",
+            f"A free iPhone and iPad guide to Wisconsin restaurants, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands."], 140, 160)
 city_cards = "".join(f'<li><a href="{city_url(c)}">{e(c)}</a></li>' for c in CITY_PAGES)
 body = f"""  <main id="main">
   <section class="hero">
-    <h1><span class="kicker">{BRAND}: the {TAGLINE.lower()} for iPhone and iPad</span>Every Wisconsin restaurant, and the fish fries worth the drive</h1>
-    <p class="lede">{BRAND} is a free Wisconsin restaurant guide. Find a Friday fish fry near you, a supper club for Saturday and a custard stand for after, from lists we checked by hand, plus all {N_REST:,} restaurants, cafés, taverns and bakeries in {N_TOWNS:,} towns.</p>
+    <h1><span class="kicker">{BRAND}: the {TAGLINE.lower()} for iPhone and iPad</span>Wisconsin's restaurants, and the fish fries worth the drive</h1>
+    <p class="lede">{BRAND} is a free Wisconsin restaurant guide. Find a Friday fish fry near you, a supper club for Saturday and a custard stand for after, from lists we checked by hand, plus {N_REST:,} restaurants, cafés, taverns and bakeries in {N_TOWNS:,} towns.</p>
     <div class="cta-row">{store_button()}<a class="btn btn-ghost" href="/explore/">Search on the web</a><span class="pill store-note">Free. No ads, no account. Coming to the App Store.</span></div>
     <ul class="stats" aria-label="What's in the app">
       <li><b>{len(FISH)}</b><span>Friday fish fries</span></li>
@@ -819,7 +820,7 @@ body = f"""  <main id="main">
   <section id="how">
     <h2>How it works</h2>
     <ol class="steps">
-      <li class="step"><div class="n" aria-hidden="true">1</div><div><h3>Pick a guide.</h3><p>Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places, or search every restaurant by name, town or street.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">1</div><div><h3>Pick a guide.</h3><p>Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places, or search all the restaurant by name, town or street.</p></div></li>
       <li class="step"><div class="n" aria-hidden="true">2</div><div><h3>See what's near you.</h3><p>Sort by distance, filter by town or cuisine, or browse the map. Each fish fry lists the fish and the days it's served.</p></div></li>
       <li class="step"><div class="n" aria-hidden="true">3</div><div><h3>Go.</h3><p>Open Apple Maps' place card for live hours and photos, call, get directions, or save it for Friday.</p></div></li>
     </ol>
@@ -839,7 +840,7 @@ body = f"""  <main id="main">
       <a class="card" href="/wisconsin-fish-fry.html"><h3>Wisconsin Friday fish fry guide</h3><p>{len(FISH)} fish fries by region and town, with the fish, days and sides.</p></a>
       <a class="card" href="/wisconsin-supper-clubs.html"><h3>Wisconsin supper club guide</h3><p>{len(SUP)} supper clubs, with founding years and Friday fish fries.</p></a>
       <a class="card" href="/wisconsin-frozen-custard.html"><h3>Wisconsin frozen custard stands</h3><p>{len(CUST)} local stands, without the big chains.</p></a>
-      <div class="card"><h3>Every restaurant</h3><p>{N_REST:,} places in {N_TOWNS:,} towns, from open map data and the Milwaukee and Dane County license lists. In the app.</p></div>
+      <div class="card"><h3>The whole state</h3><p>{N_REST:,} places in {N_TOWNS:,} towns, from open map data and the Milwaukee and Dane County license lists. In the app.</p></div>
     </div>
   </section>
 
@@ -955,7 +956,7 @@ urls.sort(key=lambda u: (u != "", u.startswith("cities/"), u))
 open(f"{DOCS}/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                        + "".join(f"  <url><loc>{DOMAIN}/{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n")
 open(f"{DOCS}/robots.txt", "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n")
-json.dump({"name": BRAND, "short_name": "WI Eats", "description": f"{TAGLINE} for every Wisconsin restaurant.", "start_url": f"{BASE}/", "display": "browser",
+json.dump({"name": BRAND, "short_name": "WI Eats", "description": f"{TAGLINE}, plus {N_REST:,} Wisconsin restaurants.", "start_url": f"{BASE}/", "display": "browser",
            "background_color": "#fbfaf6", "theme_color": "#203731",
            "icons": [{"src": f"{BASE}/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": f"{BASE}/icon-512.png", "sizes": "512x512", "type": "image/png"}]},
           open(f"{DOCS}/site.webmanifest", "w"), indent=2)

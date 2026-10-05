@@ -85,7 +85,7 @@ let og = canvas(1200, 630) { c in
     c.setFillColor(gold); c.fill(CGRect(x: 72, y: 470, width: 90, height: 12))
     text(c, "WISCONSIN", font: heavy(128), color: white, at: CGPoint(x: 66, y: 322))
     text(c, "EATS", font: heavy(128), color: gold, at: CGPoint(x: 66, y: 204))
-    text(c, "Fish fry & supper club guide · every restaurant in the state", font: NSFont.systemFont(ofSize: 32, weight: .semibold), color: white, at: CGPoint(x: 70, y: 150))
+    text(c, "Fish fry & supper club guide · 16,000+ Wisconsin restaurants", font: NSFont.systemFont(ofSize: 32, weight: .semibold), color: white, at: CGPoint(x: 70, y: 150))
     text(c, "Free for iPhone and iPad", font: NSFont.systemFont(ofSize: 30, weight: .regular), color: gold, at: CGPoint(x: 70, y: 96))
     cheese(c, x: 880, y: 330, w: 250, hole: green)
 }

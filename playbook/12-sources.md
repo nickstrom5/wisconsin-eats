@@ -6,7 +6,7 @@ Checked 2026-09-26. Site numbers are written to `playbook/site-numbers.json` by 
 ## Counts (app and site)
 | Number | Where it appears | How it's computed |
 |---|---|---|
-| 16,379 restaurants | Home header, site hero, App Store description | Places in `data/app/places.json` that aren't flagged non-restaurants (`v`) |
+| 16,360 restaurants | Home header, site hero, App Store description | Places in `data/app/places.json` that aren't flagged non-restaurants (`v`) |
 | 828 towns | Same | Distinct towns among those restaurants |
 | 395 Friday fish fries | Home card, fish fry guide, site, listing | Hand-checked (`hc`) places tagged fish fry |
 | 209 supper clubs | Same | Hand-checked places tagged supper club. Another 64 listings merely *named* "Supper Club" aren't counted |

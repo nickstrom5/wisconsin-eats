@@ -10,20 +10,21 @@ struct HomeView: View {
             VStack(alignment: .leading, spacing: 20) {
                 header
                 if isFriday { fridayCard }
-                NavigationLink(value: AppModel.Route.guide(.all)) {
+                Button { model.openGuide(.all) } label: {
                     HStack(spacing: 10) {
                         Image(systemName: "magnifyingglass").foregroundStyle(Theme.green)
-                        Text("Search by name, town or street").foregroundStyle(Theme.muted).lineLimit(1)
+                        Text("Search by name, town or street").foregroundStyle(Theme.muted)
                         Spacer()
                     }
                     .font(.subheadline)
                     .padding(14)
                     .background(RoundedRectangle(cornerRadius: 12).strokeBorder(Theme.green, lineWidth: 2))
                 }
+                .buttonStyle(.plain)
                 .accessibilityLabel("Search every restaurant")
                 LazyVGrid(columns: columns, spacing: 12) {
                     ForEach([Guide.fishFry, .supperClubs, .custard, .icons, .oldest, .inspections, .nearMe, .all]) { g in
-                        NavigationLink(value: AppModel.Route.guide(g)) { GuideCard(guide: g, count: model.count(g)) }
+                        Button { model.openGuide(g) } label: { GuideCard(guide: g, count: model.count(g)) }
                             .buttonStyle(.plain)
                     }
                 }
@@ -42,7 +43,7 @@ struct HomeView: View {
         VStack(alignment: .leading, spacing: 6) {
             Rectangle().fill(Theme.gold).frame(width: 44, height: 5).clipShape(Capsule())
             Text("WISCONSIN\nEATS")
-                .font(Theme.display(52))
+                .displayFont(52)
                 .foregroundStyle(Theme.green)
                 .lineSpacing(-6)
                 .accessibilityAddTraits(.isHeader)
@@ -61,7 +62,7 @@ struct HomeView: View {
             HStack(spacing: 12) {
                 Image(systemName: "fish.fill").font(.title2).foregroundStyle(Theme.green)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("It's Friday").font(Theme.display(24)).foregroundStyle(Theme.green)
+                    Text("It's Friday").displayFont(24).foregroundStyle(Theme.green)
                     Text("Find a fish fry near you").font(.subheadline).foregroundStyle(Theme.ink)
                 }
                 Spacer()
@@ -101,12 +102,12 @@ struct GuideCard: View {
                 Image(systemName: guide.systemImage).font(.title3).foregroundStyle(Theme.green)
                     .frame(width: 36, height: 36).background(Circle().fill(isWisconsin ? Theme.goldSoft : Theme.surface2))
                 Spacer()
-                if guide != .nearMe {
-                    Text(count.formatted()).font(Theme.display(22)).foregroundStyle(Theme.green).monospacedDigit()
+                if guide != .nearMe && guide != .all {   // "All" would just repeat the total in the header
+                    Text(count.formatted()).displayFont(22).foregroundStyle(Theme.green).monospacedDigit()
                 }
             }
-            Text(guide.title).font(Theme.display(22, weight: .heavy)).foregroundStyle(Theme.ink).lineLimit(1).minimumScaleFactor(0.8)
-            Text(guide.subtitle).font(.caption).foregroundStyle(Theme.muted).lineLimit(3).fixedSize(horizontal: false, vertical: true)
+            Text(guide.title).displayFont(22, weight: .heavy).foregroundStyle(Theme.ink).lineLimit(2).minimumScaleFactor(0.8)
+            Text(guide.subtitle).font(.caption).foregroundStyle(Theme.muted).fixedSize(horizontal: false, vertical: true)
             Spacer(minLength: 0)
         }
         .padding(12)

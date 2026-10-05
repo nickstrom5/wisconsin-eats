@@ -24,6 +24,10 @@ struct GuideListView: View {
                     .font(.subheadline).foregroundStyle(Theme.muted)
                     .listRowSeparator(.hidden)
                 if (order == .nearest || guide == .nearMe) && here == nil { locationPrompt }
+                if order == .nearest && model.screenshotLocation == nil && location.isOutsideWisconsin {
+                    Text("You're outside Wisconsin. Every place here is in Wisconsin, so distances are from where you are now.")
+                        .font(.subheadline).foregroundStyle(Theme.ink2).listRowSeparator(.hidden)
+                }
                 if model.filters.activeCount > 0 { activeFilters }
             }
             Section {
@@ -45,7 +49,7 @@ struct GuideListView: View {
                         .frame(maxWidth: .infinity).foregroundStyle(Theme.green)
                 }
             } header: {
-                Text("\(places.count.formatted()) \(places.count == 1 ? "place" : "places") · \(order.label)").textCase(nil)
+                Text("\(places.count.formatted()) \(places.count == 1 ? "place" : "places") · \(order.label)").textCase(nil).foregroundStyle(Theme.ink2)
             }
         }
         .listStyle(.plain)
@@ -76,11 +80,17 @@ struct GuideListView: View {
     private func row(_ p: Place, rank: Int?) -> some View {
         let metric = metricText(p)
         if let selection {
-            Button { selection.wrappedValue = p } label: { PlaceRow(place: p, rank: rank, metric: metric) }
+            Button { selection.wrappedValue = p } label: { PlaceRow(place: p, rank: rank, metric: metric, detail: detailLine(p), highlightTop: order != .worst) }
                 .listRowBackground(selection.wrappedValue?.id == p.id ? Theme.surface2 : Theme.surface)
         } else {
-            NavigationLink(value: AppModel.Route.place(p)) { PlaceRow(place: p, rank: rank, metric: metric) }
+            NavigationLink(value: AppModel.Route.place(p)) { PlaceRow(place: p, rank: rank, metric: metric, detail: detailLine(p), highlightTop: order != .worst) }
         }
+    }
+
+    /// Inspection rows name the exact place and when it was last inspected, so a grade is never read without context.
+    private func detailLine(_ p: Place) -> String? {
+        guard guide == .inspections, let i = p.inspection else { return nil }
+        return [p.address, i.ld.map { "last routine visit \($0)" }].compactMap { $0 }.joined(separator: " · ")
     }
 
     private func metricText(_ p: Place) -> PlaceRow.Metric? {
@@ -97,12 +107,14 @@ struct GuideListView: View {
 
     private var locationPrompt: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(location.isDenied ? "Location is off for this app. Turn it on in Settings to sort by distance." : "Sort by distance from where you are. Your location stays on this device.")
+            Text(location.isDenied ? "Location is off for this app. Turn it on in Settings to sort by distance."
+                 : location.failed ? "Couldn't find your location. Check that Location Services is on, then try again."
+                 : "Sort by distance from where you are. Your location stays on this device.")
                 .font(.subheadline).foregroundStyle(Theme.ink2)
             if location.isDenied {
                 Button("Open Settings") { LocationService.openSettings() }.buttonStyle(.bordered).tint(Theme.green)
             } else {
-                Button("Use my location") { location.request() }.buttonStyle(.borderedProminent).tint(Theme.green)
+                Button(location.failed ? "Try again" : "Use my location") { location.request() }.buttonStyle(.borderedProminent).tint(Theme.green)
             }
         }
         .padding(.vertical, 4)
@@ -124,33 +136,38 @@ struct PlaceRow: View {
     let place: Place
     var rank: Int?
     var metric: Metric?
+    /// a second line under the town (inspections: street address and last visit date)
+    var detail: String? = nil
+    /// gold for the top three of a ranking; never on the lowest-scores sort
+    var highlightTop = true
 
     var body: some View {
         HStack(alignment: .center, spacing: 12) {
             if let rank {
                 Text("\(rank)")
-                    .font(Theme.display(rank < 100 ? 26 : 20)).monospacedDigit()
+                    .displayFont(rank < 100 ? 26 : 20).monospacedDigit()
                     .foregroundStyle(Theme.green)
                     .frame(minWidth: 38, minHeight: 38)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(rank <= 3 ? Theme.gold : .clear))
+                    .background(RoundedRectangle(cornerRadius: 8).fill(rank <= 3 && highlightTop ? Theme.gold : .clear))
                     .accessibilityLabel("Rank \(rank)")
             }
             VStack(alignment: .leading, spacing: 4) {
                 Text(place.name).font(.body.weight(.semibold)).foregroundStyle(Theme.ink).multilineTextAlignment(.leading)
                 Text(place.townLine).font(.subheadline).foregroundStyle(Theme.muted)
+                if let detail { Text(detail).font(.caption).foregroundStyle(Theme.ink2) }
                 PlaceChips(place: place, compact: true)
             }
             Spacer(minLength: 8)
             switch metric {
             case .text(let big, let small):
                 VStack(alignment: .trailing, spacing: 0) {
-                    Text(big).font(Theme.display(22)).foregroundStyle(Theme.green).monospacedDigit()
+                    Text(big).displayFont(22).foregroundStyle(Theme.green).monospacedDigit()
                     Text(small).font(.caption2).foregroundStyle(Theme.muted)
                 }
             case .grade(let g, let score):
                 HStack(spacing: 6) {
                     GradeBadge(grade: g, size: 26)
-                    Text("\(score)").font(Theme.display(22)).foregroundStyle(Theme.green).monospacedDigit()
+                    Text("\(score)").displayFont(22).foregroundStyle(Theme.green).monospacedDigit()
                 }
             case nil: EmptyView()
             }

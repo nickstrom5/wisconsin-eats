@@ -692,7 +692,7 @@ def tidy(n, brand):
     m = re.match(r"^(.*?)[,\s]+(?:LLC|Inc)\.?\s*-{1,2}\s*(.+)$", n, flags=re.I)
     if m:
         n = m.group(2) if len(m.group(2).split()) >= 2 and len(m.group(1).split()) <= 2 else m.group(1)
-    n = re.sub(r"[,\s]+(?:LLC|L\.L\.C|Inc|Corp)\.?(?=\s|$|,)", "", n, flags=re.I)
+    n = re.sub(r"[,\s]+(?:LLC|L\.L\.C|LLP|L\.L\.P|Inc|Corp)\.?(?=\s|$|,)", "", n, flags=re.I)
     n = re.sub(r"\s*\([^()]*\)\s*$", "", n) if re.sub(r"\s*\([^()]*\)\s*$", "", n).strip() else n   # "(Official Page)", "(Seasonal ...)", "(To-Go)"
     n = re.sub(r",?\s+(?:WI|Wis\.?|Wisconsin)\s*$", "", n)                                                   # "Shady Grove Restaurant, WI"
     parts = re.split(r"\s+[-–]{1,2}\s+|--", n)
@@ -955,6 +955,68 @@ def r(x, n=0):
 
 
 o = o[o.lat.notna() | o.official].reset_index(drop=True)
+if APP:
+    # names the map data gets wrong, each fixed from the place's own site (data/research/name_fixes.json)
+    fixes = json.load(open(f"{DATA}/research/name_fixes.json")) if os.path.exists(f"{DATA}/research/name_fixes.json") else []
+    for fx in fixes:
+        hit = (o.name_out.str.upper() == fx["name"].upper()) & (o.city == fx["town"]) & o.street.fillna("").str.startswith(fx["street_number"] + " ")
+        o.loc[hit, "name_out"] = fx["fixed"]
+        print("name fix:", fx["name"], "->", fx["fixed"], int(hit.sum()))
+    # the same place twice: same name at the same street address, or (not a chain) same name in the same town within 400 m.
+    # The licensed record wins, then a confirmed listing, then the one with more facts.
+    rank = o.tier.map({"official": 2, "both": 1, "listing": 0}).fillna(0) * 10 + o.hc.astype(int) * 5 \
+        + o.get("web", pd.Series(None, index=o.index)).notna().astype(int)
+    keyname = o.name_out.map(norm_name)
+    keyaddr = ["|".join(k) if all(k := street_key(s_)) else None for s_ in o.street]   # ('2505', 'MONROE') -> '2505|MONROE'
+    drop, merged = set(), []   # merged: (kept, dropped)
+    seen = {}
+    for i in o.index:
+        if keyaddr[o.index.get_loc(i)] and keyname[i]:
+            k = (keyname[i], keyaddr[o.index.get_loc(i)])
+            if k in seen:
+                j = seen[k]
+                lose = i if rank[i] <= rank[j] else j
+                drop.add(lose); seen[k] = j if lose == i else i
+                merged.append((seen[k], lose))
+            else:
+                seen[k] = i
+    single = o[(o.chain_n.fillna(1) < 2) & o.lat.notna() & ~o.index.isin(drop)]
+    for (nm, town), g in single.groupby([keyname[single.index], single.city]):
+        if len(g) < 2 or not nm:
+            continue
+        idx = list(g.index)
+        for a_ in range(len(idx)):
+            for b_ in range(a_ + 1, len(idx)):
+                i, j = idx[a_], idx[b_]
+                if i in drop or j in drop:
+                    continue
+                dkm = 6371 * 2 * math.asin(math.sqrt(math.sin(math.radians(o.at[j, "lat"] - o.at[i, "lat"]) / 2) ** 2
+                    + math.cos(math.radians(o.at[i, "lat"])) * math.cos(math.radians(o.at[j, "lat"])) * math.sin(math.radians(o.at[j, "lon"] - o.at[i, "lon"]) / 2) ** 2))
+                if dkm < 0.4:
+                    lose = i if rank[i] <= rank[j] else j
+                    drop.add(lose)
+                    merged.append((j if lose == i else i, lose))
+    # the kept copy inherits what the dropped one knew: a hand-checked fish fry must not lose its check to a license record
+    for keep, lose in merged:
+        for col in [c for c in o.columns if c.startswith("t_")] + ["hc", "honored"]:
+            if col in o.columns and bool(o.at[lose, col]) and not bool(o.at[keep, col]):
+                o.at[keep, col] = o.at[lose, col]
+        for col in ("fish", "fry_days", "sides", "rnote", "rsite", "web", "phone", "founded", "icon", "jbf", "honors", "s_icon"):
+            if col in o.columns and pd.isna(o.at[keep, col]) and not pd.isna(o.at[lose, col]):
+                o.at[keep, col] = o.at[lose, col]
+    print("duplicates removed for the app:", len(drop), [o.at[i, "name_out"] for i in list(drop)[:8]])
+    o = o.drop(index=list(drop))
+    # adult clubs aren't restaurants and don't belong in a 13+ app at all; smoke/vape/cigar shops are hidden with non-restaurants
+    webs = o.get("web", pd.Series("", index=o.index)).fillna("").astype(str) + " " + o.get("rsite", pd.Series("", index=o.index)).fillna("").astype(str)
+    adult = o.name_out.str.contains(r"gentlem[ae]n'?s club|exotic dancer|strip club|adult entertainment", case=False, regex=True) \
+        | webs.str.contains(r"centerfolds|gentlemensclub|stripclub", case=False, regex=True)
+    print("adult clubs removed:", int(adult.sum()), o.name_out[adult].tolist())
+    o = o[~adult]
+    smoke = o.name_out.str.contains(r"\bvape\b|smoke shop|\btobacco\b|cigar lounge|\bcbd\b|dispensary|head shop", case=False, regex=True)
+    o.loc[smoke, "venue"] = True
+    print("smoke/vape/cigar shops hidden with non-restaurants:", int(smoke.sum()), o.name_out[smoke].tolist())
+
+
 def clean_url(u):
     """Website links without tracking parameters (Reserve with Google tokens, utm_*, click ids)."""
     base, _, q = u.partition("?")
@@ -972,6 +1034,8 @@ if APP:
     JUR = {"mke": 1, "dane": 2}
     SRCS = ["official", "meta", "AllThePlaces", "DAC", "research", "BrightQuery", "Foursquare", "Microsoft"]
     places, seen_ids = [], set()
+    LINKS = json.load(open(f"{WI}/website_check.json")) if os.path.exists(f"{WI}/website_check.json") else None
+    link_drops, link_cands = collections.Counter(), {}
     for i, x in o.iterrows():
         # a stable id (name + ~100 m cell, or the license number) so saved places survive a data refresh
         idsrc = f"{norm_name(x.name_out)}|{round(float(x.lat), 3)}|{round(float(x.lon), 3)}" if x.lat == x.lat else f"{norm_name(x.name_out)}|{x.get('lic') or x.get('id')}"
@@ -994,12 +1058,24 @@ if APP:
                 | (8 if "semifinalist" in jb else 0) | (16 if isinstance(x.icon, str) else 0)
             p["ip"] = round(float(x.s_icon), 1)
             for k, v in (("icon", x.icon), ("jbf", x.jbf), ("hon", x.honors)):
+                if isinstance(v, str) and k == "hon":
+                    # honors are facts (awards, guide listings); star ratings and readers' or viewers' polls are ratings, so they stay out
+                    v = "; ".join(h for h in v.split("; ") if not re.search(
+                        r"forbes|readers'? ?choice|reader'?s choice|good morning america|\bsays\b|\bvote[ds]?\b|\bpoll\b|yelp|tripadvisor|opentable|\bstars?\b",
+                        h, re.I)) or None
                 if isinstance(v, str): p[k] = v
         if x.founded == x.founded and x.founded is not None: p["f"] = int(float(x.founded))
         for k, col in (("fish", "fish"), ("days", "fry_days"), ("sides", "sides"), ("note", "rnote")):
             if isinstance(x[col], str) and x[col]: p[k] = x[col]
         web = x.rsite if isinstance(x.rsite, str) else (x.web if isinstance(x.get("web"), str) else None)
-        if web: p["w"] = clean_url(web)
+        if web:
+            w_ = clean_url(web)
+            link_cands[w_] = x.brand_n if isinstance(x.brand_n, str) else x.name_out
+            # only links pipeline/check_websites.py verified (2xx, same site, names the place, no spam/parked); unchecked ones wait
+            if LINKS is None or LINKS.get(w_, {}).get("ok"):
+                p["w"] = w_
+            else:
+                link_drops[LINKS.get(w_, {}).get("why", "not checked yet")] += 1
         if isinstance(x.get("phone"), str) and x.phone: p["ph"] = x.phone
         if x.official:
             lic = x.lic if isinstance(x.lic, str) else (x.id if isinstance(x.id, str) and x.id.startswith(("MKE-", "PHMDC-")) else None)
@@ -1012,6 +1088,9 @@ if APP:
             p["id"] = p["id"] + "x"
         seen_ids.add(p["id"])
         places.append(p)
+    print("website links dropped:", sum(link_drops.values()), link_drops.most_common(8))
+    # every candidate link, kept or not, so the checker can re-try a dropped one next time
+    json.dump(link_cands, open(f"{WI}/website_candidates.json", "w"), indent=0, ensure_ascii=False)
     calib_app = json.load(open(f"{WI}/calibration_app.json")) if os.path.exists(f"{WI}/calibration_app.json") else {}
     out = {"v": 1, "generated": "2026-09-26", "cities": CITIES, "cuisines": CUIS, "brands": BRANDS, "tags": TAGS, "sources": SRCS,
            "count": len(places), "count_restaurants": int(len(nv)), "calibration": calib_app, "places": places}

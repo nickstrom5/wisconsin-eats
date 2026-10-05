@@ -22,13 +22,23 @@ final class AppModel {
     private(set) var saved: Set<String> = []
 
     // navigation (iPad sidebar / iPhone tabs)
-    var selectedGuide: Guide? = .fishFry
+    var selectedGuide: Guide?
     var selectedPlace: Place?
     var tab: Tab = .guides
     enum Tab: Hashable { case guides, map, saved, about }
     /// the iPhone guides stack: a guide, then a place
     var guidesPath: [Route] = []
     enum Route: Hashable { case guide(Guide), place(Place) }
+    /// bumped by openGuide so the iPad sidebar follows even when the same guide is picked again
+    private(set) var guideRequest = 0
+
+    /// Open a guide from Home: pushes it on iPhone, selects it in the iPad sidebar.
+    func openGuide(_ g: Guide) {
+        tab = .guides
+        selectedGuide = g
+        guidesPath = [.guide(g)]
+        guideRequest += 1
+    }
 
     /// a fixed "you are here" for screenshots, so lists sort by distance without a permission prompt
     var screenshotLocation: CLLocation?
@@ -84,6 +94,8 @@ final class AppModel {
     /// Places in a guide, filtered and searched, in the chosen order.
     func list(_ guide: Guide, sort: SortOrder, search: String, here: CLLocation?) -> [Place] {
         let q = Search.parse(search, towns: townKeys)
+        // typed something, but nothing searchable ("🍕", "!!!"): show nothing rather than everything
+        if q.isEmpty && !search.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { return [] }
         var out = places.filter { guide.includes($0) && filters.allows($0) && (q.isEmpty || Search.matches($0, q)) }
         if guide == .nearMe && here == nil { return [] }
         out = Ranking.sort(out, by: sort, from: here)

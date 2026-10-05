@@ -9,6 +9,9 @@ final class LocationService: NSObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
     private(set) var location: CLLocation?
     private(set) var status: CLAuthorizationStatus = .notDetermined
+    /// no fix within 12 seconds, or Core Location reported an error
+    private(set) var failed = false
+    private var timeout: Task<Void, Never>?
 
     override init() {
         super.init()
@@ -19,6 +22,12 @@ final class LocationService: NSObject, CLLocationManagerDelegate {
 
     var isDenied: Bool { status == .denied || status == .restricted }
 
+    /// Every place is in Wisconsin, so a reader elsewhere (an App Reviewer in California, say) gets told rather than an empty map.
+    var isOutsideWisconsin: Bool {
+        guard let c = location?.coordinate else { return false }
+        return !(42.4...47.4).contains(c.latitude) || !(-93.0 ... -86.2).contains(c.longitude)
+    }
+
     /// Once location is off for the app, iOS won't ask again; the app's page in Settings is the only way back.
     static func openSettings() {
         if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
@@ -27,8 +36,20 @@ final class LocationService: NSObject, CLLocationManagerDelegate {
     func request() {
         switch manager.authorizationStatus {
         case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .authorizedWhenInUse, .authorizedAlways: manager.requestLocation()
+        case .authorizedWhenInUse, .authorizedAlways: locate()
         default: break
+        }
+    }
+
+    private func locate() {
+        failed = false
+        let asked = Date()
+        manager.requestLocation()
+        timeout?.cancel()
+        timeout = Task { [weak self] in
+            try? await Task.sleep(for: .seconds(12))
+            guard let self, !Task.isCancelled else { return }
+            if (self.location?.timestamp ?? .distantPast) < asked { self.failed = true }
         }
     }
 
@@ -36,16 +57,18 @@ final class LocationService: NSObject, CLLocationManagerDelegate {
         let s = m.authorizationStatus
         Task { @MainActor in
             self.status = s
-            if s == .authorizedWhenInUse || s == .authorizedAlways { self.manager.requestLocation() }
+            if s == .authorizedWhenInUse || s == .authorizedAlways { self.locate() }
         }
     }
 
     nonisolated func locationManager(_ m: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let l = locations.last else { return }
-        Task { @MainActor in self.location = l }
+        Task { @MainActor in self.location = l; self.failed = false; self.timeout?.cancel() }
     }
 
-    nonisolated func locationManager(_ m: CLLocationManager, didFailWithError error: Error) {}
+    nonisolated func locationManager(_ m: CLLocationManager, didFailWithError error: Error) {
+        Task { @MainActor in if self.location == nil { self.failed = true } }
+    }
 }
 
 extension CLLocation {

@@ -1,6 +1,6 @@
 {
  "generated": "2026-09-26",
- "restaurants": 16379,
+ "restaurants": 16360,
  "towns": 828,
  "fish_fry": 395,
  "supper_clubs": 209,
@@ -26,7 +26,7 @@
  "supper_pre1950": 44,
  "cities": {
   "Milwaukee": {
-   "restaurants": 2030,
+   "restaurants": 2024,
    "fish_fry_near": 46,
    "supper_near": 21,
    "custard_near": 11
@@ -38,7 +38,7 @@
    "custard_near": 1
   },
   "Green Bay": {
-   "restaurants": 399,
+   "restaurants": 397,
    "fish_fry_near": 8,
    "supper_near": 14,
    "custard_near": 2
@@ -50,7 +50,7 @@
    "custard_near": 0
   },
   "Kenosha": {
-   "restaurants": 270,
+   "restaurants": 269,
    "fish_fry_near": 4,
    "supper_near": 4,
    "custard_near": 1

@@ -10,7 +10,7 @@ Everyone in the state knows those words, and nobody keeps a trustworthy statewid
 say who serves perch on Friday. Travel Wisconsin has listings but no fish, days or distance sort. Local apps are city-only:
 Isthmus Eats covers Madison and Miltown Eats covers Milwaukee.
 
-**Positioning:** "Every Wisconsin restaurant, and the fish fries worth the drive." The name covers every restaurant; the subtitle
+**Positioning:** "Wisconsin's restaurants, and the fish fries worth the drive." The name covers all restaurants; the subtitle
 and the first three guides carry the Wisconsin-only hook (Nick's call, 2026-09-26: the name implies all restaurants, and
 "fish fry & supper clubs" is the tagline).
 

@@ -1,4 +1,5 @@
 import XCTest
+import CoreLocation
 
 /// Taps through every screen and control a reviewer is likely to touch, on iPhone (tabs) and iPad (split view).
 /// Pass = nothing crashes and each screen shows what it should. Slow (network place cards, map tiles), so CI runs
@@ -169,8 +170,10 @@ final class SmokeUITests: XCTestCase {
     }
 
     private func padTour() throws {
-        // the list must be visible at launch, in portrait, without touching the sidebar button
-        waitFor(text(containing: "places ·"), 15, "a list at launch in portrait")
+        // iPad opens on Home in portrait, and a Home card opens its guide
+        waitFor(text(containing: "Fish fry & supper club guide"), 15, "Home at launch in portrait")
+        button(containing: "Friday Fish Fry").tap()
+        waitFor(app.navigationBars["Friday Fish Fry"], 5, "a Home card opens its guide on iPad")
         XCUIDevice.shared.orientation = .landscapeLeft     // all three columns
         Thread.sleep(forTimeInterval: 1.5)
         for g in ["Supper Clubs", "Frozen Custard", "Wisconsin Icons", "Inspections", "Oldest Places", "All Restaurants", "Friday Fish Fry"] {
@@ -215,7 +218,13 @@ final class SmokeUITests: XCTestCase {
     }
 
     /// "My location" moves the map to you at town level, which also fills in the Everything layer.
-    func testMyLocationCentersTheMap() {
+    /// The simulator's own location resets to Apple's campus, so each location test sets where "you" are.
+    private func openMapEverything(at here: CLLocation) {
+        // a clean slate: scripts/capture-screenshots.sh revokes location, and the last test left the simulator somewhere else.
+        // Resetting asks again (the interruption monitor allows it), and relaunching makes the app's first fix this one.
+        app.resetAuthorizationStatus(for: .location)
+        XCUIDevice.shared.location = XCUILocation(location: here)
+        app.terminate(); app.launch()
         if isPad {
             XCUIDevice.shared.orientation = .landscapeLeft
             waitFor(sidebarItem("Map"), 15, "sidebar Map"); sidebarItem("Map").tap()
@@ -230,8 +239,44 @@ final class SmokeUITests: XCTestCase {
         waitFor(text(containing: "Zoom in to a town"), 5, "zoom hint statewide")
         app.buttons["My location"].tap()
         chip.tap()    // an interaction, so the monitor can answer the permission prompt if it appears
+    }
+
+    func testMyLocationCentersTheMap() {
+        openMapEverything(at: CLLocation(latitude: 43.0389, longitude: -87.9065))   // downtown Milwaukee
         waitFor(text(containing: "places here"), 15, "map moved to the simulated location and filled in")
         if isPad { XCUIDevice.shared.orientation = .portrait }
+    }
+
+    /// App Review is usually in California: the map says so and stays on Wisconsin rather than showing an empty map.
+    func testMyLocationOutsideWisconsin() {
+        openMapEverything(at: CLLocation(latitude: 37.3349, longitude: -122.009))
+        waitFor(text(containing: "outside Wisconsin"), 15, "the outside-Wisconsin note")
+        XCTAssertTrue(text(containing: "Zoom in to a town").waitForExistence(timeout: 8), "the map stayed statewide")
+        if isPad { XCUIDevice.shared.orientation = .portrait }
+    }
+
+    /// Apple's accessibility audit on the main iPhone screens. Prints every issue (prefixed AUDIT) instead of failing,
+    /// so a run lists them all; read the log and fix what's ours (system bars and Apple's place card aren't).
+    func testAccessibilityAudit() throws {
+        if isPad { return }
+        waitFor(text(containing: "Fish fry & supper club guide"), 15, "home header")
+        func audit(_ screen: String) throws {
+            try app.performAccessibilityAudit { issue in
+                let el = issue.element.map { "\($0.elementType.rawValue) '\($0.label.prefix(40))'" } ?? "-"
+                print("AUDIT [\(screen)] \(issue.auditType.rawValue) | \(issue.compactDescription) | \(el)")
+                return true
+            }
+        }
+        try audit("home")
+        button(containing: "Friday Fish Fry").tap()
+        waitFor(text(containing: "places ·"), 5, "fish fry list")
+        try audit("fishfry")
+        app.buttons.matching(NSPredicate(format: "label CONTAINS ' · '")).firstMatch.tap()
+        waitFor(button(containing: "Ratings, hours"), 5, "a place")
+        try audit("detail")
+        app.tabBars.buttons["About"].tap()
+        try audit("about")
+        // not the Map tab: auditing thousands of MapKit annotations times out, and those views are Apple's
     }
 
     func testLaunchIsQuick() {

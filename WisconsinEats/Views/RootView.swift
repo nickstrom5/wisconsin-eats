@@ -51,17 +51,18 @@ struct TabRoot: View {
 /// iPad: guides in the sidebar, the list in the middle, the place on the right.
 struct SplitRoot: View {
     @Environment(AppModel.self) private var model
-    @State private var sidebar: SidebarItem? = .guide(.fishFry)
+    @State private var sidebar: SidebarItem? = .home
     // .automatic opened a portrait iPad on a blank "Pick a place" page with the list hidden behind the sidebar button;
     // .all shows the list next to the place (and the sidebar too, in landscape)
     @State private var columns: NavigationSplitViewVisibility = .all
 
-    enum SidebarItem: Hashable { case guide(Guide), map, saved, about }
+    enum SidebarItem: Hashable { case home, guide(Guide), map, saved, about }
 
     var body: some View {
         @Bindable var model = model
         NavigationSplitView(columnVisibility: $columns) {
             List(selection: $sidebar) {
+                Label("Home", systemImage: "house").tag(SidebarItem.home)
                 Section {
                     ForEach(Guide.allCases) { g in
                         Label(g.title, systemImage: g.systemImage).tag(SidebarItem.guide(g))
@@ -80,7 +81,7 @@ struct SplitRoot: View {
             case .map: MapScreen(selection: $model.selectedPlace)
             case .saved: SavedView(selection: $model.selectedPlace)
             case .about: AboutView()
-            case nil: HomeView()
+            case .home, nil: HomeView()
             }
         } detail: {
             if let p = model.selectedPlace {
@@ -89,10 +90,12 @@ struct SplitRoot: View {
                 ContentUnavailableView("Pick a place", systemImage: "fork.knife", description: Text("Choose a fish fry, supper club or restaurant to see its details."))
             }
         }
+        .navigationSplitViewStyle(.balanced)
         .tint(Theme.green)
-        .onAppear { show(model.tab); if ScreenshotMode.name == "home" { sidebar = nil } }
+        .onAppear { show(model.tab) }
         .onChange(of: model.tab) { _, t in show(t) }
         .onChange(of: model.selectedGuide) { _, g in if let g { sidebar = .guide(g) } }
+        .onChange(of: model.guideRequest) { _, _ in if let g = model.selectedGuide { sidebar = .guide(g) } }
     }
 
     private func show(_ tab: AppModel.Tab) {

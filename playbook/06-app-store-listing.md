@@ -1,7 +1,7 @@
 # App Store listing (ASO)
 
 Numbers here must match `site-numbers.json`, which `scripts/make-site.py` rewrites from the data on every run. Current:
-395 fish fries, 209 supper clubs, 28 custard stands, 16,379 restaurants in 828 towns. Update this file after a data refresh.
+395 fish fries, 209 supper clubs, 28 custard stands, 16,360 restaurants in 828 towns (2026-10-05 rebuild). Update this file after a data refresh.
 
 ## Name (30 max)
 `Wisconsin Eats: Restaurants` (27)
@@ -22,7 +22,7 @@ the keyword field, so "milwaukee" plus "restaurants" matches "milwaukee restaura
 
 ## Promotional text (170 max, editable any time without review)
 Launch:
-`395 Friday fish fries, 209 supper clubs and 28 custard stands, each checked open by hand. Plus every restaurant in Wisconsin, sorted by how close it is to you.` (159)
+`395 Friday fish fries, 209 supper clubs and 28 custard stands, each checked by hand. Plus 16,000+ Wisconsin restaurants, sorted by how close they are to you.` (156)
 
 Lent (switch on Ash Wednesday, Feb 10, 2027):
 `Lent is here. Find a Friday fish fry near you: 395 checked across Wisconsin, with the fish they serve (cod, perch, walleye, bluegill) and the nights they fry.` (158)
@@ -31,9 +31,9 @@ Lent (switch on Ash Wednesday, Feb 10, 2027):
 The first three lines show before "more", so they carry the pitch.
 
 ```
-Every Wisconsin restaurant, and the fish fries worth the drive.
+Wisconsin's restaurants, and the fish fries worth the drive.
 
-Wisconsin Eats is a free guide to eating in Wisconsin: 395 Friday fish fries, 209 supper clubs and 28 frozen custard stands we checked by hand, plus 16,379 restaurants, cafés, taverns and bakeries in 828 towns. No account, no ads.
+Wisconsin Eats is a free guide to eating in Wisconsin: 395 Friday fish fries, 209 supper clubs and 28 frozen custard stands we checked by hand, plus 16,360 restaurants, cafés, taverns and bakeries in 828 towns. No account, no ads.
 
 WISCONSIN GUIDES
 • Friday Fish Fry: which fish each place serves (cod, perch, walleye, haddock, bluegill), the nights it fries and the sides.
@@ -45,7 +45,7 @@ WISCONSIN GUIDES
 
 FIND IT FAST
 • Sort by distance, or browse the map by fish fry, supper club or custard.
-• Search by name, town, street or dish: "perch green bay", "supper club dells".
+• Search by name, town, street or fish: "perch green bay", "supper club dells".
 • Filter by town or cuisine, hide chains.
 • Save places for Friday.
 • Find fish fries, supper clubs and icons from iPhone search (Spotlight).
@@ -54,25 +54,25 @@ LIVE DETAILS FROM APPLE MAPS
 Tap "Ratings, hours & photos" on any place to open Apple Maps' own place card, with current hours, photos, ratings and directions.
 
 HOW THE LISTS ARE BUILT
-Every fish fry, supper club and custard stand was confirmed open in September 2026 on its own website or menu, in local news, or on its Travel Wisconsin listing. The rest of the restaurants come from Overture Maps open data and the City of Milwaukee and Public Health Madison & Dane County license lists, checked for reliability against those official lists. Nothing is ranked by star ratings.
+Every fish fry, supper club and custard stand was checked by hand in September 2026 against a 2025 or 2026 source: its own website or menu, local news, or its Travel Wisconsin listing. The rest of the restaurants come from Overture Maps open data and the City of Milwaukee and Public Health Madison & Dane County license lists, checked for reliability against those official lists. Website links are checked too. Nothing is ranked by star ratings.
 
 PRIVATE BY DESIGN
 No account, no tracking, no ads. Your location, if you share it, only sorts lists on your device. Saved places stay on your device.
 
 Places open and close, so check before you go. Spot a mistake? Email work-with-nick@gmail.com.
 
-Not affiliated with any restaurant, team, chain or government agency. Map data © OpenStreetMap contributors, Overture Maps Foundation.
+An independent app, not affiliated with any restaurant, team, chain or government agency, or with the James Beard Foundation. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Place data from Overture Maps Foundation (CDLA Permissive 2.0) and others; sources and licenses are on the About tab.
 ```
 
 ## What's New (1.0)
-`First release. Friday fish fries, supper clubs, custard stands and every restaurant in Wisconsin.`
+`First release. Friday fish fries, supper clubs, custard stands and 16,000+ Wisconsin restaurants.`
 
 ## Screenshots
 Upload in this order; the first three show in search results.
 
 | # | File (iPhone 6.9" / iPad 13") | Caption to overlay (optional) |
 |---|---|---|
-| 1 | `home.png` / `ipad-home.png` | Every Wisconsin restaurant |
+| 1 | `home.png` / `ipad-home.png` | 16,000+ Wisconsin restaurants |
 | 2 | `fishfry.png` / `ipad-fishfry.png` | Friday fish fry, nearest first |
 | 3 | `detail.png` / `ipad-detail.png` | Live hours & photos from Apple Maps |
 | 4 | `map.png` / `ipad-map.png` | The map, by fish fry or supper club |

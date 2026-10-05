@@ -71,6 +71,8 @@ final class WisconsinEatsTests: XCTestCase {
         XCTAssertEqual(ids("west layton avenue"), ["a"], "north/west/avenue match the abbreviated address")
         XCTAssertEqual(ids("saint germain"), ["f"])
         XCTAssertEqual(ids("st germain"), ["f"])
+        XCTAssertEqual(ids("🍕"), [], "nothing searchable typed means no results, not everything")
+        XCTAssertEqual(ids("!!! ?"), [])
     }
 
     func testSearchTownsAndDishes() async throws {
@@ -119,5 +121,13 @@ final class WisconsinEatsTests: XCTestCase {
         XCTAssertGreaterThan(m.count(.inspections), 500)
         XCTAssertEqual(Set(m.places.map(\.id)).count, m.places.count, "ids are unique")
         XCTAssertTrue(m.places.contains { $0.name == "Solly's Grille" && $0.jamesBeardLabel == "America's Classic" })
+        // merging duplicates keeps the hand check: this one's county license record once won and dropped it from the guide
+        XCTAssertGreaterThanOrEqual(m.count(.fishFry), 390)
+        XCTAssertTrue(m.list(.fishFry, sort: .name, search: "dahmen", here: nil).contains { $0.name == "Dahmen's at Hawks Landing" })
+        XCTAssertFalse(m.places.contains { $0.name.range(of: #"gentlem[ae]n'?s club|strip club|exotic dancer"#, options: [.regularExpression, .caseInsensitive]) != nil },
+                       "adult clubs aren't restaurants")
+        XCTAssertFalse(m.places.contains { ($0.website?.absoluteString ?? "").range(
+            of: #"yelp\.com|business\.site|google\.com|groupon\.com|yellowpages\.com"#, options: .regularExpression) != nil },
+                       "directory links were checked out")
     }
 }

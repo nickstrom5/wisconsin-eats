@@ -8,17 +8,13 @@ enum Theme {
     static let goldSoft = Color(hex: 0xFFE7A8)
     static let ink = Color(hex: 0x14241D)
     static let ink2 = Color(hex: 0x2E4238)
-    static let muted = Color(hex: 0x53665B)
+    static let muted = Color(hex: 0x4A5B51)
     static let surface = Color.white
     static let surface2 = Color(hex: 0xF1F5F2)
     static let surface3 = Color(hex: 0xE1EAE4)
     static let rule = Color(hex: 0xDAE3DD)
     static let rule2 = Color(hex: 0xB6C6BC)
 
-    /// Condensed, heavy display type for titles and big numbers (the system font's compressed width).
-    static func display(_ size: CGFloat, weight: Font.Weight = .black) -> Font {
-        .system(size: size, weight: weight).width(.compressed)
-    }
 
     static let gradeColors: [String: Color] = [
         "A": Color(hex: 0x12733A), "B": Color(hex: 0x4B7A1B), "C": Color(hex: 0xF2B01E), "D": Color(hex: 0xE8804F), "F": Color(hex: 0xC1302F),
@@ -39,7 +35,7 @@ struct Chip: View {
 
     var body: some View {
         Text(text.uppercased())
-            .font(.system(size: 10.5, weight: .bold))
+            .font(.caption2.weight(.bold))
             .tracking(0.4)
             .padding(.horizontal, 7).padding(.vertical, 3)
             .foregroundStyle(style == .green ? Color.white : style == .dashed ? Theme.muted : Theme.green)
@@ -59,10 +55,28 @@ struct GradeBadge: View {
 
     var body: some View {
         Text(grade)
-            .font(Theme.display(size * 0.72))
+            .displayFont(size * 0.72)
             .foregroundStyle(grade == "C" || grade == "D" ? Color(hex: 0x2B1D00) : .white)
             .frame(width: size, height: size)
             .background(RoundedRectangle(cornerRadius: size * 0.27).fill(Theme.gradeColors[grade] ?? Theme.muted))
             .accessibilityLabel("Inspection grade \(grade)")
+    }
+}
+
+/// Condensed, heavy display type for titles and big numbers (the system font's compressed width). It scales with the
+/// reader's text size, capped at 1.6× so a big number can't swallow its row.
+struct DisplayFont: ViewModifier {
+    let size: CGFloat
+    var weight: Font.Weight = .black
+    @ScaledMetric(relativeTo: .body) private var scale: CGFloat = 1
+
+    func body(content: Content) -> some View {
+        content.font(.system(size: size * min(scale, 1.6), weight: weight).width(.compressed))
+    }
+}
+
+extension View {
+    func displayFont(_ size: CGFloat, weight: Font.Weight = .black) -> some View {
+        modifier(DisplayFont(size: size, weight: weight))
     }
 }

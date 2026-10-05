@@ -27,7 +27,7 @@
 		<string>maps</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Your location sorts fish fries, supper clubs and restaurants by distance. It stays on your device.</string>
+	<string>Your location sorts fish fries, supper clubs and restaurants by distance and shows where you are on the map. It stays on your device.</string>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>

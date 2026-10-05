@@ -27,9 +27,9 @@ enum Guide: String, CaseIterable, Identifiable, Hashable {
         case .custard: "Local custard stands, not the chains"
         case .icons: "James Beard honorees and long-running institutions"
         case .oldest: "Verified founding years, oldest first"
-        case .inspections: "Dane County health inspections, cleanest and worst"
+        case .inspections: "Dane County health inspections, graded on a curve"
         case .nearMe: "Everything around you, closest first"
-        case .all: "Every restaurant, café, tavern and bakery"
+        case .all: "Restaurants, cafés, taverns and bakeries statewide"
         }
     }
 
@@ -87,7 +87,7 @@ enum SortOrder: String, CaseIterable, Identifiable {
         case .name: "A to Z"
         case .iconic: "Most iconic"
         case .cleanest: "Cleanest"
-        case .worst: "Worst inspections"
+        case .worst: "Lowest scores"
         }
     }
 }

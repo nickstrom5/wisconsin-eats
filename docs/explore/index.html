@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Search Wisconsin Restaurants, Fish Fries &amp; Supper Clubs</title>
-<meta name="description" content="Search all 16,379 Wisconsin restaurants by name, town, street or fish, and browse 395 hand-checked fish fries and 209 supper clubs on a map.">
+<meta name="description" content="Search all 16,360 Wisconsin restaurants by name, town, street or fish, and browse 395 hand-checked fish fries and 209 supper clubs on a map.">
 <link rel="canonical" href="https://wisconsin.eatsranked.com/explore/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#203731">
@@ -12,7 +12,7 @@
 <meta name="apple-itunes-app" content="app-id=APP_ID">
 -->
 <meta property="og:title" content="Search Wisconsin Restaurants, Fish Fries &amp; Supper Clubs">
-<meta property="og:description" content="Search all 16,379 Wisconsin restaurants by name, town, street or fish, and browse 395 hand-checked fish fries and 209 supper clubs on a map.">
+<meta property="og:description" content="Search all 16,360 Wisconsin restaurants by name, town, street or fish, and browse 395 hand-checked fish fries and 209 supper clubs on a map.">
 <meta property="og:url" content="https://wisconsin.eatsranked.com/explore/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Wisconsin Eats">
@@ -20,10 +20,10 @@
 <meta property="og:image" content="https://wisconsin.eatsranked.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Wisconsin Eats: Fish fry &amp; supper club guide. Every Wisconsin restaurant, with hand-checked fish fries, supper clubs and custard stands.">
+<meta property="og:image:alt" content="Wisconsin Eats: Fish fry &amp; supper club guide. Wisconsin restaurants, with hand-checked fish fries, supper clubs and custard stands.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Search Wisconsin Restaurants, Fish Fries &amp; Supper Clubs">
-<meta name="twitter:description" content="Search all 16,379 Wisconsin restaurants by name, town, street or fish, and browse 395 hand-checked fish fries and 209 supper clubs on a map.">
+<meta name="twitter:description" content="Search all 16,360 Wisconsin restaurants by name, town, street or fish, and browse 395 hand-checked fish fries and 209 supper clubs on a map.">
 <meta name="twitter:image" content="https://wisconsin.eatsranked.com/og.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23203731'/%3E%3Cpath d='M10 34 H54 L23 19 Z' fill='%23FFD45E'/%3E%3Crect x='10' y='34' width='44' height='17' fill='%23FFB612'/%3E%3Ccircle cx='17.5' cy='42.5' r='3.7' fill='%23203731'/%3E%3Ccircle cx='30' cy='46' r='2.4' fill='%23203731'/%3E%3Ccircle cx='42.5' cy='41' r='4.3' fill='%23203731'/%3E%3Cellipse cx='31' cy='28.5' rx='2.6' ry='1.1' fill='%23203731'/%3E%3C/svg%3E">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -200,7 +200,7 @@
  "applicationCategory": "TravelApplication",
  "operatingSystem": "Any",
  "browserRequirements": "Requires JavaScript",
- "description": "Search all 16,379 Wisconsin restaurants by name, town, street or fish, and browse 395 hand-checked fish fries and 209 supper clubs on a map.",
+ "description": "Search all 16,360 Wisconsin restaurants by name, town, street or fish, and browse 395 hand-checked fish fries and 209 supper clubs on a map.",
  "offers": {
   "@type": "Offer",
   "price": "0",
@@ -249,7 +249,7 @@
   <main id="main">
   <section class="ex-hero">
     <h1><span class="kicker">Wisconsin Eats · on the web</span>Search Wisconsin restaurants</h1>
-    <p class="sub">All 16,379 restaurants, cafés, taverns and bakeries, with 395 hand-checked Friday fish fries, 209 supper clubs and 28 custard stands. The same data as the free iPhone and iPad app. Nothing about you is stored anywhere but this browser.</p>
+    <p class="sub">16,360 restaurants, cafés, taverns and bakeries, with 395 hand-checked Friday fish fries, 209 supper clubs and 28 custard stands. The same data as the free iPhone and iPad app. Nothing about you is stored anywhere but this browser.</p>
   </section>
   <p id="ex-loading">Loading the restaurant list…</p>
   <noscript><p>The search needs JavaScript. The guides work without it: <a href="/wisconsin-fish-fry.html">fish fry</a>, <a href="/wisconsin-supper-clubs.html">supper clubs</a>, <a href="/wisconsin-frozen-custard.html">frozen custard</a>.</p></noscript>
@@ -364,7 +364,7 @@
     icons: { title: "Wisconsin Icons", sub: "James Beard honorees and long-running institutions", inc: (p) => p.ip != null, sorts: ["iconic", "oldest", "nearest"], ranked: true },
     oldest: { title: "Oldest Places", sub: "Verified founding years, oldest first", inc: (p) => p.f != null, sorts: ["oldest"], ranked: true },
     inspections: { title: "Inspections", sub: "Dane County health inspections, cleanest first. Grades are ours, graded on a curve from Public Health Madison & Dane County results, not official grades.", inc: (p) => p.in >= 2, sorts: ["cleanest"], ranked: true },
-    all: { title: "All Restaurants", sub: "Every restaurant, café, tavern and bakery", inc: () => true, sorts: ["name", "nearest"] },
+    all: { title: "All Restaurants", sub: "Restaurants, cafés, taverns and bakeries statewide", inc: () => true, sorts: ["name", "nearest"] },
     saved: { title: "Saved", sub: "Places you saved in this browser", inc: (p) => saved.has(p.id), sorts: ["name", "nearest"] },
   };
   const SORT_LABEL = { featured: "Featured first", nearest: "Nearest", oldest: "Oldest first", name: "A to Z", iconic: "Most iconic", cleanest: "Cleanest" };
@@ -398,6 +398,7 @@
 
   function list() {
     const g = GUIDES[st.g], q = parse(st.q), o = order();
+    if (qEmpty(q) && st.q.trim()) return [];   // typed something, but nothing searchable ("🍕", "!!!")
     let out = P.filter((p) => g.inc(p) && allows(p) && (qEmpty(q) || matches(p, q)));
     const byName = (a, b) => a.n.localeCompare(b.n, "en", { sensitivity: "base" });
     const dist = (p) => (here && p.la != null ? miles(here, p) : Infinity);
@@ -487,14 +488,14 @@
 
   function howWeKnow(p) {
     const src = SOURCES[p.s] || "meta";
-    if (src === "research") return "On our hand-checked list, confirmed open in Sep 2026. The open map data didn't list it as a place to eat, so it's placed from its own map listing or street address.";
+    if (src === "research") return "On our hand-checked list (checked in Sep 2026 against a 2025 or 2026 source). The open map data didn't list it as a place to eat, so it's placed from its own map listing or street address.";
     if (p.t === 2) return src === "official"
       ? `From the ${JUR[p.j] || "official"} active license list. The open map data didn't have it, so its location comes from the license record or its street address.`
       : `Matched to an active license on the ${JUR[p.j] || "official"} list.`;
     const r = rate(p);
     return (p.t === 1 ? "A high-confidence listing in Overture's open map data." : "A single listing in Overture's open map data, so it may be closed or misfiled.")
       + (r ? ` Checked against Milwaukee's and Dane County's license lists, listings like this matched a licensed business ${r} of the time.` : "")
-      + (p.hc ? " It's also on our hand-checked list, confirmed open in Sep 2026." : "");
+      + (p.hc ? " It's also on our hand-checked list, checked in Sep 2026 against a 2025 or 2026 source." : "");
   }
 
   const kv = (k, v) => (v == null || v === "" ? "" : `<div class="ex-kv"><span>${esc(k)}</span><b>${esc(v)}</b></div>`);
@@ -532,7 +533,7 @@
       if (p.g & BOIL) facts.push(["Fish boil", "Door County-style fish boil."]);
       html += section("Wisconsin classics", facts.map(([k, v]) => `<p><b>${k}</b><br>${esc(v)}</p>`).join("")
         + (d.note ? `<p>${esc(d.note)}</p>` : "")
-        + `<p class="ex-fine">${p.hc ? "Hand-checked in Sep 2026 against the place's own site, menu or recent news. Days and menus change, so check before you go." : "Not hand-checked yet, so it isn't in our supper club or custard guides. Check before you go."}</p>`);
+        + `<p class="ex-fine">${p.hc ? "Hand-checked in Sep 2026 against a 2025 or 2026 source: the place's own site or menu, local news, or its Travel Wisconsin listing. Days and menus change, so check before you go." : "Not hand-checked yet, so it isn't in our supper club or custard guides. Check before you go."}</p>`);
     }
     if (p.h || p.f) {
       const lines = [...(d.jbf ? d.jbf.split("; ").map((x) => "James Beard: " + x) : []), ...(d.hon ? d.hon.split("; ") : [])];
@@ -789,7 +790,7 @@
   <footer>
     <nav aria-label="Footer">
       <a href="/">Wisconsin Eats app</a>
-      <a href="/explore/">Search every Wisconsin restaurant</a>
+      <a href="/explore/">Search Wisconsin restaurants</a>
       <a href="/wisconsin-fish-fry.html">Wisconsin fish fry guide</a>
       <a href="/wisconsin-supper-clubs.html">Wisconsin supper clubs</a>
       <a href="/wisconsin-frozen-custard.html">Wisconsin frozen custard</a>
@@ -797,7 +798,7 @@
       <a href="/terms.html">Terms of use</a>
       <a href="mailto:work-with-nick@gmail.com">Email us</a>
     </nav>
-    <p>Place data: hand-checked research by Wisconsin Eats (September 2026); Overture Maps Foundation (CDLA Permissive 2.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Not affiliated with any restaurant, team, chain or government agency. Places open and close, so check before you go.</p>
+    <p>Place data: hand-checked research by Wisconsin Eats (September 2026); Overture Maps Foundation (CDLA Permissive 2.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Not affiliated with or endorsed by any restaurant, team, chain or government agency. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
     <p>© 2026 Wisconsin Eats.</p>
   </footer>
 </div>

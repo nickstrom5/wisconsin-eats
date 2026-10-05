@@ -79,7 +79,7 @@
     icons: { title: "Wisconsin Icons", sub: "James Beard honorees and long-running institutions", inc: (p) => p.ip != null, sorts: ["iconic", "oldest", "nearest"], ranked: true },
     oldest: { title: "Oldest Places", sub: "Verified founding years, oldest first", inc: (p) => p.f != null, sorts: ["oldest"], ranked: true },
     inspections: { title: "Inspections", sub: "Dane County health inspections, cleanest first. Grades are ours, graded on a curve from Public Health Madison & Dane County results, not official grades.", inc: (p) => p.in >= 2, sorts: ["cleanest"], ranked: true },
-    all: { title: "All Restaurants", sub: "Every restaurant, café, tavern and bakery", inc: () => true, sorts: ["name", "nearest"] },
+    all: { title: "All Restaurants", sub: "Restaurants, cafés, taverns and bakeries statewide", inc: () => true, sorts: ["name", "nearest"] },
     saved: { title: "Saved", sub: "Places you saved in this browser", inc: (p) => saved.has(p.id), sorts: ["name", "nearest"] },
   };
   const SORT_LABEL = { featured: "Featured first", nearest: "Nearest", oldest: "Oldest first", name: "A to Z", iconic: "Most iconic", cleanest: "Cleanest" };
@@ -113,6 +113,7 @@
 
   function list() {
     const g = GUIDES[st.g], q = parse(st.q), o = order();
+    if (qEmpty(q) && st.q.trim()) return [];   // typed something, but nothing searchable ("🍕", "!!!")
     let out = P.filter((p) => g.inc(p) && allows(p) && (qEmpty(q) || matches(p, q)));
     const byName = (a, b) => a.n.localeCompare(b.n, "en", { sensitivity: "base" });
     const dist = (p) => (here && p.la != null ? miles(here, p) : Infinity);
@@ -202,14 +203,14 @@
 
   function howWeKnow(p) {
     const src = SOURCES[p.s] || "meta";
-    if (src === "research") return "On our hand-checked list, confirmed open in Sep 2026. The open map data didn't list it as a place to eat, so it's placed from its own map listing or street address.";
+    if (src === "research") return "On our hand-checked list (checked in Sep 2026 against a 2025 or 2026 source). The open map data didn't list it as a place to eat, so it's placed from its own map listing or street address.";
     if (p.t === 2) return src === "official"
       ? `From the ${JUR[p.j] || "official"} active license list. The open map data didn't have it, so its location comes from the license record or its street address.`
       : `Matched to an active license on the ${JUR[p.j] || "official"} list.`;
     const r = rate(p);
     return (p.t === 1 ? "A high-confidence listing in Overture's open map data." : "A single listing in Overture's open map data, so it may be closed or misfiled.")
       + (r ? ` Checked against Milwaukee's and Dane County's license lists, listings like this matched a licensed business ${r} of the time.` : "")
-      + (p.hc ? " It's also on our hand-checked list, confirmed open in Sep 2026." : "");
+      + (p.hc ? " It's also on our hand-checked list, checked in Sep 2026 against a 2025 or 2026 source." : "");
   }
 
   const kv = (k, v) => (v == null || v === "" ? "" : `<div class="ex-kv"><span>${esc(k)}</span><b>${esc(v)}</b></div>`);
@@ -247,7 +248,7 @@
       if (p.g & BOIL) facts.push(["Fish boil", "Door County-style fish boil."]);
       html += section("Wisconsin classics", facts.map(([k, v]) => `<p><b>${k}</b><br>${esc(v)}</p>`).join("")
         + (d.note ? `<p>${esc(d.note)}</p>` : "")
-        + `<p class="ex-fine">${p.hc ? "Hand-checked in Sep 2026 against the place's own site, menu or recent news. Days and menus change, so check before you go." : "Not hand-checked yet, so it isn't in our supper club or custard guides. Check before you go."}</p>`);
+        + `<p class="ex-fine">${p.hc ? "Hand-checked in Sep 2026 against a 2025 or 2026 source: the place's own site or menu, local news, or its Travel Wisconsin listing. Days and menus change, so check before you go." : "Not hand-checked yet, so it isn't in our supper club or custard guides. Check before you go."}</p>`);
     }
     if (p.h || p.f) {
       const lines = [...(d.jbf ? d.jbf.split("; ").map((x) => "James Beard: " + x) : []), ...(d.hon ? d.hon.split("; ") : [])];

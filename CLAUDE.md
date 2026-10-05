@@ -15,6 +15,8 @@ Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `
   keeps its tag and stays in the directory, but it is not in a guide. Copy that promises "checked open" must stay true.
 - Research records facts only: no review text, no ratings from anyone, and a source URL for every entry. Never bypass bot protection
   (403s, bot checks, logins). DATCP's search site blocks automated access, so don't touch it.
+- Website links: `pipeline/check_websites.py` fetches every link politely and the export drops any that isn't plainly the place's own
+  live page (spam, parked, directory, moved, dead or blocked). Re-run it before each submission, then rebuild.
 - Places the research finds closed go in `data/research/closed.json` (with a source) or get `"open": false` in `curated.json`.
 - Verified addresses Overture can't place: run `pipeline/geocode_research.py` (US Census geocoder), then rebuild.
 
@@ -44,8 +46,8 @@ Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `
 
 ## Website (`docs/`)
 - Lives at https://wisconsin.eatsranked.com/ (the hub is eatsranked.com; Cloudflare DNS `wisconsin` CNAME → nickstrom5.github.io, DNS only), set by
-  `CUSTOM_DOMAIN` in `scripts/make-site.py`, which also writes `docs/CNAME`. The app's links (`WisconsinEats/App/Links.swift`) still say
-  github.io, and GitHub forwards them, so shipped builds keep working. Switch Links.swift to the new domain in the next app update.
+  `CUSTOM_DOMAIN` in `scripts/make-site.py`, which also writes `docs/CNAME`. The app's links (`WisconsinEats/App/Links.swift`) use it
+  from build 3; builds 1–2 said github.io, which GitHub forwards.
 - Generated: `.venv/bin/python scripts/make-site.py` writes every page, `sitemap.xml`, `robots.txt`, `site.webmanifest`, `CNAME`,
   and `playbook/site-numbers.json`. **Never hand-edit `docs/*.html`**; change the generator and re-run it.
 - It asserts title 50–60 and description 140–160 characters and a single `<h1>`, and fails loudly if a variant doesn't fit.
@@ -55,13 +57,14 @@ Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `
   generator. Keep its guide rules in step with `Guide.swift` (hand-checked only for fish fry, supper clubs and custard). Saved places and
   the last guide live in localStorage. Preview: the `wi-eats-site` launch config serves `build/serve/wisconsin-eats` → `docs/`.
 - Site screenshots in `docs/img/`: 480px copies of `docs/screenshots/{home,fishfry,detail,map,icons}.png`, quantized PNG plus `cwebp -q 84`.
-- QA: serve `docs/` locally and check every sitemap page with headless Chrome (Python Playwright, `channel="chrome"`) at 375 and
+- QA: `.venv/bin/python scripts/qa-site.py` serves `docs/` locally and checks every sitemap page and the web app with headless Chrome (Python Playwright, `channel="chrome"`) at 375 and
   1280 px wide, with no horizontal scroll, no console errors, no broken internal links and valid JSON-LD. Don't drive the user's own browser.
 - No analytics, no third-party scripts, no `aggregateRating`, no reviews in JSON-LD.
 
 ## Public vs private
 - `docs/` is the published website; only site files go there. Strategy, listing copy and launch notes live in `playbook/`.
-- Commits are local only (no remote, no push):
+- Remote: github.com/nickstrom5/wisconsin-eats (public). Pushing `main` publishes the website through GitHub Pages, so push only with
+  Nick's OK. Commit with
   `git -c user.name="Nick Soderstrom" -c user.email="329204362+nickstrom5@users.noreply.github.com" commit` (also set as this repo's
   `git config user.email`). The repo is public: never a personal or work email. History was rewritten to the no-reply address on
   2026-09-28, and the pre-rewrite history is kept locally only, in the branch `backup-before-email-rewrite`.

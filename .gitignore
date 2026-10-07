@@ -1,6 +1,6 @@
 # Xcode (the project is generated from project.yml)
 *.xcodeproj
-DerivedData/
+DerivedData*/
 build/
 xcuserdata/
 .DS_Store

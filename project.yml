@@ -11,7 +11,7 @@ settings:
   base:
     SWIFT_VERSION: "5.10"
     MARKETING_VERSION: "1.0.0"
-    CURRENT_PROJECT_VERSION: "3"
+    CURRENT_PROJECT_VERSION: "4"
     DEVELOPMENT_TEAM: "4C8TU6U7MQ"
     CODE_SIGN_STYLE: Automatic
     TARGETED_DEVICE_FAMILY: "1,2"  # iPhone and iPad
@@ -41,7 +41,6 @@ targets:
         UIUserInterfaceStyle: Light      # the palette is light-only (Design/Theme.swift); dark mode made lists unreadable
         NSLocationWhenInUseUsageDescription: "Your location sorts fish fries, supper clubs and restaurants by distance and shows where you are on the map. It stays on your device."
         ITSAppUsesNonExemptEncryption: false
-        LSApplicationQueriesSchemes: [maps]
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.wisconsineats.ios

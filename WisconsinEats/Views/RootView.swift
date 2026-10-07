@@ -77,11 +77,12 @@ struct SplitRoot: View {
             .navigationTitle("Wisconsin Eats")
         } content: {
             switch sidebar {
-            case .guide(let g): GuideListView(guide: g, selection: $model.selectedPlace)
+            // .id: each guide starts fresh (its own sort, search and location request), not with the last guide's state
+            case .guide(let g): GuideListView(guide: g, selection: $model.selectedPlace).id(g)
             case .map: MapScreen(selection: $model.selectedPlace)
             case .saved: SavedView(selection: $model.selectedPlace)
             case .about: AboutView()
-            case .home, nil: HomeView()
+            case .home, nil: HomeView(inSplitView: true)
             }
         } detail: {
             if let p = model.selectedPlace {

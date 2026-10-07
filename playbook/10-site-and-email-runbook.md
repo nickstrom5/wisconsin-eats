@@ -3,7 +3,7 @@
 Reusable for any app. Replace: `APP` (app name), `DOMAIN` (e.g. useenough.app), `GH_USER`
 (GitHub username), `REPO` (repo name), `GMAIL` (the Gmail inbox that receives support mail).
 Cost: the domain only (Cloudflare sells .com at cost). Everything else is free.
-For this app: APP=Wisconsin Eats, DOMAIN=wisconsineats.com, GH_USER=nickstrom5.
+For this app: APP=Wisconsin Eats, DOMAIN=wisconsin.eatsranked.com (hub eatsranked.com; wisconsineats.com now belongs to someone else), GH_USER=nickstrom5.
 
 ## 1. Domain
 - Buy DOMAIN at Cloudflare Registrar (dash.cloudflare.com → Domain Registration). At-cost

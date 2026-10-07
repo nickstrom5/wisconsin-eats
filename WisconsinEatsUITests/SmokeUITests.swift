@@ -195,6 +195,16 @@ final class SmokeUITests: XCTestCase {
         XCUIDevice.shared.orientation = .portrait
         Thread.sleep(forTimeInterval: 1.5)
         XCTAssertEqual(app.state, .runningForeground)
+
+        // a fresh portrait launch: the sidebar button is the only way from Home to Map, Saved and About (build 3 hid it)
+        app.terminate(); app.launch()
+        waitFor(text(containing: "Fish fry & supper club guide"), 15, "Home at launch in portrait")
+        let toggle = app.buttons.matching(NSPredicate(format: "identifier == 'ToggleSidebar' OR label CONTAINS[c] 'sidebar'")).firstMatch
+        waitFor(toggle, 5, "a sidebar button on Home in portrait")
+        toggle.tap()
+        waitFor(sidebarItem("Map"), 5, "the sidebar opens from Home in portrait")
+        sidebarItem("Map").tap()
+        waitFor(app.buttons["Everything"], 5, "Map from Home in portrait")
     }
 
     func testEverythingLayerFillsInWhenZoomed() {

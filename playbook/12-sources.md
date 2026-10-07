@@ -6,14 +6,14 @@ Checked 2026-09-26. Site numbers are written to `playbook/site-numbers.json` by 
 ## Counts (app and site)
 | Number | Where it appears | How it's computed |
 |---|---|---|
-| 16,360 restaurants | Home header, site hero, App Store description | Places in `data/app/places.json` that aren't flagged non-restaurants (`v`) |
+| 16,346 restaurants | Home header, site hero, App Store description | Places in `data/app/places.json` that aren't flagged non-restaurants (`v`) |
 | 828 towns | Same | Distinct towns among those restaurants |
-| 395 Friday fish fries | Home card, fish fry guide, site, listing | Hand-checked (`hc`) places tagged fish fry |
-| 209 supper clubs | Same | Hand-checked places tagged supper club. Another 64 listings merely *named* "Supper Club" aren't counted |
+| 402 Friday fish fries | Home card, fish fry guide, site, listing | Hand-checked (`hc`) places tagged fish fry |
+| 211 supper clubs | Same | Hand-checked places tagged supper club. Another 64 listings merely *named* "Supper Club" aren't counted |
 | 28 custard stands | Same | Hand-checked places tagged custard, not chains with 5+ Wisconsin locations |
 | Fish counts (cod 213, perch 146, walleye 121, haddock 78, bluegill 49) | Fish fry guide | Among the 309 fish fries that list their fish; each fish counted once per place |
 | 37 serve fish fry on other days too | Fish fry guide | `days` is not just Friday |
-| 144 of 209 supper clubs also fry fish; 94 have a verified founding year; 44 opened before 1950 | Supper club guide | Same data |
+| 144 of 211 supper clubs also fry fish; 94 have a verified founding year; 44 opened before 1950 | Supper club guide | Same data |
 | 75–79% | About screen, place notes | Share of Meta listings with confidence ≥ 0.95 that matched an active license: Dane 75%, Milwaukee 79% (`data/wi/calibration_app.json`, n = 1,119 and 1,126) |
 | 1,013 inspected places, A–F grades | Inspections guide | Dane County places with at least 2 routine inspections since Jan 2023, graded on a curve (`pipeline/wisconsin.py`) |
 
@@ -43,4 +43,4 @@ The research used facts only: no review text and no ratings, and blocked sites w
 
 ## Dates
 - Ash Wednesday 2027: February 10, 2027 (Easter is March 28, 2027).
-- Domain check: Verisign RDAP returned 404 for wisconsineats.com on 2026-09-26.
+- Domain check: Verisign RDAP returned 404 for wisconsineats.com on 2026-09-26; by 2026-10-07 someone else had registered it. The site uses wisconsin.eatsranked.com.

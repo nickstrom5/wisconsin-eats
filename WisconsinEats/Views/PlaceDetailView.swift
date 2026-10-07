@@ -8,6 +8,7 @@ struct PlaceDetailView: View {
 
     @State private var mapItem: MKMapItem?
     @State private var lookingUp = false
+    @State private var mapsUnreachable = false
     @State private var notOnAppleMaps = false
 
     var body: some View {
@@ -41,6 +42,11 @@ struct PlaceDetailView: View {
         } message: {
             Text("Apple Maps doesn't have a listing for \(place.name) at this spot, so there are no ratings or hours to show here.")
         }
+        .alert("Couldn't reach Apple Maps", isPresented: $mapsUnreachable) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Ratings, hours and photos come live from Apple Maps. Check your connection and try again.")
+        }
     }
 
     // MARK: sections
@@ -52,6 +58,7 @@ struct PlaceDetailView: View {
             Text(place.name.uppercased())
                 .displayFont(38).foregroundStyle(Theme.green)
                 .fixedSize(horizontal: false, vertical: true)
+                .accessibilityLabel(place.name)   // VoiceOver spells out some all-caps words
                 .accessibilityAddTraits(.isHeader)
             Text([place.fullAddress, place.cuisine].filter { !$0.isEmpty }.joined(separator: " · "))
                 .font(.subheadline).foregroundStyle(Theme.ink2)
@@ -68,9 +75,13 @@ struct PlaceDetailView: View {
             Button {
                 lookingUp = true
                 Task {
-                    let item = await AppleMaps.findItem(for: place)
+                    let result = await AppleMaps.findItem(for: place)
                     lookingUp = false
-                    if let item { mapItem = item } else { notOnAppleMaps = true }
+                    switch result {
+                    case .found(let item): mapItem = item
+                    case .notListed: notOnAppleMaps = true
+                    case .unreachable: mapsUnreachable = true
+                    }
                 }
             } label: {
                 HStack {
@@ -118,6 +129,7 @@ struct PlaceDetailView: View {
         .clipShape(RoundedRectangle(cornerRadius: 14))
         .onTapGesture { AppleMaps.openInMaps(place) }
         .accessibilityLabel("Map of \(place.name). Opens Apple Maps.")
+        .accessibilityAddTraits(.isButton)
     }
 
     private var classics: some View {
@@ -147,7 +159,8 @@ struct PlaceDetailView: View {
                 ForEach(lines(place.jamesBeard, prefix: "James Beard: ") + lines(place.otherHonors, prefix: ""), id: \.self) { l in
                     Label(l, systemImage: "rosette").font(.subheadline).foregroundStyle(Theme.ink)
                 }
-                if let f = place.founded { fact("Open since", "\(f) (verified)") }
+                // "founded", not "open since": some places closed and reopened (Landmark 1850 Inn reopened in 2024)
+                if let f = place.founded { fact("Founded", "\(f) (verified)") }
             }
         }
     }

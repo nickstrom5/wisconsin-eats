@@ -14,6 +14,8 @@ struct MapScreen: View {
     @State private var centerWhenFound = false
     @State private var notice: String?
     @State private var askSettings = false
+    /// places at the same spot (a food hall, a shared building) that clustering can never pull apart
+    @State private var stacked: [Place] = []
 
     /// All 16,000+ restaurants at once kept the map busy for a minute and more in QA, so the Everything layer fills in
     /// only once you zoom to about town size (this many degrees of latitude on screen), and only for what's in view.
@@ -38,9 +40,8 @@ struct MapScreen: View {
         let zoomedOut = layer == .all && (region?.span.latitudeDelta ?? .infinity) > Self.everythingSpan
         let places = layer != .all ? layerPlaces : zoomedOut ? [] : layerPlaces.filter(inView)
         ZStack(alignment: .top) {
-            ClusteredMap(places: places, showsUser: location.location != nil, center: centerOn, onRegion: { region = $0 }) { p in
-                if let selection { selection.wrappedValue = p } else { pushed = p }
-            }
+            ClusteredMap(places: places, showsUser: location.location != nil, center: centerOn, onRegion: { region = $0 },
+                         onStack: { stacked = $0 }) { p in open(p) }
             .ignoresSafeArea(edges: .bottom)
             VStack(spacing: 6) {
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -95,6 +96,14 @@ struct MapScreen: View {
                 flash("Couldn't find your location. Check that Location Services is on.")
             }
         }
+        .onChange(of: location.status) { _, _ in
+            if location.isDenied { centerWhenFound = false }   // they said no; don't jump the map if they allow it later
+        }
+        .confirmationDialog("Places here", isPresented: Binding(get: { !stacked.isEmpty }, set: { if !$0 { stacked = [] } })) {
+            ForEach(stacked) { p in Button(p.name) { open(p) } }
+        } message: {
+            Text("These places share one spot on the map.")
+        }
         .alert("Location is off", isPresented: $askSettings) {
             Button("Open Settings") { LocationService.openSettings() }
             Button("Cancel", role: .cancel) {}
@@ -105,6 +114,10 @@ struct MapScreen: View {
 }
 
 extension MapScreen {
+    private func open(_ p: Place) {
+        if let selection { selection.wrappedValue = p } else { pushed = p }
+    }
+
     /// Town-level zoom on the reader, unless they're outside Wisconsin: then the map stays on the state and says why.
     private func center(on here: CLLocation) {
         if location.isOutsideWisconsin {
@@ -133,6 +146,7 @@ struct ClusteredMap: UIViewRepresentable {
     /// move the map here (town-level zoom) whenever a new location object arrives
     var center: CLLocation? = nil
     var onRegion: (MKCoordinateRegion) -> Void = { _ in }
+    var onStack: ([Place]) -> Void = { _ in }
     let onSelect: (Place) -> Void
 
     func makeUIView(context: Context) -> MKMapView {
@@ -151,10 +165,12 @@ struct ClusteredMap: UIViewRepresentable {
     func updateUIView(_ map: MKMapView, context: Context) {
         context.coordinator.onSelect = onSelect
         context.coordinator.onRegion = onRegion
+        context.coordinator.onStack = onStack
         map.showsUserLocation = showsUser
         if let c = center, c !== context.coordinator.centered {
             context.coordinator.centered = c
-            map.setRegion(MKCoordinateRegion(center: c.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)), animated: true)
+            map.setRegion(MKCoordinateRegion(center: c.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)),
+                          animated: !UIAccessibility.isReduceMotionEnabled)
         }
         let want = Set(places.map(\.id))
         let have = map.annotations.compactMap { $0 as? PlaceAnnotation }
@@ -169,6 +185,7 @@ struct ClusteredMap: UIViewRepresentable {
     final class Coordinator: NSObject, MKMapViewDelegate {
         var onSelect: ((Place) -> Void)?
         var onRegion: ((MKCoordinateRegion) -> Void)?
+        var onStack: (([Place]) -> Void)?
         var centered: CLLocation?
 
         func mapView(_ map: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -188,8 +205,15 @@ struct ClusteredMap: UIViewRepresentable {
 
         func mapView(_ map: MKMapView, didSelect annotation: MKAnnotation) {
             if let cluster = annotation as? MKClusterAnnotation {
-                map.showAnnotations(cluster.memberAnnotations, animated: true)
                 map.deselectAnnotation(cluster, animated: false)
+                let members = cluster.memberAnnotations.compactMap { $0 as? PlaceAnnotation }
+                let lats = members.map(\.coordinate.latitude), lons = members.map(\.coordinate.longitude)
+                // within ~20 m of each other: zooming in can never split them, so offer a list
+                if let a = lats.min(), let b = lats.max(), let c = lons.min(), let d = lons.max(), b - a < 0.0002, d - c < 0.0003 {
+                    onStack?(members.map(\.place).sorted { $0.name < $1.name })
+                } else {
+                    map.showAnnotations(cluster.memberAnnotations, animated: !UIAccessibility.isReduceMotionEnabled)
+                }
             }
         }
     }

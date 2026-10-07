@@ -4,13 +4,27 @@ import UIKit
 /// Finds the Apple Maps listing for a place so the app can show Apple's own place card (ratings, hours, photos).
 /// Those live details are Apple's licensed data, shown in Apple's UI; the app stores none of it.
 enum AppleMaps {
-    static func findItem(for p: Place) async -> MKMapItem? {
-        guard let c = p.coordinate else { return nil }
+    enum Lookup {
+        case found(MKMapItem)
+        case notListed
+        /// no network, or Apple's search failed: not the same as "Apple Maps has no listing"
+        case unreachable
+    }
+
+    static func findItem(for p: Place) async -> Lookup {
+        guard let c = p.coordinate else { return .notListed }
         let req = MKLocalSearch.Request()
         req.naturalLanguageQuery = p.name
         req.region = MKCoordinateRegion(center: c, latitudinalMeters: 800, longitudinalMeters: 800)
         req.resultTypes = .pointOfInterest
-        guard let items = try? await MKLocalSearch(request: req).start().mapItems else { return nil }
+        let items: [MKMapItem]
+        do {
+            items = try await MKLocalSearch(request: req).start().mapItems
+        } catch let error as MKError where error.code == .placemarkNotFound {
+            return .notListed
+        } catch {
+            return .unreachable
+        }
         let here = CLLocation(latitude: c.latitude, longitude: c.longitude)
         let want = Search.normalize(p.name)
         let scored = items.compactMap { item -> (MKMapItem, Double)? in
@@ -23,7 +37,7 @@ enum AppleMaps {
             guard name == want || shared >= 0.5 || name.hasPrefix(want) || want.hasPrefix(name) else { return nil }
             return (item, shared * 2 - d / 350)
         }
-        return scored.max { $0.1 < $1.1 }?.0
+        return scored.max { $0.1 < $1.1 }.map { .found($0.0) } ?? .notListed
     }
 
     /// Fallback: open Apple Maps at the place's name and location.

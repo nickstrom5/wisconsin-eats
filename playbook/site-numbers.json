@@ -1,59 +1,60 @@
 {
- "generated": "2026-09-26",
- "restaurants": 16360,
+ "generated": "2026-10-07",
+ "restaurants": 16346,
  "towns": 828,
- "fish_fry": 395,
- "supper_clubs": 209,
+ "fish_fry": 402,
+ "supper_clubs": 211,
  "custard": 28,
- "fish_listed": 309,
+ "fish_listed": 313,
  "fish_counts": {
-  "cod": 213,
-  "perch": 146,
-  "walleye": 121,
-  "haddock": 78,
+  "cod": 214,
+  "perch": 149,
+  "walleye": 123,
+  "haddock": 80,
   "bluegill": 49,
   "catfish": 18,
-  "whitefish": 14,
+  "whitefish": 15,
   "salmon": 13,
-  "pollock": 5,
+  "pollock": 6,
   "tilapia": 4,
   "pike": 4,
   "smelt": 4
  },
  "not_only_friday": 37,
- "supper_with_fish_fry": 144,
- "supper_founded_known": 94,
- "supper_pre1950": 44,
+ "supper_with_fish_fry": 146,
+ "supper_founded_known": 96,
+ "supper_pre1950": 45,
+ "place_pages": 614,
  "cities": {
   "Milwaukee": {
-   "restaurants": 2024,
-   "fish_fry_near": 46,
-   "supper_near": 21,
-   "custard_near": 11
+   "restaurants": 2021,
+   "fish_fry_near": 44,
+   "supper_near": 14,
+   "custard_near": 9
   },
   "Madison": {
-   "restaurants": 952,
+   "restaurants": 945,
    "fish_fry_near": 39,
-   "supper_near": 16,
+   "supper_near": 15,
    "custard_near": 1
   },
   "Green Bay": {
    "restaurants": 397,
    "fish_fry_near": 8,
-   "supper_near": 14,
+   "supper_near": 9,
    "custard_near": 2
   },
   "Appleton": {
    "restaurants": 332,
    "fish_fry_near": 14,
-   "supper_near": 24,
+   "supper_near": 12,
    "custard_near": 0
   },
   "Kenosha": {
    "restaurants": 269,
-   "fish_fry_near": 4,
-   "supper_near": 4,
-   "custard_near": 1
+   "fish_fry_near": 2,
+   "supper_near": 3,
+   "custard_near": 0
   },
   "Eau Claire": {
    "restaurants": 225,
@@ -63,14 +64,14 @@
   },
   "Racine": {
    "restaurants": 221,
-   "fish_fry_near": 4,
-   "supper_near": 15,
+   "fish_fry_near": 2,
+   "supper_near": 1,
    "custard_near": 2
   },
   "Oshkosh": {
    "restaurants": 211,
-   "fish_fry_near": 7,
-   "supper_near": 24,
+   "fish_fry_near": 6,
+   "supper_near": 14,
    "custard_near": 2
   },
   "La Crosse": {
@@ -82,23 +83,23 @@
   "Sheboygan": {
    "restaurants": 195,
    "fish_fry_near": 3,
-   "supper_near": 9,
+   "supper_near": 8,
    "custard_near": 0
   },
   "Waukesha": {
    "restaurants": 167,
-   "fish_fry_near": 30,
-   "supper_near": 20,
-   "custard_near": 7
+   "fish_fry_near": 17,
+   "supper_near": 7,
+   "custard_near": 3
   },
   "Janesville": {
-   "restaurants": 166,
+   "restaurants": 165,
    "fish_fry_near": 10,
-   "supper_near": 10,
+   "supper_near": 9,
    "custard_near": 0
   },
   "Wisconsin Dells": {
-   "restaurants": 94,
+   "restaurants": 93,
    "fish_fry_near": 13,
    "supper_near": 8,
    "custard_near": 0

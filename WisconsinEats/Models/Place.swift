@@ -196,7 +196,9 @@ struct Place: Identifiable, Hashable {
         fryDays = r.days
         sides = r.sides
         note = r.note
-        website = r.w.flatMap { URL(string: $0.hasPrefix("http") ? $0 : "https://" + $0) }
+        // web links only: a bare host gets https://, and any other scheme (javascript:, tel:, a custom app URL) is dropped
+        website = r.w.flatMap { URL(string: $0.contains("://") ? $0 : "https://" + $0) }
+            .flatMap { ["http", "https"].contains($0.scheme?.lowercased() ?? "") && $0.host != nil ? $0 : nil }
         phone = r.ph
         license = r.lic
         inspection = r.inspection

@@ -110,6 +110,47 @@ final class WisconsinEatsTests: XCTestCase {
         XCTAssertEqual(m.place(id: "d")!.tier, .licensed)
     }
 
+    /// The one-pass normalize must agree with the regex version it replaced, on tricky strings and every bundled name and address.
+    func testNormalizeMatchesTheRegexVersion() async throws {
+        func reference(_ s: String) -> String {
+            var t = s.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .init(identifier: "en_US")).lowercased()
+            t = t.replacingOccurrences(of: #"\b([a-z0-9])\s*&\s*([a-z0-9])\b"#, with: "$1$2", options: .regularExpression)
+            t = t.replacingOccurrences(of: "&", with: " and ")
+            t = t.replacingOccurrences(of: #"['’`]"#, with: "", options: .regularExpression)
+            t = t.replacingOccurrences(of: #"[^\p{L}\p{N}]+"#, with: " ", options: .regularExpression)
+            return t.trimmingCharacters(in: .whitespaces)
+        }
+        for s in ["Kopp's Frozen Custard", "B&B Supper Club", "Rock & Roll Café", "  Phở 88!! ", "Mader’s", "Joe`s", "A&W", "½ Price",
+                  "W5297 County Rd T", "4128 State Hwy 42/57", "🍕 Pizza", "Ⅻ Club", "", "---"] {
+            XCTAssertEqual(Search.normalize(s), reference(s), s)
+        }
+        let m = AppModel(defaults: UserDefaults(suiteName: "norm-\(UUID().uuidString)")!)
+        await m.load()
+        for p in m.places {
+            XCTAssertEqual(Search.normalize(p.name), reference(p.name), p.name)
+            XCTAssertEqual(Search.normalize(p.fullAddress), reference(p.fullAddress), p.fullAddress)
+        }
+    }
+
+    func testListCacheFollowsFiltersAndSearch() async throws {
+        let m = try await sampleModel()
+        let all = m.list(.all, sort: .name, search: "", here: nil)
+        XCTAssertTrue(all.contains { $0.name == "Culver's" })
+        m.filters.hideChains = true
+        XCTAssertFalse(m.list(.all, sort: .name, search: "", here: nil).contains { $0.name == "Culver's" }, "a filter change isn't served from the cache")
+        m.filters = Filters()
+        XCTAssertEqual(m.list(.all, sort: .name, search: "", here: nil).map(\.id), all.map(\.id))
+        XCTAssertEqual(m.list(.all, sort: .name, search: "kopp", here: nil).map(\.id), ["a"])
+        XCTAssertEqual(m.list(.all, sort: .name, search: "", here: nil).map(\.id), all.map(\.id))
+    }
+
+    func testNearMeIsntASearchWord() {
+        let q = Search.parse("fish fry near me", towns: ["mequon": "Mequon"])
+        XCTAssertEqual(q.tag, .fishFry)
+        XCTAssertNil(q.town)
+        XCTAssertTrue(q.tokens.isEmpty, "\"me\" mustn't match Mequon or Mexican places")
+    }
+
     /// The real bundled file decodes and holds the guides the app promises.
     func testBundledData() async throws {
         let m = AppModel(defaults: UserDefaults(suiteName: "bundle-\(UUID().uuidString)")!)
@@ -122,8 +163,16 @@ final class WisconsinEatsTests: XCTestCase {
         XCTAssertEqual(Set(m.places.map(\.id)).count, m.places.count, "ids are unique")
         XCTAssertTrue(m.places.contains { $0.name == "Solly's Grille" && $0.jamesBeardLabel == "America's Classic" })
         // merging duplicates keeps the hand check: this one's county license record once won and dropped it from the guide
-        XCTAssertGreaterThanOrEqual(m.count(.fishFry), 390)
+        XCTAssertGreaterThanOrEqual(m.count(.fishFry), 400)
         XCTAssertTrue(m.list(.fishFry, sort: .name, search: "dahmen", here: nil).contains { $0.name == "Dahmen's at Hawks Landing" })
+        // a hand-checked fish fry at a hotel or golf club is a place to eat, whatever its map category says
+        XCTAssertTrue(m.list(.fishFry, sort: .name, search: "hotel fremont", here: nil).contains { $0.name == "The Hotel Fremont" })
+        // the Icons guide is hand-picked: its cheese shops show even though non-restaurants are hidden elsewhere
+        XCTAssertTrue(m.list(.icons, sort: .iconic, search: "", here: nil).contains { $0.name == "Mars Cheese Castle" })
+        XCTAssertFalse(m.list(.all, sort: .name, search: "mars cheese", here: nil).contains { $0.name == "Mars Cheese Castle" })
+        // Chetek's Caddy Shack has the Chetek fish fry; Hayward's Caddyshak doesn't borrow it
+        XCTAssertTrue(m.list(.fishFry, sort: .name, search: "caddy shack chetek", here: nil).contains { $0.city == "Chetek" })
+        XCTAssertFalse(m.list(.fishFry, sort: .name, search: "caddyshak", here: nil).contains { $0.city == "Hayward" })
         XCTAssertFalse(m.places.contains { $0.name.range(of: #"gentlem[ae]n'?s club|strip club|exotic dancer"#, options: [.regularExpression, .caseInsensitive]) != nil },
                        "adult clubs aren't restaurants")
         XCTAssertFalse(m.places.contains { ($0.website?.absoluteString ?? "").range(

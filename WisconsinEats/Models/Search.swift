@@ -15,13 +15,29 @@ struct Search {
                                                    ("cheese curds", .cheeseCurds), ("curds", .cheeseCurds)]
 
     /// Lowercase, no accents or apostrophes, "&" as "and" ("B&B" stays "bb"), everything else a single space.
+    /// Runs for every place at launch (about 50,000 strings), so it's one pass over the characters rather than four regexes;
+    /// only the rare "&" still goes through a regex.
     static func normalize(_ s: String) -> String {
         var t = s.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .init(identifier: "en_US")).lowercased()
-        t = t.replacingOccurrences(of: #"\b([a-z0-9])\s*&\s*([a-z0-9])\b"#, with: "$1$2", options: .regularExpression)
-        t = t.replacingOccurrences(of: "&", with: " and ")
-        t = t.replacingOccurrences(of: #"['’`]"#, with: "", options: .regularExpression)
-        t = t.replacingOccurrences(of: #"[^\p{L}\p{N}]+"#, with: " ", options: .regularExpression)
-        return t.trimmingCharacters(in: .whitespaces)
+        if t.contains("&") {
+            t = t.replacingOccurrences(of: #"\b([a-z0-9])\s*&\s*([a-z0-9])\b"#, with: "$1$2", options: .regularExpression)
+            t = t.replacingOccurrences(of: "&", with: " and ")
+        }
+        var out = String.UnicodeScalarView()
+        var gap = false
+        for c in t.unicodeScalars {
+            if c == "'" || c == "\u{2019}" || c == "`" { continue }
+            switch c.properties.generalCategory {
+            case .uppercaseLetter, .lowercaseLetter, .titlecaseLetter, .modifierLetter, .otherLetter,
+                 .decimalNumber, .letterNumber, .otherNumber:
+                if gap && !out.isEmpty { out.append(" ") }
+                gap = false
+                out.append(c)
+            default:
+                gap = true
+            }
+        }
+        return String(out)
     }
 
     /// Addresses (only) get their street words abbreviated so "north avenue" finds "N Ave".
@@ -35,6 +51,9 @@ struct Search {
         var townPhrase: String?
         var tag: PlaceTags?
         var tagPhrase: String?
+        /// worked out once per query, not once per place: " supper club" for "supper clubs", " fond du lac" for the town
+        var tagStem: String?
+        var townNeedle: String?
         var isEmpty: Bool { tokens.isEmpty && town == nil && tag == nil }
     }
 
@@ -58,15 +77,20 @@ struct Search {
         for (phrase, tag) in tagPhrases {
             if let r = find(normalize(phrase)) { q.tag = tag; q.tagPhrase = cut(r); break }
         }
+        if let phrase = q.tagPhrase {
+            let stem = normalize(phrase).replacingOccurrences(of: #"s$"#, with: "", options: .regularExpression)
+            q.tagStem = stem.isEmpty ? nil : " " + stem
+        }
         // the longest town named in the query wins, unless a street type follows it ("green bay rd" is a street)
         for key in towns.keys.sorted(by: { $0.count > $1.count }) {
             if let r = find(key), !(r.upperBound < mapped.count && typeAbbreviations.contains(mapped[r.upperBound])) {
-                q.town = towns[key]; q.townPhrase = cut(r); break
+                q.town = towns[key]; q.townPhrase = cut(r); q.townNeedle = " " + normalize(q.townPhrase ?? ""); break
             }
         }
-        let stop: Set<String> = ["the", "and", "of", "a", "in", "near"]
+        let stop: Set<String> = ["the", "and", "of", "a", "in", "near", "me"]   // "fish fry near me" isn't Mequon
         var idx = Array(raw.indices)
-        if idx.contains(where: { !stop.contains(mapped[$0]) }) { idx = idx.filter { !stop.contains(mapped[$0]) } }
+        // stop words drop out when something real is left, or when the query already named a guide or town ("fish fry near me")
+        if q.tag != nil || q.town != nil || idx.contains(where: { !stop.contains(mapped[$0]) }) { idx = idx.filter { !stop.contains(mapped[$0]) } }
         for (n, i) in idx.enumerated() {
             let token = raw[i], isLast = n == idx.count - 1
             if let abbr = synonyms[token] { q.tokens.append([" \(abbr) ", " \(token)"]); continue }
@@ -88,11 +112,10 @@ struct Search {
 
     static func matches(_ p: Place, _ q: Query) -> Bool {
         if let tag = q.tag, !p.tags.contains(tag) {
-            let stem = normalize(q.tagPhrase ?? "").replacingOccurrences(of: #"s$"#, with: "", options: .regularExpression)
-            if stem.isEmpty || !p.nameText.contains(" " + stem) { return false }
+            guard let stem = q.tagStem, p.nameText.contains(stem) else { return false }
         }
         if let town = q.town, p.city != town {
-            if !p.nameText.contains(" " + normalize(q.townPhrase ?? "")) { return false }
+            guard let needle = q.townNeedle, p.nameText.contains(needle) else { return false }
         }
         for needles in q.tokens where !needles.contains(where: { p.searchText.contains($0) }) { return false }
         return true

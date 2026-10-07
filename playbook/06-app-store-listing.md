@@ -1,7 +1,7 @@
 # App Store listing (ASO)
 
 Numbers here must match `site-numbers.json`, which `scripts/make-site.py` rewrites from the data on every run. Current:
-395 fish fries, 209 supper clubs, 28 custard stands, 16,360 restaurants in 828 towns (2026-10-05 rebuild). Update this file after a data refresh.
+402 fish fries, 211 supper clubs, 28 custard stands, 16,346 restaurants in 828 towns (2026-10-07 rebuild). Update this file after a data refresh.
 
 ## Name (30 max)
 `Wisconsin Eats: Restaurants` (27)
@@ -22,10 +22,10 @@ the keyword field, so "milwaukee" plus "restaurants" matches "milwaukee restaura
 
 ## Promotional text (170 max, editable any time without review)
 Launch:
-`395 Friday fish fries, 209 supper clubs and 28 custard stands, each checked by hand. Plus 16,000+ Wisconsin restaurants, sorted by how close they are to you.` (156)
+`402 Friday fish fries, 211 supper clubs and 28 custard stands, each checked by hand. Plus 16,000+ Wisconsin restaurants, sorted by how close they are to you.` (156)
 
 Lent (switch on Ash Wednesday, Feb 10, 2027):
-`Lent is here. Find a Friday fish fry near you: 395 checked across Wisconsin, with the fish they serve (cod, perch, walleye, bluegill) and the nights they fry.` (158)
+`Lent is here. Find a Friday fish fry near you: 402 checked across Wisconsin, with the fish they serve (cod, perch, walleye, bluegill) and the nights they fry.` (158)
 
 ## Description
 The first three lines show before "more", so they carry the pitch.
@@ -33,7 +33,7 @@ The first three lines show before "more", so they carry the pitch.
 ```
 Wisconsin's restaurants, and the fish fries worth the drive.
 
-Wisconsin Eats is a free guide to eating in Wisconsin: 395 Friday fish fries, 209 supper clubs and 28 frozen custard stands we checked by hand, plus 16,360 restaurants, cafés, taverns and bakeries in 828 towns. No account, no ads.
+Wisconsin Eats is a free guide to eating in Wisconsin: 402 Friday fish fries, 211 supper clubs and 28 frozen custard stands we checked by hand, plus 16,346 restaurants, cafés, taverns and bakeries in 828 towns. No account, no ads.
 
 WISCONSIN GUIDES
 • Friday Fish Fry: which fish each place serves (cod, perch, walleye, haddock, bluegill), the nights it fries and the sides.
@@ -76,7 +76,7 @@ Upload in this order; the first three show in search results.
 | 2 | `fishfry.png` / `ipad-fishfry.png` | Friday fish fry, nearest first |
 | 3 | `detail.png` / `ipad-detail.png` | Live hours & photos from Apple Maps |
 | 4 | `map.png` / `ipad-map.png` | The map, by fish fry or supper club |
-| 5 | `supper.png` / `ipad-supper.png` | 209 supper clubs, checked by hand |
+| 5 | `supper.png` / `ipad-supper.png` | 211 supper clubs, checked by hand |
 | 6 | `icons.png` / `ipad-icons.png` | James Beard honorees & institutions |
 | 7 | `inspections.png` / `ipad-inspections.png` | Dane County inspections |
 | 8 | `saved.png` / `ipad-saved.png` | Save it for Friday |

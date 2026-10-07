@@ -79,7 +79,21 @@ def regdom(host):
 
 
 def bad_host(url):
-    return any(b in url.lower() for b in BAD_HOSTS) or bool(SHADY.search(regdom(urllib.parse.urlparse(url).netloc)))
+    """Matches a listed site by its host, not as a substring: "restaurant.com" must not catch madersrestaurant.com
+    (that bug dropped 171 restaurants' own links). Entries with a path ("facebook.com/pages", "g.co/") match host + path."""
+    u = urllib.parse.urlparse(url if "//" in url else "https://" + url)
+    host = u.netloc.lower().split("@")[-1].split(":")[0].removeprefix("www.")
+    for b in BAD_HOSTS:
+        if "/" in b:
+            bh, bp = b.split("/", 1)
+            if (host == bh or host.endswith("." + bh)) and u.path.lower().lstrip("/").startswith(bp):
+                return True
+        elif b.endswith("."):   # "tripadvisor." = any tripadvisor domain
+            if host.startswith(b) or ("." + b) in ("." + host):
+                return True
+        elif host == b or host.endswith("." + b):
+            return True
+    return bool(SHADY.search(regdom(host)))
 
 
 def words(name):
@@ -138,7 +152,7 @@ def main():
     prev = json.load(open(OUT)) if os.path.exists(OUT) else {}
     # chain verdicts are recomputed every run; host rules may have grown since a page was fetched
     prev = {u: v for u, v in prev.items() if not v["why"].startswith(("chain domain", "brand's own"))
-            and v["why"] not in ("moved to another domain", "gambling or adult content")}
+            and v["why"] not in ("moved to another domain", "gambling or adult content", "directory or Google link", "redirects to a directory")}
     todo, chain_hosts, brand_of = [], {}, {}
     for dom, items in jobs.items():
         uniq = list(dict.fromkeys(items))

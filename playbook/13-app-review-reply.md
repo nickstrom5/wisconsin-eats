@@ -6,7 +6,7 @@ text into **App Review Information → Notes** on the version page.
 
 ## Screen recording (Nick, on his iPhone, latest iOS)
 
-The app must be on the phone first. Use TestFlight: an internal group with Nick in it (the tester email must be the Apple ID signed in under Settings › your name › Media & Purchases on the phone), then the TestFlight app installs build 1.0.0 (3).
+The app must be on the phone first. Use TestFlight: an internal group with Nick in it (the tester email must be the Apple ID signed in under Settings › your name › Media & Purchases on the phone), then the TestFlight app installs build 1.0.0 (4).
 Record with Control Center → Screen Recording, 60–120 seconds, no sound needed:
 
 1. Start on the Home Screen and tap **WI Eats**. The recording must begin with the launch.
@@ -25,7 +25,7 @@ Thank you. Here is the information requested. A screen recording from an iPhone 
 
 1. Screen recording: attached. There is no account, login, user-generated content or paid content.
 
-2. Purpose and audience: Wisconsin Eats is a free guide to restaurants in Wisconsin. Its focus is the state's food traditions: 395 Friday fish fries (with the fish each one serves and the nights it fries), 209 supper clubs and 28 local frozen custard stands. Each was checked by hand in September 2026 against a 2025 or 2026 source: the restaurant's own website or menu, local news, or its Travel Wisconsin listing. It also lists 16,360 restaurants, cafés, taverns and bakeries statewide. It is for Wisconsin residents and visitors deciding where to eat, especially on Friday nights. Unlike general restaurant apps, it says who serves a fish fry, which fish and which nights, from sourced facts, with no ads, account or tracking.
+2. Purpose and audience: Wisconsin Eats is a free guide to restaurants in Wisconsin. Its focus is the state's food traditions: 402 Friday fish fries (with the fish each one serves and the nights it fries), 211 supper clubs and 28 local frozen custard stands. Each was checked by hand in September 2026 against a 2025 or 2026 source: the restaurant's own website or menu, local news, or its Travel Wisconsin listing. It also lists 16,346 restaurants, cafés, taverns and bakeries statewide. It is for Wisconsin residents and visitors deciding where to eat, especially on Friday nights. Unlike general restaurant apps, it says who serves a fish fry, which fish and which nights, from sourced facts, with no ads, account or tracking.
 
 3. How to use it (no login, no setup, no sample files needed):
 - Home → Friday Fish Fry (or Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places, Inspections, All Restaurants) → tap any place.

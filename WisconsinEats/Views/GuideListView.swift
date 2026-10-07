@@ -13,7 +13,12 @@ struct GuideListView: View {
     @State private var showFilters = false
     @State private var shown = 100
 
-    private var order: SortOrder { sort ?? (guide == .fishFry || guide == .supperClubs || guide == .custard ? (here != nil ? .nearest : .featured) : guide.defaultSort) }
+    /// Nearest first for the classics when we know where you are in Wisconsin; from out of state every row is ~300+ miles,
+    /// so the featured order reads better (Nearest is still in the sort menu).
+    private var order: SortOrder {
+        sort ?? (guide == .fishFry || guide == .supperClubs || guide == .custard ? (here != nil && !outOfState ? .nearest : .featured) : guide.defaultSort)
+    }
+    private var outOfState: Bool { model.screenshotLocation == nil && location.isOutsideWisconsin }
     private var here: CLLocation? { model.screenshotLocation ?? location.location }
 
     var body: some View {

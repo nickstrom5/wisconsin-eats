@@ -70,6 +70,21 @@ def curated_matcher(frame):
                 by_key.setdefault((n, sk), []).append(i)
     towns = [canon_city(c).lower() if isinstance(c, str) else "" for c in frame.city]
     ks = list(frame.k.fillna(""))
+    # where each town's listings sit, so the statewide fallback can't cross the state: Chetek's "Caddy Shack Bar & Grill"
+    # once matched Hayward's "The Caddyshak Bar & Grill", 60 miles away, and put Chetek's fish fry on the wrong place
+    lat, lon = list(frame.lat), list(frame.lon)
+    tc = {}
+    for t, a, b in zip(towns, lat, lon):
+        if t and a == a:
+            tc.setdefault(t, []).append((a, b))
+    center = {t: (float(np.median([x[0] for x in v])), float(np.median([x[1] for x in v]))) for t, v in tc.items()}
+
+    def near_town(i, town, km=30):
+        if town not in center or lat[i] != lat[i]:
+            return True   # nothing to measure against
+        (a, b), (x, y) = center[town], (lat[i], lon[i])
+        return 6371 * 2 * math.asin(math.sqrt(math.sin(math.radians(x - a) / 2) ** 2
+                                              + math.cos(math.radians(a)) * math.cos(math.radians(x)) * math.sin(math.radians(y - b) / 2) ** 2)) <= km
 
     def match(c):
         keys = {norm_name(m) for m in (c.get("match_names") or [])} | {norm_name(c["name"])}
@@ -86,7 +101,8 @@ def curated_matcher(frame):
         if best is None and not c.get("chain"):
             ctown = (canon_city(c.get("city") or "") or "").lower()
             sim = [max(fuzz.ratio(m, k) for m in keys) if k else 0 for k in ks]
-            hits = [i for i, s_ in enumerate(sim) if s_ >= 90 and towns[i] == ctown] or [i for i, s_ in enumerate(sim) if s_ >= 95]
+            hits = [i for i, s_ in enumerate(sim) if s_ >= 90 and towns[i] == ctown] or \
+                [i for i, s_ in enumerate(sim) if s_ >= 95 and near_town(i, ctown)]
             if len(hits) == 1:
                 best = hits[0]
         return best
@@ -956,12 +972,25 @@ def r(x, n=0):
 
 o = o[o.lat.notna() | o.official].reset_index(drop=True)
 if APP:
-    # names the map data gets wrong, each fixed from the place's own site (data/research/name_fixes.json)
-    fixes = json.load(open(f"{DATA}/research/name_fixes.json")) if os.path.exists(f"{DATA}/research/name_fixes.json") else []
+    # ids stay with the name a place had before any fix, so a corrected name doesn't drop it from people's saved places
+    o["name_id"] = o.name_out
+    # corrections to the map data, each with a source (data/research/app_fixes.json): names, addresses, towns, junk listings
+    fixes = json.load(open(f"{DATA}/research/app_fixes.json")) if os.path.exists(f"{DATA}/research/app_fixes.json") else []
+    dropped_fix = []
     for fx in fixes:
-        hit = (o.name_out.str.upper() == fx["name"].upper()) & (o.city == fx["town"]) & o.street.fillna("").str.startswith(fx["street_number"] + " ")
-        o.loc[hit, "name_out"] = fx["fixed"]
-        print("name fix:", fx["name"], "->", fx["fixed"], int(hit.sum()))
+        same = lambda t: t.replace("\u2019", "'").upper()   # "Oliva’s" and "Oliva's" are the same name
+        hit = (o.name_out.fillna("").map(same) == same(fx["name"])) & (o.city == fx["town"])
+        if fx.get("street_number"):
+            hit &= o.street.fillna("").str.startswith(fx["street_number"] + " ")
+        if not hit.any():
+            print("  app fix matched nothing:", fx["name"], fx["town"])
+        for k, v in fx["set"].items():
+            if k == "drop":
+                dropped_fix += list(o.index[hit])
+            else:
+                o.loc[hit, {"name": "name_out", "street": "street", "city": "city", "zip": "zip"}[k]] = v
+    o = o.drop(index=dropped_fix)
+    print("app fixes:", len(fixes), "| junk listings dropped:", len(dropped_fix))
     # the same place twice: same name at the same street address, or (not a chain) same name in the same town within 400 m.
     # The licensed record wins, then a confirmed listing, then the one with more facts.
     rank = o.tier.map({"official": 2, "both": 1, "listing": 0}).fillna(0) * 10 + o.hc.astype(int) * 5 \
@@ -980,7 +1009,41 @@ if APP:
                 merged.append((seen[k], lose))
             else:
                 seen[k] = i
-    single = o[(o.chain_n.fillna(1) < 2) & o.lat.notna() & ~o.index.isin(drop)]
+    STOPW = set(GENERIC) | {"AND", "RESTAURANT", "EATERY", "DRIVE", "IN", "CAFE", "GRILL", "BAR", "THE", "N"}   # norm_name is upper case
+
+    def distinctive(n):
+        return " ".join(w for w in (n or "").split() if w not in STOPW)
+
+    def same_place(i, j):
+        a, b = distinctive(keyname[i]), distinctive(keyname[j])
+        if not a or not b or fuzz.token_set_ratio(a, b) < 80:
+            return False
+        la, lb = o.at[i, "lat"], o.at[j, "lat"]
+        if la == la and lb == lb:
+            dkm = 6371 * math.hypot(math.radians(lb - la), math.radians(o.at[j, "lon"] - o.at[i, "lon"]) * math.cos(math.radians(la)))
+            return dkm <= 0.3
+        return o.at[i, "city"] == o.at[j, "city"]
+
+    # same phone and same street number under different names ("Tsunamy" / "El Tsunami", "Mak's Shanty" / "Shanty Bar")
+    ph10 = o.get("phone", pd.Series(None, index=o.index)).fillna("").astype(str).str.replace(r"\D", "", regex=True).str[-10:]
+    num = [k[0] if all(k := street_key(s_)) else None for s_ in o.street]
+    seen_ph = {}
+    for i, p_, n_ in zip(o.index, ph10, num):
+        if len(p_) != 10 or not n_ or i in drop or (o.at[i, "chain_n"] or 1) > 2:
+            continue
+        k = (p_, n_)
+        # A resort's or casino's restaurants share one phone and address, and "Monkeyshines Bar and Grill" vs "Cornerstone Bar &
+        # Grill" share only generic words (maybe a rename, but nothing says which name is current): compare the distinctive words,
+        # and only within 300 m.
+        if k in seen_ph and seen_ph[k] not in drop and same_place(i, seen_ph[k]):
+            j = seen_ph[k]
+            lose = i if rank[i] <= rank[j] else j
+            drop.add(lose); seen_ph[k] = j if lose == i else i
+            merged.append((seen_ph[k], lose))
+        else:
+            seen_ph[k] = i
+    # two same-name places count as a name "chain" of 2, so the town rule also takes those, but only within 150 m
+    single = o[(o.chain_n.fillna(1) < 3) & o.lat.notna() & ~o.index.isin(drop)]
     for (nm, town), g in single.groupby([keyname[single.index], single.city]):
         if len(g) < 2 or not nm:
             continue
@@ -992,7 +1055,7 @@ if APP:
                     continue
                 dkm = 6371 * 2 * math.asin(math.sqrt(math.sin(math.radians(o.at[j, "lat"] - o.at[i, "lat"]) / 2) ** 2
                     + math.cos(math.radians(o.at[i, "lat"])) * math.cos(math.radians(o.at[j, "lat"])) * math.sin(math.radians(o.at[j, "lon"] - o.at[i, "lon"]) / 2) ** 2))
-                if dkm < 0.4:
+                if dkm < (0.15 if max(o.at[i, "chain_n"] or 1, o.at[j, "chain_n"] or 1) == 2 else 0.4):
                     lose = i if rank[i] <= rank[j] else j
                     drop.add(lose)
                     merged.append((j if lose == i else i, lose))
@@ -1015,12 +1078,41 @@ if APP:
     smoke = o.name_out.str.contains(r"\bvape\b|smoke shop|\btobacco\b|cigar lounge|\bcbd\b|dispensary|head shop", case=False, regex=True)
     o.loc[smoke, "venue"] = True
     print("smoke/vape/cigar shops hidden with non-restaurants:", int(smoke.sum()), o.name_out[smoke].tolist())
+    # counters inside stores and markets (QA 2026-10-07: Target Cafe, Kikka at Whole Foods, a co-op, supermarkets, a hemp shop)
+    # ("The Coop" is a restaurant, and "Lindo Mexican Restaurant and Supermarket" is a restaurant too)
+    store = ~o.hc.astype(bool) & o.name_out.str.contains(
+        r"\bsupermarket\b|\bsupermercado\b|\bgrocery\b|\bco-op\b|\bcooperative\b|\bhemp\b|^target caf|\bin target\b|at whole foods|exotic snacks",
+        case=False, regex=True) & ~o.name_out.str.contains(
+        r"restaurant|saloon|tavern|\bbar\b|grill|taqueria|pizz|kitchen|\bdeli\b|brew|\bcafe\b(?! in target)", case=False, regex=True)
+    o.loc[store, "venue"] = True
+    print("store counters hidden with non-restaurants:", int(store.sum()), o.name_out[store].tolist()[:12])
+    # a hand check that a place serves a fish fry, supper club dinner or custard beats a "catering", "hotel" or "golf club"
+    # category: Michele's, Hotel Fremont and River Island Golf Club were hidden from the fish fry guide by it
+    meal = o.hc.astype(bool) & (o.t_fishfry | o.t_supper | o.t_custard) & o.venue
+    o.loc[meal, "venue"] = False
+    print("hand-checked meal places un-hidden:", int(meal.sum()), o.name_out[meal].tolist())
+
+
+def phone_e164(ph):
+    """+1 and ten digits, or nothing. Six listings had "+608…" (the 1 missing), which dials Malaysia, and placeholders
+    like 715-999-9999 aren't numbers."""
+    if not isinstance(ph, str):
+        return None
+    d = re.sub(r"\D", "", ph)
+    if len(d) == 11 and d[0] == "1":
+        d = d[1:]
+    if len(d) != 10 or d[0] in "01" or re.search(r"(\d)\1{6}$|5555555$|1234567$", d):
+        return None
+    return "+1" + d
 
 
 def clean_url(u):
-    """Website links without tracking parameters (Reserve with Google tokens, utm_*, click ids)."""
+    """Website links without tracking parameters (Reserve with Google tokens, utm_*, click and mail ids, Yext's cid=RF:YXT…)
+    and with Facebook's mobile host swapped for the main one."""
     base, _, q = u.partition("?")
-    keep = [kv for kv in q.split("&") if kv and not re.match(r"(rwg_token|utm_[a-z]+|fbclid|gclid|y_source)=", kv)]
+    base = re.sub(r"^(https?://)(?:m|mobile)\.facebook\.com", r"\1www.facebook.com", base)
+    keep = [kv for kv in q.split("&") if kv and not re.match(
+        r"(rwg_token|utm_[a-z]+|fbclid|gclid|msclkid|igshid|y_source|mc_[a-z]+|hsa_[a-z]+|_ga|_rdr)(=|$)|cid=.*(YXT|GMB|RF:|RF%3A)", kv)]
     return base + ("?" + "&".join(keep) if keep else "")
 
 
@@ -1034,11 +1126,13 @@ if APP:
     JUR = {"mke": 1, "dane": 2}
     SRCS = ["official", "meta", "AllThePlaces", "DAC", "research", "BrightQuery", "Foursquare", "Microsoft"]
     places, seen_ids = [], set()
-    LINKS = json.load(open(f"{WI}/website_check.json")) if os.path.exists(f"{WI}/website_check.json") else None
+    # fail closed: without the check results no link ships (run pipeline/check_websites.py)
+    LINKS = json.load(open(f"{WI}/website_check.json")) if os.path.exists(f"{WI}/website_check.json") else {}
     link_drops, link_cands = collections.Counter(), {}
     for i, x in o.iterrows():
         # a stable id (name + ~100 m cell, or the license number) so saved places survive a data refresh
-        idsrc = f"{norm_name(x.name_out)}|{round(float(x.lat), 3)}|{round(float(x.lon), 3)}" if x.lat == x.lat else f"{norm_name(x.name_out)}|{x.get('lic') or x.get('id')}"
+        idname = x.name_id if isinstance(x.get("name_id"), str) else x.name_out
+        idsrc = f"{norm_name(idname)}|{round(float(x.lat), 3)}|{round(float(x.lon), 3)}" if x.lat == x.lat else f"{norm_name(idname)}|{x.get('lic') or x.get('id')}"
         p = {"id": hashlib.md5(idsrc.encode()).hexdigest()[:12], "n": x.name_out, "c": ci.get(x.city) if isinstance(x.city, str) else None,
              "cu": cu[x.cuisine], "t": TIER[x.tier], "s": SRCS.index(x.src) if x.src in SRCS else 1}
         if isinstance(x.street, str): p["a"] = nice(x.street, addr=True)
@@ -1061,22 +1155,28 @@ if APP:
                 if isinstance(v, str) and k == "hon":
                     # honors are facts (awards, guide listings); star ratings and readers' or viewers' polls are ratings, so they stay out
                     v = "; ".join(h for h in v.split("; ") if not re.search(
-                        r"forbes|readers'? ?choice|reader'?s choice|good morning america|\bsays\b|\bvote[ds]?\b|\bpoll\b|yelp|tripadvisor|opentable|\bstars?\b",
+                        r"forbes|readers'? ?choice|reader'?s choice|good morning america|\bsays\b|\bvote[ds]?\b|\bpoll\b|\bbracket\b|yelp|tripadvisor|opentable|\bstars?\b",
                         h, re.I)) or None
+                    v = "; ".join(dict.fromkeys(v.split("; "))) if v else None
                 if isinstance(v, str): p[k] = v
         if x.founded == x.founded and x.founded is not None: p["f"] = int(float(x.founded))
         for k, col in (("fish", "fish"), ("days", "fry_days"), ("sides", "sides"), ("note", "rnote")):
             if isinstance(x[col], str) and x[col]: p[k] = x[col]
         web = x.rsite if isinstance(x.rsite, str) else (x.web if isinstance(x.get("web"), str) else None)
+        if isinstance(web, str) and ("\u2026" in web or "..." in web):   # truncated in the source ("https://ex…")
+            web = None
         if web:
             w_ = clean_url(web)
             link_cands[w_] = x.brand_n if isinstance(x.brand_n, str) else x.name_out
             # only links pipeline/check_websites.py verified (2xx, same site, names the place, no spam/parked); unchecked ones wait
-            if LINKS is None or LINKS.get(w_, {}).get("ok"):
-                p["w"] = w_
+            scheme = re.match(r"^([a-z][a-z0-9+.-]*):", w_, re.I)
+            if scheme and scheme.group(1).lower() not in ("http", "https"):
+                link_drops["not a web link"] += 1
+            elif LINKS.get(w_, {}).get("ok"):
+                p["w"] = w_ if scheme else "https://" + w_   # a bare host ("example.com") ships as https
             else:
                 link_drops[LINKS.get(w_, {}).get("why", "not checked yet")] += 1
-        if isinstance(x.get("phone"), str) and x.phone: p["ph"] = x.phone
+        if (ph := phone_e164(x.get("phone"))): p["ph"] = ph
         if x.official:
             lic = x.lic if isinstance(x.lic, str) else (x.id if isinstance(x.id, str) and x.id.startswith(("MKE-", "PHMDC-")) else None)
             if lic: p["lic"] = lic.split("-", 1)[1]
@@ -1092,7 +1192,7 @@ if APP:
     # every candidate link, kept or not, so the checker can re-try a dropped one next time
     json.dump(link_cands, open(f"{WI}/website_candidates.json", "w"), indent=0, ensure_ascii=False)
     calib_app = json.load(open(f"{WI}/calibration_app.json")) if os.path.exists(f"{WI}/calibration_app.json") else {}
-    out = {"v": 1, "generated": "2026-09-26", "cities": CITIES, "cuisines": CUIS, "brands": BRANDS, "tags": TAGS, "sources": SRCS,
+    out = {"v": 1, "generated": __import__("datetime").date.today().isoformat(), "cities": CITIES, "cuisines": CUIS, "brands": BRANDS, "tags": TAGS, "sources": SRCS,
            "count": len(places), "count_restaurants": int(len(nv)), "calibration": calib_app, "places": places}
     os.makedirs(SITE, exist_ok=True)
     json.dump(out, open(f"{SITE}/places.json", "w"), separators=(",", ":"), ensure_ascii=False, allow_nan=False, default=str)

@@ -1,6 +1,8 @@
 // Wisconsin Eats web app: the iPhone app's guides, search, filters, map and place details, in the browser.
 // Same data file as the app (split into core + detail by scripts/make-site.py). No cookies, no trackers;
-// saved places and the last guide live in this browser's localStorage only.
+// saved places and the last guide live in this browser's localStorage only, and the location for "Near me" never leaves the page.
+// The page's Content-Security-Policy allows only this inline script (by hash) and same-origin fetches, so: no inline event
+// attributes or style attributes in any HTML built here; wire events with properties and toggle classes instead.
 (() => {
   "use strict";
   const BASE = document.documentElement.dataset.base || "";
@@ -10,6 +12,20 @@
     get(k, d) { try { const v = localStorage.getItem("we-" + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
     set(k, v) { try { localStorage.setItem("we-" + k, JSON.stringify(v)); } catch { /* private mode */ } },
   };
+  const own = (o, k) => typeof k === "string" && Object.hasOwn(o, k);   // "constructor" or "__proto__" in a URL is not a guide
+
+  // Links built from data: a website only as http(s) (a bare host gets https://), a phone as tel: with digits and + only.
+  function safeSite(u) {
+    u = String(u || "").trim();
+    if (!u || /[\s"'<>\\`]/.test(u)) return null;
+    if (!/^[a-z][a-z0-9+.-]*:/i.test(u)) u = "https://" + u.replace(/^\/+/, "");
+    try {
+      const x = new URL(u);
+      return (x.protocol === "http:" || x.protocol === "https:") && x.hostname.includes(".") ? x.href : null;
+    } catch { return null; }
+  }
+  const telHref = (ph) => { const t = String(ph || "").replace(/[^\d+]/g, ""); return t.replace(/\D/g, "").length >= 10 ? "tel:" + t : null; };
+  const num = (x) => (Number.isFinite(+x) ? +x : null);
 
   // ---------------------------------------------------------------- search (a port of WisconsinEats/Models/Search.swift)
   const typeSyn = { avenue: "ave", av: "ave", street: "st", boulevard: "blvd", road: "rd", drive: "dr", place: "pl", court: "ct",
@@ -25,13 +41,13 @@
     t = t.replace(/\b([a-z0-9])\s*&\s*([a-z0-9])\b/g, "$1$2").replace(/&/g, " and ").replace(/['’`]/g, "");
     return t.replace(/[^\p{L}\p{N}]+/gu, " ").trim();
   }
-  const normAddr = (s) => normalize(s).split(" ").map((w) => syn[w] || w).join(" ");
+  const normAddr = (s) => normalize(s).split(" ").map((w) => (own(syn, w) ? syn[w] : w)).join(" ");
 
   function parse(text) {
     const q = { tokens: [], town: null, townPhrase: null, tag: 0, tagPhrase: null };
     let raw = normalize(text).split(" ").filter(Boolean);
     if (!raw.length) return q;
-    let mapped = raw.map((w) => syn[w] || w);
+    let mapped = raw.map((w) => (own(syn, w) ? syn[w] : w));
     const find = (phrase) => {
       const p = phrase.split(" ");
       for (let i = 0; i + p.length <= mapped.length; i++) if (p.every((w, k) => mapped[i + k] === w)) return [i, i + p.length];
@@ -41,14 +57,15 @@
     for (const [phrase, tag] of tagPhrases) { const r = find(normalize(phrase)); if (r) { q.tag = tag; q.tagPhrase = cut(r); break; } }
     for (const key of TOWN_KEYS_BY_LENGTH) {
       const r = find(key);
-      if (r && !(r[1] < mapped.length && typeAbbrs.has(mapped[r[1]]))) { q.town = TOWN_KEYS[key]; q.townPhrase = cut(r); break; }
+      if (r && !(r[1] < mapped.length && typeAbbrs.has(mapped[r[1]]))) { q.town = TOWN_KEYS.get(key); q.townPhrase = cut(r); break; }
     }
-    const stop = new Set(["the", "and", "of", "a", "in", "near"]);
+    const stop = new Set(["the", "and", "of", "a", "in", "near", "me"]);   // "fish fry near me" isn't Mequon
     let idx = raw.map((_, i) => i);
-    if (idx.some((i) => !stop.has(mapped[i]))) idx = idx.filter((i) => !stop.has(mapped[i]));
+    // stop words drop out when something real is left, or when the query already named a guide or town ("fish fry near me")
+    if (q.tag != null || q.town != null || idx.some((i) => !stop.has(mapped[i]))) idx = idx.filter((i) => !stop.has(mapped[i]));
     idx.forEach((i, n) => {
       const token = raw[i], isLast = n === idx.length - 1;
-      if (syn[token]) { q.tokens.push([` ${syn[token]} `, ` ${token}`]); return; }
+      if (own(syn, token)) { q.tokens.push([` ${syn[token]} `, ` ${token}`]); return; }
       const whole = (abbrs.has(token) && (!isLast || token.length > 1)) || (token.length <= 2 && !isLast);
       const needles = [" " + token + (whole ? " " : "")];
       if (isLast && token.length >= 3) for (const [word, abbr] of Object.entries(typeSyn)) if (word !== token && word.startsWith(token)) needles.push(` ${abbr} `);
@@ -78,16 +95,17 @@
     custard: { title: "Frozen Custard", sub: "Local custard stands, not the chains", inc: (p) => p.hc && p.g & CUSTARD && p.ch < 5, sorts: ["featured", "nearest", "oldest", "name"] },
     icons: { title: "Wisconsin Icons", sub: "James Beard honorees and long-running institutions", inc: (p) => p.ip != null, sorts: ["iconic", "oldest", "nearest"], ranked: true },
     oldest: { title: "Oldest Places", sub: "Verified founding years, oldest first", inc: (p) => p.f != null, sorts: ["oldest"], ranked: true },
-    inspections: { title: "Inspections", sub: "Dane County health inspections, cleanest first. Grades are ours, graded on a curve from Public Health Madison & Dane County results, not official grades.", inc: (p) => p.in >= 2, sorts: ["cleanest"], ranked: true },
+    inspections: { title: "Inspections", sub: "Dane County inspections, cleanest first. Grades are ours, on a curve, not official grades.", inc: (p) => p.in >= 2, sorts: ["cleanest"], ranked: true },
     all: { title: "All Restaurants", sub: "Restaurants, cafés, taverns and bakeries statewide", inc: () => true, sorts: ["name", "nearest"] },
     saved: { title: "Saved", sub: "Places you saved in this browser", inc: (p) => saved.has(p.id), sorts: ["name", "nearest"] },
   };
   const SORT_LABEL = { featured: "Featured first", nearest: "Nearest", oldest: "Oldest first", name: "A to Z", iconic: "Most iconic", cleanest: "Cleanest" };
 
   // ---------------------------------------------------------------- state
-  let P = [], D = null, CAL = {}, TOWN_KEYS = {}, TOWN_KEYS_BY_LENGTH = [], GENERATED = "";
-  let here = null, shown = 100, current = [], view = "list";
-  const saved = new Set(store.get("saved", []));
+  let P = [], D = null, CAL = {}, TOWN_KEYS = new Map(), TOWN_KEYS_BY_LENGTH = [], CHECKED = "";
+  let here = null, shown = 100, current = [], view = "list", wired = false;
+  const savedIds = store.get("saved", []);
+  const saved = new Set(Array.isArray(savedIds) ? savedIds.filter((x) => typeof x === "string") : []);
   const st = { g: "fishfry", q: "", sort: "", town: "", cuisine: "", chains: false, p: "" };
 
   const miles = (a, b) => {
@@ -104,7 +122,6 @@
   }
 
   function allows(p) {
-    if (p.v && st.g !== "saved") return false;            // gas-station counters, stadium stands and the like
     if (st.town && p.c !== st.town) return false;
     if (st.cuisine && p.cu !== st.cuisine) return false;
     if (st.chains && p.ch >= 5) return false;
@@ -114,7 +131,8 @@
   function list() {
     const g = GUIDES[st.g], q = parse(st.q), o = order();
     if (qEmpty(q) && st.q.trim()) return [];   // typed something, but nothing searchable ("🍕", "!!!")
-    let out = P.filter((p) => g.inc(p) && allows(p) && (qEmpty(q) || matches(p, q)));
+    // the only non-restaurants here are hand-picked icons (a cheese shop, a sausage maker): Icons guide only
+    let out = P.filter((p) => (!p.v || st.g === "icons") && g.inc(p) && allows(p) && (qEmpty(q) || matches(p, q)));
     const byName = (a, b) => a.n.localeCompare(b.n, "en", { sensitivity: "base" });
     const dist = (p) => (here && p.la != null ? miles(here, p) : Infinity);
     if (o === "nearest" && here) out.sort((a, b) => dist(a) - dist(b) || byName(a, b));
@@ -140,7 +158,7 @@
     if (p.g & CUSTARD) c.push('<span class="tag">Custard</span>');
     if (p.g & BOIL) c.push('<span class="tag">Fish boil</span>');
     if (p.h & 16 && !jb) c.push('<span class="tag tag-plain">Icon</span>');
-    if (p.ch >= 5) c.push(`<span class="tag tag-plain">Chain · ${p.ch}</span>`);
+    if (p.ch >= 5) c.push(`<span class="tag tag-plain">Chain · ${esc(p.ch)}</span>`);
     if (p.t === 0 && !p.h && !p.g) c.push('<span class="tag tag-dash">Listing only</span>');
     return (max ? c.slice(0, max) : c).join("");
   }
@@ -153,17 +171,24 @@
     return null;
   }
 
+  // Before the data arrives: show the guide from the URL or last visit, so nothing moves when the list fills in.
+  function preRender() {
+    document.querySelectorAll(".ex-guides button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.g === st.g)));
+    $("#ex-sub").textContent = GUIDES[st.g].sub;
+  }
+
   function render() {
     const g = GUIDES[st.g], o = order();
     current = list();
-    document.querySelectorAll(".ex-guides button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.g === st.g)));
-    $("#ex-sub").textContent = g.sub;
+    preRender();
     const sortSel = $("#ex-sort");
     sortSel.innerHTML = g.sorts.map((s) => `<option value="${s}"${s === o ? " selected" : ""}>${SORT_LABEL[s]}</option>`).join("");
     sortSel.disabled = g.sorts.length < 2;
     const filters = [st.town && `in ${st.town}`, st.cuisine && st.cuisine, st.chains && "no chains"].filter(Boolean);
     $("#ex-count").textContent = `${current.length.toLocaleString()} ${current.length === 1 ? "place" : "places"} · ${SORT_LABEL[o]}` + (filters.length ? ` · ${filters.join(", ")}` : "");
-    $("#ex-clear").hidden = !filters.length;
+    const clear = $("#ex-clear");
+    clear.classList.toggle("ex-off", !filters.length);   // kept in the layout, so the row doesn't reflow
+    clear.disabled = !filters.length;
     $("#ex-locate").hidden = Boolean(here);
     if (view === "list") renderList(o); else drawMap();
     saveHash();
@@ -179,7 +204,7 @@
     }
     ol.innerHTML = current.slice(0, shown).map((p, i) => {
       const m = metric(p, o);
-      const rank = g.ranked ? `<span class="ex-rank${i < 3 ? " top" : ""}" aria-label="Rank ${i + 1}">${i + 1}</span>` : "";
+      const rank = g.ranked ? `<span class="ex-rank${i < 3 ? " top" : ""}"><span class="vh">Rank </span>${i + 1}</span>` : "";
       return `<li><button class="ex-row" data-i="${p.i}">${rank}<span class="ex-main"><b>${esc(p.n)}</b><span class="ex-town">${esc([p.c, p.cu].filter(Boolean).join(" · "))}</span><span class="ex-chips">${chips(p, 4)}</span></span>${m ? `<span class="ex-metric"><b>${esc(m[0])}</b><small>${m[1]}</small></span>` : ""}</button></li>`;
     }).join("");
     const left = current.length - shown;
@@ -187,7 +212,7 @@
     $("#ex-more").textContent = `Show more (${left.toLocaleString()} left)`;
   }
 
-  // ---------------------------------------------------------------- place panel
+  // ---------------------------------------------------------------- place panel (a modal dialog: the rest of the page is inert)
   const JUR = { 1: "City of Milwaukee", 2: "Public Health Madison & Dane County" };
   const TIER = { 2: "Licensed", 1: "Confirmed listing", 0: "Listing only" };
 
@@ -203,43 +228,46 @@
 
   function howWeKnow(p) {
     const src = SOURCES[p.s] || "meta";
-    if (src === "research") return "On our hand-checked list (checked in Sep 2026 against a 2025 or 2026 source). The open map data didn't list it as a place to eat, so it's placed from its own map listing or street address.";
+    if (src === "research") return `On our hand-checked list (checked in ${CHECKED} against a 2025 or 2026 source). The open map data didn't list it as a place to eat, so it's placed from its own map listing or street address.`;
     if (p.t === 2) return src === "official"
       ? `From the ${JUR[p.j] || "official"} active license list. The open map data didn't have it, so its location comes from the license record or its street address.`
       : `Matched to an active license on the ${JUR[p.j] || "official"} list.`;
     const r = rate(p);
     return (p.t === 1 ? "A high-confidence listing in Overture's open map data." : "A single listing in Overture's open map data, so it may be closed or misfiled.")
       + (r ? ` Checked against Milwaukee's and Dane County's license lists, listings like this matched a licensed business ${r} of the time.` : "")
-      + (p.hc ? " It's also on our hand-checked list, checked in Sep 2026 against a 2025 or 2026 source." : "");
+      + (p.hc ? ` It's also on our hand-checked list, checked in ${CHECKED} against a 2025 or 2026 source.` : "");
   }
 
   const kv = (k, v) => (v == null || v === "" ? "" : `<div class="ex-kv"><span>${esc(k)}</span><b>${esc(v)}</b></div>`);
   const section = (t, body) => `<section class="ex-sec"><h3>${esc(t)}</h3>${body}</section>`;
+  const outside = () => [...document.body.children].filter((el) => el.id !== "ex-panel" && el.id !== "ex-scrim" && el.tagName !== "SCRIPT");
 
   function openPlace(p, push = true) {
     st.p = p.id;
     const d = (D && D[p.i]) || {};
     const addr = [p.a, [p.c, p.z].filter(Boolean).join(" ")].filter(Boolean).join(", ");
-    const apple = p.la != null
-      ? `https://maps.apple.com/?q=${encodeURIComponent(p.n)}&ll=${p.la},${p.lo}`
+    const la = num(p.la), lo = num(p.lo);
+    const apple = la != null && lo != null
+      ? `https://maps.apple.com/?q=${encodeURIComponent(p.n)}&ll=${la},${lo}`
       : `https://maps.apple.com/?q=${encodeURIComponent(p.n + ", " + addr)}`;
-    const dirs = p.la != null ? `https://maps.apple.com/?daddr=${p.la},${p.lo}&dirflg=d` : apple;
-    const site = d.w ? (/^https?:/.test(d.w) ? d.w : "https://" + d.w) : null;
-    let html = `<button class="ex-close" id="ex-close" aria-label="Close">×</button>
+    const dirs = la != null && lo != null ? `https://maps.apple.com/?daddr=${la},${lo}&dirflg=d` : apple;
+    const site = safeSite(d.w), tel = telHref(d.ph);
+    let html = `<button type="button" class="ex-close" id="ex-close" aria-label="Close">×</button>
       <p class="ex-kicker">${esc((p.c || "Wisconsin").toUpperCase())}</p>
       <h2 id="ex-pname">${esc(p.n)}</h2>
       <p class="ex-addr">${esc([addr, p.cu].filter(Boolean).join(" · "))}</p>
-      ${here && p.la != null ? `<p class="ex-dist">${milesText(miles(here, p))} away</p>` : ""}
+      ${here && la != null ? `<p class="ex-dist">${milesText(miles(here, p))} away</p>` : ""}
       <p class="ex-chips">${chips(p)}</p>
       <div class="ex-actions">
         <a class="btn ex-apple" href="${esc(apple)}" rel="noopener" target="_blank">Ratings, hours &amp; photos · Apple Maps</a>
         <div class="ex-act-row">
           <a href="${esc(dirs)}" rel="noopener" target="_blank">Directions</a>
-          ${d.ph ? `<a href="tel:${esc(d.ph.replace(/[^\d+]/g, ""))}">Call</a>` : ""}
+          ${tel ? `<a href="${esc(tel)}">Call</a>` : ""}
           ${site ? `<a href="${esc(site)}" rel="noopener nofollow" target="_blank">Website</a>` : ""}
-          <button id="ex-save" aria-pressed="${saved.has(p.id)}">${saved.has(p.id) ? "Saved" : "Save"}</button>
+          <button type="button" id="ex-save" aria-pressed="${saved.has(p.id)}">${saved.has(p.id) ? "Saved" : "Save"}</button>
         </div>
       </div>`;
+    if (!D) html += `<p class="ex-fine" id="ex-more-loading">Loading details…</p>`;
     if (p.g || d.note) {
       const facts = [];
       if (p.g & FISHFRY) facts.push(["Fish fry", [d.days && "Served " + d.days, p.fish && "Fish: " + p.fish, d.sides && "With " + d.sides].filter(Boolean).join(". ") || "Serves a Friday fish fry."]);
@@ -248,7 +276,7 @@
       if (p.g & BOIL) facts.push(["Fish boil", "Door County-style fish boil."]);
       html += section("Wisconsin classics", facts.map(([k, v]) => `<p><b>${k}</b><br>${esc(v)}</p>`).join("")
         + (d.note ? `<p>${esc(d.note)}</p>` : "")
-        + `<p class="ex-fine">${p.hc ? "Hand-checked in Sep 2026 against a 2025 or 2026 source: the place's own site or menu, local news, or its Travel Wisconsin listing. Days and menus change, so check before you go." : "Not hand-checked yet, so it isn't in our supper club or custard guides. Check before you go."}</p>`);
+        + `<p class="ex-fine">${p.hc ? `Hand-checked in ${esc(CHECKED)} against a 2025 or 2026 source: the place's own site or menu, local news, or its Travel Wisconsin listing. Days and menus change, so check before you go.` : "Not hand-checked yet, so it isn't in our supper club or custard guides. Check before you go."}</p>`);
     }
     if (p.h || p.f) {
       const lines = [...(d.jbf ? d.jbf.split("; ").map((x) => "James Beard: " + x) : []), ...(d.hon ? d.hon.split("; ") : [])];
@@ -257,17 +285,19 @@
     if (d.in) {
       const i = d.in;
       html += section("Health inspections · Dane County, since Jan 2023",
-        `<p class="ex-grade"><span class="ex-g ex-g-${esc(i.g)}">${esc(i.g)}</span> Score ${i.sc ?? 0}/100</p><p class="ex-fine">Our grade, on a curve, from Public Health Madison &amp; Dane County results. Not an official grade.</p>`
+        `<p class="ex-grade"><span class="ex-g ex-g-${esc(i.g)}">${esc(i.g)}</span> Score ${esc(i.sc ?? 0)}/100</p><p class="ex-fine">Our grade, on a curve, from Public Health Madison &amp; Dane County results. Not an official grade.</p>`
         + kv("Routine inspections", i.n) + kv("Needed a re-inspection", i.re) + kv("Violations per visit", i.vp?.toFixed?.(1))
         + kv("Foodborne-illness risk items per visit", i.rf?.toFixed?.(1)) + kv("Visits with a pest item", i.pe) + kv("Repeat violations", i.rp)
         + (i.su ? kv("Immediate suspensions", i.su) : "") + (i.ld ? kv("Last routine visit", i.ld + (i.lr === 1 ? " · re-inspection needed" : "")) : ""));
     }
     html += section("How we know it's here", kv("Listed as", TIER[p.t]) + (p.t === 2 ? kv("License list", JUR[p.j]) : "") + kv("License number", d.lic)
       + (p.ch >= 2 ? kv("Locations in Wisconsin", p.ch.toLocaleString()) : "") + `<p class="ex-fine">${esc(howWeKnow(p))}</p>`);
-    html += `<p class="ex-app">Save it on your phone: <a class="store-btn" href="${BASE}/#download"><span class="store-label">Get the free iPhone app</span></a></p>`;
+    html += `<p class="ex-app">Save it on your phone: <a class="store-btn" href="${BASE}/#download">get the free iPhone app</a>.</p>`;
     const panel = $("#ex-panel");
     panel.innerHTML = html;
     panel.hidden = false;
+    $("#ex-scrim").hidden = false;
+    outside().forEach((el) => { el.inert = true; });
     document.body.classList.add("ex-open");
     $("#ex-close").onclick = closePlace;
     $("#ex-save").onclick = (e) => {
@@ -280,13 +310,15 @@
     panel.scrollTop = 0;
     $("#ex-close").focus();
     if (push) saveHash();
-    if (!D) loadDetail().then(() => { if (st.p === p.id) openPlace(p, false); });
+    if (!D) loadDetail().then(() => { if (st.p === p.id && !$("#ex-panel").hidden) openPlace(p, false); });   // details load on the first open only
   }
 
   function closePlace() {
     const was = st.p;
     st.p = "";
     $("#ex-panel").hidden = true;
+    $("#ex-scrim").hidden = true;
+    outside().forEach((el) => { el.inert = false; });
     document.body.classList.remove("ex-open");
     saveHash();
     const row = was && document.querySelector(`.ex-row[data-i="${P.findIndex((p) => p.id === was)}"]`);
@@ -310,19 +342,20 @@
     if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
     if (!cam) cam = fitCam(w, h);
     if (!SHAPES) SHAPES = await fetchJSON(`${BASE}/data/wi_shapes.json`).catch(() => ({ state: [], counties: [] }));
+    const css = getComputedStyle(document.documentElement), tok = (n, d) => css.getPropertyValue(n).trim() || d;   // light or dark
     const c = cv.getContext("2d");
     c.setTransform(dpr, 0, 0, dpr, 0, 0);
     c.clearRect(0, 0, w, h);
     const X = (lo, la) => { const [x, y] = proj(lo, la); return [x * cam.k + cam.x, y * cam.k + cam.y]; };
     const ring = (r) => { r.forEach(([lo, la], i) => { const [x, y] = X(lo, la); i ? c.lineTo(x, y) : c.moveTo(x, y); }); c.closePath(); };
-    c.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--surface").trim() || "#fff";
+    c.fillStyle = tok("--surface", "#fff");
     c.beginPath(); (SHAPES.state || []).forEach(ring); c.fill("evenodd");
-    c.strokeStyle = "rgba(83,102,91,.35)"; c.lineWidth = 0.8;
+    c.strokeStyle = tok("--county", "rgba(83,102,91,.35)"); c.lineWidth = 0.8;
     for (const co of SHAPES.counties || []) { c.beginPath(); co.c.forEach(ring); c.stroke(); }
     const pts = current.filter((p) => p.la != null);
     const r = Math.max(2.2, Math.min(5, 1.6 + cam.k / 120));
     for (const classic of [false, true]) {
-      c.fillStyle = classic ? "#ffb612" : "#203731";
+      c.fillStyle = classic ? tok("--gold", "#ffb612") : tok("--dot", "#203731");
       c.strokeStyle = "#203731"; c.lineWidth = 1;
       for (const p of pts) {
         if (Boolean(p.hc && p.g) !== classic) continue;
@@ -385,6 +418,7 @@
     $("#ex-zin").onclick = () => zoomAt(1.6, cv.clientWidth / 2, cv.clientHeight / 2);
     $("#ex-zout").onclick = () => zoomAt(0.625, cv.clientWidth / 2, cv.clientHeight / 2);
     window.addEventListener("resize", () => { if (view === "map") drawMap(); });
+    matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => { if (view === "map") drawMap(); });
   }
 
   function centerOn(pt) {
@@ -397,38 +431,40 @@
   let SOURCES = [];
   async function fetchJSON(url) { const r = await fetch(url); if (!r.ok) throw new Error(r.status + " " + url); return r.json(); }
   let detailPromise = null;
-  function loadDetail() {
-    detailPromise ||= fetchJSON(`${BASE}/data/detail.json`).then((d) => { D = d; }).catch(() => { D = {}; });
+  function loadDetail() {   // phones, sites, notes and inspections: fetched when a place is first opened, not before
+    detailPromise ||= fetchJSON(`${BASE}/data/detail.json`).then((d) => { D = Array.isArray(d) ? d : []; }).catch(() => { D = []; });
     return detailPromise;
   }
 
   async function load() {
     const d = await fetchJSON(`${BASE}/data/core.json`);
-    GENERATED = d.generated; CAL = d.calibration || {}; SOURCES = d.sources || [];
+    CAL = d.calibration || {}; SOURCES = d.sources || []; CHECKED = d.checked || "";
     const C = d.cols, n = C.id.length, towns = new Map();
     P = new Array(n);
+    TOWN_KEYS = new Map();
     for (let i = 0; i < n; i++) {
       const city = C.c[i] == null ? null : d.cities[C.c[i]], cu = d.cuisines[C.cu[i]], brand = C.b[i] == null ? null : d.brands[C.b[i]];
       const p = { i, id: C.id[i], n: C.n[i], c: city, cu, t: C.t[i], s: C.s[i], a: C.a[i], z: C.z[i], la: C.la[i], lo: C.lo[i],
-        ch: C.ch[i] || 1, v: C.v[i] === 1, g: C.g[i] || 0, hc: C.hc[i] === 1, ip: C.ip[i], f: C.f[i], fish: C.fish[i], h: C.h[i] || 0,
-        j: C.j[i], gr: C.gr[i], sc: C.sc[i], in: C.in[i] || 0 };
+        ch: C.ch[i] || 1, g: C.g[i] || 0, hc: C.hc[i] === 1, ip: C.ip[i], f: C.f[i], fish: C.fish[i], h: C.h[i] || 0,
+        j: C.j[i], gr: C.gr[i], sc: C.sc[i], in: C.in[i] || 0, v: C.v[i] === 1 };
       p.search = " " + normalize([p.n, city, p.z, cu, brand, p.fish].filter(Boolean).join(" ")) + " " + normAddr(p.a || "") + " ";
       p.nameText = " " + normalize([p.n, brand].filter(Boolean).join(" ")) + " ";
       P[i] = p;
-      if (city && !p.v) towns.set(city, (towns.get(city) || 0) + 1);
+      if (city) towns.set(city, (towns.get(city) || 0) + 1);
     }
     const byCount = [...towns.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-    for (const [name] of byCount) { const k = normAddr(name); if (!(k in TOWN_KEYS)) TOWN_KEYS[k] = name; }
-    TOWN_KEYS_BY_LENGTH = Object.keys(TOWN_KEYS).sort((a, b) => b.length - a.length);
+    for (const [name] of byCount) { const k = normAddr(name); if (!TOWN_KEYS.has(k)) TOWN_KEYS.set(k, name); }
+    TOWN_KEYS_BY_LENGTH = [...TOWN_KEYS.keys()].sort((a, b) => b.length - a.length);
     $("#ex-town").innerHTML = '<option value="">All towns</option>' + [...towns.keys()].sort((a, b) => a.localeCompare(b)).map((t) => `<option>${esc(t)}</option>`).join("");
     const cuis = new Map();
-    for (const p of P) if (!p.v) cuis.set(p.cu, (cuis.get(p.cu) || 0) + 1);
+    for (const p of P) cuis.set(p.cu, (cuis.get(p.cu) || 0) + 1);
     $("#ex-cuisine").innerHTML = '<option value="">All kinds</option>' + [...cuis.entries()].sort((a, b) => b[1] - a[1]).map(([c, k]) => `<option value="${esc(c)}">${esc(c)} (${k.toLocaleString()})</option>`).join("");
   }
 
   function readHash() {
     const h = new URLSearchParams(location.hash.slice(1));
-    st.g = GUIDES[h.get("g")] ? h.get("g") : store.get("guide", "fishfry");
+    const last = store.get("guide", "fishfry");
+    st.g = own(GUIDES, h.get("g")) ? h.get("g") : own(GUIDES, last) ? last : "fishfry";
     st.q = h.get("q") || ""; st.town = h.get("town") || ""; st.cuisine = h.get("kind") || ""; st.chains = h.get("chains") === "1";
     st.sort = h.get("sort") || ""; st.p = h.get("p") || "";
   }
@@ -446,7 +482,7 @@
     $("#ex-locmsg").textContent = "Finding you…";
     navigator.geolocation.getCurrentPosition((pos) => {
       here = { la: pos.coords.latitude, lo: pos.coords.longitude };
-      $("#ex-locmsg").textContent = "Sorted by distance from you. Your location stays in this browser.";
+      $("#ex-locmsg").textContent = "Sorted by distance. Your location stays in this page.";
       st.sort = GUIDES[st.g].sorts.includes("nearest") ? "nearest" : st.sort;
       if (view === "map") centerOn(here);
       shown = 100; render();
@@ -475,6 +511,7 @@
     $("#ex-more").onclick = () => { shown += 200; renderList(order()); };
     document.querySelectorAll(".ex-view button").forEach((b) => b.onclick = () => setView(b.dataset.v));
     $("#ex-list").addEventListener("click", (e) => { const b = e.target.closest(".ex-row"); if (b) openPlace(P[+b.dataset.i]); });
+    $("#ex-scrim").onclick = closePlace;
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && st.p) closePlace(); });
     // a link or an edited address bar changing the hash (our own updates use replaceState, which doesn't fire this)
     window.addEventListener("hashchange", () => {
@@ -488,15 +525,27 @@
     $("#ex-q").value = st.q; $("#ex-town").value = st.town; $("#ex-cuisine").value = st.cuisine; $("#ex-chains").checked = st.chains;
   }
 
-  (async () => {
-    readHash();
-    try { await load(); } catch (e) { $("#ex-count").textContent = "The restaurant list couldn't load. Refresh to try again."; return; }
-    syncInputs(); controls();
-    $("#ex-app").hidden = false;
-    $("#ex-loading").hidden = true;
+  async function start() {
+    const box = $("#ex-loading");
+    box.hidden = false;
+    box.textContent = "Loading the restaurant list…";
+    try { await load(); } catch {
+      box.innerHTML = 'The restaurant list couldn’t load. Check your connection, then <button type="button" class="ex-linkbtn" id="ex-retry">try again</button>';
+      $("#ex-retry").onclick = start;
+      return;
+    }
+    document.querySelectorAll("#ex-app [disabled]").forEach((el) => { el.disabled = false; });
+    syncInputs();
+    if (!wired) { controls(); wired = true; }
+    box.hidden = true;
     render();
     const open = st.p && P.find((p) => p.id === st.p);
-    if (open) { await loadDetail(); openPlace(open, false); }
-    ("requestIdleCallback" in window ? requestIdleCallback : setTimeout)(() => loadDetail());
-  })();
+    if (open) openPlace(open, false);
+  }
+
+  readHash();
+  preRender();
+  const chip = document.querySelector(`.ex-guides button[data-g="${st.g}"]`), row = $(".ex-guides");
+  if (chip && chip.offsetLeft + chip.offsetWidth > row.clientWidth) row.scrollLeft = chip.offsetLeft - 16;   // show the current guide's chip
+  start();
 })();

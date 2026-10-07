@@ -5,6 +5,12 @@
   "matched": "100 RIVER ISLAND DR, OCONTO FALLS, WI, 54154",
   "zip": "54154"
  },
+ "1011 25 1/4 St, Chetek, WI 54728": {
+  "lat": 45.353717,
+  "lon": -91.639807,
+  "matched": "Travel Wisconsin listing map pin (the Census geocoder matched 25th St and 4th St instead; checked 2026-10-07)",
+  "zip": "54728"
+ },
  "10995 N Louies Landing Rd, Hayward, WI 54843": {
   "lat": 46.028517,
   "lon": -91.077229,

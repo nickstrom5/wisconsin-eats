@@ -3,9 +3,9 @@
 # Polite: 1 s sleep between pages (inside arcgis_dl.py), sequential requests only.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-P=/Users/nicksoderstrom/Developer/claudecode/wi-eats/.venv/bin/python
+P="$(cd ../../.. && pwd)/.venv/bin/python"   # wi-eats/.venv (this script runs from data/raw/official)
 D=_scripts/arcgis_dl.py
-UA="Mozilla/5.0 (Macintosh) wi-eats-research/0.1 (polite bulk download of public open data)"
+UA="WisconsinEatsData/1.0 (+https://wisconsin.eatsranked.com/; polite bulk download of public open data)"
 mkdir -p milwaukee madison_dane datcp other_liquor
 
 # --- City of Milwaukee (License Division GIS; active licenses only, refreshed nightly)

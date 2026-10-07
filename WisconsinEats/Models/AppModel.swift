@@ -51,8 +51,18 @@ final class AppModel {
         if let data = defaults.data(forKey: "filters"), let f = try? JSONDecoder().decode(Filters.self, from: data) { filters = f }
     }
 
+    /// A cold launch from Spotlight asks for the data twice (the app's .task and the search continuation); both wait on one decode.
+    private var loading: Task<Void, Never>?
+
     func load(from url: URL? = Bundle.main.url(forResource: "places", withExtension: "json")) async {
         guard !isLoaded else { return }
+        if let loading { await loading.value; return }
+        let task = Task { await decode(from: url) }
+        loading = task
+        await task.value
+    }
+
+    private func decode(from url: URL?) async {
         guard let url else { loadError = "The restaurant data is missing from the app."; return }
         do {
             let (file, places) = try await Task.detached(priority: .userInitiated) { () throws -> (DataFile, [Place]) in
@@ -92,11 +102,32 @@ final class AppModel {
     func place(id: String) -> Place? { places.first { $0.id == id } }
 
     /// Places in a guide, filtered and searched, in the chosen order.
+    /// The last list asked for. A list view's body runs on every change (an iPad row tap re-renders it), so the same
+    /// guide, sort, search, filters and location (to ~100 m) reuse the result instead of filtering 17,000 places again.
+    private struct ListKey: Equatable {
+        let guide: Guide, sort: SortOrder, search: String, filters: Filters, count: Int, lat: Int?, lon: Int?
+    }
+    @ObservationIgnored private var lastList: (key: ListKey, places: [Place])?
+
     func list(_ guide: Guide, sort: SortOrder, search: String, here: CLLocation?) -> [Place] {
+        // reading filters and places here keeps SwiftUI observing them even when the cached list is returned
+        let key = ListKey(guide: guide, sort: sort, search: search, filters: filters, count: places.count,
+                          lat: here.map { Int(($0.coordinate.latitude * 1000).rounded()) },
+                          lon: here.map { Int(($0.coordinate.longitude * 1000).rounded()) })
+        if let lastList, lastList.key == key { return lastList.places }
+        let out = makeList(guide, sort: sort, search: search, here: here)
+        lastList = (key, out)
+        return out
+    }
+
+    private func makeList(_ guide: Guide, sort: SortOrder, search: String, here: CLLocation?) -> [Place] {
         let q = Search.parse(search, towns: townKeys)
         // typed something, but nothing searchable ("🍕", "!!!"): show nothing rather than everything
         if q.isEmpty && !search.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { return [] }
-        var out = places.filter { guide.includes($0) && filters.allows($0) && (q.isEmpty || Search.matches($0, q)) }
+        // Icons are hand-picked, so their cheese shops and sausage makers show even while non-restaurants are hidden
+        var f = filters
+        if guide == .icons { f.includeNonRestaurants = true }
+        var out = places.filter { guide.includes($0) && f.allows($0) && (q.isEmpty || Search.matches($0, q)) }
         if guide == .nearMe && here == nil { return [] }
         out = Ranking.sort(out, by: sort, from: here)
         if !q.tokens.isEmpty && !(guide.isRanked) {   // name matches first when searching
@@ -109,7 +140,11 @@ final class AppModel {
         return out
     }
 
-    func count(_ guide: Guide) -> Int { places.lazy.filter { guide.includes($0) && self.filters.allows($0) }.count }
+    func count(_ guide: Guide) -> Int {
+        var f = filters
+        if guide == .icons { f.includeNonRestaurants = true }   // as in list()
+        return places.lazy.filter { guide.includes($0) && f.allows($0) }.count
+    }
 
     // MARK: saved places
 

@@ -27,6 +27,8 @@ struct WisconsinEatsApp: App {
                     await model.load()
                     ScreenshotMode.apply(to: model)
                     if model.isLoaded && !ScreenshotMode.isActive {
+                        // after the first screen is up: building ~600 index items shouldn't compete with launch
+                        try? await Task.sleep(for: .seconds(3))
                         SpotlightIndexer.indexIfNeeded(model.places, generated: model.generated)
                     }
                 }

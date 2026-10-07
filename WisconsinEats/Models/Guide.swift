@@ -116,11 +116,16 @@ struct Filters: Equatable, Codable {
 
 enum Ranking {
     static func sort(_ places: [Place], by order: SortOrder, from here: CLLocation?) -> [Place] {
-        func name(_ a: Place, _ b: Place) -> Bool { a.name.localizedCaseInsensitiveCompare(b.name) == .orderedAscending }
-        func dist(_ p: Place) -> Double { (here != nil ? p.location?.distance(from: here!) : nil) ?? .greatestFiniteMagnitude }
+        // Keys come from precomputed fields: a localized compare, or a new CLLocation per comparison, made a 16,000-place
+        // sort take most of a second on a phone. nameText is the normalized name ("kopps"), so case, accents and
+        // apostrophes don't change the order.
+        func name(_ a: Place, _ b: Place) -> Bool { a.nameText != b.nameText ? a.nameText < b.nameText : a.id < b.id }
         switch order {
         case .nearest where here != nil:
-            return places.sorted { dist($0) != dist($1) ? dist($0) < dist($1) : name($0, $1) }
+            let from = here!
+            return places.map { p in (p, p.location.map { $0.distance(from: from) } ?? .greatestFiniteMagnitude) }
+                .sorted { $0.1 != $1.1 ? $0.1 < $1.1 : name($0.0, $1.0) }
+                .map(\.0)
         case .featured, .nearest:
             // honored places first, then verified founding year, then name
             return places.sorted {

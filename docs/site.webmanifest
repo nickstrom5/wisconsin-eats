@@ -1,7 +1,7 @@
 {
   "name": "Wisconsin Eats",
   "short_name": "WI Eats",
-  "description": "Fish fry & supper club guide, plus 16,360 Wisconsin restaurants.",
+  "description": "Fish fry & supper club guide, plus 16,346 Wisconsin restaurants.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#fbfaf6",
@@ -16,6 +16,11 @@
       "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ]
 }

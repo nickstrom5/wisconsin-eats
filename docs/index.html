@@ -3,16 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'sha256-ioKstaJwvRT8+Xo2/kTbQ2h6pgcouNaC4RrTfGh37OU='; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Wisconsin Eats: Fish Fry, Supper Club &amp; Restaurant App</title>
-<meta name="description" content="Free iPhone and iPad guide to 16,360 Wisconsin restaurants, with 395 hand-checked Friday fish fries, 209 supper clubs and 28 custard stands.">
+<meta name="description" content="Free iPhone and iPad guide to 16,346 Wisconsin restaurants, with 402 hand-checked Friday fish fries, 211 supper clubs and 28 custard stands.">
 <link rel="canonical" href="https://wisconsin.eatsranked.com/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#203731">
-<!-- Smart App Banner: once the App Store Connect record exists, replace APP_ID with the numeric Apple ID and uncomment.
-<meta name="apple-itunes-app" content="app-id=APP_ID">
--->
 <meta property="og:title" content="Wisconsin Eats: Fish Fry, Supper Club &amp; Restaurant App">
-<meta property="og:description" content="Free iPhone and iPad guide to 16,360 Wisconsin restaurants, with 395 hand-checked Friday fish fries, 209 supper clubs and 28 custard stands.">
+<meta property="og:description" content="Free iPhone and iPad guide to 16,346 Wisconsin restaurants, with 402 hand-checked Friday fish fries, 211 supper clubs and 28 custard stands.">
 <meta property="og:url" content="https://wisconsin.eatsranked.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wisconsin Eats">
@@ -23,52 +22,60 @@
 <meta property="og:image:alt" content="Wisconsin Eats: Fish fry &amp; supper club guide. Wisconsin restaurants, with hand-checked fish fries, supper clubs and custard stands.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wisconsin Eats: Fish Fry, Supper Club &amp; Restaurant App">
-<meta name="twitter:description" content="Free iPhone and iPad guide to 16,360 Wisconsin restaurants, with 395 hand-checked Friday fish fries, 209 supper clubs and 28 custard stands.">
+<meta name="twitter:description" content="Free iPhone and iPad guide to 16,346 Wisconsin restaurants, with 402 hand-checked Friday fish fries, 211 supper clubs and 28 custard stands.">
 <meta name="twitter:image" content="https://wisconsin.eatsranked.com/og.png">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23203731'/%3E%3Cpath d='M10 34 H54 L23 19 Z' fill='%23FFD45E'/%3E%3Crect x='10' y='34' width='44' height='17' fill='%23FFB612'/%3E%3Ccircle cx='17.5' cy='42.5' r='3.7' fill='%23203731'/%3E%3Ccircle cx='30' cy='46' r='2.4' fill='%23203731'/%3E%3Ccircle cx='42.5' cy='41' r='4.3' fill='%23203731'/%3E%3Cellipse cx='31' cy='28.5' rx='2.6' ry='1.1' fill='%23203731'/%3E%3C/svg%3E">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <style>
   :root {
     --bg: #fbfaf6; --surface: #fff; --surface2: #f3f1ea; --rule: #e3e0d6;
     --ink: #16211d; --ink2: #33443d; --muted: #53665b;
-    --green: #203731; --green2: #2d5242; --gold: #ffb612; --goldsoft: #ffe7a8;
+    --green: #203731; --green2: #2d5242; --on-green: #fff; --gold: #ffb612; --goldsoft: #ffe7a8; --on-gold: #16211d;
+    --dot: #203731; --water: #cfe3ea; --county: rgba(83,102,91,.35);
     --radius: 16px;
+    --text: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
     --display: "Avenir Next Condensed", "HelveticaNeue-CondensedBold", "Arial Narrow", system-ui, sans-serif;
+    color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #111815; --surface: #18221e; --surface2: #1f2b26; --rule: #2c3a34; --ink: #f2f1ea; --ink2: #d5d9d2; --muted: #a9b7ae; --green: #9fd3b8; --green2: #7fbf9f; }
+    :root { --bg: #111815; --surface: #18221e; --surface2: #1f2b26; --rule: #2c3a34; --ink: #f2f1ea; --ink2: #d5d9d2; --muted: #a9b7ae;
+      --green: #9fd3b8; --green2: #7fbf9f; --on-green: #10201a; --dot: #9fd3b8; --water: #10303b; --county: rgba(169,183,174,.35); }
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 var(--text); -webkit-font-smoothing: antialiased; }
   a { color: var(--green); text-underline-offset: 2px; }
-  a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
-  .skip { position: absolute; left: -9999px; top: 0; background: var(--gold); color: #16211d; padding: 10px 14px; font-weight: 700; z-index: 10; }
+  a:focus-visible, summary:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--gold); color: var(--on-gold); padding: 10px 14px; font-weight: 700; z-index: 30; }
   .skip:focus { left: 8px; top: 8px; }
+  .vh { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-  header.site { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 0; border-bottom: 4px solid var(--gold); }
-  .logo { display: flex; align-items: center; gap: 10px; font: 800 22px/1 var(--display); text-transform: uppercase; letter-spacing: .01em; color: var(--green); text-decoration: none; }
-  header.site nav { display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: flex-end; }
+  header.site { display: flex; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 12px 0; border-bottom: 4px solid var(--gold); }
+  .logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font: 800 22px/1 var(--display); text-transform: uppercase; letter-spacing: .01em; color: var(--green); text-decoration: none; }
+  header.site nav { display: flex; flex-wrap: wrap; gap: 0 10px; justify-content: flex-end; }
+  header.site nav a, footer nav a, nav.crumbs a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
   header.site nav a { color: var(--ink2); text-decoration: none; font-size: 15px; }
   header.site nav a:hover { color: var(--green); text-decoration: underline; }
   h1, h2 { font-family: var(--display); font-weight: 800; color: var(--green); letter-spacing: -.005em; }
-  h1 { font-size: clamp(36px, 7.5vw, 56px); line-height: 1.02; margin: 0 0 16px; text-transform: uppercase; }
-  h1 .kicker { display: block; font: 700 15px/1.4 -apple-system, system-ui, sans-serif; letter-spacing: .06em; color: var(--muted); margin-bottom: 12px; }
+  h1 { font-size: clamp(36px, 7.5vw, 56px); line-height: 1.02; margin: 0 0 16px; text-transform: uppercase; overflow-wrap: anywhere; }
+  .kicker { font: 700 15px/1.4 var(--text); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
   h2 { font-size: 32px; line-height: 1.1; margin: 0 0 10px; }
   h3 { font-size: 18px; margin: 0; line-height: 1.3; }
   .lede { font-size: 19px; color: var(--ink2); margin: 0 0 26px; }
-  .hero { padding: 44px 0 28px; }
+  .hero { padding: 40px 0 28px; }
   section { padding: 36px 0; border-top: 1px solid var(--rule); }
   section.hero { border: 0; }
   .sub { color: var(--ink2); margin: 0 0 22px; }
   .cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: #16211d; font-weight: 700; padding: 14px 20px; border-radius: 14px; text-decoration: none; font-size: 17px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; background: var(--gold); color: var(--on-gold); font-weight: 700; padding: 13px 20px; border-radius: 14px; text-decoration: none; font-size: 17px; line-height: 1.2; }
   .btn svg { width: 22px; height: 22px; }
   .btn-ghost { background: transparent; color: var(--green); border: 2px solid var(--green); }
+  .store-badge { display: inline-flex; min-height: 44px; align-items: center; }
   .pill { font-size: 14px; color: var(--muted); }
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 28px 0 0; padding: 0; list-style: none; }
   .stats li { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; }
@@ -76,7 +83,7 @@
   .stats span { font-size: 14px; color: var(--muted); }
   .steps { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
   .step { display: flex; gap: 14px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: 18px; }
-  .step .n { flex: 0 0 32px; height: 32px; border-radius: 50%; background: var(--gold); color: #16211d; font-weight: 800; display: grid; place-items: center; }
+  .step .n { flex: 0 0 32px; height: 32px; border-radius: 50%; background: var(--gold); color: var(--on-gold); font-weight: 800; display: grid; place-items: center; }
   .step p { margin: 4px 0 0; color: var(--ink2); }
   .shots { display: flex; gap: 14px; overflow-x: auto; margin: 0 -20px; padding: 4px 20px 14px; scroll-snap-type: x proximity; list-style: none; }
   .shots li { flex: 0 0 auto; width: 210px; scroll-snap-align: start; }
@@ -88,7 +95,7 @@
   a.card { display: block; text-decoration: none; color: var(--ink); }
   a.card:hover h3 { text-decoration: underline; color: var(--green); }
   .cities { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
-  .cities a { display: inline-block; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); text-decoration: none; color: var(--ink); font-size: 15px; }
+  .cities a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); text-decoration: none; color: var(--ink); font-size: 15px; }
   .cities a:hover { border-color: var(--green); }
   details { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 2px 18px; margin-bottom: 10px; }
   summary { cursor: pointer; padding: 14px 0; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
@@ -98,193 +105,87 @@
   details p { margin: 0 0 16px; color: var(--ink2); }
   .final { text-align: center; }
   .final .cta-row { justify-content: center; }
-  nav.crumbs { font-size: 14px; color: var(--muted); padding: 16px 0 0; }
-  nav.crumbs ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-  nav.crumbs li + li::before { content: "/"; margin-right: 6px; color: var(--rule); }
+  nav.crumbs { font-size: 14px; color: var(--muted); padding: 6px 0 0; }
+  nav.crumbs ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 6px; }
+  nav.crumbs li { display: inline-flex; align-items: center; min-height: 44px; }
+  nav.crumbs li + li::before { content: "/"; margin-right: 6px; color: var(--muted); }
   nav.crumbs a { color: var(--muted); }
   .places { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-  .places li { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px 16px; min-width: 0; overflow-wrap: anywhere; }
+  .places li { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 14px 16px; min-width: 0; overflow-wrap: anywhere; scroll-margin-top: 12px; }
+  .places h3 a { display: block; padding: 11px 0; margin: -11px 0; text-decoration: none; }
+  .places h3 a:hover { text-decoration: underline; }
   .places .where { margin: 2px 0 0; font-size: 15px; color: var(--muted); }
   .places .facts { margin: 8px 0 0; font-size: 15px; color: var(--ink2); }
   .places .facts b { color: var(--ink); font-weight: 600; }
   .places .note { margin: 6px 0 0; font-size: 15px; color: var(--ink2); }
-  .places .link { font-size: 14px; }
-  .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; background: var(--goldsoft); color: #16211d; border-radius: 6px; padding: 1px 6px; margin-right: 4px; }
+  .places .link { font-size: 15px; margin: 2px 0 -8px; }
+  .places .link a, .near a, .toc a, .plinks a, td a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; background: var(--goldsoft); color: var(--on-gold); border-radius: 6px; padding: 1px 6px; margin-right: 4px; }
   .toc { columns: 2; padding-left: 20px; margin: 0; }
+  .near, .plist { list-style: none; padding: 0; margin: 0; }
+  .plist { columns: 2; column-gap: 24px; }
+  .plist li { break-inside: avoid; padding: 2px 0; }
+  .plist a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; font-weight: 600; }
+  .plist span { display: block; font-size: 14px; color: var(--muted); margin: -8px 0 4px; }
+  .near span { display: block; font-size: 14px; color: var(--muted); margin: -8px 0 6px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 0; }
+  .actions .btn { font-size: 16px; padding: 10px 16px; }
+  dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 10px 18px; margin: 0 0 18px; }
+  dl.facts dt { font-weight: 700; color: var(--ink); }
+  dl.facts dd { margin: 0; color: var(--ink2); }
+  dl.facts ul { margin: 0; padding-left: 18px; }
+  .addr { font-size: 17px; color: var(--ink2); margin: 0 0 14px; }
+  .qa h3 { margin: 22px 0 6px; font-size: 19px; }
+  .qa p { margin: 0 0 10px; color: var(--ink2); }
   table { border-collapse: collapse; width: 100%; font-size: 15px; }
   th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--rule); }
-  td.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
   .fine { font-size: 14px; color: var(--muted); }
   .legal h2 { font-size: 26px; margin-top: 28px; }
   .legal p, .legal li { color: var(--ink2); }
-  footer { padding: 32px 0 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); margin-top: 20px; }
-  footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+  .notice { white-space: pre-wrap; font-size: 14px; color: var(--ink2); background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; overflow-wrap: anywhere; }
+  footer { padding: 24px 0 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); margin-top: 20px; }
+  footer nav { display: flex; flex-wrap: wrap; gap: 0 18px; }
   footer a { color: var(--muted); }
   footer p { margin: 12px 0 0; }
   @media (max-width: 600px) {
     .grid2 { grid-template-columns: 1fr; }
     .stats { grid-template-columns: 1fr 1fr; }
-    .toc { columns: 1; }
+    .toc, .plist { columns: 1; }
     header.site { flex-direction: column; align-items: flex-start; }
     header.site nav { justify-content: flex-start; }
+    dl.facts { grid-template-columns: 1fr; gap: 2px; }
+    dl.facts dd { margin-bottom: 10px; }
   }
 </style>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "MobileApplication",
-   "@id": "https://wisconsin.eatsranked.com/#app",
-   "name": "Wisconsin Eats: Restaurants",
-   "alternateName": [
-    "Wisconsin Eats",
-    "WI Eats",
-    "Wisconsin Eats: Fish Fry & Supper Club Guide"
-   ],
-   "description": "A free guide to 16,360 Wisconsin restaurants, with hand-checked lists of 395 Friday fish fries, 209 supper clubs and 28 frozen custard stands. Sort by distance, open Apple Maps' live place card for hours and photos, and save places for Friday.",
-   "url": "https://wisconsin.eatsranked.com/",
-   "image": "https://wisconsin.eatsranked.com/og.png",
-   "screenshot": "https://wisconsin.eatsranked.com/img/screen-home.png",
-   "operatingSystem": "iOS, iPadOS",
-   "applicationCategory": "TravelApplication",
-   "applicationSubCategory": "Food & Drink",
-   "inLanguage": "en",
-   "publisher": {
-    "@id": "https://wisconsin.eatsranked.com/#org"
-   },
-   "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "category": "free"
-   }
-  },
-  {
-   "@type": "Organization",
-   "@id": "https://wisconsin.eatsranked.com/#org",
-   "name": "Wisconsin Eats",
-   "url": "https://wisconsin.eatsranked.com/",
-   "logo": {
-    "@type": "ImageObject",
-    "url": "https://wisconsin.eatsranked.com/icon-512.png",
-    "width": 512,
-    "height": 512
-   },
-   "email": "work-with-nick@gmail.com",
-   "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "email": "work-with-nick@gmail.com",
-    "availableLanguage": "en"
-   }
-  },
-  {
-   "@type": "WebSite",
-   "@id": "https://wisconsin.eatsranked.com/#website",
-   "name": "Wisconsin Eats",
-   "alternateName": [
-    "WI Eats",
-    "Wisconsin Eats app"
-   ],
-   "url": "https://wisconsin.eatsranked.com/",
-   "inLanguage": "en",
-   "publisher": {
-    "@id": "https://wisconsin.eatsranked.com/#org"
-   }
-  }
- ]
-}
-</script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "@id": "https://wisconsin.eatsranked.com/#faq",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "Is Wisconsin Eats free?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Yes. The app is free, with no ads, no in-app purchases and no account."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Where do the fish fries and supper clubs come from?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "We checked each one by hand in September 2026: every place on the fish fry, supper club and custard lists has a 2025 or 2026 source such as its own menu page, a dated news story or its Travel Wisconsin listing. The rest of the 16,360 restaurants come from Overture Maps' open place data and the City of Milwaukee and Dane County license lists."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Does the app show ratings and reviews?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Not its own. Tap a place and Apple Maps' own place card opens inside the app with Apple's current ratings, hours, photos and directions. Our lists are never ordered by ratings."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Does it need my location?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Only if you want lists sorted by distance. Your location stays on your iPhone or iPad and is never sent to us. Everything else works without it."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "What are the inspection grades?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "For Madison and Dane County, the app grades places on a curve from Public Health Madison & Dane County's routine inspections since January 2023. They are our summary, not official grades. Other counties don't publish inspections in bulk."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "A place closed or is missing. How do I tell you?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Email work-with-nick@gmail.com with the name and town. Corrections go into the next update."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Is there an Android version?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Not yet. Wisconsin Eats is for iPhone and iPad. If enough people ask at work-with-nick@gmail.com, it moves up the list."
-   }
-  }
- ]
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://wisconsin.eatsranked.com/#org","name":"Wisconsin Eats","url":"https://wisconsin.eatsranked.com/","logo":{"@type":"ImageObject","url":"https://wisconsin.eatsranked.com/icon-512.png","width":512,"height":512},"founder":{"@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom"},"email":"work-with-nick@gmail.com","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"work-with-nick@gmail.com","availableLanguage":"en"}},{"@type":"Person","@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom","name":"Nicholas Soderstrom","url":"https://wisconsin.eatsranked.com/about.html"},{"@type":"WebSite","@id":"https://wisconsin.eatsranked.com/#website","name":"Wisconsin Eats","alternateName":["WI Eats","Wisconsin Eats app"],"url":"https://wisconsin.eatsranked.com/","inLanguage":"en","publisher":{"@id":"https://wisconsin.eatsranked.com/#org"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MobileApplication","@id":"https://wisconsin.eatsranked.com/#app","name":"Wisconsin Eats: Restaurants","alternateName":["Wisconsin Eats","WI Eats","Wisconsin Eats: Fish Fry \u0026 Supper Club Guide"],"description":"A free guide to 16,346 Wisconsin restaurants, with hand-checked lists of 402 Friday fish fries, 211 supper clubs and 28 frozen custard stands. Sort by distance, open Apple Maps' live place card for hours and photos, and save places for Friday.","url":"https://wisconsin.eatsranked.com/","image":"https://wisconsin.eatsranked.com/og.png","screenshot":"https://wisconsin.eatsranked.com/img/screen-home.png","operatingSystem":"iOS, iPadOS","applicationCategory":"TravelApplication","applicationSubCategory":"Food \u0026 Drink","inLanguage":"en","author":{"@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom"},"publisher":{"@id":"https://wisconsin.eatsranked.com/#org"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","category":"free"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","@id":"https://wisconsin.eatsranked.com/#faq","mainEntity":[{"@type":"Question","name":"Is Wisconsin Eats free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The app is free, with no ads, no in-app purchases and no account."}},{"@type":"Question","name":"Where do the fish fries and supper clubs come from?","acceptedAnswer":{"@type":"Answer","text":"We checked each one by hand in September 2026: every place on the fish fry, supper club and custard lists has a 2025 or 2026 source such as its own menu page, a dated news story or its Travel Wisconsin listing. The rest of the 16,346 restaurants come from Overture Maps' open place data and the City of Milwaukee and Dane County license lists."}},{"@type":"Question","name":"Does the app show ratings and reviews?","acceptedAnswer":{"@type":"Answer","text":"Not its own. Tap a place and Apple Maps' own place card opens inside the app with Apple's current ratings, hours, photos and directions. Our lists are never ordered by ratings."}},{"@type":"Question","name":"Does it need my location?","acceptedAnswer":{"@type":"Answer","text":"Only if you want lists sorted by distance. Your location stays on your iPhone or iPad and is never sent to us. Everything else works without it."}},{"@type":"Question","name":"What are the inspection grades?","acceptedAnswer":{"@type":"Answer","text":"For Madison and Dane County, the app grades places on a curve from Public Health Madison \u0026 Dane County's routine inspections since January 2023. They are our summary, not official grades. Other counties don't publish inspections in bulk."}},{"@type":"Question","name":"A place closed or is missing. How do I tell you?","acceptedAnswer":{"@type":"Answer","text":"Email work-with-nick@gmail.com with the name and town. Corrections go into the next update."}},{"@type":"Question","name":"Is there an Android version?","acceptedAnswer":{"@type":"Answer","text":"Not yet. Wisconsin Eats is for iPhone and iPad, and the guides work in any browser at wisconsin.eatsranked.com/explore/. If enough people ask at work-with-nick@gmail.com, an Android app moves up the list."}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
   <header class="site">
-    <a class="logo" href="/" aria-label="Wisconsin Eats home"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#203731"/><path d="M10 34 H54 L23 19 Z" fill="#FFD45E"/><rect x="10" y="34" width="44" height="17" fill="#FFB612"/><circle cx="17.5" cy="42.5" r="3.7" fill="#203731"/><circle cx="30" cy="46" r="2.4" fill="#203731"/><circle cx="42.5" cy="41" r="4.3" fill="#203731"/><ellipse cx="31" cy="28.5" rx="2.6" ry="1.1" fill="#203731"/></svg>Wisconsin Eats</a>
+    <a class="logo" href="/" aria-label="Wisconsin Eats home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#203731"/><path d="M9.6 29.44H54.4L23.04 14.21Z" fill="#FFD45E"/><clipPath id="wedge"><rect x="9.6" y="29.44" width="44.8" height="17.92"/></clipPath><rect x="9.6" y="29.44" width="44.8" height="17.92" fill="#FFB612"/><g clip-path="url(#wedge)" fill="#203731"><circle cx="17.22" cy="38.04" r="3.81"/><circle cx="30.21" cy="41.98" r="2.69"/><circle cx="42.75" cy="36.61" r="4.48"/><circle cx="35.58" cy="33.38" r="2.02"/><circle cx="23.04" cy="44.13" r="1.79"/><circle cx="54.4" cy="42.88" r="3.14"/><circle cx="9.6" cy="32.13" r="2.24"/></g><ellipse cx="32" cy="23.75" rx="2.69" ry="1.12" fill="#203731"/><rect x="9.6" y="29.44" width="44.8" height="0.54" fill="#E09A00"/></svg>Wisconsin Eats</a>
     <nav aria-label="Main">
       <a href="/wisconsin-fish-fry.html">Fish fry</a>
       <a href="/wisconsin-supper-clubs.html">Supper clubs</a>
       <a href="/wisconsin-frozen-custard.html">Custard</a>
-      <a href="/#cities">Cities</a>
+      <a href="/cities/">Cities</a>
       <a href="/explore/">Search</a>
     </nav>
   </header>
   <main id="main">
   <section class="hero">
-    <h1><span class="kicker">Wisconsin Eats: the fish fry & supper club guide for iPhone and iPad</span>Wisconsin's restaurants, and the fish fries worth the drive</h1>
-    <p class="lede">Wisconsin Eats is a free Wisconsin restaurant guide. Find a Friday fish fry near you, a supper club for Saturday and a custard stand for after, from lists we checked by hand, plus 16,360 restaurants, cafés, taverns and bakeries in 828 towns.</p>
-    <div class="cta-row"><a class="btn store-btn" href="mailto:work-with-nick@gmail.com?subject=Wisconsin%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.3.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.9-4zM14 5.2c.7-.8 1.2-2 1-3.2-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1.1 3.1 1.1.1 2.3-.6 3-1.4z"/></svg><span class="store-label">Get early access</span></a><a class="btn btn-ghost" href="/explore/">Search on the web</a><span class="pill store-note">Free. No ads, no account. Coming to the App Store.</span></div>
+    <p class="kicker">Wisconsin Eats: the fish fry & supper club guide for iPhone and iPad</p>
+    <h1>Wisconsin's restaurants, and the fish fries worth the drive</h1>
+    <p class="lede">Wisconsin Eats is a free Wisconsin restaurant guide. Find a Friday fish fry near you, a supper club for Saturday and a custard stand for after, from lists we checked by hand, plus 16,346 restaurants, cafés, taverns and bakeries in 828 towns.</p>
+    <div class="cta-row"><a class="btn store-btn" href="mailto:work-with-nick@gmail.com?subject=Wisconsin%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><span>Get early access</span></a><a class="btn btn-ghost" href="/explore/">Search on the web</a><span class="pill">Free for iPhone and iPad. Coming to the App Store.</span></div>
     <ul class="stats" aria-label="What's in the app">
-      <li><b>395</b><span>Friday fish fries</span></li>
-      <li><b>209</b><span>supper clubs</span></li>
+      <li><b>402</b><span>Friday fish fries</span></li>
+      <li><b>211</b><span>supper clubs</span></li>
       <li><b>28</b><span>custard stands</span></li>
-      <li><b>16,360</b><span>restaurants</span></li>
+      <li><b>16,346</b><span>restaurants</span></li>
     </ul>
   </section>
 
@@ -296,7 +197,7 @@
   <section id="how">
     <h2>How it works</h2>
     <ol class="steps">
-      <li class="step"><div class="n" aria-hidden="true">1</div><div><h3>Pick a guide.</h3><p>Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places, or search all the restaurant by name, town or street.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">1</div><div><h3>Pick a guide.</h3><p>Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places, or search 16,346 restaurants by name, town or street.</p></div></li>
       <li class="step"><div class="n" aria-hidden="true">2</div><div><h3>See what's near you.</h3><p>Sort by distance, filter by town or cuisine, or browse the map. Each fish fry lists the fish and the days it's served.</p></div></li>
       <li class="step"><div class="n" aria-hidden="true">3</div><div><h3>Go.</h3><p>Open Apple Maps' place card for live hours and photos, call, get directions, or save it for Friday.</p></div></li>
     </ol>
@@ -305,7 +206,7 @@
   <section id="screens">
     <h2>What it looks like</h2>
     <ul class="shots" tabindex="0" aria-label="Wisconsin Eats app screenshots">
-      <li><picture><source srcset="/img/screen-home.webp" type="image/webp"><img src="/img/screen-home.png" alt="Wisconsin Eats home screen: Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places and Inspections guides, with a search box for all the restaurants in the state." width="480" height="1043" decoding="async"></picture><p>Guides for Fridays, supper clubs and custard.</p></li><li><picture><source srcset="/img/screen-fishfry.webp" type="image/webp"><img src="/img/screen-fishfry.png" alt="Friday Fish Fry list in Wisconsin Eats, sorted by distance from downtown Milwaukee, with the fish each place serves." width="480" height="1043" decoding="async"></picture><p>Fish fries nearest you first.</p></li><li><picture><source srcset="/img/screen-detail.webp" type="image/webp"><img src="/img/screen-detail.png" alt="The Del-Bar supper club in Wisconsin Dells in Wisconsin Eats: address, a button for ratings, hours and photos in Apple Maps, and its history since 1943." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Each place, with live Apple Maps hours and photos.</p></li><li><picture><source srcset="/img/screen-map.webp" type="image/webp"><img src="/img/screen-map.png" alt="Wisconsin Eats map of Wisconsin with clustered pins for fish fries." width="480" height="1043" loading="lazy" decoding="async"></picture><p>The map, by fish fry, supper club or custard.</p></li><li><picture><source srcset="/img/screen-icons.webp" type="image/webp"><img src="/img/screen-icons.png" alt="Wisconsin Icons list in Wisconsin Eats: James Beard honorees and long-running institutions." width="480" height="1043" loading="lazy" decoding="async"></picture><p>James Beard honorees and institutions.</p></li>
+      <li><picture><source srcset="/img/screen-home.webp" type="image/webp"><img src="/img/screen-home.png" alt="Wisconsin Eats home screen: Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places and Inspections guides, with a search box for restaurants statewide." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Guides for Fridays, supper clubs and custard.</p></li><li><picture><source srcset="/img/screen-fishfry.webp" type="image/webp"><img src="/img/screen-fishfry.png" alt="Friday Fish Fry list in Wisconsin Eats, sorted by distance from downtown Milwaukee, with the fish each place serves." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Fish fries nearest you first.</p></li><li><picture><source srcset="/img/screen-detail.webp" type="image/webp"><img src="/img/screen-detail.png" alt="The Del-Bar supper club in Wisconsin Dells in Wisconsin Eats: address, a button for ratings, hours and photos in Apple Maps, and its history since 1943." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Each place, with live Apple Maps hours and photos.</p></li><li><picture><source srcset="/img/screen-map.webp" type="image/webp"><img src="/img/screen-map.png" alt="Wisconsin Eats map of Wisconsin with clustered pins for fish fries." width="480" height="1043" loading="lazy" decoding="async"></picture><p>The map, by fish fry, supper club or custard.</p></li><li><picture><source srcset="/img/screen-icons.webp" type="image/webp"><img src="/img/screen-icons.png" alt="Wisconsin Icons list in Wisconsin Eats: James Beard honorees and long-running institutions." width="480" height="1043" loading="lazy" decoding="async"></picture><p>James Beard honorees and institutions.</p></li>
     </ul>
   </section>
 
@@ -313,17 +214,21 @@
     <h2>Wisconsin food guides</h2>
     <p class="sub">The app's hand-checked lists, readable on the web.</p>
     <div class="grid2">
-      <a class="card" href="/wisconsin-fish-fry.html"><h3>Wisconsin Friday fish fry guide</h3><p>395 fish fries by region and town, with the fish, days and sides.</p></a>
-      <a class="card" href="/wisconsin-supper-clubs.html"><h3>Wisconsin supper club guide</h3><p>209 supper clubs, with founding years and Friday fish fries.</p></a>
+      <a class="card" href="/wisconsin-fish-fry.html"><h3>Wisconsin Friday fish fry guide</h3><p>402 fish fries by region and town, with the fish, days and sides.</p></a>
+      <a class="card" href="/wisconsin-supper-clubs.html"><h3>Wisconsin supper club guide</h3><p>211 supper clubs, with founding years and Friday fish fries.</p></a>
       <a class="card" href="/wisconsin-frozen-custard.html"><h3>Wisconsin frozen custard stands</h3><p>28 local stands, without the big chains.</p></a>
-      <div class="card"><h3>The whole state</h3><p>16,360 places in 828 towns, from open map data and the Milwaukee and Dane County license lists. In the app.</p></div>
+      <a class="card" href="/wisconsin-lent-fish-fry.html"><h3>Lent fish fry 2027</h3><p>Lent dates, plus perch, walleye and bluegill fish fries and the places that fry on other days.</p></a>
+      <a class="card" href="/explore/"><h3>Search the state</h3><p>16,346 places in 828 towns, from open map data and the Milwaukee and Dane County license lists. Search them on the web.</p></a>
+      <a class="card" href="/about.html"><h3>How the lists are made</h3><p>Who makes Wisconsin Eats, where each listing comes from and how the hand checks work.</p></a>
     </div>
   </section>
 
   <section id="cities">
     <h2>Fish fries and supper clubs by city</h2>
-    <p class="sub">Fish fries, supper clubs, custard, local icons and the oldest restaurants in Wisconsin's biggest towns.</p>
+    <p class="sub">Fish fries, supper clubs, custard, local icons and the oldest places in Wisconsin's biggest towns. <a href="/cities/">All cities and regions</a>.</p>
     <ul class="cities"><li><a href="/cities/milwaukee.html">Milwaukee</a></li><li><a href="/cities/madison.html">Madison</a></li><li><a href="/cities/green-bay.html">Green Bay</a></li><li><a href="/cities/appleton.html">Appleton</a></li><li><a href="/cities/kenosha.html">Kenosha</a></li><li><a href="/cities/eau-claire.html">Eau Claire</a></li><li><a href="/cities/racine.html">Racine</a></li><li><a href="/cities/oshkosh.html">Oshkosh</a></li><li><a href="/cities/la-crosse.html">La Crosse</a></li><li><a href="/cities/sheboygan.html">Sheboygan</a></li><li><a href="/cities/waukesha.html">Waukesha</a></li><li><a href="/cities/janesville.html">Janesville</a></li><li><a href="/cities/wisconsin-dells.html">Wisconsin Dells</a></li></ul>
+    <p class="sub">And by region:</p>
+    <ul class="cities"><li><a href="/regions/northwoods.html">Northwoods</a></li><li><a href="/regions/western-wisconsin.html">Western Wisconsin</a></li><li><a href="/regions/central-wisconsin.html">Central Wisconsin</a></li><li><a href="/regions/door-county.html">Door County</a></li></ul>
   </section>
 
   <section id="pricing">
@@ -338,40 +243,32 @@
 
   <section id="faq">
     <h2>Questions</h2>
-    <details><summary>Is Wisconsin Eats free?</summary><p>Yes. The app is free, with no ads, no in-app purchases and no account.</p></details><details><summary>Where do the fish fries and supper clubs come from?</summary><p>We checked each one by hand in September 2026: every place on the fish fry, supper club and custard lists has a 2025 or 2026 source such as its own menu page, a dated news story or its Travel Wisconsin listing. The rest of the 16,360 restaurants come from Overture Maps&#x27; open place data and the City of Milwaukee and Dane County license lists.</p></details><details><summary>Does the app show ratings and reviews?</summary><p>Not its own. Tap a place and Apple Maps&#x27; own place card opens inside the app with Apple&#x27;s current ratings, hours, photos and directions. Our lists are never ordered by ratings.</p></details><details><summary>Does it need my location?</summary><p>Only if you want lists sorted by distance. Your location stays on your iPhone or iPad and is never sent to us. Everything else works without it.</p></details><details><summary>What are the inspection grades?</summary><p>For Madison and Dane County, the app grades places on a curve from Public Health Madison &amp; Dane County&#x27;s routine inspections since January 2023. They are our summary, not official grades. Other counties don&#x27;t publish inspections in bulk.</p></details><details><summary>A place closed or is missing. How do I tell you?</summary><p>Email work-with-nick@gmail.com with the name and town. Corrections go into the next update.</p></details><details><summary>Is there an Android version?</summary><p>Not yet. Wisconsin Eats is for iPhone and iPad. If enough people ask at work-with-nick@gmail.com, it moves up the list.</p></details>
+    <details><summary>Is Wisconsin Eats free?</summary><p>Yes. The app is free, with no ads, no in-app purchases and no account.</p></details><details><summary>Where do the fish fries and supper clubs come from?</summary><p>We checked each one by hand in September 2026: every place on the fish fry, supper club and custard lists has a 2025 or 2026 source such as its own menu page, a dated news story or its Travel Wisconsin listing. The rest of the 16,346 restaurants come from Overture Maps&#x27; open place data and the City of Milwaukee and Dane County license lists.</p></details><details><summary>Does the app show ratings and reviews?</summary><p>Not its own. Tap a place and Apple Maps&#x27; own place card opens inside the app with Apple&#x27;s current ratings, hours, photos and directions. Our lists are never ordered by ratings.</p></details><details><summary>Does it need my location?</summary><p>Only if you want lists sorted by distance. Your location stays on your iPhone or iPad and is never sent to us. Everything else works without it.</p></details><details><summary>What are the inspection grades?</summary><p>For Madison and Dane County, the app grades places on a curve from Public Health Madison &amp; Dane County&#x27;s routine inspections since January 2023. They are our summary, not official grades. Other counties don&#x27;t publish inspections in bulk.</p></details><details><summary>A place closed or is missing. How do I tell you?</summary><p>Email work-with-nick@gmail.com with the name and town. Corrections go into the next update.</p></details><details><summary>Is there an Android version?</summary><p>Not yet. Wisconsin Eats is for iPhone and iPad, and the guides work in any browser at wisconsin.eatsranked.com/explore/. If enough people ask at work-with-nick@gmail.com, an Android app moves up the list.</p></details>
   </section>
 
   <section id="download" class="final">
     <h2>Find Friday's fish fry</h2>
     <p class="sub">Wisconsin Eats is coming to the App Store for iPhone and iPad. Free.</p>
-    <div class="cta-row"><a class="btn store-btn" href="mailto:work-with-nick@gmail.com?subject=Wisconsin%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.3.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.9-4zM14 5.2c.7-.8 1.2-2 1-3.2-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1.1 3.1 1.1.1 2.3-.6 3-1.4z"/></svg><span class="store-label">Get early access</span></a></div>
+    <div class="cta-row"><a class="btn store-btn" href="mailto:work-with-nick@gmail.com?subject=Wisconsin%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><span>Get early access</span></a></div>
   </section>
   </main>
   <footer>
     <nav aria-label="Footer">
       <a href="/">Wisconsin Eats app</a>
       <a href="/explore/">Search Wisconsin restaurants</a>
-      <a href="/wisconsin-fish-fry.html">Wisconsin fish fry guide</a>
-      <a href="/wisconsin-supper-clubs.html">Wisconsin supper clubs</a>
-      <a href="/wisconsin-frozen-custard.html">Wisconsin frozen custard</a>
-      <a href="/privacy.html">Privacy policy</a>
-      <a href="/terms.html">Terms of use</a>
+      <a href="/wisconsin-fish-fry.html">Fish fry guide</a>
+      <a href="/wisconsin-lent-fish-fry.html">Lent fish fry</a>
+      <a href="/wisconsin-supper-clubs.html">Supper clubs</a>
+      <a href="/wisconsin-frozen-custard.html">Frozen custard</a>
+      <a href="/cities/">Cities and regions</a>
+      <a href="/about.html">About and sources</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
       <a href="mailto:work-with-nick@gmail.com">Email us</a>
     </nav>
-    <p>Place data: hand-checked research by Wisconsin Eats (September 2026); Overture Maps Foundation (CDLA Permissive 2.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Not affiliated with or endorsed by any restaurant, team, chain or government agency. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
-    <p>© 2026 Wisconsin Eats.</p>
+    <p>Place data: hand-checked research by Wisconsin Eats (checked September 2026); Overture Maps Foundation places data (CDLA Permissive 2.0), including data from Foursquare (Apache 2.0) and AllThePlaces (CC0 1.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Restaurant data as of October 7, 2026. Not affiliated with or endorsed by any restaurant, team, chain or government agency. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
+    <p>© 2026 Wisconsin Eats, an independent app by Nicholas Soderstrom.</p>
   </footer>
 </div>
-<script>
-  // Once the App Store listing exists, paste its URL here (looks like https://apps.apple.com/app/id123456789).
-  // Every button switches from "Get early access" to "Download on the App Store" automatically.
-  // Also fill in the apple-itunes-app meta tag in <head> on every page (re-run scripts/make-site.py after editing it there).
-  var APP_STORE_URL = "";
-  if (APP_STORE_URL) {
-    document.querySelectorAll(".store-btn").forEach(function (b) { b.href = APP_STORE_URL; b.rel = "noopener"; });
-    document.querySelectorAll(".store-label").forEach(function (l) { l.textContent = "Download on the App Store"; });
-    document.querySelectorAll(".store-note").forEach(function (n) { n.textContent = "Free for iPhone and iPad."; });
-  }
-</script>
 </body>
 </html>

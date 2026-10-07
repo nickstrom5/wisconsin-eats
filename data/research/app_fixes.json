@@ -1,0 +1,119 @@
+[
+ {
+  "name": "EE",
+  "town": "Milwaukee",
+  "street_number": "1806",
+  "set": {
+   "name": "EE-Sane Thai-Lao Cuisine"
+  },
+  "source": "https://www.eesanemke.com/ (site title and footer, checked 2026-10-05)"
+ },
+ {
+  "name": "Savory Steakhouse Fine/Casual Dining",
+  "town": "Wisconsin Rapids",
+  "set": {
+   "name": "Savory Steakhouse"
+  },
+  "source": "https://savorysteakhouse.com/ (the rest is its tagline; QA 2026-10-07)"
+ },
+ {
+  "name": "The Buck-A-Neer",
+  "town": "Stratford",
+  "set": {
+   "name": "Buck-A-Neer Supper Club"
+  },
+  "source": "https://thebuckaneer.com/ (QA 2026-10-07)"
+ },
+ {
+  "name": "Tally Ho supper Club",
+  "town": "Hayward",
+  "set": {
+   "name": "Tally Ho Supper Club"
+  },
+  "source": "capitalization (QA 2026-10-07)"
+ },
+ {
+  "name": "Belly Full Jamaican Restuarant",
+  "town": "Wisconsin Dells",
+  "set": {
+   "name": "Belly Full Jamaican Restaurant"
+  },
+  "source": "spelling (QA 2026-10-07)"
+ },
+ {
+  "name": "Renard's cheese",
+  "town": "Brussels",
+  "set": {
+   "name": "Renard's Cheese",
+   "street": "2189 County Rd DK",
+   "city": "Sturgeon Bay",
+   "zip": "54235"
+  },
+  "source": "data/curated.json Renard's Cheese and renardscheese.com; the listing's address was just \"57\" (QA 2026-10-07)"
+ },
+ {
+  "name": "Oscar's Frozen Custard",
+  "town": "Milwaukee",
+  "street_number": "2362",
+  "set": {
+   "city": "West Allis"
+  },
+  "source": "https://www.oscarscustard.com/ (2362 S 108th St, West Allis; QA 2026-10-07)"
+ },
+ {
+  "name": "Cassel Bar & Grill",
+  "town": "Marathon City",
+  "set": {
+   "street": "130665 County Road N"
+  },
+  "source": "https://wausaupilotandreview.com/2026/08/28/ (research record, data/research/app)"
+ },
+ {
+  "name": "Hilltop Bar and Grill",
+  "town": "Holmen",
+  "set": {
+   "street": "W5297 County Rd T"
+  },
+  "source": "https://www.hilltopbarandgrillwi.com/menu/ (research record)"
+ },
+ {
+  "name": "Lake Park Pub and Grill",
+  "town": "Menasha",
+  "set": {
+   "street": "N8904 Lake Park Rd"
+  },
+  "source": "https://lakeparkpub.com/ (research record)"
+ },
+ {
+  "name": "Oliva's at Gulliver's Landing",
+  "town": "Rib Mountain",
+  "set": {
+   "street": "15170 Gadwall Ln"
+  },
+  "source": "https://wausaupilotandreview.com/2026/09/11/ (research record)"
+ },
+ {
+  "name": "The Mill Supper Club",
+  "town": "Sturgeon Bay",
+  "set": {
+   "street": "4128 State Hwy 42/57"
+  },
+  "source": "https://www.themillsupperclub.com/ (research record)"
+ },
+ {
+  "name": "Funny comic Strip",
+  "town": "Madison",
+  "set": {
+   "drop": true
+  },
+  "source": "junk listing at Club Lamark's address, 1525 N Stoughton Rd (QA 2026-10-07)"
+ },
+ {
+  "name": "Shop at home",
+  "town": "Milwaukee",
+  "set": {
+   "drop": true
+  },
+  "source": "not a place to eat (QA 2026-10-07)"
+ }
+]

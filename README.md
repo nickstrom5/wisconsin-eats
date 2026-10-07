@@ -2,7 +2,7 @@
 
 Two things built from one pipeline:
 
-1. **Wisconsin Eats**, a free iPhone and iPad app (App Store name "Wisconsin Eats: Restaurants", subtitle "Fish Fry & Supper Club Guide"), and its website `docs/` for wisconsineats.com. See "The app" below.
+1. **Wisconsin Eats**, a free iPhone and iPad app (App Store name "Wisconsin Eats: Restaurants", subtitle "Fish Fry & Supper Club Guide"), and its website `docs/`, live at https://wisconsin.eatsranked.com. See "The app" below.
 2. **The web leaderboard** of every restaurant in Wisconsin, published as a private claude.ai Artifact from `site/index.html` (its JSON is git-ignored because it carries Google 2021-derived ratings; rebuild it with the pipeline). It reads `site/wisconsin.json` (every place, columnar), then lazily loads `site/wi_shapes.json` (state and county outlines, the first time the Map opens) and `site/wi_detail.json` (honors text, license numbers and inspection breakdowns, in idle time or when a drawer opens).
 
 Built separately from `chi-eats/` (the Chicago/Illinois version), reusing its structure, UX and rules. Nothing here reads chi-eats at run time: `data/chain_auv.json` is a copy of its chain sales list, and the sales model's exponent (0.764) is the one fit on Chicago's published sales.

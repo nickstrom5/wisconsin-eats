@@ -14,7 +14,7 @@ import time
 import pandas as pd
 import requests
 
-UA = "Mozilla/5.0 (Macintosh) wi-eats-research/0.1 (polite bulk download of public open data)"
+UA = "WisconsinEatsData/1.0 (+https://wisconsin.eatsranked.com/; polite bulk download of public open data)"
 S = requests.Session()
 S.headers["User-Agent"] = UA
 
@@ -23,6 +23,10 @@ def get(url, params):
     for attempt in range(4):
         try:
             r = S.get(url, params=params, timeout=90)
+            if r.status_code in (401, 403):   # refused: stop, never retry around access control
+                raise SystemExit(f"{url}: HTTP {r.status_code}, stopping")
+            if r.status_code == 429:          # asked to slow down: wait as long as the server says, once
+                time.sleep(min(int(r.headers.get("Retry-After", "60") or 60), 300))
             r.raise_for_status()
             d = r.json()
             if "error" in d:

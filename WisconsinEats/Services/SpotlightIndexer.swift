@@ -8,7 +8,9 @@ enum SpotlightIndexer {
     private static let versionKey = "spotlightIndexedGenerated"
 
     static func indexIfNeeded(_ places: [Place], generated: String, defaults: UserDefaults = .standard) {
-        guard CSSearchableIndex.isIndexingAvailable(), defaults.string(forKey: versionKey) != generated else { return }
+        // the data date alone missed same-day rebuilds; the build number changes with every update
+        let version = "\(generated)|\(Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "")"
+        guard CSSearchableIndex.isIndexingAvailable(), defaults.string(forKey: versionKey) != version else { return }
         let featured = places.filter { !$0.isVenue && ($0.isHonored || $0.handChecked) && !$0.isChain }
         let items = featured.map { p -> CSSearchableItem in
             let attrs = CSSearchableItemAttributeSet(contentType: .content)
@@ -22,11 +24,13 @@ enum SpotlightIndexer {
             attrs.contentDescription = ([kinds.joined(separator: " · ")] + [p.fullAddress]).filter { !$0.isEmpty }.joined(separator: "\n")
             attrs.keywords = kinds + [p.city, p.cuisine, "Wisconsin"].compactMap { $0 }
             if let c = p.coordinate { attrs.latitude = NSNumber(value: c.latitude); attrs.longitude = NSNumber(value: c.longitude); attrs.supportsNavigation = true }
-            return CSSearchableItem(uniqueIdentifier: p.id, domainIdentifier: domain, attributeSet: attrs)
+            let item = CSSearchableItem(uniqueIdentifier: p.id, domainIdentifier: domain, attributeSet: attrs)
+            item.expirationDate = .distantFuture   // the default is about a month, after which places vanished from search
+            return item
         }
         CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [domain]) { _ in
             CSSearchableIndex.default().indexSearchableItems(items) { error in
-                if error == nil { defaults.set(generated, forKey: versionKey) }
+                if error == nil { defaults.set(version, forKey: versionKey) }
             }
         }
     }

@@ -17,6 +17,13 @@ against Google 2021 data).
 printf '%s==>329204362+nickstrom5@users.noreply.github.com\n' 'OLD_EMAIL' > /tmp/wi-email.txt
 ```
 
+The first commits also carry the old contact address on wisconsineats.com, a domain a third party now owns (mail sent
+there reaches them). Add it to the same file so the rewrite replaces it with the current contact:
+
+```bash
+printf 'hello@wisconsineats.com==>work-with-nick@gmail.com\n' >> /tmp/wi-email.txt
+```
+
 ```bash
 git filter-repo --force --replace-text /tmp/wi-email.txt --path DerivedData-xc27.0 --path data/wi/calibration.json --invert-paths
 ```

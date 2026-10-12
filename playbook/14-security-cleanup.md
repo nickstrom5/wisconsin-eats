@@ -21,7 +21,7 @@ The first commits also carry the old contact address on wisconsineats.com, a dom
 there reaches them). Add it to the same file so the rewrite replaces it with the current contact:
 
 ```bash
-printf 'hello@wisconsineats.com==>work-with-nick@gmail.com\n' >> /tmp/wi-email.txt
+printf 'hello@wisconsineats.com==>nick@eatsranked.com\n' >> /tmp/wi-email.txt
 ```
 
 ```bash

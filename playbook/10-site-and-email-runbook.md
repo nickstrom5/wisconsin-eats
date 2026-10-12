@@ -62,7 +62,7 @@ For this app: APP=Wisconsin Eats, DOMAIN=wisconsin.eatsranked.com (hub eatsranke
 
 ## 8. Use the URLs
 - App Store Connect: support URL `https://DOMAIN/`, privacy policy `https://DOMAIN/privacy.html`.
-- In-app: the About tab links to privacy.html and terms.html; corrections go to work-with-nick@gmail.com (also on the site), so sections 5–6 are optional for this app.
+- In-app: the About tab links to privacy.html and terms.html; corrections go to nick@eatsranked.com (also on the site), so sections 5–6 are optional for this app.
 - Bundle ID convention: reverse of DOMAIN: `com.wisconsineats.ios`.
 
 ## 9. SEO after launch

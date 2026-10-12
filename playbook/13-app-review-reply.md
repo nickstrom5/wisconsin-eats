@@ -6,7 +6,7 @@ text into **App Review Information → Notes** on the version page.
 
 ## Screen recording (Nick, on his iPhone, latest iOS)
 
-The app must be on the phone first. Use TestFlight: an internal group with Nick in it (the tester email must be the Apple ID signed in under Settings › your name › Media & Purchases on the phone), then the TestFlight app installs build 1.0.0 (4).
+The app must be on the phone first. Use TestFlight: an internal group with Nick in it (the tester email must be the Apple ID signed in under Settings › your name › Media & Purchases on the phone), then the TestFlight app installs build 1.0.0 (5).
 Record with Control Center → Screen Recording, 60–120 seconds, no sound needed:
 
 1. Start on the Home Screen and tap **WI Eats**. The recording must begin with the launch.
@@ -49,5 +49,5 @@ Thank you. Here is the information requested. A screen recording from an iPhone 
 
 6. Regulated or protected material: the app is not in a regulated industry and includes no protected third-party material. The data is open-licensed or public record, with attribution and licenses on the About tab. Ratings, hours and photos are shown only inside Apple's own place card through MapKit, under Apple's terms; the app stores no ratings or reviews. Dane County inspection grades are labeled in the app as our own summary of public records, not official grades. Restaurant names are factual references. Every website link was checked before release, and adult venues are excluded. The app is independent and not affiliated with any restaurant, agency or the James Beard Foundation.
 
-Support: work-with-nick@gmail.com
+Support: nick@eatsranked.com
 ```

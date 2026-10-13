@@ -465,11 +465,11 @@ def crumbs(trail):
 STORE_NOTE = "No charge, on iPhone and iPad." if APP_STORE_URL else "No charge, on iPhone and iPad. App Store release pending."
 
 
-def store_button(label="Get early access"):
+def store_button(label="Ask for early access"):   # "Get" read as a promise (Nick, 2026-10-13)
     if APP_STORE_URL:   # Apple's own badge artwork, unaltered (see APP_STORE_URL above)
         return (f'<a class="store-badge" href="{e(APP_STORE_URL)}" rel="noopener">'
                 f'<img src="{APP_STORE_BADGE}" alt="Download on the App Store" width="120" height="40"></a>')
-    return (f'<a class="btn store-btn" href="mailto:{EMAIL}?subject=Wisconsin%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link.">'
+    return (f'<a class="btn store-btn" href="mailto:{EMAIL}?subject=Wisconsin%20Eats%20early%20access&amp;body=I%27d%20like%20early%20access%20to%20Wisconsin%20Eats.">'
             f'<span>{label}</span></a>')   # no Apple logo: Apple allows it only in its own badge artwork
 
 

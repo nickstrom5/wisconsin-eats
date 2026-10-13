@@ -221,7 +221,7 @@
 
   // ---------------------------------------------------------------- place panel (a modal dialog: the rest of the page is inert)
   const JUR = { 1: "City of Milwaukee", 2: "Public Health Madison & Dane County" };
-  const TIER = { 2: "Licensed", 1: "Confirmed listing", 0: "Listing only" };
+  const TIER = { 2: "Licensed", 1: "High-confidence listing", 0: "Listing only" };   // as in the app (Nick, 2026-10-13)
 
   function rate(p) {
     const src = SOURCES[p.s] || "meta";

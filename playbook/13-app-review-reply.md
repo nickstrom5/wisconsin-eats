@@ -6,7 +6,7 @@ text into **App Review Information → Notes** on the version page.
 
 ## Screen recording (Nick, on his iPhone, latest iOS)
 
-The app must be on the phone first. Use TestFlight: an internal group with Nick in it (the tester email must be the Apple ID signed in under Settings › your name › Media & Purchases on the phone), then the TestFlight app installs build 1.0.0 (5).
+The app must be on the phone first. Use TestFlight: an internal group with Nick in it (the tester email must be the Apple ID signed in under Settings › your name › Media & Purchases on the phone), then the TestFlight app installs build 1.0.0 (6).
 Record with Control Center → Screen Recording, 60–120 seconds, no sound needed:
 
 1. Start on the Home Screen and tap **WI Eats**. The recording must begin with the launch.

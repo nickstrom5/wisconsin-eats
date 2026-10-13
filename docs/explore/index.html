@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-mfqM9chzYy7jiOpS1WzY0k2eFKHh3ptZkSdzemlduBw='; style-src 'sha256-c3ZwKaBvqdh7NAg942r3ZiJ0098iMOtvrCArY5bDjJk=' 'sha256-r3VlffSjMyPBsCxALCNxzSx7Wxk5+D+g6H2Aaf66wvQ='; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-2QBNxtfSSwByyP532LLxszXevkKyD/MERZclPrf636A='; style-src 'sha256-c3ZwKaBvqdh7NAg942r3ZiJ0098iMOtvrCArY5bDjJk=' 'sha256-r3VlffSjMyPBsCxALCNxzSx7Wxk5+D+g6H2Aaf66wvQ='; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Find a Wisconsin Fish Fry or Restaurant: Map and Search</title>
 <meta name="description" content="Type a town, a street or a fish like perch or walleye to see which of 16,346 Wisconsin places match, with 402 checked fish fries on a free map.">
@@ -541,7 +541,7 @@
 
   // ---------------------------------------------------------------- place panel (a modal dialog: the rest of the page is inert)
   const JUR = { 1: "City of Milwaukee", 2: "Public Health Madison & Dane County" };
-  const TIER = { 2: "Licensed", 1: "Confirmed listing", 0: "Listing only" };
+  const TIER = { 2: "Licensed", 1: "High-confidence listing", 0: "Listing only" };   // as in the app (Nick, 2026-10-13)
 
   function rate(p) {
     const src = SOURCES[p.s] || "meta";

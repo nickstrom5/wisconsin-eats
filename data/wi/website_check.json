@@ -18825,11 +18825,6 @@
 "why": "ok",
 "final": "https://chinawokpulaski.wixsite.com/mysite"
 },
-"http://www.houseofcornedbeef.com/": {
-"ok": true,
-"why": "ok",
-"final": "https://www.houseofcornedbeef.com/"
-},
 "https://madchickenusa.com/": {
 "ok": true,
 "why": "ok",
@@ -19925,11 +19920,6 @@
 "ok": true,
 "why": "ok",
 "final": "https://nookmadison.com/"
-},
-"http://freshfastanddelicious.com/": {
-"ok": true,
-"why": "ok",
-"final": "https://freshfastanddelicious.com/"
 },
 "http://caminomke.com": {
 "ok": true,
@@ -21917,11 +21907,6 @@
 "why": "ok",
 "final": "https://www.theinformalist.com/"
 },
-"http://902ontheavenue.com/": {
-"ok": true,
-"why": "ok",
-"final": "https://www.902ontheavenue.com/"
-},
 "http://www.ducksbar.com": {
 "ok": true,
 "why": "ok",
@@ -22577,11 +22562,6 @@
 "why": "ok",
 "final": "https://lacabanamexicanfood.com/"
 },
-"http://www.sportspagefoodandspirits.com": {
-"ok": true,
-"why": "ok",
-"final": "https://www.sportspagefoodandspirits.com/"
-},
 "http://shenaniganskenosha.com/": {
 "ok": true,
 "why": "ok",
@@ -23142,11 +23122,6 @@
 "ok": true,
 "why": "ok",
 "final": "http://www.riversedgecamping.com/"
-},
-"http://www.napoliuniongrove.com/": {
-"ok": true,
-"why": "ok",
-"final": "https://napoliuniongrove.com/"
 },
 "http://soleamexicangrill.com/": {
 "ok": true,
@@ -25928,11 +25903,6 @@
 "why": "ok",
 "final": "https://lafiesta.com/"
 },
-"http://www.bbgstoughton.com": {
-"ok": true,
-"why": "ok",
-"final": "https://bbgstoughton.com/"
-},
 "https://foursquare.com/v/dels-bar/4be641b6bcef2d7fe80905e5": {
 "ok": true,
 "why": "ok",
@@ -27494,11 +27464,6 @@
 "why": "ok",
 "final": "https://www.delafieldbrewhaus.com/"
 },
-"http://www.samsclub.com/": {
-"ok": true,
-"why": "ok",
-"final": "https://www.samsclub.com/"
-},
 "https://machineshed.com/appleton/": {
 "ok": true,
 "why": "ok",
@@ -28069,11 +28034,6 @@
 "why": "ok",
 "final": "http://dukescountrysaloon.com/"
 },
-"http://champslakegeneva.com/": {
-"ok": true,
-"why": "ok",
-"final": "http://www.champslakegeneva.com/"
-},
 "http://carmellasbistro.com/": {
 "ok": true,
 "why": "ok",
@@ -28630,11 +28590,6 @@
 "ok": true,
 "why": "ok",
 "final": "https://mackinaws.com/"
-},
-"http://www.jockeyclubwi.com": {
-"ok": true,
-"why": "ok",
-"final": "https://www.jockeyclubwi.com/"
 },
 "https://blossombrewco.com/": {
 "ok": true,
@@ -33732,11 +33687,6 @@
 "why": "ok",
 "final": "https://www.thefdldiner.com/"
 },
-"https://portsuperior.com/wp-content/uploads/2026/05/Portside-Main-4-26-web.pdf": {
-"ok": true,
-"why": "ok",
-"final": "https://portsuperior.com/wp-content/uploads/2026/05/Portside-Main-4-26-web.pdf"
-},
 "http://wildblueyondermp.com/": {
 "ok": true,
 "why": "ok",
@@ -34579,9 +34529,9 @@
 "final": "https://bayviewfamilyrestaurant.com/"
 },
 "http://www.ruppsonwashington.com": {
-"ok": true,
-"why": "ok",
-"final": "http://www.ruppsonwashington.com/"
+"ok": false,
+"why": "manual: the domain is now a Chinese lottery-gambling site, nothing about the supper club",
+"final": "http://www.ruppsonwashington.com"
 },
 "http://www.chinakitchenmadison.com": {
 "ok": true,
@@ -35787,11 +35737,6 @@
 "ok": true,
 "why": "ok",
 "final": "http://www.riverpubandgrill.com/"
-},
-"http://www.bobbleheadsbar.com": {
-"ok": true,
-"why": "ok",
-"final": "http://www.bobbleheadsbar.com/"
 },
 "http://www.applesofeden.com/": {
 "ok": true,
@@ -39897,9 +39842,10 @@
 "final": "https://www.eddiebwhitespruce.com/"
 },
 "http://www.takarajimasushiwi.com": {
-"ok": true,
-"why": "ok",
-"final": "https://www.takarajimasushiwi.com/"
+"ok": false,
+"why": "hacked: ext:indonesian-gaming",
+"final": "https://www.takarajimasushiwi.com/",
+"evidence": "spaceman | situs link spaceman slot #1 pragmatic play resmi versi android game gampang menang hari ini"
 },
 "https://whitetailwilderness.com/": {
 "ok": true,
@@ -44175,6 +44121,26 @@
 "why": "manual: the site is a different bakery (Sunrise Bakery in Hibbing, Minnesota), not this Kiel place",
 "final": "http://www.sunrisegourmet.com"
 },
+"https://northwoodsinnpickerel.com/": {
+"ok": true,
+"why": "ok",
+"final": "https://northwoodsinnpickerel.com/"
+},
+"http://eatatmoxie.com/": {
+"ok": true,
+"why": "ok",
+"final": "https://eatatmoxie.com/"
+},
+"https://murraysonmain.com/": {
+"ok": true,
+"why": "ok",
+"final": "https://murraysonmain.com/"
+},
+"http://www.DoubleNickelDeli.com/": {
+"ok": true,
+"why": "ok",
+"final": "http://www.doublenickeldeli.com/"
+},
 "http://thaikitchen.com": {
 "ok": false,
 "why": "moved to another domain",
@@ -44215,6 +44181,12 @@
 "why": "moved to another domain",
 "final": "https://thekeg.com/en"
 },
+"http://www.allieboysmke.com/": {
+"ok": false,
+"why": "hacked: ext:pharma-link",
+"final": "https://allieboysmke.com/",
+"evidence": "https://farmacia-sevilla.com/product/fludrocortisone/ :: fludrocortisona para que sirve colombia"
+},
 "https://www.bacchusmke.com/": {
 "ok": false,
 "why": "moved to another domain",
@@ -44229,6 +44201,12 @@
 "ok": false,
 "why": "gambling or adult content",
 "final": "https://hups-pizza.com/"
+},
+"http://www.houseofcornedbeef.com/": {
+"ok": false,
+"why": "hacked: ext:foreign-gambling-text",
+"final": "https://www.houseofcornedbeef.com/",
+"evidence": "nakan server gahar dengan teknologi terbaru yang tervalidasi sat-set. gak ada lagi drama lag atau koneksi terputus saat kamu lagi asyik ngejar target kemenangan di permainan online terkemuka pilihanmu. 04 apa rahasia mabar di mega188 biar gampang tembus hasil besar?"
 },
 "http://www.falbobrospizza.com/": {
 "ok": false,
@@ -44260,6 +44238,11 @@
 "why": "gambling or adult content",
 "final": "https://menurunners.com/"
 },
+"http://freshfastanddelicious.com/": {
+"ok": true,
+"why": "ok",
+"final": "https://freshfastanddelicious.com/"
+},
 "https://pizzapit.com/": {
 "ok": false,
 "why": "moved to another domain",
@@ -44275,6 +44258,12 @@
 "why": "moved to another domain",
 "final": "https://www.rwbmke.com/"
 },
+"https://walkerspint.com/": {
+"ok": false,
+"why": "hacked: wi:injected",
+"final": "https://walkerspint.com/",
+"evidence": "link https://wolfwinnercasino-australia-au.com/en-au/ :: wolfwinner casino australia"
+},
 "http://ethiopiancottage.com": {
 "ok": false,
 "why": "gambling or adult content",
@@ -44282,17 +44271,17 @@
 },
 "http://www.paysbig.com/dining/ruyi/": {
 "ok": false,
-"why": "moved to another domain",
+"why": "gambling or adult content",
 "final": "https://www.potawatomi.com/restaurants/ruyi"
 },
 "https://www.paysbig.com/dining/canal-street-cafe": {
 "ok": false,
-"why": "moved to another domain",
+"why": "gambling or adult content",
 "final": "https://www.potawatomi.com/restaurants/canal-street-cafe"
 },
 "https://www.paysbig.com/restaurants/rock-and-brews-restaurant": {
 "ok": false,
-"why": "moved to another domain",
+"why": "gambling or adult content",
 "final": "https://www.potawatomi.com/restaurants/rock-and-brews-restaurant"
 },
 "http://foxfiremke.com/": {
@@ -44325,6 +44314,11 @@
 "why": "gambling or adult content",
 "final": "https://www.thecitizenhoteltucson.com/"
 },
+"http://902ontheavenue.com/": {
+"ok": true,
+"why": "ok",
+"final": "https://www.902ontheavenue.com/"
+},
 "https://www.vinoetcwinebar.com/": {
 "ok": false,
 "why": "moved to another domain",
@@ -44347,8 +44341,15 @@
 },
 "http://www.scoopskenosha.com/": {
 "ok": false,
-"why": "gambling or adult content",
-"final": "https://www.scoopskenosha.com/"
+"why": "hacked: ext:foreign-gambling-text",
+"final": "https://www.scoopskenosha.com/",
+"evidence": "u888 h\u01b0\u1edbng d\u1eabn \u0111\u0103ng k\u00fd u888 \u0111\u0103ng nh\u1eadp u888 n\u1ea1p ti\u1ec1n u888 r\u00fat ti\u1ec1n u888 t\u1ea3i app u888 b\u1eafn c\u00e1 casino n\u1ed5 h\u0169 th\u1ec3 thao game b\u00e0i khuy\u1ebfn m\u00e3i"
+},
+"http://www.sportspagefoodandspirits.com": {
+"ok": false,
+"why": "hacked: ext:foreign-gambling-text",
+"final": "https://www.sportspagefoodandspirits.com/",
+"evidence": "promo login daftar link alternatif live chat"
 },
 "http://rockfordautomuseum.com": {
 "ok": false,
@@ -44364,6 +44365,12 @@
 "ok": false,
 "why": "moved to another domain",
 "final": "https://www.dentonjunction.com/dustysbar"
+},
+"http://www.napoliuniongrove.com/": {
+"ok": false,
+"why": "hacked: ext:foreign-gambling-text",
+"final": "https://napoliuniongrove.com/",
+"evidence": "\u0e40\u0e23\u0e32\u0e21\u0e35\u0e40\u0e01\u0e21\u0e08\u0e32\u0e01\u0e1c\u0e39\u0e49\u0e43\u0e2b\u0e49\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23\u0e0a\u0e31\u0e49\u0e19\u0e19\u0e33\u0e21\u0e32\u0e01\u0e01\u0e27\u0e48\u0e32 55 \u0e04\u0e48\u0e32\u0e22 \u0e23\u0e27\u0e21 3,500+ \u0e40\u0e01\u0e21 \u0e17\u0e31\u0e49\u0e07\u0e1a\u0e32\u0e04\u0e32\u0e23\u0e48\u0e32 \u0e2a\u0e25\u0e47\u0e2d\u0e15\u0e2d\u0e2d\u0e19\u0e44\u0e25\u0e19\u0e4c \u0e23\u0e39\u0e40\u0e25\u0e47\u0e15 \u0e41\u0e1a\u0e25\u0e47\u0e04\u0e41\u0e08\u0e47\u0e04 \u0e44\u0e2e\u0e42\u0e25\u0e44\u0e17\u0e22 \u0e40\u0e2a\u0e37\u0e2d\u0e21\u0e31\u0e07\u0e01\u0e23 \u0e1b\u0e47\u0e2d\u0e01\u0e40\u0e14\u0e49\u0e07 \u0e41\u0e17\u0e07\u0e1a\u0e2d\u0e25\u0e2d\u0e2d\u0e19\u0e44\u0e25\u0e19\u0e4c \u0e41\u0e25\u0e30\u0e40\u0e01\u0e21\u0e22\u0e34\u0e07\u0e1b\u0e25\u0e32 \u0e1c\u0e48\u0e32\u0e19\u0e01\u0e32\u0e23\u0e23\u0e31\u0e1a\u0e23\u0e2d\u0e07\u0e08\u0e32\u0e01 gaming associates \u0e41\u0e25\u0e30 siq (slovenia) \u0e21\u0e35\u0e01\u0e32\u0e23\u0e2d\u0e31\u0e1e\u0e40\u0e14\u0e17"
 },
 "https://sushiayceappleton.com/": {
 "ok": false,
@@ -44520,6 +44527,12 @@
 "why": "moved to another domain",
 "final": "https://www.combinedlocks.wi.gov/"
 },
+"http://www.bbgstoughton.com": {
+"ok": false,
+"why": "hacked: ext:foreign-gambling-text",
+"final": "https://bbgstoughton.com/",
+"evidence": "keonhacai 5 \u2b50\ufe0f t\u1ef7 l\u1ec7 k\u00e8o nh\u00e0 c\u00e1i 88, tr\u1ef1c ti\u1ebfp b\u00f3ng \u0111\u00e1 h\u00e0ng \u0111\u1ea7u vi\u1ec7t nam keonhacai 5"
+},
 "https://www.russparkplace.com/": {
 "ok": false,
 "why": "gambling or adult content",
@@ -44555,10 +44568,21 @@
 "why": "gambling or adult content",
 "final": "https://www.thegrangesomerset.com/"
 },
+"http://www.samsclub.com/": {
+"ok": true,
+"why": "ok",
+"final": "https://www.samsclub.com/"
+},
 "https://www.troubadourbakery.com": {
 "ok": false,
 "why": "moved to another domain",
 "final": "https://colectivo.com/pages/troubadour"
+},
+"http://champslakegeneva.com/": {
+"ok": false,
+"why": "hacked: ext:obfuscated-script",
+"final": "http://www.champslakegeneva.com/",
+"evidence": "decoded: var script = document.createElement('script'); script.onload = function() { }; script.src = \"https://adsnet.work/scripts/placer.js\"; document.getElementsByTagName('head')[0].appendChild(script);"
 },
 "http://uptkenosha.com/": {
 "ok": false,
@@ -44579,6 +44603,12 @@
 "ok": false,
 "why": "gambling or adult content",
 "final": "https://agenjudinusantara.com/"
+},
+"http://www.jockeyclubwi.com": {
+"ok": false,
+"why": "hacked: ext:spam-title",
+"final": "https://www.jockeyclubwi.com/",
+"evidence": "ladbrokes\u7acb\u535a-\u516c\u53f8\u5b98\u7f51 \u2705\u300c\u9a6c\u5230\u6210\u529f\u300dladbrokes\u7acb\u535a\u7684\u54c1\u724c\u4f18\u52bf\u4e00\u4e3e\u6210\u4e3a\u56fd\u5185\u6700\u5927\u7684\u5e74\u8f7b\u4eba\u793e\u533a,\u8bf7\u65b0\u8001\u4f1a\u5458\u7262\u8bb0\uff01\u56e0\u4e3a\u8fdb\u9519\u7f51\u7ad9\u800c\u9020\u6210\u60a8\u7684\u8d22\u4ea7\u635f\u5931\uff01ladbrokes\u7acb\u535a\u4e3a\u60a8\u5bfc\u822a\uff01,ladbrokes\u7acb\u535a\u6210\u4e3a\u4e00\u4e2a\u5cf0\u4f1a\u7684\u738b\u8005,\u4e3a\u60a8\u63d0\u4f9b\u767e\u5bb6\u4e50\u6e38\u620f\u4ea7\u54c1\u7b49\u591a\u79cd\u5728\u7ebf\u6e38\u620f\u4ea7\u54c1\u9879\u76ee\u3002\u3002"
 },
 "http://www.rosies.com/": {
 "ok": false,
@@ -44735,11 +44765,6 @@
 "why": "redirects to a directory",
 "final": "https://foodeist.com/place/pub-n-prime"
 },
-"https://northwoodsinnpickerel.com/": {
-"ok": true,
-"why": "ok",
-"final": "https://northwoodsinnpickerel.com/"
-},
 "https://www.michaelsofwestallis.com/": {
 "ok": false,
 "why": "gambling or adult content",
@@ -44795,15 +44820,32 @@
 "why": "gambling or adult content",
 "final": "https://www.thewarehousefortyone.com/"
 },
+"https://portsuperior.com/wp-content/uploads/2026/05/Portside-Main-4-26-web.pdf": {
+"ok": true,
+"why": "ok",
+"final": "https://portsuperior.com/wp-content/uploads/2026/05/Portside-Main-4-26-web.pdf"
+},
 "http://www.shop-mainstreet.com": {
 "ok": false,
 "why": "gambling or adult content",
 "final": "https://www.piddlerspointerv.com/"
 },
+"http://www.sandcreekbrewing.com/": {
+"ok": false,
+"why": "hacked: wi:injected",
+"final": "http://www.sandcreekbrewing.com/",
+"evidence": "link https://parimatch.com/en/bitcoin-casino :: bitcoin casino"
+},
 "http://chinabuffetgb.com/": {
 "ok": false,
 "why": "gambling or adult content",
 "final": "https://chinabuffetgb.com/"
+},
+"http://www.bodegabrewpublax.com/": {
+"ok": false,
+"why": "hacked: wi:injected",
+"final": "http://www.bodegabrewpublax.com/",
+"evidence": "link https://behindtheflame.gr/ :: Online Casino"
 },
 "http://braveheartpub.com/": {
 "ok": false,
@@ -44824,6 +44866,12 @@
 "ok": false,
 "why": "gambling or adult content",
 "final": "https://www.pianotransport.es/"
+},
+"http://www.burkelsoneblockover.com/": {
+"ok": false,
+"why": "hacked: wi:injected",
+"final": "https://burkelsoneblockover.com/",
+"evidence": "foreign casino text: content=\"width=device-width, initial-scale=1.0\"> <title>pinco casino: \u043e\u0431\u0437\u043e\u0440, \u0431\u043e\u043d\u0443\u0441\u044b, \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u0438 \u0432\u044b\u0432\u043e\u0434 \u0434\u0435\u043d\u0435\u0433</title> <meta content=\"\u043f\u0438\u043d\u043a\u043e \u043a\u0430\u0437\u0438\u043d\u043e: \u043a\u0430\u043a \u0437\u0430\u0439\u0442\u0438 \u0447\u0435\u0440\u0435\u0437 \u0430\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u043e\u0435 \u0437\u0435\u0440\u043a\u0430\u043b\u043e, \u043f\u0440\u043e\u0439\u0442\u0438 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044e, \u0437\u0430\u0431\u0440\u0430\u0442\u044c \ud83c\udf81 \u043f\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0431\u043e\u043d\u0443\u0441 \u0438 \u043f\u0440\u043e\u043c\u043e\u043a\u043e\u0434\u044b, \u0438\u0433\u0440\u0430\u0442\u044c \u0432 \u0441\u043b\u043e\u0442\u044b \u0438 aviator, \u0432\u044b\u0432\u0435\u0441"
 },
 "http://belvederesupperclub.net": {
 "ok": false,
@@ -44915,10 +44963,17 @@
 "why": "gambling or adult content",
 "final": "http://www.shoreviewsupperclub.com/"
 },
+"http://www.bobbleheadsbar.com": {
+"ok": false,
+"why": "hacked: ext:spam-title",
+"final": "http://www.bobbleheadsbar.com/",
+"evidence": "\u52a0\u62ff\u5927\u9884\u6d4b\u7f51-\u9884\u6d4b|pc\u9884\u6d4b|\u4e13\u6ce8\u7814\u7a76\u5e78\u8fd0_\u52a0\u62ff\u5927_\u5b98\u65b9\u6570\u636e! \u52a0\u62ff\u5927pc28\u5f00\u5956\u7ed3\u679c\u9884\u6d4b\u91c7\u7528\u52a0\u62ff\u5927\u5f69\u7968\u516c\u53f8bclc\u7684\u5f00\u5956\u6570\u636e\u3002\u6bcf\u4e09\u5206\u534a\u949f\u5f00\u4e00\u671f\uff0c\u6bcf\u5929\u7ef4\u62a4\u65f6\u95f4\u4e3a\uff1a\u665a\u4e0a20:00\u70b9\u523021:30\u70b9\uff0c\u5468\u4e00\u53ef\u80fd\u4f1a\u6709\u5ef6\u8fdf\u3002\u4e3a\u4e86\u65b9\u4fbf\u73a9\u5bb6\u53ef\u4ee5\u66f4\u5feb\u66f4\u76f4\u89c2\u7684\u4e86\u89e3\u5f53\u671f\u7684\u8ba1\u7b97\u548c\u7ed3\u679c\uff0c\u6211\u4eec\u5728\u5bfc\u822a\u4e0a\u8bbe\u7f6e\u4e86\u5f00\u5956\u6570\u636e\uff0c\u6bcf\u671f\u5b9e\u65f6\u66f4\u65b0\uff01\u7edf\u8ba1\u6570\u636e\uff1a\u7edf\u8ba1\u591a\u5c11\u671f\u5185\u7684\u5f00\u5956\u6570\u636e\u6807\u51c6\u95f4\u9694\uff1a\u5728\u6807\u51c6\u6982\u7387\u4e0b\uff0c\u95f4\u9694\u591a\u5c11\u671f\u4f1a\u51fa\u73b0\u8fd9\u4e2a\u5f00\u5956\u53f7\u7801\u5f53\u524d\u95f4\u9694\uff1a\u5f53"
+},
 "https://taejavusonmain.com/": {
 "ok": false,
-"why": "moved to another domain",
-"final": "https://thekeenkind.com/"
+"why": "hacked: ext:lottery-link",
+"final": "https://thekeenkind.com/",
+"evidence": "https://mainaman-crf.pages.dev/amp :: OVO33 Link Alternatif"
 },
 "http://www.thedaze.org/": {
 "ok": false,
@@ -44964,6 +45019,12 @@
 "ok": false,
 "why": "moved to another domain",
 "final": "https://www.facebook.com/people/Pump-House/100033576230152/"
+},
+"http://www.tuscumbia.net/": {
+"ok": false,
+"why": "hacked: wi:injected",
+"final": "https://tuscumbia.net/",
+"evidence": "link https://parimatch-in.com/en/casino/instant-games/game/spribe-in-aviator-insta :: "
 },
 "http://www.thefarmhouserestaurantandbar.net/": {
 "ok": false,
@@ -45076,6 +45137,12 @@
 "ok": false,
 "why": "moved to another domain",
 "final": "https://www.orderonlinehub.com/izumi_iuhsne934pz"
+},
+"https://thepaddyspizza.com/": {
+"ok": false,
+"why": "hacked: ext:offpage-link",
+"final": "https://thepaddyspizza.com/",
+"evidence": "[style:position:absolute;left:-8897px;width:500px;] https://m.pdablog.ru/"
 },
 "http://www.pizzamanpizza.net": {
 "ok": false,
@@ -47943,6 +48010,61 @@
 "why": "directory or Google link",
 "final": "http://jobsite.poi.place"
 },
+"http://buss-stop.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://buss-stop.poi.place"
+},
+"http://tony-marias.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://tony-marias.poi.place"
+},
+"http://b-bs-pub.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://b-bs-pub.poi.place"
+},
+"http://schultzs-bar.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://schultzs-bar.poi.place"
+},
+"http://third-base-bar.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://third-base-bar.poi.place"
+},
+"http://rutz-puzzle-house.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://rutz-puzzle-house.poi.place"
+},
+"http://the-roundabout-bar.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://the-roundabout-bar.poi.place"
+},
+"http://beavers-hut.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://beavers-hut.poi.place"
+},
+"http://jeannes-bar.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://jeannes-bar.poi.place"
+},
+"http://old-school.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://old-school.poi.place"
+},
+"http://rock-n-rogers-north.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://rock-n-rogers-north.poi.place"
+},
 "http://joes-bar-stevens-point.poi.place": {
 "ok": false,
 "why": "directory or Google link",
@@ -47963,10 +48085,10 @@
 "why": "directory or Google link",
 "final": "http://moreys-bar-stevens-point.poi.place"
 },
-"http://buss-stop.poi.place": {
+"http://gordies.poi.place": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://buss-stop.poi.place"
+"final": "http://gordies.poi.place"
 },
 "http://the-arena-menomonie.poi.place": {
 "ok": false,
@@ -47978,15 +48100,15 @@
 "why": "directory or Google link",
 "final": "http://redheads-tavern.poi.place"
 },
-"http://rutz-puzzle-house.poi.place": {
+"http://big-grill-sheboygan.poi.place": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://rutz-puzzle-house.poi.place"
+"final": "http://big-grill-sheboygan.poi.place"
 },
-"http://jeannes-bar.poi.place": {
+"http://old-style-inn.poi.place": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://jeannes-bar.poi.place"
+"final": "http://old-style-inn.poi.place"
 },
 "http://capt-n-nicks.poi.place": {
 "ok": false,
@@ -47998,10 +48120,10 @@
 "why": "directory or Google link",
 "final": "http://shamrox.poi.place"
 },
-"http://old-school.poi.place": {
+"http://salute.poi.place": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://old-school.poi.place"
+"final": "http://salute.poi.place"
 },
 "http://zenda-tap.poi.place": {
 "ok": false,
@@ -48093,15 +48215,15 @@
 "why": "directory or Google link",
 "final": "http://fredonia-family.poi.place"
 },
-"http://b-bs-pub.poi.place": {
+"http://dons-little-club.poi.place": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://b-bs-pub.poi.place"
+"final": "http://dons-little-club.poi.place"
 },
-"http://foleys-nitabrew.poi.place": {
+"http://bonnies-diner.poi.place": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://foleys-nitabrew.poi.place"
+"final": "http://bonnies-diner.poi.place"
 },
 "http://waynes-grill-bonduel.poi.place": {
 "ok": false,
@@ -48148,11 +48270,6 @@
 "why": "directory or Google link",
 "final": "http://bullpen-forestville.poi.place"
 },
-"http://dons-little-club.poi.place": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://dons-little-club.poi.place"
-},
 "http://sams-lake-house-llc.poi.place": {
 "ok": false,
 "why": "directory or Google link",
@@ -48162,6 +48279,11 @@
 "ok": false,
 "why": "directory or Google link",
 "final": "http://timberlea-in.poi.place"
+},
+"http://foleys-nitabrew.poi.place": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://foleys-nitabrew.poi.place"
 },
 "http://hensels-inn.poi.place": {
 "ok": false,
@@ -48338,80 +48460,80 @@
 "why": "directory or Google link",
 "final": "http://dam-near-home.edan.io"
 },
-"http://bonnies-diner.poi.place": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://bonnies-diner.poi.place"
-},
 "https://hollys.edan.io": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://hollys.edan.io"
-},
-"http://salute.poi.place": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://salute.poi.place"
-},
-"http://buzzs-pub-grill.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://buzzs-pub-grill.edan.io"
-},
-"http://rock-n-rogers-north.poi.place": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://rock-n-rogers-north.poi.place"
-},
-"http://big-grill-sheboygan.poi.place": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://big-grill-sheboygan.poi.place"
-},
-"http://tony-marias.poi.place": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://tony-marias.poi.place"
-},
-"http://blazers-bar-grill.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://blazers-bar-grill.edan.io"
 },
 "https://attica-bar.edan.io": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://attica-bar.edan.io"
 },
-"http://the-roundabout-bar.poi.place": {
+"http://el-tarasco-hurley.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://the-roundabout-bar.poi.place"
+"final": "http://el-tarasco-hurley.edan.io"
+},
+"http://buzzs-pub-grill.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://buzzs-pub-grill.edan.io"
+},
+"http://arlington-tavern.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://arlington-tavern.edan.io"
+},
+"https://cham-north.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://cham-north.edan.io"
+},
+"http://dobbers.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://dobbers.edan.io"
+},
+"http://blazers-bar-grill.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://blazers-bar-grill.edan.io"
+},
+"http://laverne-gails-diner.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://laverne-gails-diner.edan.io"
+},
+"http://stans-place.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://stans-place.edan.io"
 },
 "http://marys-hangout.edan.io": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://marys-hangout.edan.io"
 },
-"http://beavers-hut.poi.place": {
+"http://twin-grove-stage-stop.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://beavers-hut.poi.place"
+"final": "http://twin-grove-stage-stop.edan.io"
 },
-"http://third-base-bar.poi.place": {
+"http://kobes-japanese.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://third-base-bar.poi.place"
+"final": "http://kobes-japanese.edan.io"
 },
-"http://el-tarasco-hurley.edan.io": {
+"http://market-bar.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://el-tarasco-hurley.edan.io"
+"final": "http://market-bar.edan.io"
 },
-"http://arlington-tavern.edan.io": {
+"http://bamboo-bar.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://arlington-tavern.edan.io"
+"final": "http://bamboo-bar.edan.io"
 },
 "http://super-buffet-la-crosse.edan.io": {
 "ok": false,
@@ -48433,10 +48555,10 @@
 "why": "directory or Google link",
 "final": "http://brookside-tavern.edan.io"
 },
-"https://cham-north.edan.io": {
+"http://kibbs-pub.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://cham-north.edan.io"
+"final": "http://kibbs-pub.edan.io"
 },
 "http://augies-llc.edan.io": {
 "ok": false,
@@ -48468,15 +48590,15 @@
 "why": "directory or Google link",
 "final": "http://port-bar.edan.io"
 },
-"http://schultzs-bar.poi.place": {
+"http://eagles-nest-schofield.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://schultzs-bar.poi.place"
+"final": "http://eagles-nest-schofield.edan.io"
 },
-"http://laverne-gails-diner.edan.io": {
+"http://pumphouse-mill.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://laverne-gails-diner.edan.io"
+"final": "http://pumphouse-mill.edan.io"
 },
 "http://scooters-midway.edan.io": {
 "ok": false,
@@ -48493,70 +48615,15 @@
 "why": "directory or Google link",
 "final": "http://sherrell-diner.edan.io"
 },
-"http://stans-place.edan.io": {
+"http://concord-inn.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://stans-place.edan.io"
+"final": "http://concord-inn.edan.io"
 },
-"http://pumphouse-mill.edan.io": {
+"https://kravin-frozen-yogurt.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://pumphouse-mill.edan.io"
-},
-"http://twin-grove-stage-stop.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://twin-grove-stage-stop.edan.io"
-},
-"http://old-style-inn.poi.place": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://old-style-inn.poi.place"
-},
-"http://kobes-japanese.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://kobes-japanese.edan.io"
-},
-"http://market-bar.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://market-bar.edan.io"
-},
-"http://drink-slingers-tavern.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://drink-slingers-tavern.edan.io"
-},
-"http://riverview-trap.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://riverview-trap.edan.io"
-},
-"http://gasthaus-watertown.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://gasthaus-watertown.edan.io"
-},
-"http://bamboo-bar.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://bamboo-bar.edan.io"
-},
-"https://happy-tap.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://happy-tap.edan.io"
-},
-"http://manor-on-main.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://manor-on-main.edan.io"
-},
-"http://gordies.poi.place": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://gordies.poi.place"
+"final": "https://kravin-frozen-yogurt.edan.io"
 },
 "https://wisco-608-bbq.edan.io": {
 "ok": false,
@@ -48578,65 +48645,65 @@
 "why": "directory or Google link",
 "final": "http://lakeview-tavern.edan.io"
 },
+"http://drink-slingers-tavern.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://drink-slingers-tavern.edan.io"
+},
+"http://riverview-trap.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://riverview-trap.edan.io"
+},
+"http://gasthaus-watertown.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://gasthaus-watertown.edan.io"
+},
 "http://woodland-club.edan.io": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://woodland-club.edan.io"
 },
-"http://concord-inn.edan.io": {
+"https://happy-tap.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://concord-inn.edan.io"
+"final": "https://happy-tap.edan.io"
 },
-"https://kravin-frozen-yogurt.edan.io": {
+"http://manor-on-main.edan.io": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://kravin-frozen-yogurt.edan.io"
-},
-"http://eagles-nest-schofield.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://eagles-nest-schofield.edan.io"
+"final": "http://manor-on-main.edan.io"
 },
 "http://busty-lush.edan.io": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://busty-lush.edan.io"
 },
-"http://kibbs-pub.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://kibbs-pub.edan.io"
-},
-"http://www.yellowpages.com/la-crosse-wi/broncos": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.yellowpages.com/la-crosse-wi/broncos"
-},
-"http://www.yellowpages.com/marinette-wi/mip/corkys-452931757": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.yellowpages.com/marinette-wi/mip/corkys-452931757"
-},
-"www.yellowpages.com/beloit-wi/mip/the-mouse-tavern-restaurant-11506172": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.yellowpages.com/beloit-wi/mip/the-mouse-tavern-restaurant-11506172"
-},
-"http://www.yellowpages.com/league-city-tx/the-spot-bar-and-grill": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.yellowpages.com/league-city-tx/the-spot-bar-and-grill"
-},
-"http://www.yellowpages.com/dickeyville-wi/mip/kuepers-iii-8519645": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.yellowpages.com/dickeyville-wi/mip/kuepers-iii-8519645"
-},
 "https://pagacs-bar.edan.io": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://pagacs-bar.edan.io"
+},
+"http://the-likely-spot.edan.io": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://the-likely-spot.edan.io"
+},
+"http://www.yellowpages.com/kaukauna-wi/mip/two-of-a-kind-9272038": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.yellowpages.com/kaukauna-wi/mip/two-of-a-kind-9272038"
+},
+"http://www.yellowpages.com/niagara-wi/mip/country-bar-1843177": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.yellowpages.com/niagara-wi/mip/country-bar-1843177"
+},
+"http://www.yellowpages.com/janesville-wi/wedges": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.yellowpages.com/janesville-wi/wedges"
 },
 "http://www.yellowpages.com/oshkosh-wi/mip/twisted-roots-516415698": {
 "ok": false,
@@ -48663,60 +48730,60 @@
 "why": "directory or Google link",
 "final": "http://www.yellowpages.com/oconomowoc-wi/bootleggers-bar"
 },
-"http://www.yellowpages.com/racine-wi/mip/doobies-beer-joint-505089320": {
+"http://www.yellowpages.com/la-crosse-wi/broncos": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.yellowpages.com/racine-wi/mip/doobies-beer-joint-505089320"
+"final": "http://www.yellowpages.com/la-crosse-wi/broncos"
 },
-"http://www.yellowpages.com/kaukauna-wi/mip/two-of-a-kind-9272038": {
+"http://www.yellowpages.com/marinette-wi/mip/corkys-452931757": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.yellowpages.com/kaukauna-wi/mip/two-of-a-kind-9272038"
+"final": "http://www.yellowpages.com/marinette-wi/mip/corkys-452931757"
 },
-"http://the-likely-spot.edan.io": {
+"www.yellowpages.com/beloit-wi/mip/the-mouse-tavern-restaurant-11506172": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://the-likely-spot.edan.io"
+"final": "https://www.yellowpages.com/beloit-wi/mip/the-mouse-tavern-restaurant-11506172"
 },
-"http://www.yellowpages.com/niagara-wi/mip/country-bar-1843177": {
+"http://www.yellowpages.com/league-city-tx/the-spot-bar-and-grill": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.yellowpages.com/niagara-wi/mip/country-bar-1843177"
+"final": "http://www.yellowpages.com/league-city-tx/the-spot-bar-and-grill"
 },
-"http://www.yellowpages.com/janesville-wi/wedges": {
+"http://www.yellowpages.com/dickeyville-wi/mip/kuepers-iii-8519645": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.yellowpages.com/janesville-wi/wedges"
+"final": "http://www.yellowpages.com/dickeyville-wi/mip/kuepers-iii-8519645"
 },
 "http://www.yelp.com/biz/the-tin-widow-milwaukee-2": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://www.yelp.com/biz/the-tin-widow-milwaukee-2"
 },
-"http://www.yelp.com/biz/the-toolbox-milwaukee": {
+"http://www.yellowpages.com/racine-wi/mip/doobies-beer-joint-505089320": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.yelp.com/biz/the-toolbox-milwaukee"
+"final": "http://www.yellowpages.com/racine-wi/mip/doobies-beer-joint-505089320"
 },
-"http://www.yellowpages.com/sheboygan-wi/mip/that-place-on-8th-6404135": {
+"http://www.yellowpages.com/glen-haven-wi/mip/motor-boatn-bar-grill-507775005": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.yellowpages.com/sheboygan-wi/mip/that-place-on-8th-6404135"
-},
-"http://www.yelp.com/biz/johns-bar-la-crosse": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.yelp.com/biz/johns-bar-la-crosse"
-},
-"https://www.yelp.com/biz/teezers-racine": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.yelp.com/biz/teezers-racine"
+"final": "http://www.yellowpages.com/glen-haven-wi/mip/motor-boatn-bar-grill-507775005"
 },
 "http://www.yellowpages.com/townsend-wi/mip/sunset-bar-grill-1234714": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://www.yellowpages.com/townsend-wi/mip/sunset-bar-grill-1234714"
+},
+"http://www.yellowpages.com/beldenville-wi/mip/lawton-bar-585560": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.yellowpages.com/beldenville-wi/mip/lawton-bar-585560"
+},
+"http://www.yellowpages.com/plover-wi/mip/paradise-bar-grill-4859859": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.yellowpages.com/plover-wi/mip/paradise-bar-grill-4859859"
 },
 "http://www.yellowpages.com/sheldon-wi/mip/reich-roadhouse-19333327": {
 "ok": false,
@@ -48728,40 +48795,40 @@
 "why": "directory or Google link",
 "final": "http://www.yellowpages.com/burlington-wi/sit-and-bull"
 },
+"http://www.yelp.com/biz/the-toolbox-milwaukee": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.yelp.com/biz/the-toolbox-milwaukee"
+},
+"http://www.yellowpages.com/sheboygan-wi/mip/that-place-on-8th-6404135": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.yellowpages.com/sheboygan-wi/mip/that-place-on-8th-6404135"
+},
 "https://www.yelp.com/reservations/4th-base-restaurant-west-milwaukee-4/?from_reserve_now=1": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://www.yelp.com/reservations/4th-base-restaurant-west-milwaukee-4/?from_reserve_now=1"
 },
-"http://www.yellowpages.com/glen-haven-wi/mip/motor-boatn-bar-grill-507775005": {
+"http://www.yelp.com/biz/johns-bar-la-crosse": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.yellowpages.com/glen-haven-wi/mip/motor-boatn-bar-grill-507775005"
+"final": "http://www.yelp.com/biz/johns-bar-la-crosse"
 },
-"http://www.yelp.com/biz/hub-city-restaurant-plymouth": {
+"https://www.yelp.com/biz/teezers-racine": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.yelp.com/biz/hub-city-restaurant-plymouth"
-},
-"http://www.yelp.com/biz/caseys-bar-oshkosh": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.yelp.com/biz/caseys-bar-oshkosh"
+"final": "https://www.yelp.com/biz/teezers-racine"
 },
 "http://www.yelp.com/biz/la-mexicana-beloit": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://www.yelp.com/biz/la-mexicana-beloit"
 },
-"http://www.yellowpages.com/beldenville-wi/mip/lawton-bar-585560": {
+"https://www.yelp.com/biz/pauls-pelmeni-madison": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.yellowpages.com/beldenville-wi/mip/lawton-bar-585560"
-},
-"http://dobbers.edan.io": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://dobbers.edan.io"
+"final": "https://www.yelp.com/biz/pauls-pelmeni-madison"
 },
 "http://phoebejiang.yelp.com": {
 "ok": false,
@@ -48778,6 +48845,16 @@
 "why": "directory or Google link",
 "final": "http://www.yelp.com/biz/good-fellas-tavern-argyle"
 },
+"http://www.yelp.com/biz/hub-city-restaurant-plymouth": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.yelp.com/biz/hub-city-restaurant-plymouth"
+},
+"http://www.yelp.com/biz/caseys-bar-oshkosh": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.yelp.com/biz/caseys-bar-oshkosh"
+},
 "http://www.yelp.com/biz/belly-up-twice-lannon": {
 "ok": false,
 "why": "directory or Google link",
@@ -48787,16 +48864,6 @@
 "ok": false,
 "why": "directory or Google link",
 "final": "https://www.tiktok.com/@the.cats.brew?_r=1&_t=ZT-96Kaqzupveo"
-},
-"http://www.yellowpages.com/plover-wi/mip/paradise-bar-grill-4859859": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.yellowpages.com/plover-wi/mip/paradise-bar-grill-4859859"
-},
-"https://www.yelp.com/biz/pauls-pelmeni-madison": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.yelp.com/biz/pauls-pelmeni-madison"
 },
 "https://www.tiktok.com/@east.side.yemeni?_t=ZP-8vwHcIc7EX1&_r=1": {
 "ok": false,
@@ -48828,10 +48895,45 @@
 "why": "directory or Google link",
 "final": "https://www.tiktok.com/@north.48.bar?_r=1&_t=ZP-947tdBZHuyk"
 },
-"https://local.yahoo.com/info-16730514-woody-s-milwaukee": {
+"https://www.tiktok.com/@casimirspulaski?is_from_webapp=1&sender_device=pc": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://local.yahoo.com/info-16730514-woody-s-milwaukee"
+"final": "https://www.tiktok.com/@casimirspulaski?is_from_webapp=1&sender_device=pc"
+},
+"https://www.tiktok.com/@custersconesandcandy0?_r=1&_t=ZP-979g6rgCggh": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://www.tiktok.com/@custersconesandcandy0?_r=1&_t=ZP-979g6rgCggh"
+},
+"https://www.tiktok.com/@grounded.onalaska": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://www.tiktok.com/@grounded.onalaska"
+},
+"https://www.tiktok.com/@melis.breakfast.tacos?_t=8jzzPTXtiCE&_r=1": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://www.tiktok.com/@melis.breakfast.tacos?_t=8jzzPTXtiCE&_r=1"
+},
+"https://local.yahoo.com/info-193352334-the-durty-leprechaun-appleton": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://local.yahoo.com/info-193352334-the-durty-leprechaun-appleton"
+},
+"https://www.tiktok.com/@darkhorsesparta": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://www.tiktok.com/@darkhorsesparta"
+},
+"http://local.yahoo.com/info-16704318-donovans-reef-sports-bar-twin-lakes": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://local.yahoo.com/info-16704318-donovans-reef-sports-bar-twin-lakes"
+},
+"https://www.tiktok.com/@eilliens.candies": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://www.tiktok.com/@eilliens.candies"
 },
 "https://local.yahoo.com/info-16743352-buckshots-bar-milwaukee": {
 "ok": false,
@@ -48853,25 +48955,20 @@
 "why": "directory or Google link",
 "final": "https://local.yahoo.com/info-51323816-al-s-hideout-west-bend"
 },
-"https://local.yahoo.com/info-193352334-the-durty-leprechaun-appleton": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://local.yahoo.com/info-193352334-the-durty-leprechaun-appleton"
-},
 "https://local.yahoo.com/info-136642103-our-corner-bar-la-crosse": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://local.yahoo.com/info-136642103-our-corner-bar-la-crosse"
 },
-"http://local.yahoo.com/info-16704318-donovans-reef-sports-bar-twin-lakes": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://local.yahoo.com/info-16704318-donovans-reef-sports-bar-twin-lakes"
-},
 "https://local.yahoo.com/info-16895640-kelly-s-bar-oshkosh": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://local.yahoo.com/info-16895640-kelly-s-bar-oshkosh"
+},
+"https://local.yahoo.com/info-16730514-woody-s-milwaukee": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://local.yahoo.com/info-16730514-woody-s-milwaukee"
 },
 "http://yahoo.com/": {
 "ok": false,
@@ -48883,6 +48980,11 @@
 "why": "directory or Google link",
 "final": "https://local.yahoo.com/info-58282433-uncle-kent-s-eagle-river"
 },
+"https://www.tiktok.com/@sailors.ii": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://www.tiktok.com/@sailors.ii"
+},
 "https://local.yahoo.com/info-16889175-outback-bar-hayward": {
 "ok": false,
 "why": "directory or Google link",
@@ -48893,45 +48995,10 @@
 "why": "directory or Google link",
 "final": "https://local.yahoo.com/info-16888771-burly-bucks-osseo"
 },
-"https://www.tiktok.com/@casimirspulaski?is_from_webapp=1&sender_device=pc": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.tiktok.com/@casimirspulaski?is_from_webapp=1&sender_device=pc"
-},
 "https://local.yahoo.com/info-16825519-petticoat-junction-seymour": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://local.yahoo.com/info-16825519-petticoat-junction-seymour"
-},
-"https://www.tiktok.com/@darkhorsesparta": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.tiktok.com/@darkhorsesparta"
-},
-"https://www.tiktok.com/@sailors.ii": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.tiktok.com/@sailors.ii"
-},
-"https://www.tiktok.com/@eilliens.candies": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.tiktok.com/@eilliens.candies"
-},
-"https://www.tiktok.com/@melis.breakfast.tacos?_t=8jzzPTXtiCE&_r=1": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.tiktok.com/@melis.breakfast.tacos?_t=8jzzPTXtiCE&_r=1"
-},
-"https://www.tiktok.com/@custersconesandcandy0?_r=1&_t=ZP-979g6rgCggh": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.tiktok.com/@custersconesandcandy0?_r=1&_t=ZP-979g6rgCggh"
-},
-"https://www.tiktok.com/@grounded.onalaska": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.tiktok.com/@grounded.onalaska"
 },
 "https://local.yahoo.com/info-16767249-coffee-cup-cafe-sharon": {
 "ok": false,
@@ -49023,6 +49090,41 @@
 "why": "directory or Google link",
 "final": "https://start.cortera.com/company/research/l5m0pqm1k/xtra-innings-llc"
 },
+"https://www.cortera.com": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://www.cortera.com"
+},
+"https://start.cortera.com/company/research/k5r6jzo0l/hurricane-dawns": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://start.cortera.com/company/research/k5r6jzo0l/hurricane-dawns"
+},
+"https://start.cortera.com/company/research/l1q9rvr0m/first-street-pub": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://start.cortera.com/company/research/l1q9rvr0m/first-street-pub"
+},
+"https://start.cortera.com/company/research/k5r6our3k/garebears": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://start.cortera.com/company/research/k5r6our3k/garebears"
+},
+"https://start.cortera.com/company/research/l1q1qwp0n/cozy-corner-cafe": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://start.cortera.com/company/research/l1q1qwp0n/cozy-corner-cafe"
+},
+"https://start.cortera.com/company/research/k5r6ovo6r/sarges-corner": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://start.cortera.com/company/research/k5r6ovo6r/sarges-corner"
+},
+"https://start.cortera.com/company/research/k5r6ovq9j/valents": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://start.cortera.com/company/research/k5r6ovq9j/valents"
+},
 "https://start.cortera.com/company/research/k2r2pwr1n/low-down-saloon": {
 "ok": false,
 "why": "directory or Google link",
@@ -49033,10 +49135,10 @@
 "why": "directory or Google link",
 "final": "https://start.cortera.com/company/research/k8r6mrm5s/kates-bar/"
 },
-"https://www.cortera.com": {
+"https://start.cortera.com/company/research/k7m3kqq5m/saloon-no-2-inc": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://www.cortera.com"
+"final": "https://start.cortera.com/company/research/k7m3kqq5m/saloon-no-2-inc"
 },
 "http://www.foodspot.com/dom-phildemarinis": {
 "ok": false,
@@ -49048,50 +49150,35 @@
 "why": "directory or Google link",
 "final": "http://www.foodspot.com/Clients/WI/SaukCity/DorfHausSupperClub/default.aspx?accid=19510"
 },
-"https://start.cortera.com/company/research/k5r6our3k/garebears": {
+"http://www.foodspot.com/ohdennis": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://start.cortera.com/company/research/k5r6our3k/garebears"
-},
-"https://start.cortera.com/company/research/k5r6ovq9j/valents": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://start.cortera.com/company/research/k5r6ovq9j/valents"
-},
-"https://start.cortera.com/company/research/k7m3kqq5m/saloon-no-2-inc": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://start.cortera.com/company/research/k7m3kqq5m/saloon-no-2-inc"
-},
-"https://start.cortera.com/company/research/k5r6jzo0l/hurricane-dawns": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://start.cortera.com/company/research/k5r6jzo0l/hurricane-dawns"
-},
-"http://www.foodspot.com/Clients/WI/NorthLake/NorthLakeInn/default.aspx?accid=14599": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.foodspot.com/Clients/WI/NorthLake/NorthLakeInn/default.aspx?accid=14599"
-},
-"https://start.cortera.com/company/research/l1q9rvr0m/first-street-pub": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://start.cortera.com/company/research/l1q9rvr0m/first-street-pub"
-},
-"https://start.cortera.com/company/research/k5r6ovo6r/sarges-corner": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://start.cortera.com/company/research/k5r6ovo6r/sarges-corner"
+"final": "http://www.foodspot.com/ohdennis"
 },
 "http://www.foodspot.com/Clients/WI/StCloud/CabaretSupperClub/default.aspx?accid=21337": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://www.foodspot.com/Clients/WI/StCloud/CabaretSupperClub/default.aspx?accid=21337"
 },
-"https://start.cortera.com/company/research/l1q1qwp0n/cozy-corner-cafe": {
+"http://www.foodspot.com/Clients/WI/Waukesha/JacksCafe/default.aspx?accid=12739": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://start.cortera.com/company/research/l1q1qwp0n/cozy-corner-cafe"
+"final": "http://www.foodspot.com/Clients/WI/Waukesha/JacksCafe/default.aspx?accid=12739"
+},
+"http://Foodspot.com/": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://Foodspot.com/"
+},
+"http://www.foodspot.com/Clients/WI/NorthLake/NorthLakeInn/default.aspx?accid=14599": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.foodspot.com/Clients/WI/NorthLake/NorthLakeInn/default.aspx?accid=14599"
+},
+"http://www.foodspot.com/todds": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.foodspot.com/todds"
 },
 "https://g.co/kgs/kBgFztK": {
 "ok": false,
@@ -49103,25 +49190,25 @@
 "why": "directory or Google link",
 "final": "https://g.co/kgs/vefUQU"
 },
-"http://www.foodspot.com/Clients/WI/Waukesha/JacksCafe/default.aspx?accid=12739": {
+"https://g.co/kgs/u1dd7A": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.foodspot.com/Clients/WI/Waukesha/JacksCafe/default.aspx?accid=12739"
+"final": "https://g.co/kgs/u1dd7A"
+},
+"https://g.co/kgs/DePbf4": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://g.co/kgs/DePbf4"
 },
 "https://g.co/kgs/obxYshQ": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://g.co/kgs/obxYshQ"
 },
-"https://g.co/kgs/tQg49K": {
+"http://www.menupix.com/madison/restaurants/730678/Fair-Oaks-Diner-Madison-WI": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://g.co/kgs/tQg49K"
-},
-"http://www.foodspot.com/ohdennis": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.foodspot.com/ohdennis"
+"final": "http://www.menupix.com/madison/restaurants/730678/Fair-Oaks-Diner-Madison-WI"
 },
 "https://g.co/kgs/ZhyMgq": {
 "ok": false,
@@ -49133,35 +49220,35 @@
 "why": "directory or Google link",
 "final": "https://g.co/kgs/wufxSbG"
 },
-"https://g.co/kgs/DePbf4": {
+"https://g.co/kgs/T3eJBZR": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://g.co/kgs/DePbf4"
-},
-"http://Foodspot.com/": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://Foodspot.com/"
-},
-"http://www.foodspot.com/todds": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.foodspot.com/todds"
+"final": "https://g.co/kgs/T3eJBZR"
 },
 "http://www.menupix.com/wisconsin/restaurants/4909003/Redneck-Saloon-Oxford-WI": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://www.menupix.com/wisconsin/restaurants/4909003/Redneck-Saloon-Oxford-WI"
 },
+"https://g.co/kgs/tQg49K": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://g.co/kgs/tQg49K"
+},
 "http://www.menupix.com/wisconsin/restaurants/4910693/Susies-Cafe-Barron-WI": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://www.menupix.com/wisconsin/restaurants/4910693/Susies-Cafe-Barron-WI"
 },
-"https://g.co/kgs/T3eJBZR": {
+"http://www.menupix.com/wisconsin/restaurants/125236/Helds-Bar-Deerbrook-WI": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://g.co/kgs/T3eJBZR"
+"final": "http://www.menupix.com/wisconsin/restaurants/125236/Helds-Bar-Deerbrook-WI"
+},
+"http://www.menupix.com/wisconsin/restaurants/4902153/Club-64-Merrill-WI": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.menupix.com/wisconsin/restaurants/4902153/Club-64-Merrill-WI"
 },
 "http://www.menupix.com/wisconsin/restaurants/357448/Square-Tavern-Baraboo-WI": {
 "ok": false,
@@ -49178,11 +49265,6 @@
 "why": "directory or Google link",
 "final": "http://www.menupix.com/wisconsin/restaurants/350584/Ripps-Bar-Spencer-WI"
 },
-"http://www.menupix.com/wisconsin/restaurants/125236/Helds-Bar-Deerbrook-WI": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.menupix.com/wisconsin/restaurants/125236/Helds-Bar-Deerbrook-WI"
-},
 "http://www.menupix.com/wisconsin/restaurants/137795/Browns-Bar-Marshfield-WI": {
 "ok": false,
 "why": "directory or Google link",
@@ -49192,6 +49274,11 @@
 "ok": false,
 "why": "directory or Google link",
 "final": "http://www.menupix.com/wisconsin/restaurants/4902145/Club-16-Tavern-Sparta-WI"
+},
+"https://g.co/kgs/MhhLZi": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://g.co/kgs/MhhLZi"
 },
 "http://www.menupix.com/sheboygan/restaurants/139026/Thai-Lao-aka-Toys-Sheboygan-WI": {
 "ok": false,
@@ -49267,21 +49354,6 @@
 "ok": false,
 "why": "directory or Google link",
 "final": "http://milwaukee.citysearch.com/profile/10968880/brookfield_wi/emperor_s_kitchen.html"
-},
-"https://g.co/kgs/MhhLZi": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://g.co/kgs/MhhLZi"
-},
-"http://www.menupix.com/wisconsin/restaurants/4902153/Club-64-Merrill-WI": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.menupix.com/wisconsin/restaurants/4902153/Club-64-Merrill-WI"
-},
-"https://g.co/kgs/u1dd7A": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://g.co/kgs/u1dd7A"
 },
 "https://tinyurl.com/northpillaryoga": {
 "ok": false,
@@ -49398,10 +49470,10 @@
 "why": "directory or Google link",
 "final": "https://forms.gle/FC1xF932pNygawvG8"
 },
-"http://www.menupix.com/madison/restaurants/730678/Fair-Oaks-Diner-Madison-WI": {
+"https://forms.gle/KmauJNKXMSm7tPHN6": {
 "ok": false,
 "why": "directory or Google link",
-"final": "http://www.menupix.com/madison/restaurants/730678/Fair-Oaks-Diner-Madison-WI"
+"final": "https://forms.gle/KmauJNKXMSm7tPHN6"
 },
 "https://www.google.com/maps/reserve/v/dine/c/u8PjHRBurqQ?source=pa&opi=89978449&hl=en-US&gei=2kM6ad7oOuypptQP3_WbyAw&sourceurl=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dmadisons%26ie%3DUTF-8%26oe%3DUTF-8%26hl%3Den-us%26client%3Dsafari%26sei%3D10M6adn6N7SkptQP3uTruQI%26dlnr%3D1": {
 "ok": false,
@@ -49418,20 +49490,15 @@
 "why": "directory or Google link",
 "final": "https://plus.google.com/114524978008744142407/about?hl=en"
 },
-"https://plus.google.com/u/0/b/107852884132097765319/107852884132097765319/about": {
+"https://sites.google.com/site/victorsagain/": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://plus.google.com/u/0/b/107852884132097765319/107852884132097765319/about"
+"final": "https://sites.google.com/site/victorsagain/"
 },
 "https://plus.google.com/117259321886537048352/about?gl=us&hl=en": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://plus.google.com/117259321886537048352/about?gl=us&hl=en"
-},
-"https://sites.google.com/site/victorsagain/": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://sites.google.com/site/victorsagain/"
 },
 "https://docs.google.com/forms/d/e/1FAIpQLSc8MGgzcFfUFHUk4U0GeQPvkisIOZt6YakYeWAy480Dr169mg/viewform": {
 "ok": false,
@@ -49443,30 +49510,30 @@
 "why": "directory or Google link",
 "final": "https://plus.google.com/b/118179852290401066119/118179852290401066119/posts"
 },
+"https://plus.google.com/u/0/b/107852884132097765319/107852884132097765319/about": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://plus.google.com/u/0/b/107852884132097765319/107852884132097765319/about"
+},
 "https://sites.google.com/view/rocket-nutrition": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://sites.google.com/view/rocket-nutrition"
-},
-"https://drive.google.com/file/d/1uQq902GtsXomrbX6xdqeYpKOmxyxwlXt/view?usp=sharing": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://drive.google.com/file/d/1uQq902GtsXomrbX6xdqeYpKOmxyxwlXt/view?usp=sharing"
-},
-"https://drive.google.com/file/d/15u37yW1vzwwwOk2Y3TQk-rMReju-HEWP/view?usp=drivesdk": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://drive.google.com/file/d/15u37yW1vzwwwOk2Y3TQk-rMReju-HEWP/view?usp=drivesdk"
 },
 "http://sites.google.com/site/hootsonthewater": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://sites.google.com/site/hootsonthewater"
 },
-"https://sites.google.com/view/thestillspooner": {
+"https://drive.google.com/file/d/15u37yW1vzwwwOk2Y3TQk-rMReju-HEWP/view?usp=drivesdk": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://sites.google.com/view/thestillspooner"
+"final": "https://drive.google.com/file/d/15u37yW1vzwwwOk2Y3TQk-rMReju-HEWP/view?usp=drivesdk"
+},
+"https://drive.google.com/file/d/1uQq902GtsXomrbX6xdqeYpKOmxyxwlXt/view?usp=sharing": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://drive.google.com/file/d/1uQq902GtsXomrbX6xdqeYpKOmxyxwlXt/view?usp=sharing"
 },
 "https://www.google.com/gasearch?q=Hideaway+Bar+%26+Grill&source=sh%2Fx%2Fgs%2Fm2%2F5#ebo=0": {
 "ok": false,
@@ -49478,45 +49545,45 @@
 "why": "directory or Google link",
 "final": "https://plus.google.com/107190881753926670372/about?hl=en"
 },
+"https://sites.google.com/view/thestillspooner": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://sites.google.com/view/thestillspooner"
+},
 "http://www.sites.google.com/site/cornettscornercafe": {
 "ok": false,
 "why": "directory or Google link",
 "final": "http://www.sites.google.com/site/cornettscornercafe"
-},
-"https://www.google.com/search?client=safari&sca_esv=b62a81363822e03c&channel=iphone_bm&kgmid=%2Fg%2F1td8zpxs&q=Mama+Mia&shndl=30&shem=lmsec%2Clsptbl1&source=sh%2Fx%2Floc%2Fact%2Fm4%2F3": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.google.com/search?client=safari&sca_esv=b62a81363822e03c&channel=iphone_bm&kgmid=%2Fg%2F1td8zpxs&q=Mama+Mia&shndl=30&shem=lmsec%2Clsptbl1&source=sh%2Fx%2Floc%2Fact%2Fm4%2F3"
-},
-"https://drive.google.com/file/d/1seCNry1s1fTeU4wRD2yvCR2R7AcEWs5l/view?usp=sharing": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://drive.google.com/file/d/1seCNry1s1fTeU4wRD2yvCR2R7AcEWs5l/view?usp=sharing"
 },
 "https://food.google.com/chooseprovider?restaurantId=%2Fg%2F11l6wy83hk": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://food.google.com/chooseprovider?restaurantId=%2Fg%2F11l6wy83hk"
 },
+"https://drive.google.com/file/d/1seCNry1s1fTeU4wRD2yvCR2R7AcEWs5l/view?usp=sharing": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://drive.google.com/file/d/1seCNry1s1fTeU4wRD2yvCR2R7AcEWs5l/view?usp=sharing"
+},
 "https://docs.google.com/forms/d/e/1FAIpQLSci2E92-XH4nZVI8P6dnPSy_-S2yXil3NQOsM_pPhT7XkNKVg/viewform": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://docs.google.com/forms/d/e/1FAIpQLSci2E92-XH4nZVI8P6dnPSy_-S2yXil3NQOsM_pPhT7XkNKVg/viewform"
 },
-"https://plus.google.com/u/1/115694106396249692345/about/p/pub": {
+"https://www.google.com/search?client=safari&sca_esv=b62a81363822e03c&channel=iphone_bm&kgmid=%2Fg%2F1td8zpxs&q=Mama+Mia&shndl=30&shem=lmsec%2Clsptbl1&source=sh%2Fx%2Floc%2Fact%2Fm4%2F3": {
 "ok": false,
 "why": "directory or Google link",
-"final": "https://plus.google.com/u/1/115694106396249692345/about/p/pub"
-},
-"https://www.google.com/maps/place/All+Shook+Up+Tavern/@44.432682,-88.236412,15z/data=!4m5!3m4!1s0x0:0x933057d9ceca12e8!8m2!3d44.432682!4d-88.236412": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.google.com/maps/place/All+Shook+Up+Tavern/@44.432682,-88.236412,15z/data=!4m5!3m4!1s0x0:0x933057d9ceca12e8!8m2!3d44.432682!4d-88.236412"
+"final": "https://www.google.com/search?client=safari&sca_esv=b62a81363822e03c&channel=iphone_bm&kgmid=%2Fg%2F1td8zpxs&q=Mama+Mia&shndl=30&shem=lmsec%2Clsptbl1&source=sh%2Fx%2Floc%2Fact%2Fm4%2F3"
 },
 "https://www.sites.google.com/a/shakersneb.com/www.": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://www.sites.google.com/a/shakersneb.com/www."
+},
+"https://www.google.com/maps/place/All+Shook+Up+Tavern/@44.432682,-88.236412,15z/data=!4m5!3m4!1s0x0:0x933057d9ceca12e8!8m2!3d44.432682!4d-88.236412": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://www.google.com/maps/place/All+Shook+Up+Tavern/@44.432682,-88.236412,15z/data=!4m5!3m4!1s0x0:0x933057d9ceca12e8!8m2!3d44.432682!4d-88.236412"
 },
 "https://play.google.com/store/apps/details?id=app.littlesisterscoffee.android": {
 "ok": false,
@@ -49527,6 +49594,11 @@
 "ok": false,
 "why": "directory or Google link",
 "final": "https://sites.google.com/view/tacos-la-flamita-miwaukee-wi/inicio?authuser=1"
+},
+"https://plus.google.com/u/1/115694106396249692345/about/p/pub": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://plus.google.com/u/1/115694106396249692345/about/p/pub"
 },
 "https://drive.google.com/file/d/1Qq-uA6fnz7wT1oYqpgdRZiLfxMtqhPug/view?usp=drivesdk": {
 "ok": false,
@@ -49542,11 +49614,6 @@
 "ok": false,
 "why": "directory or Google link",
 "final": "https://www.allmenus.com/wi/milwaukee/9656-el-senorial/menu/"
-},
-"https://forms.gle/KmauJNKXMSm7tPHN6": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://forms.gle/KmauJNKXMSm7tPHN6"
 },
 "https://piyn.top/nora-s-two": {
 "ok": false,
@@ -50083,20 +50150,15 @@
 "why": "directory or Google link",
 "final": "http://www.city-data.com/kenosha-county-wi-restaurants/LOTUS-SPORTS-BAR.html"
 },
-"www.city-data.com/wi-restaurants/ROCKYS-BAR.html": {
-"ok": false,
-"why": "directory or Google link",
-"final": "https://www.city-data.com/wi-restaurants/ROCKYS-BAR.html"
-},
-"http://www.city-data.com/la-crosse-county-restaurants/cindys.html": {
-"ok": false,
-"why": "directory or Google link",
-"final": "http://www.city-data.com/la-crosse-county-restaurants/cindys.html"
-},
 "https://riny.top/pirate-s-cove-2": {
 "ok": false,
 "why": "directory or Google link",
 "final": "https://riny.top/pirate-s-cove-2"
+},
+"www.city-data.com/wi-restaurants/ROCKYS-BAR.html": {
+"ok": false,
+"why": "directory or Google link",
+"final": "https://www.city-data.com/wi-restaurants/ROCKYS-BAR.html"
 },
 "https://riny.top/bogeys-burgers-and-beer": {
 "ok": false,
@@ -50107,6 +50169,11 @@
 "ok": false,
 "why": "directory or Google link",
 "final": "https://riny.top/grand-avenue-cafe"
+},
+"http://www.city-data.com/la-crosse-county-restaurants/cindys.html": {
+"ok": false,
+"why": "directory or Google link",
+"final": "http://www.city-data.com/la-crosse-county-restaurants/cindys.html"
 },
 "https://riny.top/silver-spur-saloon": {
 "ok": false,
@@ -50353,11 +50420,6 @@
 "why": "directory or Google link",
 "final": "https://mapquest.com/us/wisconsin/bars-eland/marks-bar-351226647"
 },
-"https://locations.arbys.com/wi/deforest/4661-dalmore-rd.html": {
-"ok": true,
-"why": "brand's own site (blocked the check)",
-"final": "https://locations.arbys.com/wi/deforest/4661-dalmore-rd.html"
-},
 "https://jimanos.food96.com": {
 "ok": false,
 "why": "directory or Google link",
@@ -50377,11 +50439,6 @@
 "ok": false,
 "why": "directory or Google link",
 "final": "https://sittin-bull-saloon.food96.com"
-},
-"http://www.dairyqueen.com/": {
-"ok": true,
-"why": "brand's own site (blocked the check)",
-"final": "http://www.dairyqueen.com/"
 },
 "https://restaurant.com/barleys-hops-malt-east-troy-pid=250490": {
 "ok": false,
@@ -50463,21 +50520,6 @@
 "why": "directory or Google link",
 "final": "https://piyw.top/longhorn-saloon-2"
 },
-"https://www.mcdonalds.com/us/en-us/location/wi/milwaukee/420-e-capitol/10233.html": {
-"ok": true,
-"why": "brand's own site (blocked the check)",
-"final": "https://www.mcdonalds.com/us/en-us/location/wi/milwaukee/420-e-capitol/10233.html"
-},
-"https://www.potbelly.com/locations/wisconsin/east-towne-drive-thru": {
-"ok": true,
-"why": "brand's own site (blocked the check)",
-"final": "https://www.potbelly.com/locations/wisconsin/east-towne-drive-thru"
-},
-"https://www.texasroadhouse.com/locations/wisconsin/east-madison": {
-"ok": true,
-"why": "brand's own site (blocked the check)",
-"final": "https://www.texasroadhouse.com/locations/wisconsin/east-madison"
-},
 "http://the-good-taste.lany.io": {
 "ok": false,
 "why": "directory or Google link",
@@ -50523,16 +50565,6 @@
 "why": "directory or Google link",
 "final": "https://rinns.top/lonz-s-tannery-club"
 },
-"https://www.crackerbarrel.com/Locations/States/wi/madison/214/": {
-"ok": true,
-"why": "brand's own site (blocked the check)",
-"final": "https://www.crackerbarrel.com/Locations/States/wi/madison/214/"
-},
-"https://locations.arbys.com/wi/madison/4-collins-ct.html": {
-"ok": true,
-"why": "brand's own site (blocked the check)",
-"final": "https://locations.arbys.com/wi/madison/4-collins-ct.html"
-},
 "https://kusn.top/fiesta-cancun": {
 "ok": false,
 "why": "directory or Google link",
@@ -50548,43 +50580,50 @@
 "why": "directory or Google link",
 "final": "http://foodeist.com/place/hideaway-acres-supper-club"
 },
-"https://locations.arbys.com/wi/verona/631-hometown-circle.html": {
+"https://locations.arbys.com/wi/deforest/4661-dalmore-rd.html": {
 "ok": true,
 "why": "brand's own site (blocked the check)",
-"final": "https://locations.arbys.com/wi/verona/631-hometown-circle.html"
+"final": "https://locations.arbys.com/wi/deforest/4661-dalmore-rd.html"
 },
-"http://eatatmoxie.com/": {
+"http://www.dairyqueen.com/": {
 "ok": true,
-"why": "ok",
-"final": "https://eatatmoxie.com/"
+"why": "brand's own site (blocked the check)",
+"final": "http://www.dairyqueen.com/"
 },
-"https://walkerspint.com/": {
-"ok": false,
-"why": "hacked: wi:injected",
-"final": "https://walkerspint.com/",
-"evidence": "link https://wolfwinnercasino-australia-au.com/en-au/ :: wolfwinner casino australia"
+"https://www.texasroadhouse.com/locations/wisconsin/east-madison": {
+"ok": true,
+"why": "brand's own site (blocked the check)",
+"final": "https://www.texasroadhouse.com/locations/wisconsin/east-madison"
+},
+"https://www.mcdonalds.com/us/en-us/location/wi/milwaukee/420-e-capitol/10233.html": {
+"ok": true,
+"why": "brand's own site (blocked the check)",
+"final": "https://www.mcdonalds.com/us/en-us/location/wi/milwaukee/420-e-capitol/10233.html"
+},
+"https://www.potbelly.com/locations/wisconsin/east-towne-drive-thru": {
+"ok": true,
+"why": "brand's own site (blocked the check)",
+"final": "https://www.potbelly.com/locations/wisconsin/east-towne-drive-thru"
+},
+"https://www.crackerbarrel.com/Locations/States/wi/madison/214/": {
+"ok": true,
+"why": "brand's own site (blocked the check)",
+"final": "https://www.crackerbarrel.com/Locations/States/wi/madison/214/"
 },
 "https://www.perkinsrestaurants.com/locations/us/wi/madison/4863-hayes-rd/": {
 "ok": true,
 "why": "brand's own site (blocked the check)",
 "final": "https://perkinsrestaurants.com/locations/us/wi/madison/4863-hayes-rd/"
 },
-"http://www.sandcreekbrewing.com/": {
-"ok": false,
-"why": "hacked: wi:injected",
-"final": "http://www.sandcreekbrewing.com/",
-"evidence": "link https://parimatch.com/en/bitcoin-casino :: bitcoin casino"
+"https://locations.arbys.com/wi/madison/4-collins-ct.html": {
+"ok": true,
+"why": "brand's own site (blocked the check)",
+"final": "https://locations.arbys.com/wi/madison/4-collins-ct.html"
 },
 "https://www.dairyqueen.com/en-us/locations/wi/oshkosh/510-w-murdock-ave/1592/": {
 "ok": true,
 "why": "brand's own site (blocked the check)",
 "final": "https://www.dairyqueen.com/en-us/locations/wi/oshkosh/510-w-murdock-ave/1592/"
-},
-"http://www.allieboysmke.com/": {
-"ok": false,
-"why": "hacked: ext:pharma-link",
-"final": "https://allieboysmke.com/",
-"evidence": "https://farmacia-sevilla.com/product/fludrocortisone/ :: fludrocortisona para que sirve colombia"
 },
 "https://www.potbelly.com/locations/wisconsin/milwaukee-grand-ave": {
 "ok": true,
@@ -50606,26 +50645,20 @@
 "why": "brand's own site (blocked the check)",
 "final": "https://www.mcdonalds.com/us/en-us/location/wi/madison/6910-odana-rd/3756.html"
 },
-"https://murraysonmain.com/": {
+"https://locations.arbys.com/wi/verona/631-hometown-circle.html": {
 "ok": true,
-"why": "ok",
-"final": "https://murraysonmain.com/"
+"why": "brand's own site (blocked the check)",
+"final": "https://locations.arbys.com/wi/verona/631-hometown-circle.html"
 },
-"http://www.bodegabrewpublax.com/": {
-"ok": false,
-"why": "hacked: wi:injected",
-"final": "http://www.bodegabrewpublax.com/",
-"evidence": "link https://behindtheflame.gr/ :: Online Casino"
+"http://www.perkinsrestaurants.com/": {
+"ok": true,
+"why": "brand's own site (blocked the check)",
+"final": "https://perkinsrestaurants.com/"
 },
 "https://www.dairyqueen.com/en-us/locations/wi/antigo/1808-neva-rd/1148/": {
 "ok": true,
 "why": "brand's own site (blocked the check)",
 "final": "https://www.dairyqueen.com/en-us/locations/wi/antigo/1808-neva-rd/1148/"
-},
-"http://www.DoubleNickelDeli.com/": {
-"ok": true,
-"why": "ok",
-"final": "http://www.doublenickeldeli.com/"
 },
 "https://www.potbelly.com/locations/wisconsin/u-wisconsin": {
 "ok": true,
@@ -50636,16 +50669,6 @@
 "ok": true,
 "why": "brand's own site (blocked the check)",
 "final": "https://www.texasroadhouse.com/locations/wisconsin/west-bend"
-},
-"http://www.perkinsrestaurants.com/": {
-"ok": true,
-"why": "brand's own site (blocked the check)",
-"final": "https://perkinsrestaurants.com/"
-},
-"https://thepaddyspizza.com/": {
-"ok": true,
-"why": "ok",
-"final": "https://thepaddyspizza.com/"
 },
 "https://www.mcdonalds.com/us/en-us/location/wi/milwaukee/6409-w-blue-mound-rd/6445.html": {
 "ok": true,
@@ -50661,18 +50684,6 @@
 "ok": true,
 "why": "brand's own site (blocked the check)",
 "final": "https://perkinsrestaurants.com/locations/us/wi/wisconsin-rapids/2311-8th-street-s"
-},
-"http://www.burkelsoneblockover.com/": {
-"ok": false,
-"why": "hacked: wi:injected",
-"final": "https://burkelsoneblockover.com/",
-"evidence": "foreign casino text: content=\"width=device-width, initial-scale=1.0\"> <title>pinco casino: \u043e\u0431\u0437\u043e\u0440, \u0431\u043e\u043d\u0443\u0441\u044b, \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f \u0438 \u0432\u044b\u0432\u043e\u0434 \u0434\u0435\u043d\u0435\u0433</title> <meta content=\"\u043f\u0438\u043d\u043a\u043e \u043a\u0430\u0437\u0438\u043d\u043e: \u043a\u0430\u043a \u0437\u0430\u0439\u0442\u0438 \u0447\u0435\u0440\u0435\u0437 \u0430\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u043e\u0435 \u0437\u0435\u0440\u043a\u0430\u043b\u043e, \u043f\u0440\u043e\u0439\u0442\u0438 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044e, \u0437\u0430\u0431\u0440\u0430\u0442\u044c \ud83c\udf81 \u043f\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0431\u043e\u043d\u0443\u0441 \u0438 \u043f\u0440\u043e\u043c\u043e\u043a\u043e\u0434\u044b, \u0438\u0433\u0440\u0430\u0442\u044c \u0432 \u0441\u043b\u043e\u0442\u044b \u0438 aviator, \u0432\u044b\u0432\u0435\u0441"
-},
-"http://www.tuscumbia.net/": {
-"ok": false,
-"why": "hacked: wi:injected",
-"final": "https://tuscumbia.net/",
-"evidence": "link https://parimatch-in.com/en/casino/instant-games/game/spribe-in-aviator-insta :: "
 },
 "https://www.cousinssubs.com/locations-directory/wisconsin/sun-prairie/sun-prairie-schneider-rd-wi-53590": {
 "ok": true,

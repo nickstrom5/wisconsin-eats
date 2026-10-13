@@ -59,7 +59,7 @@ CASINO_PLACE = re.compile(r"casino|gaming|potawatomi|ho-?chunk|oneida|menominee|
                           r"st\.? ?croix|bad river|legendary waters|isle vista|grindstone", re.I)
 PARKED = re.compile(r"domain (?:is|may be) for sale|buy this domain|this domain is parked|parked free|sedoparking|hugedomains|"
                     r"afternic|domain has expired|this domain name has expired|account (?:has been )?suspended|website coming soon|"
-                    r"site (?:is )?coming soon|future home of|launching soon|godaddy\.com/domainsearch|dan\.com", re.I)
+                    r"site (?:is )?coming soon|future home of|launching soon|godaddy\.com/domainsearch|(?<![\w.-])dan\.com", re.I)
 # directories, listings, review sites, shorteners and fundraisers: not the place's own page
 BAD_HOSTS = ("business.site", "negocio.site", "google.com", "goo.gl", "g.co/", "share.google", "yelp.com", "tripadvisor.",
              "facebook.com/pages", "doordash.com", "grubhub.com", "ubereats.com", "seamless.com", "allmenus.com", "menupix.com",
@@ -155,8 +155,9 @@ def check(url, name, cached=None):
         cache_put(u, final, body)
     text = BLOBS.sub(" ", body).lower()
     head = " ".join(a or b for a, b in HEAD.findall(text[:60_000]))
-    casino = CASINO_PLACE.search(name) or CASINO_PLACE.search(urllib.parse.urlparse(final).netloc)
-    if SPAM.search(text) or SPAM.search(final) or (not casino and (BETTING.search(head) or len(BETTING.findall(text)) >= 2)):
+    # a casino by its name or its own named host, never by where a (maybe taken-over) domain redirects
+    casino = CASINO_PLACE.search(name) or injection.CASINO_HOSTS_OK.search(host) or injection.REAL_CASINO_PLACE.search(host)
+    if SPAM.search(text) or SPAM.search(final) or (not casino and (BETTING.search(head) or len(injection.BETTING_PROSE.findall(text)) >= 2)):
         return {"ok": False, "why": "gambling or adult content", "final": final}
     # planted links and spam (casino, betting, adult, pharma, link farms; visible, hidden or off-screen): injection.py
     reasons = injection.scan(body, host, final, name)

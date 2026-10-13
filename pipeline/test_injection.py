@@ -36,6 +36,15 @@ cases = {
                                '<a href="https://x3.example/">z</a><a href="https://x4.example/">w</a></noscript>'), True),
     "nested hidden div": (add('<div style="display:none"><div class="a"><p>hi</p></div><div><a href="https://slot-gacor.example/">situs slot</a></div></div>'), True),
     "pharma text visible": (add("<p>Cheap viagra and cialis without prescription</p>"), True),
+    "Chinese lottery page (Rupp's old domain)": ("<html><head><title>Washington 168网 历史查询记录 中国体彩幸运168官方飞艇直播</title></head>"
+                                                "<body><p>幸运飞艇 开奖记录</p></body></html>", True),
+    "Indonesian 4D lottery link": (add('<a href="https://harum4d.example/">daftar harum4d</a>'), True),
+    "Thai casino copy (Napoli Pizza)": (add("<p>เรามีเกมจากผู้ให้บริการ บาคาร่า สล็อตออนไลน์ แทงบอลออนไลน์</p>"), True),
+    "Vietnamese betting title (BBG's)": ("<html><head><title>keonhacai 5 tỷ lệ kèo nhà cái 88</title></head><body><p>x</p></body></html>", True),
+    "Indonesian gaming copy (House of Corned Beef)": (add("<p>promo login daftar link alternatif live chat, kejar target kemenangan</p>"), True),
+    "one link far off the page (Paddy's Pizza)": (add('<div style="position:absolute;left:-8897px;width:500px;"><a href="https://m.someblog.example.ru/">'
+                                                     'https://m.someblog.example.ru/</a></div>'), True),
+    "decoded loader injecting an ad script (Champs)": (add(f"<script>eval(atob('dmFyIHM9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7cy5zcmM9J2h0dHBzOi8vYWRzbmV0LmV4YW1wbGUvcGxhY2VyLmpzJztkb2N1bWVudC5oZWFkLmFwcGVuZENoaWxkKHMpOw=='))</script>"), True),
     # must not fire
     "club oasis cleaned": (PAGE, False),
     "negative margin layout (Murray's On Main)": (add('<div style="margin-top:-138px"><a href="https://www.facebook.com/murrays">FB</a> '
@@ -49,6 +58,15 @@ cases = {
                                                                '<a href="https://www.ho-chunkgaming.com/">Ho-Chunk Gaming</a>'), False),
     "monte cassino and poker run": (add("<p>Chicken Monte Cassino. Join our motorcycle poker run!</p>"), False),
     "xxx root beer": (add('<a href="https://xxxrootbeer.com/">XXX Root Beer Drive-In</a>'), False),
+    "sports bar title with darts & slots (Angry Bob's)": ("<html><head><title>Sports bar in Kenosha | 11 HD TVs, pool, darts &amp; slots"
+                                                         "</title></head><body><p>wings</p></body></html>", False),
+    "name Judi's Place": ("<html><head><title>Judi&#39;s Place</title></head><body><p>burgers</p></body></html>", False),
+    "email obfuscator that decodes to mailto": (add(f"<script>eval(atob('ZG9jdW1lbnQud3JpdGUoJzxhIGhyZWY9Im1haWx0bzppbmZvQGV4YW1wbGUuY29tIj5FbWFpbCB1czwvYT4nKQ=='))</script>"), False),
+    "Chinese restaurant menu in Chinese": (add("<h2>菜单</h2><p>宫保鸡丁 北京烤鸭 幸运饼干 麻婆豆腐 春卷</p><p>Lucky Star Chinese Restaurant</p>"), False),
+    "CSS colour #ffffff4d and a collection4d image": (add('<style>.t{background:#ffffff4d}</style><img src="hp-collection4d-pizza.png" alt="">'), False),
+    "Indonesian slot title (Takarajima Sushi)": ("<html><head><title>spaceman | situs link spaceman slot gampang menang hari ini</title></head>"
+                                                 "<body><p>x</p></body></html>", True),
+    "3D/4D printing and movie words": (add("<p>See our 4D movie night and the 3D printed menus</p>"), False),
     "skip link off-screen, internal": (add('<a style="position:absolute;left:-9999px" href="#main">Skip to content</a>'), False),
     "link to a Wisconsin tribal casino (Mole Lake)": (add('<a href="http://www.molelakecasino.com/">Mole Lake Casino</a>'), False),
 }

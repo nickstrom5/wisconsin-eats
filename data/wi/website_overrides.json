@@ -8,5 +8,10 @@
   "ok": false,
   "why": "the site is a different bakery (Sunrise Bakery in Hibbing, Minnesota), not this Kiel place",
   "source": "cross-state QA 2026-10-12 (link-scan evidence/wi)"
+ },
+ "http://www.ruppsonwashington.com": {
+  "ok": false,
+  "why": "the domain is now a Chinese lottery-gambling site, nothing about the supper club",
+  "source": "cross-state QA 2026-10-12 (link-scan evidence/wi); the detector now knows Chinese lottery terms"
  }
 }

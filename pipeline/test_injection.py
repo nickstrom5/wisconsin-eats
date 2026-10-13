@@ -1,0 +1,71 @@
+"""Tests for injection.py: planted links must fire, ordinary restaurant markup must not.
+Run: ../.venv/bin/python test_injection.py   (exits 1 on any failure)
+
+The page is a synthetic copy of Club Oasis's hacked home page (2026-10-12): the real one hid a Polish casino link in a block at
+left:-5466px. The spam host here is fictional, so this repo carries no real spam link.
+"""
+import sys
+
+import injection as D
+
+H, F, N = "cluboasissparta.com", "https://cluboasissparta.com/", "Club Oasis"
+PAGE = """<!doctype html><html><head><title>Club Oasis Supper Club</title></head><body>
+<div id="main-content"><h1>Club Oasis Supper Club</h1><p>Dine-in, Outdoor Seating, In-Store Pickup</p>
+<a href="https://cluboasissparta.com/menu">Menu</a> <a href="https://www.facebook.com/cluboasis">Facebook</a></div>
+</body></html>"""
+INJ = ('<div style="position:absolute;left:-5466px;width:500px;">W <a href="https://galaxy-kasyno.example.pl/pl/">milky way casino</a> '
+       'od razu masz wrażenie: jackpoty migają, zadania z darmowymi spinami</div>')
+
+
+def add(html):
+    return PAGE.replace("</body>", html + "</body>")
+
+
+cases = {
+    # must fire
+    "club oasis as captured": (add(INJ), True),
+    "english casino link, visible": (add('<p>Partners: <a href="https://best-online-casino.example/">online casino</a></p>'), True),
+    "casino host with innocent text (the first injected() exempted any 'casino' host)":
+        (add('<a href="https://spincasino-nz.example/">click</a>'), True),
+    "display:none pharma link": (add('<div style="display:none"><a href="https://rx-meds.example/buy-cialis">buy cialis online</a></div>'), True),
+    "visibility:hidden adult link": (add('<span style="visibility: hidden"><a href="https://hotxxxvids.example/">free porn</a></span>'), True),
+    "font-size:0 link farm": (add('<div style="font-size:0;"><a href="https://a1-loans.example/">a</a> <a href="https://b2-essays.example/">b</a> '
+                                  '<a href="https://c3-watches.example/">c</a></div>'), True),
+    "height:0 overflow hidden farm": (add('<div style="height:0;overflow:hidden"><a href="https://paydayfast.example/">payday loans</a></div>'), True),
+    "noscript link farm": (add('<noscript><a href="https://x1.example/">x</a><a href="https://x2.example/">y</a>'
+                               '<a href="https://x3.example/">z</a><a href="https://x4.example/">w</a></noscript>'), True),
+    "nested hidden div": (add('<div style="display:none"><div class="a"><p>hi</p></div><div><a href="https://slot-gacor.example/">situs slot</a></div></div>'), True),
+    "pharma text visible": (add("<p>Cheap viagra and cialis without prescription</p>"), True),
+    # must not fire
+    "club oasis cleaned": (PAGE, False),
+    "negative margin layout (Murray's On Main)": (add('<div style="margin-top:-138px"><a href="https://www.facebook.com/murrays">FB</a> '
+                                                      '<a href="https://www.toasttab.com/murrays">Order</a></div>'), False),
+    "hidden mobile menu with social and ordering": (add('<div style="display:none" class="mobile-nav"><a href="https://www.facebook.com/x">FB</a>'
+                                                       '<a href="https://www.instagram.com/x">IG</a><a href="https://www.toasttab.com/x">Order</a>'
+                                                       '<a href="https://cluboasissparta.com/menu">Menu</a></div>'), False),
+    "noscript tag manager and pixel": (add('<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-X" height="0" width="0" '
+                                           'style="display:none;visibility:hidden"></iframe></noscript>'), False),
+    "real casino links from a tribal casino's restaurant": (add('<a href="https://www.potawatomi.com/">Potawatomi Casino</a> '
+                                                               '<a href="https://www.ho-chunkgaming.com/">Ho-Chunk Gaming</a>'), False),
+    "monte cassino and poker run": (add("<p>Chicken Monte Cassino. Join our motorcycle poker run!</p>"), False),
+    "xxx root beer": (add('<a href="https://xxxrootbeer.com/">XXX Root Beer Drive-In</a>'), False),
+    "skip link off-screen, internal": (add('<a style="position:absolute;left:-9999px" href="#main">Skip to content</a>'), False),
+    "link to a Wisconsin tribal casino (Mole Lake)": (add('<a href="http://www.molelakecasino.com/">Mole Lake Casino</a>'), False),
+}
+
+bad = 0
+for label, (body, want) in cases.items():
+    got = [r for r, _ in D.scan(body, H, F, N)]
+    ok = bool(got) == want
+    bad += not ok
+    print(("ok  " if ok else "FAIL"), label, got)
+for label, body in (("parked page", "<html><body><h1>This domain is for sale!</h1><p>Make an offer</p></body></html>"),
+                    ("cPanel placeholder (Mihm's)", '<html><head><META HTTP-EQUIV="refresh" CONTENT="0;URL=/cgi-sys/defaultwebpage.cgi"></head></html>')):
+    ok = D.parked(body, "https://example.com/") is not None
+    bad += not ok
+    print(("ok  " if ok else "FAIL"), label)
+ok = D.parked(PAGE, F) is None
+bad += not ok
+print(("ok  " if ok else "FAIL"), "club oasis isn't parked")
+print("failures:", bad)
+sys.exit(1 if bad else 0)

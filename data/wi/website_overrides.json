@@ -1,0 +1,12 @@
+{
+ "https://cluboasissparta.com/": {
+  "ok": false,
+  "why": "hacked: a hidden block links a Polish casino (milkywaycasino.pl)",
+  "source": "QA 2026-10-12: saved page in the state-site QA session's scratchpad (work/wisconsin/evidence-cluboasissparta.html)"
+ },
+ "http://www.sunrisegourmet.com": {
+  "ok": false,
+  "why": "the site is a different bakery (Sunrise Bakery in Hibbing, Minnesota), not this Kiel place",
+  "source": "cross-state QA 2026-10-12 (link-scan evidence/wi)"
+ }
+}

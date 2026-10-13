@@ -14,7 +14,8 @@ Polite by design: an honest user agent, one request at a time per host, and thre
 80%+ one brand). Shared hosts (Square, Wix, Linktree, Instagram) carry many unrelated places, so every link there is checked on its own.
 Never bypasses bot protection.
 
-Usage: ../.venv/bin/python check_websites.py   (reads data/wi/website_candidates.json) → data/wi/website_check.json ({url: {"ok": bool, "why": str, "final": str}})
+Usage: ../.venv/bin/python check_websites.py [--recheck-ok | --rescan-cached]   (reads data/wi/website_candidates.json and the manual verdicts in
+data/wi/website_overrides.json) → data/wi/website_check.json ({url: {"ok": bool, "why": str, "final": str}})
 The app export (wisconsin.py, WI_APP=1) drops every link that isn't ok. Re-run before each App Store submission.
 """
 import collections
@@ -22,15 +23,23 @@ import json
 import os
 import re
 import threading
+import sys
 import time
 import unicodedata
 import urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 
+import gzip
+import hashlib
+
 import requests
+
+import injection
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 OUT = f"{ROOT}/data/wi/website_check.json"
+# verdicts a person made (with evidence) that no re-run may undo: {url: {"ok": false, "why": ..., "source": ...}}
+OVERRIDES = f"{ROOT}/data/wi/website_overrides.json"
 UA = "WisconsinEatsLinkCheck/1.0 (+https://wisconsin.eatsranked.com/)"
 GENERIC = set("""the and of a an at on in restaurant restaurants bar bars grill grille cafe caffe coffee pizza pizzeria pub tavern house
 supper club inn lounge kitchen bistro eatery diner bakery deli market express food foods co company inc llc ltd corp wi wisconsin
@@ -105,28 +114,58 @@ session = requests.Session()
 session.headers.update({"User-Agent": UA, "Accept": "text/html,*/*;q=0.5", "Accept-Language": "en-US"})
 
 
-def check(url, name):
+CACHE = f"{ROOT}/data/wi/pagecache"   # git-ignored: one gzip per fetched page, first line the final URL
+
+
+def cache_put(url, final, body):
+    os.makedirs(CACHE, exist_ok=True)
+    with gzip.open(f"{CACHE}/{hashlib.md5(url.encode()).hexdigest()}.html.gz", "wt", encoding="utf-8") as f:
+        f.write(final + "\n" + body)
+
+
+def cache_get(url):
+    p = f"{CACHE}/{hashlib.md5(url.encode()).hexdigest()}.html.gz"
+    if not os.path.exists(p):
+        return None
+    with gzip.open(p, "rt", encoding="utf-8") as f:
+        final, _, body = f.read().partition("\n")
+    return final, body
+
+
+def check(url, name, cached=None):
     u = url if url.startswith("http") else "https://" + url
     host = urllib.parse.urlparse(u).netloc.lower()
     if bad_host(u):
         return {"ok": False, "why": "directory or Google link", "final": u}
-    with host_locks[regdom(host)]:
-        try:
-            r = session.get(u, timeout=(8, 15), allow_redirects=True, stream=True)
-            body = r.raw.read(400_000, decode_content=True).decode(r.encoding or "utf-8", "ignore") if r.ok else ""
-            final = r.url
-            r.close()
-        except Exception as e:
-            return {"ok": False, "why": "error: " + type(e).__name__, "final": u}
-        finally:
-            time.sleep(0.3)
-    if not r.ok:
-        return {"ok": False, "why": f"http {r.status_code}", "final": final}
+    if cached:   # --rescan-cached: today's rules on the page as fetched last time
+        final, body = cached
+    else:
+        with host_locks[regdom(host)]:
+            try:
+                r = session.get(u, timeout=(8, 15), allow_redirects=True, stream=True)
+                body = r.raw.read(400_000, decode_content=True).decode(r.encoding or "utf-8", "ignore") if r.ok else ""
+                final = r.url
+                r.close()
+            except Exception as e:
+                return {"ok": False, "why": "error: " + type(e).__name__, "final": u}
+            finally:
+                time.sleep(0.3)
+        if not r.ok:
+            return {"ok": False, "why": f"http {r.status_code}", "final": final}
+        cache_put(u, final, body)
     text = BLOBS.sub(" ", body).lower()
     head = " ".join(a or b for a, b in HEAD.findall(text[:60_000]))
     casino = CASINO_PLACE.search(name) or CASINO_PLACE.search(urllib.parse.urlparse(final).netloc)
     if SPAM.search(text) or SPAM.search(final) or (not casino and (BETTING.search(head) or len(BETTING.findall(text)) >= 2)):
         return {"ok": False, "why": "gambling or adult content", "final": final}
+    # planted links and spam (casino, betting, adult, pharma, link farms; visible, hidden or off-screen): injection.py
+    reasons = injection.scan(body, host, final, name)
+    if reasons:
+        rule, evidence = reasons[0]
+        return {"ok": False, "why": "hacked: " + rule, "final": final, "evidence": evidence[:300]}
+    pk = injection.parked(body, final)
+    if pk:
+        return {"ok": False, "why": "parked, expired or coming soon", "final": final, "evidence": pk[1][:300]}
     if PARKED.search(text[:60_000]):
         return {"ok": False, "why": "parked, expired or coming soon", "final": final}
     if bad_host(final):
@@ -150,8 +189,12 @@ def main():
         u = w if w.startswith("http") else "https://" + w
         jobs[regdom(urllib.parse.urlparse(u).netloc)].append((w, name))
     prev = json.load(open(OUT)) if os.path.exists(OUT) else {}
+    over = json.load(open(OVERRIDES)) if os.path.exists(OVERRIDES) else {}
+    if "--recheck-ok" in sys.argv:   # fetch every passing page again (after a new rule, before a submission)
+        prev = {u: v for u, v in prev.items() if not v["ok"]}
     # chain verdicts are recomputed every run; host rules may have grown since a page was fetched
-    prev = {u: v for u, v in prev.items() if not v["why"].startswith(("chain domain", "brand's own"))
+    # ("hacked" too: the detector's rules change, and the first version flagged margin-left layouts like Murray's On Main)
+    prev = {u: v for u, v in prev.items() if not v["why"].startswith(("chain domain", "brand's own", "hacked"))
             and v["why"] not in ("moved to another domain", "gambling or adult content", "directory or Google link", "redirects to a directory")}
     todo, chain_hosts, brand_of = [], {}, {}
     for dom, items in jobs.items():
@@ -166,7 +209,12 @@ def main():
     for u, v in prev.items():   # host rules apply to cached pages too, no request needed
         if v["ok"] and (bad_host(u) or bad_host(v["final"])):
             prev[u] = {"ok": False, "why": "redirects to a directory", "final": v["final"]}
-    todo = [(u, n) for u, n in todo if u not in prev]
+    if "--rescan-cached" in sys.argv:   # no requests: re-judge every cached page with the current rules
+        for u, n in todo:
+            c = cache_get(u if u.startswith("http") else "https://" + u) or cache_get(u)
+            if c and u not in over:
+                prev[u] = check(u, n, cached=c)
+    todo = [(u, n) for u, n in todo if u not in prev and u not in over]
     print(f"{sum(len(v) for v in jobs.values())} links, {len(jobs)} domains, {len(chain_hosts)} chain domains; checking {len(todo)}")
     results, done = dict(prev), 0
     lock = threading.Lock()
@@ -179,7 +227,8 @@ def main():
             done += 1
             if done % 500 == 0:
                 print(f"  {done}/{len(todo)}", flush=True)
-                json.dump(results, open(OUT, "w"))
+                json.dump(results, open(OUT + ".tmp", "w"))
+                os.replace(OUT + ".tmp", OUT)
 
     with ThreadPoolExecutor(max_workers=24) as ex:
         list(ex.map(run, todo))
@@ -194,7 +243,11 @@ def main():
                 results[u] = {**results[u], "ok": True, "why": why}
         for u in urls[3:]:
             results[u] = {"ok": verdict, "why": why, "final": u}
-    json.dump(results, open(OUT, "w"), indent=0)
+    for u, v in over.items():
+        results[u] = {"ok": bool(v["ok"]), "why": "manual: " + v["why"], "final": v.get("final", u)}
+    tmp = OUT + ".tmp"   # write then rename: a stopped run never leaves a half-written file
+    json.dump(results, open(tmp, "w"), indent=0)
+    os.replace(tmp, OUT)
     c = collections.Counter(v["why"] if not v["ok"] else "ok" for v in results.values())
     print("results:", c.most_common())
 

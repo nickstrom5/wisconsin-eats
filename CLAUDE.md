@@ -19,6 +19,10 @@ Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `
   live page (spam, parked, directory, moved, dead or blocked). It reads `data/wi/website_candidates.json`, which the export writes, so
   the order is: rebuild, check, rebuild. Blocked hosts match by domain, never as substrings ("restaurant.com" once dropped 171 real
   sites). Without `website_check.json` the export ships no links (fail closed). Only http/https links ship.
+  Hacked sites hide casino links off-screen for search engines (Club Oasis, Sparta, 2026-10-12): the checker also fails pages that
+  link out to gambling hosts, put casino words in links to other sites, use casino words in another language, or hide links to other
+  sites off-screen (`injected()`). Manual verdicts with evidence go in `data/wi/website_overrides.json`, which no re-run undoes.
+  `--recheck-ok` fetches every passing page again; run it after a new rule and before each submission. Saves are atomic.
 - Corrections to map listings go in `data/research/app_fixes.json` (name, street, city, zip or drop, matched by name + town, each
   with a source). Place ids come from the name *before* fixes, so a corrected name keeps people's saved places.
 - The export merges duplicates (same name and address; same name within 400 m, 150 m for a name-"chain" of 2; same phone and

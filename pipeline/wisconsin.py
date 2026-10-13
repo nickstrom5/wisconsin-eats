@@ -1128,6 +1128,9 @@ if APP:
     places, seen_ids = [], set()
     # fail closed: without the check results no link ships (run pipeline/check_websites.py)
     LINKS = json.load(open(f"{WI}/website_check.json")) if os.path.exists(f"{WI}/website_check.json") else {}
+    # manual verdicts (a hacked site, say) win even if website_check.json is older than them
+    for u_, v_ in (json.load(open(f"{WI}/website_overrides.json")) if os.path.exists(f"{WI}/website_overrides.json") else {}).items():
+        LINKS[u_] = {"ok": bool(v_["ok"]), "why": "manual: " + v_["why"]}
     link_drops, link_cands = collections.Counter(), {}
     for i, x in o.iterrows():
         # a stable id (name + ~100 m cell, or the license number) so saved places survive a data refresh

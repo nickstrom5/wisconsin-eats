@@ -29,3 +29,6 @@ site/*.json
 
 # Aggregate rates measured against Google 2021 data: used by the private leaderboard build only (the app uses calibration_app.json)
 data/wi/calibration.json
+
+# fetched restaurant pages, for re-judging links without fetching again (check_websites.py --rescan-cached)
+data/wi/pagecache/

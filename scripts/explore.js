@@ -115,10 +115,11 @@
   };
   const milesText = (m) => (m < 10 ? m.toFixed(1) : Math.round(m)) + " mi";
 
-  function order() {
+  function order() {   // "Nearest" only once there's a location fix: a #sort=nearest link, a refusal or a timeout never claims distance order
     const g = GUIDES[st.g];
-    if (st.sort && g.sorts.includes(st.sort)) return st.sort;
-    return ["fishfry", "supper", "custard"].includes(st.g) && here ? "nearest" : g.sorts[0];
+    if (st.sort && g.sorts.includes(st.sort) && (st.sort !== "nearest" || here)) return st.sort;
+    if (["fishfry", "supper", "custard"].includes(st.g) && here) return "nearest";
+    return g.sorts.find((s) => s !== "nearest" || here) || g.sorts[0];
   }
 
   function allows(p) {
@@ -189,7 +190,6 @@
     const clear = $("#ex-clear");
     clear.classList.toggle("ex-off", !filters.length);   // kept in the layout, so the row doesn't reflow
     clear.disabled = !filters.length;
-    $("#ex-locate").hidden = Boolean(here);
     if (view === "list") renderList(o); else drawMap();
     saveHash();
   }
@@ -198,7 +198,14 @@
     const ol = $("#ex-list");
     const g = GUIDES[st.g];
     if (!current.length) {
-      ol.innerHTML = `<li class="ex-empty">${st.g === "saved" ? "Nothing saved yet. Open a place and tap Save to keep it here, in this browser." : "No places match. Try fewer words or clear the filters."}</li>`;
+      // a search inside a guide that the rest of the state answers ("kopps" in Fish fry): offer the whole list, not a dead end
+      const q = parse(st.q);
+      const elsewhere = st.g !== "all" && !qEmpty(q) ? P.filter((p) => !p.v && allows(p) && matches(p, q)).length : 0;
+      ol.innerHTML = `<li class="ex-empty">${elsewhere
+        ? `Nothing in ${esc(g.title)} matches that. <button type="button" class="ex-linkbtn" id="ex-all">Search all restaurants (${elsewhere.toLocaleString()} ${elsewhere === 1 ? "match" : "matches"})</button>`
+        : st.g === "saved" && qEmpty(q) ? "Nothing saved yet. Open a place and tap Save to keep it here, in this browser." : "No places match. Try fewer words or clear the filters."}</li>`;
+      const all = $("#ex-all");
+      if (all) all.onclick = () => { st.g = "all"; st.sort = ""; shown = 100; render(); $(".ex-row")?.focus(); };
       $("#ex-more").hidden = true;
       return;
     }
@@ -242,8 +249,10 @@
   const section = (t, body) => `<section class="ex-sec"><h3>${esc(t)}</h3>${body}</section>`;
   const outside = () => [...document.body.children].filter((el) => el.id !== "ex-panel" && el.id !== "ex-scrim" && el.tagName !== "SCRIPT");
 
+  let opener = null, openId = "";   // what had focus when a place was opened (to give it back on close), and the place
   function openPlace(p, push = true) {
-    st.p = p.id;
+    if (push || !st.p) opener = document.activeElement;
+    st.p = openId = p.id;
     const d = (D && D[p.i]) || {};
     const addr = [p.a, [p.c, p.z].filter(Boolean).join(" ")].filter(Boolean).join(", ");
     const la = num(p.la), lo = num(p.lo);
@@ -299,7 +308,7 @@
     $("#ex-scrim").hidden = false;
     outside().forEach((el) => { el.inert = true; });
     document.body.classList.add("ex-open");
-    $("#ex-close").onclick = closePlace;
+    $("#ex-close").onclick = () => closePlace();
     $("#ex-save").onclick = (e) => {
       if (saved.has(p.id)) saved.delete(p.id); else saved.add(p.id);
       store.set("saved", [...saved]);
@@ -309,20 +318,26 @@
     };
     panel.scrollTop = 0;
     $("#ex-close").focus();
-    if (push) saveHash();
+    saveHash(push);   // a new history entry, so the browser's Back closes the place instead of leaving the page
     if (!D) loadDetail().then(() => { if (st.p === p.id && !$("#ex-panel").hidden) openPlace(p, false); });   // details load on the first open only
   }
 
-  function closePlace() {
-    const was = st.p;
-    st.p = "";
+  function closePlace(fromHistory = false) {
+    // a place opened here has its own history entry: going back to the entry before it closes the panel (in hashchange below)
+    if (!fromHistory && history.state && history.state.exPlace) { history.back(); return; }
+    const was = st.p || openId;   // Back has already taken the place out of the URL (and st) by the time this runs
+    st.p = openId = "";
     $("#ex-panel").hidden = true;
     $("#ex-scrim").hidden = true;
     outside().forEach((el) => { el.inert = false; });
     document.body.classList.remove("ex-open");
     saveHash();
-    const row = was && document.querySelector(`.ex-row[data-i="${P.findIndex((p) => p.id === was)}"]`);
-    if (row) row.focus();
+    // focus goes back to the row (list), the control that opened it, or the Map / current guide button (a map dot or a deep link)
+    const row = was && view === "list" && document.querySelector(`.ex-row[data-i="${P.findIndex((p) => p.id === was)}"]`);
+    const keep = opener && opener.isConnected && opener !== document.body && opener.closest("#ex-app") && !opener.closest("[hidden]") ? opener : null;
+    const back = row || keep || document.querySelector(view === "map" ? '.ex-view button[data-v="map"]' : '.ex-guides button[aria-pressed="true"]');
+    opener = null;
+    if (back) back.focus();
   }
 
   // ---------------------------------------------------------------- map (canvas: county outlines + a dot per place)
@@ -468,12 +483,13 @@
     st.q = h.get("q") || ""; st.town = h.get("town") || ""; st.cuisine = h.get("kind") || ""; st.chains = h.get("chains") === "1";
     st.sort = h.get("sort") || ""; st.p = h.get("p") || "";
   }
-  function saveHash() {
+  function saveHash(push = false) {
     const h = new URLSearchParams();
     h.set("g", st.g);
     if (st.q) h.set("q", st.q); if (st.town) h.set("town", st.town); if (st.cuisine) h.set("kind", st.cuisine);
     if (st.chains) h.set("chains", "1"); if (st.sort) h.set("sort", st.sort); if (st.p) h.set("p", st.p);
-    history.replaceState(null, "", "#" + h.toString());
+    if (push) history.pushState({ exPlace: true }, "", "#" + h.toString());
+    else history.replaceState(history.state, "", "#" + h.toString());   // keeps the entry's place flag
     store.set("guide", st.g);
   }
 
@@ -482,12 +498,20 @@
     $("#ex-locmsg").textContent = "Finding you…";
     navigator.geolocation.getCurrentPosition((pos) => {
       here = { la: pos.coords.latitude, lo: pos.coords.longitude };
-      $("#ex-locmsg").textContent = "Sorted by distance. Your location stays in this page.";
+      // every place is in Wisconsin: a reader elsewhere is told so, and the map stays on the state (as in the app's LocationService)
+      const outside = !(here.la >= 42.4 && here.la <= 47.4 && here.lo >= -93.0 && here.lo <= -86.2);
+      $("#ex-locmsg").textContent = outside
+        ? "You're outside Wisconsin. Every place here is in Wisconsin, so distances are from where you are now."
+        : "Sorted by distance. Your location stays in this page.";
       st.sort = GUIDES[st.g].sorts.includes("nearest") ? "nearest" : st.sort;
-      if (view === "map") centerOn(here);
+      if (view === "map" && !outside) centerOn(here);
       shown = 100; render();
-    }, () => { $("#ex-locmsg").textContent = "Location is off for this site. Allow it in your browser settings to sort by distance."; },
-    { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 });
+    }, (err) => {
+      $("#ex-locmsg").textContent = err && err.code === 1
+        ? "Location is off for this site. Allow it in your browser settings to sort by distance."
+        : "Couldn't find your location just now. Try Near me again.";   // no fix or a timeout: the button stays, so it can retry
+    },
+    { enableHighAccuracy: false, timeout: 10000, maximumAge: 0 });   // a fresh fix on every tap, as the app asks for
   }
 
   function setView(v) {
@@ -511,13 +535,14 @@
     $("#ex-more").onclick = () => { shown += 200; renderList(order()); };
     document.querySelectorAll(".ex-view button").forEach((b) => b.onclick = () => setView(b.dataset.v));
     $("#ex-list").addEventListener("click", (e) => { const b = e.target.closest(".ex-row"); if (b) openPlace(P[+b.dataset.i]); });
-    $("#ex-scrim").onclick = closePlace;
+    $("#ex-scrim").onclick = () => closePlace();
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && st.p) closePlace(); });
-    // a link or an edited address bar changing the hash (our own updates use replaceState, which doesn't fire this)
+    // Back/Forward between a place's entry and the one before it, a link, or an edited address bar (pushState and replaceState
+    // themselves don't fire this)
     window.addEventListener("hashchange", () => {
       readHash(); syncInputs(); shown = 100; render();
       const p = st.p && P.find((x) => x.id === st.p);
-      if (p) openPlace(p, false); else if (!$("#ex-panel").hidden) closePlace();
+      if (p) openPlace(p, false); else if (!$("#ex-panel").hidden) closePlace(true);
     });
     mapEvents();
   }
@@ -528,7 +553,7 @@
   async function start() {
     const box = $("#ex-loading");
     box.hidden = false;
-    box.textContent = "Loading the restaurant list…";
+    box.textContent = "Loading Wisconsin's restaurants…";
     try { await load(); } catch {
       box.innerHTML = 'The restaurant list couldn’t load. Check your connection, then <button type="button" class="ex-linkbtn" id="ex-retry">try again</button>';
       $("#ex-retry").onclick = start;

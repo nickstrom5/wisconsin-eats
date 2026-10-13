@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'sha256-ioKstaJwvRT8+Xo2/kTbQ2h6pgcouNaC4RrTfGh37OU='; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'sha256-AIGJjYs/+BBWZlwpFABYTjKAMgB5UxI5LyasajdZx6o='; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Wisconsin Eats: Fish Fry, Supper Club &amp; Restaurant App</title>
-<meta name="description" content="Free iPhone and iPad guide to 16,346 Wisconsin restaurants, with 402 hand-checked Friday fish fries, 211 supper clubs and 28 custard stands.">
+<title>Wisconsin Eats: Find a Fish Fry, Supper Club or Restaurant</title>
+<meta name="description" content="Find a Wisconsin Friday fish fry near you: 402 checked by hand, plus 211 supper clubs, 28 custard stands and 16,346 restaurants. Free iPhone app.">
 <link rel="canonical" href="https://wisconsin.eatsranked.com/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#203731">
-<meta property="og:title" content="Wisconsin Eats: Fish Fry, Supper Club &amp; Restaurant App">
-<meta property="og:description" content="Free iPhone and iPad guide to 16,346 Wisconsin restaurants, with 402 hand-checked Friday fish fries, 211 supper clubs and 28 custard stands.">
+<!-- <meta name="apple-itunes-app" content="app-id=6816947017"> goes live with the app: set APP_STORE_URL in scripts/make-site.py -->
+<meta property="og:title" content="Wisconsin Eats: Find a Fish Fry, Supper Club or Restaurant">
+<meta property="og:description" content="Find a Wisconsin Friday fish fry near you: 402 checked by hand, plus 211 supper clubs, 28 custard stands and 16,346 restaurants. Free iPhone app.">
 <meta property="og:url" content="https://wisconsin.eatsranked.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wisconsin Eats">
@@ -21,11 +22,12 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Wisconsin Eats: Fish fry &amp; supper club guide. Wisconsin restaurants, with hand-checked fish fries, supper clubs and custard stands.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wisconsin Eats: Fish Fry, Supper Club &amp; Restaurant App">
-<meta name="twitter:description" content="Free iPhone and iPad guide to 16,346 Wisconsin restaurants, with 402 hand-checked Friday fish fries, 211 supper clubs and 28 custard stands.">
+<meta name="twitter:title" content="Wisconsin Eats: Find a Fish Fry, Supper Club or Restaurant">
+<meta name="twitter:description" content="Find a Wisconsin Friday fish fry near you: 402 checked by hand, plus 211 supper clubs, 28 custard stands and 16,346 restaurants. Free iPhone app.">
 <meta name="twitter:image" content="https://wisconsin.eatsranked.com/og.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -50,7 +52,8 @@
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 var(--text); -webkit-font-smoothing: antialiased; }
   a { color: var(--green); text-underline-offset: 2px; }
-  a:focus-visible, summary:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+  /* the gold ring alone is 1.7:1 on the light page; the green ring inside it gives the focus indicator 3:1 or more in both schemes */
+  a:focus-visible, summary:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; box-shadow: 0 0 0 3px var(--green); }
   .skip { position: absolute; left: -9999px; top: 0; background: var(--gold); color: var(--on-gold); padding: 10px 14px; font-weight: 700; z-index: 30; }
   .skip:focus { left: 8px; top: 8px; }
   .vh { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
@@ -158,9 +161,9 @@
     dl.facts dd { margin-bottom: 10px; }
   }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://wisconsin.eatsranked.com/#org","name":"Wisconsin Eats","url":"https://wisconsin.eatsranked.com/","logo":{"@type":"ImageObject","url":"https://wisconsin.eatsranked.com/icon-512.png","width":512,"height":512},"founder":{"@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom"},"email":"work-with-nick@gmail.com","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"work-with-nick@gmail.com","availableLanguage":"en"},"parentOrganization":{"@type":"Organization","@id":"https://eatsranked.com/#organization","name":"Eats Ranked","url":"https://eatsranked.com/"}},{"@type":"Person","@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom","name":"Nicholas Soderstrom","url":"https://wisconsin.eatsranked.com/about.html"},{"@type":"WebSite","@id":"https://wisconsin.eatsranked.com/#website","name":"Wisconsin Eats","alternateName":["WI Eats","Wisconsin Eats app"],"url":"https://wisconsin.eatsranked.com/","inLanguage":"en","publisher":{"@id":"https://wisconsin.eatsranked.com/#org"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://wisconsin.eatsranked.com/#org","name":"Wisconsin Eats","url":"https://wisconsin.eatsranked.com/","logo":{"@type":"ImageObject","url":"https://wisconsin.eatsranked.com/icon-512.png","width":512,"height":512},"founder":{"@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom"},"email":"nick@eatsranked.com","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"nick@eatsranked.com","availableLanguage":"en"},"parentOrganization":{"@type":"Organization","@id":"https://eatsranked.com/#organization","name":"Eats Ranked","url":"https://eatsranked.com/"}},{"@type":"Person","@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom","name":"Nicholas Soderstrom","url":"https://wisconsin.eatsranked.com/about.html"},{"@type":"WebSite","@id":"https://wisconsin.eatsranked.com/#website","name":"Wisconsin Eats","alternateName":["WI Eats","Wisconsin Eats app"],"url":"https://wisconsin.eatsranked.com/","inLanguage":"en","publisher":{"@id":"https://wisconsin.eatsranked.com/#org"}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MobileApplication","@id":"https://wisconsin.eatsranked.com/#app","name":"Wisconsin Eats: Restaurants","alternateName":["Wisconsin Eats","WI Eats","Wisconsin Eats: Fish Fry \u0026 Supper Club Guide"],"description":"A free guide to 16,346 Wisconsin restaurants, with hand-checked lists of 402 Friday fish fries, 211 supper clubs and 28 frozen custard stands. Sort by distance, open Apple Maps' live place card for hours and photos, and save places for Friday.","url":"https://wisconsin.eatsranked.com/","image":"https://wisconsin.eatsranked.com/og.png","screenshot":"https://wisconsin.eatsranked.com/img/screen-home.png","operatingSystem":"iOS, iPadOS","applicationCategory":"TravelApplication","applicationSubCategory":"Food \u0026 Drink","inLanguage":"en","author":{"@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom"},"publisher":{"@id":"https://wisconsin.eatsranked.com/#org"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","category":"free"}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","@id":"https://wisconsin.eatsranked.com/#faq","mainEntity":[{"@type":"Question","name":"Is Wisconsin Eats free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The app is free, with no ads, no in-app purchases and no account."}},{"@type":"Question","name":"Where do the fish fries and supper clubs come from?","acceptedAnswer":{"@type":"Answer","text":"We checked each one by hand in September 2026: every place on the fish fry, supper club and custard lists has a 2025 or 2026 source such as its own menu page, a dated news story or its Travel Wisconsin listing. The rest of the 16,346 restaurants come from Overture Maps' open place data and the City of Milwaukee and Dane County license lists."}},{"@type":"Question","name":"Does the app show ratings and reviews?","acceptedAnswer":{"@type":"Answer","text":"Not its own. Tap a place and Apple Maps' own place card opens inside the app with Apple's current ratings, hours, photos and directions. Our lists are never ordered by ratings."}},{"@type":"Question","name":"Does it need my location?","acceptedAnswer":{"@type":"Answer","text":"Only if you want lists sorted by distance. Your location stays on your iPhone or iPad and is never sent to us. Everything else works without it."}},{"@type":"Question","name":"What are the inspection grades?","acceptedAnswer":{"@type":"Answer","text":"For Madison and Dane County, the app grades places on a curve from Public Health Madison \u0026 Dane County's routine inspections since January 2023. They are our summary, not official grades. Other counties don't publish inspections in bulk."}},{"@type":"Question","name":"A place closed or is missing. How do I tell you?","acceptedAnswer":{"@type":"Answer","text":"Email work-with-nick@gmail.com with the name and town. Corrections go into the next update."}},{"@type":"Question","name":"Is there an Android version?","acceptedAnswer":{"@type":"Answer","text":"Not yet. Wisconsin Eats is for iPhone and iPad, and the guides work in any browser at wisconsin.eatsranked.com/explore/. If enough people ask at work-with-nick@gmail.com, an Android app moves up the list."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","@id":"https://wisconsin.eatsranked.com/#faq","mainEntity":[{"@type":"Question","name":"Is there a fish fry outside Lent?","acceptedAnswer":{"@type":"Answer","text":"Yes. The places in our fish fry guide serve a regular fish fry, not a Lent-only one (a few Northwoods spots are seasonal), and 37 of the 402 fry on days besides Friday too. Church and Legion fries that run only in Lent aren't listed. Lent 2027 begins on Ash Wednesday, February 10, 2027."}},{"@type":"Question","name":"Does it cover the Northwoods and Door County?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Northwoods page has 53 hand-checked places across 13 northern counties, and the Door County page has 20, fish boils included. Western and Central Wisconsin have their own pages, and the app's search works statewide."}},{"@type":"Question","name":"How were the fish fries and supper clubs checked?","acceptedAnswer":{"@type":"Answer","text":"By hand, in September 2026. Each fish fry, supper club and custard stand on our lists had to turn up in a 2025 or 2026 source, such as its own menu page, a dated news story or its Travel Wisconsin listing. The other places among the 16,346 come from Overture Maps' open place data and the City of Milwaukee and Dane County license lists."}},{"@type":"Question","name":"Do you rate the restaurants?","acceptedAnswer":{"@type":"Answer","text":"Not with stars or reviews, and no list here is sorted by anyone's ratings. The one grade we give is the Dane County inspection summary, which is ours and not official. Open a place and Apple Maps' own card shows its ratings, hours, photos and directions, live from Apple."}},{"@type":"Question","name":"Why do only Madison-area places have inspection grades?","acceptedAnswer":{"@type":"Answer","text":"Public Health Madison \u0026 Dane County publishes its routine inspections as open data, so Dane County places get a grade from their results since January 2023, set on a curve. The grade is our own summary, not an official one. Other Wisconsin counties don't publish inspections in bulk."}},{"@type":"Question","name":"Does the app track where I go?","acceptedAnswer":{"@type":"Answer","text":"No. If you allow location, your iPhone or iPad uses it to list the closest places first, and it never reaches us. Skip it and the guides, search and map work the same."}},{"@type":"Question","name":"A place on your list closed, or one is missing. Who do I tell?","acceptedAnswer":{"@type":"Answer","text":"Send the name and town to nick@eatsranked.com; we correct the list in the next update."}},{"@type":"Question","name":"Is there an Android app?","acceptedAnswer":{"@type":"Answer","text":"Not for now: the app is for iPhone and iPad. On an Android phone, the web app at wisconsin.eatsranked.com/explore/ has the same guides. Asking for Android at nick@eatsranked.com helps move it up the list."}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -177,10 +180,10 @@
   </header>
   <main id="main">
   <section class="hero">
-    <p class="kicker">Wisconsin Eats: the fish fry & supper club guide for iPhone and iPad</p>
-    <h1>Wisconsin's restaurants, and the fish fries worth the drive</h1>
-    <p class="lede">Wisconsin Eats is a free Wisconsin restaurant guide. Find a Friday fish fry near you, a supper club for Saturday and a custard stand for after, from lists we checked by hand, plus 16,346 restaurants, cafés, taverns and bakeries in 828 towns.</p>
-    <div class="cta-row"><a class="btn store-btn" href="mailto:work-with-nick@gmail.com?subject=Wisconsin%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><span>Get early access</span></a><a class="btn btn-ghost" href="/explore/">Search on the web</a><span class="pill">Free for iPhone and iPad. Coming to the App Store.</span></div>
+    <p class="kicker">Wisconsin Eats · fish fry & supper club guide · iPhone and iPad</p>
+    <h1>Wisconsin restaurants, from Friday fish fry to supper club</h1>
+    <p class="lede">Which tavern near you fries perch on Friday night? Wisconsin Eats answers that from a hand-checked list of 402 fish fries, with 211 supper clubs and 28 custard stands beside it, plus 16,346 restaurants, cafés, taverns and bakeries across 828 Wisconsin towns.</p>
+    <div class="cta-row"><a class="btn store-btn" href="mailto:nick@eatsranked.com?subject=Wisconsin%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><span>Get early access</span></a><a class="btn btn-ghost" href="/explore/">Search on the web</a><span class="pill">No charge, on iPhone and iPad. App Store release pending.</span></div>
     <ul class="stats" aria-label="What's in the app">
       <li><b>402</b><span>Friday fish fries</span></li>
       <li><b>211</b><span>supper clubs</span></li>
@@ -190,66 +193,66 @@
   </section>
 
   <section id="what">
-    <h2>A Wisconsin restaurant guide that knows what Friday means</h2>
-    <p class="sub">General restaurant apps rank by star ratings and can't tell you who serves perch on Friday. Wisconsin Eats starts from the things people here actually look for: a fish fry, a supper club with a relish tray, a custard stand with a flavor of the day, and the old places that have been open since before your grandparents. Every one of those was checked open in September 2026. For ratings, hours and photos, each place opens Apple Maps' own live card.</p>
+    <h2>Built around Friday night, not star ratings</h2>
+    <p class="sub">Most restaurant apps sort by stars. This one starts from the Wisconsin calendar: fish on Friday, a supper club when there's something to celebrate, custard on a summer evening, and the taverns and bakeries that have been open for generations. The 402 fish fries, 211 supper clubs and 28 custard stands in the guides were each checked open in September 2026, and so was every place shown with a founding year or an honor. Ratings, hours and photos are Apple Maps' own, in its live place card.</p>
   </section>
 
   <section id="how">
-    <h2>How it works</h2>
+    <h2>From the couch to the fish fry line</h2>
     <ol class="steps">
-      <li class="step"><div class="n" aria-hidden="true">1</div><div><h3>Pick a guide.</h3><p>Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places, or search 16,346 restaurants by name, town or street.</p></div></li>
-      <li class="step"><div class="n" aria-hidden="true">2</div><div><h3>See what's near you.</h3><p>Sort by distance, filter by town or cuisine, or browse the map. Each fish fry lists the fish and the days it's served.</p></div></li>
-      <li class="step"><div class="n" aria-hidden="true">3</div><div><h3>Go.</h3><p>Open Apple Maps' place card for live hours and photos, call, get directions, or save it for Friday.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">1</div><div><h3>Choose what you're after.</h3><p>Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons or Oldest Places, or type a name, a town or a street into the search.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">2</div><div><h3>Narrow it down.</h3><p>Put the closest places first, filter by town or kind of food, or switch to the map. Fish fry entries name the fish and the days when the place lists them.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">3</div><div><h3>Head out.</h3><p>Apple Maps' card shows today's hours and photos. From there, phone ahead, start directions, or tuck the place into Saved for next Friday.</p></div></li>
     </ol>
   </section>
 
   <section id="screens">
-    <h2>What it looks like</h2>
+    <h2>Inside the app</h2>
     <ul class="shots" tabindex="0" aria-label="Wisconsin Eats app screenshots">
-      <li><picture><source srcset="/img/screen-home.webp" type="image/webp"><img src="/img/screen-home.png" alt="Wisconsin Eats home screen: Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places and Inspections guides, with a search box for restaurants statewide." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Guides for Fridays, supper clubs and custard.</p></li><li><picture><source srcset="/img/screen-fishfry.webp" type="image/webp"><img src="/img/screen-fishfry.png" alt="Friday Fish Fry list in Wisconsin Eats, sorted by distance from downtown Milwaukee, with the fish each place serves." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Fish fries nearest you first.</p></li><li><picture><source srcset="/img/screen-detail.webp" type="image/webp"><img src="/img/screen-detail.png" alt="The Del-Bar supper club in Wisconsin Dells in Wisconsin Eats: address, a button for ratings, hours and photos in Apple Maps, and its history since 1943." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Each place, with live Apple Maps hours and photos.</p></li><li><picture><source srcset="/img/screen-map.webp" type="image/webp"><img src="/img/screen-map.png" alt="Wisconsin Eats map of Wisconsin with clustered pins for fish fries." width="480" height="1043" loading="lazy" decoding="async"></picture><p>The map, by fish fry, supper club or custard.</p></li><li><picture><source srcset="/img/screen-icons.webp" type="image/webp"><img src="/img/screen-icons.png" alt="Wisconsin Icons list in Wisconsin Eats: James Beard honorees and long-running institutions." width="480" height="1043" loading="lazy" decoding="async"></picture><p>James Beard honorees and institutions.</p></li>
+      <li><picture><source srcset="/img/screen-home.webp" type="image/webp"><img src="/img/screen-home.png" alt="Wisconsin Eats home screen: Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places and Inspections guides, with a search box for restaurants statewide." width="480" height="1043" loading="lazy" decoding="async"></picture><p>The home screen: one card per guide.</p></li><li><picture><source srcset="/img/screen-fishfry.webp" type="image/webp"><img src="/img/screen-fishfry.png" alt="Friday Fish Fry list in Wisconsin Eats, sorted by distance from downtown Milwaukee, with the fish each place serves." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Fish fries by distance, with the fish they serve.</p></li><li><picture><source srcset="/img/screen-detail.webp" type="image/webp"><img src="/img/screen-detail.png" alt="The Del-Bar supper club in Wisconsin Dells in Wisconsin Eats: address, a button for ratings, hours and photos in Apple Maps, and its history since 1943." width="480" height="1043" loading="lazy" decoding="async"></picture><p>A supper club&#x27;s page, with its history.</p></li><li><picture><source srcset="/img/screen-map.webp" type="image/webp"><img src="/img/screen-map.png" alt="Wisconsin Eats map of Wisconsin with clustered pins for fish fries." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Fish fry pins across the state.</p></li><li><picture><source srcset="/img/screen-icons.webp" type="image/webp"><img src="/img/screen-icons.png" alt="Wisconsin Icons list in Wisconsin Eats: James Beard honorees and long-running institutions." width="480" height="1043" loading="lazy" decoding="async"></picture><p>Wisconsin Icons: James Beard honorees and old favorites.</p></li>
     </ul>
   </section>
 
   <section id="guides">
-    <h2>Wisconsin food guides</h2>
-    <p class="sub">The app's hand-checked lists, readable on the web.</p>
+    <h2>Read the guides on the web</h2>
+    <p class="sub">The hand-checked lists from the app, one page each.</p>
     <div class="grid2">
-      <a class="card" href="/wisconsin-fish-fry.html"><h3>Wisconsin Friday fish fry guide</h3><p>402 fish fries by region and town, with the fish, days and sides.</p></a>
-      <a class="card" href="/wisconsin-supper-clubs.html"><h3>Wisconsin supper club guide</h3><p>211 supper clubs, with founding years and Friday fish fries.</p></a>
-      <a class="card" href="/wisconsin-frozen-custard.html"><h3>Wisconsin frozen custard stands</h3><p>28 local stands, without the big chains.</p></a>
-      <a class="card" href="/wisconsin-lent-fish-fry.html"><h3>Lent fish fry 2027</h3><p>Lent dates, plus perch, walleye and bluegill fish fries and the places that fry on other days.</p></a>
-      <a class="card" href="/explore/"><h3>Search the state</h3><p>16,346 places in 828 towns, from open map data and the Milwaukee and Dane County license lists. Search them on the web.</p></a>
-      <a class="card" href="/about.html"><h3>How the lists are made</h3><p>Who makes Wisconsin Eats, where each listing comes from and how the hand checks work.</p></a>
+      <a class="card" href="/wisconsin-fish-fry.html"><h3>Wisconsin Friday fish fry guide</h3><p>402 fish fries grouped by region and town, each with its fish, days and sides when the place lists them.</p></a>
+      <a class="card" href="/wisconsin-supper-clubs.html"><h3>Wisconsin supper club guide</h3><p>211 supper clubs by region, with the year each opened where we could pin it down.</p></a>
+      <a class="card" href="/wisconsin-frozen-custard.html"><h3>Wisconsin frozen custard stands</h3><p>28 local stands; chains with five or more Wisconsin locations are left out.</p></a>
+      <a class="card" href="/wisconsin-lent-fish-fry.html"><h3>Lent fish fry 2027</h3><p>Every Friday of Lent with its date, then the perch, walleye and bluegill fries and the ones open on other days.</p></a>
+      <a class="card" href="/explore/"><h3>Search the state</h3><p>Look up any of 16,346 places in 828 towns by name, town, street or fish, in the browser.</p></a>
+      <a class="card" href="/about.html"><h3>How the lists are made</h3><p>Where the listings come from, how a place gets hand-checked, and who is behind Wisconsin Eats.</p></a>
     </div>
   </section>
 
   <section id="cities">
-    <h2>Fish fries and supper clubs by city</h2>
-    <p class="sub">Fish fries, supper clubs, custard, local icons and the oldest places in Wisconsin's biggest towns. <a href="/cities/">All cities and regions</a>.</p>
+    <h2>Fish fry and supper clubs, city by city</h2>
+    <p class="sub">Each city page gathers its fish fries, supper clubs, custard stands, icons and oldest dated places. <a href="/cities/">See every city and region</a>.</p>
     <ul class="cities"><li><a href="/cities/milwaukee.html">Milwaukee</a></li><li><a href="/cities/madison.html">Madison</a></li><li><a href="/cities/green-bay.html">Green Bay</a></li><li><a href="/cities/appleton.html">Appleton</a></li><li><a href="/cities/kenosha.html">Kenosha</a></li><li><a href="/cities/eau-claire.html">Eau Claire</a></li><li><a href="/cities/racine.html">Racine</a></li><li><a href="/cities/oshkosh.html">Oshkosh</a></li><li><a href="/cities/la-crosse.html">La Crosse</a></li><li><a href="/cities/sheboygan.html">Sheboygan</a></li><li><a href="/cities/waukesha.html">Waukesha</a></li><li><a href="/cities/janesville.html">Janesville</a></li><li><a href="/cities/wisconsin-dells.html">Wisconsin Dells</a></li></ul>
-    <p class="sub">And by region:</p>
+    <p class="sub">Or a region, from Door County to the Northwoods:</p>
     <ul class="cities"><li><a href="/regions/northwoods.html">Northwoods</a></li><li><a href="/regions/western-wisconsin.html">Western Wisconsin</a></li><li><a href="/regions/central-wisconsin.html">Central Wisconsin</a></li><li><a href="/regions/door-county.html">Door County</a></li></ul>
   </section>
 
   <section id="pricing">
-    <h2>Free, and staying that way</h2>
-    <p class="sub">No ads, no subscription, no in-app purchases, no account. The whole guide is built into the app, so lists open instantly and work with a weak signal up north.</p>
+    <h2>No price tag, no ads</h2>
+    <p class="sub">Wisconsin Eats costs nothing: no sign-up, no ads, nothing to buy inside it. The data ships with the app, so the lists still open on a lake road with one bar of signal.</p>
   </section>
 
   <section id="privacy">
-    <h2>Your Friday plans are your business</h2>
-    <p class="sub">Wisconsin Eats collects nothing. If you allow location, it only sorts lists by distance on your device. Saved places stay on your device. This website sets no cookies and runs no trackers. <a href="/privacy.html">Read the privacy policy</a>.</p>
+    <h2>What we know about you: nothing</h2>
+    <p class="sub">The app sends us no data at all. If you share your location, the phone uses it to put the closest places first, and the places you save stay on the phone too. This site has no cookies and no trackers. <a href="/privacy.html">Read how the app and this site handle data</a>.</p>
   </section>
 
   <section id="faq">
-    <h2>Questions</h2>
-    <details><summary>Is Wisconsin Eats free?</summary><p>Yes. The app is free, with no ads, no in-app purchases and no account.</p></details><details><summary>Where do the fish fries and supper clubs come from?</summary><p>We checked each one by hand in September 2026: every place on the fish fry, supper club and custard lists has a 2025 or 2026 source such as its own menu page, a dated news story or its Travel Wisconsin listing. The rest of the 16,346 restaurants come from Overture Maps&#x27; open place data and the City of Milwaukee and Dane County license lists.</p></details><details><summary>Does the app show ratings and reviews?</summary><p>Not its own. Tap a place and Apple Maps&#x27; own place card opens inside the app with Apple&#x27;s current ratings, hours, photos and directions. Our lists are never ordered by ratings.</p></details><details><summary>Does it need my location?</summary><p>Only if you want lists sorted by distance. Your location stays on your iPhone or iPad and is never sent to us. Everything else works without it.</p></details><details><summary>What are the inspection grades?</summary><p>For Madison and Dane County, the app grades places on a curve from Public Health Madison &amp; Dane County&#x27;s routine inspections since January 2023. They are our summary, not official grades. Other counties don&#x27;t publish inspections in bulk.</p></details><details><summary>A place closed or is missing. How do I tell you?</summary><p>Email work-with-nick@gmail.com with the name and town. Corrections go into the next update.</p></details><details><summary>Is there an Android version?</summary><p>Not yet. Wisconsin Eats is for iPhone and iPad, and the guides work in any browser at wisconsin.eatsranked.com/explore/. If enough people ask at work-with-nick@gmail.com, an Android app moves up the list.</p></details>
+    <h2>Fish fry and app questions</h2>
+    <details><summary>Is there a fish fry outside Lent?</summary><p>Yes. The places in our fish fry guide serve a regular fish fry, not a Lent-only one (a few Northwoods spots are seasonal), and 37 of the 402 fry on days besides Friday too. Church and Legion fries that run only in Lent aren&#x27;t listed. Lent 2027 begins on Ash Wednesday, February 10, 2027.</p></details><details><summary>Does it cover the Northwoods and Door County?</summary><p>Yes. The Northwoods page has 53 hand-checked places across 13 northern counties, and the Door County page has 20, fish boils included. Western and Central Wisconsin have their own pages, and the app&#x27;s search works statewide.</p></details><details><summary>How were the fish fries and supper clubs checked?</summary><p>By hand, in September 2026. Each fish fry, supper club and custard stand on our lists had to turn up in a 2025 or 2026 source, such as its own menu page, a dated news story or its Travel Wisconsin listing. The other places among the 16,346 come from Overture Maps&#x27; open place data and the City of Milwaukee and Dane County license lists.</p></details><details><summary>Do you rate the restaurants?</summary><p>Not with stars or reviews, and no list here is sorted by anyone&#x27;s ratings. The one grade we give is the Dane County inspection summary, which is ours and not official. Open a place and Apple Maps&#x27; own card shows its ratings, hours, photos and directions, live from Apple.</p></details><details><summary>Why do only Madison-area places have inspection grades?</summary><p>Public Health Madison &amp; Dane County publishes its routine inspections as open data, so Dane County places get a grade from their results since January 2023, set on a curve. The grade is our own summary, not an official one. Other Wisconsin counties don&#x27;t publish inspections in bulk.</p></details><details><summary>Does the app track where I go?</summary><p>No. If you allow location, your iPhone or iPad uses it to list the closest places first, and it never reaches us. Skip it and the guides, search and map work the same.</p></details><details><summary>A place on your list closed, or one is missing. Who do I tell?</summary><p>Send the name and town to nick@eatsranked.com; we correct the list in the next update.</p></details><details><summary>Is there an Android app?</summary><p>Not for now: the app is for iPhone and iPad. On an Android phone, the web app at wisconsin.eatsranked.com/explore/ has the same guides. Asking for Android at nick@eatsranked.com helps move it up the list.</p></details>
   </section>
 
   <section id="download" class="final">
-    <h2>Find Friday's fish fry</h2>
-    <p class="sub">Wisconsin Eats is coming to the App Store for iPhone and iPad. Free.</p>
-    <div class="cta-row"><a class="btn store-btn" href="mailto:work-with-nick@gmail.com?subject=Wisconsin%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><span>Get early access</span></a></div>
+    <h2>Ready for Friday?</h2>
+    <p class="sub">Wisconsin Eats is free for iPhone and iPad, and on its way to the App Store. Ask for early access, or use the guides and the web app in the meantime.</p>
+    <div class="cta-row"><a class="btn store-btn" href="mailto:nick@eatsranked.com?subject=Wisconsin%20Eats%20early%20access&amp;body=Send%20me%20the%20TestFlight%20link."><span>Get early access</span></a></div>
   </section>
   </main>
   <footer>
@@ -264,9 +267,9 @@
       <a href="/about.html">About and sources</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
-      <a href="mailto:work-with-nick@gmail.com">Email us</a>
+      <a href="mailto:nick@eatsranked.com">Email us</a>
     </nav>
-    <p>Place data: hand-checked research by Wisconsin Eats (checked September 2026); Overture Maps Foundation places data (CDLA Permissive 2.0), including data from Foursquare (Apache 2.0) and AllThePlaces (CC0 1.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Restaurant data as of October 7, 2026. Not affiliated with or endorsed by any restaurant, team, chain or government agency. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
+    <p>Place data: hand-checked research by Wisconsin Eats (checked September 2026); Overture Maps Foundation places data (CDLA Permissive 2.0), including data from Foursquare (Apache 2.0) and AllThePlaces (CC0 1.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Restaurant data as of October 12, 2026. Not affiliated with or endorsed by any restaurant, team, chain or government agency. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
     <p>© 2026 Wisconsin Eats, an independent app by Nicholas Soderstrom. Part of <a href="https://eatsranked.com/">Eats Ranked</a>, restaurant apps state by state.</p>
   </footer>
 </div>

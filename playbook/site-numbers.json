@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07",
+ "generated": "2026-10-12",
  "restaurants": 16346,
  "towns": 828,
  "fish_fry": 402,
@@ -16,9 +16,9 @@
   "whitefish": 15,
   "salmon": 13,
   "pollock": 6,
-  "tilapia": 4,
   "pike": 4,
-  "smelt": 4
+  "smelt": 4,
+  "tilapia": 4
  },
  "not_only_friday": 37,
  "supper_with_fish_fry": 146,

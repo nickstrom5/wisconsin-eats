@@ -18,11 +18,14 @@ The web app (explore/): loads; searches; opens a place as a modal dialog with th
   the map draws; a failed core.json shows an error whose retry works; CLS stays under 0.05; tap targets with the panel open; and its
   key controls keep 4.5:1 text contrast in light and dark mode.
 
-Usage: .venv/bin/python scripts/qa-site.py [--docs DIR] [--sample N] [--workers N]
+Usage: .venv/bin/python scripts/qa-site.py [--docs DIR] [--sample N] [--workers N] [--port N]
   --docs    check another copy of the site (used to prove each check can fail)
   --sample  browser-check only N place pages (static checks still cover all of them); by default every place page
             is loaded at 375 px and every tenth at 1280 px, since they share one template
   --workers browsers to run side by side (default 3)
+  --port    port for the local server (default: any free one; or set QA_PORT)
+  --static  static checks only (no browser)
+  --webapp-only  static checks and the web app's browser checks, but not every page (quick; used to prove a check can fail)
 """
 import argparse
 import base64
@@ -46,9 +49,13 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--docs", default=os.path.join(ROOT, "docs"))
 ap.add_argument("--sample", type=int, default=0)
 ap.add_argument("--workers", type=int, default=3)
+ap.add_argument("--static", action="store_true", help="static checks only, no browser (quick; used to prove a check can fail)")
+ap.add_argument("--webapp-only", action="store_true", help="static checks plus the web app's browser checks, without the page sweep")
+ap.add_argument("--port", type=int, default=int(os.environ.get("QA_PORT", 0)), help="port for the local server (default: any free port)")
 ARGS = ap.parse_args()
 DOCS = os.path.abspath(ARGS.docs)
 DOMAIN = open(os.path.join(DOCS, "CNAME")).read().strip()
+BASE_PATH = ""     # the site is served at the domain root (docs/CNAME)
 problems = []
 
 
@@ -62,7 +69,8 @@ class Quiet(http.server.SimpleHTTPRequestHandler):
 
 
 def serve():
-    srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), functools.partial(Quiet, directory=DOCS))
+    http.server.ThreadingHTTPServer.request_queue_size = 64    # the default listen backlog (5) drops a browser's burst of image requests
+    srv = http.server.ThreadingHTTPServer(("127.0.0.1", ARGS.port), functools.partial(Quiet, directory=DOCS))
     srv.handle_error = lambda *a: None     # a browser dropping a connection mid-file isn't a site problem
     threading.Thread(target=srv.serve_forever, daemon=True).start()
     return f"http://127.0.0.1:{srv.server_address[1]}"
@@ -87,7 +95,14 @@ def html_files():
 SHA = lambda s: "sha256-" + base64.b64encode(hashlib.sha256(s.encode()).digest()).decode()
 BANNED_LD = {"aggregateRating", "review", "reviews", "reviewRating", "ratingValue", "reviewCount", "bestRating"}
 OVERCLAIMS = [r"every wisconsin restaurant", r"every restaurant", r"\ball the restaurants?\b", r"\bsearch all\b", r"\bhas all\b",
-              r"\ball \d[\d,]* (wisconsin )?(restaurants|fish fries|supper clubs|custard)"]
+              r"\ball \d[\d,]* (wisconsin )?(restaurants|fish fries|supper clubs|custard)",
+              r"\b(confirmed|verified) (to be )?open\b"]     # the research checked each place; it can't confirm one is open today
+# Each state app stands on its own (App Review 4.3(a)): no other state app's name or repo anywhere in docs/, and no other state's
+# name in page code or comments (place data may say "Port Washington" or "Chicago-style", so state names in text are fine)
+OTHER_APPS = re.compile(r"\b(?:(?:florida|california|washington|colorado|connecticut|maine|idaho|new york|illinois) eats|chicago restaurants: ranked|"
+                        r"(?:fl|ca|wa|co|ct|me|id|ny|chi)-eats|chicago-restaurants-ranked|(?:florida|california|washington|colorado|connecticut|maine|idaho|new-york)-eats)\b", re.I)
+OTHER_STATES_CODE = re.compile(r"\b(florida|california|washington|colorado|connecticut|maine|idaho|new york|illinois|chicago)\b|\b(fl|ca|wa|co|ct|me|id|ny)eats-|\b(cae|wae|fleats|coeats|ideats|nye|ce)-(saved|guide|jur)\b", re.I)
+OLD_EMAIL = "work-with-nick@gmail.com"     # replaced by the eatsranked.com address (Nick, 2026-10-12); must not come back
 _ids = {}
 
 
@@ -110,6 +125,16 @@ def walk_keys(x):
 def static_checks(core_ids):
     titles, descs = {}, {}
     files = html_files()
+    for d, _, fs in os.walk(DOCS):     # every file, not only HTML: data, manifest, sitemap, licenses
+        for f in fs:
+            try:
+                txt = open(os.path.join(d, f), encoding="utf-8", errors="ignore").read()
+                if OLD_EMAIL in txt:
+                    bad(f"{os.path.relpath(os.path.join(d, f), DOCS)}: still has the old contact address {OLD_EMAIL}")
+                if OTHER_APPS.search(txt):
+                    bad(f"{os.path.relpath(os.path.join(d, f), DOCS)}: names another state's app or repo: {OTHER_APPS.search(txt).group(0)!r}")
+            except OSError:
+                pass
     for rel in files:
         s = open(os.path.join(DOCS, rel)).read()
         where = rel
@@ -157,10 +182,21 @@ def static_checks(core_ids):
             bad(f"{where}: inline style attribute (blocked by the CSP)")
         if re.search(r"<[a-zA-Z][^>]*\son[a-z]+=", s):
             bad(f"{where}: inline event handler (blocked by the CSP)")
-        if "<!--" in s:
+        # the one comment allowed: the SEO spec's Smart App Banner placeholder, until the app is live (then the real <meta>)
+        banner = re.findall(r'<!-- <meta name="apple-itunes-app" content="app-id=\d+"> [^<>]*-->\n', s)
+        if len(banner) + len(re.findall(r'<meta name="apple-itunes-app" content="app-id=\d+">\n', s)) != 1:
+            bad(f"{where}: no apple-itunes-app banner meta or its commented placeholder in <head>")
+        if "<!--" in s.replace(banner[0] if banner else "\0", ""):
             bad(f"{where}: HTML comment left in the output")
+        for code in re.findall(r"<script>(.*?)</script>", s, re.S) + re.findall(r"<!--(.*?)-->", s, re.S):
+            if OTHER_STATES_CODE.search(code):
+                bad(f"{where}: page code or a comment names another state: {OTHER_STATES_CODE.search(code).group(0)!r}")
         if re.search(r'<link[^>]+rel="icon"[^>]+href="data:', s):
             bad(f"{where}: data: favicon")
+        for want in ('rel="icon" href="/favicon.svg"', 'sizes="32x32" href="/favicon-32.png"', 'rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"',
+                     'rel="manifest" href="/site.webmanifest"', '<meta name="theme-color"'):
+            if want.replace('href="/', f'href="{BASE_PATH}/') not in s:
+                bad(f"{where}: <head> is missing {want}")
         for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S):
             if "<" in raw:
                 bad(f"{where}: raw '<' inside JSON-LD")
@@ -242,6 +278,108 @@ def page_type_checks(files, core_ids, sitemap_paths):
     # every web-app place id is unique
     if len(core_ids) != len(set(core_ids)):
         bad("core.json has duplicate place ids")
+
+
+def faq_mirror_checks():
+    """The home FAQPage JSON-LD says exactly what the visible questions and answers say."""
+    s = open(os.path.join(DOCS, "index.html")).read()
+    vis = [(html.unescape(q), html.unescape(a)) for q, a in re.findall(r"<details><summary>(.*?)</summary><p>(.*?)</p></details>", s, re.S)]
+    ld = [json.loads(x) for x in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S)]
+    faq = [n for n in ld if n.get("@type") == "FAQPage"]
+    got = [(q["name"], q["acceptedAnswer"]["text"]) for q in faq[0]["mainEntity"]] if faq else []
+    if not vis or vis != got:
+        bad(f"index.html: the FAQPage JSON-LD doesn't mirror the visible FAQ ({len(vis)} visible, {len(got)} in JSON-LD)")
+
+
+def privacy_storage_checks():
+    """The privacy policy names every localStorage key the web app writes (store.set("x") -> "we-x")."""
+    app = open(os.path.join(DOCS, "explore/index.html")).read()
+    prefix = re.search(r'localStorage\.setItem\("([^"]+)" \+ k', app)
+    keys = sorted(set(re.findall(r'store\.set\("([^"]+)"', app)))
+    priv = open(os.path.join(DOCS, "privacy.html")).read()
+    if not prefix or not keys:
+        bad("explore: couldn't find the web app's localStorage writes (store.set) to check the privacy policy against")
+    for k in keys:
+        if f"<code>{prefix.group(1) if prefix else ''}{k}</code>" not in priv:
+            bad(f"privacy.html: doesn't name the web app's localStorage key {(prefix.group(1) if prefix else '') + k}")
+    if re.search(r"privacy label is", priv) and "apps.apple.com" not in open(os.path.join(DOCS, "index.html")).read():
+        bad("privacy.html: states the App Store privacy label as if the app were live, but no page links to the App Store")
+
+
+def website_link_checks(files):
+    """No place website on any page, in Restaurant JSON-LD or in the web app's detail.json has a standing bad verdict: a manual one
+    in data/wi/website_overrides.json (a hijacked site QA found) or a checker one in data/wi/website_check.json other than a
+    load failure (timeout, 5xx, 403, 429), the same rule as make-site.py's place_site(). And the site doesn't quietly lose good
+    links: every website in data/app/places.json for a web-app row is in detail.json unless such a verdict took it off."""
+    verdicts = json.load(open(os.path.join(ROOT, "data/wi/website_check.json")))
+    over_f = os.path.join(ROOT, "data/wi/website_overrides.json")
+    over = json.load(open(over_f)) if os.path.exists(over_f) else {}
+    transient = re.compile(r"^(error: |http (403|408|429|5\d\d)$)")
+
+    def why_bad(u):
+        for book in (over, verdicts):
+            v = book.get(u) or book.get(u.removeprefix("https://"))
+            if v:
+                return None if v.get("ok") or transient.match(v.get("why", "")) else v.get("why", "not ok")
+        return None
+    for rel in files:
+        s = open(os.path.join(DOCS, rel)).read()
+        # any anchor out to a place's site, whatever the attribute order (the place pages' Website button has a class first)
+        urls = [html.unescape(u) for u in re.findall(r'<a\b[^>]*\bhref="(https?://[^"]+)"[^>]*\brel="[^"]*nofollow', s)]
+        for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S):
+            try:
+                urls += [n["url"] for n in [json.loads(raw)] if n.get("@type") == "Restaurant" and n.get("url")]
+            except ValueError:
+                pass
+        for u in sorted(set(urls)):
+            if why_bad(u):
+                bad(f"{rel}: links {u}, which has a bad website verdict ({why_bad(u)})")
+    core_ids = json.load(open(os.path.join(DOCS, "data/core.json")))["cols"]["id"]
+    detail = json.load(open(os.path.join(DOCS, "data/detail.json")))
+    shipped = {}
+    for i, d in enumerate(detail):
+        if d and d.get("w"):
+            shipped[core_ids[i]] = d["w"]
+            if why_bad(d["w"]):
+                bad(f"data/detail.json row {i}: website {d['w']} has a bad website verdict ({why_bad(d['w'])})")
+    want = {r["id"]: r["w"] for r in json.load(open(os.path.join(ROOT, "data/app/places.json")))["places"] if r.get("w")}
+    lost = [(i, w) for i, w in want.items() if i in set(core_ids) and i not in shipped and not why_bad(w)
+            and re.match(r"^https?://[^\s\"'<>]+\.[^\s\"'<>]+$", w)]
+    if lost:
+        bad(f"data/detail.json: {len(lost)} websites from places.json are missing with no bad verdict, e.g. {lost[:3]}")
+
+
+def link_graph_checks(files):
+    """Every page is at most 3 clicks from the home page, and every place page is linked from a guide, city, region or hub page
+    (not only from other place pages' "Nearby" lists)."""
+    out, inbound = {}, {}
+    for rel in files:
+        s = re.sub(r"<script>.*?</script>", "", open(os.path.join(DOCS, rel)).read(), flags=re.S)
+        targets = set()
+        for ref in re.findall(r'<a\b[^>]*?\shref="([^"]*)"', s):
+            ref = html.unescape(ref)
+            if urllib.parse.urlsplit(ref).scheme:
+                continue
+            f = file_for(urllib.parse.urljoin("/" + rel, ref).partition("#")[0] or "/" + rel)
+            if f and f.endswith(".html"):
+                t = os.path.relpath(f, DOCS)
+                if t != rel:
+                    targets.add(t)
+                    inbound.setdefault(t, set()).add(rel)
+        out[rel] = targets
+    depth, queue = {"index.html": 0}, ["index.html"]
+    for cur in queue:
+        for nx in sorted(out.get(cur, ())):
+            if nx not in depth:
+                depth[nx] = depth[cur] + 1
+                queue.append(nx)
+    for rel in files:
+        if rel == "404.html":
+            continue
+        if depth.get(rel, 99) > 3:
+            bad(f"{rel}: {depth.get(rel, 'not reachable')} clicks from the home page (want 3 or fewer)")
+        if rel.startswith("places/") and not any(not r.startswith("places/") and r != "404.html" for r in inbound.get(rel, ())):
+            bad(f"{rel}: only other place pages link to it (no guide, city, region or hub page does)")
 
 
 def sitemap_checks(files):
@@ -390,6 +528,8 @@ def browser_checks(base, locs, place_samples, workers):
             if path.startswith("/places/") and path not in place_samples and (ARGS.sample or width == 1280):
                 continue    # place pages share one template: all of them at 375 px, a sample at 1280 px
             jobs.append((path, width))
+    if ARGS.webapp_only:
+        jobs = []
     chunks = [jobs[i::workers] for i in range(workers)]
     threads = [threading.Thread(target=page_worker, args=(base, c)) for c in chunks]
     for t in threads:
@@ -399,6 +539,8 @@ def browser_checks(base, locs, place_samples, workers):
     with sync_playwright() as pw:
         browser = pw.chromium.launch(channel="chrome")
         webapp_checks(browser, base)
+        history_checks(browser, base)
+        robustness_checks(browser, base)
         browser.close()
     return len(jobs)
 
@@ -433,6 +575,11 @@ def webapp_checks(browser, base):
         if width == 375:
             for t in page.evaluate(TAP, None):
                 bad(f"{w}: tap target under 44px: {t}")
+        else:
+            off = page.evaluate("""() => { const row = document.querySelector('.ex-guides').getBoundingClientRect();
+                return [...document.querySelectorAll('.ex-guides button')].filter((b) => b.getBoundingClientRect().right > row.right + 1).map((b) => b.textContent); }""")
+            if off:
+                bad(f"{w}: guide buttons hidden past the right edge: {off}")
         search = page.locator("#ex-q")
         search.fill("perch green bay")
         page.wait_for_timeout(400)
@@ -550,6 +697,41 @@ def webapp_checks(browser, base):
         except Exception:
             bad("explore: retry after a failed core.json didn't load the list")
     ctx.close()
+    # Near me from outside Wisconsin (App Review is usually in California): say so, and keep the map on the state
+    ctx = browser.new_context(viewport={"width": 375, "height": 812}, geolocation={"latitude": 34.05, "longitude": -118.24}, permissions=["geolocation"])
+    page = ctx.new_page()
+    goto(page, base + "/explore/#g=fishfry", "networkidle")
+    page.wait_for_function("() => document.querySelectorAll('.ex-row').length > 0", timeout=60000)
+    page.locator('.ex-view button[data-v="map"]').click()
+    page.wait_for_timeout(500)
+    page.locator("#ex-locate").click()
+    page.wait_for_timeout(1000)
+    msg = page.locator("#ex-locmsg").text_content() or ""
+    painted = page.evaluate("""() => { const c = document.querySelector('#ex-map'), d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data;
+        let n = 0; for (let i = 3; i < d.length; i += 4 * 7) if (d[i]) n++; return n; }""")
+    if "outside Wisconsin" not in msg or painted < 500:
+        bad(f"explore: Near me from Los Angeles didn't say 'outside Wisconsin' and keep the map on the state ({msg!r}, {painted} map pixels)")
+    ctx.close()
+    # keyboard focus is visible: the focus ring has 3:1 against the page in light and dark (WCAG 1.4.11)
+    for scheme in ("light", "dark"):
+        ctx = browser.new_context(viewport={"width": 1280, "height": 800}, color_scheme=scheme)
+        page = ctx.new_page()
+        goto(page, base + "/", "load")
+        for _ in range(3):      # skip link, logo, first nav link
+            page.keyboard.press("Tab")
+        ring = page.evaluate("""() => {
+          const parse = (c) => (c.match(/rgba?\\(([^)]+)\\)/) || [, ''])[1].split(/[\\s,\\/]+/).filter(Boolean).map(Number);
+          const lum = (c) => { const f = (v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }; return 0.2126 * f(c[0]) + 0.7152 * f(c[1]) + 0.0722 * f(c[2]); };
+          const ratio = (a, b) => (Math.max(lum(a), lum(b)) + 0.05) / (Math.min(lum(a), lum(b)) + 0.05);
+          const el = document.activeElement, cs = getComputedStyle(el), bg = parse(getComputedStyle(document.body).backgroundColor);
+          const colors = [];
+          if (cs.outlineStyle !== 'none' && parseFloat(cs.outlineWidth) >= 2) colors.push(parse(cs.outlineColor));
+          for (const m of cs.boxShadow.matchAll(/rgba?\\([^)]+\\)/g)) colors.push(parse(m[0]));
+          return { tag: el.tagName + ' ' + el.textContent.trim().slice(0, 20), best: Math.max(0, ...colors.map((c) => ratio(c, bg))) };
+        }""")
+        if ring["best"] < 3:
+            bad(f"focus ring ({scheme}): {ring['tag']} has {ring['best']:.2f}:1 against the page, want 3:1")
+        ctx.close()
     # contrast of the web app's key controls (and a few site pages), light and dark
     for scheme in ("light", "dark"):
         ctx = browser.new_context(viewport={"width": 375, "height": 812}, color_scheme=scheme)
@@ -576,18 +758,180 @@ def webapp_checks(browser, base):
         ctx.close()
 
 
+ROWS = "() => document.querySelectorAll('.ex-row').length > 0"
+# wraps navigator.geolocation so a check can see each request's options, or make every request fail with a given error code
+GEO_SPY = """(() => { const g = navigator.geolocation, real = g.getCurrentPosition.bind(g); window.__geo = [];
+  g.getCurrentPosition = (ok, err, opt) => { window.__geo.push(opt || {}); const code = window.__geoFail || 0;
+    if (code) return setTimeout(() => err && err({ code, message: 'test' }), 50); return real(ok, err, opt); }; })();"""
+
+
+def history_checks(browser, base):
+    """Opening a place adds a history entry: Back closes the panel and keeps the search, Forward reopens it, and Back from a
+    deep link leaves for the page before it (no trap). Focus goes back to whatever opened the panel, a map dot included."""
+    ctx = browser.new_context(viewport={"width": 375, "height": 812})
+    page = ctx.new_page()
+    goto(page, base + "/cities/")
+    goto(page, base + "/explore/#g=fishfry", "networkidle")
+    page.wait_for_function(ROWS, timeout=60000)
+    page.locator("#ex-q").fill("perch")
+    page.wait_for_timeout(500)
+    page.locator(".ex-row").first.click()
+    page.wait_for_function("() => document.querySelector('#ex-panel .ex-act-row a')", timeout=30000)
+    name = page.locator("#ex-pname").text_content()
+    page.go_back()
+    page.wait_for_timeout(500)
+    st = page.evaluate("({ path: location.pathname, open: !document.querySelector('#ex-panel')?.hidden, q: document.querySelector('#ex-q')?.value, rows: document.querySelectorAll('.ex-row').length, inert: document.querySelector('.wrap')?.inert })")
+    if st["path"] != "/explore/" or st["open"] or st["q"] != "perch" or not st["rows"] or st["inert"]:
+        bad(f"explore: Back with a place open should close it and keep the search on /explore/, got {st}")
+    else:
+        page.go_forward()
+        page.wait_for_timeout(500)
+        if page.locator("#ex-panel").is_hidden() or page.locator("#ex-pname").text_content() != name:
+            bad(f"explore: Forward after Back didn't reopen {name!r}")
+        page.keyboard.press("Escape")       # closing it by hand takes the place out of history too: the next Back leaves
+        page.wait_for_timeout(400)
+        page.go_back()
+        page.wait_for_timeout(500)
+        if not page.url.rstrip("/").endswith("/cities"):
+            bad(f"explore: after closing a place, Back should leave for the page before (/cities/), got {page.url}")
+    # a deep link on a fresh load: Back leaves for the page before, with no blank page or trap
+    goto(page, base + "/")
+    pid = json.load(open(os.path.join(DOCS, "data/core.json")))["cols"]["id"][0]
+    goto(page, base + f"/explore/#g=fishfry&p={pid}", "networkidle")
+    page.wait_for_function("() => !document.querySelector('#ex-panel').hidden", timeout=60000)
+    page.go_back()
+    page.wait_for_timeout(500)
+    if urllib.parse.urlparse(page.url).path != "/" or page.locator("h1").count() != 1:
+        bad(f"explore: Back from a deep-linked place didn't return to the page before (got {page.url})")
+    # opened from a map dot: Escape puts focus back in the web app (the map's own controls), not on <body>
+    goto(page, base + "/explore/#g=supper", "networkidle")
+    page.wait_for_function(ROWS, timeout=60000)
+    page.locator('.ex-view button[data-v="map"]').click()
+    page.wait_for_timeout(800)
+    page.locator("#ex-map").scroll_into_view_if_needed()
+    page.wait_for_timeout(300)
+    dot = page.evaluate("""() => { const c = document.querySelector('#ex-map'), d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data, dpr = window.devicePixelRatio || 1;
+        const b = c.getBoundingClientRect();
+        for (let i = 0; i < d.length; i += 4) if (d[i] > 240 && d[i + 1] > 160 && d[i + 1] < 200 && d[i + 2] < 40) {   // a gold (hand-checked) dot on screen
+          const x = b.left + ((i / 4) % c.width) / dpr + 1, y = b.top + Math.floor(i / 4 / c.width) / dpr + 2;
+          if (y > 0 && y < innerHeight - 4 && x > 0 && x < innerWidth) return [x, y]; } return null; }""")
+    if not dot:
+        bad("explore: no hand-checked dot on screen to click on the supper club map")
+    else:
+        page.mouse.click(*dot)
+        page.wait_for_timeout(600)
+        if page.locator("#ex-panel").is_visible():
+            page.keyboard.press("Escape")
+            page.wait_for_timeout(300)
+            if not page.evaluate("!!document.activeElement && document.activeElement !== document.body && !!document.activeElement.closest('#ex-app')"):
+                bad(f"explore: closing a place opened from the map left focus on {page.evaluate('document.activeElement?.tagName')}, outside the web app")
+    ctx.close()
+
+
+def robustness_checks(browser, base):
+    """Inputs and selects stay >= 16 px on phones (iOS zooms the page otherwise) and buttons keep the site font; junk in any
+    localStorage key the app reads doesn't stop it; no "Nearest" claim before there's a location; Near me asks for a fresh fix
+    on every tap and stays available."""
+    ctx = browser.new_context(viewport={"width": 375, "height": 812})
+    page = ctx.new_page()
+    goto(page, base + "/explore/", "networkidle")
+    page.wait_for_function(ROWS, timeout=60000)
+    # the page promises a search of every place, but it opens on the fish fry guide: a search the guide can't answer offers the rest
+    page.locator("#ex-q").fill("kopps")
+    page.wait_for_timeout(500)
+    if not page.locator("#ex-all").count():
+        bad(f"explore: searching 'kopps' in the fish fry guide is a dead end ({page.locator('#ex-list').text_content()!r}), with no way to search all restaurants")
+    else:
+        page.locator("#ex-all").click()
+        page.wait_for_timeout(400)
+        if "Kopp" not in (page.locator(".ex-row").first.text_content() or ""):
+            bad("explore: 'Search all restaurants' after an empty guide search didn't list Kopp's")
+    page.locator("#ex-q").fill("")
+    fonts = page.evaluate("""() => { const want = getComputedStyle(document.body).fontFamily;
+        return [...document.querySelectorAll('#ex-app input:not([type=checkbox]), #ex-app select, #ex-app button')].map((el) => { const cs = getComputedStyle(el);
+          return { el: el.id || el.textContent.trim().slice(0, 14), tag: el.tagName, size: parseFloat(cs.fontSize), family: cs.fontFamily, want }; }); }""")
+    for f in fonts:
+        if f["tag"] in ("INPUT", "SELECT") and f["size"] < 16:
+            bad(f"explore @375: {f['tag'].lower()} {f['el']!r} is {f['size']}px, under 16px (iOS zooms the page on focus)")
+        if f["tag"] == "BUTTON" and (f["size"] < 14 or f["family"] != f["want"]):
+            bad(f"explore @375: button {f['el']!r} fell back to {f['size']}px {f['family']} (a dropped font declaration)")
+    ctx.close()
+    # junk in localStorage (any page on a shared origin can write it)
+    for key, vals in (("we-saved", ['{"x":1}', "not json", "[null, 5, {}]", '"abc"', "42"]), ("we-guide", ['{"x":1}', "not json", "[null]", "5"])):
+        for v in vals:
+            ctx = browser.new_context(viewport={"width": 375, "height": 812})
+            ctx.add_init_script(f"try {{ if (!sessionStorage.getItem('seeded')) {{ localStorage.setItem({json.dumps(key)}, {json.dumps(v)}); sessionStorage.setItem('seeded', '1'); }} }} catch (e) {{}}")
+            page = ctx.new_page()
+            errors = []
+            page.on("pageerror", lambda e: errors.append(str(e)))
+            goto(page, base + "/explore/", "networkidle")
+            try:
+                page.wait_for_function(ROWS, timeout=20000)
+                page.locator('.ex-guides button[data-g="saved"]').click()
+                page.wait_for_timeout(200)
+                page.locator('.ex-guides button[data-g="fishfry"]').click()
+                page.wait_for_timeout(200)
+                page.locator(".ex-row").first.click()
+                page.wait_for_selector("#ex-save", timeout=20000)
+                page.locator("#ex-save").click()
+                ok = page.evaluate("Array.isArray(JSON.parse(localStorage.getItem('we-saved'))) && JSON.parse(localStorage.getItem('we-saved')).length === 1")
+            except Exception as ex:
+                ok, errors = False, errors + [str(ex).splitlines()[0][:80]]
+            if errors or not ok:
+                bad(f"explore: localStorage {key}={v!r} broke the web app or saving: {errors[:2]}")
+            ctx.close()
+    # no distance order claimed without a location: a #sort=nearest link, a denied request, a timeout
+    for how, fail, hsh in (("a #sort=nearest link", 0, "#g=fishfry&sort=nearest"), ("denied", 1, "#g=all"), ("a timeout", 3, "#g=all")):
+        ctx = browser.new_context(viewport={"width": 375, "height": 812})
+        ctx.add_init_script(GEO_SPY + f"window.__geoFail = {fail or 1};")
+        page = ctx.new_page()
+        goto(page, base + "/explore/" + hsh, "networkidle")
+        page.wait_for_function(ROWS, timeout=60000)
+        if fail:
+            page.locator("#ex-sort").select_option("nearest")
+            page.wait_for_timeout(600)
+        label = page.locator("#ex-count").text_content() or ""
+        if "Nearest" in label or page.locator("#ex-sort").input_value() == "nearest":
+            bad(f"explore: with no location ({how}) the list still says it's sorted by distance: {label!r}")
+        ctx.close()
+    # Near me: a fresh fix on every tap (not one reused for 10 minutes), the button stays, and a move out of state is noticed
+    ctx = browser.new_context(viewport={"width": 375, "height": 812}, geolocation={"latitude": 43.0389, "longitude": -87.9065}, permissions=["geolocation"])
+    ctx.add_init_script(GEO_SPY)
+    page = ctx.new_page()
+    goto(page, base + "/explore/#g=fishfry", "networkidle")
+    page.wait_for_function(ROWS, timeout=60000)
+    page.locator("#ex-locate").click()
+    page.wait_for_timeout(800)
+    opts = page.evaluate("window.__geo")
+    if not opts or (opts[0].get("maximumAge") or 0) > 60000:
+        bad(f"explore: Near me reuses a location fix up to {(opts[0].get('maximumAge') if opts else '?')} ms old (want a fresh one per tap)")
+    if page.locator("#ex-locate").is_hidden():
+        bad("explore: Near me disappears after the first fix, so a reader who moved can't ask again")
+    else:
+        ctx.set_geolocation({"latitude": 34.05, "longitude": -118.24})
+        page.locator("#ex-locate").click()
+        page.wait_for_timeout(800)
+        if "outside Wisconsin" not in (page.locator("#ex-locmsg").text_content() or ""):
+            bad(f"explore: a second Near me after moving out of state didn't use the new location: {page.locator('#ex-locmsg').text_content()!r}")
+    ctx.close()
+
+
 def main():
     base = serve()
     core = json.load(open(os.path.join(DOCS, "data/core.json")))
     core_ids = core["cols"]["id"]
     files = static_checks(set(core_ids))
     locs, paths = sitemap_checks(files)
+    link_graph_checks(files)
+    website_link_checks(files)
+    privacy_storage_checks()
+    faq_mirror_checks()
     page_type_checks(files, core_ids, paths)
     places = sorted(urllib.parse.urlparse(u).path for u in locs if "/places/" in u)
     every = max(1, len(places) // ARGS.sample) if ARGS.sample else 10
     samples = set(places[::every])
     n_static = len(problems)
-    n_jobs = browser_checks(base, locs, samples, ARGS.workers)
+    n_jobs = 0 if ARGS.static else browser_checks(base, locs, samples, ARGS.workers)
     print(f"static: {len(files)} HTML files, {n_static} problems | browser: {n_jobs} page loads at 375 and 1280 px, plus the web app")
     for p in problems:
         print("  ✗", p)

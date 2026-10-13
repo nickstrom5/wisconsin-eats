@@ -38,7 +38,7 @@ DOMAIN = f"https://{CUSTOM_DOMAIN}" if CUSTOM_DOMAIN else "https://nickstrom5.gi
 BASE = "" if CUSTOM_DOMAIN else "/wisconsin-eats"     # path prefix for root-relative links
 BRAND = "Wisconsin Eats"
 TAGLINE = "Fish fry & supper club guide"
-EMAIL = "work-with-nick@gmail.com"
+EMAIL = "nick@eatsranked.com"     # the public contact address (Nick, 2026-10-12; Cloudflare Email Routing). The app's Links.swift follows next build
 AUTHOR = "Nicholas Soderstrom"     # the app's maker; name only in public markup, never an email
 
 D = json.load(open(f"{ROOT}/data/app/places.json"))
@@ -49,7 +49,7 @@ BUILD = datetime.date.fromisoformat(BUILD_DATE)
 HAND_CHECKED = "September 2026"
 SITE_LAUNCHED = "2026-09-26"    # the guides and city pages first went up (Article datePublished)
 PAGES_ADDED = "2026-10-07"      # place, region, Lent, about and cities-hub pages first went up
-POLICY_UPDATED = "2026-10-07"   # when the privacy policy or terms text last changed: edit this whenever you edit them
+POLICY_UPDATED = "2026-10-12"   # when the privacy policy or terms text last changed: edit this whenever you edit them (10-12: new contact address)
 
 # The App Store listing. None until the app is live. When it is: set APP_STORE_URL (https://apps.apple.com/app/id6816947017),
 # and put Apple's official "Download on the App Store" badge artwork at docs/img/app-store-badge.svg first (from Apple's
@@ -91,6 +91,46 @@ def safe_url(u):
     return u
 
 
+# The link checker's verdicts (pipeline/check_websites.py) and the manual ones (website_overrides.json). The export ships only
+# links that passed, so places.json is the list; a verdict that turned bad after the export (a site found hijacked, say) takes the
+# link off the website at the next site build. website_check.json is rewritten while a check runs (it saves partial results), so a
+# link with no verdict yet, or one that only failed to load (a timeout, a 5xx, a 403 or 429), keeps its export-time pass until the
+# next export: otherwise a build during a re-check, or after a network drop, would silently strip hundreds of good links.
+LINK_VERDICTS = json.load(open(f"{ROOT}/data/wi/website_check.json"))
+_over = f"{ROOT}/data/wi/website_overrides.json"
+LINK_OVERRIDES = json.load(open(_over)) if os.path.exists(_over) else {}
+TRANSIENT = re.compile(r"^(error: |http (403|408|429|5\d\d)$)")
+SITE_DROPS = {}     # url -> why, for each website in places.json the site leaves off
+
+
+def link_verdict(u):
+    """(ok, why) for a link: a manual verdict first, then the checker's; (None, "") if neither has one."""
+    for book in (LINK_OVERRIDES, LINK_VERDICTS):
+        v = book.get(u) or book.get(u.removeprefix("https://"))
+        if v:
+            return bool(v.get("ok")), v.get("why", "")
+    return None, ""
+
+
+def place_site(u):
+    """A place's website for the site and the web app: a safe http(s) URL with no standing bad verdict, or None."""
+    u2 = safe_url(u)
+    if not u2:
+        return None
+    ok, why = link_verdict(u)
+    if ok is False and not TRANSIENT.match(why):
+        SITE_DROPS[u] = why
+        return None
+    return u2
+
+
+n_sites = len({r["w"] for r in D["places"] if place_site(r.get("w")) or r.get("w") in SITE_DROPS})
+# a verdict file that turned bad wholesale (a broken check run) must not quietly strip the site's links: stop and say so
+assert len(SITE_DROPS) <= max(10, n_sites // 100), (f"{len(SITE_DROPS)} of {n_sites} websites would be left off by website_check.json/"
+    f"website_overrides.json verdicts newer than places.json: {Counter(w[:40] for w in SITE_DROPS.values()).most_common(8)}. "
+    "Re-export places.json (WI_APP=1) after a link check instead of building the site against it.")
+
+
 def safe_tel(ph):
     """tel: link with digits and + only, or None."""
     t = re.sub(r"[^\d+]", "", ph or "")
@@ -127,7 +167,7 @@ class P:
         self.sides = r.get("sides") or ""
         self.note = r.get("note") or r.get("icon") or ""
         self.icon = r.get("icon") or ""
-        self.site = safe_url(r.get("w"))
+        self.site = place_site(r.get("w"))
         self.tel = safe_tel(r.get("ph"))
         self.phone = phone_text(r.get("ph")) if self.tel else ""
         self.honors = r.get("hon") or ""
@@ -283,7 +323,8 @@ CSS = """
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 var(--text); -webkit-font-smoothing: antialiased; }
   a { color: var(--green); text-underline-offset: 2px; }
-  a:focus-visible, summary:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+  /* the gold ring alone is 1.7:1 on the light page; the green ring inside it gives the focus indicator 3:1 or more in both schemes */
+  a:focus-visible, summary:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; box-shadow: 0 0 0 3px var(--green); }
   .skip { position: absolute; left: -9999px; top: 0; background: var(--gold); color: var(--on-gold); padding: 10px 14px; font-weight: 700; z-index: 30; }
   .skip:focus { left: 8px; top: 8px; }
   .vh { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
@@ -421,7 +462,7 @@ def crumbs(trail):
     return f'<nav class="crumbs" aria-label="Breadcrumb"><ol>{items}</ol></nav>', ld
 
 
-STORE_NOTE = "Free for iPhone and iPad." if APP_STORE_URL else "Free for iPhone and iPad. Coming to the App Store."
+STORE_NOTE = "No charge, on iPhone and iPad." if APP_STORE_URL else "No charge, on iPhone and iPad. App Store release pending."
 
 
 def store_button(label="Get early access"):
@@ -472,7 +513,9 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
     ld = "\n".join(jsonld(x) for x in (BASE_LD, *lds))
     where = "" if is404 else f'<link rel="canonical" href="{url}">\n'
     og_url = "" if is404 else f'<meta property="og:url" content="{url}">\n'
-    banner = f'<meta name="apple-itunes-app" content="app-id={APP_ID}">\n' if APP_STORE_URL else ""
+    # Smart App Banner: live once the app is (APP_STORE_URL); until then the SEO spec's commented placeholder, with the real app id
+    banner = (f'<meta name="apple-itunes-app" content="app-id={APP_ID}">\n' if APP_STORE_URL else
+              f'<!-- <meta name="apple-itunes-app" content="app-id={APP_ID}"> goes live with the app: set APP_STORE_URL in scripts/make-site.py -->\n')
     doc = f"""<!DOCTYPE html>
 <html lang="en" data-base="{BASE}">
 <head>
@@ -499,6 +542,7 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
 <meta name="twitter:image" content="{DOMAIN}/og.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -586,6 +630,14 @@ for base, ps in _groups.items():
 assert len({p.slug for p in CHECKED_PLACES}) == len(CHECKED_PLACES)
 
 
+def short_kind(p):
+    return join_and([k for bit, k in ((SUPPER, "supper club"), (FISHFRY, "fish fry"), (CUSTARD, "custard"), (BOIL, "fish boil")) if p.tags & bit]) or (
+        "James Beard honoree" if p.h & 15 else "icon" if p.ip is not None else f"since {p.founded}" if p.founded else "hand-checked")
+
+
+LISTED = set()     # ids of places some guide, city or region page links to; the cities hub links the rest, so no place page is an orphan
+
+
 class Lister:
     """Renders place cards for one page; only a place's first card on a page gets its id anchor."""
 
@@ -593,6 +645,7 @@ class Lister:
         self.seen = set()
 
     def item(self, p, extra=None):
+        LISTED.add(p.id)
         facts = []
         if p.tags & FISHFRY and p.fish:
             facts.append(f"<b>Fish:</b> {e(p.fish)}")
@@ -666,9 +719,10 @@ FISH_ALIAS = {"walleye pike": "walleye", "blue gill": "bluegill", "lake perch": 
 def fish_words(ps):
     c = Counter()
     for p in ps:
-        for f in {re.sub(FISH_PREFIX, "", x.strip().lower()) for x in p.fish.split(",") if x.strip()}:
-            c[FISH_ALIAS.get(f, f)] += 1
-    return c
+        for f in {FISH_ALIAS.get(f, f) for f in (re.sub(FISH_PREFIX, "", x.strip().lower()) for x in p.fish.split(",") if x.strip())}:
+            c[f] += 1
+    # ties in alphabetical order: most_common() keeps insertion order for ties, and a set's order changes with every run's hash seed
+    return Counter(dict(sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))))
 
 
 FISH_WORDS = fish_words(FISH)
@@ -803,7 +857,7 @@ body = f"""{nav}
   <section class="hero">
     <p class="kicker">{BRAND} guide · checked {HAND_CHECKED}</p>
     <h1>Wisconsin Friday fish fry guide</h1>
-    <p class="lede">{len(FISH)} restaurants, taverns and supper clubs across Wisconsin that serve a regular Friday fish fry, each confirmed open in {HAND_CHECKED} on its own website, menu or recent local news. For each one: the fish, the days and the sides when the place says so.</p>
+    <p class="lede">{len(FISH)} restaurants, taverns and supper clubs across Wisconsin that serve a regular Friday fish fry, each checked open in {HAND_CHECKED} against its own website, menu or recent local news. For each one: the fish, the days and the sides when the place says so.</p>
     {cta()}
   </section>
   <section id="about-fish-fry">
@@ -812,8 +866,8 @@ body = f"""{nav}
     <p>This list only includes places that serve one regularly. Lent-only church and Legion fries are left out, because their dates change every year. Seasonal Northwoods places are in when they post their season. For Lent {LENT_YEAR}, see the <a href="/wisconsin-lent-fish-fry.html">Lent fish fry page</a>, with the Lent dates and the places that serve perch, walleye or bluegill or fry on other days too.</p>
     <h2>What the {len(FISH)} fish fries serve</h2>
     <p>{N_FISH_KNOWN} of the {len(FISH)} list the fish they serve. Counting each fish once per place, the most common are {e(fish_line)}. {NOT_ONLY_FRIDAY} serve their fish fry on days other than Friday too; those days are listed with each place.</p>
-    <p>How the list was built: every place was checked against a 2025 or 2026 source, such as its own menu page, a dated post on its site, a local news story or its Travel Wisconsin listing. Places with no current source, a dead website or a fish fry that is only mentioned in passing were left out. Nothing here comes from review sites, and the order is by region and town, not by anyone's rating. Days and menus change, so check with the restaurant before you go. More on our sources: <a href="/about.html">about {BRAND}</a>.</p>
-    <p>In the {BRAND} app, the same list sorts by distance from you, and each place opens Apple Maps' own card for live hours, photos and directions. Looking for a supper club instead? See the <a href="/wisconsin-supper-clubs.html">Wisconsin supper club guide</a>, and for dessert, the <a href="/wisconsin-frozen-custard.html">frozen custard guide</a>.</p>
+    <p>Each place earned its spot with a 2025 or 2026 source, such as its own menu page, a dated post on its website, a local news story or its Travel Wisconsin listing. A tavern with no current source, a dead website, or a fish fry mentioned only in passing didn't make it. No review-site scores went into the list, and it is grouped by region and town rather than ranked. Fish fry days shift, in Lent especially, so call before you drive. Our sources are on the <a href="/about.html">about {BRAND}</a> page.</p>
+    <p>On your phone, the {BRAND} app puts the nearest fish fry at the top and opens Apple Maps' place card for tonight's hours, photos and directions. After a supper club instead? Try the <a href="/wisconsin-supper-clubs.html">Wisconsin supper club guide</a>; for dessert, the <a href="/wisconsin-frozen-custard.html">frozen custard guide</a>.</p>
     <h2>Jump to a region</h2>
     {toc}
     <p class="fine">City pages: {", ".join(f'<a href="{city_url(c)}">{e(c)}</a>' for c in CITY_PAGES)}. Region pages: {", ".join(f'<a href="/regions/{k}.html">{e(v[0])}</a>' for k, v in REGION_PAGES.items())}.</p>
@@ -852,14 +906,14 @@ body = f"""{nav}
   <section class="hero">
     <p class="kicker">{BRAND} guide · checked {HAND_CHECKED}</p>
     <h1>Wisconsin supper club guide</h1>
-    <p class="lede">{len(SUP)} Wisconsin supper clubs, each confirmed open in {HAND_CHECKED} on its own website, menu or recent local news, with its founding year when we could verify it and its Friday fish fry when it has one.</p>
+    <p class="lede">{len(SUP)} Wisconsin supper clubs, each checked open in {HAND_CHECKED} against its own website, menu or recent local news, with its founding year when we could verify it and its Friday fish fry when it has one.</p>
     {cta()}
   </section>
   <section id="about-supper-clubs">
     <h2>The {len(SUP)} in numbers</h2>
     <p>{sup_fish} of the {len(SUP)} supper clubs also serve a Friday fish fry. {len(sup_old)} have a founding year we could verify, and {sup_pre1950} of those opened before 1950. The oldest on the list: {oldest_line}.</p>
-    <p>How the list was built: every supper club was checked against a 2025 or 2026 source, such as its own site with current menus or hours, a dated news story or its Travel Wisconsin listing. Places whose only trace was an old website, a parked domain or a Facebook page we could not read without logging in were left out, even when they may well be open. Nothing here comes from review sites. The order is by region and town, never by rating. More on our sources: <a href="/about.html">about {BRAND}</a>.</p>
-    <p>In the {BRAND} app, the list sorts by distance and each club opens Apple Maps' own card with live hours and photos. Supper clubs are dinner-only and many close one or two nights a week, so call ahead. For Fridays, see the <a href="/wisconsin-fish-fry.html">Wisconsin fish fry guide</a>.</p>
+    <p>To get on this list, a supper club needed a 2025 or 2026 source, such as its own site with a current menu or hours, a dated news story, or its Travel Wisconsin listing. Clubs we could trace only to an old website, a parked domain or a Facebook page that needs a login stayed off, even though some of them may still be open. No review-site scores went into it; the clubs are grouped by region and town, not ranked. Our sources are on the <a href="/about.html">about {BRAND}</a> page.</p>
+    <p>The {BRAND} app sorts these clubs by how far they are from you and opens Apple Maps' card for current hours and photos. Most supper clubs serve dinner only, and many take a night or two off each week, so a call ahead saves a wasted drive. Friday plans? The <a href="/wisconsin-fish-fry.html">Wisconsin fish fry guide</a> has those.</p>
     <h2>Jump to a region</h2>
     {toc}
     <p class="fine">City pages: {", ".join(f'<a href="{city_url(c)}">{e(c)}</a>' for c in CITY_PAGES)}. Region pages: {", ".join(f'<a href="/regions/{k}.html">{e(v[0])}</a>' for k, v in REGION_PAGES.items())}.</p>
@@ -904,8 +958,8 @@ body = f"""{nav}
     <h2>Custard, not soft serve</h2>
     <p>Frozen custard is ice cream made with egg yolk and churned slowly with little air, so it comes out dense and is served fresh, often with a flavor of the day. It is a Milwaukee-area tradition, and many stands around the state post a flavor calendar. Soft-serve and hard ice cream shops are not on this list unless they make custard.</p>
     <p>{len(cust_old)} of the {len(CUST)} stands have a founding year we could verify. The oldest: {cust_old_line}.</p>
-    <p>How the list was built: stands were confirmed open with a 2025 or 2026 source, such as their own flavor calendar, menu or a dated news story. A stand is in only if it actually sells frozen custard. Chains with five or more locations in the state are left out. Many stands close for winter, so check their hours before you go. More on our sources: <a href="/about.html">about {BRAND}</a>.</p>
-    <p>In the {BRAND} app, custard stands sort by distance, and each opens Apple Maps' own card for live hours. Pair one with a <a href="/wisconsin-fish-fry.html">Friday fish fry</a> or a <a href="/wisconsin-supper-clubs.html">supper club</a> dinner.</p>
+    <p>Each stand here was checked open against a 2025 or 2026 source, such as its own flavor calendar or menu, or a dated news story. Soft-serve shops that don't make custard aren't included, and neither are chains with five or more Wisconsin locations. Plenty of stands shut for the winter, so look up the hours first. Our sources are on the <a href="/about.html">about {BRAND}</a> page.</p>
+    <p>The {BRAND} app lists the stands nearest you first and links each one to Apple Maps for today's hours. A cone goes well after a <a href="/wisconsin-fish-fry.html">Friday fish fry</a> or a <a href="/wisconsin-supper-clubs.html">supper club</a> dinner.</p>
     <h2>Jump to a region</h2>
     {toc}
   </section>
@@ -991,8 +1045,10 @@ def fish_sentence(ff, where):
     if not fw:
         return ""
     if fw[0][1] >= 2 and (len(fw) == 1 or fw[0][1] > fw[1][1]):
-        return (f"Among the {plural(len(ff), 'fish fry', 'fish fries')} {where}, the fish named most often is {e(fw[0][0])} ({fw[0][1]})"
-                + (f", then {e(fw[1][0])} ({fw[1][1]})." if len(fw) > 1 else "."))
+        second = [f for f, n in fw[1:] if n == fw[1][1]] if len(fw) > 1 else []    # a tie for second names every fish in it
+        then = (f", then {e(second[0])} ({fw[1][1]})" if len(second) == 1 else
+                f", then {join_and([e(f) for f in second])} ({fw[1][1]} each)" if 1 < len(second) <= 3 else "")
+        return f"Among the {plural(len(ff), 'fish fry', 'fish fries')} {where}, the fish named most often is {e(fw[0][0])} ({fw[0][1]}){then}."
     return f"The {plural(len(ff), 'fish fry', 'fish fries')} {where} list {join_and([e(f) for f, _ in fw[:4]])}."
 
 
@@ -1029,7 +1085,7 @@ for c in CITY_PAGES:
         return sorted(out, key=lambda p: (p.city != c, p.city_miles if p.city != c else 0, p.name.lower()))
 
     ff, sc, cu = near(FISH, RADIUS["fish"]), near(SUP, RADIUS["supper"]), near(CUST, RADIUS["custard"])
-    icons = sorted([p for p in town if p.ip is not None], key=lambda p: (-p.ip, p.name.lower()))
+    icons = sorted([p for p in ICONS if p.city == c], key=lambda p: (-p.ip, p.name.lower()))   # incl. hand-picked shops (ICONS)
     oldest = sorted([p for p in town if p.founded], key=lambda p: (p.founded, p.name.lower()))[:10]
     cuis = Counter(p.cuisine for p in town if p.cuisine and p.cuisine not in ("Other", "Restaurant")).most_common(10)
     city_stats[c] = (n_town, len(ff), len(sc), len(cu))
@@ -1073,7 +1129,7 @@ for c in CITY_PAGES:
         parts.append(f'<section id="icons"><h2>{e(c)} icons</h2><p class="sub">James Beard Award winners, finalists and semifinalists, and long-running local institutions, most honored first. Honors are from the James Beard Foundation\'s own award records and other named sources.</p><ol class="places">'
                      + L.items(icons) + "</ol></section>")
     if oldest:
-        parts.append(f'<section id="oldest"><h2>Oldest places in {e(c)} we could date</h2><p class="sub">Founding years checked against the restaurant\'s own history page or local news, oldest first. Places without a verified year aren\'t ranked here.</p><ol class="places">'
+        parts.append(f'<section id="oldest"><h2>Oldest places in {e(c)} we could date</h2><p class="sub">Oldest first, by the founding year on the place\'s own history page or in local news. A place we couldn\'t date isn\'t in this list, however old it may be.</p><ol class="places">'
                      + L.items(oldest) + "</ol></section>")
     if cuis:
         rows = "".join(f'<tr><td>{e(k)}</td><td class="n">{n:,}</td></tr>' for k, n in cuis)
@@ -1160,12 +1216,15 @@ rrows = "".join(f'<tr><td><a href="/regions/{k}.html">{e(REGION_PAGES[k][0])}</a
 title = fit([f"Wisconsin Cities & Regions: Fish Fries & Supper Clubs | {BRAND}", f"Wisconsin Fish Fries & Supper Clubs by City | {BRAND}"], 50, 60)
 desc = fit([f"Fish fries, supper clubs and custard stands in {len(CITY_PAGES)} Wisconsin cities and {len(REGION_PAGES)} regions, from Milwaukee to the Northwoods, each place checked open in {HAND_CHECKED}.",
             f"Fish fries, supper clubs and custard in {len(CITY_PAGES)} Wisconsin cities and {len(REGION_PAGES)} regions, each place checked open in {HAND_CHECKED}. Free, no ads."], 140, 160)
+others = [p for p in CHECKED_PLACES if p.id not in LISTED]     # hand-checked places no guide, city or region page lists
+more_places = (f'\n  <section id="more-places">\n    <h2>More hand-checked places</h2>\n    <p class="sub">{plural(len(others), "place")} on our hand-checked lists that aren\'t in a guide or on a city or region page, by town: icons, old favorites and shops, each checked open in {HAND_CHECKED}.</p>\n    {plist(others, short_kind)}\n  </section>'
+               if others else "")
 body = f"""{nav}
   <main id="main">
   <section class="hero">
     <p class="kicker">{BRAND} · by city and region</p>
     <h1>Wisconsin cities and regions</h1>
-    <p class="lede">Fish fries, supper clubs and custard stands in {len(CITY_PAGES)} Wisconsin cities and {len(REGION_PAGES)} regions, each place checked open in {HAND_CHECKED}. Each place near a city is on the page of the closest one.</p>
+    <p class="lede">From Milwaukee to La Crosse and up to the Northwoods: {len(CITY_PAGES)} city pages and {len(REGION_PAGES)} region pages of fish fries, supper clubs and custard stands, every place checked open in {HAND_CHECKED}. A town between two cities shows up once, on the nearer city's page.</p>
   </section>
   <section id="cities">
     <h2>City pages</h2>
@@ -1174,8 +1233,8 @@ body = f"""{nav}
   <section id="regions">
     <h2>Region pages</h2>
     <table><thead><tr><th scope="col">Region</th><th scope="col" class="n">Fish fries</th><th scope="col" class="n">Supper clubs</th><th scope="col" class="n">Custard</th><th scope="col" class="n">Fish boils</th></tr></thead><tbody>{rrows}</tbody></table>
-    <p class="fine">Regions are sets of counties; each region page says which. The statewide guides list their places by region: <a href="/wisconsin-fish-fry.html">fish fry</a>, <a href="/wisconsin-supper-clubs.html">supper clubs</a>, <a href="/wisconsin-frozen-custard.html">custard</a>.</p>
-  </section>
+    <p class="fine">A region is a group of whole counties, named on its page. The statewide guides are sorted by region too: <a href="/wisconsin-fish-fry.html">fish fry</a>, <a href="/wisconsin-supper-clubs.html">supper clubs</a>, <a href="/wisconsin-frozen-custard.html">custard</a>.</p>
+  </section>{more_places}
   </main>"""
 written.append(page("cities/index.html", title, desc, body, [bc], published=PAGES_ADDED))
 
@@ -1202,11 +1261,6 @@ def kind_labels(p):
     low = p.name.lower()
     keep = [k for k in out if not any(w in low for w in ("supper club", "custard", "fish fry", "fish boil") if w in k.lower())]
     return keep or out
-
-
-def short_kind(p):
-    return join_and([k for bit, k in ((SUPPER, "supper club"), (FISHFRY, "fish fry"), (CUSTARD, "custard"), (BOIL, "fish boil")) if p.tags & bit]) or (
-        "James Beard honoree" if p.h & 15 else "icon" if p.ip is not None else f"since {p.founded}" if p.founded else "hand-checked")
 
 
 def place_title(p):
@@ -1372,8 +1426,8 @@ for r in rows_web:
     i = r.get("in") or {}
     cols["gr"].append(i.get("g")); cols["sc"].append(i.get("sc")); cols["in"].append(i.get("n"))
     d = {k: r[k] for k in ("note", "days", "sides", "icon", "hon", "jbf", "lic") if r.get(k)}
-    if safe_url(r.get("w")):
-        d["w"] = safe_url(r.get("w"))
+    if place_site(r.get("w")):
+        d["w"] = place_site(r.get("w"))
     if safe_tel(r.get("ph")):
         d["ph"] = safe_tel(r.get("ph")).removeprefix("tel:")
     if i:
@@ -1408,6 +1462,7 @@ EXPLORE_CSS = """
   .ex-off { visibility: hidden; }
   .ex-view { display: flex; gap: 4px; justify-self: end; }
   @media (min-width: 700px) {
+    .ex-guides { flex-wrap: wrap; overflow-x: visible; }   /* no hidden chips (Saved) off the right edge for mouse users */
     .ex-row2 { display: flex; flex-wrap: wrap; }
     .ex-sel select { width: 13em; }
     .ex-view { margin-left: auto; }
@@ -1470,11 +1525,10 @@ EXPLORE_CSS = """
   @media (min-width: 601px) { body.ex-open { overflow: auto; } }
 """
 url = f"{DOMAIN}/explore/"
-title = fit(["Search Wisconsin Restaurants, Fish Fries & Supper Clubs", "Wisconsin Restaurant Search & Map | Wisconsin Eats"], 50, 60)
-desc = fit([f"Search {N_REST:,} Wisconsin restaurants by name, town, street, zip or fish, and browse {len(FISH)} hand-checked fish fries and {len(SUP)} supper clubs on a map.",
-            f"Search {N_REST:,} Wisconsin restaurants by name, town, street or fish, and browse {len(FISH)} hand-checked fish fries and {len(SUP)} supper clubs on a free map.",
-            f"Search {N_REST:,} Wisconsin restaurants by name, town, street or fish, and browse {len(FISH)} hand-checked fish fries and {len(SUP)} supper clubs on a map.",
-            f"Search {N_REST:,} Wisconsin restaurants by name, town, street or fish, and map {len(FISH)} hand-checked fish fries and {len(SUP)} supper clubs. Free."], 140, 160)
+title = fit(["Find a Wisconsin Fish Fry or Restaurant: Map and Search", "Wisconsin Restaurant Map and Fish Fry Finder | Wisconsin Eats"], 50, 60)
+desc = fit([f"Type a town, a street or a fish like perch or walleye to see which of {N_REST:,} Wisconsin places match, with {len(FISH)} checked fish fries on a free map.",
+            f"Type a town, a street or a fish like perch to see which of {N_REST:,} Wisconsin places match, with {len(FISH)} hand-checked fish fries on a free map.",
+            f"Look up {N_REST:,} Wisconsin places by town, street or the fish they fry, and map {len(FISH)} hand-checked fish fries and {len(SUP)} supper clubs. Free."], 140, 160)
 nav, bc = crumbs([("Home", "/"), ("Search", "/explore/")])
 guide_buttons = "".join(f'<button type="button" data-g="{k}" aria-pressed="{str(k == "fishfry").lower()}">{e(t)}</button>' for k, t in
                         (("fishfry", "Fish fry"), ("supper", "Supper clubs"), ("custard", "Custard"), ("icons", "Icons"), ("oldest", "Oldest"),
@@ -1482,9 +1536,9 @@ guide_buttons = "".join(f'<button type="button" data-g="{k}" aria-pressed="{str(
 body = f"""{nav}
   <main id="main">
   <section class="ex-hero">
-    <p class="kicker">{BRAND} · on the web</p>
-    <h1>Search Wisconsin restaurants</h1>
-    <p class="sub">{N_REST:,} restaurants, cafés, taverns and bakeries, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands. The same data as the free iPhone and iPad app. Nothing about you is stored anywhere but this browser.</p>
+    <p class="kicker">{BRAND} · web app</p>
+    <h1>Wisconsin restaurant search and map</h1>
+    <p class="sub">The app's data in your browser: {N_REST:,} Wisconsin restaurants, cafés, taverns and bakeries, including the {len(FISH)} Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands we checked by hand. What you save stays in this browser; nothing is sent to us.</p>
   </section>
   <noscript><p>The search needs JavaScript. The guides work without it: <a href="/wisconsin-fish-fry.html">fish fry</a>, <a href="/wisconsin-supper-clubs.html">supper clubs</a>, <a href="/wisconsin-frozen-custard.html">frozen custard</a>, and <a href="/cities/">cities and regions</a>.</p></noscript>
   <div id="ex-app">
@@ -1507,7 +1561,7 @@ body = f"""{nav}
       <p id="ex-count" aria-live="polite"></p>
       <p id="ex-locmsg"></p>
     </div>
-    <div id="ex-listwrap"><p id="ex-loading" role="status">Loading the restaurant list…</p><ol id="ex-list" class="ex-list"></ol><button type="button" id="ex-more" class="ex-small" hidden></button></div>
+    <div id="ex-listwrap"><p id="ex-loading" role="status">Loading Wisconsin's restaurants…</p><ol id="ex-list" class="ex-list"></ol><button type="button" id="ex-more" class="ex-small" hidden></button></div>
     <div id="ex-mapwrap" hidden>
       <canvas id="ex-map" role="img" aria-label="Map of Wisconsin with a dot for each place in the list. The list view has the same places."></canvas>
       <div class="ex-zoom"><button type="button" id="ex-zin" aria-label="Zoom in">+</button><button type="button" id="ex-zout" aria-label="Zoom out">−</button></div>
@@ -1528,11 +1582,11 @@ written.append(page("explore/index.html", title, desc, body, [webapp_ld, bc], ex
                     head_extra="<noscript><style>#ex-app{display:none}</style></noscript>\n", after=after))
 
 # ---------------------------------------------------------------- landing page
-shots = [("home", "Wisconsin Eats home screen: Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places and Inspections guides, with a search box for restaurants statewide.", "Guides for Fridays, supper clubs and custard."),
-         ("fishfry", "Friday Fish Fry list in Wisconsin Eats, sorted by distance from downtown Milwaukee, with the fish each place serves.", "Fish fries nearest you first."),
-         ("detail", "The Del-Bar supper club in Wisconsin Dells in Wisconsin Eats: address, a button for ratings, hours and photos in Apple Maps, and its history since 1943.", "Each place, with live Apple Maps hours and photos."),
-         ("map", "Wisconsin Eats map of Wisconsin with clustered pins for fish fries.", "The map, by fish fry, supper club or custard."),
-         ("icons", "Wisconsin Icons list in Wisconsin Eats: James Beard honorees and long-running institutions.", "James Beard honorees and institutions.")]
+shots = [("home", "Wisconsin Eats home screen: Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places and Inspections guides, with a search box for restaurants statewide.", "The home screen: one card per guide."),
+         ("fishfry", "Friday Fish Fry list in Wisconsin Eats, sorted by distance from downtown Milwaukee, with the fish each place serves.", "Fish fries by distance, with the fish they serve."),
+         ("detail", "The Del-Bar supper club in Wisconsin Dells in Wisconsin Eats: address, a button for ratings, hours and photos in Apple Maps, and its history since 1943.", "A supper club's page, with its history."),
+         ("map", "Wisconsin Eats map of Wisconsin with clustered pins for fish fries.", "Fish fry pins across the state."),
+         ("icons", "Wisconsin Icons list in Wisconsin Eats: James Beard honorees and long-running institutions.", "Wisconsin Icons: James Beard honorees and old favorites.")]
 shot_html = []
 for name, alt, cap in shots:
     png = f"{DOCS}/img/screen-{name}.png"
@@ -1541,14 +1595,18 @@ for name, alt, cap in shots:
     shot_html.append(f'<li><picture><source srcset="/img/screen-{name}.webp" type="image/webp"><img src="/img/screen-{name}.png" alt="{e(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async"></picture><p>{e(cap)}</p></li>')
 
 all_dated_checked = all(p.hc for p in REST if p.founded or p.ip is not None)
+north, door = region_stats["northwoods"], region_stats["door-county"]
+n_north_counties = len(REGION_PAGES["northwoods"][2].split())
+# Wisconsin's own questions first (Lent, the Northwoods and Door County, Dane County's inspections), then the app ones
 faq = [
-    ("Is Wisconsin Eats free?", "Yes. The app is free, with no ads, no in-app purchases and no account."),
-    ("Where do the fish fries and supper clubs come from?", f"We checked each one by hand in {HAND_CHECKED}: every place on the fish fry, supper club and custard lists has a 2025 or 2026 source such as its own menu page, a dated news story or its Travel Wisconsin listing. The rest of the {N_REST:,} restaurants come from Overture Maps' open place data and the City of Milwaukee and Dane County license lists."),
-    ("Does the app show ratings and reviews?", "Not its own. Tap a place and Apple Maps' own place card opens inside the app with Apple's current ratings, hours, photos and directions. Our lists are never ordered by ratings."),
-    ("Does it need my location?", "Only if you want lists sorted by distance. Your location stays on your iPhone or iPad and is never sent to us. Everything else works without it."),
-    ("What are the inspection grades?", "For Madison and Dane County, the app grades places on a curve from Public Health Madison & Dane County's routine inspections since January 2023. They are our summary, not official grades. Other counties don't publish inspections in bulk."),
-    ("A place closed or is missing. How do I tell you?", f"Email {EMAIL} with the name and town. Corrections go into the next update."),
-    ("Is there an Android version?", f"Not yet. Wisconsin Eats is for iPhone and iPad, and the guides work in any browser at {CUSTOM_DOMAIN or DOMAIN}/explore/. If enough people ask at {EMAIL}, an Android app moves up the list."),
+    ("Is there a fish fry outside Lent?", f"Yes. The places in our fish fry guide serve a regular fish fry, not a Lent-only one (a few Northwoods spots are seasonal), and {NOT_ONLY_FRIDAY} of the {len(FISH)} fry on days besides Friday too. Church and Legion fries that run only in Lent aren't listed. Lent {LENT_YEAR} begins on Ash Wednesday, {long_date(ASH_WEDNESDAY)}."),
+    ("Does it cover the Northwoods and Door County?", f"Yes. The Northwoods page has {north[0]} hand-checked places across {n_north_counties} northern counties, and the Door County page has {door[0]}, fish boils included. Western and Central Wisconsin have their own pages, and the app's search works statewide."),
+    ("How were the fish fries and supper clubs checked?", f"By hand, in {HAND_CHECKED}. Each fish fry, supper club and custard stand on our lists had to turn up in a 2025 or 2026 source, such as its own menu page, a dated news story or its Travel Wisconsin listing. The other places among the {N_REST:,} come from Overture Maps' open place data and the City of Milwaukee and Dane County license lists."),
+    ("Do you rate the restaurants?", "Not with stars or reviews, and no list here is sorted by anyone's ratings. The one grade we give is the Dane County inspection summary, which is ours and not official. Open a place and Apple Maps' own card shows its ratings, hours, photos and directions, live from Apple."),
+    ("Why do only Madison-area places have inspection grades?", "Public Health Madison & Dane County publishes its routine inspections as open data, so Dane County places get a grade from their results since January 2023, set on a curve. The grade is our own summary, not an official one. Other Wisconsin counties don't publish inspections in bulk."),
+    ("Does the app track where I go?", "No. If you allow location, your iPhone or iPad uses it to list the closest places first, and it never reaches us. Skip it and the guides, search and map work the same."),
+    ("A place on your list closed, or one is missing. Who do I tell?", f"Send the name and town to {EMAIL}; we correct the list in the next update."),
+    ("Is there an Android app?", f"Not for now: the app is for iPhone and iPad. On an Android phone, the web app at {CUSTOM_DOMAIN or DOMAIN}/explore/ has the same guides. Asking for Android at {EMAIL} helps move it up the list."),
 ]
 faq_html = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in faq)
 faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "@id": f"{DOMAIN}/#faq",
@@ -1564,16 +1622,17 @@ if APP_STORE_URL:
     app_node["installUrl"] = APP_STORE_URL
     app_node["sameAs"] = [APP_STORE_URL]
 app_ld = {"@context": "https://schema.org", "@graph": [app_node]}
-title = "Wisconsin Eats: Fish Fry, Supper Club & Restaurant App"
-desc = fit([f"Free iPhone and iPad guide to {N_REST:,} Wisconsin restaurants, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands.",
-            f"Free iPhone and iPad guide to {N_REST:,} Wisconsin restaurants, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and custard stands.",
-            f"A free iPhone and iPad guide to Wisconsin restaurants, with {len(FISH)} hand-checked Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands."], 140, 160)
+title = fit(["Wisconsin Eats: Find a Fish Fry, Supper Club or Restaurant", "Wisconsin Eats: Fish Fry Finder and Supper Club Guide"], 50, 60)
+desc = fit([f"Find a Wisconsin Friday fish fry near you: {len(FISH)} checked by hand, plus {len(SUP)} supper clubs, {len(CUST)} custard stands and {N_REST:,} restaurants. Free iPhone app.",
+            f"Which tavern near you fries perch on Friday? {len(FISH)} hand-checked Wisconsin fish fries, {len(SUP)} supper clubs and {N_REST:,} restaurants, free on iPhone."], 140, 160)
 city_cards = "".join(f'<li><a href="{city_url(c)}">{e(c)}</a></li>' for c in CITY_PAGES)
+checked_line = (f"The {len(FISH)} fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands in the guides were each checked open in {HAND_CHECKED}"
+                + (", and so was every place shown with a founding year or an honor." if all_dated_checked else "."))
 body = f"""  <main id="main">
   <section class="hero">
-    <p class="kicker">{BRAND}: the {TAGLINE.lower()} for iPhone and iPad</p>
-    <h1>Wisconsin's restaurants, and the fish fries worth the drive</h1>
-    <p class="lede">{BRAND} is a free Wisconsin restaurant guide. Find a Friday fish fry near you, a supper club for Saturday and a custard stand for after, from lists we checked by hand, plus {N_REST:,} restaurants, cafés, taverns and bakeries in {N_TOWNS:,} towns.</p>
+    <p class="kicker">{BRAND} · {TAGLINE.lower()} · iPhone and iPad</p>
+    <h1>Wisconsin restaurants, from Friday fish fry to supper club</h1>
+    <p class="lede">Which tavern near you fries perch on Friday night? {BRAND} answers that from a hand-checked list of {len(FISH)} fish fries, with {len(SUP)} supper clubs and {len(CUST)} custard stands beside it, plus {N_REST:,} restaurants, cafés, taverns and bakeries across {N_TOWNS:,} Wisconsin towns.</p>
     {cta('<a class="btn btn-ghost" href="/explore/">Search on the web</a>')}
     <ul class="stats" aria-label="What's in the app">
       <li><b>{len(FISH)}</b><span>Friday fish fries</span></li>
@@ -1584,65 +1643,65 @@ body = f"""  <main id="main">
   </section>
 
   <section id="what">
-    <h2>A Wisconsin restaurant guide that knows what Friday means</h2>
-    <p class="sub">General restaurant apps rank by star ratings and can't tell you who serves perch on Friday. {BRAND} starts from the things people here actually look for: a fish fry, a supper club with a relish tray, a custard stand with a flavor of the day, and the old places that have been open since before your grandparents. {"Every one of those was checked open in " + HAND_CHECKED if all_dated_checked else "The guides list only places checked open in " + HAND_CHECKED}. For ratings, hours and photos, each place opens Apple Maps' own live card.</p>
+    <h2>Built around Friday night, not star ratings</h2>
+    <p class="sub">Most restaurant apps sort by stars. This one starts from the Wisconsin calendar: fish on Friday, a supper club when there's something to celebrate, custard on a summer evening, and the taverns and bakeries that have been open for generations. {checked_line} Ratings, hours and photos are Apple Maps' own, in its live place card.</p>
   </section>
 
   <section id="how">
-    <h2>How it works</h2>
+    <h2>From the couch to the fish fry line</h2>
     <ol class="steps">
-      <li class="step"><div class="n" aria-hidden="true">1</div><div><h3>Pick a guide.</h3><p>Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons, Oldest Places, or search {N_REST:,} restaurants by name, town or street.</p></div></li>
-      <li class="step"><div class="n" aria-hidden="true">2</div><div><h3>See what's near you.</h3><p>Sort by distance, filter by town or cuisine, or browse the map. Each fish fry lists the fish and the days it's served.</p></div></li>
-      <li class="step"><div class="n" aria-hidden="true">3</div><div><h3>Go.</h3><p>Open Apple Maps' place card for live hours and photos, call, get directions, or save it for Friday.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">1</div><div><h3>Choose what you're after.</h3><p>Friday Fish Fry, Supper Clubs, Frozen Custard, Wisconsin Icons or Oldest Places, or type a name, a town or a street into the search.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">2</div><div><h3>Narrow it down.</h3><p>Put the closest places first, filter by town or kind of food, or switch to the map. Fish fry entries name the fish and the days when the place lists them.</p></div></li>
+      <li class="step"><div class="n" aria-hidden="true">3</div><div><h3>Head out.</h3><p>Apple Maps' card shows today's hours and photos. From there, phone ahead, start directions, or tuck the place into Saved for next Friday.</p></div></li>
     </ol>
   </section>
 
   <section id="screens">
-    <h2>What it looks like</h2>
+    <h2>Inside the app</h2>
     <ul class="shots" tabindex="0" aria-label="Wisconsin Eats app screenshots">
       {"".join(shot_html)}
     </ul>
   </section>
 
   <section id="guides">
-    <h2>Wisconsin food guides</h2>
-    <p class="sub">The app's hand-checked lists, readable on the web.</p>
+    <h2>Read the guides on the web</h2>
+    <p class="sub">The hand-checked lists from the app, one page each.</p>
     <div class="grid2">
-      <a class="card" href="/wisconsin-fish-fry.html"><h3>Wisconsin Friday fish fry guide</h3><p>{len(FISH)} fish fries by region and town, with the fish, days and sides.</p></a>
-      <a class="card" href="/wisconsin-supper-clubs.html"><h3>Wisconsin supper club guide</h3><p>{len(SUP)} supper clubs, with founding years and Friday fish fries.</p></a>
-      <a class="card" href="/wisconsin-frozen-custard.html"><h3>Wisconsin frozen custard stands</h3><p>{len(CUST)} local stands, without the big chains.</p></a>
-      <a class="card" href="/wisconsin-lent-fish-fry.html"><h3>Lent fish fry {LENT_YEAR}</h3><p>Lent dates, plus perch, walleye and bluegill fish fries and the places that fry on other days.</p></a>
-      <a class="card" href="/explore/"><h3>Search the state</h3><p>{N_REST:,} places in {N_TOWNS:,} towns, from open map data and the Milwaukee and Dane County license lists. Search them on the web.</p></a>
-      <a class="card" href="/about.html"><h3>How the lists are made</h3><p>Who makes {BRAND}, where each listing comes from and how the hand checks work.</p></a>
+      <a class="card" href="/wisconsin-fish-fry.html"><h3>Wisconsin Friday fish fry guide</h3><p>{len(FISH)} fish fries grouped by region and town, each with its fish, days and sides when the place lists them.</p></a>
+      <a class="card" href="/wisconsin-supper-clubs.html"><h3>Wisconsin supper club guide</h3><p>{len(SUP)} supper clubs by region, with the year each opened where we could pin it down.</p></a>
+      <a class="card" href="/wisconsin-frozen-custard.html"><h3>Wisconsin frozen custard stands</h3><p>{len(CUST)} local stands; chains with five or more Wisconsin locations are left out.</p></a>
+      <a class="card" href="/wisconsin-lent-fish-fry.html"><h3>Lent fish fry {LENT_YEAR}</h3><p>Every Friday of Lent with its date, then the perch, walleye and bluegill fries and the ones open on other days.</p></a>
+      <a class="card" href="/explore/"><h3>Search the state</h3><p>Look up any of {N_REST:,} places in {N_TOWNS:,} towns by name, town, street or fish, in the browser.</p></a>
+      <a class="card" href="/about.html"><h3>How the lists are made</h3><p>Where the listings come from, how a place gets hand-checked, and who is behind {BRAND}.</p></a>
     </div>
   </section>
 
   <section id="cities">
-    <h2>Fish fries and supper clubs by city</h2>
-    <p class="sub">Fish fries, supper clubs, custard, local icons and the oldest places in Wisconsin's biggest towns. <a href="/cities/">All cities and regions</a>.</p>
+    <h2>Fish fry and supper clubs, city by city</h2>
+    <p class="sub">Each city page gathers its fish fries, supper clubs, custard stands, icons and oldest dated places. <a href="/cities/">See every city and region</a>.</p>
     <ul class="cities">{city_cards}</ul>
-    <p class="sub">And by region:</p>
+    <p class="sub">Or a region, from Door County to the Northwoods:</p>
     {region_links()}
   </section>
 
   <section id="pricing">
-    <h2>Free, and staying that way</h2>
-    <p class="sub">No ads, no subscription, no in-app purchases, no account. The whole guide is built into the app, so lists open instantly and work with a weak signal up north.</p>
+    <h2>No price tag, no ads</h2>
+    <p class="sub">{BRAND} costs nothing: no sign-up, no ads, nothing to buy inside it. The data ships with the app, so the lists still open on a lake road with one bar of signal.</p>
   </section>
 
   <section id="privacy">
-    <h2>Your Friday plans are your business</h2>
-    <p class="sub">{BRAND} collects nothing. If you allow location, it only sorts lists by distance on your device. Saved places stay on your device. This website sets no cookies and runs no trackers. <a href="/privacy.html">Read the privacy policy</a>.</p>
+    <h2>What we know about you: nothing</h2>
+    <p class="sub">The app sends us no data at all. If you share your location, the phone uses it to put the closest places first, and the places you save stay on the phone too. This site has no cookies and no trackers. <a href="/privacy.html">Read how the app and this site handle data</a>.</p>
   </section>
 
   <section id="faq">
-    <h2>Questions</h2>
+    <h2>Fish fry and app questions</h2>
     {faq_html}
   </section>
 
   <section id="download" class="final">
-    <h2>Find Friday's fish fry</h2>
-    <p class="sub">{BRAND} {"is on the App Store" if APP_STORE_URL else "is coming to the App Store"} for iPhone and iPad. Free.</p>
+    <h2>Ready for Friday?</h2>
+    <p class="sub">{BRAND} is free for iPhone and iPad{" on the App Store" if APP_STORE_URL else ", and on its way to the App Store. Ask for early access, or use the guides and the web app in the meantime"}.</p>
     <div class="cta-row">{store_button()}</div>
   </section>
   </main>"""
@@ -1658,30 +1717,30 @@ body = f"""{nav}
   <main id="main" class="legal">
   <section class="hero">
     <p class="kicker">About {BRAND}</p>
-    <h1>Who makes {BRAND}, and how</h1>
-    <p class="lede">{BRAND} (“WI Eats”) is an independent app and website by {AUTHOR}: a free guide to {N_REST:,} Wisconsin restaurants, with hand-checked lists of {len(FISH)} Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands. No account, no ads, no tracking.</p>
+    <h1>Who's behind {BRAND}, and where its lists come from</h1>
+    <p class="lede">{BRAND} (“WI Eats”) is {AUTHOR}'s independent app and website, a free guide to {N_REST:,} Wisconsin restaurants. Its {len(FISH)} Friday fish fries, {len(SUP)} supper clubs and {len(CUST)} custard stands were each checked by hand, and there's no account to make, no ads and no tracking.</p>
   </section>
   <section id="maker">
     <h2 id="nicholas-soderstrom">Who makes it</h2>
-    <p>{AUTHOR} makes the {BRAND} app and this site. {BRAND} is not affiliated with, endorsed by or operated by the City of Milwaukee, Public Health Madison &amp; Dane County, the James Beard Foundation, Apple, or any restaurant, team or chain.</p>
-    <h2>How the lists are built</h2>
-    <p>Fish fries, supper clubs, custard stands and icons are hand-checked: each was checked in {HAND_CHECKED} against a 2025 or 2026 source (the place's own website or menu, local news, or its Travel Wisconsin listing), with the address checked. Research records facts only, with a source for every place: no review text and no ratings from anyone. Places the research finds closed come off the lists.</p>
-    <p>The rest of the {N_REST:,} places come from Overture Maps' open place data, the City of Milwaukee's active food and tavern licenses, and Public Health Madison &amp; Dane County's licensed establishments. Map listings are kept only when they proved reliable: checked against Milwaukee's and Dane County's license lists, high-confidence listings matched a licensed business {rate_txt} of the time. Website links are checked, and any that no longer belong to the place are left out.</p>
-    <p>Inspection grades are ours, graded on a curve from Dane County's routine inspections since January 2023. They are our summary, not official grades, and other counties don't publish inspections in bulk. Ratings, reviews, hours and photos in the app are Apple Maps' own, shown live in Apple's place card; {BRAND} doesn't store or rank by them.</p>
+    <p>{AUTHOR} builds and maintains both the app and this website. {BRAND} is not affiliated with, endorsed by or operated by the City of Milwaukee, Public Health Madison &amp; Dane County, the James Beard Foundation, Apple, or any restaurant, team or chain.</p>
+    <h2>How a place gets on the lists</h2>
+    <p>Every fish fry, supper club, custard stand and icon on the lists was looked up by hand in {HAND_CHECKED}. Each needed a 2025 or 2026 source, such as its own website or menu, a local news story or its Travel Wisconsin listing, and its street address was checked as well. The research keeps facts and a source link for each place, never review text or anyone's ratings, and a place it finds closed is taken off.</p>
+    <p>Everything else among the {N_REST:,} comes from Overture Maps' open place data, Milwaukee's list of active food dealer and tavern licenses, and Public Health Madison &amp; Dane County's list of licensed establishments. Map listings stay in only where that source proved reliable: tested against the Milwaukee and Dane County license lists, its high-confidence listings turned out to be a licensed business {rate_txt} of the time. Each website link is fetched and checked, and one that no longer leads to the place's own site is dropped.</p>
+    <p>The letter grades on Dane County places are ours, set on a curve from the county's routine inspections since January 2023: a summary of its results, not an official grade. No other Wisconsin county publishes inspections in bulk, so places elsewhere have no grade. Star ratings, reviews, hours and photos in the app all come live from Apple Maps' place card; {BRAND} keeps none of them and sorts by none of them.</p>
     <h2>Updates</h2>
-    <p>This build's restaurant data is from {long_date(BUILD_DATE)}; the hand checks were done in {HAND_CHECKED}. The data is rebuilt when the research or the open data changes, and corrections go into the next update. Places open and close, so check before you go.</p>
+    <p>The restaurant data in this build dates from {long_date(BUILD_DATE)}, and the hand checks from {HAND_CHECKED}. A new build follows when the research or the open data changes, and that's when corrections land. Restaurants open and close, so call ahead before a long drive.</p>
     <h2>Sources and licenses</h2>
     <ul>
       <li><b>Overture Maps Foundation</b> (<a href="https://overturemaps.org" rel="noopener">overturemaps.org</a>): restaurant listings and websites outside the Milwaukee and Dane County license lists, filtered and reformatted for {BRAND}. Data from Meta, Microsoft, DAC and BrightQuery, available under the <a href="/licenses/CDLA-Permissive-2.0.txt">Community Data License Agreement – Permissive 2.0</a>. Data from Foursquare, © Foursquare Labs, Inc., available under the <a href="/licenses/Apache-2.0.txt">Apache License 2.0</a>; see the notice below. Data from AllThePlaces, available under CC0 1.0.</li>
       <li><b>City of Milwaukee Open Data</b>: active food dealer and tavern licenses, modified for use here. The City of Milwaukee makes no warranty as to the data's accuracy, completeness or timeliness and does not endorse {BRAND}.</li>
       <li><b>Public Health Madison &amp; Dane County</b>: licensed establishments and routine inspection results, modified for use here. Public Health Madison &amp; Dane County makes no warranty as to the data's accuracy, completeness or timeliness and does not endorse {BRAND}.</li>
-      <li><b>Honors</b>: James Beard Foundation awards, finalists, semifinalists and America's Classics, and the other honors shown, are reported as facts and checked by hand against public announcements. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation.</li>
+      <li><b>Honors</b>: shown as plain facts, each checked by hand against its public announcement: James Beard Foundation awards, finalists, semifinalists and America's Classics, and the other honors listed with a place. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation.</li>
       <li><b>Maps</b>: county outlines © OpenStreetMap contributors and Overture Maps Foundation (ODbL). In the app, maps, place cards and directions are by Apple Maps.</li>
     </ul>
     <h2>Foursquare notice</h2>
     <div class="notice">{e(FOURSQUARE_NOTICE)}</div>
     <h2>Contact</h2>
-    <p>Corrections, a missing or closed place, or anything else: <a href="mailto:{EMAIL}">{EMAIL}</a>. See also the <a href="/privacy.html">privacy policy</a> and <a href="/terms.html">terms of use</a>.</p>
+    <p>Spotted a closed place, a missing one or a mistake? Write to <a href="mailto:{EMAIL}">{EMAIL}</a>. The <a href="/privacy.html">privacy policy</a> and <a href="/terms.html">terms of use</a> cover the rest.</p>
   </section>
   </main>"""
 about_ld = {"@context": "https://schema.org", "@type": "AboutPage", "url": f"{DOMAIN}/about.html", "name": f"About {BRAND}",
@@ -1708,17 +1767,17 @@ body = f"""{nav}
       <li><b>Spotlight.</b> The app adds its fish fries, supper clubs and other hand-checked places to your device's search index so you can find them from Spotlight. That index stays on your device.</li>
       <li><b>Calls, websites and email</b> you start from a place open in the Phone app, your browser or Mail, and are handled by them.</li>
     </ul>
-    <p>On the App Store, the app's privacy label is "Data Not Collected".</p>
+    <p>{'On the App Store, the app&#39;s privacy label is &quot;Data Not Collected&quot;.' if APP_STORE_URL else 'The app&#39;s privacy answers to Apple are &quot;Data Not Collected&quot;, which is the label the App Store will show once the app is live there.'}</p>
     <h2>This website</h2>
     <p>The site is static pages hosted on GitHub Pages. It sets no cookies and loads no analytics, fonts or scripts from anyone else. GitHub may keep standard server logs, such as IP addresses, for security; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub's privacy statement</a>.</p>
     <h2>The web app</h2>
     <ul>
-      <li><b>Saved places and your last guide</b> in the web app at <a href="/explore/">/explore/</a> are kept in this browser's local storage only. They never leave your browser, and clearing this site's data in your browser deletes them.</li>
-      <li><b>Near me.</b> The web app asks for your location only when you press Near me, and your browser asks you first. The location is used in the page to sort places by distance and is never sent anywhere, including to us.</li>
+      <li><b>Saved places and your last guide</b> in the web app at <a href="/explore/">/explore/</a> are kept in this browser's local storage only, under two keys: <code>we-saved</code> (the places you saved) and <code>we-guide</code> (the guide you last opened). They never leave your browser, and clearing this site's data in your browser deletes them.</li>
+      <li><b>Near me.</b> The web app asks for your location only when you press Near me or choose the Nearest sort, and your browser asks you first. The location is used in the page to sort places by distance and is never sent anywhere, including to us.</li>
       <li><b>Links out.</b> Apple Maps, directions, websites and phone numbers open in Apple Maps, the place's own site or your phone, under their own privacy policies.</li>
     </ul>
     <h2>Email</h2>
-    <p>If you email us, we use your message and address only to reply and to fix the listing you told us about. We don't add you to a mailing list or share your address.</p>
+    <p>If you email us, we use your message and address only to reply and to fix the listing you told us about. We don't add you to a mailing list or share your address. Mail to {EMAIL} is forwarded to our inbox by Cloudflare Email Routing, which handles it under <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare's privacy policy</a>.</p>
     <h2>Children</h2>
     <p>The app collects no personal information from anyone, including children.</p>
     <h2>Changes and contact</h2>
@@ -1768,12 +1827,12 @@ written.append(page("terms.html", "Terms of Use: Wisconsin Eats Fish Fry & Resta
 
 body = f"""  <main id="main">
   <section class="hero">
-    <h1>Page not found</h1>
-    <p class="lede">That page isn't here. Try the <a href="/">{BRAND} home page</a>, the <a href="/wisconsin-fish-fry.html">fish fry guide</a>, the <a href="/wisconsin-supper-clubs.html">supper club guide</a> or <a href="/cities/">cities and regions</a>.</p>
+    <h1>This page isn't on the menu</h1>
+    <p class="lede">The link may be old: a place's page comes down when the place leaves our lists. From here, try the <a href="/">{BRAND} home page</a>, the <a href="/wisconsin-fish-fry.html">Friday fish fry guide</a>, the <a href="/wisconsin-supper-clubs.html">supper club guide</a> or the <a href="/cities/">cities and regions</a>.</p>
     <p><a class="btn" href="/explore/">Search Wisconsin restaurants</a></p>
   </section>
   </main>"""
-page("404.html", f"Page not found | {BRAND}", "This page doesn't exist.", body, robots="noindex,follow")
+page("404.html", f"Page not found | {BRAND}", "There's no page at this address. Try the fish fry guide, the supper club guide or the restaurant search.", body, robots="noindex,follow")
 
 # ---------------------------------------------------------------- plumbing
 # pages that left the lists (a place no longer hand-checked, say) are removed, so the sitemap and the files always agree
@@ -1812,3 +1871,5 @@ print("wrote", len(written) + 1, "pages:", len(CHECKED_PLACES), "place pages,", 
       ", ".join(w for w in written if not w.startswith(("places/", "cities/", "regions/"))))
 print(f"restaurants {N_REST:,} in {N_TOWNS} towns | fish fry {len(FISH)} | supper {len(SUP)} | custard {len(CUST)} | web app rows {len(rows_web):,}")
 print("top fish:", FISH_WORDS.most_common(10))
+print(f"websites: {n_sites - len(SITE_DROPS):,} of {n_sites:,} in places.json linked; left off by a later verdict: "
+      + (", ".join(f"{u} ({w})" for u, w in sorted(SITE_DROPS.items())[:10]) or "none"))

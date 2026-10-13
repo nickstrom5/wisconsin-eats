@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'sha256-ioKstaJwvRT8+Xo2/kTbQ2h6pgcouNaC4RrTfGh37OU='; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'sha256-AIGJjYs/+BBWZlwpFABYTjKAMgB5UxI5LyasajdZx6o='; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>About Wisconsin Eats: Sources, Methods and Who Makes It</title>
 <meta name="description" content="Wisconsin Eats is an independent app and website by Nicholas Soderstrom: how the hand-checked fish fry and supper club lists are built, and our sources.">
 <link rel="canonical" href="https://wisconsin.eatsranked.com/about.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#203731">
+<!-- <meta name="apple-itunes-app" content="app-id=6816947017"> goes live with the app: set APP_STORE_URL in scripts/make-site.py -->
 <meta property="og:title" content="About Wisconsin Eats: Sources, Methods and Who Makes It">
 <meta property="og:description" content="Wisconsin Eats is an independent app and website by Nicholas Soderstrom: how the hand-checked fish fry and supper club lists are built, and our sources.">
 <meta property="og:url" content="https://wisconsin.eatsranked.com/about.html">
@@ -26,6 +27,7 @@
 <meta name="twitter:image" content="https://wisconsin.eatsranked.com/og.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -50,7 +52,8 @@
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 var(--text); -webkit-font-smoothing: antialiased; }
   a { color: var(--green); text-underline-offset: 2px; }
-  a:focus-visible, summary:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+  /* the gold ring alone is 1.7:1 on the light page; the green ring inside it gives the focus indicator 3:1 or more in both schemes */
+  a:focus-visible, summary:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; box-shadow: 0 0 0 3px var(--green); }
   .skip { position: absolute; left: -9999px; top: 0; background: var(--gold); color: var(--on-gold); padding: 10px 14px; font-weight: 700; z-index: 30; }
   .skip:focus { left: 8px; top: 8px; }
   .vh { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
@@ -158,8 +161,8 @@
     dl.facts dd { margin-bottom: 10px; }
   }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://wisconsin.eatsranked.com/#org","name":"Wisconsin Eats","url":"https://wisconsin.eatsranked.com/","logo":{"@type":"ImageObject","url":"https://wisconsin.eatsranked.com/icon-512.png","width":512,"height":512},"founder":{"@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom"},"email":"work-with-nick@gmail.com","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"work-with-nick@gmail.com","availableLanguage":"en"},"parentOrganization":{"@type":"Organization","@id":"https://eatsranked.com/#organization","name":"Eats Ranked","url":"https://eatsranked.com/"}},{"@type":"Person","@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom","name":"Nicholas Soderstrom","url":"https://wisconsin.eatsranked.com/about.html"},{"@type":"WebSite","@id":"https://wisconsin.eatsranked.com/#website","name":"Wisconsin Eats","alternateName":["WI Eats","Wisconsin Eats app"],"url":"https://wisconsin.eatsranked.com/","inLanguage":"en","publisher":{"@id":"https://wisconsin.eatsranked.com/#org"}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","url":"https://wisconsin.eatsranked.com/about.html","name":"About Wisconsin Eats","mainEntity":{"@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom"},"isPartOf":{"@id":"https://wisconsin.eatsranked.com/#website"},"dateModified":"2026-10-07"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://wisconsin.eatsranked.com/#org","name":"Wisconsin Eats","url":"https://wisconsin.eatsranked.com/","logo":{"@type":"ImageObject","url":"https://wisconsin.eatsranked.com/icon-512.png","width":512,"height":512},"founder":{"@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom"},"email":"nick@eatsranked.com","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"nick@eatsranked.com","availableLanguage":"en"},"parentOrganization":{"@type":"Organization","@id":"https://eatsranked.com/#organization","name":"Eats Ranked","url":"https://eatsranked.com/"}},{"@type":"Person","@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom","name":"Nicholas Soderstrom","url":"https://wisconsin.eatsranked.com/about.html"},{"@type":"WebSite","@id":"https://wisconsin.eatsranked.com/#website","name":"Wisconsin Eats","alternateName":["WI Eats","Wisconsin Eats app"],"url":"https://wisconsin.eatsranked.com/","inLanguage":"en","publisher":{"@id":"https://wisconsin.eatsranked.com/#org"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","url":"https://wisconsin.eatsranked.com/about.html","name":"About Wisconsin Eats","mainEntity":{"@id":"https://wisconsin.eatsranked.com/about.html#nicholas-soderstrom"},"isPartOf":{"@id":"https://wisconsin.eatsranked.com/#website"},"dateModified":"2026-10-12"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wisconsin.eatsranked.com/"},{"@type":"ListItem","position":2,"name":"About and sources","item":"https://wisconsin.eatsranked.com/about.html"}]}</script>
 </head>
 <body>
@@ -179,24 +182,24 @@
   <main id="main" class="legal">
   <section class="hero">
     <p class="kicker">About Wisconsin Eats</p>
-    <h1>Who makes Wisconsin Eats, and how</h1>
-    <p class="lede">Wisconsin Eats (“WI Eats”) is an independent app and website by Nicholas Soderstrom: a free guide to 16,346 Wisconsin restaurants, with hand-checked lists of 402 Friday fish fries, 211 supper clubs and 28 custard stands. No account, no ads, no tracking.</p>
+    <h1>Who's behind Wisconsin Eats, and where its lists come from</h1>
+    <p class="lede">Wisconsin Eats (“WI Eats”) is Nicholas Soderstrom's independent app and website, a free guide to 16,346 Wisconsin restaurants. Its 402 Friday fish fries, 211 supper clubs and 28 custard stands were each checked by hand, and there's no account to make, no ads and no tracking.</p>
   </section>
   <section id="maker">
     <h2 id="nicholas-soderstrom">Who makes it</h2>
-    <p>Nicholas Soderstrom makes the Wisconsin Eats app and this site. Wisconsin Eats is not affiliated with, endorsed by or operated by the City of Milwaukee, Public Health Madison &amp; Dane County, the James Beard Foundation, Apple, or any restaurant, team or chain.</p>
-    <h2>How the lists are built</h2>
-    <p>Fish fries, supper clubs, custard stands and icons are hand-checked: each was checked in September 2026 against a 2025 or 2026 source (the place's own website or menu, local news, or its Travel Wisconsin listing), with the address checked. Research records facts only, with a source for every place: no review text and no ratings from anyone. Places the research finds closed come off the lists.</p>
-    <p>The rest of the 16,346 places come from Overture Maps' open place data, the City of Milwaukee's active food and tavern licenses, and Public Health Madison &amp; Dane County's licensed establishments. Map listings are kept only when they proved reliable: checked against Milwaukee's and Dane County's license lists, high-confidence listings matched a licensed business 75–79% of the time. Website links are checked, and any that no longer belong to the place are left out.</p>
-    <p>Inspection grades are ours, graded on a curve from Dane County's routine inspections since January 2023. They are our summary, not official grades, and other counties don't publish inspections in bulk. Ratings, reviews, hours and photos in the app are Apple Maps' own, shown live in Apple's place card; Wisconsin Eats doesn't store or rank by them.</p>
+    <p>Nicholas Soderstrom builds and maintains both the app and this website. Wisconsin Eats is not affiliated with, endorsed by or operated by the City of Milwaukee, Public Health Madison &amp; Dane County, the James Beard Foundation, Apple, or any restaurant, team or chain.</p>
+    <h2>How a place gets on the lists</h2>
+    <p>Every fish fry, supper club, custard stand and icon on the lists was looked up by hand in September 2026. Each needed a 2025 or 2026 source, such as its own website or menu, a local news story or its Travel Wisconsin listing, and its street address was checked as well. The research keeps facts and a source link for each place, never review text or anyone's ratings, and a place it finds closed is taken off.</p>
+    <p>Everything else among the 16,346 comes from Overture Maps' open place data, Milwaukee's list of active food dealer and tavern licenses, and Public Health Madison &amp; Dane County's list of licensed establishments. Map listings stay in only where that source proved reliable: tested against the Milwaukee and Dane County license lists, its high-confidence listings turned out to be a licensed business 75–79% of the time. Each website link is fetched and checked, and one that no longer leads to the place's own site is dropped.</p>
+    <p>The letter grades on Dane County places are ours, set on a curve from the county's routine inspections since January 2023: a summary of its results, not an official grade. No other Wisconsin county publishes inspections in bulk, so places elsewhere have no grade. Star ratings, reviews, hours and photos in the app all come live from Apple Maps' place card; Wisconsin Eats keeps none of them and sorts by none of them.</p>
     <h2>Updates</h2>
-    <p>This build's restaurant data is from October 7, 2026; the hand checks were done in September 2026. The data is rebuilt when the research or the open data changes, and corrections go into the next update. Places open and close, so check before you go.</p>
+    <p>The restaurant data in this build dates from October 12, 2026, and the hand checks from September 2026. A new build follows when the research or the open data changes, and that's when corrections land. Restaurants open and close, so call ahead before a long drive.</p>
     <h2>Sources and licenses</h2>
     <ul>
       <li><b>Overture Maps Foundation</b> (<a href="https://overturemaps.org" rel="noopener">overturemaps.org</a>): restaurant listings and websites outside the Milwaukee and Dane County license lists, filtered and reformatted for Wisconsin Eats. Data from Meta, Microsoft, DAC and BrightQuery, available under the <a href="/licenses/CDLA-Permissive-2.0.txt">Community Data License Agreement – Permissive 2.0</a>. Data from Foursquare, © Foursquare Labs, Inc., available under the <a href="/licenses/Apache-2.0.txt">Apache License 2.0</a>; see the notice below. Data from AllThePlaces, available under CC0 1.0.</li>
       <li><b>City of Milwaukee Open Data</b>: active food dealer and tavern licenses, modified for use here. The City of Milwaukee makes no warranty as to the data's accuracy, completeness or timeliness and does not endorse Wisconsin Eats.</li>
       <li><b>Public Health Madison &amp; Dane County</b>: licensed establishments and routine inspection results, modified for use here. Public Health Madison &amp; Dane County makes no warranty as to the data's accuracy, completeness or timeliness and does not endorse Wisconsin Eats.</li>
-      <li><b>Honors</b>: James Beard Foundation awards, finalists, semifinalists and America's Classics, and the other honors shown, are reported as facts and checked by hand against public announcements. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation.</li>
+      <li><b>Honors</b>: shown as plain facts, each checked by hand against its public announcement: James Beard Foundation awards, finalists, semifinalists and America's Classics, and the other honors listed with a place. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation.</li>
       <li><b>Maps</b>: county outlines © OpenStreetMap contributors and Overture Maps Foundation (ODbL). In the app, maps, place cards and directions are by Apple Maps.</li>
     </ul>
     <h2>Foursquare notice</h2>
@@ -216,7 +219,7 @@ We also encourage you to join our Placemaker community where you can contribute 
 
 Notice of changes: Wisconsin Eats filtered the Data to eating and drinking places in Wisconsin, removed duplicates and closed, adult or unverifiable listings, and reformatted it for this app (2026).</div>
     <h2>Contact</h2>
-    <p>Corrections, a missing or closed place, or anything else: <a href="mailto:work-with-nick@gmail.com">work-with-nick@gmail.com</a>. See also the <a href="/privacy.html">privacy policy</a> and <a href="/terms.html">terms of use</a>.</p>
+    <p>Spotted a closed place, a missing one or a mistake? Write to <a href="mailto:nick@eatsranked.com">nick@eatsranked.com</a>. The <a href="/privacy.html">privacy policy</a> and <a href="/terms.html">terms of use</a> cover the rest.</p>
   </section>
   </main>
   <footer>
@@ -231,9 +234,9 @@ Notice of changes: Wisconsin Eats filtered the Data to eating and drinking place
       <a href="/about.html">About and sources</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
-      <a href="mailto:work-with-nick@gmail.com">Email us</a>
+      <a href="mailto:nick@eatsranked.com">Email us</a>
     </nav>
-    <p>Place data: hand-checked research by Wisconsin Eats (checked September 2026); Overture Maps Foundation places data (CDLA Permissive 2.0), including data from Foursquare (Apache 2.0) and AllThePlaces (CC0 1.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Restaurant data as of October 7, 2026. Not affiliated with or endorsed by any restaurant, team, chain or government agency. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
+    <p>Place data: hand-checked research by Wisconsin Eats (checked September 2026); Overture Maps Foundation places data (CDLA Permissive 2.0), including data from Foursquare (Apache 2.0) and AllThePlaces (CC0 1.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Restaurant data as of October 12, 2026. Not affiliated with or endorsed by any restaurant, team, chain or government agency. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
     <p>© 2026 Wisconsin Eats, an independent app by Nicholas Soderstrom. Part of <a href="https://eatsranked.com/">Eats Ranked</a>, restaurant apps state by state.</p>
   </footer>
 </div>

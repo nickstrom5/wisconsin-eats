@@ -6,6 +6,10 @@ struct HomeView: View {
     /// (The size class can't tell: a split-view column reports compact.)
     var inSplitView = false
     @State private var lastRandom: String?
+    /// The moment the Friday card was last decided. Body re-runs only when observed state changes, so `.now` read in body
+    /// went stale: opened Friday night, the card still said "It's Friday" on Saturday. Refreshed at midnight and on resume.
+    @State private var today = Date.now
+    @Environment(\.scenePhase) private var scenePhase
     private let columns = [GridItem(.adaptive(minimum: 158), spacing: 12)]
 
     var body: some View {
@@ -42,6 +46,10 @@ struct HomeView: View {
         .navigationTitle("")
         // iPhone: the big header is the title, so no bar
         .toolbar(inSplitView ? .automatic : .hidden, for: .navigationBar)
+        // midnight, a time zone change or a clock change; iOS delivers it on resume if it happened while suspended
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.significantTimeChangeNotification)) { _ in today = .now }
+        // and on every return to the app: on a phone set to another zone, Wisconsin's midnight isn't the phone's
+        .onChange(of: scenePhase) { _, phase in if phase == .active { today = .now } }
     }
 
     private var header: some View {
@@ -73,7 +81,13 @@ struct HomeView: View {
         .background(RoundedRectangle(cornerRadius: 12).fill(Theme.surface2))
     }
 
-    private var isFriday: Bool { Calendar.current.component(.weekday, from: .now) == 6 }
+    /// Friday in Wisconsin (all of it is on Central time), whatever zone the phone is set to. Gregorian by name, so the
+    /// weekday number never depends on the phone's calendar setting.
+    private var isFriday: Bool {
+        var c = Calendar(identifier: .gregorian)
+        c.timeZone = TimeZone(identifier: "America/Chicago") ?? .current
+        return c.component(.weekday, from: today) == 6
+    }
 
     private var fridayCard: some View {
         Button { model.openGuide(.fishFry) } label: {

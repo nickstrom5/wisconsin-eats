@@ -434,7 +434,7 @@ CSS = """
 """
 
 # ---------------------------------------------------------------- structured data shared by every page
-ORG_ID, PERSON_ID, SITE_ID = f"{DOMAIN}/#org", f"{DOMAIN}/about.html#nicholas-soderstrom", f"{DOMAIN}/#website"
+ORG_ID, PERSON_ID, SITE_ID = f"{DOMAIN}/#org", "https://work-with-nick.com/#person", f"{DOMAIN}/#website"
 BASE_LD = {"@context": "https://schema.org", "@graph": [
     {"@type": "Organization", "@id": ORG_ID, "name": BRAND, "url": f"{DOMAIN}/",
      "logo": {"@type": "ImageObject", "url": f"{DOMAIN}/icon-512.png", "width": 512, "height": 512}, "founder": {"@id": PERSON_ID},
@@ -442,7 +442,7 @@ BASE_LD = {"@context": "https://schema.org", "@graph": [
      # the Eats Ranked hub lists this site as a subOrganization; say so from this side too
      "parentOrganization": {"@type": "Organization", "@id": "https://eatsranked.com/#organization", "name": "Eats Ranked",
                             "url": "https://eatsranked.com/"}},
-    {"@type": "Person", "@id": PERSON_ID, "name": AUTHOR, "url": f"{DOMAIN}/about.html"},
+    {"@type": "Person", "@id": PERSON_ID, "name": AUTHOR, "url": "https://work-with-nick.com/"},
     {"@type": "WebSite", "@id": SITE_ID, "name": BRAND, "alternateName": ["WI Eats", "Wisconsin Eats app"], "url": f"{DOMAIN}/",
      "inLanguage": "en", "publisher": {"@id": ORG_ID}}]}
 
@@ -578,7 +578,7 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
       <a href="mailto:{EMAIL}">Email us</a>
     </nav>
     <p>Place data: hand-checked research by {BRAND} (checked {HAND_CHECKED}); Overture Maps Foundation places data (CDLA Permissive 2.0), including data from Foursquare (Apache 2.0) and AllThePlaces (CC0 1.0); © OpenStreetMap contributors (ODbL); City of Milwaukee Open Data; Public Health Madison &amp; Dane County. Restaurant data as of {long_date(BUILD_DATE)}. Not affiliated with or endorsed by any restaurant, team, chain or government agency. James Beard Foundation and James Beard Award are trademarks of the James Beard Foundation. Places open and close, so check before you go.</p>
-    <p>© {BUILD.year} {BRAND}, an independent app by {AUTHOR}. Part of <a href="https://eatsranked.com/">Eats Ranked</a>, restaurant apps state by state.</p>
+    <p>© {BUILD.year} {BRAND}, an independent app by <a href="https://work-with-nick.com/" rel="author">{AUTHOR}</a>. Part of <a href="https://eatsranked.com/">Eats Ranked</a>, restaurant apps state by state.</p>
   </footer>
 </div>
 {after}</body>

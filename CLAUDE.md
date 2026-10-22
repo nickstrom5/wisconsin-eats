@@ -15,6 +15,12 @@ Read `README.md` and `playbook/01-strategy.md` first. Never modify anything in `
   keeps its tag and stays in the directory, but it is not in a guide. Copy that promises "checked open" must stay true.
 - Research records facts only: no review text, no ratings from anyone, and a source URL for every entry. Never bypass bot protection
   (403s, bot checks, logins). DATCP's search site blocks automated access, so don't touch it.
+- Tracking tags: the app export strips `ref=google`, `referrer=google_food_ordering`, `cn_channel`, `utm_*`, `fbclid`, Yext `cid=RF:YXT…`
+  and similar from every outbound link (`pipeline/tracking_params.py`, the same in every state; store ids and locations stay). The site
+  reads the app export, and a unit test fails if a tracked link is bundled (QA 2026-10-19, P1 #13).
+- `check_websites.py --retry-transient` re-fetches 429s and connection errors after a busy run, and `CHECK_WORKERS=4` slows a run;
+  `--recheck-ok` skips pages re-checked in the last 2 days, so a stopped run resumes (2026-10-21). `injection.py` is the master copy
+  for every state's checker: change it here, then copy it (and `test_injection.py`) to the others.
 - Website links: `pipeline/check_websites.py` fetches every link politely and the export drops any that isn't plainly the place's own
   live page (spam, parked, directory, moved, dead or blocked). It reads `data/wi/website_candidates.json`, which the export writes, so
   the order is: rebuild, check, rebuild. Blocked hosts match by domain, never as substrings ("restaurant.com" once dropped 171 real

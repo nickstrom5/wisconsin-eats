@@ -19,6 +19,7 @@ from common import (norm_name, nice, name_sim, cuisine, FOOD_COST, MARGIN, MARGI
                     canon_city, town_key)
 from brands import brand_of
 import official
+import tracking_params   # outbound links lose their tracking tags (QA 2026-10-19, P1 #13)
 from listings_util import official_match
 from official import street_key, street_nums
 
@@ -1192,6 +1193,9 @@ if APP:
         seen_ids.add(p["id"])
         places.append(p)
     print("website links dropped:", sum(link_drops.values()), link_drops.most_common(8))
+    # tracking tags (ref=google, utm_*, cn_channel …) off every outbound link; the store's own parameters stay (tracking_params.py)
+    tp_changes = tracking_params.scrub(places)
+    print("tracking parameters stripped from links:", sum(tp_changes.values()), dict(tp_changes))
     # every candidate link, kept or not, so the checker can re-try a dropped one next time
     json.dump(link_cands, open(f"{WI}/website_candidates.json", "w"), indent=0, ensure_ascii=False)
     calib_app = json.load(open(f"{WI}/calibration_app.json")) if os.path.exists(f"{WI}/calibration_app.json") else {}

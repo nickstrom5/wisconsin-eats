@@ -32,6 +32,14 @@ PARKED = re.compile(r"domain (?:is|may be) for sale|buy this domain|this domain 
                     r"site (?:is )?coming soon|future home of|launching soon|godaddy\.com/domainsearch|(?<![\w.-])dan\.com", re.I)
 
 
+def _urlparse(u):
+    """urlparse that never raises: a hacked page's malformed href ("http://[0]/") once stopped a whole check run (2026-10-21)."""
+    try:
+        return urllib.parse.urlparse(u)
+    except ValueError:
+        return urllib.parse.urlparse("")
+
+
 def regdom(host):
     parts = host.lower().removeprefix("www.").split(".")
     if len(parts) >= 3 and parts[-2] in ("co", "com", "org", "net") and len(parts[-1]) == 2:
@@ -46,7 +54,7 @@ CASINO_HOSTS_OK = re.compile(r"mohegansun|foxwoods|seminolehardrock|hardrock|sem
                              r"tulalip|snoqualmie|muckleshoot|emeraldqueen|angelofthewinds|clearwatercasino|sevenfeathers|"
                              r"pechanga|morongo|sycuan|viejas|barona|harrahs|caesars|mgm|ameristar|isleofcapri|blackhawk|"
                              r"monarchcasino|thelodgecasino|turningstone|resortsworld|empirecitycasino|delawarenorth|"
-                             r"oxfordcasino|hollywoodcasino|pennentertainment|wynn|venetian|sands|seneca|delmonte|"
+                             r"oxfordcasino|hollywoodcasino|riverscasino|dellagoresort|tiogadowns|bataviadowns|pennentertainment|wynn|venetian|sands|seneca|delmonte|"
                              r"rivercree|ute|skyute|sleepingute|ignacio|potawatomi|hochunk|oneida|menominee|mohican|northstar|"
                              # Wisconsin's tribal casinos as they appear in hosts (Northwoods Inn links Mole Lake Casino)
                              r"molelake|sokaogon|ho-chunk|northernlights|stcroix|lakeofthetorches|badriver|legendarywaters|"
@@ -63,7 +71,8 @@ PHARMA_HOST = re.compile(r"(?:^|[.-]|buy|cheap|generic|order|get|best|discount)(
 PHARMA_TEXT = re.compile(r"\b(?:" + PHARMA_WORDS + r")\b|online pharmacy|without (?:a )?prescription|cheap pills|erectile dysfunction|"
                          r"anabolic steroids?|steroids? (?:shop|store|drugs|for sale|online)|buy steroids?",
                          re.I)
-ADULT_TEXT = re.compile(r"\bporn\w*|\bxxx (?:videos?|movies?|sex)|\bsex (?:videos?|chat|dating|tube|cams?)|\bescorts? (?:in|service)|"
+# "food porn" and "ski-porn" (ski films on a ski bar's TVs, Matterhorn in Maine, 2026-10-21) are ordinary restaurant copy
+ADULT_TEXT = re.compile(r"(?<!food )(?<!food-)(?<!ski )(?<!ski-)(?<!surf )(?<!surf-)\bporn(?! ?star martini)\w*|\bxxx (?:videos?|movies?|sex)|\bsex (?:videos?|chat|dating|tube|cams?)|\bescorts? (?:in|service)|"
                         r"\bhookups? (?:site|app)|\bnude (?:girls|cams?|videos?)|\bonlyfans\b|\bcam ?girls?\b", re.I)
 # Other link-farm vocabulary seen in hacked small-business sites (only counted inside hidden blocks or in links away).
 FARM_TEXT = re.compile(r"payday loans?|title loans?|essay (?:writing|writer|service)|write my (?:essay|paper)|buy (?:essays?|followers)|"
@@ -72,11 +81,12 @@ FARM_TEXT = re.compile(r"payday loans?|title loans?|essay (?:writing|writer|serv
                        re.I)
 # Inline styles that hide a block: display:none, visibility:hidden, zero/one-pixel size with overflow hidden, font-size 0,
 # opacity 0, clip to nothing. Matched on the opening tag's style attribute.
-UI_HIDE = re.compile(r"display\s*:\s*none|visibility\s*:\s*hidden|(?<![\w-])(?:max-)?height\s*:\s*0(?:px)?\s*(?:;|$|!)", re.I)
+# opacity:0 is also how fade-in animations start (Max Restaurant Group's sister-restaurant menus, Fazoli's, 2026-10-21): judged like a UI block
+UI_HIDE = re.compile(r"display\s*:\s*none|visibility\s*:\s*hidden|(?<![\w-])opacity\s*:\s*0(?:\.0+)?\s*(?:;|$|!)|(?<![\w-])(?:max-)?height\s*:\s*0(?:px)?\s*(?:;|$|!)", re.I)
 # off-page hiding: off-screen offsets (not margin-top/-left, which layouts use), zero or one pixel boxes, font-size 0,
 # opacity 0, clipped to nothing
 HIDE_STYLE = re.compile(r"(?<![\w-])width\s*:\s*[01](?:px)?\s*(?:;|$|!)|(?<![\w-])height\s*:\s*1px\s*(?:;|$|!)|"
-                        r"font-size\s*:\s*0(?:px|em|rem|pt)?\s*(?:;|$|!)|(?<![\w-])opacity\s*:\s*0(?:\.0+)?\s*(?:;|$|!)|"
+                        r"font-size\s*:\s*0(?:px|em|rem|pt)?\s*(?:;|$|!)|"
                         r"clip\s*:\s*rect\(\s*0|(?<![\w-])(?:left|right|top|text-indent)\s*:\s*-\d{4,}(?:px|em|rem)|"
                         r"(?<![\w-])(?:left|right|top)\s*:\s*-\d{3,}(?:px|em|rem)[^\"']*position\s*:\s*absolute|"
                         r"position\s*:\s*absolute[^\"']*(?<![\w-])(?:left|right|top)\s*:\s*-\d{3,}(?:px|em|rem)", re.I)
@@ -97,12 +107,12 @@ BENIGN_HOST = re.compile(
     r"order(?:online|food)?|ezcater|catering|olo|dine|menu|zmenu|allmenus|menupages|thanx|punchh|paytronix|spoton|heartland|"
     r"revelsystems|lightspeed|tripadvisor|foursquare|snapchat|threads|vimeo|soundcloud|spotify|addtoany|sharethis|addthis|"
     r"browsehappy|enable-javascript|whatismybrowser|mozilla|getfirefox|chrome|outlook|gmail|zendesk|hubspot|intuit|"
-    r"recaptcha|hcaptcha|cookiebot|onetrust|termly|iubenda|accessibe|userway|audioeye|w3c)\.[a-z.]+$", re.I)
+    r"4sq|recaptcha|hcaptcha|cookiebot|onetrust|termly|iubenda|accessibe|userway|audioeye|w3c)\.[a-z.]+$", re.I)
 
 
 def _away(own):
     def away(h):
-        return regdom(urllib.parse.urlparse(h).netloc) not in own
+        return regdom(_urlparse(h).netloc) not in own
     return away
 
 
@@ -138,16 +148,17 @@ def hidden_blocks(body):
     return out
 
 
-def scan(body, host, final, name=""):
+def scan(body, host, final, name="", casino=False):
     """Every reason this page looks hijacked, each with its evidence: [(rule, evidence)]. Empty list = clean.
-    Includes the original injected() verdict as rule 'wi:injected' so the two can be compared."""
+    Includes the original injected() verdict as rule 'wi:injected' so the two can be compared. casino=True: the caller's own
+    list of its state's real casinos (by name or original host) says the place is one."""
     reasons = []
     text = BLOBS.sub(" ", body).lower()
-    own = {regdom(host), regdom(urllib.parse.urlparse(final).netloc)}
+    own = {regdom(host), regdom(_urlparse(final).netloc)}
     away = _away(own)
     # the place itself is a casino: its name says so, or its own host is a named real casino. Not "casino" in the final host:
     # a taken-over restaurant domain that redirects to a casino would earn the exemption.
-    casino_place = bool(CASINO_PLACE.search(name or "") or CASINO_HOSTS_OK.search(host) or REAL_CASINO_PLACE.search(host))
+    casino_place = bool(casino or CASINO_PLACE.search(name or "") or CASINO_HOSTS_OK.search(host) or REAL_CASINO_PLACE.search(host))
     head = " ".join(a or b for a, b in HEAD.findall(text[:60_000]))
     # --- the original Wisconsin rules (check() + injected())
     m = SPAM.search(text) or SPAM.search(final)
@@ -165,7 +176,7 @@ def scan(body, host, final, name=""):
     for h, t in links:
         if not away(h):
             continue
-        hh = urllib.parse.urlparse(h).netloc.lower()
+        hh = _urlparse(h).netloc.lower()
         tt = TAG.sub(" ", t)
         if ADULT_HOST.search(hh) or ADULT_TEXT.search(tt):
             reasons.append(("ext:adult-link", f"{h} :: {_snip(tt, 120)}"))
@@ -196,11 +207,11 @@ def scan(body, host, final, name=""):
     for am in A_STYLE.finditer(body):   # the link itself hidden off-page
         sm = STYLE_ATTR.search(am.group(1))
         h_ = am.group(2)
-        if sm and away(h_) and OFFSCREEN_POS.search(sm.group(2)) and not BENIGN_HOST.search(urllib.parse.urlparse(h_).netloc.lower()):
+        if sm and away(h_) and OFFSCREEN_POS.search(sm.group(2)) and not BENIGN_HOST.search(_urlparse(h_).netloc.lower()):
             reasons.append(("ext:hidden-anchor", f"[{_snip(sm.group(2), 60)}] {h_}"))
             break
     for mo, payload in _decoded_payloads(body):   # eval(atob/unescape/fromCharCode) that loads or sends you elsewhere
-        hosts = [x for x in (urllib.parse.urlparse(u_).netloc.lower() for u_ in re.findall(r"""https?://[^\s'"<>)]+""", payload))
+        hosts = [x for x in (_urlparse(u_).netloc.lower() for u_ in re.findall(r"""https?://[^\s'"<>)]+""", payload))
                  if x and away("https://" + x)]
         if hosts and re.search(r"createElement|\.src\s*=|location|window\.open|<iframe|<script", payload, re.I):
             reasons.append(("ext:obfuscated-script", f"decoded: {_snip(payload, 200)}"))
@@ -225,16 +236,18 @@ def scan(body, host, final, name=""):
         aw = [(h, TAG.sub(" ", t)) for h, t in bl if away(h)]
         if not aw:
             continue
-        suspicious = [(h, t) for h, t in aw if not BENIGN_HOST.search(urllib.parse.urlparse(h).netloc.lower())]
-        spammy = [(h, t) for h, t in aw if GAMBLING_HOST.search(urllib.parse.urlparse(h).netloc) or ADULT_HOST.search(
-            urllib.parse.urlparse(h).netloc) or PHARMA_HOST.search(urllib.parse.urlparse(h).netloc) or BETTING.search(t)
+        suspicious = [(h, t) for h, t in aw if not BENIGN_HOST.search(_urlparse(h).netloc.lower())]
+        spammy = [(h, t) for h, t in aw if GAMBLING_HOST.search(_urlparse(h).netloc) or ADULT_HOST.search(
+            _urlparse(h).netloc) or PHARMA_HOST.search(_urlparse(h).netloc) or BETTING.search(t)
             or FOREIGN_CASINO_LINK.search(t) or ADULT_TEXT.search(t) or PHARMA_TEXT.search(t) or FARM_TEXT.search(t)]
-        doms = {regdom(urllib.parse.urlparse(h).netloc) for h, _ in suspicious}
+        if casino_place:   # a real casino's own hidden menus link its online casino and sportsbook (Harrah's, 2026-10-21)
+            spammy = [(h, t) for h, t in spammy if not (GAMBLING_HOST.search(_urlparse(h).netloc) or BETTING.search(t))]
+        doms = {regdom(_urlparse(h).netloc) for h, _ in suspicious}
         # display:none / visibility:hidden hide menus, dropdowns and modals with sister-restaurant links: only spam counts
-        if spammy or (len(doms) >= 3 and not kind.startswith("ui:")):
+        if spammy or (len(doms) >= 3 and not kind.startswith("ui:") and kind != "noscript"):
             ex = "; ".join(f"{h} :: {_snip(t, 60)}" for h, t in (spammy or suspicious)[:5])
             reasons.append(("ext:hidden-" + ("noscript" if kind == "noscript" else "block"), f"[{kind}] {ex}"))
-        elif suspicious and not kind.startswith("ui:") and kind != "noscript" and OFFSCREEN_POS.search(kind):
+        elif suspicious and not kind.startswith("ui:") and kind != "noscript" and OFFSCREEN_FAR.search(kind):
             reasons.append(("ext:offpage-link", f"[{kind}] " + "; ".join(h for h, _ in suspicious[:3])))
     # one rule per kind is enough for triage; keep the first evidence of each
     seen, out = set(), []
@@ -252,7 +265,7 @@ def _ctx(s, m, w=150):
 
 def _why_injected(body, text, away):
     for h, t in LINK.findall(body):
-        hh = urllib.parse.urlparse(h).netloc.lower()
+        hh = _urlparse(h).netloc.lower()
         if away(h) and not CASINO_HOSTS_OK.search(hh) and not REAL_CASINO_PLACE.search(hh) and \
                 (GAMBLING_HOST.search(hh) or BETTING.search(t) or FOREIGN_CASINO_LINK.search(t)):
             return f"link {h} :: {_snip(TAG.sub(' ', t), 120)}"
@@ -288,6 +301,7 @@ STYLE_ATTR = re.compile(r"""\bstyle\s*=\s*(["'])(.*?)\1""", re.I | re.S)
 OFFSCREEN_POS = re.compile(r"(?<![\w-])(?:left|right|top)\s*:\s*-\d{4,}(?:px|em|rem)|"
                            r"(?<![\w-])(?:left|right|top)\s*:\s*-\d{3,}(?:px|em|rem)[^\"']*position\s*:\s*absolute|"
                            r"position\s*:\s*absolute[^\"']*(?<![\w-])(?:left|right|top)\s*:\s*-\d{3,}(?:px|em|rem)", re.I)
+OFFSCREEN_FAR = re.compile(r"(?<![\w-])(?:left|right|top|text-indent)\s*:\s*-\d{4,}(?:px|em|rem)", re.I)
 OBF_CALL = re.compile(r"""eval\s*\(\s*(atob|unescape|decodeURIComponent)\s*\(\s*(['"])(.{8,20000}?)\2\s*\)|"""
                       r"""eval\s*\(\s*String\.fromCharCode\s*\(([\d\s,]{8,40000})\)""", re.I | re.S)
 
@@ -332,7 +346,7 @@ def parked(body, final):
     text = BLOBS.sub(" ", body).lower()
     vis = TAG.sub(" ", re.sub(r"<script\b.*?</script>|<style\b.*?</style>", " ", text, flags=re.S))
     vis = re.sub(r"\s+", " ", vis)
-    fh = urllib.parse.urlparse(final).netloc.lower()
+    fh = _urlparse(final).netloc.lower()
     if PARKING_HOSTS.search(fh):
         return ("parking-host", final)
     # a host's placeholder instead of a site: cPanel sends a meta refresh to its default or suspended page (Mihm's, 2026-10-12)
@@ -351,9 +365,9 @@ def parked(body, final):
 def injected(body, text, host, final):
     """True for a page linking away to a gambling host, or with casino words in such a link or in another language.
     Only named real casinos are exempt (REAL_CASINO_PLACE, CASINO_HOSTS_OK below); hidden blocks are scan()'s job."""
-    own = {regdom(host), regdom(urllib.parse.urlparse(final).netloc)}
+    own = {regdom(host), regdom(_urlparse(final).netloc)}
     for h, t in LINK.findall(body):
-        hh = urllib.parse.urlparse(h).netloc.lower()
+        hh = _urlparse(h).netloc.lower()
         if regdom(hh) in own or CASINO_HOSTS_OK.search(hh) or REAL_CASINO_PLACE.search(hh):
             continue
         if GAMBLING_HOST.search(hh) or BETTING.search(t) or FOREIGN_CASINO.search(t):

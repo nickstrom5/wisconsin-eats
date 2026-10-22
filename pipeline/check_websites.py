@@ -14,7 +14,7 @@ Polite by design: an honest user agent, one request at a time per host, and thre
 80%+ one brand). Shared hosts (Square, Wix, Linktree, Instagram) carry many unrelated places, so every link there is checked on its own.
 Never bypasses bot protection.
 
-Usage: ../.venv/bin/python check_websites.py [--recheck-ok | --rescan-cached]   (reads data/wi/website_candidates.json and the manual verdicts in
+Usage: ../.venv/bin/python check_websites.py [--recheck-ok | --rescan-cached] [--retry-transient]   (reads data/wi/website_candidates.json and the manual verdicts in
 data/wi/website_overrides.json) → data/wi/website_check.json ({url: {"ok": bool, "why": str, "final": str}})
 The app export (wisconsin.py, WI_APP=1) drops every link that isn't ok. Re-run before each App Store submission.
 """
@@ -182,6 +182,17 @@ def check(url, name, cached=None):
     return {"ok": True, "why": "ok", "final": final}
 
 
+
+def safe_check(*item):
+    """check(), stamped with the day it ran ("rc": --recheck-ok skips pages already re-checked in the last 2 days, so a stopped run
+    resumes), and never raising: one malformed page must not stop a run of thousands."""
+    try:
+        res = check(*item)
+    except Exception as e:
+        res = {"ok": False, "why": "error: " + type(e).__name__, "final": item[0]}
+    return {**res, "rc": __import__("datetime").date.today().isoformat()}
+
+
 def main():
     # every link the export considered (written by wisconsin.py, WI_APP=1), so a link dropped last time gets another chance
     cands = json.load(open(f"{ROOT}/data/wi/website_candidates.json"))
@@ -191,8 +202,11 @@ def main():
         jobs[regdom(urllib.parse.urlparse(u).netloc)].append((w, name))
     prev = json.load(open(OUT)) if os.path.exists(OUT) else {}
     over = json.load(open(OVERRIDES)) if os.path.exists(OVERRIDES) else {}
-    if "--recheck-ok" in sys.argv:   # fetch every passing page again (after a new rule, before a submission)
-        prev = {u: v for u, v in prev.items() if not v["ok"]}
+    if "--recheck-ok" in sys.argv:   # fetch every passing page again (after a new rule, and before each submission); resumable
+        since = (__import__("datetime").date.today() - __import__("datetime").timedelta(days=2)).isoformat()
+        prev = {u: v for u, v in prev.items() if not v["ok"] or v.get("rc", "") >= since}
+    if "--retry-transient" in sys.argv:   # after a busy run: fetch again what was rate-limited (429) or failed to connect
+        prev = {u: v for u, v in prev.items() if not (v["why"] == "http 429" or v["why"].startswith("error:"))}
     # chain verdicts are recomputed every run; host rules may have grown since a page was fetched
     # ("hacked" too: the detector's rules change, and the first version flagged margin-left layouts like Murray's On Main)
     prev = {u: v for u, v in prev.items() if not v["why"].startswith(("chain domain", "brand's own", "hacked"))
@@ -222,7 +236,7 @@ def main():
 
     def run(item):
         nonlocal done
-        res = check(*item)
+        res = safe_check(*item)
         with lock:
             results[item[0]] = res
             done += 1
@@ -231,7 +245,7 @@ def main():
                 json.dump(results, open(OUT + ".tmp", "w"))
                 os.replace(OUT + ".tmp", OUT)
 
-    with ThreadPoolExecutor(max_workers=24) as ex:
+    with ThreadPoolExecutor(max_workers=int(os.environ.get("CHECK_WORKERS") or 0) or 24) as ex:
         list(ex.map(run, todo))
     for dom, urls in chain_hosts.items():
         samples = [results.get(u) for u in urls[:3] if results.get(u)]

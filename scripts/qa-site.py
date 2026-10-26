@@ -916,6 +916,18 @@ def robustness_checks(browser, base):
     ctx.close()
 
 
+def app_data_checks():
+    """docs/data/app/, the app's data updates (scripts/publish_app_data.py, OTA-DATA.md): every manifest entry's hash, size and
+    row count match its file, the head file's date matches, and no old copy lingers."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from publish_app_data import check_app_data, app_data_dir
+    found, notes = check_app_data(DOCS, app_data_dir())
+    for x in found:
+        bad("app data: " + x)
+    for x in notes:
+        print("  note: app data:", x)
+
+
 def main():
     base = serve()
     core = json.load(open(os.path.join(DOCS, "data/core.json")))
@@ -926,6 +938,7 @@ def main():
     website_link_checks(files)
     privacy_storage_checks()
     faq_mirror_checks()
+    app_data_checks()
     page_type_checks(files, core_ids, paths)
     places = sorted(urllib.parse.urlparse(u).path for u in locs if "/places/" in u)
     every = max(1, len(places) // ARGS.sample) if ARGS.sample else 10

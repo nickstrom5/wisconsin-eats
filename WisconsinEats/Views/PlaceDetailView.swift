@@ -32,7 +32,7 @@ struct PlaceDetailView: View {
                 Button { model.toggleSaved(place) } label: {
                     Label(model.isSaved(place) ? "Saved" : "Save", systemImage: model.isSaved(place) ? "heart.fill" : "heart")
                 }
-                ShareLink(item: shareText) { Label("Share", systemImage: "square.and.arrow.up") }
+                ShareLink(item: Links.share(place), subject: Text(place.name), message: Text(Links.shareMessage(place))) { Label("Share", systemImage: "square.and.arrow.up") }
             }
         }
         .mapItemDetailSheet(item: $mapItem)
@@ -221,10 +221,6 @@ struct PlaceDetailView: View {
     }
 
     // MARK: helpers
-
-    private var shareText: String {
-        [place.name, place.fullAddress, "via Wisconsin Eats", Links.site.absoluteString].filter { !$0.isEmpty }.joined(separator: "\n")
-    }
 
     private func lines(_ s: String?, prefix: String) -> [String] {
         (s ?? "").components(separatedBy: "; ").filter { !$0.isEmpty }.map { prefix + $0 }

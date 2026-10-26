@@ -50,6 +50,7 @@ HAND_CHECKED = "September 2026"
 SITE_LAUNCHED = "2026-09-26"    # the guides and city pages first went up (Article datePublished)
 PAGES_ADDED = "2026-10-07"      # place, region, Lent, about and cities-hub pages first went up
 POLICY_UPDATED = "2026-10-12"   # when the privacy policy or terms text last changed: edit this whenever you edit them (10-12: new contact address)
+PRIVACY_UPDATED = "2026-10-26"   # the privacy policy alone: the app's data updates (OTA-DATA.md)
 
 # The App Store listing. None until the app is live. When it is: set APP_STORE_URL (https://apps.apple.com/app/id6816947017),
 # and put Apple's official "Download on the App Store" badge artwork at docs/img/app-store-badge.svg first (from Apple's
@@ -1755,7 +1756,7 @@ body = f"""{nav}
   <main id="main" class="legal">
   <section class="hero">
     <h1>Privacy policy</h1>
-    <p class="lede">Short version: the {BRAND} app collects nothing about you, and this website doesn't track you. Last updated {long_date(POLICY_UPDATED)}.</p>
+    <p class="lede">Short version: the {BRAND} app collects nothing about you, and this website doesn't track you. Last updated {long_date(PRIVACY_UPDATED)}.</p>
   </section>
   <section>
     <h2>The app</h2>
@@ -1764,6 +1765,7 @@ body = f"""{nav}
       <li><b>Location.</b> If you allow it, your location is used on your device to sort places by distance and show where you are on the map. It is never sent to us. You can turn it off in Settings at any time.</li>
       <li><b>Saved places and filters</b> are stored only on your device and are deleted when you delete the app.</li>
       <li><b>Apple Maps.</b> When you open a place's ratings, hours and photos, or ask for directions, the app asks Apple Maps for that place. Apple handles that request under <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a>, as it does for any app that shows a map.</li>
+      <li><b>Data updates.</b> When you open the app, it checks this website for newer restaurant data, at most once a day (or an hour later if a check didn't go through), and downloads it when there is some. These requests carry no location or identifiers. GitHub, which hosts this site, may keep standard server logs of them, as it does for any visit here.</li>
       <li><b>Spotlight.</b> The app adds its fish fries, supper clubs and other hand-checked places to your device's search index so you can find them from Spotlight. That index stays on your device.</li>
       <li><b>Calls, websites and email</b> you start from a place open in the Phone app, your browser or Mail, and are handled by them.</li>
     </ul>
@@ -1786,7 +1788,7 @@ body = f"""{nav}
   </main>"""
 written.append(page("privacy.html", "Privacy Policy: Wisconsin Eats Fish Fry & Restaurant App",
                     fit(["The Wisconsin Eats privacy policy: the app collects no data, keeps your location and saved places on your device, and this website sets no cookies at all."], 140, 160),
-                    body, [bc], lastmod=POLICY_UPDATED))
+                    body, [bc], lastmod=PRIVACY_UPDATED))
 
 nav, bc = crumbs([("Home", "/"), ("Terms of use", "/terms.html")])
 body = f"""{nav}

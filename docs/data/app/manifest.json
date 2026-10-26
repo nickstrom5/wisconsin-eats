@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "version": "2026-10-21.1",
+ "records_through": "2026-10-21",
+ "published": "2026-10-26T13:23:44Z",
+ "min_app_build": 1,
+ "files": {
+  "places": {
+   "path": "places-d503cdc4c79d.json",
+   "sha256": "d503cdc4c79d930c640a505f24da237a59b7e8860a6ee50da2e375d3c983560c",
+   "bytes": 3627062,
+   "rows": 17294
+  }
+ },
+ "counts": {
+  "places": 17294,
+  "files": 1,
+  "bytes": 3627062,
+  "restaurants": 16346
+ }
+}

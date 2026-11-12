@@ -311,7 +311,7 @@ CSS = """
     --dot: #203731; --water: #cfe3ea; --county: rgba(83,102,91,.35);
     --radius: 16px;
     --text: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
-    --display: "Avenir Next Condensed", "HelveticaNeue-CondensedBold", "Arial Narrow", system-ui, sans-serif;
+    --display: "Avenir Next Condensed", "HelveticaNeue-CondensedBold", "Arial Narrow", system-ui, sans-serif; --head-font: "Germania One", "Avenir Next Condensed", "HelveticaNeue-CondensedBold", "Arial Narrow", system-ui, sans-serif;
     color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark) {
@@ -331,13 +331,13 @@ CSS = """
   .vh { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
   header.site { display: flex; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 12px 0; border-bottom: 4px solid var(--gold); }
-  .logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font: 800 22px/1 var(--display); text-transform: uppercase; letter-spacing: .01em; color: var(--green); text-decoration: none; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font: 400 22px/1 var(--head-font); text-transform: uppercase; letter-spacing: .01em; color: var(--green); text-decoration: none; }
   header.site nav { display: flex; flex-wrap: wrap; gap: 0 10px; justify-content: flex-end; }
   header.site nav a, footer nav a, nav.crumbs a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
   header.site nav a { color: var(--ink2); text-decoration: none; font-size: 15px; }
   header.site nav a:hover { color: var(--green); text-decoration: underline; }
-  h1, h2 { font-family: var(--display); font-weight: 800; color: var(--green); letter-spacing: -.005em; }
-  h1 { font-size: clamp(36px, 7.5vw, 56px); line-height: 1.02; margin: 0 0 16px; text-transform: uppercase; overflow-wrap: anywhere; }
+  h1, h2 { font-family: var(--head-font); font-weight: 400; color: var(--green); letter-spacing: -.005em; }
+  h1 { font-size: clamp(40px, 12.5vw, 56px); line-height: 1.02; margin: 0 0 16px; text-transform: uppercase; overflow-wrap: anywhere; text-wrap: balance; }
   .kicker { font: 700 15px/1.4 var(--text); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
   h2 { font-size: 32px; line-height: 1.1; margin: 0 0 10px; }
   h3 { font-size: 18px; margin: 0; line-height: 1.3; }
@@ -433,6 +433,14 @@ CSS = """
     dl.facts dd { margin-bottom: 10px; }
   }
 """
+
+# The headline face: Germania One (SIL Open Font License, in docs/fonts/OFL-Germania-One.txt). It is the site's one web font and it is served from this
+# site, so pages still load nothing from anyone else. The big headline, the section headings, card titles and the site name use it
+# (--head-font); numbers and badges keep the condensed system faces (--display).
+CSS = "".join(f'  @font-face {{ font-family: "Germania One"; src: url("{BASE}/fonts/{_f}") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; unicode-range: {_r}; }}\n'
+              for _f, _r in (
+                  ("germania-one-latin.woff2", "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"),
+              )) + CSS
 
 # ---------------------------------------------------------------- structured data shared by every page
 ORG_ID, PERSON_ID, SITE_ID = f"{DOMAIN}/#org", "https://work-with-nick.com/#person", f"{DOMAIN}/#website"
@@ -546,6 +554,7 @@ def page(path, title, desc, body, lds=(), robots="index,follow,max-image-preview
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/germania-one-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="manifest" href="/site.webmanifest">
 <style>{CSS}{extra_css}</style>
 {head_extra}{ld}
@@ -1445,7 +1454,7 @@ assert all(p.id in WEB_IDS for p in CHECKED_PLACES), "every place page's #p= lin
 EXPLORE_CSS = """
   [hidden] { display: none !important; }
   .ex-hero { padding: 24px 0 4px; }
-  .ex-hero h1 { font-size: clamp(30px, 6vw, 44px); }
+  .ex-hero h1 { font-size: clamp(30px, 9.38vw, 44px); }
   .ex-hero .sub { margin-bottom: 12px; }
   .ex-controls { background: var(--bg); padding: 6px 0 8px; border-bottom: 1px solid var(--rule); }
   .ex-guides { display: flex; gap: 6px; overflow-x: auto; padding: 2px 0 8px; scrollbar-width: none; }
